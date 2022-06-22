@@ -25,6 +25,9 @@ public class BaseMovement : MonoBehaviour
     private bool isCrouching;
     private bool duringCrouchAnimation;
 
+
+    private bool isSprinting;
+    int stamina = 100;
     // Update is called once per frame
     void Update()
     {
@@ -62,4 +65,41 @@ public class BaseMovement : MonoBehaviour
 
     }
     
+    void Crouch()
+    {
+        if (isGrounded && !isSprinting)
+        {
+            //Can't crouch wehn sprinting or falling
+            StartCoroutine(CrouchStand());
+        }
+    }
+
+    private IEnumerator CrouchStand()
+    {
+        ///Lerps between crouching or standing
+        
+        duringCrouchAnimation = true; //Start crouching
+
+        float timeElapsed = 0;
+        float targetHeight = isCrouching ? standingHeight : crouchHeight; 
+        float currentHeight = controller.height;
+        Vector3 targetCenter = isCrouching ? standingCenter : crouchingCenter;
+        Vector3 currentCenter = controller.center;
+
+        while (timeElapsed < timeToCrouch)
+        {
+            controller.height = Mathf.Lerp(currentHeight, targetHeight, timeElapsed / timeToCrouch);
+            controller.center = Vector3.Lerp(currentCenter, targetCenter, timeElapsed / timeToCrouch);
+            timeElapsed += Time.deltaTime;
+            yield return null; //Waits for next time.
+
+        }
+
+        controller.height = targetHeight;
+        controller.center = targetCenter;
+
+        isCrouching = !isCrouching;
+
+        duringCrouchAnimation = false; //End crouching
+    }
 }
