@@ -5,11 +5,17 @@ using UnityEngine.InputSystem;
 
 public class BaseMovement : MonoBehaviour
 {
-    
-    public PlayerInput inputpackage;
+
+    public Playerinputs inputpackage;
     public CharacterController controller;
     public float moveSpeed = 10f; //Stores a movespeed multiplier, can be changed for sprinting etc.
     public float gravity = -9.81f;
+
+    public float walkspeed = 10f;
+    public float sprintspeed = 14f;
+    public float crouchspeed = 6f;
+    public float jumpheight = 1f; //jump height in metres
+
 
     public Transform groundCheck;
     public float groundDistance = 0.2f;
@@ -24,6 +30,11 @@ public class BaseMovement : MonoBehaviour
     [SerializeField] private Vector3 crouchingCenter = new Vector3(0, 0.5f, 0);
     [SerializeField] private Vector3 standingCenter = new Vector3(0, 0, 0);
 
+    public bool HoldToCrouch = true;
+    bool crouchIsToggled = false;
+
+    public bool HoldToSprint = false;
+
     private bool isCrouching;
     private bool duringCrouchAnimation;
 
@@ -31,12 +42,31 @@ public class BaseMovement : MonoBehaviour
     private bool isSprinting;
     int stamina = 100;
     // Update is called once per frame
+
+    private void Awake()
+    {
+        inputpackage = new Playerinputs();
+        
+    }
+
+    private void OnEnable()
+    {
+        inputpackage.Player.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputpackage.Player.Disable();
+    }
+
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        Vector2 inputsmovement = inputpackage.Player.Move.ReadValue<Vector2>();
+
+        float x = inputsmovement.x;
+        float z = inputsmovement.y;
 
         KeyboardMove(x, z);
 
@@ -47,6 +77,7 @@ public class BaseMovement : MonoBehaviour
             velocity.y = -1f;
         }
 
+        Debug.Log(isGrounded);
     }
 
     void KeyboardMove(float x, float z)
@@ -59,6 +90,10 @@ public class BaseMovement : MonoBehaviour
         
     }
 
+    void jump()
+    {
+
+    }
     void gravityCheck()
     {
 
@@ -68,41 +103,5 @@ public class BaseMovement : MonoBehaviour
 
     }
     
-    void Crouch()
-    {
-        if (isGrounded && !isSprinting)
-        {
-            //Can't crouch wehn sprinting or falling
-            StartCoroutine(CrouchStand());
-        }
-    }
-
-    private IEnumerator CrouchStand()
-    {
-        ///Lerps between crouching or standing
-        
-        duringCrouchAnimation = true; //Start crouching
-
-        float timeElapsed = 0;
-        float targetHeight = isCrouching ? standingHeight : crouchHeight; 
-        float currentHeight = controller.height;
-        Vector3 targetCenter = isCrouching ? standingCenter : crouchingCenter;
-        Vector3 currentCenter = controller.center;
-
-        while (timeElapsed < timeToCrouch)
-        {
-            controller.height = Mathf.Lerp(currentHeight, targetHeight, timeElapsed / timeToCrouch);
-            controller.center = Vector3.Lerp(currentCenter, targetCenter, timeElapsed / timeToCrouch);
-            timeElapsed += Time.deltaTime;
-            yield return null; //Waits for next time.
-
-        }
-
-        controller.height = targetHeight;
-        controller.center = targetCenter;
-
-        isCrouching = !isCrouching;
-
-        duringCrouchAnimation = false; //End crouching
-    }
+    
 }
