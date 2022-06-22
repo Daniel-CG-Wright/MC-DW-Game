@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BaseMovement : MonoBehaviour
 {
     
+    public PlayerInput inputpackage;
     public CharacterController controller;
     public float moveSpeed = 10f; //Stores a movespeed multiplier, can be changed for sprinting etc.
     public float gravity = -9.81f;
@@ -47,8 +49,9 @@ public class BaseMovement : MonoBehaviour
 
     }
 
-    void KeyboardMove(float x, float z)
-    {
+    void KeyboardMove(float x, float z, InputAction.CallbackContext context)
+    {   
+        
         Vector3 moveVector = transform.right * x + transform.forward * z; //Direction player is moving relative to actual player.
         //Vector2 moveDirection = moveActi
         controller.Move(moveSpeed * Time.deltaTime * moveVector); //Should move character
