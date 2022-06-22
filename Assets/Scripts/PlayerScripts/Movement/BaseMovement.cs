@@ -49,7 +49,7 @@ public class BaseMovement : MonoBehaviour
 
     }
 
-    void KeyboardMove(float x, float z, InputAction.CallbackContext context)
+    void KeyboardMove(float x, float z)
     {   
         
         Vector3 moveVector = transform.right * x + transform.forward * z; //Direction player is moving relative to actual player.
