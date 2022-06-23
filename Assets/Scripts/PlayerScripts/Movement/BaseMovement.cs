@@ -13,23 +13,23 @@ public class BaseMovement : MonoBehaviour
     public float moveSpeed = 10f; //Stores a movespeed multiplier, can be changed for sprinting etc.
     public float gravity = -9.81f;
 
+    public bool CanMove { get; private set; } = true;
     public float walkspeed = 10f;
     public float sprintspeed = 14f;
     public float crouchspeed = 3f;
     public float jumphorzspeed = 4f;
-    public float jumpheight = 1f; //jump height in metres
+
+    private float jumpForce = 8.0f;
     public float staminaLoss = 50f; //How much stamina is lost per second
-    public float jumpLoss = 100f;
+    
+    public float jumpStaminaLoss = 100f;
     public float staminaGain = 10f;
 
     public int minStam = 0;
     public int maxStam = 100;
-    public Transform groundCheck;
-    public float groundDistance = 0.2f;
-    public LayerMask groundMask;
 
-    bool isGrounded;
-    Vector3 velocity;
+    Vector3 moveDirection;
+    Vector2 currentInput;
 
     [SerializeField] private float crouchHeight = 0.5f;
     [SerializeField] private float standingHeight = 0.9f;
@@ -50,97 +50,170 @@ public class BaseMovement : MonoBehaviour
     float stamina = 100f;
     // Update is called once per frame
 
-    
+    private bool shouldJump => Input.GetButton("Jump") && controller.isGrounded;
+    private bool canCrouch => controller.isGrounded;
+    private bool canStand => controller.isGrounded;
 
     void Update()
     {
 
-        isGrounded = controller.isGrounded;//Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        //Checks for crouching.
-        Crouch();
-        if (stamina == 0f)
+        if (CanMove)
         {
-            //Stops sprinting if stamina runs out.
-            SprintCancel();
-        }
-        KeyboardMove(x, z);
-        //Debug.Log(moveSpeed);
-        if (isSprinting)
-        {
-            stamina -= staminaLoss * Time.deltaTime; //Reduces stamina
-            
-        }
+            //If player can move, we process inputs
+            //Sprint check first to alter movement values
+            SprintCheck();
 
+            HandleMovementInput();
 
-
-        
-        if (isGrounded && !isSprinting)
-        {
-            //Sets movespeed to walkspeed if not sprinting, crouching or jumping.
-            moveSpeed = walkspeed;
-            stamina += staminaGain * Time.deltaTime;
-
-        }
-        else if (!isGrounded && velocity.y < 0)
-        {
-            //sets movespeed to slower if in the air and falling.
-            moveSpeed = jumphorzspeed;
-        }
-            
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            if (isCrouching && CanStandUp())
+            if (shouldJump)
             {
-                //Stands before jumping
-                CrouchUp();
-                velocity.y = Jump();
+                HandleJump();
             }
-            else if (!isCrouching)
+
+            if (canCrouch)
             {
-                velocity.y = Jump();
+                HandleCrouch();
             }
-            //Jumping y velocity
-            
-        }
 
-        if (!isGrounded)
-        {
-            //Increases y velocity downward by gravity.
-            velocity.y += gravity * Time.deltaTime;
+            ApplyFinalMovement();
         }
-
-        if (controller.velocity.y < -1 && controller.isGrounded)
-        {
-            velocity.y = 0;
-        }
-        controller.Move(velocity * Time.deltaTime);
 
         
         
-        stamina = Mathf.Clamp(stamina, minStam, maxStam);
         updateUI();
        
     }
 
+    void HandleMovementInput()
+    {
+        currentInput = new Vector2(moveSpeed * Input.GetAxis("Vertical"), moveSpeed * Input.GetAxis("Horizontal"));
+
+        float moveY = moveDirection.y;
+
+        moveDirection = (transform.TransformDirection(Vector3.forward) * currentInput.x) + (transform.TransformDirection(Vector3.right) * currentInput.y);
+        moveDirection.y = moveY;
+        //Processes inputs, adds them to final movement vector.
+        
+    }
+
+    void HandleCrouch()
+    {
+        if (Input.GetButtonDown("Crouch"))
+        {
+            if (isSprinting)
+            {
+                SprintCancel();
+            }
+            
+            if (!HoldToSprint)
+            {
+                if (canCrouch)
+                {
+
+                    //Can't crouch wehn sprinting or falling
+                    CrouchDown();
+
+                }
+
+                else if (isSprinting)
+                {
+                    //No longer crouching
+                    CrouchUp();
+
+                }
+
+            }
+
+            else if (HoldToSprint)
+            {
+                CrouchDown();
+
+
+            }
+
+        }
+
+        else if (!Input.GetButton("Crouch") && HoldToSprint && isSprinting)
+        {
+            CrouchUp();
+        }
+    }
+    void HandleJump()
+    {
+        moveDirection.y = jumpForce;
+    }
+
+    void CrouchDown()
+    {
+        isCrouching = true;
+        moveSpeed = crouchspeed;
+        CrouchStand(false);
+
+    }
+
+    void CrouchUp()
+    {
+        if (!CanStandUp())
+        {
+            return;
+        }
+        isCrouching = false;
+        moveSpeed = walkspeed;
+        CrouchStand(true);
+    }
+
+    bool CanStandUp()
+    {
+        return isCrouching && Physics.Raycast(cam.transform.position, Vector3.up, standingHeight - crouchHeight);
+    }
+    IEnumerator CrouchStand(bool tostand)
+    {
+        duringCrouchAnimation = true;
+        float timeElapsed = 0;
+        float targetHeight = tostand ? standingHeight : crouchHeight;
+        float currentHeight = controller.height;
+        Vector3 targetCenter = tostand ? standingCenter : crouchingCenter;
+        Vector3 currentCenter = controller.center;
+
+        while (timeElapsed < crouchTime)
+        {
+            controller.height = Mathf.Lerp(currentHeight, targetHeight, timeElapsed / crouchTime);
+            controller.center = Vector3.Lerp(currentCenter, targetCenter, timeElapsed / crouchTime);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+
+        }
+
+        controller.height = targetHeight;
+        controller.center = targetCenter;
+
+
+        duringCrouchAnimation = false;
+
+    }
+    private void ApplyFinalMovement()
+    {
+        if (!controller.isGrounded)
+        {
+            //Applying gravity
+            moveDirection.y += gravity * Time.deltaTime;
+        }
+
+        //Reset y velocity if landing
+        if (controller.velocity.y < -1 && controller.isGrounded)
+        {
+            moveDirection.y = 0;
+        }
+
+        //Applying all moveidrection
+        controller.Move(moveDirection * Time.deltaTime);
+    }
     void updateUI()
     {
         staminabar.SetValueWithoutNotify(stamina);
 
     }
-    void KeyboardMove(float x, float z)
-    {
-        SprintCheck();
-
-        Vector3 moveVector = transform.right * x + transform.forward * z; //Direction player is moving relative to actual player.
-        //Vector2 moveDirection = moveActi
-        controller.Move(moveSpeed * Time.deltaTime * moveVector); //Should move character
-
-        
-    }
+    
 
     void Sprint()
     {
@@ -159,6 +232,12 @@ public class BaseMovement : MonoBehaviour
     }
     void SprintCheck()
     {
+        if (isSprinting)
+        {
+            stamina -= staminaLoss * Time.deltaTime;
+            stamina = Mathf.Clamp(stamina, minStam, maxStam);
+
+        }
         if (Input.GetButtonDown("Sprint"))
         {
             if (isCrouching && CanStandUp())
@@ -172,7 +251,7 @@ public class BaseMovement : MonoBehaviour
             }
             if (!HoldToSprint)
             {
-                if (isGrounded && !isSprinting)
+                if (controller.isGrounded && !isSprinting)
                 {
 
                     //Can't crouch wehn sprinting or falling
@@ -203,118 +282,7 @@ public class BaseMovement : MonoBehaviour
             SprintCancel();
         }
     }
-    float Jump()
-    {
-        if (stamina < jumpLoss)
-        {
-            return 0f;
-        }
-        float velocity = Mathf.Sqrt(jumpheight * -2 * gravity);
-        stamina -= jumpLoss; //Makes jumping use stamina
-        return velocity;
-    }
     
-    bool CanStandUp()
-    {
-        ///Returns true if can stand up, otherwise returns false.
-        return !Physics.Raycast(cam.transform.position, Vector3.up, (standingHeight - crouchHeight));
-        
-    }
-    void Crouch()
-    {
-        
-
-        if (Input.GetButtonDown("Crouch"))
-        {
-            SprintCancel();
-            if (!HoldToCrouch)
-            {
-                if(isGrounded && !isSprinting && !crouchIsToggled)
-                {
-
-                    //Can't crouch wehn sprinting or falling
-                    Debug.Log("crouching");
-                    crouchIsToggled = true;
-                    CrouchDown();
-                }
-
-            else if (crouchIsToggled && CanStandUp())
-                {
-                    crouchIsToggled = false;
-                    Debug.Log("uncrouching");
-                    CrouchUp();
-                }
-
-            }
-
-            else if (HoldToCrouch)
-            {
-                
-                CrouchDown();
-            }
-
-        }
-        
-        else if (!Input.GetButton("Crouch") && HoldToCrouch && isCrouching && CanStandUp())
-        {
-            CrouchUp();
-        }
-       
-
-
-            
-
-        
-    }
-
-    private void CrouchUp()
-    {
-        if (duringCrouchAnimation)
-        {
-            return;
-        }
-        isCrouching = false;
-        StartCoroutine(CrouchMovement(true));
-
-    }
-    private void CrouchDown()
-    {
-        
-        if (duringCrouchAnimation)
-        {
-            return;
-        }
-        isCrouching = true;
-        StartCoroutine(CrouchMovement(false));
-
-    }
-    IEnumerator CrouchMovement(bool goingup)
-    {
-        Debug.Log("cwfrw");
-        duringCrouchAnimation = true;
-        float timeElapsed = 0f;
-        float targetHeight = goingup ? standingHeight : crouchHeight;
-        float currentHeight = controller.height;
-        Vector3 targetCenter = goingup ? standingCenter : crouchingCenter;
-        Vector3 currentCenter = controller.center;
-
-        while (timeElapsed < crouchTime)
-        {
-            controller.height = Mathf.Lerp(currentHeight, targetHeight, timeElapsed / crouchTime);
-            controller.center = Vector3.Lerp(currentCenter, targetCenter, timeElapsed / crouchTime);
-            timeElapsed += Time.deltaTime;
-            yield return null;
-        }
-
-        controller.height = targetHeight;
-        controller.center = targetCenter; //Cleanly finishes transition
-
-
-
-
-        duringCrouchAnimation = false;
-
-    }
     
 
 }
