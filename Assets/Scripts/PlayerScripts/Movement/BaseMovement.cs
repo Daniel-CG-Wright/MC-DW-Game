@@ -50,7 +50,7 @@ public class BaseMovement : MonoBehaviour
     private bool isCrouching = false;
     private bool duringCrouchAnimation;
     private bool canCrouch => controller.isGrounded;
-    private bool canStand => isCrouching && !Physics.Raycast(cam.transform.position, Vector3.up, standingHeight - crouchHeight) && controller.isGrounded && !justLanded;
+    private bool canStand => isCrouching && !Physics.Raycast(cam.transform.position, Vector3.up, 1f) && controller.isGrounded && !justLanded;
 
 
     [Header("Movement")]
@@ -61,7 +61,11 @@ public class BaseMovement : MonoBehaviour
     Vector2 currentInput;
     [SerializeField] private float moveSpeed = 10f; //Stores a movespeed multiplier, can be changed for sprinting etc.
 
-
+    private void Awake()
+    {
+        standingHeight = controller.height;
+        crouchHeight = standingHeight / 2;
+    }
     void Update()
     {
 
