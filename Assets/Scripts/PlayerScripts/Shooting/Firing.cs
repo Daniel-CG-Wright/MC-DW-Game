@@ -15,7 +15,7 @@ public class Firing : MonoBehaviour
     //This section is just for debugging and will all be collected from gun data when gun is switched in game.
     bool isProjectile = true;
     bool isAuto = true;
-    [SerializeField] private float launchVelocity = 700f;
+    [SerializeField] private float projectileSpeed = 700f;
     [SerializeField] private float fireRate = 0.5f; //Firerate of gun (bps)
     private float nextFire = 0f; //Time at which next bullet can be fired.
     [SerializeField] private float fireRange = 100f; //Fire range
@@ -49,36 +49,34 @@ public class Firing : MonoBehaviour
     }
     void ShootProjectile()
     {
-        GameObject shot = Instantiate(projectile, transform.position, transform.rotation);
-
-        Vector3 projectileVelocity = transform.forward * launchVelocity;
-
-        shot.GetComponent<Rigidbody>().AddForce(projectileVelocity);
-
-        nextFire = Time.time + fireRate;
-
-        //ShootVisualProjectile();
-    }
-
-    void ShootVisualProjectile()
-    {
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        RaycastHit rayHit;
-        Debug.DrawRay(ray.origin, ray.direction, Color.blue, 1f);
-        
-        //Vector3 rayDirection = (ray.GetPoint()
-        Physics.Raycast(GunBarrel.transform.position, ray.direction, out rayHit);
-        GameObject visualshot = Instantiate(cosmeticProjectile, GunBarrel.transform.position, GunBarrel.transform.rotation);
-        Vector3 direction = (rayHit.point - GunBarrel.transform.position).normalized;
+        RaycastHit hit;
+        Vector3 destination;
 
-        Vector3 projectileVelocity = direction * launchVelocity;
+        if (Physics.Raycast(ray, out hit))
+        {
+            destination = hit.point;
+        }
+        else
+        {
+            destination = ray.GetPoint(fireRange);
 
-        Rigidbody body = visualshot.GetComponent<Rigidbody>();
-        body.AddForce(projectileVelocity);
-        
+        }
 
+        //Above code finds the point where we are aiming
+        nextFire = Time.time + fireRate;
+        InstantiateProjectile(destination);
+
+        //LOOK INTO BULLET POOLING, OR MANAGING BULLETS VIA THEIR SINGLE POSITIONS, FOR PERFORMANCE- then check for collisions the old fashioned way.
 
     }
+
+    void InstantiateProjectile(Vector3 destination)
+    {
+        GameObject projectileObj = Instantiate(projectile, GunBarrel.transform.position, Quaternion.identity) as GameObject;
+        projectileObj.GetComponent<Rigidbody>().velocity = (destination - GunBarrel.transform.position).normalized * projectileSpeed;
+    }
+    
 
     void ShootHitscan()
     {

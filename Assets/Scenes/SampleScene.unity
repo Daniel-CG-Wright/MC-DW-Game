@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 883201428}
   - component: {fileID: 883201430}
   - component: {fileID: 883201429}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -874,7 +874,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 887
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51908eeb47073140aec215cbe3bf41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 1000
+  mouseSensitivity: 4000
   playerBody: {fileID: 1902089122}
 --- !u!1 &1096501711
 GameObject:
@@ -925,7 +925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1096501712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310426722}
   - component: {fileID: 1310426723}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FiringSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,11 +1026,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b56943c6db67ca4f9e976deb36c0aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 8355788762594819621, guid: 35b12882f3ced6b4bafc6a4fa3cdadf1, type: 3}
+  projectile: {fileID: 8208530153537544478, guid: 5ffe0088dc12c8647a8ab17221499b4d, type: 3}
   cosmeticProjectile: {fileID: 8355788762594819621, guid: 5c4b47d434a705040951dbbc373ca828, type: 3}
   cam: {fileID: 963194227}
   GunBarrel: {fileID: 1485088584}
-  launchVelocity: 700
+  projectileSpeed: 300
   fireRate: 0.5
   fireRange: 100
 --- !u!1 &1330249901
@@ -1208,7 +1208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1485088585}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1562702263}
   - component: {fileID: 1562702265}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FPS viewer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,7 +1392,7 @@ GameObject:
   - component: {fileID: 1902089122}
   - component: {fileID: 1902089121}
   - component: {fileID: 1902089123}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
