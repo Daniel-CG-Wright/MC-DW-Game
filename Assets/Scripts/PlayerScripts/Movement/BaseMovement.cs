@@ -6,53 +6,61 @@ using UnityEngine.UI;
 public class BaseMovement : MonoBehaviour
 {
 
+    [Header("Serialized objects")]
     public Slider staminabar;
     public Camera cam;
     public CharacterController controller;
 
-    public float moveSpeed = 10f; //Stores a movespeed multiplier, can be changed for sprinting etc.
-    public float gravity = -9.81f;
-
-    public bool CanMove { get; private set; } = true;
-    public float walkspeed = 10f;
-    public float sprintspeed = 14f;
-    public float crouchspeed = 3f;
-    public float jumphorzspeed = 4f;
-
-    private float jumpForce = 8.0f;
-    public float staminaLoss = 50f; //How much stamina is lost per second
+    [Header("Jump settings")]
     
-    public float jumpStaminaLoss = 100f;
-    public float staminaGain = 10f;
+    [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private float landingTime = 0.5f;
+    [SerializeField] private float jumphorzspeed = 4f;
+    [SerializeField] private float landingSpeed = 4f;
+    [SerializeField] private float jumpForce = 5.0f;
+    [SerializeField] private float landinglimitspeed = -4f; //Sets the downward speed above which falls cause a slowdown on landing. May be implemented in fall dmg as well later.
+    [SerializeField] private float jumpStaminaLoss = 20f;
+    [SerializeField] private float landingSpeedRatio = 0.2f;
+    private bool jumpWasPressed;
 
-    public int minStam = 0;
-    public int maxStam = 100;
+    private bool justLanded = false;
+    private bool shouldJump => Input.GetButton("Jump") && controller.isGrounded && !justLanded;
 
-    Vector3 moveDirection;
-    Vector2 currentInput;
+    [Header("Sprint settings")]
 
+    [SerializeField] private float stamina = 100f;
+    [SerializeField] private float sprintspeed = 12f;
+    [SerializeField] private float staminaLoss = 10f; //How much stamina is lost per second when sprinting
+    [SerializeField] private float staminaGain = 10f;
+    [SerializeField] private int minStam = 0;
+    [SerializeField] private int maxStam = 100;
+    [SerializeField] private bool HoldToSprint = false;
+    private bool isSprinting;
+    
+
+    [Header("Crouch settings")]
+
+    [SerializeField] private float crouchspeed = 3f;
+    [SerializeField] private bool HoldToCrouch = true;
     [SerializeField] private float crouchHeight = 0.5f;
     [SerializeField] private float standingHeight = 0.9f;
     [SerializeField] private float crouchTime = 0.5f; //Time in seconds for crouching animation to play
     [SerializeField] private Vector3 standingCenter = new Vector3(0, 0, 0);
     [SerializeField] private Vector3 crouchingCenter = new Vector3(0, 0.5f, 0);
-
-    public bool HoldToCrouch = true;
-    bool crouchIsToggled = false;
-
-    public bool HoldToSprint = false;
-
     private bool isCrouching = false;
     private bool duringCrouchAnimation;
-
-
-    private bool isSprinting;
-    float stamina = 100f;
-    // Update is called once per frame
-
-    private bool shouldJump => Input.GetButton("Jump") && controller.isGrounded;
     private bool canCrouch => controller.isGrounded;
-    private bool canStand => controller.isGrounded;
+    private bool canStand => isCrouching && !Physics.Raycast(cam.transform.position, Vector3.up, standingHeight - crouchHeight) && controller.isGrounded && !justLanded;
+
+
+    [Header("Movement")]
+
+    [SerializeField] private float walkspeed = 7f;
+    public bool CanMove { get; private set; } = true;
+    Vector3 moveDirection;
+    Vector2 currentInput;
+    [SerializeField] private float moveSpeed = 10f; //Stores a movespeed multiplier, can be changed for sprinting etc.
+
 
     void Update()
     {
@@ -61,7 +69,7 @@ public class BaseMovement : MonoBehaviour
         {
             //If player can move, we process inputs
             //Sprint check first to alter movement values
-            SprintCheck();
+            ApplyMovementSpeeds();
 
             HandleMovementInput();
 
@@ -84,10 +92,51 @@ public class BaseMovement : MonoBehaviour
        
     }
 
+    
+
+    void ApplyMovementSpeeds()
+    {
+        ///Applies any continuous alterations to base movement speed due to crouching, being in the air etc
+        SprintCheck();
+        if (justLanded)
+        {
+            //Handled speed in coroutine for onlanding
+        }
+        else if (isSprinting)
+        {
+            moveSpeed = sprintspeed;
+            stamina -= staminaLoss * Time.deltaTime;
+            stamina = Mathf.Clamp(stamina, minStam, maxStam);
+        }
+        else if (isCrouching)
+        {
+            moveSpeed = crouchspeed;
+        }
+        else if (!controller.isGrounded)
+        {
+            moveSpeed = jumphorzspeed;
+        }
+        else
+        {
+            moveSpeed = walkspeed;
+            if (stamina < maxStam)
+            {
+                stamina += staminaGain * Time.deltaTime;
+                stamina = Mathf.Clamp(stamina, minStam, maxStam);
+            }
+            
+
+        }
+    }
     void HandleMovementInput()
     {
         currentInput = new Vector2(moveSpeed * Input.GetAxis("Vertical"), moveSpeed * Input.GetAxis("Horizontal"));
 
+        //Stops sprinting horizontally, and cancels sprinting if not moving forward.
+        if ((currentInput.x <= 0 || currentInput.y != 0) && isSprinting)
+        {
+            SprintCancel();
+        }
         float moveY = moveDirection.y;
 
         moveDirection = (transform.TransformDirection(Vector3.forward) * currentInput.x) + (transform.TransformDirection(Vector3.right) * currentInput.y);
@@ -98,6 +147,7 @@ public class BaseMovement : MonoBehaviour
 
     void HandleCrouch()
     {
+        
         if (Input.GetButtonDown("Crouch"))
         {
             if (isSprinting)
@@ -105,9 +155,9 @@ public class BaseMovement : MonoBehaviour
                 SprintCancel();
             }
             
-            if (!HoldToSprint)
+            if (!HoldToCrouch)
             {
-                if (canCrouch)
+                if (canCrouch && !isCrouching)
                 {
 
                     //Can't crouch wehn sprinting or falling
@@ -115,7 +165,7 @@ public class BaseMovement : MonoBehaviour
 
                 }
 
-                else if (isSprinting)
+                else if (isCrouching && canStand)
                 {
                     //No longer crouching
                     CrouchUp();
@@ -124,7 +174,7 @@ public class BaseMovement : MonoBehaviour
 
             }
 
-            else if (HoldToSprint)
+            else if (HoldToCrouch)
             {
                 CrouchDown();
 
@@ -133,39 +183,52 @@ public class BaseMovement : MonoBehaviour
 
         }
 
-        else if (!Input.GetButton("Crouch") && HoldToSprint && isSprinting)
+        else if (!Input.GetButton("Crouch") && HoldToCrouch && isCrouching && canStand)
         {
             CrouchUp();
         }
     }
     void HandleJump()
     {
+        if (stamina < jumpStaminaLoss)
+        {
+            return;
+        }
+        if (isCrouching && canStand)
+        {
+            CrouchUp();
+        }
+        else if (isCrouching && !canStand)
+        {
+            return;
+        }
+
+        SprintCancel();
         moveDirection.y = jumpForce;
+        stamina -= jumpStaminaLoss;
+        jumpWasPressed = true;
     }
 
     void CrouchDown()
     {
         isCrouching = true;
-        moveSpeed = crouchspeed;
-        CrouchStand(false);
+        StopCoroutine(CrouchStand(true));
+        StartCoroutine(CrouchStand(false));
 
     }
 
     void CrouchUp()
     {
-        if (!CanStandUp())
+        if (!canStand)
         {
             return;
         }
         isCrouching = false;
-        moveSpeed = walkspeed;
-        CrouchStand(true);
+        StopCoroutine(CrouchStand(false));
+        StartCoroutine(CrouchStand(true));
     }
 
-    bool CanStandUp()
-    {
-        return isCrouching && Physics.Raycast(cam.transform.position, Vector3.up, standingHeight - crouchHeight);
-    }
+    
     IEnumerator CrouchStand(bool tostand)
     {
         duringCrouchAnimation = true;
@@ -191,6 +254,31 @@ public class BaseMovement : MonoBehaviour
         duringCrouchAnimation = false;
 
     }
+
+    float landingSpeedCalc(float timeElapsed)
+    {
+        return Mathf.Pow(timeElapsed, 3f) / 4;
+    }
+
+    IEnumerator OnLanding()
+    {
+        ///Slows down character for the landing time after landing a jump.
+        float timeElapsed = 0f;
+        justLanded = true;
+
+        while (timeElapsed < landingTime)
+        {
+            //Smoothly increases speed
+            //moveSpeed = Mathf.Lerp(landingSpeed, walkspeed, timeElapsed);
+            moveSpeed = landingSpeedCalc(timeElapsed * (1/landingSpeedRatio)) + 4;
+            moveSpeed = Mathf.Clamp(moveSpeed, landingSpeed, walkspeed);
+
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        justLanded = false;
+    }
     private void ApplyFinalMovement()
     {
         if (!controller.isGrounded)
@@ -202,7 +290,13 @@ public class BaseMovement : MonoBehaviour
         //Reset y velocity if landing
         if (controller.velocity.y < -1 && controller.isGrounded)
         {
+            if (controller.velocity.y < landinglimitspeed || jumpWasPressed)
+            {
+                StartCoroutine(OnLanding());
+                jumpWasPressed = false;
+            }
             moveDirection.y = 0;
+            //As we have just landed, we do the landing thing
         }
 
         //Applying all moveidrection
@@ -217,35 +311,36 @@ public class BaseMovement : MonoBehaviour
 
     void Sprint()
     {
-        if (stamina < 10f)
+        if (stamina < 10f || controller.velocity.y < landinglimitspeed)
         {
             return; //Prevents sprinting from being initiated below 10 stamina
         }
 
-        moveSpeed = sprintspeed;
         isSprinting = true;
     }
     void SprintCancel()
     {
-        moveSpeed = walkspeed;
         isSprinting = false;
     }
     void SprintCheck()
     {
-        if (isSprinting)
+        if (stamina <= 0f)
         {
-            stamina -= staminaLoss * Time.deltaTime;
-            stamina = Mathf.Clamp(stamina, minStam, maxStam);
-
+            SprintCancel();
         }
+        if (justLanded)
+        {
+            return;
+        }
+        
         if (Input.GetButtonDown("Sprint"))
         {
-            if (isCrouching && CanStandUp())
+            if (isCrouching && canStand)
             {
                 //Stop crouching if sprinting
                 CrouchUp();
             }
-            else if (isCrouching && !CanStandUp())
+            else if (isCrouching && !canStand)
             {
                 return;
             }

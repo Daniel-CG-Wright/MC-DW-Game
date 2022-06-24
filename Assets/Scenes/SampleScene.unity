@@ -1418,21 +1418,27 @@ MonoBehaviour:
   staminabar: {fileID: 1481231767}
   cam: {fileID: 963194227}
   controller: {fileID: 1902089121}
-  moveSpeed: 10
-  gravity: -9.81
-  walkspeed: 10
-  sprintspeed: 14
-  crouchspeed: 3
+  gravity: -19.62
+  landingTime: 1
   jumphorzspeed: 4
-  staminaLoss: 50
-  jumpStaminaLoss: 100
+  landingSpeed: 4
+  jumpForce: 8
+  landinglimitspeed: -4
+  jumpStaminaLoss: 20
+  landingSpeedRatio: 0.2
+  stamina: 100
+  sprintspeed: 14
+  staminaLoss: 10
   staminaGain: 10
   minStam: 0
   maxStam: 100
+  HoldToSprint: 0
+  crouchspeed: 3
+  HoldToCrouch: 1
   crouchHeight: 0.5
   standingHeight: 0.9
-  crouchTime: 0.5
+  crouchTime: 0.1
   standingCenter: {x: 0, y: 0, z: 0}
   crouchingCenter: {x: 0, y: 0.5, z: 0}
-  HoldToCrouch: 1
-  HoldToSprint: 0
+  walkspeed: 8
+  moveSpeed: 10
