@@ -16,6 +16,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define fpsgame_Source_fpsgame_fpscharacter_h_18_SPARSE_DATA
 #define fpsgame_Source_fpsgame_fpscharacter_h_18_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execReleaseCrouch); \
+	DECLARE_FUNCTION(execPressCrouch); \
+	DECLARE_FUNCTION(execStopJump); \
+	DECLARE_FUNCTION(execStartJump); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputY); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
@@ -24,6 +28,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execReleaseCrouch); \
+	DECLARE_FUNCTION(execPressCrouch); \
+	DECLARE_FUNCTION(execStopJump); \
+	DECLARE_FUNCTION(execStartJump); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputY); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \

@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Camera/CameraComponent.h"
-
+#include "Components/CapsuleComponent.h"
 #include "GameFramework/Character.h"
 
 
@@ -49,6 +49,24 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Mouse Input")
 		bool InvertY;
 
+	//Stores whether crouch is toggle or hold
+	UPROPERTY(EditAnywhere, Category = "Button Input")
+		bool ToggleCrouch;
+	
+	//Stores whether sprint is toggle or hold
+	UPROPERTY(EditAnywhere, Category = "Button Input")
+		bool ToggleSprint;
+
+	//FPS camera component
+	UPROPERTY(VisibleAnywhere)
+		UCameraComponent* FPSCameraComponent;
+
+	//FPS mesh component, visible only to the owning player
+	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+		USkeletalMeshComponent* FPSMesh;
+
+
+
 	//Handles movement inputs for forward-backward
 	UFUNCTION()
 		void MoveY(float Value);
@@ -64,4 +82,23 @@ public:
 	UFUNCTION()
 		void ApplySensitivityAndInversionToMouseInputY(float Value);
 
+	//Used to handle jumping
+	//Sets jump flag when key is pressed to jump
+	UFUNCTION()
+		void StartJump();
+
+	//Clears jump flag when key is released
+	UFUNCTION()
+		void StopJump();
+
+	//For handling crouching
+	UFUNCTION()
+		void PressCrouch();
+
+	UFUNCTION()
+		void ReleaseCrouch();
+
+
+
+	
 };
