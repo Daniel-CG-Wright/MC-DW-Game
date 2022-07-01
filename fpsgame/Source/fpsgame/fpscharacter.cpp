@@ -1,7 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "Net/UnrealNetwork.h"
+#include "Engine/Engine.h"
 #include "fpscharacter.h"
+#include "GameFramework/Character.h"
+#include "Engine\Classes\GameFramework\CharacterMovementComponent.h"
 
 // Sets default values
 Afpscharacter::Afpscharacter()
@@ -40,6 +43,7 @@ Afpscharacter::Afpscharacter()
 	//Enables the pawn base of the character to control camera rotation
 	FPSCameraComponent->bUsePawnControlRotation = true;
 
+
 	//Sets default mouse input values. Will have to change later when integrating with stored player settings.
 	XSensitivity = 1.0f;
 	YSensitivity = 1.0f;
@@ -49,8 +53,40 @@ Afpscharacter::Afpscharacter()
 	ToggleSprint = false;
 
 
+	//Initialize stamina
+	MaxStamina = 100.0f;
+	CurrentStamina = MaxStamina;
+
+	//Initialize health
+	MaxHealth = 100.0f;
+	CurrentHealth = MaxHealth;
+
+	//Initialize speeds
+	DefaultSpeed = 600.0f;
+	SprintSpeed = 1200.0f;
+
+	//Initialize default heights
+	DefaultHalfHeight = 88.0f;
+	CrouchedHalfHeight = 40.0f;
 
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Replicated Properties
+
+void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	//Replicate current stamina
+	DOREPLIFETIME(Afpscharacter, CurrentStamina);
+
+	//Replicate current HP
+	DOREPLIFETIME(Afpscharacter, CurrentHealth);
+
+}
+
 
 
 // Called when the game starts or when spawned
@@ -84,10 +120,13 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &Afpscharacter::StartJump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &Afpscharacter::StopJump);
 
+	//Setting up sprint input
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &Afpscharacter::PressSprint);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &Afpscharacter::ReleaseSprint);
+
 	//Setting up crouch input
 	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &Afpscharacter::PressCrouch);
 	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &Afpscharacter::ReleaseCrouch);
-
 }
 
 void Afpscharacter::MoveY(float Value)
@@ -132,6 +171,7 @@ void Afpscharacter::ApplySensitivityAndInversionToMouseInputY(float Value)
 //This in turn causes the character to jump due to backend from UE4
 void Afpscharacter::StartJump()
 {
+	//Release crouch is done in blueprints (NEEDS FIXING)
 	bPressedJump = true;
 }
 
@@ -140,39 +180,179 @@ void Afpscharacter::StopJump()
 	bPressedJump = false;
 }
 
-//Handling crouching based on toggle or hold.
+
 void Afpscharacter::PressCrouch()
 {
-
-	//For when we want to be crouching
 	if (ToggleCrouch)
 	{
-		//If toggle crouch is enabled, decide whether to uncrouch or crouch
-		if (bIsCrouched)
+		if (CurrentlyCrouching)
 		{
-			UnCrouch(true);
+			//Should Stand
+			GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+			CurrentlyCrouching = false;
 		}
 		else
 		{
-			Crouch(true);
+			//Should Crouch
+			GetCharacterMovement()->MaxWalkSpeed = 300.0f;
+			CurrentlyCrouching = true;
+
 		}
 	}
-
 	else
 	{
-		//If hold to crouch, activate crouch when crouch is pressed
-		Crouch(true);
+		//Should Crouch
+		GetCharacterMovement()->MaxWalkSpeed = 300.0f;
+		CurrentlyCrouching = true;
 	}
-	
+
+
 }
 
 void Afpscharacter::ReleaseCrouch()
 {
 	if (!ToggleCrouch)
 	{
-		//If hold to crouch, deactivate crouch when crouch is released
-		UnCrouch();
+		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+		CurrentlyCrouching = false;
+
+	}
+}
+
+void Afpscharacter::PressSprint()
+{
+	if (CurrentlyCrouching)
+	{
+		//Can't sprint if crouched
+		return;
+
+	}
+
+	if (ToggleSprint)
+	{
+		if (IsSprinting)
+		{
+			//Start walking
+			GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
+			IsSprinting = false;
+		}
+		else
+		{
+			//Start sprinting
+			GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
+			IsSprinting = true;
+		}
+	}
+	else
+	{
+		GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
+		IsSprinting = true;
+	}
+}
+
+void Afpscharacter::ReleaseSprint()
+{
+	if (CurrentlyCrouching)
+	{
+		return;
+	}
+	if (!ToggleSprint)
+	{
+		GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
+		IsSprinting = false;
+
 	}
 }
 
 
+void Afpscharacter::OnHealthUpdate()
+{
+	//Client-specific functionality
+	if (IsLocallyControlled())
+	{
+
+		if (CurrentHealth <= 0)
+		{
+			//Out of health - death events here
+		}
+	}
+
+	//Server-specific functionality
+	if (GetLocalRole() == ROLE_Authority)
+	{
+
+	}
+
+	//Functions that occur on all machines - such as special death effects
+}
+
+void Afpscharacter::OnRep_CurrentHealth()
+{
+	//Runs whenever the health for the player is updated
+	OnHealthUpdate();
+
+}
+
+void Afpscharacter::SetCurrentHealth(float healthValue)
+{
+	if (GetLocalRole() == ROLE_Authority)
+	{
+		//only run on server
+		CurrentHealth = FMath::Clamp(healthValue, 0.f, MaxHealth);
+		OnHealthUpdate();
+	}
+}
+
+float Afpscharacter::TakeDamage(float DamageTaken, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	//Applying simple health deduction right now
+	float damageApplied = CurrentHealth - DamageTaken;
+	SetCurrentHealth(damageApplied);
+	return damageApplied;
+
+}
+void Afpscharacter::OnStaminaUpdate()
+{
+	//Client-specific functionality
+	if (IsLocallyControlled())
+	{
+
+		if (CurrentStamina <= 0)
+		{
+			//Out of stamina
+		}
+	}
+
+	//Server-specific functionality
+	if (GetLocalRole() == ROLE_Authority)
+	{
+
+	}
+
+	//Functions that occur on all machines
+
+}
+
+void Afpscharacter::OnRep_CurrentStamina()
+{
+	//Runs whenever the stamina for the player is updated
+	OnStaminaUpdate();
+
+}
+
+void Afpscharacter::SetCurrentStamina(float staminaValue)
+{
+	if (GetLocalRole() == ROLE_Authority)
+	{
+		//Only run on server
+		CurrentStamina = FMath::Clamp(staminaValue, 0.f, MaxStamina);
+		OnStaminaUpdate();
+	}
+}
+
+float Afpscharacter::LoseStamina(float LostStamina)
+{
+	float staminaRemains = CurrentHealth - LostStamina;
+	SetCurrentStamina(staminaRemains);
+	return staminaRemains;
+}
