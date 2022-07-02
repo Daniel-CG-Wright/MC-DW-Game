@@ -79,8 +79,12 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	//Replicate current stamina
-	DOREPLIFETIME(Afpscharacter, CurrentStamina);
+	//Replicate current stamina only to currently owning player, as other players do not need to see your stamina in this build.
+	//To allow everyone to receive each other's stamina and thereby see it, we can switch to using DOREPLIFETIME
+	DOREPLIFETIME_CONDITION(Afpscharacter, CurrentStamina, COND_OwnerOnly);
+
+	//Old command for purpose described above
+	//DOREPLIFETIME(Afpscharacter, CurrentStamina);
 
 	//Replicate current HP
 	DOREPLIFETIME(Afpscharacter, CurrentHealth);
