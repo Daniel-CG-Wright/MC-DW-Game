@@ -39,7 +39,7 @@ class AActor;
 	DECLARE_FUNCTION(execMoveY); \
 	DECLARE_FUNCTION(execStartSprinting); \
 	DECLARE_FUNCTION(execStopSprinting); \
-	DECLARE_FUNCTION(execDeductStamina); \
+	DECLARE_FUNCTION(execUpdateStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
 	DECLARE_FUNCTION(execOnRep_CurrentStamina);
 
@@ -66,7 +66,7 @@ class AActor;
 	DECLARE_FUNCTION(execMoveY); \
 	DECLARE_FUNCTION(execStartSprinting); \
 	DECLARE_FUNCTION(execStopSprinting); \
-	DECLARE_FUNCTION(execDeductStamina); \
+	DECLARE_FUNCTION(execUpdateStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
 	DECLARE_FUNCTION(execOnRep_CurrentStamina);
 
@@ -136,7 +136,7 @@ public: \
 	FORCEINLINE static uint32 __PPO__SprintSpeed() { return STRUCT_OFFSET(Afpscharacter, SprintSpeed); } \
 	FORCEINLINE static uint32 __PPO__CrouchSpeed() { return STRUCT_OFFSET(Afpscharacter, CrouchSpeed); } \
 	FORCEINLINE static uint32 __PPO__LandingTime() { return STRUCT_OFFSET(Afpscharacter, LandingTime); } \
-	FORCEINLINE static uint32 __PPO__StaminaLossIntervalTimeInSeconds() { return STRUCT_OFFSET(Afpscharacter, StaminaLossIntervalTimeInSeconds); } \
+	FORCEINLINE static uint32 __PPO__StaminaUpdateIntervalInSeconds() { return STRUCT_OFFSET(Afpscharacter, StaminaUpdateIntervalInSeconds); } \
 	FORCEINLINE static uint32 __PPO__StaminaLossRateWhenSprinting() { return STRUCT_OFFSET(Afpscharacter, StaminaLossRateWhenSprinting); } \
 	FORCEINLINE static uint32 __PPO__StaminaLossWhenJumping() { return STRUCT_OFFSET(Afpscharacter, StaminaLossWhenJumping); } \
 	FORCEINLINE static uint32 __PPO__MaxStamina() { return STRUCT_OFFSET(Afpscharacter, MaxStamina); } \

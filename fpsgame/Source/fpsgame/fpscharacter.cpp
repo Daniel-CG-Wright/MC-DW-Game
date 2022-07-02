@@ -58,9 +58,9 @@ Afpscharacter::Afpscharacter()
 	//Initialize stamina
 	MaxStamina = 100.0f;
 	CurrentStamina = MaxStamina;
-	StaminaLossRateWhenSprinting = 5.0f;
+	StaminaLossRateWhenSprinting = 10.0f;
 	StaminaLossWhenJumping = 15.0f;
-	StaminaLossIntervalTimeInSeconds = 0.2f;
+	StaminaUpdateIntervalInSeconds = 0.2f;
 
 	//Initialize health
 	MaxHealth = 100.0f;
@@ -106,6 +106,8 @@ void Afpscharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	GetWorldTimerManager().SetTimer(StaminaTimerHandle, this, &Afpscharacter::UpdateStamina, StaminaUpdateIntervalInSeconds, true);
+
 }
 
 // Called every frame
@@ -159,14 +161,24 @@ void Afpscharacter::MoveY(float Value)
 
 }
 
-void Afpscharacter::DeductStamina()
+void Afpscharacter::UpdateStamina()
 {
-	LoseStamina(StaminaLossRateWhenSprinting * StaminaLossIntervalTimeInSeconds);
-	UE_LOG(LogTemp, Warning, TEXT("Stamina = %f"), GetCurrentStamina());
-	if (GetCurrentStamina() <= 0.0f)
+	
+	if (IsSprinting)
 	{
-		StopSprinting();
+		//Lose stamina while sprinting
+		LoseStamina(StaminaLossRateWhenSprinting * StaminaUpdateIntervalInSeconds);
+		UE_LOG(LogTemp, Warning, TEXT("Stamina = %f"), GetCurrentStamina());
+		
 	}
+	else if (!JustLanded && (GetVelocity().Z < 0.1f || GetVelocity().Z > 0.1f))
+	{
+		//Gain stamina if not sprinting or falling
+		LoseStamina(-1.0f * StaminaLossRateWhenSprinting * StaminaUpdateIntervalInSeconds);
+	}
+
+
+
 }
 void Afpscharacter::MoveX(float Value)
 {
@@ -305,9 +317,6 @@ void Afpscharacter::StopSprinting()
 	GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
 	IsSprinting = false;
 
-	//Stops deducting stamina
-	GetWorldTimerManager().ClearTimer(StaminaTimerHandle);
-
 }
 
 void Afpscharacter::StartSprinting()
@@ -315,8 +324,6 @@ void Afpscharacter::StartSprinting()
 	GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
 	IsSprinting = true;
 	
-	//Deducts stamina every StaminaLossIntervalTimeInSeconds (normally 0.2f).
-	GetWorldTimerManager().SetTimer(StaminaTimerHandle, this, &Afpscharacter::DeductStamina, StaminaLossIntervalTimeInSeconds, true);
 }
 
 void Afpscharacter::OnHealthUpdate()
@@ -374,13 +381,18 @@ void Afpscharacter::OnStaminaUpdate()
 		if (CurrentStamina <= 0)
 		{
 			//Out of stamina
+			StopSprinting();
 		}
 	}
 
 	//Server-specific functionality
 	if (GetLocalRole() == ROLE_Authority)
 	{
-
+		if (CurrentStamina <= 0)
+		{
+			//Out of stamina
+			StopSprinting();
+		}
 	}
 
 	//Functions that occur on all machines
@@ -406,7 +418,7 @@ void Afpscharacter::SetCurrentStamina(float staminaValue)
 
 float Afpscharacter::LoseStamina(float LostStamina)
 {
-	float staminaRemains = CurrentHealth - LostStamina;
+	float staminaRemains = CurrentStamina - LostStamina;
 	SetCurrentStamina(staminaRemains);
 	return staminaRemains;
 }

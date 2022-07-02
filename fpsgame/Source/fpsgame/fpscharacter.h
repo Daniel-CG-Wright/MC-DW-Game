@@ -59,9 +59,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Landing")
 		float LandingTime;
 
-	//Interval in seconds that stamina loss occurs (higher values means less smooth updates, but easier performance).
-	UPROPERTY(EditAnywhere, Category = "Stamina")
-		float StaminaLossIntervalTimeInSeconds;
+	//Interval in seconds that stamina updates occur (higher values means less smooth updates, but easier performance).
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Stamina")
+		float StaminaUpdateIntervalInSeconds;
 
 	//Stamina loss rate per second when sprinting
 	UPROPERTY(EditAnywhere, Category = "Stamina")
@@ -107,9 +107,9 @@ protected:
 	UPROPERTY()
 		bool IsSprinting;
 
-	//Deducts stamina if sprinting, vcalled every @StaminaLossIntervalTimeInSeconds seconds while sprinting
+	//updates stamina , called every @StaminaUpdateIntervalInSeconds by timer
 	UFUNCTION()
-		void DeductStamina();
+		void UpdateStamina();
 
 	//Stops sprinting
 	UFUNCTION()
