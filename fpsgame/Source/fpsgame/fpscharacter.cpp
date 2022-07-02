@@ -5,6 +5,7 @@
 #include "fpscharacter.h"
 #include "GameFramework/Character.h"
 #include "Engine\Classes\GameFramework\CharacterMovementComponent.h"
+#include "TimerManager.h"
 
 // Sets default values
 Afpscharacter::Afpscharacter()
@@ -12,6 +13,7 @@ Afpscharacter::Afpscharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	
 	//Creates a first person camera component instance
 	FPSCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	check(FPSCameraComponent != nullptr);
@@ -19,8 +21,8 @@ Afpscharacter::Afpscharacter()
 	//Attach the camera component to the capsule component
 	FPSCameraComponent->SetupAttachment(CastChecked<USceneComponent, UCapsuleComponent>(GetCapsuleComponent()));
 
-	//Position the camera slightly above eyes
-	FPSCameraComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 50.0f + BaseEyeHeight));
+	//Position the camera at eye level
+	FPSCameraComponent->SetRelativeLocation(FVector(0.0f, 0.0f, BaseEyeHeight));
 
 	//Creating the FPS mesh component for the owning player
 	FPSMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMesh"));
@@ -56,6 +58,9 @@ Afpscharacter::Afpscharacter()
 	//Initialize stamina
 	MaxStamina = 100.0f;
 	CurrentStamina = MaxStamina;
+	StaminaLossRateWhenSprinting = 5.0f;
+	StaminaLossWhenJumping = 15.0f;
+	StaminaLossIntervalTimeInSeconds = 0.2f;
 
 	//Initialize health
 	MaxHealth = 100.0f;
@@ -64,11 +69,14 @@ Afpscharacter::Afpscharacter()
 	//Initialize speeds
 	DefaultSpeed = 600.0f;
 	SprintSpeed = 1200.0f;
+	CrouchSpeed = 300.0f;
 
 	//Initialize default heights
-	DefaultHalfHeight = 88.0f;
-	CrouchedHalfHeight = 40.0f;
+	DefaultHalfHeight = 90.0f;
+	CrouchedHalfHeight = 65.0f;
 
+	//Initialize landing time
+	LandingTime = 0.5f;
 }
 
 
@@ -97,7 +105,7 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 void Afpscharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 }
 
 // Called every frame
@@ -105,6 +113,7 @@ void Afpscharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	
 }
 
 // Called to bind functionality to input
@@ -136,14 +145,29 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 void Afpscharacter::MoveY(float Value)
 {
 	///For moving forward/backward
-
-	//Gets 'forward' relative to vamera, and record that player wants to move that way.
+	
+	//Gets 'forward' relative to camera, and record that player wants to move that way.
 	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
+	
+	if (Value != 1.0f)
+	{
+		//Ensures player only sprints if they are holding forward.
+		StopSprinting();
+	}
 	AddMovementInput(Direction, Value);
 
 
 }
 
+void Afpscharacter::DeductStamina()
+{
+	LoseStamina(StaminaLossRateWhenSprinting * StaminaLossIntervalTimeInSeconds);
+	UE_LOG(LogTemp, Warning, TEXT("Stamina = %f"), GetCurrentStamina());
+	if (GetCurrentStamina() <= 0.0f)
+	{
+		StopSprinting();
+	}
+}
 void Afpscharacter::MoveX(float Value)
 {
 	///For moving right/left
@@ -175,14 +199,21 @@ void Afpscharacter::ApplySensitivityAndInversionToMouseInputY(float Value)
 //This in turn causes the character to jump due to backend from UE4
 void Afpscharacter::StartJump()
 {
+	if (GetCurrentStamina() <= StaminaLossWhenJumping)
+	{
+		return;
+	}
 	//Release crouch is done in blueprints (NEEDS FIXING)
 	bPressedJump = true;
+	LoseStamina(StaminaLossWhenJumping);
 }
 
 void Afpscharacter::StopJump()
 {
 	bPressedJump = false;
+	
 }
+
 
 
 void Afpscharacter::PressCrouch()
@@ -192,13 +223,13 @@ void Afpscharacter::PressCrouch()
 		if (CurrentlyCrouching)
 		{
 			//Should Stand
-			GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+			GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
 			CurrentlyCrouching = false;
 		}
 		else
 		{
 			//Should Crouch
-			GetCharacterMovement()->MaxWalkSpeed = 300.0f;
+			GetCharacterMovement()->MaxWalkSpeed = CrouchSpeed;
 			CurrentlyCrouching = true;
 
 		}
@@ -206,7 +237,7 @@ void Afpscharacter::PressCrouch()
 	else
 	{
 		//Should Crouch
-		GetCharacterMovement()->MaxWalkSpeed = 300.0f;
+		GetCharacterMovement()->MaxWalkSpeed = CrouchSpeed;
 		CurrentlyCrouching = true;
 	}
 
@@ -217,7 +248,7 @@ void Afpscharacter::ReleaseCrouch()
 {
 	if (!ToggleCrouch)
 	{
-		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+		GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
 		CurrentlyCrouching = false;
 
 	}
@@ -225,7 +256,12 @@ void Afpscharacter::ReleaseCrouch()
 
 void Afpscharacter::PressSprint()
 {
-	if (CurrentlyCrouching)
+
+	if (GetCurrentStamina() <= 10.0f)
+	{
+		return; //Cannot sprint when below 10 stamina
+	}
+	if (CurrentlyCrouching || JustLanded)
 	{
 		//Can't sprint if crouched
 		return;
@@ -237,20 +273,17 @@ void Afpscharacter::PressSprint()
 		if (IsSprinting)
 		{
 			//Start walking
-			GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
-			IsSprinting = false;
+			StopSprinting();
 		}
 		else
 		{
 			//Start sprinting
-			GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
-			IsSprinting = true;
+			StartSprinting();
 		}
 	}
 	else
 	{
-		GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
-		IsSprinting = true;
+		StartSprinting();
 	}
 }
 
@@ -262,12 +295,29 @@ void Afpscharacter::ReleaseSprint()
 	}
 	if (!ToggleSprint)
 	{
-		GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
-		IsSprinting = false;
+		StopSprinting();
 
 	}
 }
 
+void Afpscharacter::StopSprinting()
+{
+	GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
+	IsSprinting = false;
+
+	//Stops deducting stamina
+	GetWorldTimerManager().ClearTimer(StaminaTimerHandle);
+
+}
+
+void Afpscharacter::StartSprinting()
+{
+	GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
+	IsSprinting = true;
+	
+	//Deducts stamina every StaminaLossIntervalTimeInSeconds (normally 0.2f).
+	GetWorldTimerManager().SetTimer(StaminaTimerHandle, this, &Afpscharacter::DeductStamina, StaminaLossIntervalTimeInSeconds, true);
+}
 
 void Afpscharacter::OnHealthUpdate()
 {

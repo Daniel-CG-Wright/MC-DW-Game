@@ -37,6 +37,9 @@ class AActor;
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
 	DECLARE_FUNCTION(execMoveY); \
+	DECLARE_FUNCTION(execStartSprinting); \
+	DECLARE_FUNCTION(execStopSprinting); \
+	DECLARE_FUNCTION(execDeductStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
 	DECLARE_FUNCTION(execOnRep_CurrentStamina);
 
@@ -61,6 +64,9 @@ class AActor;
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
 	DECLARE_FUNCTION(execMoveY); \
+	DECLARE_FUNCTION(execStartSprinting); \
+	DECLARE_FUNCTION(execStopSprinting); \
+	DECLARE_FUNCTION(execDeductStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
 	DECLARE_FUNCTION(execOnRep_CurrentStamina);
 
@@ -123,8 +129,16 @@ public: \
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CurrentlyCrouching() { return STRUCT_OFFSET(Afpscharacter, CurrentlyCrouching); } \
+	FORCEINLINE static uint32 __PPO__JustLanded() { return STRUCT_OFFSET(Afpscharacter, JustLanded); } \
 	FORCEINLINE static uint32 __PPO__DefaultHalfHeight() { return STRUCT_OFFSET(Afpscharacter, DefaultHalfHeight); } \
 	FORCEINLINE static uint32 __PPO__CrouchedHalfHeight() { return STRUCT_OFFSET(Afpscharacter, CrouchedHalfHeight); } \
+	FORCEINLINE static uint32 __PPO__DefaultSpeed() { return STRUCT_OFFSET(Afpscharacter, DefaultSpeed); } \
+	FORCEINLINE static uint32 __PPO__SprintSpeed() { return STRUCT_OFFSET(Afpscharacter, SprintSpeed); } \
+	FORCEINLINE static uint32 __PPO__CrouchSpeed() { return STRUCT_OFFSET(Afpscharacter, CrouchSpeed); } \
+	FORCEINLINE static uint32 __PPO__LandingTime() { return STRUCT_OFFSET(Afpscharacter, LandingTime); } \
+	FORCEINLINE static uint32 __PPO__StaminaLossIntervalTimeInSeconds() { return STRUCT_OFFSET(Afpscharacter, StaminaLossIntervalTimeInSeconds); } \
+	FORCEINLINE static uint32 __PPO__StaminaLossRateWhenSprinting() { return STRUCT_OFFSET(Afpscharacter, StaminaLossRateWhenSprinting); } \
+	FORCEINLINE static uint32 __PPO__StaminaLossWhenJumping() { return STRUCT_OFFSET(Afpscharacter, StaminaLossWhenJumping); } \
 	FORCEINLINE static uint32 __PPO__MaxStamina() { return STRUCT_OFFSET(Afpscharacter, MaxStamina); } \
 	FORCEINLINE static uint32 __PPO__CurrentStamina() { return STRUCT_OFFSET(Afpscharacter, CurrentStamina); } \
 	FORCEINLINE static uint32 __PPO__MaxHealth() { return STRUCT_OFFSET(Afpscharacter, MaxHealth); } \

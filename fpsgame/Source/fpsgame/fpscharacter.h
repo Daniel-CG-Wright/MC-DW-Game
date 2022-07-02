@@ -32,11 +32,44 @@ protected:
 	UPROPERTY(BlueprintReadWrite, Transient)
 		bool CurrentlyCrouching;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Heights")
+	//Stores if the player has just landed, logic altered in blueprints.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+		bool JustLanded;
+
+	//Obtained at start, by getting capsule component half height.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float DefaultHalfHeight;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Heights")
 		float CrouchedHalfHeight;
+
+	//Default walk speed
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement speeds")
+		float DefaultSpeed;
+
+	//Default sprint speed
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement speeds")
+		float SprintSpeed;
+
+	//Default crouch speed
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement speeds")
+		float CrouchSpeed;
+
+	//Time before player speed recovers after landing
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Landing")
+		float LandingTime;
+
+	//Interval in seconds that stamina loss occurs (higher values means less smooth updates, but easier performance).
+	UPROPERTY(EditAnywhere, Category = "Stamina")
+		float StaminaLossIntervalTimeInSeconds;
+
+	//Stamina loss rate per second when sprinting
+	UPROPERTY(EditAnywhere, Category = "Stamina")
+		float StaminaLossRateWhenSprinting;
+
+	//Stamina loss wehn jumping
+	UPROPERTY(EditAnywhere, Category = "Stamina")
+		float StaminaLossWhenJumping;
 
 	//Sprint stamina maximum
 	UPROPERTY(EditDefaultsOnly, Category = "Stamina")
@@ -74,6 +107,18 @@ protected:
 	UPROPERTY()
 		bool IsSprinting;
 
+	//Deducts stamina if sprinting, vcalled every @StaminaLossIntervalTimeInSeconds seconds while sprinting
+	UFUNCTION()
+		void DeductStamina();
+
+	//Stops sprinting
+	UFUNCTION()
+		void StopSprinting();
+
+	//Starts sprinting
+	UFUNCTION()
+		void StartSprinting();
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -81,13 +126,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	//Default walk speed
-	UPROPERTY(EditAnywhere, Category = "Movement speeds")
-		float DefaultSpeed;
-
-	//Default sprint speed
-	UPROPERTY(EditAnywhere, Category = "Movement speeds")
-		float SprintSpeed;
+	
 
 	//Stores X sensitivity for mouse
 	UPROPERTY(EditAnywhere, Category="Mouse Input")
@@ -127,7 +166,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Crouch")
 		float CrouchTime;
 
-	
+	UPROPERTY()
+		FTimerHandle StaminaTimerHandle;
 
 	//Handles movement inputs for forward-backward
 	UFUNCTION()
