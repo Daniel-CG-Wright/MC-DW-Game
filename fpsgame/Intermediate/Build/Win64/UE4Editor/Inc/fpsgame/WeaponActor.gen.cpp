@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 // End Cross Module References
 	static UEnum* WeaponType_StaticEnum()
 	{
@@ -257,6 +258,10 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WAWeaponHitDetectionType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_WAWeaponHitDetectionType;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GunMesh_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GunMesh;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -298,7 +303,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_FireRate = { "FireRate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, FireRate), METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_FireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_FireRate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_BaseRotation_MetaData[] = {
-		{ "Category", "Weapon/Weapon positioning" },
+		{ "Category", "Weapon visuals" },
 		{ "Comment", "//Used to ensure rotation of gun is consistent to make it look pretty.\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Used to ensure rotation of gun is consistent to make it look pretty." },
@@ -308,7 +313,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponType_MetaData[] = {
-		{ "Category", "Weapon/Weapon Info" },
+		{ "Category", "Weapon Info" },
 		{ "Comment", "//Type of weapon\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Type of weapon" },
@@ -318,7 +323,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponFireType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponFireType_MetaData[] = {
-		{ "Category", "Weapon/Weapon Info" },
+		{ "Category", "Weapon Info" },
 		{ "Comment", "//Whether gun fires as burst, auto etc\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Whether gun fires as burst, auto etc" },
@@ -328,13 +333,23 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType_MetaData[] = {
-		{ "Category", "Weapon/Weapon Info" },
+		{ "Category", "Weapon Info" },
 		{ "Comment", "//Hit check type\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Hit check type" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType = { "WAWeaponHitDetectionType", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, WAWeaponHitDetectionType), Z_Construct_UEnum_fpsgame_FireType, METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_GunMesh_MetaData[] = {
+		{ "Category", "Weapon visuals" },
+		{ "Comment", "//Mesh of gun\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "WeaponActor.h" },
+		{ "ToolTip", "Mesh of gun" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_GunMesh = { "GunMesh", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, GunMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_GunMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_GunMesh_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWeaponActor_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_MaxRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_BaseDamage,
@@ -346,6 +361,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponFireType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_GunMesh,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AWeaponActor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AWeaponActor>::IsAbstract,
@@ -374,7 +390,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeaponActor, 3874756441);
+	IMPLEMENT_CLASS(AWeaponActor, 1895990585);
 	template<> FPSGAME_API UClass* StaticClass<AWeaponActor>()
 	{
 		return AWeaponActor::StaticClass();

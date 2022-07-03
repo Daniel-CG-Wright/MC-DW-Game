@@ -9,6 +9,9 @@ AWeaponActor::AWeaponActor()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
+	//Setting up weapon's mesh
+	GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMesh"));
+
 }
 
 // Called when the game starts or when spawned

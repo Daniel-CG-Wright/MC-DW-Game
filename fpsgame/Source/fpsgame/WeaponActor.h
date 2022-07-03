@@ -4,7 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "fpscharacter.h"
 #include "WeaponActor.generated.h"
+
+UENUM(BlueprintType)
+enum class Guns : uint8 {
+	//Default testing pistol
+	PROTOTYPE_PISTOL
+};
 
 UENUM(BlueprintType)
 	enum class FireType : uint8 {
@@ -69,21 +76,30 @@ public:
 	UPROPERTY(EditAnywhere)
 		float FireRate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon/Weapon positioning")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		//Used to ensure rotation of gun is consistent to make it look pretty.
 		float BaseRotation;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon/Weapon Info")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
 		//Type of weapon
 		WeaponType WAWeaponType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon/Weapon Info")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
 		//Whether gun fires as burst, auto etc
 		FireMode WAWeaponFireType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon/Weapon Info")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
 		//Hit check type
 		FireType WAWeaponHitDetectionType;
 
+	//Mesh of gun
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		USkeletalMeshComponent* GunMesh;
 	
+	virtual AWeaponActor EquipWeapon(Afpscharacter* TargetCharacter);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		//Stores translation vectors to position weapon correctly
+		FVector BasePosition;
+
 };

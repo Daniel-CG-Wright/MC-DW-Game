@@ -1524,3 +1524,623 @@ Would you like to open the Output Log to see more details?
 [2022.07.03-14.11.23:612][389]AssetCheck: New page: Asset Save: multiple assets
 [2022.07.03-14.11.23:612][389]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Maps/TestMap_BuiltData.TestMap_BuiltData
 [2022.07.03-14.11.23:612][389]LogContentValidation: Display: Validating World /Game/Maps/TestMap.TestMap
+[2022.07.03-14.15.09:307][222]LogAudioMixer: Resetting audio stream to device id 
+[2022.07.03-14.15.09:313][222]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.03-14.15.09:313][222]LogAudioMixer: Display: 1: FrontRight
+[2022.07.03-14.15.17:191][246]LogD3D11RHI: Timed out while waiting for GPU to catch up. (0.5 s) (ErrorCode 00000001) (00000000)
+[2022.07.03-15.01.12:114][247]LogAudioMixer: Resetting audio stream to device id 
+[2022.07.03-15.01.12:169][247]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.03-15.01.12:169][247]LogAudioMixer: Display: 1: FrontRight
+[2022.07.03-15.01.12:291][248]LogHttp: Warning: 0000022D5D2FEB00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B85D49E0F-4E7E-3E1F-68C6-7E8874B49E7C%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=dd05541c4084c067b544c391e72d18da%7C26e16cc4e019424593627ba93bb79e41%7Ca3e8fe2c-720f-4e69-b62d-3f7674170d39&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2022.07.03-15.01.12:293][248]LogHttp: Warning: 0000022D5D2FEB00: request failed, libcurl error: 6 (Couldn't resolve host name)
+[2022.07.03-15.01.12:293][248]LogHttp: Warning: 0000022D5D2FEB00: libcurl info message cache 0 (Connection 1 seems to be dead!)
+[2022.07.03-15.01.12:293][248]LogHttp: Warning: 0000022D5D2FEB00: libcurl info message cache 1 (Closing connection 1)
+[2022.07.03-15.01.12:293][248]LogHttp: Warning: 0000022D5D2FEB00: libcurl info message cache 2 (Could not resolve host: datarouter.ol.epicgames.com)
+[2022.07.03-15.01.12:293][248]LogHttp: Warning: 0000022D5D2FEB00: libcurl info message cache 3 (Closing connection 2)
+[2022.07.03-15.01.12:294][248]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B85D49E0F-4E7E-3E1F-68C6-7E8874B49E7C%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=dd05541c4084c067b544c391e72d18da%7C26e16cc4e019424593627ba93bb79e41%7Ca3e8fe2c-720f-4e69-b62d-3f7674170d39&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2022.07.03-15.10.04:638][841]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2022.07.03-15.10.04:638][841]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2022.07.03-15.10.24:567][176]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/Weapons/BP_prototypepistol.BP_prototypepistol
+[2022.07.03-15.10.24:906][176]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2022.07.03-15.10.34:546][ 75]Candidate modules for hot reload:
+[2022.07.03-15.10.34:547][ 75]  fpsgame
+[2022.07.03-15.10.34:547][ 75]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=fpsgame,0063 fpsgameEditor Win64 Development -Project="C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject" "C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject"  -IgnoreJunk]
+[2022.07.03-15.10.34:549][ 75]Warning: Starting HotReload took  0.0s.
+[2022.07.03-15.10.36:692][282]CompilerResultsLog: New page: Compilation - 3 Jul 2022, 17:10:36
+[2022.07.03-15.10.36:692][282]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\danie\Documents\Gamedev VR\game\UE4 game).
+[2022.07.03-15.10.36:692][282]CompilerResultsLog: Building fpsgameEditor...
+[2022.07.03-15.10.36:692][282]CompilerResultsLog: Using Visual Studio 2019 14.29.30145 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.07.03-15.10.36:692][282]CompilerResultsLog: Building 4 actions with 12 processes...
+[2022.07.03-15.10.36:692][282]CompilerResultsLog:   [1/4] WeaponActor.cpp
+[2022.07.03-15.10.36:692][282]CompilerResultsLog:   [2/4] UE4Editor-fpsgame-0063.lib
+[2022.07.03-15.10.36:693][282]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-0063.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-0063.exp
+[2022.07.03-15.10.36:693][282]CompilerResultsLog:   [3/4] UE4Editor-fpsgame-0063.dll
+[2022.07.03-15.10.36:693][282]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-0063.suppressed.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-0063.suppressed.exp
+[2022.07.03-15.10.36:693][282]CompilerResultsLog:   [4/4] fpsgameEditor.target
+[2022.07.03-15.10.36:693][282]CompilerResultsLog: Total time in Parallel executor: 1.47 seconds
+[2022.07.03-15.10.36:693][282]CompilerResultsLog: Total execution time: 2.07 seconds
+[2022.07.03-15.10.36:693][282]LogMainFrame: MainFrame: Module compiling took 2.149 seconds
+[2022.07.03-15.10.36:721][282]LogClass: WeaponType HotReload.
+[2022.07.03-15.10.36:721][282]LogClass: FireMode HotReload.
+[2022.07.03-15.10.36:721][282]LogClass: FireType HotReload.
+[2022.07.03-15.10.36:726][282]LogTemp: Warning: hi there
+[2022.07.03-15.10.36:727][282]LogTemp: Warning: hi there
+[2022.07.03-15.10.36:728][282]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'fpsgame' in 0.0002 seconds. Added 4 classes and 2 folders.
+[2022.07.03-15.10.36:734][282]Display: HotReload successful (23 functions remapped  0 scriptstructs remapped)
+[2022.07.03-15.10.36:819][282]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0091 seconds. Added 3826 classes and 930 folders.
+[2022.07.03-15.10.36:823][282]Display: HotReload took  2.3s.
+[2022.07.03-15.10.38:231][420]LogTemp: Repeating last play command: Selected Viewport
+[2022.07.03-15.10.38:236][420]BlueprintLog: New page: Pre-Play auto-recompile
+[2022.07.03-15.10.38:237][420]LogPlayLevel: [PlayLevel] Compiling BP_Myfpscharacter before play...
+[2022.07.03-15.10.38:336][420]LogUObjectHash: Compacting FUObjectHashTables data took   4.92ms
+[2022.07.03-15.10.38:337][420]LogPlayLevel: PlayLevel: Blueprint regeneration took 100 ms (1 blueprints)
+[2022.07.03-15.10.38:337][420]PIE: New page: PIE session: TestMap (3 Jul 2022, 17:10:38)
+[2022.07.03-15.10.38:343][420]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2022.07.03-15.10.38:344][420]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2022.07.03-15.10.38:346][420]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TestMap
+[2022.07.03-15.10.38:348][420]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002806s)
+[2022.07.03-15.10.38:350][420]LogAIModule: Creating AISystem for world TestMap
+[2022.07.03-15.10.38:351][420]LogPlayLevel: PIE: World Init took: (0.002174s)
+[2022.07.03-15.10.38:351][420]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TestMap.TestMap to /Game/Maps/UEDPIE_0_TestMap.TestMap (0.005393s)
+[2022.07.03-15.10.38:377][420]LogUObjectHash: Compacting FUObjectHashTables data took   3.39ms
+[2022.07.03-15.10.38:379][420]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2022.07.03-15.10.38:379][420]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.07.03-15.10.38:379][420]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.07.03-15.10.38:379][420]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.07.03-15.10.38:379][420]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.07.03-15.10.38:379][420]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.07.03-15.10.38:379][420]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.07.03-15.10.38:379][420]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.07.03-15.10.38:379][420]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.07.03-15.10.38:379][420]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.07.03-15.10.38:380][420]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.07.03-15.10.38:380][420]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.07.03-15.10.38:380][420]LogAudioMixer: Display: Initializing audio mixer.
+[2022.07.03-15.10.38:382][420]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.03-15.10.38:382][420]LogAudioMixer: Display: 1: FrontRight
+[2022.07.03-15.10.38:394][420]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2022.07.03-15.10.38:394][420]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.07.03-15.10.38:394][420]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.07.03-15.10.38:394][420]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.07.03-15.10.38:394][420]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.07.03-15.10.38:395][420]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.07.03-15.10.38:395][420]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.07.03-15.10.38:395][420]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.07.03-15.10.38:395][420]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.07.03-15.10.38:395][420]LogInit: FAudioDevice initialized.
+[2022.07.03-15.10.38:395][420]LogAudio: Display: Audio Device (ID: 2) registered with world 'TestMap'.
+[2022.07.03-15.10.38:420][420]LogLoad: Game class is 'BP_fpsgameGameModeBase_C'
+[2022.07.03-15.10.38:427][420]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TestMap.TestMap up for play (max tick rate 0) at 2022.07.03-16.10.38
+[2022.07.03-15.10.38:428][420]LogWorld: Bringing up level for play took: 0.001450
+[2022.07.03-15.10.38:429][420]LogOnline: OSS: Creating online subsystem instance for: :Context_6
+[2022.07.03-15.10.38:470][420]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'MovieSceneCapture' in 0.0003 seconds. Added 20 classes and 0 folders.
+[2022.07.03-15.10.38:487][420]PIE: Server logged in
+[2022.07.03-15.10.38:490][420]PIE: Play in editor total start time 0.255 seconds.
+[2022.07.03-15.10.41:233][718]LogTemp: Warning: Stamina = 98.000000
+[2022.07.03-15.10.41:432][742]LogTemp: Warning: Stamina = 96.000000
+[2022.07.03-15.10.41:633][766]LogTemp: Warning: Stamina = 94.000000
+[2022.07.03-15.10.41:832][790]LogTemp: Warning: Stamina = 92.000000
+[2022.07.03-15.10.42:033][814]LogTemp: Warning: Stamina = 90.000000
+[2022.07.03-15.10.42:233][838]LogTemp: Warning: Stamina = 88.000000
+[2022.07.03-15.10.42:433][862]LogTemp: Warning: Stamina = 86.000000
+[2022.07.03-15.10.42:632][886]LogTemp: Warning: Stamina = 84.000000
+[2022.07.03-15.10.42:833][910]LogTemp: Warning: Stamina = 82.000000
+[2022.07.03-15.10.43:033][934]LogTemp: Warning: Stamina = 80.000000
+[2022.07.03-15.10.43:232][958]LogTemp: Warning: Stamina = 78.000000
+[2022.07.03-15.10.43:432][982]LogTemp: Warning: Stamina = 76.000000
+[2022.07.03-15.10.43:632][  6]LogTemp: Warning: Stamina = 74.000000
+[2022.07.03-15.10.43:833][ 30]LogTemp: Warning: Stamina = 72.000000
+[2022.07.03-15.10.45:232][198]LogTemp: Warning: Stamina = 82.000000
+[2022.07.03-15.10.45:432][222]LogTemp: Warning: Stamina = 80.000000
+[2022.07.03-15.10.45:632][246]LogTemp: Warning: Stamina = 78.000000
+[2022.07.03-15.10.45:832][270]LogTemp: Warning: Stamina = 76.000000
+[2022.07.03-15.10.46:035][294]LogTemp: Warning: Stamina = 74.000000
+[2022.07.03-15.10.47:633][486]LogTemp: Warning: Stamina = 86.000000
+[2022.07.03-15.10.47:832][510]LogTemp: Warning: Stamina = 84.000000
+[2022.07.03-15.10.48:034][534]LogTemp: Warning: Stamina = 82.000000
+[2022.07.03-15.10.48:234][558]LogTemp: Warning: Stamina = 80.000000
+[2022.07.03-15.10.49:233][678]LogTemp: Warning: Stamina = 86.000000
+[2022.07.03-15.10.49:433][702]LogTemp: Warning: Stamina = 84.000000
+[2022.07.03-15.10.49:633][726]LogTemp: Warning: Stamina = 82.000000
+[2022.07.03-15.10.49:833][750]LogTemp: Warning: Stamina = 80.000000
+[2022.07.03-15.10.50:033][774]LogTemp: Warning: Stamina = 78.000000
+[2022.07.03-15.10.50:233][798]LogTemp: Warning: Stamina = 76.000000
+[2022.07.03-15.10.50:433][822]LogTemp: Warning: Stamina = 74.000000
+[2022.07.03-15.10.50:633][846]LogTemp: Warning: Stamina = 72.000000
+[2022.07.03-15.10.50:833][870]LogTemp: Warning: Stamina = 70.000000
+[2022.07.03-15.10.51:032][894]LogTemp: Warning: Stamina = 68.000000
+[2022.07.03-15.10.51:234][918]LogTemp: Warning: Stamina = 66.000000
+[2022.07.03-15.10.51:433][942]LogTemp: Warning: Stamina = 64.000000
+[2022.07.03-15.10.51:632][966]LogTemp: Warning: Stamina = 62.000000
+[2022.07.03-15.10.51:833][990]LogTemp: Warning: Stamina = 60.000000
+[2022.07.03-15.10.52:033][ 14]LogTemp: Warning: Stamina = 58.000000
+[2022.07.03-15.10.52:223][ 32]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.03-15.10.52:223][ 32]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TestMap
+[2022.07.03-15.10.52:223][ 32]LogWorld: UWorld::CleanupWorld for TestMap, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-15.10.52:223][ 32]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.03-15.10.52:229][ 32]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.07.03-15.10.52:240][ 32]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.03-15.10.52:265][ 32]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.03-15.10.52:269][ 32]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.03-15.10.52:270][ 32]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.03-15.10.52:305][ 32]LogUObjectHash: Compacting FUObjectHashTables data took   5.06ms
+[2022.07.03-15.10.52:339][ 33]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2022.07.03-15.19.08:685][433]Candidate modules for hot reload:
+[2022.07.03-15.19.08:685][433]  fpsgame
+[2022.07.03-15.19.08:686][433]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=fpsgame,2026 fpsgameEditor Win64 Development -Project="C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject" "C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject"  -IgnoreJunk]
+[2022.07.03-15.19.08:688][433]Warning: Starting HotReload took  0.0s.
+[2022.07.03-15.19.13:382][892]CompilerResultsLog: New page: Compilation - 3 Jul 2022, 17:19:13
+[2022.07.03-15.19.13:382][892]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\danie\Documents\Gamedev VR\game\UE4 game).
+[2022.07.03-15.19.13:382][892]CompilerResultsLog: Parsing headers for fpsgameEditor
+[2022.07.03-15.19.13:382][892]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\fpsgame.uproject" "C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\fpsgameEditor\Development\fpsgameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\danie\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.07.03-15.19.13:382][892]CompilerResultsLog: LogInit: Display: Loading text-based GConfig....
+[2022.07.03-15.19.13:382][892]CompilerResultsLog: Error: C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Source/fpsgame/WeaponActor.h(90)  : Error: Missing '*' in Expected a pointer type
+[2022.07.03-15.19.13:382][892]LogMainFrame: MainFrame: Module compiling took 4.699 seconds
+[2022.07.03-15.19.13:382][892]Warning: HotReload failed, recompile failed
+[2022.07.03-15.19.18:864][532]LogSlate: Window 'Message Log' being destroyed
+[2022.07.03-15.19.18:869][532]LogSlate: Window 'Message Log' being destroyed
+[2022.07.03-15.19.48:038][291]LogSlate: Window 'Message Log' being destroyed
+[2022.07.03-15.19.48:042][291]LogSlate: Window 'Message Log' being destroyed
+[2022.07.03-15.19.49:285][425]BlueprintLog: New page: Compile BP_prototypepistol
+[2022.07.03-15.19.49:285][425]LogTemp: Warning: hi there
+[2022.07.03-15.19.49:286][425]LogTemp: Warning: hi there
+[2022.07.03-15.19.49:288][425]LogTemp: Warning: hi there
+[2022.07.03-15.19.49:326][425]LogUObjectHash: Compacting FUObjectHashTables data took   4.37ms
+[2022.07.03-15.19.51:157][624]Candidate modules for hot reload:
+[2022.07.03-15.19.51:157][624]  fpsgame
+[2022.07.03-15.19.51:157][624]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=fpsgame,7337 fpsgameEditor Win64 Development -Project="C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject" "C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject"  -IgnoreJunk]
+[2022.07.03-15.19.51:159][624]Warning: Starting HotReload took  0.0s.
+[2022.07.03-15.19.55:041][691]CompilerResultsLog: New page: Compilation - 3 Jul 2022, 17:19:55
+[2022.07.03-15.19.55:041][691]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\danie\Documents\Gamedev VR\game\UE4 game).
+[2022.07.03-15.19.55:041][691]CompilerResultsLog: Parsing headers for fpsgameEditor
+[2022.07.03-15.19.55:041][691]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\fpsgame.uproject" "C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\fpsgameEditor\Development\fpsgameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\danie\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.07.03-15.19.55:041][691]CompilerResultsLog: LogInit: Display: Loading text-based GConfig....
+[2022.07.03-15.19.55:041][691]CompilerResultsLog: Error: C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Source/fpsgame/WeaponActor.h(90)  : Error: Missing '*' in Expected a pointer type
+[2022.07.03-15.19.55:041][691]LogMainFrame: MainFrame: Module compiling took 3.886 seconds
+[2022.07.03-15.19.55:041][691]Warning: HotReload failed, recompile failed
+[2022.07.03-15.20.10:462][849]Candidate modules for hot reload:
+[2022.07.03-15.20.10:462][849]  fpsgame
+[2022.07.03-15.20.10:462][849]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=fpsgame,1077 fpsgameEditor Win64 Development -Project="C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject" "C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject"  -IgnoreJunk]
+[2022.07.03-15.20.10:464][849]Warning: Starting HotReload took  0.0s.
+[2022.07.03-15.20.18:364][671]CompilerResultsLog: New page: Compilation - 3 Jul 2022, 17:20:18
+[2022.07.03-15.20.18:364][671]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\danie\Documents\Gamedev VR\game\UE4 game).
+[2022.07.03-15.20.18:364][671]CompilerResultsLog: Parsing headers for fpsgameEditor
+[2022.07.03-15.20.18:364][671]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\fpsgame.uproject" "C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\fpsgameEditor\Development\fpsgameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\danie\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.07.03-15.20.18:364][671]CompilerResultsLog: LogInit: Display: Loading text-based GConfig....
+[2022.07.03-15.20.18:364][671]CompilerResultsLog: Reflection code generated for fpsgameEditor in 3.3678366 seconds
+[2022.07.03-15.20.18:365][671]CompilerResultsLog: Building fpsgameEditor...
+[2022.07.03-15.20.18:365][671]CompilerResultsLog: Using Visual Studio 2019 14.29.30145 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.07.03-15.20.18:365][671]CompilerResultsLog: Building 10 actions with 12 processes...
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [1/10] WeaponActor.cpp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [2/10] PrototypePistol.cpp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [3/10] fpsgame.init.gen.cpp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [4/10] PrototypePistol.gen.cpp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [5/10] WeaponActor.gen.cpp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [6/10] fpscharacter.gen.cpp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [7/10] fpscharacter.cpp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [8/10] UE4Editor-fpsgame-1077.lib
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1077.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1077.exp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [9/10] UE4Editor-fpsgame-1077.dll
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1077.suppressed.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1077.suppressed.exp
+[2022.07.03-15.20.18:365][671]CompilerResultsLog:   [10/10] fpsgameEditor.target
+[2022.07.03-15.20.18:365][671]CompilerResultsLog: Total time in Parallel executor: 3.80 seconds
+[2022.07.03-15.20.18:365][671]CompilerResultsLog: Total execution time: 7.84 seconds
+[2022.07.03-15.20.18:365][671]LogMainFrame: MainFrame: Module compiling took 7.906 seconds
+[2022.07.03-15.20.18:391][671]LogClass: Could not find existing class PrototypePistol in package /Script/fpsgame for HotReload, assuming new class
+[2022.07.03-15.20.18:391][671]LogClass: Could not find existing class WeaponActor in package /Script/fpsgame for HotReload, assuming new class
+[2022.07.03-15.20.18:391][671]LogClass: WeaponType HotReload.
+[2022.07.03-15.20.18:391][671]LogClass: FireMode HotReload.
+[2022.07.03-15.20.18:391][671]LogClass: FireType HotReload.
+[2022.07.03-15.20.18:401][671]LogHotReload: Re-instancing PrototypePistol after hot-reload.
+[2022.07.03-15.20.18:438][671]LogHotReload: Re-instancing WeaponActor after hot-reload.
+[2022.07.03-15.20.18:439][671]LogBlueprint: Error: [AssetLog] C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Content\Blueprints\BP_WeaponActor.uasset: [Compiler] Internal Compiler Error: Tried to create a property GunMesh in scope SKEL_BP_WeaponActor_C, but another object (ObjectProperty /Script/fpsgame.WeaponActor:GunMesh) already exists there.
+[2022.07.03-15.20.18:439][671]LogBlueprint: Error: [AssetLog] C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Content\Blueprints\BP_WeaponActor.uasset: [Compiler] Internal Compiler Error: Tried to create a property GunMesh in scope BP_WeaponActor_C, but another object (ObjectProperty /Script/fpsgame.WeaponActor:GunMesh) already exists there.
+[2022.07.03-15.20.18:463][671]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'fpsgame' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.07.03-15.20.18:470][671]Display: HotReload successful (23 functions remapped  0 scriptstructs remapped)
+[2022.07.03-15.20.18:561][671]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0094 seconds. Added 3826 classes and 930 folders.
+[2022.07.03-15.20.18:566][671]Display: HotReload took  8.1s.
+[2022.07.03-15.20.26:834][564]BlueprintLog: New page: Compile BP_prototypepistol
+[2022.07.03-15.20.26:914][564]LogUObjectHash: Compacting FUObjectHashTables data took   5.13ms
+[2022.07.03-15.21.06:235][229]Candidate modules for hot reload:
+[2022.07.03-15.21.06:235][229]  fpsgame
+[2022.07.03-15.21.06:235][229]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=fpsgame,1991 fpsgameEditor Win64 Development -Project="C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject" "C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject"  -IgnoreJunk]
+[2022.07.03-15.21.06:237][229]Warning: Starting HotReload took  0.0s.
+[2022.07.03-15.21.08:167][396]CompilerResultsLog: New page: Compilation - 3 Jul 2022, 17:21:08
+[2022.07.03-15.21.08:168][396]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\danie\Documents\Gamedev VR\game\UE4 game).
+[2022.07.03-15.21.08:168][396]CompilerResultsLog: Building fpsgameEditor...
+[2022.07.03-15.21.08:168][396]CompilerResultsLog: Using Visual Studio 2019 14.29.30145 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.07.03-15.21.08:168][396]CompilerResultsLog: Building 4 actions with 12 processes...
+[2022.07.03-15.21.08:168][396]CompilerResultsLog:   [1/4] WeaponActor.cpp
+[2022.07.03-15.21.08:168][396]CompilerResultsLog:   [2/4] UE4Editor-fpsgame-1991.lib
+[2022.07.03-15.21.08:168][396]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1991.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1991.exp
+[2022.07.03-15.21.08:168][396]CompilerResultsLog:   [3/4] UE4Editor-fpsgame-1991.dll
+[2022.07.03-15.21.08:168][396]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1991.suppressed.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1991.suppressed.exp
+[2022.07.03-15.21.08:168][396]CompilerResultsLog:   [4/4] fpsgameEditor.target
+[2022.07.03-15.21.08:168][396]CompilerResultsLog: Total time in Parallel executor: 1.28 seconds
+[2022.07.03-15.21.08:168][396]CompilerResultsLog: Total execution time: 1.86 seconds
+[2022.07.03-15.21.08:168][396]LogMainFrame: MainFrame: Module compiling took 1.935 seconds
+[2022.07.03-15.21.08:202][396]LogClass: WeaponType HotReload.
+[2022.07.03-15.21.08:202][396]LogClass: FireMode HotReload.
+[2022.07.03-15.21.08:202][396]LogClass: FireType HotReload.
+[2022.07.03-15.21.08:208][396]LogHotReload: Re-instancing PrototypePistol after hot-reload.
+[2022.07.03-15.21.08:211][396]LogActor: Warning: BP_prototypepistol_C /Engine/Transient.World_4:PersistentLevel.BP_prototypepistol_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.03-15.21.08:245][396]LogHotReload: Re-instancing WeaponActor after hot-reload.
+[2022.07.03-15.21.08:245][396]LogBlueprint: Error: [AssetLog] C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Content\Blueprints\BP_WeaponActor.uasset: [Compiler] Internal Compiler Error: Tried to create a property GunMesh in scope SKEL_BP_WeaponActor_C, but another object (ObjectProperty /Script/fpsgame.WeaponActor:GunMesh) already exists there.
+[2022.07.03-15.21.08:245][396]LogBlueprint: Error: [AssetLog] C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Content\Blueprints\BP_WeaponActor.uasset: [Compiler] Internal Compiler Error: Tried to create a property GunMesh in scope BP_WeaponActor_C, but another object (ObjectProperty /Script/fpsgame.WeaponActor:GunMesh) already exists there.
+[2022.07.03-15.21.08:271][396]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'fpsgame' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.07.03-15.21.08:279][396]Display: HotReload successful (23 functions remapped  0 scriptstructs remapped)
+[2022.07.03-15.21.08:377][396]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0098 seconds. Added 3826 classes and 930 folders.
+[2022.07.03-15.21.08:382][396]Display: HotReload took  2.2s.
+[2022.07.03-15.21.18:469][453]LogActor: Warning: BP_prototypepistol_C /Engine/Transient.World_6:PersistentLevel.BP_prototypepistol_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.03-15.21.22:326][879]BlueprintLog: New page: Compile BP_prototypepistol
+[2022.07.03-15.21.22:340][879]LogActor: Warning: BP_prototypepistol_C /Engine/Transient.World_4:PersistentLevel.BP_prototypepistol_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.03-15.21.22:340][879]LogActor: Warning: BP_prototypepistol_C /Engine/Transient.World_6:PersistentLevel.BP_prototypepistol_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.03-15.21.22:431][879]LogUObjectHash: Compacting FUObjectHashTables data took   5.97ms
+[2022.07.03-15.21.22:434][879]LogActor: Warning: BP_prototypepistol_C /Engine/Transient.World_6:PersistentLevel.BP_prototypepistol_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.03-15.21.22:910][930]LogActor: Warning: BP_prototypepistol_C /Engine/Transient.World_8:PersistentLevel.BP_prototypepistol_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.03-15.21.22:934][930]LogSavePackage: Moving '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/BP_prototypepistol9078BACA4A7617EF617BEA8E9514CEA6.tmp' to '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Blueprints/Weapons/BP_prototypepistol.uasset'
+[2022.07.03-15.21.22:947][930]AssetCheck: New page: Asset Save: BP_prototypepistol
+[2022.07.03-15.21.22:947][930]LogContentValidation: Display: Validating Blueprint /Game/Blueprints/Weapons/BP_prototypepistol.BP_prototypepistol
+[2022.07.03-15.21.28:019][498]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-15.21.28:019][498]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.03-15.24.35:623][918]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2022.07.03-15.24.35:643][918]LogEditorClassViewer: Warning: Class /Engine/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Blutility.IWBE_Blutility_C has parent /Script/Blutility.PlacedEditorUtilityBase, but this parent is not found. The Class will not be shown in ClassViewer.
+[2022.07.03-15.25.10:832][318]Candidate modules for hot reload:
+[2022.07.03-15.25.10:832][318]  fpsgame
+[2022.07.03-15.25.10:832][318]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=fpsgame,9745 fpsgameEditor Win64 Development -Project="C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject" "C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject"  -IgnoreJunk]
+[2022.07.03-15.25.10:835][318]Warning: Starting HotReload took  0.0s.
+[2022.07.03-15.25.12:770][477]CompilerResultsLog: New page: Compilation - 3 Jul 2022, 17:25:12
+[2022.07.03-15.25.12:770][477]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\danie\Documents\Gamedev VR\game\UE4 game).
+[2022.07.03-15.25.12:770][477]CompilerResultsLog: Building fpsgameEditor...
+[2022.07.03-15.25.12:770][477]CompilerResultsLog: Using Visual Studio 2019 14.29.30145 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.07.03-15.25.12:770][477]CompilerResultsLog: Building 4 actions with 12 processes...
+[2022.07.03-15.25.12:770][477]CompilerResultsLog:   [1/4] PrototypePistol.cpp
+[2022.07.03-15.25.12:770][477]CompilerResultsLog:   [2/4] UE4Editor-fpsgame-9745.lib
+[2022.07.03-15.25.12:771][477]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-9745.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-9745.exp
+[2022.07.03-15.25.12:771][477]CompilerResultsLog:   [3/4] UE4Editor-fpsgame-9745.dll
+[2022.07.03-15.25.12:771][477]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-9745.suppressed.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-9745.suppressed.exp
+[2022.07.03-15.25.12:771][477]CompilerResultsLog:   [4/4] fpsgameEditor.target
+[2022.07.03-15.25.12:771][477]CompilerResultsLog: Total time in Parallel executor: 1.29 seconds
+[2022.07.03-15.25.12:771][477]CompilerResultsLog: Total execution time: 1.86 seconds
+[2022.07.03-15.25.12:771][477]LogMainFrame: MainFrame: Module compiling took 1.940 seconds
+[2022.07.03-15.25.12:807][477]LogClass: WeaponType HotReload.
+[2022.07.03-15.25.12:808][477]LogClass: FireMode HotReload.
+[2022.07.03-15.25.12:808][477]LogClass: FireType HotReload.
+[2022.07.03-15.25.12:816][477]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'fpsgame' in 0.0002 seconds. Added 4 classes and 2 folders.
+[2022.07.03-15.25.12:823][477]Display: HotReload successful (23 functions remapped  0 scriptstructs remapped)
+[2022.07.03-15.25.12:927][477]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0092 seconds. Added 3826 classes and 930 folders.
+[2022.07.03-15.25.12:931][477]Display: HotReload took  2.1s.
+[2022.07.03-15.25.15:452][736]BlueprintLog: New page: Compile BP_Myfpscharacter
+[2022.07.03-15.25.15:458][736]LogBlueprint: Error: [AssetLog] C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Content\Blueprints\BP_Myfpscharacter.uasset: [Compiler] The current value of the ' Spawn Transform ' pin is invalid: 'Spawn Transform' in action 'Begin Deferred Actor Spawn from Class' must have an input wired into it ("by ref" params expect a valid input to operate on).
+[2022.07.03-15.25.15:458][736]LogBlueprint: Error: [AssetLog] C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Content\Blueprints\BP_Myfpscharacter.uasset: [Compiler] The current value of the ' Spawn Transform ' pin is invalid: 'Spawn Transform' in action 'Finish Spawning Actor' must have an input wired into it ("by ref" params expect a valid input to operate on).
+[2022.07.03-15.25.15:581][736]LogUObjectHash: Compacting FUObjectHashTables data took   5.42ms
+[2022.07.03-15.25.40:877][445]Candidate modules for hot reload:
+[2022.07.03-15.25.40:877][445]  fpsgame
+[2022.07.03-15.25.40:877][445]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=fpsgame,1054 fpsgameEditor Win64 Development -Project="C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject" "C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/fpsgame.uproject"  -IgnoreJunk]
+[2022.07.03-15.25.40:879][445]Warning: Starting HotReload took  0.0s.
+[2022.07.03-15.25.42:531][477]CompilerResultsLog: New page: Compilation - 3 Jul 2022, 17:25:42
+[2022.07.03-15.25.42:531][477]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\danie\Documents\Gamedev VR\game\UE4 game).
+[2022.07.03-15.25.42:531][477]CompilerResultsLog: Building fpsgameEditor...
+[2022.07.03-15.25.42:531][477]CompilerResultsLog: Using Visual Studio 2019 14.29.30145 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.07.03-15.25.42:531][477]CompilerResultsLog: Building 3 actions with 12 processes...
+[2022.07.03-15.25.42:531][477]CompilerResultsLog:   [1/3] UE4Editor-fpsgame-1054.lib
+[2022.07.03-15.25.42:531][477]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1054.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1054.exp
+[2022.07.03-15.25.42:531][477]CompilerResultsLog:   [2/3] UE4Editor-fpsgame-1054.dll
+[2022.07.03-15.25.42:531][477]CompilerResultsLog:      Creating library C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1054.suppressed.lib and object C:\Users\danie\Documents\Gamedev VR\game\UE4 game\fpsgame\Intermediate\Build\Win64\UE4Editor\Development\fpsgame\UE4Editor-fpsgame-1054.suppressed.exp
+[2022.07.03-15.25.42:531][477]CompilerResultsLog:   [3/3] fpsgameEditor.target
+[2022.07.03-15.25.42:531][477]CompilerResultsLog: Total time in Parallel executor: 0.80 seconds
+[2022.07.03-15.25.42:531][477]CompilerResultsLog: Total execution time: 1.36 seconds
+[2022.07.03-15.25.42:531][477]LogMainFrame: MainFrame: Module compiling took 1.657 seconds
+[2022.07.03-15.25.42:559][477]LogClass: WeaponType HotReload.
+[2022.07.03-15.25.42:559][477]LogClass: FireMode HotReload.
+[2022.07.03-15.25.42:559][477]LogClass: FireType HotReload.
+[2022.07.03-15.25.42:567][477]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'fpsgame' in 0.0002 seconds. Added 4 classes and 2 folders.
+[2022.07.03-15.25.42:574][477]Display: HotReload successful (23 functions remapped  0 scriptstructs remapped)
+[2022.07.03-15.25.42:670][477]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0104 seconds. Added 3826 classes and 930 folders.
+[2022.07.03-15.25.42:675][477]Display: HotReload took  1.8s.
+[2022.07.03-15.26.10:546][632]LogUObjectHash: Compacting FUObjectHashTables data took   5.35ms
+[2022.07.03-15.26.10:549][632]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Maps/TestMap' took 0.113
+[2022.07.03-15.26.10:549][632]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/BP_Myfpscharacter] ([2] browsable assets)...
+[2022.07.03-15.26.10:565][632]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/BP_Myfpscharacter.BP_Myfpscharacter]
+[2022.07.03-15.26.10:565][632]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/BP_Myfpscharacter]
+[2022.07.03-15.26.10:590][632]LogSavePackage: Moving '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/BP_Myfpscharacter_Auto3AA8479114726B20449A549B6387A80C8.tmp' to '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Autosaves/Game/Blueprints/BP_Myfpscharacter_Auto3.uasset'
+[2022.07.03-15.26.10:592][632]LogFileHelpers: Auto-saving content packages took 0.043
+[2022.07.03-15.36.11:177][684]LogUObjectHash: Compacting FUObjectHashTables data took   3.30ms
+[2022.07.03-15.36.11:182][684]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Maps/TestMap' took 0.050
+[2022.07.03-15.36.11:182][684]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/BP_Myfpscharacter] ([2] browsable assets)...
+[2022.07.03-15.36.11:199][684]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/BP_Myfpscharacter.BP_Myfpscharacter]
+[2022.07.03-15.36.11:199][684]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/BP_Myfpscharacter]
+[2022.07.03-15.36.11:221][684]LogSavePackage: Moving '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/BP_Myfpscharacter_Auto4F063EB8E4C79A4B831FB63AA89EE8E35.tmp' to '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Autosaves/Game/Blueprints/BP_Myfpscharacter_Auto4.uasset'
+[2022.07.03-15.36.11:222][684]LogFileHelpers: Auto-saving content packages took 0.040
+[2022.07.03-15.45.21:574][673]BlueprintLog: New page: Compile BP_Myfpscharacter
+[2022.07.03-15.45.21:614][673]LogUObjectHash: Compacting FUObjectHashTables data took   3.23ms
+[2022.07.03-16.35.57:538][223]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/TestMap" FILE="../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Maps/TestMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.07.03-16.35.57:577][223]LogUObjectHash: Compacting FUObjectHashTables data took   6.60ms
+[2022.07.03-16.35.57:600][223]LogSavePackage: Moving '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/TestMap621C8A284698BCC1A1F300B7E26E2DD1.tmp' to '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Maps/TestMap.umap'
+[2022.07.03-16.35.57:608][223]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/TestMap_BuiltData" FILE="../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Maps/TestMap_BuiltData.uasset" SILENT=true
+[2022.07.03-16.35.57:621][223]LogSavePackage: Moving '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/TestMap_BuiltDataA4105D554175F2E3FC08D79A07416888.tmp' to '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Maps/TestMap_BuiltData.uasset'
+[2022.07.03-16.35.57:632][223]AssetCheck: New page: Asset Save: multiple assets
+[2022.07.03-16.35.57:632][223]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Maps/TestMap_BuiltData.TestMap_BuiltData
+[2022.07.03-16.35.57:632][223]LogContentValidation: Display: Validating World /Game/Maps/TestMap.TestMap
+[2022.07.03-16.35.59:091][393]LogSlate: Window 'BP_Myfpscharacter' being destroyed
+[2022.07.03-16.35.59:095][393]LogSlate: Window 'BP_Myfpscharacter' being destroyed
+[2022.07.03-16.35.59:120][393]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2022.07.03-16.35.59:120][393]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-16.35.59:120][393]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.03-16.36.01:341][613]LogUObjectHash: Compacting FUObjectHashTables data took   4.11ms
+[2022.07.03-16.36.03:361][613]LogSlate: Window 'Save Content' being destroyed
+[2022.07.03-16.36.03:396][613]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_Myfpscharacter" FILE="../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Blueprints/BP_Myfpscharacter.uasset" SILENT=true
+[2022.07.03-16.36.03:419][613]LogSavePackage: Moving '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/BP_Myfpscharacter3FA2C9864F7C5D1C9309D09FB19B89D2.tmp' to '../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Blueprints/BP_Myfpscharacter.uasset'
+[2022.07.03-16.36.03:439][613]LogSlate: Window 'fpsgame - Unreal Editor' being destroyed
+[2022.07.03-16.36.03:587][613]AssetCheck: New page: Asset Save: BP_Myfpscharacter
+[2022.07.03-16.36.03:587][613]LogContentValidation: Display: Validating Blueprint /Game/Blueprints/BP_Myfpscharacter.BP_Myfpscharacter
+[2022.07.03-16.36.03:589][614]Cmd: QUIT_EDITOR
+[2022.07.03-16.36.03:589][614]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2022.07.03-16.36.03:593][614]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2022.07.03-16.36.03:887][614]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2022.07.03-16.36.03:887][614]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2022.07.03-16.36.03:887][614]LogAudio: Display: Audio Device unregistered from world 'TestMap'.
+[2022.07.03-16.36.03:887][614]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.03-16.36.03:889][614]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.03-16.36.03:898][614]LogAudio: Display: Audio Device Manager Shutdown
+[2022.07.03-16.36.03:898][614]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2022.07.03-16.36.03:904][614]LogExit: Preparing to exit.
+[2022.07.03-16.36.04:310][614]LogUObjectHash: Compacting FUObjectHashTables data took   3.03ms
+[2022.07.03-16.36.04:594][614]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-16.36.04:595][614]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2022.07.03-16.36.04:595][614]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2022.07.03-16.36.04:595][614]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2022.07.03-16.36.04:595][614]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2022.07.03-16.36.04:595][614]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2022.07.03-16.36.04:595][614]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2022.07.03-16.36.04:595][614]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2022.07.03-16.36.04:595][614]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-16.36.04:596][614]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-16.36.04:597][614]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-16.36.04:597][614]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-16.36.04:598][614]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-16.36.04:651][614]LogDemo: Cleaned up 0 splitscreen connections with owner deletion
+[2022.07.03-16.36.04:674][614]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
+[2022.07.03-16.36.04:675][614]LogExit: Editor shut down
+[2022.07.03-16.36.04:676][614]LogExit: Transaction tracking system shut down
+[2022.07.03-16.36.05:068][614]LogExit: Object subsystem successfully closed.
+[2022.07.03-16.36.05:084][614]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2022.07.03-16.36.05:084][614]LogShaderCompilers: Display: Total job queries 0, among them cache hits 0 (0.00%)
+[2022.07.03-16.36.05:084][614]LogShaderCompilers: Display: Tracking 0 distinct input hashes that result in 0 distinct outputs (0.00%)
+[2022.07.03-16.36.05:084][614]LogShaderCompilers: Display: RAM used: 0.00 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.00%
+[2022.07.03-16.36.05:084][614]LogShaderCompilers: Display: ================================================
+[2022.07.03-16.36.05:104][614]LogShaderCompilers: Display: Shaders left to compile 0
+[2022.07.03-16.36.05:178][614]LogModuleManager: Shutting down and abandoning module fpsgame (889)
+[2022.07.03-16.36.05:178][614]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (885)
+[2022.07.03-16.36.05:178][614]LogModuleManager: Shutting down and abandoning module Voice (883)
+[2022.07.03-16.36.05:178][614]LogModuleManager: Shutting down and abandoning module BlueprintGraph (877)
+[2022.07.03-16.36.05:178][614]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (872)
+[2022.07.03-16.36.05:178][614]LogModuleManager: Shutting down and abandoning module SceneOutliner (870)
+[2022.07.03-16.36.05:178][614]LogModuleManager: Shutting down and abandoning module AddContentDialog (868)
+[2022.07.03-16.36.05:181][614]LogModuleManager: Shutting down and abandoning module WidgetCarousel (867)
+[2022.07.03-16.36.05:181][614]LogModuleManager: Shutting down and abandoning module EditorWidgets (864)
+[2022.07.03-16.36.05:181][614]LogModuleManager: Shutting down and abandoning module StatsViewer (862)
+[2022.07.03-16.36.05:182][614]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (860)
+[2022.07.03-16.36.05:182][614]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (858)
+[2022.07.03-16.36.05:183][614]LogModuleManager: Shutting down and abandoning module AutomationWorker (856)
+[2022.07.03-16.36.05:183][614]LogModuleManager: Shutting down and abandoning module SteamVREditor (854)
+[2022.07.03-16.36.05:183][614]LogModuleManager: Shutting down and abandoning module OculusMR (852)
+[2022.07.03-16.36.05:183][614]LogModuleManager: Shutting down and abandoning module OpenXRInput (850)
+[2022.07.03-16.36.05:183][614]LogModuleManager: Shutting down and abandoning module TakeRecorderSources (848)
+[2022.07.03-16.36.05:185][614]LogModuleManager: Shutting down and abandoning module TakeRecorder (847)
+[2022.07.03-16.36.05:185][614]LogModuleManager: Shutting down and abandoning module TakeTrackRecorders (844)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module TakesCore (842)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module GooglePADEditor (840)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (838)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (836)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (834)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (832)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (830)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module WebMMedia (828)
+[2022.07.03-16.36.05:186][614]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (826)
+[2022.07.03-16.36.05:187][614]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (824)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module SequenceRecorder (823)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (820)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (818)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (816)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (814)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (812)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (810)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (808)
+[2022.07.03-16.36.05:188][614]LogModuleManager: Shutting down and abandoning module TemplateSequenceEditor (806)
+[2022.07.03-16.36.05:189][614]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (804)
+[2022.07.03-16.36.05:189][614]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (802)
+[2022.07.03-16.36.05:190][614]LogModuleManager: Shutting down and abandoning module ActorSequenceEditor (800)
+[2022.07.03-16.36.05:191][614]LogModuleManager: Shutting down and abandoning module MagicLeapMediaCodecFactory (798)
+[2022.07.03-16.36.05:191][614]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (796)
+[2022.07.03-16.36.05:191][614]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (794)
+[2022.07.03-16.36.05:191][614]LogModuleManager: Shutting down and abandoning module PlanarCut (792)
+[2022.07.03-16.36.05:191][614]LogModuleManager: Shutting down and abandoning module CharacterAI (790)
+[2022.07.03-16.36.05:191][614]LogModuleManager: Shutting down and abandoning module TextureAlignMode (788)
+[2022.07.03-16.36.05:191][614]LogModuleManager: Shutting down and abandoning module BspMode (786)
+[2022.07.03-16.36.05:191][614]LogModuleManager: Shutting down and abandoning module GeometryMode (784)
+[2022.07.03-16.36.05:192][614]LogModuleManager: Shutting down and abandoning module CameraShakePreviewer (782)
+[2022.07.03-16.36.05:192][614]LogModuleManager: Shutting down and abandoning module SmartSnapping (780)
+[2022.07.03-16.36.05:192][614]LogModuleManager: Shutting down and abandoning module SessionServices (778)
+[2022.07.03-16.36.05:192][614]LogModuleManager: Shutting down and abandoning module MeshPaint (776)
+[2022.07.03-16.36.05:193][614]LogModuleManager: Shutting down and abandoning module VirtualTexturingEditor (774)
+[2022.07.03-16.36.05:193][614]LogModuleManager: Shutting down and abandoning module FoliageEdit (772)
+[2022.07.03-16.36.05:194][614]LogModuleManager: Shutting down and abandoning module LandscapeEditor (770)
+[2022.07.03-16.36.05:196][614]LogModuleManager: Shutting down and abandoning module MeshPaintMode (768)
+[2022.07.03-16.36.05:196][614]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (766)
+[2022.07.03-16.36.05:196][614]LogModuleManager: Shutting down and abandoning module ActorPickerMode (764)
+[2022.07.03-16.36.05:196][614]LogModuleManager: Shutting down and abandoning module PlacementMode (762)
+[2022.07.03-16.36.05:196][614]LogModuleManager: Shutting down and abandoning module ViewportSnapping (760)
+[2022.07.03-16.36.05:196][614]LogModuleManager: Shutting down and abandoning module ViewportInteraction (758)
+[2022.07.03-16.36.05:196][614]LogModuleManager: Shutting down and abandoning module ClothPainter (756)
+[2022.07.03-16.36.05:197][614]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (755)
+[2022.07.03-16.36.05:197][614]LogModuleManager: Shutting down and abandoning module LogVisualizer (752)
+[2022.07.03-16.36.05:198][614]LogModuleManager: Shutting down and abandoning module IntroTutorials (750)
+[2022.07.03-16.36.05:199][614]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (749)
+[2022.07.03-16.36.05:199][614]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (746)
+[2022.07.03-16.36.05:199][614]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (744)
+[2022.07.03-16.36.05:199][614]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (742)
+[2022.07.03-16.36.05:200][614]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (741)
+[2022.07.03-16.36.06:254][614]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (738)
+[2022.07.03-16.36.06:254][614]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (736)
+[2022.07.03-16.36.06:254][614]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (734)
+[2022.07.03-16.36.06:254][614]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (732)
+[2022.07.03-16.36.06:254][614]LogModuleManager: Shutting down and abandoning module TraceInsights (730)
+[2022.07.03-16.36.06:256][614]MemoryProfiler: Shutdown
+[2022.07.03-16.36.06:256][614]NetworkingProfiler: Shutdown
+[2022.07.03-16.36.06:256][614]LoadingProfiler: Shutdown
+[2022.07.03-16.36.06:257][614]TimingProfiler: Shutdown
+[2022.07.03-16.36.06:258][614]LogModuleManager: Shutting down and abandoning module TraceServices (729)
+[2022.07.03-16.36.06:259][614]LogModuleManager: Shutting down and abandoning module EditorInteractiveToolsFramework (726)
+[2022.07.03-16.36.06:259][614]LogModuleManager: Shutting down and abandoning module TimeManagementEditor (724)
+[2022.07.03-16.36.06:259][614]LogModuleManager: Shutting down and abandoning module InputBindingEditor (722)
+[2022.07.03-16.36.06:260][614]LogModuleManager: Shutting down and abandoning module MergeActors (720)
+[2022.07.03-16.36.06:260][614]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (718)
+[2022.07.03-16.36.06:261][614]LogModuleManager: Shutting down and abandoning module LocalizationService (717)
+[2022.07.03-16.36.06:261][614]LogModuleManager: Shutting down and abandoning module HardwareTargeting (714)
+[2022.07.03-16.36.06:261][614]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (712)
+[2022.07.03-16.36.06:261][614]LogModuleManager: Shutting down and abandoning module UndoHistory (710)
+[2022.07.03-16.36.06:261][614]LogModuleManager: Shutting down and abandoning module XmlParser (708)
+[2022.07.03-16.36.06:261][614]LogModuleManager: Shutting down and abandoning module Blutility (706)
+[2022.07.03-16.36.06:262][614]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (704)
+[2022.07.03-16.36.06:262][614]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (703)
+[2022.07.03-16.36.06:262][614]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (700)
+[2022.07.03-16.36.06:262][614]LogModuleManager: Shutting down and abandoning module InternationalizationSettings (699)
+[2022.07.03-16.36.06:262][614]LogModuleManager: Shutting down and abandoning module SettingsEditor (696)
+[2022.07.03-16.36.06:263][614]LogModuleManager: Shutting down and abandoning module ProjectLauncher (694)
+[2022.07.03-16.36.06:263][614]LogModuleManager: Shutting down and abandoning module SessionFrontend (692)
+[2022.07.03-16.36.06:263][614]LogModuleManager: Shutting down and abandoning module ProfilerClient (690)
+[2022.07.03-16.36.06:264][614]LogModuleManager: Shutting down and abandoning module DeviceManager (688)
+[2022.07.03-16.36.06:264][614]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (687)
+[2022.07.03-16.36.06:297][614]LogModuleManager: Shutting down and abandoning module AutomationController (684)
+[2022.07.03-16.36.06:297][614]LogModuleManager: Shutting down and abandoning module AutomationWindow (682)
+[2022.07.03-16.36.06:298][614]LogModuleManager: Shutting down and abandoning module Layers (680)
+[2022.07.03-16.36.06:299][614]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (678)
+[2022.07.03-16.36.06:299][614]LogModuleManager: Shutting down and abandoning module DetailCustomizations (676)
+[2022.07.03-16.36.06:299][614]LogModuleManager: Shutting down and abandoning module PackagesDialog (674)
+[2022.07.03-16.36.06:299][614]LogModuleManager: Shutting down and abandoning module AnimationBlueprintEditor (672)
+[2022.07.03-16.36.06:300][614]LogModuleManager: Shutting down and abandoning module Persona (670)
+[2022.07.03-16.36.06:301][614]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (669)
+[2022.07.03-16.36.06:301][614]LogModuleManager: Shutting down and abandoning module AnimGraph (667)
+[2022.07.03-16.36.06:301][614]LogModuleManager: Shutting down and abandoning module Kismet (664)
+[2022.07.03-16.36.06:319][614]LogModuleManager: Shutting down and abandoning module KismetWidgets (663)
+[2022.07.03-16.36.06:319][614]LogModuleManager: Shutting down and abandoning module GraphEditor (660)
+[2022.07.03-16.36.06:319][614]LogModuleManager: Shutting down and abandoning module StructViewer (658)
+[2022.07.03-16.36.06:319][614]LogModuleManager: Shutting down and abandoning module ClassViewer (656)
+[2022.07.03-16.36.06:322][614]LogModuleManager: Shutting down and abandoning module Toolbox (654)
+[2022.07.03-16.36.06:322][614]LogModuleManager: Shutting down and abandoning module ModuleUI (652)
+[2022.07.03-16.36.06:323][614]LogModuleManager: Shutting down and abandoning module OutputLog (650)
+[2022.07.03-16.36.06:325][614]LogModuleManager: Shutting down and abandoning module GammaUI (648)
+[2022.07.03-16.36.06:325][614]LogModuleManager: Shutting down and abandoning module Documentation (646)
+[2022.07.03-16.36.06:326][614]LogModuleManager: Shutting down and abandoning module LiveCoding (644)
+[2022.07.03-16.36.06:326][614]LogModuleManager: Shutting down and abandoning module LevelSequence (642)
+[2022.07.03-16.36.06:326][614]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (640)
+[2022.07.03-16.36.06:326][614]LogModuleManager: Shutting down and abandoning module MovieScene (638)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (636)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module LauncherPlatform (634)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module AnalyticsET (632)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module PortalServices (630)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module PortalRpc (628)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module MessagingRpc (626)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module AudioMixerXAudio2 (624)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module AudioMixerCore (623)
+[2022.07.03-16.36.06:328][614]LogModuleManager: Shutting down and abandoning module AIModule (620)
+[2022.07.03-16.36.06:329][614]LogModuleManager: Shutting down and abandoning module GameplayDebugger (619)
+[2022.07.03-16.36.06:329][614]LogModuleManager: Shutting down and abandoning module AITestSuite (617)
+[2022.07.03-16.36.06:329][614]LogModuleManager: Shutting down and abandoning module NavigationSystem (615)
+[2022.07.03-16.36.06:329][614]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (612)
+[2022.07.03-16.36.06:333][614]LogModuleManager: Shutting down and abandoning module ProfilerService (610)
+[2022.07.03-16.36.06:492][614]LogModuleManager: Shutting down and abandoning module TaskGraph (608)
+[2022.07.03-16.36.06:493][614]LogModuleManager: Shutting down and abandoning module AudioSynesthesiaEditor (606)
+[2022.07.03-16.36.06:493][614]LogModuleManager: Shutting down and abandoning module OculusEditor (604)
+[2022.07.03-16.36.06:496][614]LogModuleManager: Shutting down and abandoning module OculusInput (602)
+[2022.07.03-16.36.06:496][614]LogModuleManager: Shutting down and abandoning module ContentBrowserClassDataSource (600)
+[2022.07.03-16.36.06:496][614]LogModuleManager: Shutting down and abandoning module ContentBrowserFileDataSource (598)
+[2022.07.03-16.36.06:496][614]LogModuleManager: Shutting down and abandoning module ContentBrowserAssetDataSource (596)
+[2022.07.03-16.36.06:496][614]LogModuleManager: Shutting down and abandoning module CollectionManager (595)
+[2022.07.03-16.36.06:496][614]LogModuleManager: Shutting down and abandoning module SynthesisEditor (592)
+[2022.07.03-16.36.06:497][614]LogModuleManager: Shutting down and abandoning module Synthesis (590)
+[2022.07.03-16.36.06:497][614]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (588)
+[2022.07.03-16.36.06:497][614]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (586)
+[2022.07.03-16.36.06:497][614]LogModuleManager: Shutting down and abandoning module OpenXREditor (584)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module TakeSequencer (582)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module TakeMovieScene (580)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (578)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module GooglePAD (576)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module EditableMesh (574)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (572)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module CableComponent (570)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module AudioCapture (568)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module AudioCaptureRtAudio (567)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module AssetTags (564)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (562)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (560)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module AppleImageUtils (558)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module AndroidPermission (556)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module ScreenshotTools (554)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module ActorLayerUtilitiesEditor (552)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (550)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module MediaCompositing (548)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module ImgMedia (546)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module TemplateSequence (544)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module MagicLeapSharedWorld (542)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module MagicLeapLightEstimation (540)
+[2022.07.03-16.36.06:498][614]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (538)
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (536)
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (534)
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module OpenImageDenoise (532)
+[2022.07.03-16.36.06:499][614]LogOpenImageDenoise: OIDN shutting down
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module MotoSynthEditor (530)
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module MotoSynth (528)
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (526)
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module MeshConversion (524)
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module DynamicMesh (522)
+[2022.07.03-16.36.06:499][614]LogModuleManager: Shutting down and abandoning module GeometryAlgorithms (520)
+[2022.07.03-16.36.06:500][614]LogModuleManager: Shutting down and abandoning module GeometricObjects (518)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (516)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module UObjectPlugin (514)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module GeometryCollectionTracks (512)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module GeometryCollectionSequencer (511)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module GeometryCollectionEditor (508)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (506)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module GeometryCacheStreamer (504)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (502)
+[2022.07.03-16.36.06:501][614]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (500)
+[2022.07.03-16.36.06:502][614]LogModuleManager: Shutting down and abandoning module RiderSourceCodeAccess (498)
+[2022.07.03-16.36.06:502][614]LogModuleManager: Shutting down and abandoning module PlasticSourceControl (496)
+[2022.07.03-16.36.06:502][614]LogModuleManager: Shutting down and abandoning module PluginUtils (494)
+[2022.07.03-16.36.06:503][614]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (492)
+[2022.07.03-16.36.06:504][614]LogModuleManager: Shutting down and abandoning module GitSourceControl (490)
+[2022.07.03-16.36.06:505][614]LogModuleManager: Shutting down and abandoning module SourceControl (489)
+[2022.07.03-16.36.06:505][614]LogModuleManager: Shutting down and abandoning module ChaosClothEditor (486)
+[2022.07.03-16.36.06:505][614]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (484)
+[2022.07.03-16.36.06:505][614]LogModuleManager: Shutting down and abandoning module ChaosNiagara (482)
+[2022.07.03-16.36.06:505][614]LogModuleManager: Shutting down and abandoning module FractureEditor (480)
+[2022.07.03-16.36.06:506][614]LogModuleManager: Shutting down and abandoning module ChaosSolverEditor (478)
+[2022.07.03-16.36.06:506][614]LogModuleManager: Shutting down and abandoning module FieldSystemEngine (477)
+[2022.07.03-16.36.06:506][614]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (474)
+[2022.07.03-16.36.06:506][614]LogModuleManager: Shutting down and abandoning module PluginBrowser (472)
+[2022.07.03-16.36.06:507][614]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (470)
+[2022.07.03-16.36.06:508][614]LogModuleManager: Shutting down and abandoning module MaterialAnalyzer (468)
+[2022.07.03-16.36.06:508][614]LogModuleManager: Shutting down and abandoning module VariantManagerContentEditor (466)
+[2022.07.03-16.36.06:508][614]LogModuleManager: Shutting down and abandoning module AnimationSharingEd (464)
+[2022.07.03-16.36.06:508][614]LogModuleManager: Shutting down and abandoning module BackChannel (462)
+[2022.07.03-16.36.06:508][614]LogModuleManager: Shutting down and abandoning module NiagaraEditorWidgets (460)
+[2022.07.03-16.36.06:510][614]LogModuleManager: Shutting down and abandoning module AutomationUtilsEditor (458)
+[2022.07.03-16.36.06:510][614]LogModuleManager: Shutting down and abandoning module AutomationUtils (456)
+[2022.07.03-16.36.06:510][614]LogModuleManager: Shutting down and abandoning module AlembicImporter (454)
+[2022.07.03-16.36.06:510][614]LogModuleManager: Shutting down and abandoning module AlembicLibrary (453)
+[2022.07.03-16.36.06:510][614]LogModuleManager: Shutting down and abandoning module GeometryCache (452)
+[2022.07.03-16.36.06:510][614]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (451)
+[2022.07.03-16.36.06:510][614]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (446)
+[2022.07.03-16.36.06:510][614]LogModuleManager: Shutting down and abandoning module CurveEditorTools (444)
+[2022.07.03-16.36.06:511][614]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (442)
+[2022.07.03-16.36.06:511][614]LogModuleManager: Shutting down and abandoning module CryptoKeys (440)
+[2022.07.03-16.36.06:511][614]LogModuleManager: Shutting down and abandoning module OodleNetworkHandlerComponent (438)
+[2022.07.03-16.36.06:511][614]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (436)
+[2022.07.03-16.36.06:511][614]LogModuleManager: Shutting down and abandoning module LiveLinkSequencer (434)
+[2022.07.03-16.36.06:511][614]LogModuleManager: Shutting down and abandoning module LiveLinkMovieScene (432)
+[2022.07.03-16.36.06:511][614]LogModuleManager: Shutting down and abandoning module LiveLinkGraphNode (430)
+[2022.07.03-16.36.06:511][614]LogModuleManager: Shutting down and abandoning module LiveLinkEditor (428)
+[2022.07.03-16.36.06:512][614]LogModuleManager: Shutting down and abandoning module LiveLinkComponents (426)
+[2022.07.03-16.36.06:512][614]LogModuleManager: Shutting down and abandoning module LiveLink (424)

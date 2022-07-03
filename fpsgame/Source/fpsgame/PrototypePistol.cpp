@@ -10,14 +10,15 @@ APrototypePistol::APrototypePistol()
 	PrimaryActorTick.bCanEverTick = false;
 
 	//Weapon data
-	BaseRotation = -5.0f;
+	BaseRotation = 5.0f;
 	BaseDamage = 10.0f;
 	MaxRange = 100.0f;
-
+	BasePosition = FVector(56.0f, 36.0f, -25.0f);
 	//Configuring weapon details
 	WAWeaponType = WeaponType::PISTOL;
 	WAWeaponFireType = FireMode::SEMI;
 	WAWeaponHitDetectionType = FireType::HITSCAN;
+
 
 }
 
@@ -25,12 +26,16 @@ APrototypePistol::APrototypePistol()
 void APrototypePistol::BeginPlay()
 {
 	Super::BeginPlay();
-
 }
 
 // Called every frame
 void APrototypePistol::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+}
+
+AWeaponActor APrototypePistol::EquipWeapon(Afpscharacter* TargetCharacter)
+{
 
 }

@@ -427,3 +427,34 @@ float Afpscharacter::LoseStamina(float LostStamina)
 	SetCurrentStamina(staminaRemains);
 	return staminaRemains;
 }
+
+void Afpscharacter::OnRep_ChangeWeapon()
+{
+	UpdateWeapon();
+}
+
+void Afpscharacter::UpdateWeapon()
+{
+	//Client-specific functionality
+	if (IsLocallyControlled())
+	{
+		EquipWeapon();
+		
+	}
+
+	//Server-specific functionality
+	if (GetLocalRole() == ROLE_Authority)
+	{
+
+	}
+
+	//Functions that occur on all machines - such as special death effects
+
+}
+
+void Afpscharacter::EquipWeapon()
+{
+	FActorSpawnParameters SpawnInfo;
+
+	GetWorld()->SpawnActor<>()
+}

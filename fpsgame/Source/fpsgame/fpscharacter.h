@@ -7,9 +7,11 @@
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/Character.h"
 #include "WeaponActor.h"
-
+ 
 //Should always be the last include
 #include "fpscharacter.generated.h"
+
+
 
 
 UCLASS()
@@ -119,17 +121,32 @@ protected:
 	UFUNCTION()
 		void StartSprinting();
 
+
+	//Stores current weapon being held, also used on server rep and sdtuff
+	UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)
+		TUniquePtr<AWeaponActor> EquippedGun;
+	
+	UFUNCTION()
+		//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.
+		void OnRep_ChangeWeapon();
+
+	UFUNCTION()
+		//Called when the weapon is updated, called on server immediately after modification, and on clients when they receive news of the weapon switch.
+		void UpdateWeapon();
+
+	UFUNCTION()
+		//Positions and spawns in gun, used on equip
+		void EquipWeapon();
+
+	
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	
-	//Stores currently equipped gun
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon")
-		AWeaponActor* EquippedGun;
 		
 	//Stores X sensitivity for mouse
 	UPROPERTY(EditAnywhere, Category="Mouse Input")
@@ -155,8 +172,13 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Button Input")
 		bool ToggleSprint;
 
-	
+	UFUNCTION(BlueprintPure, Category = "Weapon")
+		//Gets current weapon equipped
+		FORCEINLINE TUniquePtr<AWeaponActor> GetEquippedWeapon() { return EquippedGun; }
 
+	UFUNCTION(BlueprintImplementable, Category = "Weapon")
+		//Sets current equipped weapon
+		void SetEquippedWeapon(AWeaponActor* WeaponClass);
 
 	//FPS camera component
 	UPROPERTY(VisibleAnywhere)
