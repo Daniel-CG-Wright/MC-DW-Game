@@ -151,9 +151,11 @@ void Afpscharacter::MoveY(float Value)
 	//Gets 'forward' relative to camera, and record that player wants to move that way.
 	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
 	
-	if (Value != 1.0f)
+	float dotProduct = FVector::DotProduct(GetActorForwardVector(), GetVelocity());
+
+	if (Value != 1.0f || (dotProduct < 30.0f && dotProduct > -30.0f))
 	{
-		//Ensures player only sprints if they are holding forward.
+		//Ensures player only sprints if they are holding forward and moving forward.
 		StopSprinting();
 	}
 	AddMovementInput(Direction, Value);
