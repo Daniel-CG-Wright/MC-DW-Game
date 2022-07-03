@@ -77,6 +77,8 @@ Afpscharacter::Afpscharacter()
 
 	//Initialize landing time
 	LandingTime = 0.5f;
+
+	
 }
 
 
@@ -108,6 +110,7 @@ void Afpscharacter::BeginPlay()
 	
 	GetWorldTimerManager().SetTimer(StaminaTimerHandle, this, &Afpscharacter::UpdateStamina, StaminaUpdateIntervalInSeconds, true);
 
+	
 }
 
 // Called every frame

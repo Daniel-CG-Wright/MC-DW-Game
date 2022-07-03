@@ -6,7 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/Character.h"
-
+#include "WeaponActor.h"
 
 //Should always be the last include
 #include "fpscharacter.generated.h"
@@ -127,7 +127,10 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	
-
+	//Stores currently equipped gun
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon")
+		AWeaponActor* EquippedGun;
+		
 	//Stores X sensitivity for mouse
 	UPROPERTY(EditAnywhere, Category="Mouse Input")
 		float XSensitivity;
