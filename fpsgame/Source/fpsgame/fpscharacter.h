@@ -124,7 +124,7 @@ protected:
 
 	//Stores current weapon being held, also used on server rep and sdtuff
 	UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)
-		TUniquePtr<AWeaponActor> EquippedGun;
+		AWeaponActor* EquippedGun;
 	
 	UFUNCTION()
 		//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.
@@ -134,7 +134,7 @@ protected:
 		//Called when the weapon is updated, called on server immediately after modification, and on clients when they receive news of the weapon switch.
 		void UpdateWeapon();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon")
 		//Positions and spawns in gun, used on equip
 		void EquipWeapon();
 
@@ -174,9 +174,9 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "Weapon")
 		//Gets current weapon equipped
-		FORCEINLINE TUniquePtr<AWeaponActor> GetEquippedWeapon() { return EquippedGun; }
+		FORCEINLINE AWeaponActor* GetEquippedWeapon() { return EquippedGun; }
 
-	UFUNCTION(BlueprintImplementable, Category = "Weapon")
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		//Sets current equipped weapon
 		void SetEquippedWeapon(AWeaponActor* WeaponClass);
 

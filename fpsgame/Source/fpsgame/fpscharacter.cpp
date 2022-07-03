@@ -452,9 +452,3 @@ void Afpscharacter::UpdateWeapon()
 
 }
 
-void Afpscharacter::EquipWeapon()
-{
-	FActorSpawnParameters SpawnInfo;
-
-	GetWorld()->SpawnActor<>()
-}

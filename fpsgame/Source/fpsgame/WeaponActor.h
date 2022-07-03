@@ -78,7 +78,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		//Used to ensure rotation of gun is consistent to make it look pretty.
-		float BaseRotation;
+		FRotator BaseRotation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
 		//Type of weapon
