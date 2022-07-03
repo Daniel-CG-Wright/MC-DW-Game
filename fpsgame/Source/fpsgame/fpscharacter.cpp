@@ -148,9 +148,9 @@ void Afpscharacter::MoveY(float Value)
 {
 	///For moving forward/backward
 	
-	//Gets 'forward' relative to camera, and record that player wants to move that way.
-	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
-	
+	//Gets 'forward' relative to actor, and record that player wants to move that way.
+	FVector Direction = GetActorForwardVector();
+
 	float dotProduct = FVector::DotProduct(GetActorForwardVector(), GetVelocity());
 
 	if (Value != 1.0f || (dotProduct < 30.0f && dotProduct > -30.0f))
