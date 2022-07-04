@@ -26,7 +26,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(EditAnywhere, BlueprintImplementable)
-		AWeaponActor EquipWeapon(Afpscharacter* TargetCharacter) override;
+	
 
 };

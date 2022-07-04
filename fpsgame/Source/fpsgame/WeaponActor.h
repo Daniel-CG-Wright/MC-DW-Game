@@ -65,6 +65,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	//Stores classes and corresponding weapon identifier
+	UPROPERTY()
+		TMap<Guns, AWeaponActor*> WeaponMap;
 	UPROPERTY(EditAnywhere)
 		float MaxRange;
 
@@ -96,7 +99,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		USkeletalMeshComponent* GunMesh;
 	
-	virtual AWeaponActor EquipWeapon(Afpscharacter* TargetCharacter);
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		//Stores translation vectors to position weapon correctly

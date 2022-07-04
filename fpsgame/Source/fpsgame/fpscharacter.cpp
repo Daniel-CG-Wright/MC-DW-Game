@@ -222,7 +222,10 @@ void Afpscharacter::StartJump()
 	}
 	//Release crouch is done in blueprints (NEEDS FIXING)
 	bPressedJump = true;
-	LoseStamina(StaminaLossWhenJumping);
+	if (CanJump())
+	{
+		LoseStamina(StaminaLossWhenJumping);
+	}
 }
 
 void Afpscharacter::StopJump()
@@ -438,7 +441,7 @@ void Afpscharacter::UpdateWeapon()
 	//Client-specific functionality
 	if (IsLocallyControlled())
 	{
-		EquipWeapon();
+		//EquipWeapon();
 		
 	}
 

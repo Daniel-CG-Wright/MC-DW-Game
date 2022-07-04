@@ -12,6 +12,7 @@ AWeaponActor::AWeaponActor()
 	//Setting up weapon's mesh
 	GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMesh"));
 
+	
 }
 
 // Called when the game starts or when spawned

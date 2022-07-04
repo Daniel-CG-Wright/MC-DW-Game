@@ -35,7 +35,3 @@ void APrototypePistol::Tick(float DeltaTime)
 
 }
 
-AWeaponActor APrototypePistol::EquipWeapon(Afpscharacter* TargetCharacter)
-{
-
-}

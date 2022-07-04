@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodePrototypePistol() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APrototypePistol, 3066176463);
+	IMPLEMENT_CLASS(APrototypePistol, 974387520);
 	template<> FPSGAME_API UClass* StaticClass<APrototypePistol>()
 	{
 		return APrototypePistol::StaticClass();

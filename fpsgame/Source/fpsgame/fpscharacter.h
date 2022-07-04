@@ -123,8 +123,12 @@ protected:
 
 
 	//Stores current weapon being held, also used on server rep and sdtuff
-	UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)
-		AWeaponActor* EquippedGun;
+	//UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)
+		//Guns EquippedGun;
+
+	//Stores the reference to the current weapon's object
+	//UPROPERTY(BlueprintReadWrite, Category = "Weapon", Transient)
+	//	AWeaponActor* EquippedGunReference;
 	
 	UFUNCTION()
 		//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.
@@ -172,13 +176,13 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Button Input")
 		bool ToggleSprint;
 
-	UFUNCTION(BlueprintPure, Category = "Weapon")
+	//UFUNCTION(BlueprintPure, Category = "Weapon")
 		//Gets current weapon equipped
-		FORCEINLINE AWeaponActor* GetEquippedWeapon() { return EquippedGun; }
+		//FORCEINLINE AWeaponActor* GetEquippedWeapon() { return ; }
 
-	UFUNCTION(BlueprintCallable, Category = "Weapon")
+	//UFUNCTION(BlueprintCallable, Category = "Weapon")
 		//Sets current equipped weapon
-		void SetEquippedWeapon(AWeaponActor* WeaponClass);
+		//void SetEquippedWeapon(AWeaponActor* WeaponClass);
 
 	//FPS camera component
 	UPROPERTY(VisibleAnywhere)
