@@ -125,11 +125,20 @@ protected:
 	//Stores current weapon being held, also used on server rep and sdtuff
 	//UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)
 		//Guns EquippedGun;
-
-	//Stores the reference to the current weapon's object
-	//UPROPERTY(BlueprintReadWrite, Category = "Weapon", Transient)
-	//	AWeaponActor* EquippedGunReference;
 	
+	//Stores primary gun equipped
+	UPROPERTY(BlueprintReadWrite, Category = "Inventory")
+		AWeaponActor* PrimaryGun;
+
+	//Stores secondary gun equipped
+	UPROPERTY(BlueprintReadWrite, Category = "Inventory")
+		AWeaponActor* SecondaryGun;
+
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void SpawnAndEquipGun();
+
+
 	UFUNCTION()
 		//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.
 		void OnRep_ChangeWeapon();
@@ -138,10 +147,32 @@ protected:
 		//Called when the weapon is updated, called on server immediately after modification, and on clients when they receive news of the weapon switch.
 		void UpdateWeapon();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon")
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		//Positions and spawns in gun, used on equip
-		void EquipWeapon();
+		void EquipWeapon(AWeaponActor* GunToEquip);
 
+	//Should be set by weapon when equipped.
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon | Projectile")
+		TSubclassOf<class AFPSProjectile> ProjectileClass;
+
+	bool bIsFiringWeapon;
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		//Fires weapon
+		void StartFire();
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		//Function for stopping weapon fire. Once this is called, the player can call StartFire again
+		void StopFire();
+
+	//Server function for spawning projectiles
+	UFUNCTION(Server, Reliable)
+		//WARNING - RELIABLE RPC CALL
+		void HandleFire();
+
+	//Timer handle used to provide the fire rate delay in game
+	FTimerHandle FiringTimer;
+	
 	
 
 
@@ -175,6 +206,10 @@ public:
 	//Stores whether sprint is toggle or hold
 	UPROPERTY(EditAnywhere, Category = "Button Input")
 		bool ToggleSprint;
+
+	//First person gun scene component
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USceneComponent* FPSGunComponent;
 
 	//UFUNCTION(BlueprintPure, Category = "Weapon")
 		//Gets current weapon equipped
@@ -268,4 +303,5 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Stamina")
 		float LoseStamina(float LostStamina);
 	
+
 };

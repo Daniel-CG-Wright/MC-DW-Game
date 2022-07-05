@@ -11,7 +11,6 @@ AWeaponActor::AWeaponActor()
 
 	//Setting up weapon's mesh
 	GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMesh"));
-
 	
 }
 
@@ -29,3 +28,13 @@ void AWeaponActor::Tick(float DeltaTime)
 
 }
 
+void AWeaponActor::SetBurstNumber(int NewBurstNumber)
+{
+	BurstNumber = NewBurstNumber;
+
+}
+
+void AWeaponActor::SetCartridgeBullets(int NewCartridgeBullets)
+{
+	CartridgeBullets = NewCartridgeBullets;
+}

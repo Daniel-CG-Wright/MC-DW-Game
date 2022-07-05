@@ -11,6 +11,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FDamageEvent;
 class AController;
 class AActor;
+class AWeaponActor;
 #ifdef FPSGAME_fpscharacter_generated_h
 #error "fpscharacter.generated.h already included, missing '#pragma once' in fpscharacter.h"
 #endif
@@ -18,6 +19,7 @@ class AActor;
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_SPARSE_DATA
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS \
+	virtual void HandleFire_Implementation(); \
  \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
@@ -37,6 +39,10 @@ class AActor;
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
 	DECLARE_FUNCTION(execMoveY); \
+	DECLARE_FUNCTION(execHandleFire); \
+	DECLARE_FUNCTION(execStopFire); \
+	DECLARE_FUNCTION(execStartFire); \
+	DECLARE_FUNCTION(execEquipWeapon); \
 	DECLARE_FUNCTION(execUpdateWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeWeapon); \
 	DECLARE_FUNCTION(execStartSprinting); \
@@ -47,6 +53,7 @@ class AActor;
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void HandleFire_Implementation(); \
  \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
@@ -66,6 +73,10 @@ class AActor;
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
 	DECLARE_FUNCTION(execMoveY); \
+	DECLARE_FUNCTION(execHandleFire); \
+	DECLARE_FUNCTION(execStopFire); \
+	DECLARE_FUNCTION(execStartFire); \
+	DECLARE_FUNCTION(execEquipWeapon); \
 	DECLARE_FUNCTION(execUpdateWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeWeapon); \
 	DECLARE_FUNCTION(execStartSprinting); \
@@ -149,7 +160,10 @@ public: \
 	FORCEINLINE static uint32 __PPO__CurrentStamina() { return STRUCT_OFFSET(Afpscharacter, CurrentStamina); } \
 	FORCEINLINE static uint32 __PPO__MaxHealth() { return STRUCT_OFFSET(Afpscharacter, MaxHealth); } \
 	FORCEINLINE static uint32 __PPO__CurrentHealth() { return STRUCT_OFFSET(Afpscharacter, CurrentHealth); } \
-	FORCEINLINE static uint32 __PPO__IsSprinting() { return STRUCT_OFFSET(Afpscharacter, IsSprinting); }
+	FORCEINLINE static uint32 __PPO__IsSprinting() { return STRUCT_OFFSET(Afpscharacter, IsSprinting); } \
+	FORCEINLINE static uint32 __PPO__PrimaryGun() { return STRUCT_OFFSET(Afpscharacter, PrimaryGun); } \
+	FORCEINLINE static uint32 __PPO__SecondaryGun() { return STRUCT_OFFSET(Afpscharacter, SecondaryGun); } \
+	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(Afpscharacter, ProjectileClass); }
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_17_PROLOG \

@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+#include "fpscharacter.h"
 
 #include "Net/UnrealNetwork.h"
 #include "Engine/Engine.h"
-#include "fpscharacter.h"
 #include "GameFramework/Character.h"
 #include "Engine\Classes\GameFramework\CharacterMovementComponent.h"
 #include "TimerManager.h"
@@ -13,7 +13,8 @@ Afpscharacter::Afpscharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	
+	RootComponent = GetCapsuleComponent();
+
 	//Creates a first person camera component instance
 	FPSCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	check(FPSCameraComponent != nullptr);
@@ -42,6 +43,12 @@ Afpscharacter::Afpscharacter()
 	GetMesh()->SetOwnerNoSee(true);
 
 	
+	//Creating the FPS weapon scene component, which is separate from the 3rd person gun mesh.
+	FPSGunComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Scene Component"));
+	FPSGunComponent->SetupAttachment(FPSCameraComponent);
+	/*The above scene component is where the weapon object will actually attach to when equipped.*/
+
+
 	//Enables the pawn base of the character to control camera rotation
 	FPSCameraComponent->bUsePawnControlRotation = true;
 
@@ -78,6 +85,7 @@ Afpscharacter::Afpscharacter()
 	//Initialize landing time
 	LandingTime = 0.5f;
 
+	bIsFiringWeapon = false;
 	
 }
 
@@ -145,6 +153,13 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	//Setting up crouch input
 	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &Afpscharacter::PressCrouch);
 	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &Afpscharacter::ReleaseCrouch);
+
+	//Binding fire action
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::StartFire);
+
+	//temp binding for secondary weapon
+	PlayerInputComponent->BindAction("SecondaryGun", IE_Pressed, this, &Afpscharacter::SpawnAndEquipGun);
+
 }
 
 void Afpscharacter::MoveY(float Value)
@@ -173,7 +188,6 @@ void Afpscharacter::UpdateStamina()
 	{
 		//Lose stamina while sprinting
 		LoseStamina(StaminaLossRateWhenSprinting * StaminaUpdateIntervalInSeconds);
-		UE_LOG(LogTemp, Warning, TEXT("Stamina = %f"), GetCurrentStamina());
 		
 	}
 	else if (!JustLanded && (GetVelocity().Z < 0.1f || GetVelocity().Z > 0.1f))
@@ -453,5 +467,60 @@ void Afpscharacter::UpdateWeapon()
 
 	//Functions that occur on all machines - such as special death effects
 
+}
+
+void Afpscharacter::EquipWeapon(AWeaponActor* GunToEquip)
+{
+	//Correctly positioning gun
+	FPSGunComponent->SetRelativeLocation(GunToEquip->BasePosition);
+	FPSGunComponent->SetRelativeRotation(GunToEquip->BaseRotation);
+	FPSGunComponent->SetRelativeScale3D(GunToEquip->BaseScale);
+
+	//Attach gun to scene component
+	GunToEquip->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
+
+	FPSMesh->SetOwnerNoSee(true);
+
+	ProjectileClass = GunToEquip->GetProjectileClass();
+
+	PrimaryGun = GunToEquip;
+
+	GunToEquip->GunMesh->bCastDynamicShadow = false;
+	GunToEquip->GunMesh->CastShadow = false;
+
+	//Still need a lot fo equip logic here
+}
+
+void Afpscharacter::StartFire()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Starting firting"));
+	if (!bIsFiringWeapon && PrimaryGun)
+	{
+		//Need to implement burst, semi, auto and beam weapon logic, and hitscan ands stuff
+		bIsFiringWeapon = true;
+		UWorld* World = GetWorld();
+		float fireRate = PrimaryGun->GetFireRate();
+		World->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::StopFire, fireRate, false);
+		HandleFire();
+
+	}
+}
+
+void Afpscharacter::StopFire()
+{
+	bIsFiringWeapon = false;
+
+}
+
+void Afpscharacter::HandleFire_Implementation()
+{
+	FVector spawnLocation = GetActorLocation() + (GetControlRotation().Vector() * 100.0f) + (GetActorUpVector());
+	FRotator spawnRotation = GetControlRotation();
+
+	FActorSpawnParameters spawnParameters;
+	spawnParameters.Instigator = GetInstigator();
+	spawnParameters.Owner = this;
+
+	AFPSProjectile* spawnedProjectile = GetWorld()->SpawnActor<AFPSProjectile>(spawnLocation, spawnRotation, spawnParameters);
 }
 
