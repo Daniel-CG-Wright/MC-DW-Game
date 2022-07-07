@@ -32,8 +32,7 @@ Afpscharacter::Afpscharacter()
 	//Only owning player sees this mesh
 	FPSMesh->SetOnlyOwnerSee(true);
 
-	//Attaches the FPS mesh to the FPS camera
-	FPSMesh->SetupAttachment(FPSCameraComponent);
+	
 
 	//Disable some environmental shadows to preserve the illusion of using a single mesh
 	FPSMesh->bCastDynamicShadow = false;
@@ -48,7 +47,8 @@ Afpscharacter::Afpscharacter()
 	FPSGunComponent->SetupAttachment(FPSCameraComponent);
 	/*The above scene component is where the weapon object will actually attach to when equipped.*/
 
-
+	//Attaches the FPS mesh to the FPS camera
+	FPSMesh->SetupAttachment(FPSGunComponent);
 	//Enables the pawn base of the character to control camera rotation
 	FPSCameraComponent->bUsePawnControlRotation = true;
 
@@ -471,29 +471,44 @@ void Afpscharacter::UpdateWeapon()
 
 void Afpscharacter::EquipWeapon(AWeaponActor* GunToEquip)
 {
+
+	//Ensure gun is not collected by any other players while equipped
+	GunToEquip->IsEquipped = true;
+
 	//Correctly positioning gun
-	FPSGunComponent->SetRelativeLocation(GunToEquip->BasePosition);
-	FPSGunComponent->SetRelativeRotation(GunToEquip->BaseRotation);
+	//Takes into account left-handedness
+	FVector PositionVector = (IsLeftHanded) ? FVector(GunToEquip->BasePosition.X, -1.0f * GunToEquip->BasePosition.Y, GunToEquip->BasePosition.Z) : GunToEquip->BasePosition;
+	FRotator PositionRotator = (IsLeftHanded) ? FRotator(GunToEquip->BaseRotation.Pitch, GunToEquip->BaseRotation.Yaw, -1.0f * GunToEquip->BaseRotation.Roll) : GunToEquip->BaseRotation;
+
+	FPSGunComponent->SetRelativeLocation(PositionVector);
+	FPSGunComponent->SetRelativeRotation(PositionRotator);
 	FPSGunComponent->SetRelativeScale3D(GunToEquip->BaseScale);
 
 	//Attach gun to scene component
 	GunToEquip->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
+	FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
 
-	FPSMesh->SetOwnerNoSee(true);
+	//Hide gun mesh
+	GunToEquip->GunMesh->SetVisibility(false, true);
 
+	
+	//Set gun mesh to be fps mesh
+	FPSMesh->SetSkeletalMesh(GunToEquip->GunMesh->SkeletalMesh);
+	
+	//The above way is easier than showing gun object as it allows us to avoid having to reset eveyrthing when gun object is dropped again.
+
+	//Sets projectile class for when fps character fires
 	ProjectileClass = GunToEquip->GetProjectileClass();
 
 	PrimaryGun = GunToEquip;
 
-	GunToEquip->GunMesh->bCastDynamicShadow = false;
-	GunToEquip->GunMesh->CastShadow = false;
+	
 
 	//Still need a lot fo equip logic here
 }
 
 void Afpscharacter::StartFire()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Starting firting"));
 	if (!bIsFiringWeapon && PrimaryGun)
 	{
 		//Need to implement burst, semi, auto and beam weapon logic, and hitscan ands stuff
@@ -501,6 +516,7 @@ void Afpscharacter::StartFire()
 		UWorld* World = GetWorld();
 		float fireRate = PrimaryGun->GetFireRate();
 		World->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::StopFire, fireRate, false);
+
 		HandleFire();
 
 	}
@@ -514,7 +530,7 @@ void Afpscharacter::StopFire()
 
 void Afpscharacter::HandleFire_Implementation()
 {
-	FVector spawnLocation = GetActorLocation() + (GetControlRotation().Vector() * 100.0f) + (GetActorUpVector());
+	FVector spawnLocation = FPSCameraComponent->GetComponentLocation();
 	FRotator spawnRotation = GetControlRotation();
 
 	FActorSpawnParameters spawnParameters;
@@ -522,5 +538,6 @@ void Afpscharacter::HandleFire_Implementation()
 	spawnParameters.Owner = this;
 
 	AFPSProjectile* spawnedProjectile = GetWorld()->SpawnActor<AFPSProjectile>(spawnLocation, spawnRotation, spawnParameters);
+
 }
 

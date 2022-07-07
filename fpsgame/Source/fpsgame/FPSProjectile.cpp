@@ -55,7 +55,6 @@ AFPSProjectile::AFPSProjectile()
 	static ConstructorHelpers::FObjectFinder<UParticleSystem> DefaultDestroyEffect(TEXT("ParticleSystem'/Game/Particles/P_Explosion.P_Explosion'"));
 	if (DefaultDestroyEffect.Succeeded())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Sup"));
 		DestroyEffect = DefaultDestroyEffect.Object;
 	}
 
@@ -71,6 +70,8 @@ AFPSProjectile::AFPSProjectile()
 	//Should be changed to the weapon firing the projectile.
 	Damage = 10.0f;
 
+	//Intial projectile lifespan
+	InitialLifeSpan = 1.0f;
 }
 
 // Called when the game starts or when spawned

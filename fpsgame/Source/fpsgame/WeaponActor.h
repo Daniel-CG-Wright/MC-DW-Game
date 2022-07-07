@@ -136,6 +136,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		FVector BaseScale;
 
+	UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")
+		//Stores whether weapon is already being held by someone
+		bool IsEquipped;
+
 	UFUNCTION(BlueprintPure)
 		float GetMaxRange() const { return MaxRange; }
 	
@@ -162,4 +166,6 @@ public:
 
 	UFUNCTION(BlueprintPure)
 		TSubclassOf<AFPSProjectile> GetProjectileClass() { return ProjectileClass; }
+
+
 };

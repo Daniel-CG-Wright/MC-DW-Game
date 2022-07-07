@@ -26,6 +26,11 @@ public:
 	//Property replication
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+private:
+	//Records whether player is left handed - if so, mirrors gun transform and rotation on equip to be positioned on left side.
+	UPROPERTY(EditAnywhere)
+		bool IsLeftHanded;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
