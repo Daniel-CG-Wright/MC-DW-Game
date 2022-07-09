@@ -107,6 +107,8 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	//Replicate current HP
 	DOREPLIFETIME(Afpscharacter, CurrentHealth);
 
+	//Replicate if sprinting
+	DOREPLIFETIME(Afpscharacter, IsSprinting);
 }
 
 
@@ -290,7 +292,10 @@ void Afpscharacter::ReleaseCrouch()
 
 void Afpscharacter::PressSprint()
 {
-
+	if (GetLocalRole() == ROLE_Authority)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("let''s gogoogo"));
+	}
 	if (GetCurrentStamina() <= 10.0f)
 	{
 		return; //Cannot sprint when below 10 stamina
@@ -345,9 +350,26 @@ void Afpscharacter::StartSprinting()
 {
 	GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
 	IsSprinting = true;
-	
+	if (GetLocalRole() == ROLE_Authority)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Sprinting = %s"), (IsSprinting ? TEXT("true") : TEXT("false")));
+
+	}
 }
 
+void Afpscharacter::OnRep_ChangeSprinting()
+{
+	if (IsSprinting)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Started sprinting"));
+		GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
+	}
+	else
+	{
+		GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
+	}
+
+}
 void Afpscharacter::OnHealthUpdate()
 {
 	//Client-specific functionality

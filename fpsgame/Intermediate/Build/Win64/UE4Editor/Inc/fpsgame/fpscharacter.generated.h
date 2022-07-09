@@ -45,6 +45,7 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execEquipWeapon); \
 	DECLARE_FUNCTION(execUpdateWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeWeapon); \
+	DECLARE_FUNCTION(execOnRep_ChangeSprinting); \
 	DECLARE_FUNCTION(execStartSprinting); \
 	DECLARE_FUNCTION(execStopSprinting); \
 	DECLARE_FUNCTION(execUpdateStamina); \
@@ -79,6 +80,7 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execEquipWeapon); \
 	DECLARE_FUNCTION(execUpdateWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeWeapon); \
+	DECLARE_FUNCTION(execOnRep_ChangeSprinting); \
 	DECLARE_FUNCTION(execStartSprinting); \
 	DECLARE_FUNCTION(execStopSprinting); \
 	DECLARE_FUNCTION(execUpdateStamina); \
@@ -100,7 +102,8 @@ public: \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		CurrentStamina=NETFIELD_REP_START, \
 		CurrentHealth, \
-		NETFIELD_REP_END=CurrentHealth	}; \
+		IsSprinting, \
+		NETFIELD_REP_END=IsSprinting	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
@@ -116,7 +119,8 @@ public: \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		CurrentStamina=NETFIELD_REP_START, \
 		CurrentHealth, \
-		NETFIELD_REP_END=CurrentHealth	}; \
+		IsSprinting, \
+		NETFIELD_REP_END=IsSprinting	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 

@@ -208,6 +208,13 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->OnRep_ChangeWeapon();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execOnRep_ChangeSprinting)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_ChangeSprinting();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(Afpscharacter::execStartSprinting)
 	{
 		P_FINISH;
@@ -268,6 +275,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "LoseStamina", &Afpscharacter::execLoseStamina },
 			{ "MoveX", &Afpscharacter::execMoveX },
 			{ "MoveY", &Afpscharacter::execMoveY },
+			{ "OnRep_ChangeSprinting", &Afpscharacter::execOnRep_ChangeSprinting },
 			{ "OnRep_ChangeWeapon", &Afpscharacter::execOnRep_ChangeWeapon },
 			{ "OnRep_CurrentHealth", &Afpscharacter::execOnRep_CurrentHealth },
 			{ "OnRep_CurrentStamina", &Afpscharacter::execOnRep_CurrentStamina },
@@ -661,6 +669,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//This function will update on the server whne the client decides to start or stop sprinting\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "This function will update on the server whne the client decides to start or stop sprinting" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "OnRep_ChangeSprinting", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon_Statics
 	{
 #if WITH_METADATA
@@ -975,9 +1007,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_StartSprinting_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Starts sprinting\n" },
+		{ "Comment", "//These are designed to locally alter the speed of the player temporarily so that it is more fluid when waiting for the rpc call to take effect.\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Starts sprinting" },
+		{ "ToolTip", "These are designed to locally alter the speed of the player temporarily so that it is more fluid when waiting for the rpc call to take effect." },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_StartSprinting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "StartSprinting", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_StartSprinting_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_StartSprinting_Statics::Function_MetaDataParams)) };
@@ -1048,9 +1080,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_StopSprinting_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Stops sprinting\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Stops sprinting" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_StopSprinting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "StopSprinting", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_StopSprinting_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_StopSprinting_Statics::Function_MetaDataParams)) };
@@ -1333,6 +1363,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_LoseStamina, "LoseStamina" }, // 3542002802
 		{ &Z_Construct_UFunction_Afpscharacter_MoveX, "MoveX" }, // 4016912003
 		{ &Z_Construct_UFunction_Afpscharacter_MoveY, "MoveY" }, // 2247957534
+		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting, "OnRep_ChangeSprinting" }, // 2106207384
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon, "OnRep_ChangeWeapon" }, // 371153054
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentHealth, "OnRep_CurrentHealth" }, // 2772940714
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentStamina, "OnRep_CurrentStamina" }, // 3514113238
@@ -1345,10 +1376,10 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_SpawnAndEquipGun, "SpawnAndEquipGun" }, // 769226702
 		{ &Z_Construct_UFunction_Afpscharacter_StartFire, "StartFire" }, // 1276249164
 		{ &Z_Construct_UFunction_Afpscharacter_StartJump, "StartJump" }, // 3422075348
-		{ &Z_Construct_UFunction_Afpscharacter_StartSprinting, "StartSprinting" }, // 1145822617
+		{ &Z_Construct_UFunction_Afpscharacter_StartSprinting, "StartSprinting" }, // 2247484729
 		{ &Z_Construct_UFunction_Afpscharacter_StopFire, "StopFire" }, // 396522478
 		{ &Z_Construct_UFunction_Afpscharacter_StopJump, "StopJump" }, // 315078958
-		{ &Z_Construct_UFunction_Afpscharacter_StopSprinting, "StopSprinting" }, // 3798834359
+		{ &Z_Construct_UFunction_Afpscharacter_StopSprinting, "StopSprinting" }, // 2879199794
 		{ &Z_Construct_UFunction_Afpscharacter_TakeDamage, "TakeDamage" }, // 811223175
 		{ &Z_Construct_UFunction_Afpscharacter_UpdateStamina, "UpdateStamina" }, // 1610481266
 		{ &Z_Construct_UFunction_Afpscharacter_UpdateWeapon, "UpdateWeapon" }, // 3912362607
@@ -1514,6 +1545,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentHealth = { "CurrentHealth", "OnRep_CurrentHealth", (EPropertyFlags)0x0020080100000020, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, CurrentHealth), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentHealth_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData[] = {
+		{ "Category", "fpscharacter" },
 		{ "Comment", "//Tracks sprinting\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
 		{ "ToolTip", "Tracks sprinting" },
@@ -1523,7 +1555,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	{
 		((Afpscharacter*)Obj)->IsSprinting = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting = { "IsSprinting", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting = { "IsSprinting", "OnRep_ChangeSprinting", (EPropertyFlags)0x0020080100020035, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun_MetaData[] = {
 		{ "Category", "Inventory" },
@@ -1724,7 +1756,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 3626378750);
+	IMPLEMENT_CLASS(Afpscharacter, 2000658733);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();
@@ -1735,10 +1767,12 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	{
 		static const FName Name_CurrentStamina(TEXT("CurrentStamina"));
 		static const FName Name_CurrentHealth(TEXT("CurrentHealth"));
+		static const FName Name_IsSprinting(TEXT("IsSprinting"));
 
 		const bool bIsValid = true
 			&& Name_CurrentStamina == ClassReps[(int32)ENetFields_Private::CurrentStamina].Property->GetFName()
-			&& Name_CurrentHealth == ClassReps[(int32)ENetFields_Private::CurrentHealth].Property->GetFName();
+			&& Name_CurrentHealth == ClassReps[(int32)ENetFields_Private::CurrentHealth].Property->GetFName()
+			&& Name_IsSprinting == ClassReps[(int32)ENetFields_Private::IsSprinting].Property->GetFName();
 
 		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in Afpscharacter"));
 	}

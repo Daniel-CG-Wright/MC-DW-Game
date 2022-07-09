@@ -111,20 +111,23 @@ protected:
 
 
 	//Tracks sprinting
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, ReplicatedUsing=OnRep_ChangeSprinting)
 		bool IsSprinting;
 
 	//updates stamina , called every @StaminaUpdateIntervalInSeconds by timer
 	UFUNCTION()
 		void UpdateStamina();
 
-	//Stops sprinting
 	UFUNCTION()
 		void StopSprinting();
 
-	//Starts sprinting
+	//These are designed to locally alter the speed of the player temporarily so that it is more fluid when waiting for the rpc call to take effect.
 	UFUNCTION()
 		void StartSprinting();
+
+	//This function will update on the server whne the client decides to start or stop sprinting
+	UFUNCTION()
+		void OnRep_ChangeSprinting();
 
 
 	//Stores current weapon being held, also used on server rep and sdtuff
@@ -174,6 +177,7 @@ protected:
 	UFUNCTION(Server, Reliable)
 		//WARNING - RELIABLE RPC CALL
 		void HandleFire();
+
 
 	//Timer handle used to provide the fire rate delay in game
 	FTimerHandle FiringTimer;
