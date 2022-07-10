@@ -20,6 +20,8 @@ class AWeaponActor;
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_SPARSE_DATA
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS \
 	virtual void HandleFire_Implementation(); \
+	virtual bool ServerSetSprinting_Validate(bool ); \
+	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
  \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
@@ -46,8 +48,8 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execUpdateWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeSprinting); \
-	DECLARE_FUNCTION(execStartSprinting); \
-	DECLARE_FUNCTION(execStopSprinting); \
+	DECLARE_FUNCTION(execServerSetSprinting); \
+	DECLARE_FUNCTION(execSetSprinting); \
 	DECLARE_FUNCTION(execUpdateStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
 	DECLARE_FUNCTION(execOnRep_CurrentStamina);
@@ -55,6 +57,8 @@ class AWeaponActor;
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void HandleFire_Implementation(); \
+	virtual bool ServerSetSprinting_Validate(bool ); \
+	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
  \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
@@ -81,14 +85,20 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execUpdateWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeSprinting); \
-	DECLARE_FUNCTION(execStartSprinting); \
-	DECLARE_FUNCTION(execStopSprinting); \
+	DECLARE_FUNCTION(execServerSetSprinting); \
+	DECLARE_FUNCTION(execSetSprinting); \
 	DECLARE_FUNCTION(execUpdateStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
 	DECLARE_FUNCTION(execOnRep_CurrentStamina);
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_EVENT_PARMS
+#define fpsgame_Source_fpsgame_fpscharacter_h_20_EVENT_PARMS \
+	struct fpscharacter_eventServerSetSprinting_Parms \
+	{ \
+		bool NewSprinting; \
+	};
+
+
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_CALLBACK_WRAPPERS
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_INCLASS_NO_PURE_DECLS \
 private: \

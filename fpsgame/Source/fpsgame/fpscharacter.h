@@ -36,7 +36,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	//Whether player is currently crouching
-	UPROPERTY(BlueprintReadWrite, Transient)
+	UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing = OnRep_CurrentlyCrouching)
 		bool CurrentlyCrouching;
 
 	//Stores if the player has just landed, logic altered in blueprints.
@@ -93,6 +93,17 @@ protected:
 	//Response to Stamina being updated. Called on the server immediately after modification, and on clients in response to a RepNotify
 	void OnStaminaUpdate();
 
+	//Sets whether player is crouching or not, run on client and server
+	UFUNCTION()
+		void SetCrouch(bool NewCrouch);
+
+	//RPC to server to cause player to crouch on server
+	UFUNCTION(Server, Reliable, WithValidation)
+		void ServerSetCrouch(bool NewCrouch);
+
+	//Run when IsCrouching status receives update on client
+	UFUNCTION()
+		void OnRep_CurrentlyCrouching();
 
 	//Max health
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
@@ -119,11 +130,13 @@ protected:
 		void UpdateStamina();
 
 	UFUNCTION()
-		void StopSprinting();
+		//Sets whether player is sprinting or not
+		void SetSprinting(bool NewSprinting);
+		
+	//This RPC function runs on server and is respknsible for actually modifying player's speed
+	UFUNCTION(Server, Reliable, WithValidation)
+		void ServerSetSprinting(bool NewSprinting);
 
-	//These are designed to locally alter the speed of the player temporarily so that it is more fluid when waiting for the rpc call to take effect.
-	UFUNCTION()
-		void StartSprinting();
 
 	//This function will update on the server whne the client decides to start or stop sprinting
 	UFUNCTION()

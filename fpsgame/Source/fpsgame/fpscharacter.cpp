@@ -118,7 +118,11 @@ void Afpscharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	GetWorldTimerManager().SetTimer(StaminaTimerHandle, this, &Afpscharacter::UpdateStamina, StaminaUpdateIntervalInSeconds, true);
+	if (GetLocalRole() == ROLE_Authority)
+	{
+		GetWorldTimerManager().SetTimer(StaminaTimerHandle, this, &Afpscharacter::UpdateStamina, StaminaUpdateIntervalInSeconds, true);
+
+	}
 
 	
 }
@@ -176,7 +180,7 @@ void Afpscharacter::MoveY(float Value)
 	if (Value != 1.0f || (dotProduct < 30.0f && dotProduct > -30.0f))
 	{
 		//Ensures player only sprints if they are holding forward and moving forward.
-		StopSprinting();
+		SetSprinting(false);
 	}
 	AddMovementInput(Direction, Value);
 
@@ -280,6 +284,19 @@ void Afpscharacter::PressCrouch()
 
 }
 
+void Afpscharacter::SetCrouch(bool NewCrouch)
+{
+	if (GetLocalRole() < ROLE_Authority)
+	{
+		//Call RPC to run this function on server
+		ServerSetCrouch(NewCrouch);
+
+	}
+
+	CurrentlyCrouching = NewCrouch;
+	GetCharacterMovement()->MaxWalkSpeed = CurrentlyCrouching ? CrouchSpeed : DefaultSpeed;
+
+}
 void Afpscharacter::ReleaseCrouch()
 {
 	if (!ToggleCrouch)
@@ -292,10 +309,7 @@ void Afpscharacter::ReleaseCrouch()
 
 void Afpscharacter::PressSprint()
 {
-	if (GetLocalRole() == ROLE_Authority)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("let''s gogoogo"));
-	}
+	//This function is executed purely on the client.
 	if (GetCurrentStamina() <= 10.0f)
 	{
 		return; //Cannot sprint when below 10 stamina
@@ -312,17 +326,17 @@ void Afpscharacter::PressSprint()
 		if (IsSprinting)
 		{
 			//Start walking
-			StopSprinting();
+			SetSprinting(false);
 		}
 		else
 		{
 			//Start sprinting
-			StartSprinting();
+			SetSprinting(false);
 		}
 	}
 	else
 	{
-		StartSprinting();
+		SetSprinting(true);
 	}
 }
 
@@ -334,42 +348,43 @@ void Afpscharacter::ReleaseSprint()
 	}
 	if (!ToggleSprint)
 	{
-		StopSprinting();
+		SetSprinting(false);
 
 	}
 }
 
-void Afpscharacter::StopSprinting()
+void Afpscharacter::SetSprinting(bool NewSprinting)
 {
-	GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
-	IsSprinting = false;
-
-}
-
-void Afpscharacter::StartSprinting()
-{
-	GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
-	IsSprinting = true;
-	if (GetLocalRole() == ROLE_Authority)
+	if (GetLocalRole() < ROLE_Authority)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Sprinting = %s"), (IsSprinting ? TEXT("true") : TEXT("false")));
-
+		//Send RPC call to server to start server sprinting
+		ServerSetSprinting(NewSprinting);
 	}
+
+	IsSprinting = NewSprinting;
+	GetCharacterMovement()->MaxWalkSpeed = IsSprinting ? SprintSpeed : DefaultSpeed;
 }
+
 
 void Afpscharacter::OnRep_ChangeSprinting()
 {
-	if (IsSprinting)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Started sprinting"));
-		GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
-	}
-	else
-	{
-		GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
-	}
+	GetCharacterMovement()->MaxWalkSpeed = IsSprinting ? SprintSpeed : DefaultSpeed;
+
 
 }
+
+//RPC for serve rto start sprinting
+bool Afpscharacter::ServerSetSprinting_Validate(bool NewSprinting)
+{
+	//Add server validation for if we should start sprinting here
+	return true;
+}
+
+void Afpscharacter::ServerSetSprinting_Implementation(bool NewSprinting)
+{
+	SetSprinting(NewSprinting);
+}
+
 void Afpscharacter::OnHealthUpdate()
 {
 	//Client-specific functionality
@@ -422,11 +437,7 @@ void Afpscharacter::OnStaminaUpdate()
 	if (IsLocallyControlled())
 	{
 
-		if (CurrentStamina <= 0)
-		{
-			//Out of stamina
-			StopSprinting();
-		}
+		
 	}
 
 	//Server-specific functionality
@@ -435,7 +446,7 @@ void Afpscharacter::OnStaminaUpdate()
 		if (CurrentStamina <= 0)
 		{
 			//Out of stamina
-			StopSprinting();
+			SetSprinting(false);
 		}
 	}
 
