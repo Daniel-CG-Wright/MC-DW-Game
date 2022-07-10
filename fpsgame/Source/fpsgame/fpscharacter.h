@@ -86,6 +86,12 @@ protected:
 	UPROPERTY(ReplicatedUsing = OnRep_CurrentStamina)
 		float CurrentStamina;
 
+	UFUNCTION()
+		void OnRep_CurrentlyCrouching();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Crouching")
+		void BlueprintRep_CurrentlyCrouching();
+
 	//Replicated current stamina
 	UFUNCTION()
 		void OnRep_CurrentStamina();
@@ -93,17 +99,6 @@ protected:
 	//Response to Stamina being updated. Called on the server immediately after modification, and on clients in response to a RepNotify
 	void OnStaminaUpdate();
 
-	//Sets whether player is crouching or not, run on client and server
-	UFUNCTION()
-		void SetCrouch(bool NewCrouch);
-
-	//RPC to server to cause player to crouch on server
-	UFUNCTION(Server, Reliable, WithValidation)
-		void ServerSetCrouch(bool NewCrouch);
-
-	//Run when IsCrouching status receives update on client
-	UFUNCTION()
-		void OnRep_CurrentlyCrouching();
 
 	//Max health
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
@@ -285,12 +280,6 @@ public:
 
 	UFUNCTION()
 		void ReleaseSprint();
-
-	UFUNCTION(BlueprintCallable, Category = "Crouching")
-		void PressCrouch();
-
-	UFUNCTION(BlueprintCallable, Category = "Crouching")
-		void ReleaseCrouch();
 
 	//Getter for max health
 	UFUNCTION(BlueprintPure, Category = "Health")

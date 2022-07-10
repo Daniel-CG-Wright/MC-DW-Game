@@ -108,7 +108,9 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	DOREPLIFETIME(Afpscharacter, CurrentHealth);
 
 	//Replicate if sprinting
-	DOREPLIFETIME(Afpscharacter, IsSprinting);
+	DOREPLIFETIME_CONDITION(Afpscharacter, IsSprinting, COND_SimulatedOnly);
+
+	DOREPLIFETIME_CONDITION(Afpscharacter, CurrentlyCrouching, COND_SimulatedOnly);
 }
 
 
@@ -157,8 +159,7 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &Afpscharacter::ReleaseSprint);
 
 	//Setting up crouch input
-	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &Afpscharacter::PressCrouch);
-	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &Afpscharacter::ReleaseCrouch);
+	//ALERT this is now done entirely in blueprints.
 
 	//Binding fire action
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::StartFire);
@@ -254,59 +255,11 @@ void Afpscharacter::StopJump()
 	
 }
 
-
-
-void Afpscharacter::PressCrouch()
+void Afpscharacter::OnRep_CurrentlyCrouching()
 {
-	if (ToggleCrouch)
-	{
-		if (CurrentlyCrouching)
-		{
-			//Should Stand
-			GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
-			CurrentlyCrouching = false;
-		}
-		else
-		{
-			//Should Crouch
-			GetCharacterMovement()->MaxWalkSpeed = CrouchSpeed;
-			CurrentlyCrouching = true;
-
-		}
-	}
-	else
-	{
-		//Should Crouch
-		GetCharacterMovement()->MaxWalkSpeed = CrouchSpeed;
-		CurrentlyCrouching = true;
-	}
-
+	BlueprintRep_CurrentlyCrouching();
 
 }
-
-void Afpscharacter::SetCrouch(bool NewCrouch)
-{
-	if (GetLocalRole() < ROLE_Authority)
-	{
-		//Call RPC to run this function on server
-		ServerSetCrouch(NewCrouch);
-
-	}
-
-	CurrentlyCrouching = NewCrouch;
-	GetCharacterMovement()->MaxWalkSpeed = CurrentlyCrouching ? CrouchSpeed : DefaultSpeed;
-
-}
-void Afpscharacter::ReleaseCrouch()
-{
-	if (!ToggleCrouch)
-	{
-		GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
-		CurrentlyCrouching = false;
-
-	}
-}
-
 void Afpscharacter::PressSprint()
 {
 	//This function is executed purely on the client.
@@ -372,6 +325,7 @@ void Afpscharacter::OnRep_ChangeSprinting()
 
 
 }
+
 
 //RPC for serve rto start sprinting
 bool Afpscharacter::ServerSetSprinting_Validate(bool NewSprinting)

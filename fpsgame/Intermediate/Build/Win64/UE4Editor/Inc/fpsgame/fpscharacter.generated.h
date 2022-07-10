@@ -31,8 +31,6 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
-	DECLARE_FUNCTION(execReleaseCrouch); \
-	DECLARE_FUNCTION(execPressCrouch); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
@@ -52,7 +50,8 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execSetSprinting); \
 	DECLARE_FUNCTION(execUpdateStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
-	DECLARE_FUNCTION(execOnRep_CurrentStamina);
+	DECLARE_FUNCTION(execOnRep_CurrentStamina); \
+	DECLARE_FUNCTION(execOnRep_CurrentlyCrouching);
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -68,8 +67,6 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
-	DECLARE_FUNCTION(execReleaseCrouch); \
-	DECLARE_FUNCTION(execPressCrouch); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
@@ -89,7 +86,8 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execSetSprinting); \
 	DECLARE_FUNCTION(execUpdateStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
-	DECLARE_FUNCTION(execOnRep_CurrentStamina);
+	DECLARE_FUNCTION(execOnRep_CurrentStamina); \
+	DECLARE_FUNCTION(execOnRep_CurrentlyCrouching);
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_20_EVENT_PARMS \
@@ -110,7 +108,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		CurrentStamina=NETFIELD_REP_START, \
+		CurrentlyCrouching=NETFIELD_REP_START, \
+		CurrentStamina, \
 		CurrentHealth, \
 		IsSprinting, \
 		NETFIELD_REP_END=IsSprinting	}; \
@@ -127,7 +126,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		CurrentStamina=NETFIELD_REP_START, \
+		CurrentlyCrouching=NETFIELD_REP_START, \
+		CurrentStamina, \
 		CurrentHealth, \
 		IsSprinting, \
 		NETFIELD_REP_END=IsSprinting	}; \
