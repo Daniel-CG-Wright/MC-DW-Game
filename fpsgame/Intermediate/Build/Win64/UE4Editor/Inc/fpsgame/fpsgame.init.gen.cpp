@@ -21,8 +21,13 @@ void EmptyLinkFunctionForGeneratedCodefpsgame_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
+<<<<<<< HEAD
 				0x222D7D36,
 				0xB8B28BC3,
+=======
+				0x6FFED7C2,
+				0x489EB70A,
+>>>>>>> d643bda26aaec8d04a7d9bfd7af9c6f6e98acbca
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

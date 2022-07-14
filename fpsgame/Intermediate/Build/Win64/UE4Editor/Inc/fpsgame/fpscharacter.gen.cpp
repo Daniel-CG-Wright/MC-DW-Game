@@ -360,6 +360,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->OnRep_CurrentlyCrouching();
 		P_NATIVE_END;
 	}
+<<<<<<< HEAD
 #if WITH_EDITOR
 	DEFINE_FUNCTION(Afpscharacter::execDebugFunction)
 	{
@@ -369,6 +370,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_NATIVE_END;
 	}
 #endif //WITH_EDITOR
+=======
+>>>>>>> d643bda26aaec8d04a7d9bfd7af9c6f6e98acbca
 	static FName NAME_Afpscharacter_BlueprintRep_CurrentlyCrouching = FName(TEXT("BlueprintRep_CurrentlyCrouching"));
 	void Afpscharacter::BlueprintRep_CurrentlyCrouching()
 	{
@@ -428,8 +431,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "OnRep_CurrentHealth", &Afpscharacter::execOnRep_CurrentHealth },
 			{ "OnRep_CurrentlyCrouching", &Afpscharacter::execOnRep_CurrentlyCrouching },
 			{ "OnRep_CurrentStamina", &Afpscharacter::execOnRep_CurrentStamina },
+<<<<<<< HEAD
 			{ "PickupWeapon", &Afpscharacter::execPickupWeapon },
 			{ "PositionAndAttachGunInFP", &Afpscharacter::execPositionAndAttachGunInFP },
+=======
+>>>>>>> d643bda26aaec8d04a7d9bfd7af9c6f6e98acbca
 			{ "PressSprint", &Afpscharacter::execPressSprint },
 			{ "ReleaseSprint", &Afpscharacter::execReleaseSprint },
 			{ "ServerPickupWeapon", &Afpscharacter::execServerPickupWeapon },
@@ -519,6 +525,32 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics
+<<<<<<< HEAD
+=======
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Crouching" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "BlueprintRep_CurrentlyCrouching", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics
+>>>>>>> d643bda26aaec8d04a7d9bfd7af9c6f6e98acbca
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -954,6 +986,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+<<<<<<< HEAD
 	struct Z_Construct_UFunction_Afpscharacter_PickupWeapon_Statics
 	{
 #if WITH_METADATA
@@ -1013,6 +1046,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+=======
+>>>>>>> d643bda26aaec8d04a7d9bfd7af9c6f6e98acbca
 	struct Z_Construct_UFunction_Afpscharacter_PressSprint_Statics
 	{
 #if WITH_METADATA
@@ -1779,9 +1814,13 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputX, "ApplySensitivityAndInversionToMouseInputX" }, // 384281768
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputY, "ApplySensitivityAndInversionToMouseInputY" }, // 3692219004
 		{ &Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching, "BlueprintRep_CurrentlyCrouching" }, // 3925505741
+<<<<<<< HEAD
 #if WITH_EDITOR
 		{ &Z_Construct_UFunction_Afpscharacter_DebugFunction, "DebugFunction" }, // 2576565601
 #endif //WITH_EDITOR
+=======
+		{ &Z_Construct_UFunction_Afpscharacter_EquipWeapon, "EquipWeapon" }, // 3480641389
+>>>>>>> d643bda26aaec8d04a7d9bfd7af9c6f6e98acbca
 		{ &Z_Construct_UFunction_Afpscharacter_GetCurrentHealth, "GetCurrentHealth" }, // 1678929625
 		{ &Z_Construct_UFunction_Afpscharacter_GetCurrentStamina, "GetCurrentStamina" }, // 1877127190
 		{ &Z_Construct_UFunction_Afpscharacter_GetMaxHealth, "GetMaxHealth" }, // 2374698544
@@ -1795,8 +1834,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentHealth, "OnRep_CurrentHealth" }, // 2772940714
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching, "OnRep_CurrentlyCrouching" }, // 4044249521
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentStamina, "OnRep_CurrentStamina" }, // 3514113238
+<<<<<<< HEAD
 		{ &Z_Construct_UFunction_Afpscharacter_PickupWeapon, "PickupWeapon" }, // 899582688
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP, "PositionAndAttachGunInFP" }, // 333442934
+=======
+>>>>>>> d643bda26aaec8d04a7d9bfd7af9c6f6e98acbca
 		{ &Z_Construct_UFunction_Afpscharacter_PressSprint, "PressSprint" }, // 898884170
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseSprint, "ReleaseSprint" }, // 1995324714
 		{ &Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon, "ServerPickupWeapon" }, // 1506557155
@@ -2229,7 +2271,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
+<<<<<<< HEAD
 	IMPLEMENT_CLASS(Afpscharacter, 1317565488);
+=======
+	IMPLEMENT_CLASS(Afpscharacter, 598350474);
+>>>>>>> d643bda26aaec8d04a7d9bfd7af9c6f6e98acbca
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();
