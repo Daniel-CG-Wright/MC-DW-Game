@@ -22,7 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	FPSGAME_API UClass* Z_Construct_UClass_AFPSProjectile_NoRegister();
+	FPSGAME_API UClass* Z_Construct_UClass_AProjectileBullet_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
@@ -278,7 +278,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(TSubclassOf<AFPSProjectile> *)Z_Param__Result=P_THIS->GetProjectileClass();
+		*(TSubclassOf<AProjectileBullet> *)Z_Param__Result=P_THIS->GetProjectileClass();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AWeaponActor::execSetCartridgeBullets)
@@ -519,7 +519,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	{
 		struct WeaponActor_eventGetProjectileClass_Parms
 		{
-			TSubclassOf<AFPSProjectile>  ReturnValue;
+			TSubclassOf<AProjectileBullet>  ReturnValue;
 		};
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -528,7 +528,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_AWeaponActor_GetProjectileClass_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0014000000000580, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponActor_eventGetProjectileClass_Parms, ReturnValue), Z_Construct_UClass_AFPSProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_AWeaponActor_GetProjectileClass_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0014000000000580, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponActor_eventGetProjectileClass_Parms, ReturnValue), Z_Construct_UClass_AProjectileBullet_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWeaponActor_GetProjectileClass_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWeaponActor_GetProjectileClass_Statics::NewProp_ReturnValue,
 	};
@@ -736,7 +736,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		{ &Z_Construct_UFunction_AWeaponActor_GetCartridgeBullets, "GetCartridgeBullets" }, // 186365759
 		{ &Z_Construct_UFunction_AWeaponActor_GetFireRate, "GetFireRate" }, // 1210193946
 		{ &Z_Construct_UFunction_AWeaponActor_GetMaxRange, "GetMaxRange" }, // 3722095479
-		{ &Z_Construct_UFunction_AWeaponActor_GetProjectileClass, "GetProjectileClass" }, // 3097201408
+		{ &Z_Construct_UFunction_AWeaponActor_GetProjectileClass, "GetProjectileClass" }, // 1897341923
 		{ &Z_Construct_UFunction_AWeaponActor_GetProjectileSpeed, "GetProjectileSpeed" }, // 2900968288
 		{ &Z_Construct_UFunction_AWeaponActor_SetBurstNumber, "SetBurstNumber" }, // 3069117492
 		{ &Z_Construct_UFunction_AWeaponActor_SetCartridgeBullets, "SetCartridgeBullets" }, // 1836282083
@@ -753,7 +753,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		{ "ModuleRelativePath", "WeaponActor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0024080000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, ProjectileClass), Z_Construct_UClass_AFPSProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_ProjectileClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0024080000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, ProjectileClass), Z_Construct_UClass_AProjectileBullet_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_ProjectileClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_MaxRange_MetaData[] = {
 		{ "Category", "Weapon stats" },
@@ -944,7 +944,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeaponActor, 782912851);
+	IMPLEMENT_CLASS(AWeaponActor, 2164254120);
 	template<> FPSGAME_API UClass* StaticClass<AWeaponActor>()
 	{
 		return AWeaponActor::StaticClass();

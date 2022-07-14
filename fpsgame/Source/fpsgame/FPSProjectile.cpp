@@ -5,17 +5,16 @@
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
-#include "GameFramework/DamageType.h"
 #include "Particles/ParticleSystem.h"
-#include "Kismet/GameplayStatics.h"
 #include "UObject/ConstructorHelpers.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
 AFPSProjectile::AFPSProjectile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 	bReplicates = true;
 
 
@@ -62,13 +61,11 @@ AFPSProjectile::AFPSProjectile()
 	ProjectileMovementComponent->SetUpdatedComponent(CollisionComponent);
 	//Should be changed to the speeds used by the firing weapon
 	ProjectileMovementComponent->InitialSpeed = 1500.0f;
-	ProjectileMovementComponent->MaxSpeed = 1500.0f;
+	ProjectileMovementComponent->MaxSpeed = MaxProjectileSpeed = 1500.0f;
 	ProjectileMovementComponent->bRotationFollowsVelocity = true;
 	ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 
-	DamageType = UDamageType::StaticClass();
-	//Should be changed to the weapon firing the projectile.
-	Damage = 10.0f;
+
 
 	//Intial projectile lifespan
 	InitialLifeSpan = 1.0f;
@@ -81,6 +78,10 @@ void AFPSProjectile::BeginPlay()
 	
 }
 
+void AFPSProjectile::SetProjectileSpeed(float newProjectileSpeed)
+{
+	ProjectileMovementComponent->InitialSpeed = newProjectileSpeed;
+}
 // Called every frame
 void AFPSProjectile::Tick(float DeltaTime)
 {
@@ -103,11 +104,7 @@ void AFPSProjectile::Destroyed()
 
 void AFPSProjectile::OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor)
-	{
-		//Runs if another actror was hit
-		UGameplayStatics::ApplyPointDamage(OtherActor, Damage, NormalImpulse, Hit, GetInstigator()->Controller, this, DamageType);
-	}
+	
 
 	Destroy();
 }

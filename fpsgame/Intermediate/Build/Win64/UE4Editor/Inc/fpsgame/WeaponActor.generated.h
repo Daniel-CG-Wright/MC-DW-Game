@@ -8,7 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AFPSProjectile;
+class AProjectileBullet;
 #ifdef FPSGAME_WeaponActor_generated_h
 #error "WeaponActor.generated.h already included, missing '#pragma once' in WeaponActor.h"
 #endif

@@ -10,7 +10,7 @@
 // Sets default values
 Afpscharacter::Afpscharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	RootComponent = GetCapsuleComponent();
@@ -23,7 +23,7 @@ Afpscharacter::Afpscharacter()
 	FPSCameraComponent->SetupAttachment(CastChecked<USceneComponent, UCapsuleComponent>(GetCapsuleComponent()));
 
 	//Position the camera at eye level
-	FPSCameraComponent->SetRelativeLocation(FVector(0.0f, 0.0f, BaseEyeHeight));
+	FPSCameraComponent->SetRelativeLocation(FVector(0.0f, 0.0f, BaseEyeHeight-10.0f));
 
 	//Creating the FPS mesh component for the owning player
 	FPSMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMesh"));
@@ -32,7 +32,7 @@ Afpscharacter::Afpscharacter()
 	//Only owning player sees this mesh
 	FPSMesh->SetOnlyOwnerSee(true);
 
-	
+
 
 	//Disable some environmental shadows to preserve the illusion of using a single mesh
 	FPSMesh->bCastDynamicShadow = false;
@@ -41,7 +41,7 @@ Afpscharacter::Afpscharacter()
 	//Hides third person mesh from owner
 	GetMesh()->SetOwnerNoSee(true);
 
-	
+
 	//Creating the FPS weapon scene component, which is separate from the 3rd person gun mesh.
 	FPSGunComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Scene Component"));
 	FPSGunComponent->SetupAttachment(FPSCameraComponent);
@@ -86,7 +86,7 @@ Afpscharacter::Afpscharacter()
 	LandingTime = 0.5f;
 
 	bIsFiringWeapon = false;
-	
+	DistanceToPlaceProjectileFromCamera = 25.0f;
 }
 
 
@@ -108,7 +108,9 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	DOREPLIFETIME(Afpscharacter, CurrentHealth);
 
 	//Replicate if sprinting
-	DOREPLIFETIME(Afpscharacter, IsSprinting);
+	DOREPLIFETIME_CONDITION(Afpscharacter, IsSprinting, COND_SimulatedOnly);
+
+	DOREPLIFETIME_CONDITION(Afpscharacter, CurrentlyCrouching, COND_SimulatedOnly);
 }
 
 
@@ -117,14 +119,14 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 void Afpscharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	if (GetLocalRole() == ROLE_Authority)
 	{
 		GetWorldTimerManager().SetTimer(StaminaTimerHandle, this, &Afpscharacter::UpdateStamina, StaminaUpdateIntervalInSeconds, true);
 
 	}
 
-	
+
 }
 
 // Called every frame
@@ -132,7 +134,7 @@ void Afpscharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	
+
 }
 
 // Called to bind functionality to input
@@ -157,21 +159,31 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &Afpscharacter::ReleaseSprint);
 
 	//Setting up crouch input
-	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &Afpscharacter::PressCrouch);
-	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &Afpscharacter::ReleaseCrouch);
+	//ALERT this is now done entirely in blueprints.
 
 	//Binding fire action
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::StartFire);
 
 	//temp binding for secondary weapon
-	PlayerInputComponent->BindAction("SecondaryGun", IE_Pressed, this, &Afpscharacter::SpawnAndEquipGun);
+	PlayerInputComponent->BindAction("SecondaryGun", IE_Pressed, this, &Afpscharacter::SwitchSecondaryInputImplementation);
+	PlayerInputComponent->BindAction("spawnequipgun", IE_Pressed, this, &Afpscharacter::SpawnAndEquipGun);
 
+}
+
+void Afpscharacter::SwitchPrimaryInputImplementation()
+{
+	SwitchPrimary(false);
+}
+
+void Afpscharacter::SwitchSecondaryInputImplementation()
+{
+	SwitchSecondary(false);
 }
 
 void Afpscharacter::MoveY(float Value)
 {
 	///For moving forward/backward
-	
+
 	//Gets 'forward' relative to actor, and record that player wants to move that way.
 	FVector Direction = GetActorForwardVector();
 
@@ -189,12 +201,12 @@ void Afpscharacter::MoveY(float Value)
 
 void Afpscharacter::UpdateStamina()
 {
-	
+
 	if (IsSprinting)
 	{
 		//Lose stamina while sprinting
 		LoseStamina(StaminaLossRateWhenSprinting * StaminaUpdateIntervalInSeconds);
-		
+
 	}
 	else if (!JustLanded && (GetVelocity().Z < 0.1f || GetVelocity().Z > 0.1f))
 	{
@@ -251,62 +263,14 @@ void Afpscharacter::StartJump()
 void Afpscharacter::StopJump()
 {
 	bPressedJump = false;
-	
+
 }
 
-
-
-void Afpscharacter::PressCrouch()
+void Afpscharacter::OnRep_CurrentlyCrouching()
 {
-	if (ToggleCrouch)
-	{
-		if (CurrentlyCrouching)
-		{
-			//Should Stand
-			GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
-			CurrentlyCrouching = false;
-		}
-		else
-		{
-			//Should Crouch
-			GetCharacterMovement()->MaxWalkSpeed = CrouchSpeed;
-			CurrentlyCrouching = true;
-
-		}
-	}
-	else
-	{
-		//Should Crouch
-		GetCharacterMovement()->MaxWalkSpeed = CrouchSpeed;
-		CurrentlyCrouching = true;
-	}
-
+	BlueprintRep_CurrentlyCrouching();
 
 }
-
-void Afpscharacter::SetCrouch(bool NewCrouch)
-{
-	if (GetLocalRole() < ROLE_Authority)
-	{
-		//Call RPC to run this function on server
-		ServerSetCrouch(NewCrouch);
-
-	}
-
-	CurrentlyCrouching = NewCrouch;
-	GetCharacterMovement()->MaxWalkSpeed = CurrentlyCrouching ? CrouchSpeed : DefaultSpeed;
-
-}
-void Afpscharacter::ReleaseCrouch()
-{
-	if (!ToggleCrouch)
-	{
-		GetCharacterMovement()->MaxWalkSpeed = DefaultSpeed;
-		CurrentlyCrouching = false;
-
-	}
-}
-
 void Afpscharacter::PressSprint()
 {
 	//This function is executed purely on the client.
@@ -373,6 +337,7 @@ void Afpscharacter::OnRep_ChangeSprinting()
 
 }
 
+
 //RPC for serve rto start sprinting
 bool Afpscharacter::ServerSetSprinting_Validate(bool NewSprinting)
 {
@@ -437,7 +402,7 @@ void Afpscharacter::OnStaminaUpdate()
 	if (IsLocallyControlled())
 	{
 
-		
+
 	}
 
 	//Server-specific functionality
@@ -480,29 +445,123 @@ float Afpscharacter::LoseStamina(float LostStamina)
 
 void Afpscharacter::OnRep_ChangeWeapon()
 {
-	UpdateWeapon();
+	switch (EquippedGun)
+	{
+	case Equips::PRIMARY:
+		SwitchPrimary(true);
+		break;
+	case Equips::SECONDARY:
+		SwitchSecondary(true);
+		break;
+	default:
+		break;
+	}
 }
 
-void Afpscharacter::UpdateWeapon()
+void Afpscharacter::PickupWeapon()
 {
-	//Client-specific functionality
+	//Pick up weapon
+
+	//Need to run RPC on server
+	if (GetLocalRole() < ROLE_Authority)
+	{
+		ServerPickupWeapon();
+	}
+
+	//Logic for picking up weapon goes here
+}
+
+void Afpscharacter::ServerPickupWeapon_Implementation()
+{
+	//Server impleemntation of pickup weapon
+	PickupWeapon();
+}
+
+void Afpscharacter::SwitchPrimary(bool bIsRep)
+{
+	//Switch to primary gun
+
+	//Need to run RPC on server
+	if (GetLocalRole() < ROLE_Authority && !bIsRep)
+	{
+		ServerSwitchPrimary();
+	}
+
+	//Logic for switching primary.
 	if (IsLocallyControlled())
 	{
-		//EquipWeapon();
-		
-	}
-
-	//Server-specific functionality
-	if (GetLocalRole() == ROLE_Authority)
-	{
+		PositionAndAttachGunInFP(PrimaryGun);
 
 	}
+	//Still need a lot fo equip logic here
 
-	//Functions that occur on all machines - such as special death effects
+	BulletClass = PrimaryGun->GetProjectileClass();
+
+	EquippedGun = Equips::PRIMARY;
+
+	EquippedWeaponReference = PrimaryGun;
 
 }
 
-void Afpscharacter::EquipWeapon(AWeaponActor* GunToEquip)
+void Afpscharacter::ServerSwitchPrimary_Implementation()
+{
+	SwitchPrimary(false);
+}
+
+#if WITH_EDITOR
+
+void Afpscharacter::DebugFunction()
+{
+	if (IsLocallyControlled())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("OWNING CLIENT: Log no. %d"), lognum);
+
+	}
+	else if (GetLocalRole() < ROLE_Authority)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("OTHER CLIENT: Log no. %d"), lognum);
+
+	}
+
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("SERVER: Log no. %d"), lognum);
+	}
+
+	lognum++;
+}
+#endif
+
+void Afpscharacter::SwitchSecondary(bool bIsRep)
+{
+	
+	if (GetLocalRole() < ROLE_Authority && !bIsRep)
+	{
+		ServerSwitchSecondary();
+	}
+
+	//Only owner needs this
+	if (IsLocallyControlled())
+	{
+		PositionAndAttachGunInFP(SecondaryGun);
+
+	}
+
+	UE_LOG(LogTemp, Warning, TEXT("Here"));
+	BulletClass = SecondaryGun->GetProjectileClass();
+	DebugFunction();
+	EquippedGun = Equips::SECONDARY;
+	DebugFunction();
+	EquippedWeaponReference = SecondaryGun;
+	UE_LOG(LogTemp, Warning, TEXT("There"));
+}
+
+void Afpscharacter::ServerSwitchSecondary_Implementation()
+{
+	SwitchSecondary(false);
+}
+
+void Afpscharacter::PositionAndAttachGunInFP(AWeaponActor* GunToEquip)
 {
 
 	//Ensure gun is not collected by any other players while equipped
@@ -524,31 +583,27 @@ void Afpscharacter::EquipWeapon(AWeaponActor* GunToEquip)
 	//Hide gun mesh
 	GunToEquip->GunMesh->SetVisibility(false, true);
 
-	
+
 	//Set gun mesh to be fps mesh
 	FPSMesh->SetSkeletalMesh(GunToEquip->GunMesh->SkeletalMesh);
-	
+
 	//The above way is easier than showing gun object as it allows us to avoid having to reset eveyrthing when gun object is dropped again.
 
-	//Sets projectile class for when fps character fires
-	ProjectileClass = GunToEquip->GetProjectileClass();
 
-	PrimaryGun = GunToEquip;
-
-	
-
-	//Still need a lot fo equip logic here
 }
+
 
 void Afpscharacter::StartFire()
 {
-	if (!bIsFiringWeapon && PrimaryGun)
+
+
+	if (!bIsFiringWeapon && EquippedWeaponReference)
 	{
 		//Need to implement burst, semi, auto and beam weapon logic, and hitscan ands stuff
 		bIsFiringWeapon = true;
 		UWorld* World = GetWorld();
-		float fireRate = PrimaryGun->GetFireRate();
-		World->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::StopFire, fireRate, false);
+		float trueFireRate = EquippedWeaponReference->GetFireRate();
+		World->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::StopFire, trueFireRate, false);
 
 		HandleFire();
 
@@ -570,7 +625,8 @@ void Afpscharacter::HandleFire_Implementation()
 	spawnParameters.Instigator = GetInstigator();
 	spawnParameters.Owner = this;
 
-	AFPSProjectile* spawnedProjectile = GetWorld()->SpawnActor<AFPSProjectile>(spawnLocation, spawnRotation, spawnParameters);
-
+	UE_LOG(LogTemp, Warning, TEXT("Spawning"));
+	AProjectileBullet* spawnedProjectile = GetWorld()->SpawnActor<AProjectileBullet>(BulletClass, spawnLocation, spawnRotation, spawnParameters);
+	spawnedProjectile->SetProjectileSpeed(EquippedWeaponReference->GetProjectileSpeed());
+	spawnedProjectile->FireInDirection(GetActorForwardVector());
 }
-

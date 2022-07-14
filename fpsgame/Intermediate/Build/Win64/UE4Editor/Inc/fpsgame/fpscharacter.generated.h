@@ -17,9 +17,12 @@ class AWeaponActor;
 #endif
 #define FPSGAME_fpscharacter_generated_h
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_SPARSE_DATA
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_SPARSE_DATA
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_RPC_WRAPPERS \
 	virtual void HandleFire_Implementation(); \
+	virtual void ServerSwitchSecondary_Implementation(); \
+	virtual void ServerSwitchPrimary_Implementation(); \
+	virtual void ServerPickupWeapon_Implementation(); \
 	virtual bool ServerSetSprinting_Validate(bool ); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
  \
@@ -31,8 +34,6 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
-	DECLARE_FUNCTION(execReleaseCrouch); \
-	DECLARE_FUNCTION(execPressCrouch); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
@@ -44,19 +45,30 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execHandleFire); \
 	DECLARE_FUNCTION(execStopFire); \
 	DECLARE_FUNCTION(execStartFire); \
-	DECLARE_FUNCTION(execEquipWeapon); \
-	DECLARE_FUNCTION(execUpdateWeapon); \
+	DECLARE_FUNCTION(execServerSwitchSecondary); \
+	DECLARE_FUNCTION(execServerSwitchPrimary); \
+	DECLARE_FUNCTION(execPositionAndAttachGunInFP); \
+	DECLARE_FUNCTION(execSwitchSecondary); \
+	DECLARE_FUNCTION(execSwitchSecondaryInputImplementation); \
+	DECLARE_FUNCTION(execSwitchPrimaryInputImplementation); \
+	DECLARE_FUNCTION(execSwitchPrimary); \
+	DECLARE_FUNCTION(execServerPickupWeapon); \
+	DECLARE_FUNCTION(execPickupWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeSprinting); \
 	DECLARE_FUNCTION(execServerSetSprinting); \
 	DECLARE_FUNCTION(execSetSprinting); \
 	DECLARE_FUNCTION(execUpdateStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
-	DECLARE_FUNCTION(execOnRep_CurrentStamina);
+	DECLARE_FUNCTION(execOnRep_CurrentStamina); \
+	DECLARE_FUNCTION(execOnRep_CurrentlyCrouching);
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void HandleFire_Implementation(); \
+	virtual void ServerSwitchSecondary_Implementation(); \
+	virtual void ServerSwitchPrimary_Implementation(); \
+	virtual void ServerPickupWeapon_Implementation(); \
 	virtual bool ServerSetSprinting_Validate(bool ); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
  \
@@ -68,8 +80,6 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
-	DECLARE_FUNCTION(execReleaseCrouch); \
-	DECLARE_FUNCTION(execPressCrouch); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
@@ -81,26 +91,49 @@ class AWeaponActor;
 	DECLARE_FUNCTION(execHandleFire); \
 	DECLARE_FUNCTION(execStopFire); \
 	DECLARE_FUNCTION(execStartFire); \
-	DECLARE_FUNCTION(execEquipWeapon); \
-	DECLARE_FUNCTION(execUpdateWeapon); \
+	DECLARE_FUNCTION(execServerSwitchSecondary); \
+	DECLARE_FUNCTION(execServerSwitchPrimary); \
+	DECLARE_FUNCTION(execPositionAndAttachGunInFP); \
+	DECLARE_FUNCTION(execSwitchSecondary); \
+	DECLARE_FUNCTION(execSwitchSecondaryInputImplementation); \
+	DECLARE_FUNCTION(execSwitchPrimaryInputImplementation); \
+	DECLARE_FUNCTION(execSwitchPrimary); \
+	DECLARE_FUNCTION(execServerPickupWeapon); \
+	DECLARE_FUNCTION(execPickupWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeWeapon); \
 	DECLARE_FUNCTION(execOnRep_ChangeSprinting); \
 	DECLARE_FUNCTION(execServerSetSprinting); \
 	DECLARE_FUNCTION(execSetSprinting); \
 	DECLARE_FUNCTION(execUpdateStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
-	DECLARE_FUNCTION(execOnRep_CurrentStamina);
+	DECLARE_FUNCTION(execOnRep_CurrentStamina); \
+	DECLARE_FUNCTION(execOnRep_CurrentlyCrouching);
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_EVENT_PARMS \
+#if WITH_EDITOR
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_EDITOR_ONLY_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execDebugFunction);
+
+
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execDebugFunction);
+
+
+#else
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_EDITOR_ONLY_RPC_WRAPPERS
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS
+#endif //WITH_EDITOR
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_EVENT_PARMS \
 	struct fpscharacter_eventServerSetSprinting_Parms \
 	{ \
 		bool NewSprinting; \
 	};
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_CALLBACK_WRAPPERS
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_CALLBACK_WRAPPERS
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAfpscharacter(); \
 	friend struct Z_Construct_UClass_Afpscharacter_Statics; \
@@ -110,14 +143,16 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		CurrentStamina=NETFIELD_REP_START, \
+		CurrentlyCrouching=NETFIELD_REP_START, \
+		CurrentStamina, \
 		CurrentHealth, \
 		IsSprinting, \
-		NETFIELD_REP_END=IsSprinting	}; \
+		EquippedGun, \
+		NETFIELD_REP_END=EquippedGun	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_INCLASS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_INCLASS \
 private: \
 	static void StaticRegisterNativesAfpscharacter(); \
 	friend struct Z_Construct_UClass_Afpscharacter_Statics; \
@@ -127,14 +162,16 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		CurrentStamina=NETFIELD_REP_START, \
+		CurrentlyCrouching=NETFIELD_REP_START, \
+		CurrentStamina, \
 		CurrentHealth, \
 		IsSprinting, \
-		NETFIELD_REP_END=IsSprinting	}; \
+		EquippedGun, \
+		NETFIELD_REP_END=EquippedGun	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API Afpscharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(Afpscharacter) \
@@ -147,7 +184,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API Afpscharacter(Afpscharacter&&); \
@@ -158,8 +195,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(Afpscharacter)
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_PRIVATE_PROPERTY_OFFSET \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__IsLeftHanded() { return STRUCT_OFFSET(Afpscharacter, IsLeftHanded); } \
+	FORCEINLINE static uint32 __PPO__DistanceToPlaceProjectileFromCamera() { return STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera); } \
+	FORCEINLINE static uint32 __PPO__lognum() { return STRUCT_OFFSET(Afpscharacter, lognum); } \
 	FORCEINLINE static uint32 __PPO__CurrentlyCrouching() { return STRUCT_OFFSET(Afpscharacter, CurrentlyCrouching); } \
 	FORCEINLINE static uint32 __PPO__JustLanded() { return STRUCT_OFFSET(Afpscharacter, JustLanded); } \
 	FORCEINLINE static uint32 __PPO__DefaultHalfHeight() { return STRUCT_OFFSET(Afpscharacter, DefaultHalfHeight); } \
@@ -178,35 +217,37 @@ public: \
 	FORCEINLINE static uint32 __PPO__IsSprinting() { return STRUCT_OFFSET(Afpscharacter, IsSprinting); } \
 	FORCEINLINE static uint32 __PPO__PrimaryGun() { return STRUCT_OFFSET(Afpscharacter, PrimaryGun); } \
 	FORCEINLINE static uint32 __PPO__SecondaryGun() { return STRUCT_OFFSET(Afpscharacter, SecondaryGun); } \
-	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(Afpscharacter, ProjectileClass); }
+	FORCEINLINE static uint32 __PPO__BulletClass() { return STRUCT_OFFSET(Afpscharacter, BulletClass); }
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_17_PROLOG \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_EVENT_PARMS
+#define fpsgame_Source_fpsgame_fpscharacter_h_23_PROLOG \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_EVENT_PARMS
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_SPARSE_DATA \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_CALLBACK_WRAPPERS \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_INCLASS \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_SPARSE_DATA \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_EDITOR_ONLY_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_CALLBACK_WRAPPERS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_INCLASS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_20_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_fpscharacter_h_26_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_SPARSE_DATA \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_CALLBACK_WRAPPERS \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_fpscharacter_h_20_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_SPARSE_DATA \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_CALLBACK_WRAPPERS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_fpscharacter_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -216,5 +257,13 @@ template<> FPSGAME_API UClass* StaticClass<class Afpscharacter>();
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID fpsgame_Source_fpsgame_fpscharacter_h
 
+
+#define FOREACH_ENUM_EQUIPS(op) \
+	op(Equips::PRIMARY) \
+	op(Equips::SECONDARY) \
+	op(Equips::MELEE) 
+
+enum class Equips : uint8;
+template<> FPSGAME_API UEnum* StaticEnum<Equips>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

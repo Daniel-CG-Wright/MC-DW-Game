@@ -7,7 +7,7 @@
 #include "fpscharacter.h"
 #include "Components/SphereComponent.h"
 #include "FPSProjectile.h"
-
+#include "ProjectileBullet.h"
 #include "WeaponActor.generated.h"
 UENUM(BlueprintType)
 enum class Guns : uint8 {
@@ -67,7 +67,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
-		TSubclassOf<class AFPSProjectile> ProjectileClass;
+		TSubclassOf<class AProjectileBullet> ProjectileClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float MaxRange;
@@ -165,7 +165,7 @@ public:
 		void SetCartridgeBullets(int NewCartridgeBullets);
 
 	UFUNCTION(BlueprintPure)
-		TSubclassOf<AFPSProjectile> GetProjectileClass() { return ProjectileClass; }
+		TSubclassOf<AProjectileBullet> GetProjectileClass() { return ProjectileClass; }
 
 
 };

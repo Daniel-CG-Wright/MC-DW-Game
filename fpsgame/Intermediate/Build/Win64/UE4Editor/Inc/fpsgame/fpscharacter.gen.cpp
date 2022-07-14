@@ -13,21 +13,80 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 // Cross Module References
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_Equips();
+	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	FPSGAME_API UClass* Z_Construct_UClass_Afpscharacter_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_Afpscharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
-	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FDamageEvent();
 	ENGINE_API UClass* Z_Construct_UClass_AController_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	FPSGAME_API UClass* Z_Construct_UClass_AFPSProjectile_NoRegister();
+	FPSGAME_API UClass* Z_Construct_UClass_AProjectileBullet_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
+	static UEnum* Equips_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_fpsgame_Equips, Z_Construct_UPackage__Script_fpsgame(), TEXT("Equips"));
+		}
+		return Singleton;
+	}
+	template<> FPSGAME_API UEnum* StaticEnum<Equips>()
+	{
+		return Equips_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_Equips(Equips_StaticEnum, TEXT("/Script/fpsgame"), TEXT("Equips"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_fpsgame_Equips_Hash() { return 1851727010U; }
+	UEnum* Z_Construct_UEnum_fpsgame_Equips()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_fpsgame();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("Equips"), 0, Get_Z_Construct_UEnum_fpsgame_Equips_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "Equips::PRIMARY", (int64)Equips::PRIMARY },
+				{ "Equips::SECONDARY", (int64)Equips::SECONDARY },
+				{ "Equips::MELEE", (int64)Equips::MELEE },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "BlueprintType", "true" },
+				{ "MELEE.Name", "Equips::MELEE" },
+				{ "ModuleRelativePath", "fpscharacter.h" },
+				{ "PRIMARY.Comment", "//Default testing pistol\n" },
+				{ "PRIMARY.Name", "Equips::PRIMARY" },
+				{ "PRIMARY.ToolTip", "Default testing pistol" },
+				{ "SECONDARY.Name", "Equips::SECONDARY" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_fpsgame,
+				nullptr,
+				"Equips",
+				"Equips",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	DEFINE_FUNCTION(Afpscharacter::execLoseStamina)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_LostStamina);
@@ -89,20 +148,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(float*)Z_Param__Result=P_THIS->GetMaxHealth();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(Afpscharacter::execReleaseCrouch)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->ReleaseCrouch();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(Afpscharacter::execPressCrouch)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->PressCrouch();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execReleaseSprint)
@@ -186,19 +231,70 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->StartFire();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(Afpscharacter::execEquipWeapon)
+	DEFINE_FUNCTION(Afpscharacter::execServerSwitchSecondary)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ServerSwitchSecondary_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execServerSwitchPrimary)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ServerSwitchPrimary_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execPositionAndAttachGunInFP)
 	{
 		P_GET_OBJECT(AWeaponActor,Z_Param_GunToEquip);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->EquipWeapon(Z_Param_GunToEquip);
+		P_THIS->PositionAndAttachGunInFP(Z_Param_GunToEquip);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(Afpscharacter::execUpdateWeapon)
+	DEFINE_FUNCTION(Afpscharacter::execSwitchSecondary)
+	{
+		P_GET_UBOOL(Z_Param_bIsRep);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SwitchSecondary(Z_Param_bIsRep);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execSwitchSecondaryInputImplementation)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->UpdateWeapon();
+		P_THIS->SwitchSecondaryInputImplementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execSwitchPrimaryInputImplementation)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SwitchPrimaryInputImplementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execSwitchPrimary)
+	{
+		P_GET_UBOOL(Z_Param_bIsRep);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SwitchPrimary(Z_Param_bIsRep);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execServerPickupWeapon)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ServerPickupWeapon_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execPickupWeapon)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->PickupWeapon();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execOnRep_ChangeWeapon)
@@ -257,10 +353,36 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->OnRep_CurrentStamina();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execOnRep_CurrentlyCrouching)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_CurrentlyCrouching();
+		P_NATIVE_END;
+	}
+#if WITH_EDITOR
+	DEFINE_FUNCTION(Afpscharacter::execDebugFunction)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DebugFunction();
+		P_NATIVE_END;
+	}
+#endif //WITH_EDITOR
+	static FName NAME_Afpscharacter_BlueprintRep_CurrentlyCrouching = FName(TEXT("BlueprintRep_CurrentlyCrouching"));
+	void Afpscharacter::BlueprintRep_CurrentlyCrouching()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_BlueprintRep_CurrentlyCrouching),NULL);
+	}
 	static FName NAME_Afpscharacter_HandleFire = FName(TEXT("HandleFire"));
 	void Afpscharacter::HandleFire()
 	{
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_HandleFire),NULL);
+	}
+	static FName NAME_Afpscharacter_ServerPickupWeapon = FName(TEXT("ServerPickupWeapon"));
+	void Afpscharacter::ServerPickupWeapon()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerPickupWeapon),NULL);
 	}
 	static FName NAME_Afpscharacter_ServerSetSprinting = FName(TEXT("ServerSetSprinting"));
 	void Afpscharacter::ServerSetSprinting(bool NewSprinting)
@@ -268,6 +390,16 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		fpscharacter_eventServerSetSprinting_Parms Parms;
 		Parms.NewSprinting=NewSprinting ? true : false;
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerSetSprinting),&Parms);
+	}
+	static FName NAME_Afpscharacter_ServerSwitchPrimary = FName(TEXT("ServerSwitchPrimary"));
+	void Afpscharacter::ServerSwitchPrimary()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerSwitchPrimary),NULL);
+	}
+	static FName NAME_Afpscharacter_ServerSwitchSecondary = FName(TEXT("ServerSwitchSecondary"));
+	void Afpscharacter::ServerSwitchSecondary()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerSwitchSecondary),NULL);
 	}
 	static FName NAME_Afpscharacter_SpawnAndEquipGun = FName(TEXT("SpawnAndEquipGun"));
 	void Afpscharacter::SpawnAndEquipGun()
@@ -280,7 +412,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ApplySensitivityAndInversionToMouseInputX", &Afpscharacter::execApplySensitivityAndInversionToMouseInputX },
 			{ "ApplySensitivityAndInversionToMouseInputY", &Afpscharacter::execApplySensitivityAndInversionToMouseInputY },
-			{ "EquipWeapon", &Afpscharacter::execEquipWeapon },
+#if WITH_EDITOR
+			{ "DebugFunction", &Afpscharacter::execDebugFunction },
+#endif // WITH_EDITOR
 			{ "GetCurrentHealth", &Afpscharacter::execGetCurrentHealth },
 			{ "GetCurrentStamina", &Afpscharacter::execGetCurrentStamina },
 			{ "GetMaxHealth", &Afpscharacter::execGetMaxHealth },
@@ -292,12 +426,16 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "OnRep_ChangeSprinting", &Afpscharacter::execOnRep_ChangeSprinting },
 			{ "OnRep_ChangeWeapon", &Afpscharacter::execOnRep_ChangeWeapon },
 			{ "OnRep_CurrentHealth", &Afpscharacter::execOnRep_CurrentHealth },
+			{ "OnRep_CurrentlyCrouching", &Afpscharacter::execOnRep_CurrentlyCrouching },
 			{ "OnRep_CurrentStamina", &Afpscharacter::execOnRep_CurrentStamina },
-			{ "PressCrouch", &Afpscharacter::execPressCrouch },
+			{ "PickupWeapon", &Afpscharacter::execPickupWeapon },
+			{ "PositionAndAttachGunInFP", &Afpscharacter::execPositionAndAttachGunInFP },
 			{ "PressSprint", &Afpscharacter::execPressSprint },
-			{ "ReleaseCrouch", &Afpscharacter::execReleaseCrouch },
 			{ "ReleaseSprint", &Afpscharacter::execReleaseSprint },
+			{ "ServerPickupWeapon", &Afpscharacter::execServerPickupWeapon },
 			{ "ServerSetSprinting", &Afpscharacter::execServerSetSprinting },
+			{ "ServerSwitchPrimary", &Afpscharacter::execServerSwitchPrimary },
+			{ "ServerSwitchSecondary", &Afpscharacter::execServerSwitchSecondary },
 			{ "SetCurrentHealth", &Afpscharacter::execSetCurrentHealth },
 			{ "SetCurrentStamina", &Afpscharacter::execSetCurrentStamina },
 			{ "SetSprinting", &Afpscharacter::execSetSprinting },
@@ -305,9 +443,12 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "StartJump", &Afpscharacter::execStartJump },
 			{ "StopFire", &Afpscharacter::execStopFire },
 			{ "StopJump", &Afpscharacter::execStopJump },
+			{ "SwitchPrimary", &Afpscharacter::execSwitchPrimary },
+			{ "SwitchPrimaryInputImplementation", &Afpscharacter::execSwitchPrimaryInputImplementation },
+			{ "SwitchSecondary", &Afpscharacter::execSwitchSecondary },
+			{ "SwitchSecondaryInputImplementation", &Afpscharacter::execSwitchSecondaryInputImplementation },
 			{ "TakeDamage", &Afpscharacter::execTakeDamage },
 			{ "UpdateStamina", &Afpscharacter::execUpdateStamina },
-			{ "UpdateWeapon", &Afpscharacter::execUpdateWeapon },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -377,41 +518,53 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics
+	struct Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics
 	{
-		struct fpscharacter_eventEquipWeapon_Parms
-		{
-			AWeaponActor* GunToEquip;
-		};
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GunToEquip;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::NewProp_GunToEquip = { "GunToEquip", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventEquipWeapon_Parms, GunToEquip), Z_Construct_UClass_AWeaponActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::NewProp_GunToEquip,
-	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Weapon" },
-		{ "Comment", "//Positions and spawns in gun, used on equip\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Crouching" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Positions and spawns in gun, used on equip" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "EquipWeapon", nullptr, nullptr, sizeof(fpscharacter_eventEquipWeapon_Parms), Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_Afpscharacter_EquipWeapon()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "BlueprintRep_CurrentlyCrouching", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_EquipWeapon_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
+#if WITH_EDITOR
+	struct Z_Construct_UFunction_Afpscharacter_DebugFunction_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_DebugFunction_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_DebugFunction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "DebugFunction", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x20080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_DebugFunction_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_DebugFunction_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_DebugFunction()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_DebugFunction_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+#endif //WITH_EDITOR
 	struct Z_Construct_UFunction_Afpscharacter_GetCurrentHealth_Statics
 	{
 		struct fpscharacter_eventGetCurrentHealth_Parms
@@ -755,6 +908,28 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "OnRep_CurrentlyCrouching", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_OnRep_CurrentStamina_Statics
 	{
 #if WITH_METADATA
@@ -779,7 +954,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_Afpscharacter_PressCrouch_Statics
+	struct Z_Construct_UFunction_Afpscharacter_PickupWeapon_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -787,18 +962,54 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_PressCrouch_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Crouching" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_PickupWeapon_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "//Localfunction for picking up weapon from floor\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Localfunction for picking up weapon from floor" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_PressCrouch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "PressCrouch", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_PressCrouch_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_PressCrouch_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_Afpscharacter_PressCrouch()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_PickupWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "PickupWeapon", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_PickupWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_PickupWeapon_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_PickupWeapon()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_PressCrouch_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_PickupWeapon_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics
+	{
+		struct fpscharacter_eventPositionAndAttachGunInFP_Parms
+		{
+			AWeaponActor* GunToEquip;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GunToEquip;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::NewProp_GunToEquip = { "GunToEquip", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventPositionAndAttachGunInFP_Parms, GunToEquip), Z_Construct_UClass_AWeaponActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::NewProp_GunToEquip,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Does the actual positioning of gun in first person\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Does the actual positioning of gun in first person" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "PositionAndAttachGunInFP", nullptr, nullptr, sizeof(fpscharacter_eventPositionAndAttachGunInFP_Parms), Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -826,29 +1037,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_Afpscharacter_ReleaseCrouch_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ReleaseCrouch_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Crouching" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ReleaseCrouch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ReleaseCrouch", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ReleaseCrouch_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ReleaseCrouch_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_Afpscharacter_ReleaseCrouch()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ReleaseCrouch_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	struct Z_Construct_UFunction_Afpscharacter_ReleaseSprint_Statics
 	{
 #if WITH_METADATA
@@ -868,6 +1056,31 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ReleaseSprint_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "//used on equipping gun from floor, logic for server is run here - should consist of updating variables, and visual changes if needed\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "used on equipping gun from floor, logic for server is run here - should consist of updating variables, and visual changes if needed" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerPickupWeapon", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -903,6 +1116,56 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerSetSprinting_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "//Logic for causing visual swap to primary weapon on server goes here, along with setting equipped weapon variables\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Logic for causing visual swap to primary weapon on server goes here, along with setting equipped weapon variables" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerSwitchPrimary", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "//Like above but for secondary weapon\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Like above but for secondary weapon" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerSwitchSecondary", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1135,6 +1398,132 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics
+	{
+		struct fpscharacter_eventSwitchPrimary_Parms
+		{
+			bool bIsRep;
+		};
+		static void NewProp_bIsRep_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsRep;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::NewProp_bIsRep_SetBit(void* Obj)
+	{
+		((fpscharacter_eventSwitchPrimary_Parms*)Obj)->bIsRep = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::NewProp_bIsRep = { "bIsRep", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(fpscharacter_eventSwitchPrimary_Parms), &Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::NewProp_bIsRep_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::NewProp_bIsRep,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "//Initial local function call for switching weapon\n" },
+		{ "CPP_Default_bIsRep", "false" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Initial local function call for switching weapon" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "SwitchPrimary", nullptr, nullptr, sizeof(fpscharacter_eventSwitchPrimary_Parms), Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_SwitchPrimary()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_SwitchPrimary_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "SwitchPrimaryInputImplementation", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics
+	{
+		struct fpscharacter_eventSwitchSecondary_Parms
+		{
+			bool bIsRep;
+		};
+		static void NewProp_bIsRep_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsRep;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::NewProp_bIsRep_SetBit(void* Obj)
+	{
+		((fpscharacter_eventSwitchSecondary_Parms*)Obj)->bIsRep = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::NewProp_bIsRep = { "bIsRep", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(fpscharacter_eventSwitchSecondary_Parms), &Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::NewProp_bIsRep_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::NewProp_bIsRep,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "//Initial local function call for switching weapon\n" },
+		{ "CPP_Default_bIsRep", "false" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Initial local function call for switching weapon" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "SwitchSecondary", nullptr, nullptr, sizeof(fpscharacter_eventSwitchSecondary_Parms), Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_SwitchSecondary()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_SwitchSecondary_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "SwitchSecondaryInputImplementation", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_TakeDamage_Statics
 	{
 		struct fpscharacter_eventTakeDamage_Parms
@@ -1218,30 +1607,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_Afpscharacter_UpdateWeapon_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_UpdateWeapon_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Called when the weapon is updated, called on server immediately after modification, and on clients when they receive news of the weapon switch.\n" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Called when the weapon is updated, called on server immediately after modification, and on clients when they receive news of the weapon switch." },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_UpdateWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "UpdateWeapon", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_UpdateWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_UpdateWeapon_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_Afpscharacter_UpdateWeapon()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_UpdateWeapon_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	UClass* Z_Construct_UClass_Afpscharacter_NoRegister()
 	{
 		return Afpscharacter::StaticClass();
@@ -1258,6 +1623,14 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 		static void NewProp_IsLeftHanded_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsLeftHanded;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DistanceToPlaceProjectileFromCamera_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DistanceToPlaceProjectileFromCamera;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_lognum_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_lognum;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentlyCrouching_MetaData[];
 #endif
@@ -1334,9 +1707,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SecondaryGun;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BulletClass_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ProjectileClass;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_BulletClass;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_XSensitivity_MetaData[];
 #endif
@@ -1385,6 +1758,15 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaminaTimerHandle_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StaminaTimerHandle;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_EquippedGun_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EquippedGun_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_EquippedGun;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EquippedWeaponReference_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EquippedWeaponReference;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -1396,7 +1778,10 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_Afpscharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputX, "ApplySensitivityAndInversionToMouseInputX" }, // 384281768
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputY, "ApplySensitivityAndInversionToMouseInputY" }, // 3692219004
-		{ &Z_Construct_UFunction_Afpscharacter_EquipWeapon, "EquipWeapon" }, // 3480641389
+		{ &Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching, "BlueprintRep_CurrentlyCrouching" }, // 3925505741
+#if WITH_EDITOR
+		{ &Z_Construct_UFunction_Afpscharacter_DebugFunction, "DebugFunction" }, // 2576565601
+#endif //WITH_EDITOR
 		{ &Z_Construct_UFunction_Afpscharacter_GetCurrentHealth, "GetCurrentHealth" }, // 1678929625
 		{ &Z_Construct_UFunction_Afpscharacter_GetCurrentStamina, "GetCurrentStamina" }, // 1877127190
 		{ &Z_Construct_UFunction_Afpscharacter_GetMaxHealth, "GetMaxHealth" }, // 2374698544
@@ -1408,12 +1793,16 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting, "OnRep_ChangeSprinting" }, // 2106207384
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon, "OnRep_ChangeWeapon" }, // 371153054
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentHealth, "OnRep_CurrentHealth" }, // 2772940714
+		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching, "OnRep_CurrentlyCrouching" }, // 4044249521
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentStamina, "OnRep_CurrentStamina" }, // 3514113238
-		{ &Z_Construct_UFunction_Afpscharacter_PressCrouch, "PressCrouch" }, // 4086542353
+		{ &Z_Construct_UFunction_Afpscharacter_PickupWeapon, "PickupWeapon" }, // 899582688
+		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP, "PositionAndAttachGunInFP" }, // 333442934
 		{ &Z_Construct_UFunction_Afpscharacter_PressSprint, "PressSprint" }, // 898884170
-		{ &Z_Construct_UFunction_Afpscharacter_ReleaseCrouch, "ReleaseCrouch" }, // 3392892348
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseSprint, "ReleaseSprint" }, // 1995324714
+		{ &Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon, "ServerPickupWeapon" }, // 1506557155
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSetSprinting, "ServerSetSprinting" }, // 1602645312
+		{ &Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary, "ServerSwitchPrimary" }, // 1283072070
+		{ &Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary, "ServerSwitchSecondary" }, // 3818391139
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentHealth, "SetCurrentHealth" }, // 2344965713
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentStamina, "SetCurrentStamina" }, // 3815298331
 		{ &Z_Construct_UFunction_Afpscharacter_SetSprinting, "SetSprinting" }, // 3499647627
@@ -1422,9 +1811,12 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_StartJump, "StartJump" }, // 3422075348
 		{ &Z_Construct_UFunction_Afpscharacter_StopFire, "StopFire" }, // 396522478
 		{ &Z_Construct_UFunction_Afpscharacter_StopJump, "StopJump" }, // 315078958
+		{ &Z_Construct_UFunction_Afpscharacter_SwitchPrimary, "SwitchPrimary" }, // 1404102473
+		{ &Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation, "SwitchPrimaryInputImplementation" }, // 967562103
+		{ &Z_Construct_UFunction_Afpscharacter_SwitchSecondary, "SwitchSecondary" }, // 3983925706
+		{ &Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation, "SwitchSecondaryInputImplementation" }, // 2362339234
 		{ &Z_Construct_UFunction_Afpscharacter_TakeDamage, "TakeDamage" }, // 811223175
 		{ &Z_Construct_UFunction_Afpscharacter_UpdateStamina, "UpdateStamina" }, // 1610481266
-		{ &Z_Construct_UFunction_Afpscharacter_UpdateWeapon, "UpdateWeapon" }, // 3912362607
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::Class_MetaDataParams[] = {
@@ -1447,6 +1839,21 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsLeftHanded = { "IsLeftHanded", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsLeftHanded_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsLeftHanded_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsLeftHanded_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera_MetaData[] = {
+		{ "Category", "fpscharacter" },
+		{ "Comment", "//The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera = { "DistanceToPlaceProjectileFromCamera", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_lognum_MetaData[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_lognum = { "lognum", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, lognum), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_lognum_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_lognum_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching_MetaData[] = {
 		{ "Category", "fpscharacter" },
 		{ "Comment", "//Whether player is currently crouching\n" },
@@ -1458,7 +1865,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	{
 		((Afpscharacter*)Obj)->CurrentlyCrouching = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching = { "CurrentlyCrouching", nullptr, (EPropertyFlags)0x0020080000002004, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching = { "CurrentlyCrouching", "OnRep_CurrentlyCrouching", (EPropertyFlags)0x0020080100002024, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_JustLanded_MetaData[] = {
 		{ "Category", "fpscharacter" },
@@ -1617,14 +2024,14 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun = { "SecondaryGun", nullptr, (EPropertyFlags)0x0020080000000004, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, SecondaryGun), Z_Construct_UClass_AWeaponActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_ProjectileClass_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass_MetaData[] = {
 		{ "Category", "Weapon | Projectile" },
 		{ "Comment", "//Should be set by weapon when equipped.\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
 		{ "ToolTip", "Should be set by weapon when equipped." },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0024080000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, ProjectileClass), Z_Construct_UClass_AFPSProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_ProjectileClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass = { "BulletClass", nullptr, (EPropertyFlags)0x0024080000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, BulletClass), Z_Construct_UClass_AProjectileBullet_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_XSensitivity_MetaData[] = {
 		{ "Category", "Mouse Input" },
@@ -1738,8 +2145,29 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_StaminaTimerHandle = { "StaminaTimerHandle", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, StaminaTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_StaminaTimerHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_StaminaTimerHandle_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedGun_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedGun_MetaData[] = {
+		{ "Category", "fpscharacter" },
+		{ "Comment", "//Stores the currently equipped item (e.g. gun, knife) using enum\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Stores the currently equipped item (e.g. gun, knife) using enum" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedGun = { "EquippedGun", "OnRep_ChangeWeapon", (EPropertyFlags)0x0010000100000025, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, EquippedGun), Z_Construct_UEnum_fpsgame_Equips, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedGun_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedGun_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedWeaponReference_MetaData[] = {
+		{ "Category", "fpscharacter" },
+		{ "Comment", "//stores reference to equipped gun\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "stores reference to equipped gun" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedWeaponReference = { "EquippedWeaponReference", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, EquippedWeaponReference), Z_Construct_UClass_AWeaponActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedWeaponReference_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedWeaponReference_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_Afpscharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsLeftHanded,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_lognum,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentlyCrouching,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_JustLanded,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_DefaultHalfHeight,
@@ -1758,7 +2186,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_ProjectileClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_XSensitivity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_YSensitivity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_InvertX,
@@ -1770,6 +2198,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_FPSMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_CrouchTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_StaminaTimerHandle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedGun_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedGun,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedWeaponReference,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_Afpscharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<Afpscharacter>::IsAbstract,
@@ -1798,7 +2229,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 1130682972);
+	IMPLEMENT_CLASS(Afpscharacter, 1317565488);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();
@@ -1807,14 +2238,18 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 
 	void Afpscharacter::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 	{
+		static const FName Name_CurrentlyCrouching(TEXT("CurrentlyCrouching"));
 		static const FName Name_CurrentStamina(TEXT("CurrentStamina"));
 		static const FName Name_CurrentHealth(TEXT("CurrentHealth"));
 		static const FName Name_IsSprinting(TEXT("IsSprinting"));
+		static const FName Name_EquippedGun(TEXT("EquippedGun"));
 
 		const bool bIsValid = true
+			&& Name_CurrentlyCrouching == ClassReps[(int32)ENetFields_Private::CurrentlyCrouching].Property->GetFName()
 			&& Name_CurrentStamina == ClassReps[(int32)ENetFields_Private::CurrentStamina].Property->GetFName()
 			&& Name_CurrentHealth == ClassReps[(int32)ENetFields_Private::CurrentHealth].Property->GetFName()
-			&& Name_IsSprinting == ClassReps[(int32)ENetFields_Private::IsSprinting].Property->GetFName();
+			&& Name_IsSprinting == ClassReps[(int32)ENetFields_Private::IsSprinting].Property->GetFName()
+			&& Name_EquippedGun == ClassReps[(int32)ENetFields_Private::EquippedGun].Property->GetFName();
 
 		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in Afpscharacter"));
 	}

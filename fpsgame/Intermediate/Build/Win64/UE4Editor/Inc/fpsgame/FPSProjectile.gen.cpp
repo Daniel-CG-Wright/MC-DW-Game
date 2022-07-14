@@ -25,9 +25,15 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	ENGINE_API UClass* Z_Construct_UClass_UDamageType_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AFPSProjectile::execSetProjectileSpeed)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_newProjectileSpeed);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetProjectileSpeed(Z_Param_newProjectileSpeed);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AFPSProjectile::execSetProjectileRadius)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_newProjectileRadius);
@@ -62,6 +68,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 			{ "GetProjectileRadius", &AFPSProjectile::execGetProjectileRadius },
 			{ "OnProjectileImpact", &AFPSProjectile::execOnProjectileImpact },
 			{ "SetProjectileRadius", &AFPSProjectile::execSetProjectileRadius },
+			{ "SetProjectileSpeed", &AFPSProjectile::execSetProjectileSpeed },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -162,7 +169,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 		{ "ToolTip", "used when projectile hits something" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSProjectile, nullptr, "OnProjectileImpact", nullptr, nullptr, sizeof(FPSProjectile_eventOnProjectileImpact_Parms), Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C80401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSProjectile, nullptr, "OnProjectileImpact", nullptr, nullptr, sizeof(FPSProjectile_eventOnProjectileImpact_Parms), Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C80400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -204,6 +211,38 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics
+	{
+		struct FPSProjectile_eventSetProjectileSpeed_Parms
+		{
+			float newProjectileSpeed;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_newProjectileSpeed;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::NewProp_newProjectileSpeed = { "newProjectileSpeed", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FPSProjectile_eventSetProjectileSpeed_Parms, newProjectileSpeed), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::NewProp_newProjectileSpeed,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "FPSProjectile.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSProjectile, nullptr, "SetProjectileSpeed", nullptr, nullptr, sizeof(FPSProjectile_eventSetProjectileSpeed_Parms), Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AFPSProjectile_NoRegister()
 	{
 		return AFPSProjectile::StaticClass();
@@ -220,6 +259,10 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ProjectileRadius;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxProjectileSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxProjectileSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CollisionComponent_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CollisionComponent;
@@ -235,14 +278,6 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DestroyEffect_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DestroyEffect;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DamageType_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_DamageType;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Damage_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Damage;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -253,8 +288,9 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFPSProjectile_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AFPSProjectile_GetProjectileRadius, "GetProjectileRadius" }, // 97762576
-		{ &Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact, "OnProjectileImpact" }, // 1642602223
+		{ &Z_Construct_UFunction_AFPSProjectile_OnProjectileImpact, "OnProjectileImpact" }, // 4122639393
 		{ &Z_Construct_UFunction_AFPSProjectile_SetProjectileRadius, "SetProjectileRadius" }, // 3619682207
+		{ &Z_Construct_UFunction_AFPSProjectile_SetProjectileSpeed, "SetProjectileSpeed" }, // 2660932376
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSProjectile_Statics::Class_MetaDataParams[] = {
@@ -269,6 +305,13 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSProjectile_Statics::NewProp_ProjectileRadius = { "ProjectileRadius", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSProjectile, ProjectileRadius), METADATA_PARAMS(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_ProjectileRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_ProjectileRadius_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSProjectile_Statics::NewProp_MaxProjectileSpeed_MetaData[] = {
+		{ "Category", "FPSProjectile" },
+		{ "ModuleRelativePath", "FPSProjectile.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSProjectile_Statics::NewProp_MaxProjectileSpeed = { "MaxProjectileSpeed", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSProjectile, MaxProjectileSpeed), METADATA_PARAMS(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_MaxProjectileSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_MaxProjectileSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSProjectile_Statics::NewProp_CollisionComponent_MetaData[] = {
 		{ "Category", "Components" },
@@ -308,32 +351,13 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DestroyEffect = { "DestroyEffect", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSProjectile, DestroyEffect), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DestroyEffect_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DestroyEffect_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DamageType_MetaData[] = {
-		{ "Category", "Damage" },
-		{ "Comment", "//Damage type\n" },
-		{ "ModuleRelativePath", "FPSProjectile.h" },
-		{ "ToolTip", "Damage type" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DamageType = { "DamageType", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSProjectile, DamageType), Z_Construct_UClass_UDamageType_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DamageType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DamageType_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSProjectile_Statics::NewProp_Damage_MetaData[] = {
-		{ "Category", "Damage" },
-		{ "Comment", "//Damage dealt by the projectile, should be set by the firing entity.\n" },
-		{ "ModuleRelativePath", "FPSProjectile.h" },
-		{ "ToolTip", "Damage dealt by the projectile, should be set by the firing entity." },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSProjectile_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSProjectile, Damage), METADATA_PARAMS(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_Damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSProjectile_Statics::NewProp_Damage_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFPSProjectile_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSProjectile_Statics::NewProp_ProjectileRadius,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSProjectile_Statics::NewProp_MaxProjectileSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSProjectile_Statics::NewProp_CollisionComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSProjectile_Statics::NewProp_StaticMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSProjectile_Statics::NewProp_ProjectileMovementComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DestroyEffect,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSProjectile_Statics::NewProp_DamageType,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSProjectile_Statics::NewProp_Damage,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFPSProjectile_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFPSProjectile>::IsAbstract,
@@ -362,7 +386,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSProjectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSProjectile, 1812967481);
+	IMPLEMENT_CLASS(AFPSProjectile, 1716107862);
 	template<> FPSGAME_API UClass* StaticClass<AFPSProjectile>()
 	{
 		return AFPSProjectile::StaticClass();

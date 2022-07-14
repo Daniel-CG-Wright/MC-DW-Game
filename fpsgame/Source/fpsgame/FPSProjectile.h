@@ -26,11 +26,15 @@ protected:
 
 	//used when projectile hits something
 	UFUNCTION(Category = "Projectile")
-		void OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+		virtual void OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
 		float ProjectileRadius;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		float MaxProjectileSpeed;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -51,19 +55,18 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Effects")
 		class UParticleSystem* DestroyEffect;
 
-	//Damage type
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage")
-		TSubclassOf<class UDamageType> DamageType;
 
-	//Damage dealt by the projectile, should be set by the firing entity.
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage")
-		float Damage;
 
 	UFUNCTION(BlueprintCallable)
 		float GetProjectileRadius() const { return ProjectileRadius; }
 
 	UFUNCTION(BlueprintCallable)
 		void SetProjectileRadius(float newProjectileRadius);
+
+	UFUNCTION(BlueprintCallable)
+		void SetProjectileSpeed(float newProjectileSpeed);
+
+	
 
 	
 };

@@ -7,11 +7,17 @@
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/Character.h"
 #include "WeaponActor.h"
- 
+
 //Should always be the last include
 #include "fpscharacter.generated.h"
 
-
+UENUM(BlueprintType)
+enum class Equips : uint8 {
+	//Default testing pistol
+	PRIMARY = 0,
+	SECONDARY = 1,
+	MELEE = 2
+};
 
 
 UCLASS()
@@ -31,13 +37,25 @@ private:
 	UPROPERTY(EditAnywhere)
 		bool IsLeftHanded;
 
+	UPROPERTY(EditAnywhere)
+		//The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)
+		float DistanceToPlaceProjectileFromCamera;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+#if WITH_EDITOR
+	UFUNCTION()
+		void DebugFunction();
+
+	UPROPERTY()
+		int lognum = 0;
+#endif
+
 	//Whether player is currently crouching
 	UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing = OnRep_CurrentlyCrouching)
 		bool CurrentlyCrouching;
+
 
 	//Stores if the player has just landed, logic altered in blueprints.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
@@ -46,7 +64,7 @@ protected:
 	//Obtained at start, by getting capsule component half height.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float DefaultHalfHeight;
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Heights")
 		float CrouchedHalfHeight;
 
@@ -86,6 +104,12 @@ protected:
 	UPROPERTY(ReplicatedUsing = OnRep_CurrentStamina)
 		float CurrentStamina;
 
+	UFUNCTION()
+		void OnRep_CurrentlyCrouching();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Crouching")
+		void BlueprintRep_CurrentlyCrouching();
+
 	//Replicated current stamina
 	UFUNCTION()
 		void OnRep_CurrentStamina();
@@ -93,17 +117,6 @@ protected:
 	//Response to Stamina being updated. Called on the server immediately after modification, and on clients in response to a RepNotify
 	void OnStaminaUpdate();
 
-	//Sets whether player is crouching or not, run on client and server
-	UFUNCTION()
-		void SetCrouch(bool NewCrouch);
-
-	//RPC to server to cause player to crouch on server
-	UFUNCTION(Server, Reliable, WithValidation)
-		void ServerSetCrouch(bool NewCrouch);
-
-	//Run when IsCrouching status receives update on client
-	UFUNCTION()
-		void OnRep_CurrentlyCrouching();
 
 	//Max health
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
@@ -122,7 +135,7 @@ protected:
 
 
 	//Tracks sprinting
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, ReplicatedUsing=OnRep_ChangeSprinting)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, ReplicatedUsing = OnRep_ChangeSprinting)
 		bool IsSprinting;
 
 	//updates stamina , called every @StaminaUpdateIntervalInSeconds by timer
@@ -132,7 +145,7 @@ protected:
 	UFUNCTION()
 		//Sets whether player is sprinting or not
 		void SetSprinting(bool NewSprinting);
-		
+
 	//This RPC function runs on server and is respknsible for actually modifying player's speed
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerSetSprinting(bool NewSprinting);
@@ -146,7 +159,7 @@ protected:
 	//Stores current weapon being held, also used on server rep and sdtuff
 	//UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)
 		//Guns EquippedGun;
-	
+
 	//Stores primary gun equipped
 	UPROPERTY(BlueprintReadWrite, Category = "Inventory")
 		AWeaponActor* PrimaryGun;
@@ -164,17 +177,42 @@ protected:
 		//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.
 		void OnRep_ChangeWeapon();
 
-	UFUNCTION()
-		//Called when the weapon is updated, called on server immediately after modification, and on clients when they receive news of the weapon switch.
-		void UpdateWeapon();
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		//Localfunction for picking up weapon from floor
+		void PickupWeapon();
+	UFUNCTION(BlueprintCallable, Category = "Weapon", Server, Reliable)
+		//used on equipping gun from floor, logic for server is run here - should consist of updating variables, and visual changes if needed
+		void ServerPickupWeapon();
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
-		//Positions and spawns in gun, used on equip
-		void EquipWeapon(AWeaponActor* GunToEquip);
+		//Initial local function call for switching weapon
+		void SwitchPrimary(bool bIsRep = false);
+	
+	UFUNCTION()
+		void SwitchPrimaryInputImplementation();
+
+	UFUNCTION()
+		void SwitchSecondaryInputImplementation();
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		//Initial local function call for switching weapon
+		void SwitchSecondary(bool bIsRep = false);
+	
+	UFUNCTION()
+		//Does the actual positioning of gun in first person
+		void PositionAndAttachGunInFP(AWeaponActor* GunToEquip);
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon", Server, Reliable)
+		//Logic for causing visual swap to primary weapon on server goes here, along with setting equipped weapon variables
+		void ServerSwitchPrimary();
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon", Server, Reliable)
+		//Like above but for secondary weapon
+		void ServerSwitchSecondary();
 
 	//Should be set by weapon when equipped.
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon | Projectile")
-		TSubclassOf<class AFPSProjectile> ProjectileClass;
+		TSubclassOf<class AProjectileBullet> BulletClass;
 
 	bool bIsFiringWeapon;
 
@@ -194,19 +232,19 @@ protected:
 
 	//Timer handle used to provide the fire rate delay in game
 	FTimerHandle FiringTimer;
-	
-	
 
 
-public:	
+
+
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-		
+
 	//Stores X sensitivity for mouse
-	UPROPERTY(EditAnywhere, Category="Mouse Input")
+	UPROPERTY(EditAnywhere, Category = "Mouse Input")
 		float XSensitivity;
 
 	//Stores Y sensitivty for mouse
@@ -224,7 +262,7 @@ public:
 	//Stores whether crouch is toggle or hold
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Button Input")
 		bool ToggleCrouch;
-	
+
 	//Stores whether sprint is toggle or hold
 	UPROPERTY(EditAnywhere, Category = "Button Input")
 		bool ToggleSprint;
@@ -266,7 +304,7 @@ public:
 	//Used to apply sensitivities and mouse inversions to axes X and Y for mouse
 	UFUNCTION()
 		void ApplySensitivityAndInversionToMouseInputX(float Value);
-	
+
 	UFUNCTION()
 		void ApplySensitivityAndInversionToMouseInputY(float Value);
 
@@ -278,19 +316,13 @@ public:
 	//Clears jump flag when key is released
 	UFUNCTION()
 		void StopJump();
-	
+
 	//For handling sprinting
 	UFUNCTION()
 		void PressSprint();
 
 	UFUNCTION()
 		void ReleaseSprint();
-
-	UFUNCTION(BlueprintCallable, Category = "Crouching")
-		void PressCrouch();
-
-	UFUNCTION(BlueprintCallable, Category = "Crouching")
-		void ReleaseCrouch();
 
 	//Getter for max health
 	UFUNCTION(BlueprintPure, Category = "Health")
@@ -324,6 +356,13 @@ public:
 	//Event for losing stamina
 	UFUNCTION(BlueprintCallable, Category = "Stamina")
 		float LoseStamina(float LostStamina);
-	
+
+	//Stores the currently equipped item (e.g. gun, knife) using enum
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_ChangeWeapon)
+		Equips EquippedGun;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		//stores reference to equipped gun
+		AWeaponActor* EquippedWeaponReference;
 
 };

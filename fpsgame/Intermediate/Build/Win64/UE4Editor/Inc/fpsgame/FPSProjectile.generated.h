@@ -20,6 +20,7 @@ struct FHitResult;
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_SPARSE_DATA
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSetProjectileSpeed); \
 	DECLARE_FUNCTION(execSetProjectileRadius); \
 	DECLARE_FUNCTION(execGetProjectileRadius); \
 	DECLARE_FUNCTION(execOnProjectileImpact);
@@ -27,6 +28,7 @@ struct FHitResult;
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSetProjectileSpeed); \
 	DECLARE_FUNCTION(execSetProjectileRadius); \
 	DECLARE_FUNCTION(execGetProjectileRadius); \
 	DECLARE_FUNCTION(execOnProjectileImpact);
@@ -75,7 +77,8 @@ public: \
 
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ProjectileRadius() { return STRUCT_OFFSET(AFPSProjectile, ProjectileRadius); }
+	FORCEINLINE static uint32 __PPO__ProjectileRadius() { return STRUCT_OFFSET(AFPSProjectile, ProjectileRadius); } \
+	FORCEINLINE static uint32 __PPO__MaxProjectileSpeed() { return STRUCT_OFFSET(AFPSProjectile, MaxProjectileSpeed); }
 
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_12_PROLOG
