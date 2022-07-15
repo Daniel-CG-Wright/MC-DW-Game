@@ -23,7 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	FPSGAME_API UClass* Z_Construct_UClass_AProjectileBullet_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
@@ -234,7 +234,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		return Guns_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_Guns(Guns_StaticEnum, TEXT("/Script/fpsgame"), TEXT("Guns"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_Guns_Hash() { return 3396168777U; }
+	uint32 Get_Z_Construct_UEnum_fpsgame_Guns_Hash() { return 2839147457U; }
 	UEnum* Z_Construct_UEnum_fpsgame_Guns()
 	{
 #if WITH_HOT_RELOAD
@@ -246,12 +246,14 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "Guns::NONE", (int64)Guns::NONE },
 				{ "Guns::PROTOTYPE_PISTOL", (int64)Guns::PROTOTYPE_PISTOL },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
 				{ "ModuleRelativePath", "WeaponActor.h" },
+				{ "NONE.Name", "Guns::NONE" },
 				{ "PROTOTYPE_PISTOL.Comment", "//Default testing pistol\n" },
 				{ "PROTOTYPE_PISTOL.Name", "Guns::PROTOTYPE_PISTOL" },
 				{ "PROTOTYPE_PISTOL.ToolTip", "Default testing pistol" },
@@ -325,13 +327,6 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		*(float*)Z_Param__Result=P_THIS->GetFireRate();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AWeaponActor::execGetBaseDamage)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(float*)Z_Param__Result=P_THIS->GetBaseDamage();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(AWeaponActor::execGetMaxRange)
 	{
 		P_FINISH;
@@ -343,7 +338,6 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	{
 		UClass* Class = AWeaponActor::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "GetBaseDamage", &AWeaponActor::execGetBaseDamage },
 			{ "GetBurstNumber", &AWeaponActor::execGetBurstNumber },
 			{ "GetCartridgeBullets", &AWeaponActor::execGetCartridgeBullets },
 			{ "GetFireRate", &AWeaponActor::execGetFireRate },
@@ -354,38 +348,6 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 			{ "SetCartridgeBullets", &AWeaponActor::execSetCartridgeBullets },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics
-	{
-		struct WeaponActor_eventGetBaseDamage_Parms
-		{
-			float ReturnValue;
-		};
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponActor_eventGetBaseDamage_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "WeaponActor.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWeaponActor, nullptr, "GetBaseDamage", nullptr, nullptr, sizeof(WeaponActor_eventGetBaseDamage_Parms), Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AWeaponActor_GetBaseDamage()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AWeaponActor_GetBaseDamage_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AWeaponActor_GetBurstNumber_Statics
 	{
@@ -663,10 +625,6 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxRange;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseDamage_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseDamage;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_FireRate;
@@ -702,6 +660,10 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CollisionComponent;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BoxCollisionSize_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BoxCollisionSize;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GunMesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GunMesh;
@@ -731,7 +693,6 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AWeaponActor_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AWeaponActor_GetBaseDamage, "GetBaseDamage" }, // 449603798
 		{ &Z_Construct_UFunction_AWeaponActor_GetBurstNumber, "GetBurstNumber" }, // 3902202835
 		{ &Z_Construct_UFunction_AWeaponActor_GetCartridgeBullets, "GetCartridgeBullets" }, // 186365759
 		{ &Z_Construct_UFunction_AWeaponActor_GetFireRate, "GetFireRate" }, // 1210193946
@@ -761,15 +722,6 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_MaxRange = { "MaxRange", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, MaxRange), METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_MaxRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_MaxRange_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_BaseDamage_MetaData[] = {
-		{ "Category", "Weapon stats" },
-		{ "Comment", "//Base damage before multipliers (falloff, headshot etc)\n" },
-		{ "ModuleRelativePath", "WeaponActor.h" },
-		{ "ToolTip", "Base damage before multipliers (falloff, headshot etc)" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_BaseDamage = { "BaseDamage", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, BaseDamage), METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_BaseDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_BaseDamage_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_FireRate_MetaData[] = {
 		{ "Category", "Weapon stats" },
@@ -839,13 +791,20 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_CollisionComponent_MetaData[] = {
 		{ "Category", "Weapon Collision" },
-		{ "Comment", "//Used to detect whether gun is on wall, so that gun can be mvoed back to avoid clipping.\n" },
+		{ "Comment", "//Used to detect whether gun is near player for pickups\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
-		{ "ToolTip", "Used to detect whether gun is on wall, so that gun can be mvoed back to avoid clipping." },
+		{ "ToolTip", "Used to detect whether gun is near player for pickups" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_CollisionComponent = { "CollisionComponent", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, CollisionComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_CollisionComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_CollisionComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_CollisionComponent = { "CollisionComponent", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, CollisionComponent), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_CollisionComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_CollisionComponent_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_BoxCollisionSize_MetaData[] = {
+		{ "Category", "Weapon Collision" },
+		{ "ModuleRelativePath", "WeaponActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWeaponActor_Statics::NewProp_BoxCollisionSize = { "BoxCollisionSize", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponActor, BoxCollisionSize), METADATA_PARAMS(Z_Construct_UClass_AWeaponActor_Statics::NewProp_BoxCollisionSize_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponActor_Statics::NewProp_BoxCollisionSize_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponActor_Statics::NewProp_GunMesh_MetaData[] = {
 		{ "Category", "Weapon visuals" },
@@ -899,7 +858,6 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWeaponActor_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_ProjectileClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_MaxRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_BaseDamage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_FireRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_CartridgeBullets,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_BurstNumber,
@@ -911,6 +869,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_WAWeaponHitDetectionType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_CollisionComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_BoxCollisionSize,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_GunMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_BasePosition,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponActor_Statics::NewProp_BaseRotation,
@@ -944,7 +903,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeaponActor, 2164254120);
+	IMPLEMENT_CLASS(AWeaponActor, 3377446388);
 	template<> FPSGAME_API UClass* StaticClass<AWeaponActor>()
 	{
 		return AWeaponActor::StaticClass();

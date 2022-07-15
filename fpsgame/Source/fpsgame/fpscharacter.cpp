@@ -256,10 +256,15 @@ void Afpscharacter::StartJump()
 	bPressedJump = true;
 	if (CanJump())
 	{
-		LoseStamina(StaminaLossWhenJumping);
+		ServerStartJump();
 	}
 }
 
+void Afpscharacter::ServerStartJump_Implementation()
+{
+	LoseStamina(StaminaLossWhenJumping);
+
+}
 void Afpscharacter::StopJump()
 {
 	bPressedJump = false;
@@ -469,6 +474,7 @@ void Afpscharacter::PickupWeapon()
 	}
 
 	//Logic for picking up weapon goes here
+
 }
 
 void Afpscharacter::ServerPickupWeapon_Implementation()
@@ -480,7 +486,11 @@ void Afpscharacter::ServerPickupWeapon_Implementation()
 void Afpscharacter::SwitchPrimary(bool bIsRep)
 {
 	//Switch to primary gun
-
+	//Stop crashes if no primary exists
+	if (SecondaryGun != Guns::NONE)
+	{
+		return;
+	}
 	//Need to run RPC on server
 	if (GetLocalRole() < ROLE_Authority && !bIsRep)
 	{
@@ -490,16 +500,16 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 	//Logic for switching primary.
 	if (IsLocallyControlled())
 	{
-		PositionAndAttachGunInFP(PrimaryGun);
+		PositionAndAttachGunInFP(PrimaryData);
 
 	}
 	//Still need a lot fo equip logic here
 
-	BulletClass = PrimaryGun->GetProjectileClass();
+	BulletClass = PrimaryData.ProjectileClass;
 
 	EquippedGun = Equips::PRIMARY;
 
-	EquippedWeaponReference = PrimaryGun;
+	CurrentlyEquippedWeaponData = PrimaryData;
 
 }
 
@@ -534,7 +544,12 @@ void Afpscharacter::DebugFunction()
 
 void Afpscharacter::SwitchSecondary(bool bIsRep)
 {
-	
+	//Stop crashes if no secondary exists
+	if (SecondaryGun != Guns::NONE)
+	{
+		return;
+	}
+
 	if (GetLocalRole() < ROLE_Authority && !bIsRep)
 	{
 		ServerSwitchSecondary();
@@ -543,17 +558,15 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	//Only owner needs this
 	if (IsLocallyControlled())
 	{
-		PositionAndAttachGunInFP(SecondaryGun);
+		PositionAndAttachGunInFP(SecondaryData);
 
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("Here"));
-	BulletClass = SecondaryGun->GetProjectileClass();
-	DebugFunction();
+	BulletClass = SecondaryData.ProjectileClass;
 	EquippedGun = Equips::SECONDARY;
-	DebugFunction();
-	EquippedWeaponReference = SecondaryGun;
-	UE_LOG(LogTemp, Warning, TEXT("There"));
+	
+	CurrentlyEquippedWeaponData = SecondaryData;
+	
 }
 
 void Afpscharacter::ServerSwitchSecondary_Implementation()
@@ -561,48 +574,59 @@ void Afpscharacter::ServerSwitchSecondary_Implementation()
 	SwitchSecondary(false);
 }
 
-void Afpscharacter::PositionAndAttachGunInFP(AWeaponActor* GunToEquip)
+void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 {
 
-	//Ensure gun is not collected by any other players while equipped
-	GunToEquip->IsEquipped = true;
 
 	//Correctly positioning gun
 	//Takes into account left-handedness
-	FVector PositionVector = (IsLeftHanded) ? FVector(GunToEquip->BasePosition.X, -1.0f * GunToEquip->BasePosition.Y, GunToEquip->BasePosition.Z) : GunToEquip->BasePosition;
-	FRotator PositionRotator = (IsLeftHanded) ? FRotator(GunToEquip->BaseRotation.Pitch, GunToEquip->BaseRotation.Yaw, -1.0f * GunToEquip->BaseRotation.Roll) : GunToEquip->BaseRotation;
+	FVector PositionVector = (IsLeftHanded) ? FVector(GunToEquip.BasePosition.X, -1.0f * GunToEquip.BasePosition.Y, GunToEquip.BasePosition.Z) : GunToEquip.BasePosition;
+	FRotator PositionRotator = (IsLeftHanded) ? FRotator(GunToEquip.BaseRotation.Pitch, GunToEquip.BaseRotation.Yaw, -1.0f * GunToEquip.BaseRotation.Roll) : GunToEquip.BaseRotation;
 
 	FPSGunComponent->SetRelativeLocation(PositionVector);
 	FPSGunComponent->SetRelativeRotation(PositionRotator);
-	FPSGunComponent->SetRelativeScale3D(GunToEquip->BaseScale);
+	FPSGunComponent->SetRelativeScale3D(GunToEquip.BaseScale);
 
 	//Attach gun to scene component
-	GunToEquip->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
 	FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
 
 	//Hide gun mesh
-	GunToEquip->GunMesh->SetVisibility(false, true);
-
+	
 
 	//Set gun mesh to be fps mesh
-	FPSMesh->SetSkeletalMesh(GunToEquip->GunMesh->SkeletalMesh);
+	FPSMesh->SetSkeletalMesh(GunToEquip.GunMesh->SkeletalMesh);
 
 	//The above way is easier than showing gun object as it allows us to avoid having to reset eveyrthing when gun object is dropped again.
 
+	
 
 }
 
 
 void Afpscharacter::StartFire()
 {
+	Guns CurrentSelectedGun;
 
+	switch (EquippedGun)
+	{
+	case Equips::PRIMARY:
+		CurrentSelectedGun = PrimaryGun;
+		break;
 
-	if (!bIsFiringWeapon && EquippedWeaponReference)
+	case Equips::SECONDARY:
+		CurrentSelectedGun = SecondaryGun;
+		break;
+
+	default:
+		CurrentSelectedGun = Guns::NONE;
+		break;
+	}
+	if (!bIsFiringWeapon && CurrentSelectedGun != Guns::NONE)
 	{
 		//Need to implement burst, semi, auto and beam weapon logic, and hitscan ands stuff
 		bIsFiringWeapon = true;
 		UWorld* World = GetWorld();
-		float trueFireRate = EquippedWeaponReference->GetFireRate();
+		float trueFireRate = CurrentlyEquippedWeaponData.FireRate;
 		World->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::StopFire, trueFireRate, false);
 
 		HandleFire();
@@ -627,6 +651,6 @@ void Afpscharacter::HandleFire_Implementation()
 
 	UE_LOG(LogTemp, Warning, TEXT("Spawning"));
 	AProjectileBullet* spawnedProjectile = GetWorld()->SpawnActor<AProjectileBullet>(BulletClass, spawnLocation, spawnRotation, spawnParameters);
-	spawnedProjectile->SetProjectileSpeed(EquippedWeaponReference->GetProjectileSpeed());
+	spawnedProjectile->SetProjectileSpeed(CurrentlyEquippedWeaponData.ProjectileSpeed);
 	spawnedProjectile->FireInDirection(GetActorForwardVector());
 }

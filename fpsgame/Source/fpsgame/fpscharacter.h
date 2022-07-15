@@ -19,6 +19,63 @@ enum class Equips : uint8 {
 	MELEE = 2
 };
 
+USTRUCT(BlueprintType)
+struct FWeaponDataStruct
+{
+	GENERATED_BODY()
+		
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
+		TSubclassOf<class AProjectileBullet> ProjectileClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float MaxRange;
+
+	//Minimum time between shots in seconds
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float FireRate;
+
+	//Number of rounds fired per shot (usually 1, may be more for shotguns)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		int CartridgeBullets;
+
+	//Number of rounds fired per burst (usually 1, may be more for burst weapons)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		int BurstNumber;
+
+	//Speed of projectile rounds fired
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float ProjectileSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		WeaponType WAWeaponType;
+
+		//Type of weapon
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		//Whether gun fires as burst, auto etc
+		FireMode WAWeaponFireType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		//Hit check type
+		FireType WAWeaponHitDetectionType;
+
+	//Mesh of gun
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		USkeletalMeshComponent* GunMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		//Stores translation vectors to position weapon correctly
+		FVector BasePosition;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		//Used to ensure rotation of gun is consistent to make it look pretty.
+		FRotator BaseRotation;
+
+	//Ensures correct scale
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FVector BaseScale;
+	
+};
 
 UCLASS()
 class FPSGAME_API Afpscharacter : public ACharacter
@@ -40,6 +97,11 @@ private:
 	UPROPERTY(EditAnywhere)
 		//The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)
 		float DistanceToPlaceProjectileFromCamera;
+
+	//Struct storing weapon data, so that weapon actors can safely be deleted
+	
+		
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -52,11 +114,21 @@ protected:
 		int lognum = 0;
 #endif
 
+	//Stores data for primary weapon
+	UPROPERTY()
+		FWeaponDataStruct PrimaryData;
+
+	UPROPERTY()
+		FWeaponDataStruct SecondaryData;
+
+	UPROPERTY()
+		FWeaponDataStruct CurrentlyEquippedWeaponData;
+
 	//Whether player is currently crouching
 	UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing = OnRep_CurrentlyCrouching)
 		bool CurrentlyCrouching;
 
-
+	
 	//Stores if the player has just landed, logic altered in blueprints.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 		bool JustLanded;
@@ -104,6 +176,11 @@ protected:
 	UPROPERTY(ReplicatedUsing = OnRep_CurrentStamina)
 		float CurrentStamina;
 
+	//RPC for jumping, so stamina loss and stuff works properly
+	UFUNCTION(Server, Reliable)
+		void ServerStartJump();
+
+	
 	UFUNCTION()
 		void OnRep_CurrentlyCrouching();
 
@@ -160,13 +237,11 @@ protected:
 	//UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)
 		//Guns EquippedGun;
 
-	//Stores primary gun equipped
-	UPROPERTY(BlueprintReadWrite, Category = "Inventory")
-		AWeaponActor* PrimaryGun;
+	UPROPERTY()
+		Guns PrimaryGun;
 
-	//Stores secondary gun equipped
-	UPROPERTY(BlueprintReadWrite, Category = "Inventory")
-		AWeaponActor* SecondaryGun;
+	UPROPERTY()
+		Guns SecondaryGun;
 
 
 	UFUNCTION(BlueprintImplementableEvent)
@@ -200,7 +275,7 @@ protected:
 	
 	UFUNCTION()
 		//Does the actual positioning of gun in first person
-		void PositionAndAttachGunInFP(AWeaponActor* GunToEquip);
+		void PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip);
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon", Server, Reliable)
 		//Logic for causing visual swap to primary weapon on server goes here, along with setting equipped weapon variables
@@ -361,8 +436,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_ChangeWeapon)
 		Equips EquippedGun;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		//stores reference to equipped gun
-		AWeaponActor* EquippedWeaponReference;
+	
 
 };

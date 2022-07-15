@@ -14,8 +14,8 @@ class AProjectileBullet;
 #endif
 #define FPSGAME_WeaponActor_generated_h
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_SPARSE_DATA
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_SPARSE_DATA
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetProjectileClass); \
 	DECLARE_FUNCTION(execSetCartridgeBullets); \
@@ -24,11 +24,10 @@ class AProjectileBullet;
 	DECLARE_FUNCTION(execGetBurstNumber); \
 	DECLARE_FUNCTION(execGetCartridgeBullets); \
 	DECLARE_FUNCTION(execGetFireRate); \
-	DECLARE_FUNCTION(execGetBaseDamage); \
 	DECLARE_FUNCTION(execGetMaxRange);
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetProjectileClass); \
 	DECLARE_FUNCTION(execSetCartridgeBullets); \
@@ -37,11 +36,10 @@ class AProjectileBullet;
 	DECLARE_FUNCTION(execGetBurstNumber); \
 	DECLARE_FUNCTION(execGetCartridgeBullets); \
 	DECLARE_FUNCTION(execGetFireRate); \
-	DECLARE_FUNCTION(execGetBaseDamage); \
 	DECLARE_FUNCTION(execGetMaxRange);
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWeaponActor(); \
 	friend struct Z_Construct_UClass_AWeaponActor_Statics; \
@@ -50,7 +48,7 @@ public: \
 	DECLARE_SERIALIZER(AWeaponActor)
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_INCLASS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_INCLASS \
 private: \
 	static void StaticRegisterNativesAWeaponActor(); \
 	friend struct Z_Construct_UClass_AWeaponActor_Statics; \
@@ -59,7 +57,7 @@ public: \
 	DECLARE_SERIALIZER(AWeaponActor)
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AWeaponActor(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AWeaponActor) \
@@ -72,7 +70,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AWeaponActor(AWeaponActor&&); \
@@ -83,10 +81,9 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AWeaponActor)
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_PRIVATE_PROPERTY_OFFSET \
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(AWeaponActor, ProjectileClass); } \
 	FORCEINLINE static uint32 __PPO__MaxRange() { return STRUCT_OFFSET(AWeaponActor, MaxRange); } \
-	FORCEINLINE static uint32 __PPO__BaseDamage() { return STRUCT_OFFSET(AWeaponActor, BaseDamage); } \
 	FORCEINLINE static uint32 __PPO__FireRate() { return STRUCT_OFFSET(AWeaponActor, FireRate); } \
 	FORCEINLINE static uint32 __PPO__CartridgeBullets() { return STRUCT_OFFSET(AWeaponActor, CartridgeBullets); } \
 	FORCEINLINE static uint32 __PPO__BurstNumber() { return STRUCT_OFFSET(AWeaponActor, BurstNumber); } \
@@ -96,27 +93,27 @@ public: \
 	FORCEINLINE static uint32 __PPO__WAWeaponHitDetectionType() { return STRUCT_OFFSET(AWeaponActor, WAWeaponHitDetectionType); }
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_53_PROLOG
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_54_PROLOG
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_SPARSE_DATA \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_INCLASS \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_SPARSE_DATA \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_INCLASS \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_56_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_57_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_SPARSE_DATA \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_WeaponActor_h_56_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_SPARSE_DATA \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_WeaponActor_h_57_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -156,6 +153,7 @@ enum class FireType : uint8;
 template<> FPSGAME_API UEnum* StaticEnum<FireType>();
 
 #define FOREACH_ENUM_GUNS(op) \
+	op(Guns::NONE) \
 	op(Guns::PROTOTYPE_PISTOL) 
 
 enum class Guns : uint8;

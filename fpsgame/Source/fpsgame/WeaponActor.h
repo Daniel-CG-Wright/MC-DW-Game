@@ -4,13 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "fpscharacter.h"
 #include "Components/SphereComponent.h"
+#include "Components/BoxComponent.h"
 #include "FPSProjectile.h"
 #include "ProjectileBullet.h"
 #include "WeaponActor.generated.h"
 UENUM(BlueprintType)
 enum class Guns : uint8 {
+	NONE,
 	//Default testing pistol
 	PROTOTYPE_PISTOL
 };
@@ -72,10 +73,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float MaxRange;
 
-	//Base damage before multipliers (falloff, headshot etc)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float BaseDamage;
-
 	//Minimum time between shots in seconds
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float FireRate;
@@ -116,9 +113,12 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 
-	//Used to detect whether gun is on wall, so that gun can be mvoed back to avoid clipping.
+	//Used to detect whether gun is near player for pickups
 	UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")
-		USphereComponent* CollisionComponent;
+		UBoxComponent* CollisionComponent;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon Collision")
+		float BoxCollisionSize;
 
 	//Mesh of gun
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
@@ -143,8 +143,6 @@ public:
 	UFUNCTION(BlueprintPure)
 		float GetMaxRange() const { return MaxRange; }
 	
-	UFUNCTION(BlueprintPure)
-		float GetBaseDamage() const { return BaseDamage; }
 
 	UFUNCTION(BlueprintPure)
 		float GetFireRate() const { return FireRate; }

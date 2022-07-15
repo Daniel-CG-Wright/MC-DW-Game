@@ -12,6 +12,15 @@ AWeaponActor::AWeaponActor()
 	//Setting up weapon's mesh
 	GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMesh"));
 	
+	//Creating collision component
+	CollisionComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
+
+	BoxCollisionSize = 15.0f;
+
+	//Sizing colliison component
+	CollisionComponent->InitBoxExtent(FVector(BoxCollisionSize, BoxCollisionSize, BoxCollisionSize));
+
+
 }
 
 // Called when the game starts or when spawned
