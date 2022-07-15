@@ -112,13 +112,15 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		USceneComponent* RootSceneComponent;
 
 	//Used to detect whether gun is near player for pickups
 	UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")
 		UBoxComponent* CollisionComponent;
 
 	UPROPERTY(EditAnywhere, Category = "Weapon Collision")
-		float BoxCollisionSize;
+		FVector BoxCollisionSize;
 
 	//Mesh of gun
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
