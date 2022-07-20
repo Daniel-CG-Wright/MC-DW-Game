@@ -475,6 +475,10 @@ void Afpscharacter::PickupWeapon()
 
 	//Logic for picking up weapon goes here
 
+
+	//At the end of it all we destroy the weapon actor prop
+	
+
 }
 
 void Afpscharacter::ServerPickupWeapon_Implementation()

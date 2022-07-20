@@ -7,8 +7,18 @@
 #include "Components/SphereComponent.h"
 #include "Components/BoxComponent.h"
 #include "FPSProjectile.h"
+#include "InteractableObjectComponent.h"
 #include "ProjectileBullet.h"
 #include "WeaponActor.generated.h"
+
+UENUM(BlueprintType)
+enum class Equips : uint8 {
+	//Default testing pistol
+	PRIMARY = 0,
+	SECONDARY = 1,
+	MELEE = 2
+};
+
 UENUM(BlueprintType)
 enum class Guns : uint8 {
 	NONE,
@@ -141,6 +151,14 @@ public:
 	UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")
 		//Stores whether weapon is already being held by someone
 		bool IsEquipped;
+
+	//Stores whether the weapon is a primary weapon or a secondary weapon
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		Equips TypeOfEquip;
+
+	//Component which allows weapon prop to be interacted with
+	UPROPERTY()
+		UInteractableObjectComponent* InteractionComponent;
 
 	UFUNCTION(BlueprintPure)
 		float GetMaxRange() const { return MaxRange; }

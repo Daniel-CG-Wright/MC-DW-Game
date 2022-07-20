@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\fpsgame.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{06C7C381-850E-41CF-B02E-B97960065EE3}</UniqueIdentifier>
+      <UniqueIdentifier>{8A21EB06-5348-4B70-831D-50B9CE062537}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\fpsgame.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{6D2D5622-6CA5-4C96-A88E-05C1130C1D53}</UniqueIdentifier>
+      <UniqueIdentifier>{8F5A828D-45F4-4632-A1BB-7FE2188A518F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\fpsgame">
-      <UniqueIdentifier>{B0C78A86-A8DD-4A6E-AD2B-7A38DC02EC65}</UniqueIdentifier>
+      <UniqueIdentifier>{EB7C7F00-B3FF-42FC-8461-4119D1C0971C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\fpsgame\fpscharacter.cpp">
       <Filter>Source\fpsgame</Filter>
@@ -54,6 +54,12 @@
       <Filter>Source\fpsgame</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\fpsgame\FPSProjectile.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\InteractableObjectComponent.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\InteractableObjectComponent.h">
       <Filter>Source\fpsgame</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\fpsgame\ProjectileBullet.cpp">

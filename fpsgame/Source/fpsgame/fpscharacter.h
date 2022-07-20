@@ -11,13 +11,7 @@
 //Should always be the last include
 #include "fpscharacter.generated.h"
 
-UENUM(BlueprintType)
-enum class Equips : uint8 {
-	//Default testing pistol
-	PRIMARY = 0,
-	SECONDARY = 1,
-	MELEE = 2
-};
+
 
 USTRUCT(BlueprintType)
 struct FWeaponDataStruct

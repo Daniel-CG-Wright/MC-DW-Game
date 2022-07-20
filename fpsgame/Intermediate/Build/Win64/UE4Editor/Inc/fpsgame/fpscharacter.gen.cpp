@@ -13,9 +13,8 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 // Cross Module References
-	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_Equips();
-	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponDataStruct();
+	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	FPSGAME_API UClass* Z_Construct_UClass_AProjectileBullet_NoRegister();
 	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_WeaponType();
@@ -34,65 +33,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_Equips();
 // End Cross Module References
-	static UEnum* Equips_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_fpsgame_Equips, Z_Construct_UPackage__Script_fpsgame(), TEXT("Equips"));
-		}
-		return Singleton;
-	}
-	template<> FPSGAME_API UEnum* StaticEnum<Equips>()
-	{
-		return Equips_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_Equips(Equips_StaticEnum, TEXT("/Script/fpsgame"), TEXT("Equips"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_Equips_Hash() { return 1851727010U; }
-	UEnum* Z_Construct_UEnum_fpsgame_Equips()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_fpsgame();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("Equips"), 0, Get_Z_Construct_UEnum_fpsgame_Equips_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "Equips::PRIMARY", (int64)Equips::PRIMARY },
-				{ "Equips::SECONDARY", (int64)Equips::SECONDARY },
-				{ "Equips::MELEE", (int64)Equips::MELEE },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "MELEE.Name", "Equips::MELEE" },
-				{ "ModuleRelativePath", "fpscharacter.h" },
-				{ "PRIMARY.Comment", "//Default testing pistol\n" },
-				{ "PRIMARY.Name", "Equips::PRIMARY" },
-				{ "PRIMARY.ToolTip", "Default testing pistol" },
-				{ "SECONDARY.Name", "Equips::SECONDARY" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_fpsgame,
-				nullptr,
-				"Equips",
-				"Equips",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
 class UScriptStruct* FWeaponDataStruct::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
