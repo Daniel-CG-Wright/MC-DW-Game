@@ -17,12 +17,16 @@ enum class InteractionTypes : uint8;
 #define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_SPARSE_DATA
 #define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSetInteractionTime); \
+	DECLARE_FUNCTION(execGetInteractionTime); \
 	DECLARE_FUNCTION(execSetInteractionType); \
 	DECLARE_FUNCTION(execGetInteractionType);
 
 
 #define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSetInteractionTime); \
+	DECLARE_FUNCTION(execGetInteractionTime); \
 	DECLARE_FUNCTION(execSetInteractionType); \
 	DECLARE_FUNCTION(execGetInteractionType);
 
@@ -70,7 +74,8 @@ public: \
 
 
 #define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ThisInteractionType() { return STRUCT_OFFSET(UInteractableObjectComponent, ThisInteractionType); }
+	FORCEINLINE static uint32 __PPO__ThisInteractionType() { return STRUCT_OFFSET(UInteractableObjectComponent, ThisInteractionType); } \
+	FORCEINLINE static uint32 __PPO__InteractionTime() { return STRUCT_OFFSET(UInteractableObjectComponent, InteractionTime); }
 
 
 #define fpsgame_Source_fpsgame_InteractableObjectComponent_h_16_PROLOG

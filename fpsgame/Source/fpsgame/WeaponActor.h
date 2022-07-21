@@ -157,7 +157,7 @@ public:
 		Equips TypeOfEquip;
 
 	//Component which allows weapon prop to be interacted with
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon pickup")
 		UInteractableObjectComponent* InteractionComponent;
 
 	UFUNCTION(BlueprintPure)

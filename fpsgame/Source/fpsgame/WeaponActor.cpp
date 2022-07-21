@@ -28,6 +28,9 @@ AWeaponActor::AWeaponActor()
 	//Sizing colliison component
 	CollisionComponent->InitBoxExtent(BoxCollisionSize);
 
+	//Creating interaction component
+	InteractionComponent = CreateDefaultSubobject<UInteractableObjectComponent>(TEXT("InteractionComponent"));
+	
 }
 
 // Called when the game starts or when spawned

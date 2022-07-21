@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Engine\Classes\GameFramework\CharacterMovementComponent.h"
 #include "TimerManager.h"
+#include "DrawDebugHelpers.h"
 
 // Sets default values
 Afpscharacter::Afpscharacter()
@@ -52,6 +53,9 @@ Afpscharacter::Afpscharacter()
 	//Enables the pawn base of the character to control camera rotation
 	FPSCameraComponent->bUsePawnControlRotation = true;
 
+	//Configures collision
+	OnActorBeginOverlap.AddDynamic(this, &Afpscharacter::BeginOverlap);
+	OnActorEndOverlap.AddDynamic(this, &Afpscharacter::EndOverlap);
 
 	//Sets default mouse input values. Will have to change later when integrating with stored player settings.
 	XSensitivity = 1.0f;
@@ -87,6 +91,12 @@ Afpscharacter::Afpscharacter()
 
 	bIsFiringWeapon = false;
 	DistanceToPlaceProjectileFromCamera = 25.0f;
+
+	bCanInteract = true;
+	InteractInterval = 0.5f;
+
+	//Interact range in centimetres
+	MaxInteractRange = 250.0f;
 }
 
 
@@ -111,6 +121,10 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	DOREPLIFETIME_CONDITION(Afpscharacter, IsSprinting, COND_SimulatedOnly);
 
 	DOREPLIFETIME_CONDITION(Afpscharacter, CurrentlyCrouching, COND_SimulatedOnly);
+
+	//Replicate gun
+	DOREPLIFETIME(Afpscharacter, EquippedGun);
+
 }
 
 
@@ -168,6 +182,18 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAction("SecondaryGun", IE_Pressed, this, &Afpscharacter::SwitchSecondaryInputImplementation);
 	PlayerInputComponent->BindAction("spawnequipgun", IE_Pressed, this, &Afpscharacter::SpawnAndEquipGun);
 
+	//Binding for interaction
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &Afpscharacter::InteractPressed);
+}
+
+void Afpscharacter::InteractPressed()
+{
+	//Logic for pressing interact goes here
+	if (bCanInteract)
+	{
+		Interact();
+
+	}
 }
 
 void Afpscharacter::SwitchPrimaryInputImplementation()
@@ -463,6 +489,95 @@ void Afpscharacter::OnRep_ChangeWeapon()
 	}
 }
 
+void Afpscharacter::BeginOverlap(UPrimitiveComponent* OverlappedComponent,
+	AActor* OtherActor,
+	UPrimitiveComponent* OtherComp,
+	int32 OtherBodyIndex,
+	bool bFromSweep,
+	const FHitResult& SweepResult)
+{
+	//List of currently overlapped actors must be updated
+	CurrentlyOverlappedActors.AddTail(OtherActor);
+
+	
+}
+
+void Afpscharacter::EndOverlap(UPrimitiveComponent* OverlappedComponent,
+	AActor* OtherActor,
+	UPrimitiveComponent* OtherComp,
+	int32 OtherBodyIndex,
+	bool bFromSweep,
+	const FHitResult& SweepResult)
+{
+	//List of currently overlapped actors must be updated
+	CurrentlyOverlappedActors.RemoveNode(OtherActor);
+
+
+}
+bool Afpscharacter::CollisionInteractCheck(AActor CollidingActor)
+{
+	
+}
+
+bool Afpscharacter::RaycastInteractCheck(FHitResult ResultOutHit)
+{
+
+
+	//Start coordinates are in FPS camera
+	FVector Start = FPSCameraComponent->GetComponentLocation();
+	//Gets direction player is looking at
+	FVector ForwardVector = FPSCameraComponent->GetForwardVector();
+
+	//End coordinate is range away from start
+	FVector End = Start + (ForwardVector * MaxInteractRange);
+
+	FCollisionQueryParams CollisionParams;
+	//Ignore ourselves
+	CollisionParams.AddIgnoredActor(this->GetOwner());
+
+	//Draw debug line
+	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 5, 0, 1);
+
+	//Performs raycast
+	return GetWorld()->LineTraceSingleByChannel(ResultOutHit, Start, End, ECC_Visibility, CollisionParams);
+
+}
+
+
+void Afpscharacter::Interact()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Interacting"));
+
+	//First we need to check for raycast for where we are looking as this takes priority; we can always make this an option to change later
+	//Where the output is at
+	FHitResult OutHit;
+	//Perform raycast check
+	bool IsHit = RaycastInteractCheck(OutHit);
+
+	if (!IsHit)
+	{
+		//Move onto the collision check
+
+	}
+	//Logic for if a hit was detected
+	if (IsHit)
+	{
+		UInteractableObjectComponent* HitInteractableComponent = OutHit.GetActor()->FindComponentByClass<UInteractableObjectComponent>();
+
+		//If the item is interactable, we continue
+		if (HitInteractableComponent != nullptr)
+		{
+			switch (HitInteractableComponent->GetInteractionType())
+			{
+			case InteractionTypes::WEAPON_PICKUP:
+				//Logic for weapon pickup
+				PickupWeapon();
+			}
+		}
+	}
+
+	
+}
 void Afpscharacter::PickupWeapon()
 {
 	//Pick up weapon

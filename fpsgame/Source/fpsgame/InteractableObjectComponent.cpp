@@ -10,6 +10,7 @@ UInteractableObjectComponent::UInteractableObjectComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = false;
 
+	
 	// ...
 }
 
@@ -37,3 +38,7 @@ void UInteractableObjectComponent::SetInteractionType(InteractionTypes NewIntera
 	ThisInteractionType = NewInteractionType;
 }
 
+void UInteractableObjectComponent::SetInteractionTime(float NewInteractionTime)
+{
+	InteractionTime = NewInteractionTime;
+}

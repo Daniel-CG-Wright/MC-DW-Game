@@ -9,7 +9,8 @@
 UENUM(BlueprintType)
 enum class InteractionTypes : uint8
 {
-	PICKUP = 0
+	WEAPON_PICKUP = 0,
+	
 };
 
 
@@ -26,9 +27,12 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction type")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction type")
 		InteractionTypes ThisInteractionType;
 
+	//The time the player must spend waiting for the interaction to finish
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction time")
+		float InteractionTime;
 
 public:	
 	// Called every frame
@@ -40,6 +44,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void SetInteractionType(InteractionTypes NewInteractionType);
 
-
-		
+	UFUNCTION(BlueprintCallable)
+		float GetInteractionTime() { return InteractionTime; }
+	
+	UFUNCTION(BlueprintCallable)
+		void SetInteractionTime(float NewInteractionTime);
 };

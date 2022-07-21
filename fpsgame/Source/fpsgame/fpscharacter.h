@@ -7,11 +7,12 @@
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/Character.h"
 #include "WeaponActor.h"
-
+#include "InteractableObjectComponent.h"
 //Should always be the last include
 #include "fpscharacter.generated.h"
 
 
+	//Struct storing weapon data, so that weapon actors can safely be deleted
 
 USTRUCT(BlueprintType)
 struct FWeaponDataStruct
@@ -92,9 +93,99 @@ private:
 		//The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)
 		float DistanceToPlaceProjectileFromCamera;
 
-	//Struct storing weapon data, so that weapon actors can safely be deleted
+
+
 	
 		
+//Player input functions
+protected:
+	//Function for pressing interact
+	UFUNCTION()
+		void InteractPressed();
+
+	//For if interaction is valid, should handle checks for things like if looking at item in range, or in collision etc
+	UFUNCTION()
+		void Interact();
+	/*
+	May call ServerPickupWeapon RPC
+	*/
+
+	//Checks for interact via raycast
+	UFUNCTION()
+		bool RaycastInteractCheck(FHitResult ResultOutHit);
+	
+	//Checks for interact via collision
+	UFUNCTION()
+		bool CollisionInteractCheck(AActor* CollidingActor);
+
+	//used to limit number of interactions user can make per second
+	UPROPERTY()
+		FTimerHandle InteractInputIntervalTimerHandle;
+
+	UPROPERTY()
+		//used to ensure that interaction takes 'interactiontime' seconds @UInteractableObjectComponent
+		FTimerHandle InteractTimerHandle;
+
+	UPROPERTY()
+		//Stores the currently overlapped actors in a oncollisionstart frame
+		TDoubleLinkedList<AActor*> CurrentlyOverlappedActors;
+	
+	UFUNCTION()
+		void BeginOverlap(UPrimitiveComponent* OverlappedComponent,
+			AActor* OtherActor,
+			UPrimitiveComponent* OtherComp,
+			int32 OtherBodyIndex,
+			bool bFromSweep,
+			const FHitResult& SweepResult);
+
+	UFUNCTION()
+		void Afpscharacter::EndOverlap(UPrimitiveComponent* OverlappedComponent,
+			AActor* OtherActor,
+			UPrimitiveComponent* OtherComp,
+			int32 OtherBodyIndex,
+			bool bFromSweep,
+			const FHitResult& SweepResult);
+
+	UPROPERTY(EditAnywhere)
+		float InteractInterval; //time interval in secondsfor interactions to take place
+
+	//maximum interaction range
+	UPROPERTY(EditAnywhere)
+		float MaxInteractRange;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Transient)
+		bool bCanInteract;
+
+	//Handles movement inputs for forward-backward
+	UFUNCTION()
+		void MoveY(float Value);
+
+	//handles movement inputs for right-left (right = positive)
+	UFUNCTION()
+		void MoveX(float Value);
+
+	//Used to apply sensitivities and mouse inversions to axes X and Y for mouse
+	UFUNCTION()
+		void ApplySensitivityAndInversionToMouseInputX(float Value);
+
+	UFUNCTION()
+		void ApplySensitivityAndInversionToMouseInputY(float Value);
+
+	//Used to handle jumping
+	//Sets jump flag when key is pressed to jump
+	UFUNCTION()
+		void StartJump();
+
+	//Clears jump flag when key is released
+	UFUNCTION()
+		void StopJump();
+
+	//For handling sprinting
+	UFUNCTION()
+		void PressSprint();
+
+	UFUNCTION()
+		void ReleaseSprint();
 
 protected:
 	// Called when the game starts or when spawned
@@ -167,7 +258,7 @@ protected:
 		float MaxStamina;
 
 	//Current stamina, replicated across server
-	UPROPERTY(ReplicatedUsing = OnRep_CurrentStamina)
+	UPROPERTY(Transient, ReplicatedUsing = OnRep_CurrentStamina)
 		float CurrentStamina;
 
 	//RPC for jumping, so stamina loss and stuff works properly
@@ -194,7 +285,7 @@ protected:
 		float MaxHealth;
 
 	//Current HP
-	UPROPERTY(ReplicatedUsing = OnRep_CurrentHealth)
+	UPROPERTY(Transient, ReplicatedUsing = OnRep_CurrentHealth)
 		float CurrentHealth;
 
 	//Replicates current health
@@ -362,36 +453,7 @@ public:
 	UPROPERTY()
 		FTimerHandle StaminaTimerHandle;
 
-	//Handles movement inputs for forward-backward
-	UFUNCTION()
-		void MoveY(float Value);
-
-	//handles movement inputs for right-left (right = positive)
-	UFUNCTION()
-		void MoveX(float Value);
-
-	//Used to apply sensitivities and mouse inversions to axes X and Y for mouse
-	UFUNCTION()
-		void ApplySensitivityAndInversionToMouseInputX(float Value);
-
-	UFUNCTION()
-		void ApplySensitivityAndInversionToMouseInputY(float Value);
-
-	//Used to handle jumping
-	//Sets jump flag when key is pressed to jump
-	UFUNCTION()
-		void StartJump();
-
-	//Clears jump flag when key is released
-	UFUNCTION()
-		void StopJump();
-
-	//For handling sprinting
-	UFUNCTION()
-		void PressSprint();
-
-	UFUNCTION()
-		void ReleaseSprint();
+	
 
 	//Getter for max health
 	UFUNCTION(BlueprintPure, Category = "Health")
