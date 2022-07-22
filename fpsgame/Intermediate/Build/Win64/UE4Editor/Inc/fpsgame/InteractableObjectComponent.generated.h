@@ -14,8 +14,8 @@ enum class InteractionTypes : uint8;
 #endif
 #define FPSGAME_InteractableObjectComponent_generated_h
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_SPARSE_DATA
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_SPARSE_DATA
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execSetInteractionTime); \
 	DECLARE_FUNCTION(execGetInteractionTime); \
@@ -23,7 +23,7 @@ enum class InteractionTypes : uint8;
 	DECLARE_FUNCTION(execGetInteractionType);
 
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSetInteractionTime); \
 	DECLARE_FUNCTION(execGetInteractionTime); \
@@ -31,7 +31,7 @@ enum class InteractionTypes : uint8;
 	DECLARE_FUNCTION(execGetInteractionType);
 
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInteractableObjectComponent(); \
 	friend struct Z_Construct_UClass_UInteractableObjectComponent_Statics; \
@@ -40,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(UInteractableObjectComponent)
 
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_INCLASS \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_INCLASS \
 private: \
 	static void StaticRegisterNativesUInteractableObjectComponent(); \
 	friend struct Z_Construct_UClass_UInteractableObjectComponent_Statics; \
@@ -49,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(UInteractableObjectComponent)
 
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UInteractableObjectComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UInteractableObjectComponent) \
@@ -62,7 +62,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UInteractableObjectComponent(UInteractableObjectComponent&&); \
@@ -73,32 +73,32 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UInteractableObjectComponent)
 
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_PRIVATE_PROPERTY_OFFSET \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ThisInteractionType() { return STRUCT_OFFSET(UInteractableObjectComponent, ThisInteractionType); } \
 	FORCEINLINE static uint32 __PPO__InteractionTime() { return STRUCT_OFFSET(UInteractableObjectComponent, InteractionTime); }
 
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_16_PROLOG
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_17_PROLOG
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_SPARSE_DATA \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_INCLASS \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_SPARSE_DATA \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_INCLASS \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_SPARSE_DATA \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_InteractableObjectComponent_h_19_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_SPARSE_DATA \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -110,7 +110,7 @@ template<> FPSGAME_API UClass* StaticClass<class UInteractableObjectComponent>()
 
 
 #define FOREACH_ENUM_INTERACTIONTYPES(op) \
-	op(InteractionTypes::PICKUP) 
+	op(InteractionTypes::WEAPON_PICKUP) 
 
 enum class InteractionTypes : uint8;
 template<> FPSGAME_API UEnum* StaticEnum<InteractionTypes>();

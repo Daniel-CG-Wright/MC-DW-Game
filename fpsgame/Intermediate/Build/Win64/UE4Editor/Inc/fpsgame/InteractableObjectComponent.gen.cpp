@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		return InteractionTypes_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_InteractionTypes(InteractionTypes_StaticEnum, TEXT("/Script/fpsgame"), TEXT("InteractionTypes"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_InteractionTypes_Hash() { return 2133834003U; }
+	uint32 Get_Z_Construct_UEnum_fpsgame_InteractionTypes_Hash() { return 3341360639U; }
 	UEnum* Z_Construct_UEnum_fpsgame_InteractionTypes()
 	{
 #if WITH_HOT_RELOAD
@@ -45,13 +45,13 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "InteractionTypes::PICKUP", (int64)InteractionTypes::PICKUP },
+				{ "InteractionTypes::WEAPON_PICKUP", (int64)InteractionTypes::WEAPON_PICKUP },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
 				{ "ModuleRelativePath", "InteractableObjectComponent.h" },
-				{ "PICKUP.Name", "InteractionTypes::PICKUP" },
+				{ "WEAPON_PICKUP.Name", "InteractionTypes::WEAPON_PICKUP" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

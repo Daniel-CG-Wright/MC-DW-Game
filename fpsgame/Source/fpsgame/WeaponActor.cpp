@@ -7,16 +7,15 @@
 AWeaponActor::AWeaponActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	BaseScale = FVector(1.0f, 1.0f, 1.0f);
 	PrimaryActorTick.bCanEverTick = false;
 
 	RootSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
 	SetRootComponent(RootSceneComponent);
-	SetActorScale3D(BaseScale);
+	SetActorScale3D(WeaponData.BaseScale);
 
 	//Setting up weapon's mesh
-	GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMesh"));
-	GunMesh->AttachToComponent(RootSceneComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
+	StaticGunMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GunMesh"));
+	StaticGunMesh->AttachToComponent(RootSceneComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
 	//GunMesh->SetRelativeScale3D(BaseScale);
 
 	//Creating collision component
@@ -38,6 +37,7 @@ void AWeaponActor::BeginPlay()
 {
 	Super::BeginPlay();
 	
+
 }
 
 // Called every frame
@@ -47,13 +47,7 @@ void AWeaponActor::Tick(float DeltaTime)
 
 }
 
-void AWeaponActor::SetBurstNumber(int NewBurstNumber)
+void AWeaponActor::SetWeaponDataStruct(FWeaponDataStruct NewWeaponDataStruct)
 {
-	BurstNumber = NewBurstNumber;
-
-}
-
-void AWeaponActor::SetCartridgeBullets(int NewCartridgeBullets)
-{
-	CartridgeBullets = NewCartridgeBullets;
+	WeaponData = NewWeaponDataStruct;
 }

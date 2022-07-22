@@ -15,15 +15,17 @@ UENUM(BlueprintType)
 enum class Equips : uint8 {
 	//Default testing pistol
 	PRIMARY = 0,
-	SECONDARY = 1,
-	MELEE = 2
+	SECONDARY,
+	BOTH,
+	MELEE
 };
 
 UENUM(BlueprintType)
 enum class Guns : uint8 {
 	NONE,
 	//Default testing pistol
-	PROTOTYPE_PISTOL
+	PROTOTYPE_PISTOL,
+	PROTOTYPE_AR
 };
 
 UENUM(BlueprintType)
@@ -61,25 +63,15 @@ UENUM(BlueprintType)
 		SNIPER_RIFLE
 	};
 
-UCLASS()
-class FPSGAME_API AWeaponActor : public AActor
+USTRUCT(BlueprintType)
+struct FWeaponDataStruct
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	AWeaponActor();
-
-private:
-	
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 		TSubclassOf<class AProjectileBullet> ProjectileClass;
 
+	//Max range of hitscan weapons in cm
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float MaxRange;
 
@@ -98,13 +90,9 @@ protected:
 	//Speed of projectile rounds fired
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float ProjectileSpeed;
-	
 
-
-	
-
+	//Type of weapon
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		//Type of weapon
 		WeaponType WAWeaponType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
@@ -115,6 +103,52 @@ protected:
 		//Hit check type
 		FireType WAWeaponHitDetectionType;
 
+	//Mesh of gun
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		USkeletalMesh* GunMesh;
+
+	//Gun is primary, secondary
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		Equips TypeOfEquip;
+
+	//Actual gun model
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		Guns GunModel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		//Stores translation vectors to position weapon correctly
+		FVector BasePosition;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		//Used to ensure rotation of gun is consistent to make it look pretty.
+		FRotator BaseRotation;
+
+	//Ensures correct scale
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FVector BaseScale;
+
+
+};
+
+UCLASS()
+class FPSGAME_API AWeaponActor : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	AWeaponActor();
+
+private:
+	
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+	//Storing the data for the playable weapon
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponDataStruct WeaponData;
 	
 
 	
@@ -134,56 +168,18 @@ public:
 
 	//Mesh of gun
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		USkeletalMeshComponent* GunMesh;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		//Stores translation vectors to position weapon correctly
-		FVector BasePosition;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		//Used to ensure rotation of gun is consistent to make it look pretty.
-		FRotator BaseRotation;
-
-	//Ensures correct scale
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		FVector BaseScale;
-
-	UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")
-		//Stores whether weapon is already being held by someone
-		bool IsEquipped;
-
-	//Stores whether the weapon is a primary weapon or a secondary weapon
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		Equips TypeOfEquip;
+		UStaticMeshComponent* StaticGunMesh;
 
 	//Component which allows weapon prop to be interacted with
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon pickup")
 		UInteractableObjectComponent* InteractionComponent;
 
 	UFUNCTION(BlueprintPure)
-		float GetMaxRange() const { return MaxRange; }
-	
-
-	UFUNCTION(BlueprintPure)
-		float GetFireRate() const { return FireRate; }
-
-	UFUNCTION(BlueprintPure)
-		int GetCartridgeBullets() const { return CartridgeBullets; }
-
-	UFUNCTION(BlueprintPure)
-		int GetBurstNumber() const { return BurstNumber; }
-
-	UFUNCTION(BlueprintPure)
-		float GetProjectileSpeed() const { return ProjectileSpeed; }
+		FWeaponDataStruct GetWeaponDataStruct() { return WeaponData; }
 
 	UFUNCTION(BlueprintCallable)
-		void SetBurstNumber(int NewBurstNumber);
+		void SetWeaponDataStruct(FWeaponDataStruct NewWeaponDataStruct);
 
-	UFUNCTION(BlueprintCallable)
-		void SetCartridgeBullets(int NewCartridgeBullets);
-
-	UFUNCTION(BlueprintPure)
-		TSubclassOf<AProjectileBullet> GetProjectileClass() { return ProjectileClass; }
 
 
 };

@@ -53,10 +53,6 @@ Afpscharacter::Afpscharacter()
 	//Enables the pawn base of the character to control camera rotation
 	FPSCameraComponent->bUsePawnControlRotation = true;
 
-	//Configures collision
-	OnActorBeginOverlap.AddDynamic(this, &Afpscharacter::BeginOverlap);
-	OnActorEndOverlap.AddDynamic(this, &Afpscharacter::EndOverlap);
-
 	//Sets default mouse input values. Will have to change later when integrating with stored player settings.
 	XSensitivity = 1.0f;
 	YSensitivity = 1.0f;
@@ -178,9 +174,9 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	//Binding fire action
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::StartFire);
 
-	//temp binding for secondary weapon
+	//binding for weapon slots
+	PlayerInputComponent->BindAction("PrimaryGun", IE_Pressed, this, &Afpscharacter::SwitchPrimaryInputImplementation);
 	PlayerInputComponent->BindAction("SecondaryGun", IE_Pressed, this, &Afpscharacter::SwitchSecondaryInputImplementation);
-	PlayerInputComponent->BindAction("spawnequipgun", IE_Pressed, this, &Afpscharacter::SpawnAndEquipGun);
 
 	//Binding for interaction
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &Afpscharacter::InteractPressed);
@@ -489,37 +485,13 @@ void Afpscharacter::OnRep_ChangeWeapon()
 	}
 }
 
-void Afpscharacter::BeginOverlap(UPrimitiveComponent* OverlappedComponent,
-	AActor* OtherActor,
-	UPrimitiveComponent* OtherComp,
-	int32 OtherBodyIndex,
-	bool bFromSweep,
-	const FHitResult& SweepResult)
-{
-	//List of currently overlapped actors must be updated
-	CurrentlyOverlappedActors.AddTail(OtherActor);
 
-	
+bool Afpscharacter::CollisionInteractCheck(AActor* CollidingActor)
+{
+	return false;
 }
 
-void Afpscharacter::EndOverlap(UPrimitiveComponent* OverlappedComponent,
-	AActor* OtherActor,
-	UPrimitiveComponent* OtherComp,
-	int32 OtherBodyIndex,
-	bool bFromSweep,
-	const FHitResult& SweepResult)
-{
-	//List of currently overlapped actors must be updated
-	CurrentlyOverlappedActors.RemoveNode(OtherActor);
-
-
-}
-bool Afpscharacter::CollisionInteractCheck(AActor CollidingActor)
-{
-	
-}
-
-bool Afpscharacter::RaycastInteractCheck(FHitResult ResultOutHit)
+bool Afpscharacter::RaycastInteractCheck(FHitResult &ResultOutHit)
 {
 
 
@@ -553,60 +525,142 @@ void Afpscharacter::Interact()
 	FHitResult OutHit;
 	//Perform raycast check
 	bool IsHit = RaycastInteractCheck(OutHit);
+	UE_LOG(LogTemp, Warning, TEXT("IsHit =  %s"), (IsHit ? TEXT("TRUE") : TEXT("FALSE")));
+	AActor* HitActor;
 
 	if (!IsHit)
 	{
 		//Move onto the collision check
 
 	}
-	//Logic for if a hit was detected
-	if (IsHit)
+	else
 	{
-		UInteractableObjectComponent* HitInteractableComponent = OutHit.GetActor()->FindComponentByClass<UInteractableObjectComponent>();
+		//		HitActor = OutHit.GetActor();
+
+	}
+	HitActor = OutHit.GetActor();
+
+	//Logic for if a hit was detected in collision or raycast
+	if (IsHit && HitActor)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("We got a hit bois"));
+		UInteractableObjectComponent* HitInteractableComponent = HitActor->FindComponentByClass<UInteractableObjectComponent>();
 
 		//If the item is interactable, we continue
 		if (HitInteractableComponent != nullptr)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("We got a component bois"));
+
 			switch (HitInteractableComponent->GetInteractionType())
 			{
 			case InteractionTypes::WEAPON_PICKUP:
 				//Logic for weapon pickup
-				PickupWeapon();
+				UE_LOG(LogTemp, Warning, TEXT("We got a pickup bois"));
+
+				PickupWeapon(Cast<AWeaponActor>(HitActor));
 			}
 		}
 	}
 
 	
 }
-void Afpscharacter::PickupWeapon()
+void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 {
 	//Pick up weapon
 
 	//Need to run RPC on server
 	if (GetLocalRole() < ROLE_Authority)
 	{
-		ServerPickupWeapon();
+		ServerPickupWeapon(WeaponPickup);
 	}
 
 	//Logic for picking up weapon goes here
 
+	//Get weapon data, and weapon equip type
+	FWeaponDataStruct WeaponData = WeaponPickup->GetWeaponDataStruct();
+	Equips WeaponEquipType = WeaponData.TypeOfEquip;
 
-	//At the end of it all we destroy the weapon actor prop
+	//First we must decide whether to switch our primary or secondary depending on which weapon type the gun is.
+	switch (WeaponEquipType)
+	{
+	case Equips::PRIMARY:
+		PrimaryData = WeaponData;
+		PrimaryGun = WeaponData.GunModel;
+
+		break;
+
+	case Equips::SECONDARY:
+		SecondaryData = WeaponData;
+		SecondaryGun = WeaponData.GunModel;
+
+		break;
+
+	case Equips::BOTH:
+		if (EquippedGun == Equips::PRIMARY)
+		{
+			PrimaryData = WeaponData;
+			PrimaryGun = WeaponData.GunModel;
+		}
+		else
+		{
+			SecondaryData = WeaponData;
+			SecondaryGun = WeaponData.GunModel;
+		}
+		break;
+
+	default:
+		UE_LOG(LogTemp, Warning, TEXT("WEAPON EQUIP TYPE NOT PRIMARY, SECONDARY OR BOTH - WARNING!!!"));
+		return;
+	}
+
 	
+	//Switch weapon if this is a player preference
+	if (SwitchWeaponAfterPickup)
+	{
+		switch (WeaponEquipType)
+		{
+		case Equips::PRIMARY:
+			SwitchPrimary();
+			break;
+		case Equips::SECONDARY:
+			SwitchSecondary();
+			break;
+		default:
+			break;
+		}
+	}
+	else
+	{
+		if (EquippedGun == WeaponEquipType)
+		{
+			if (EquippedGun == Equips::PRIMARY)
+			{
+				SwitchPrimary();
+
+			}
+			else if (EquippedGun == Equips::SECONDARY)
+			{
+				SwitchSecondary();
+			}
+		}
+	}
+	
+	//At the end of it all we destroy the weapon actor prop
+	WeaponPickup->Destroy();
 
 }
 
-void Afpscharacter::ServerPickupWeapon_Implementation()
+void Afpscharacter::ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup)
 {
 	//Server impleemntation of pickup weapon
-	PickupWeapon();
+	PickupWeapon(WeaponPickup);
 }
 
 void Afpscharacter::SwitchPrimary(bool bIsRep)
 {
 	//Switch to primary gun
 	//Stop crashes if no primary exists
-	if (SecondaryGun != Guns::NONE)
+	if (PrimaryGun == Guns::NONE)
 	{
 		return;
 	}
@@ -663,12 +717,14 @@ void Afpscharacter::DebugFunction()
 
 void Afpscharacter::SwitchSecondary(bool bIsRep)
 {
+
 	//Stop crashes if no secondary exists
-	if (SecondaryGun != Guns::NONE)
+	if (SecondaryGun == Guns::NONE)
 	{
 		return;
 	}
-
+	UE_LOG(LogTemp, Warning, TEXT("Equipping secondary"));
+	
 	if (GetLocalRole() < ROLE_Authority && !bIsRep)
 	{
 		ServerSwitchSecondary();
@@ -679,8 +735,8 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	{
 		PositionAndAttachGunInFP(SecondaryData);
 
+	
 	}
-
 	BulletClass = SecondaryData.ProjectileClass;
 	EquippedGun = Equips::SECONDARY;
 	
@@ -696,7 +752,6 @@ void Afpscharacter::ServerSwitchSecondary_Implementation()
 void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 {
 
-
 	//Correctly positioning gun
 	//Takes into account left-handedness
 	FVector PositionVector = (IsLeftHanded) ? FVector(GunToEquip.BasePosition.X, -1.0f * GunToEquip.BasePosition.Y, GunToEquip.BasePosition.Z) : GunToEquip.BasePosition;
@@ -709,11 +764,8 @@ void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 	//Attach gun to scene component
 	FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
 
-	//Hide gun mesh
-	
-
 	//Set gun mesh to be fps mesh
-	FPSMesh->SetSkeletalMesh(GunToEquip.GunMesh->SkeletalMesh);
+	FPSMesh->SetSkeletalMesh(GunToEquip.GunMesh);
 
 	//The above way is easier than showing gun object as it allows us to avoid having to reset eveyrthing when gun object is dropped again.
 

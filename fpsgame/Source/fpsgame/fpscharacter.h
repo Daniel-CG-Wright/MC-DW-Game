@@ -14,63 +14,7 @@
 
 	//Struct storing weapon data, so that weapon actors can safely be deleted
 
-USTRUCT(BlueprintType)
-struct FWeaponDataStruct
-{
-	GENERATED_BODY()
-		
-	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
-		TSubclassOf<class AProjectileBullet> ProjectileClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float MaxRange;
-
-	//Minimum time between shots in seconds
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float FireRate;
-
-	//Number of rounds fired per shot (usually 1, may be more for shotguns)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		int CartridgeBullets;
-
-	//Number of rounds fired per burst (usually 1, may be more for burst weapons)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		int BurstNumber;
-
-	//Speed of projectile rounds fired
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float ProjectileSpeed;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		WeaponType WAWeaponType;
-
-		//Type of weapon
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		//Whether gun fires as burst, auto etc
-		FireMode WAWeaponFireType;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		//Hit check type
-		FireType WAWeaponHitDetectionType;
-
-	//Mesh of gun
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		USkeletalMeshComponent* GunMesh;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		//Stores translation vectors to position weapon correctly
-		FVector BasePosition;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		//Used to ensure rotation of gun is consistent to make it look pretty.
-		FRotator BaseRotation;
-
-	//Ensures correct scale
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		FVector BaseScale;
-	
-};
 
 UCLASS()
 class FPSGAME_API Afpscharacter : public ACharacter
@@ -84,7 +28,7 @@ public:
 	//Property replication
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-private:
+protected:
 	//Records whether player is left handed - if so, mirrors gun transform and rotation on equip to be positioned on left side.
 	UPROPERTY(EditAnywhere)
 		bool IsLeftHanded;
@@ -93,7 +37,9 @@ private:
 		//The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)
 		float DistanceToPlaceProjectileFromCamera;
 
-
+	//Records if the player should switch weapon to the pick up weapon after picking a weapon up
+	UPROPERTY(EditAnywhere)
+		bool SwitchWeaponAfterPickup;
 
 	
 		
@@ -112,7 +58,7 @@ protected:
 
 	//Checks for interact via raycast
 	UFUNCTION()
-		bool RaycastInteractCheck(FHitResult ResultOutHit);
+		bool RaycastInteractCheck(FHitResult &ResultOutHit);
 	
 	//Checks for interact via collision
 	UFUNCTION()
@@ -126,25 +72,6 @@ protected:
 		//used to ensure that interaction takes 'interactiontime' seconds @UInteractableObjectComponent
 		FTimerHandle InteractTimerHandle;
 
-	UPROPERTY()
-		//Stores the currently overlapped actors in a oncollisionstart frame
-		TDoubleLinkedList<AActor*> CurrentlyOverlappedActors;
-	
-	UFUNCTION()
-		void BeginOverlap(UPrimitiveComponent* OverlappedComponent,
-			AActor* OtherActor,
-			UPrimitiveComponent* OtherComp,
-			int32 OtherBodyIndex,
-			bool bFromSweep,
-			const FHitResult& SweepResult);
-
-	UFUNCTION()
-		void Afpscharacter::EndOverlap(UPrimitiveComponent* OverlappedComponent,
-			AActor* OtherActor,
-			UPrimitiveComponent* OtherComp,
-			int32 OtherBodyIndex,
-			bool bFromSweep,
-			const FHitResult& SweepResult);
 
 	UPROPERTY(EditAnywhere)
 		float InteractInterval; //time interval in secondsfor interactions to take place
@@ -339,10 +266,10 @@ protected:
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		//Localfunction for picking up weapon from floor
-		void PickupWeapon();
+		void PickupWeapon(AWeaponActor* WeaponPickup);
 	UFUNCTION(BlueprintCallable, Category = "Weapon", Server, Reliable)
 		//used on equipping gun from floor, logic for server is run here - should consist of updating variables, and visual changes if needed
-		void ServerPickupWeapon();
+		void ServerPickupWeapon(AWeaponActor* WeaponPickup);
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		//Initial local function call for switching weapon
