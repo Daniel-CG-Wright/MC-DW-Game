@@ -314,6 +314,13 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->MoveY(Z_Param_Value);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execGetCurrentlyAvailableInteractable)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->GetCurrentlyAvailableInteractable();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(Afpscharacter::execCollisionInteractCheck)
 	{
 		P_GET_OBJECT(AActor,Z_Param_CollidingActor);
@@ -328,6 +335,33 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(bool*)Z_Param__Result=P_THIS->RaycastInteractCheck(Z_Param_Out_ResultOutHit);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execInteractWithNameOnly)
+	{
+		P_GET_PROPERTY_REF(FNameProperty,Z_Param_Out_OutName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->InteractWithNameOnly(Z_Param_Out_OutName);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execEnableCanInteract)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->EnableCanInteract();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execServerInteract)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->ServerInteract_Validate())
+		{
+			RPC_ValidateFailed(TEXT("ServerInteract_Validate"));
+			return;
+		}
+		P_THIS->ServerInteract_Implementation();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execInteract)
@@ -362,6 +396,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	void Afpscharacter::HandleFire()
 	{
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_HandleFire),NULL);
+	}
+	static FName NAME_Afpscharacter_ServerInteract = FName(TEXT("ServerInteract"));
+	void Afpscharacter::ServerInteract()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerInteract),NULL);
 	}
 	static FName NAME_Afpscharacter_ServerPickupWeapon = FName(TEXT("ServerPickupWeapon"));
 	void Afpscharacter::ServerPickupWeapon(AWeaponActor* WeaponPickup)
@@ -407,13 +446,16 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #if WITH_EDITOR
 			{ "DebugFunction", &Afpscharacter::execDebugFunction },
 #endif // WITH_EDITOR
+			{ "EnableCanInteract", &Afpscharacter::execEnableCanInteract },
 			{ "GetCurrentHealth", &Afpscharacter::execGetCurrentHealth },
+			{ "GetCurrentlyAvailableInteractable", &Afpscharacter::execGetCurrentlyAvailableInteractable },
 			{ "GetCurrentStamina", &Afpscharacter::execGetCurrentStamina },
 			{ "GetMaxHealth", &Afpscharacter::execGetMaxHealth },
 			{ "GetMaxStamina", &Afpscharacter::execGetMaxStamina },
 			{ "HandleFire", &Afpscharacter::execHandleFire },
 			{ "Interact", &Afpscharacter::execInteract },
 			{ "InteractPressed", &Afpscharacter::execInteractPressed },
+			{ "InteractWithNameOnly", &Afpscharacter::execInteractWithNameOnly },
 			{ "LoseStamina", &Afpscharacter::execLoseStamina },
 			{ "MoveX", &Afpscharacter::execMoveX },
 			{ "MoveY", &Afpscharacter::execMoveY },
@@ -427,6 +469,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "PressSprint", &Afpscharacter::execPressSprint },
 			{ "RaycastInteractCheck", &Afpscharacter::execRaycastInteractCheck },
 			{ "ReleaseSprint", &Afpscharacter::execReleaseSprint },
+			{ "ServerInteract", &Afpscharacter::execServerInteract },
 			{ "ServerPickupWeapon", &Afpscharacter::execServerPickupWeapon },
 			{ "ServerSetSprinting", &Afpscharacter::execServerSetSprinting },
 			{ "ServerStartJump", &Afpscharacter::execServerStartJump },
@@ -604,6 +647,28 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		return ReturnFunction;
 	}
 #endif //WITH_EDITOR
+	struct Z_Construct_UFunction_Afpscharacter_EnableCanInteract_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_EnableCanInteract_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_EnableCanInteract_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "EnableCanInteract", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_EnableCanInteract_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_EnableCanInteract_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_EnableCanInteract()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_EnableCanInteract_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_GetCurrentHealth_Statics
 	{
 		struct fpscharacter_eventGetCurrentHealth_Parms
@@ -636,6 +701,46 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_GetCurrentHealth_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics
+	{
+		struct fpscharacter_eventGetCurrentlyAvailableInteractable_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((fpscharacter_eventGetCurrentlyAvailableInteractable_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(fpscharacter_eventGetCurrentlyAvailableInteractable_Parms), &Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Interaction" },
+		{ "Comment", "//Gets the weapon actor the player is currently looking at within view range, and returns the fstring of its name. To be implemented in HUD blueprints from the return value\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Gets the weapon actor the player is currently looking at within view range, and returns the fstring of its name. To be implemented in HUD blueprints from the return value" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "GetCurrentlyAvailableInteractable", nullptr, nullptr, sizeof(fpscharacter_eventGetCurrentlyAvailableInteractable_Parms), Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -813,6 +918,40 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_InteractPressed_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics
+	{
+		struct fpscharacter_eventInteractWithNameOnly_Parms
+		{
+			FName OutName;
+		};
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_OutName;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::NewProp_OutName = { "OutName", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventInteractWithNameOnly_Parms, OutName), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::NewProp_OutName,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Overload for if we are just looking, and want the interaction name instead\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Overload for if we are just looking, and want the interaction name instead" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "InteractWithNameOnly", nullptr, nullptr, sizeof(fpscharacter_eventInteractWithNameOnly_Parms), Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1162,9 +1301,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RaycastInteractCheck_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "/*\n\x09May call ServerPickupWeapon RPC\n\x09*///Checks for interact via raycast\n" },
+		{ "Comment", "//Checks for interact via raycast\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "May call ServerPickupWeapon RPC\n//Checks for interact via raycast" },
+		{ "ToolTip", "Checks for interact via raycast" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RaycastInteractCheck_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RaycastInteractCheck", nullptr, nullptr, sizeof(fpscharacter_eventRaycastInteractCheck_Parms), Z_Construct_UFunction_Afpscharacter_RaycastInteractCheck_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RaycastInteractCheck_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RaycastInteractCheck_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RaycastInteractCheck_Statics::Function_MetaDataParams)) };
@@ -1196,6 +1335,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ReleaseSprint_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerInteract_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerInteract_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/*\n\x09May call ServerPickupWeapon RPC\n\x09*/" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "May call ServerPickupWeapon RPC" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerInteract_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerInteract", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerInteract_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerInteract_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerInteract()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerInteract_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1811,6 +1974,10 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InteractTimerHandle;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentInteractionName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_CurrentInteractionName;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractInterval_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InteractInterval;
@@ -1961,6 +2128,10 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FPSMesh;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThirdPersonGunMesh_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ThirdPersonGunMesh;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CrouchTime_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CrouchTime;
@@ -1989,13 +2160,16 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #if WITH_EDITOR
 		{ &Z_Construct_UFunction_Afpscharacter_DebugFunction, "DebugFunction" }, // 2576565601
 #endif //WITH_EDITOR
+		{ &Z_Construct_UFunction_Afpscharacter_EnableCanInteract, "EnableCanInteract" }, // 486443841
 		{ &Z_Construct_UFunction_Afpscharacter_GetCurrentHealth, "GetCurrentHealth" }, // 1678929625
+		{ &Z_Construct_UFunction_Afpscharacter_GetCurrentlyAvailableInteractable, "GetCurrentlyAvailableInteractable" }, // 4101439539
 		{ &Z_Construct_UFunction_Afpscharacter_GetCurrentStamina, "GetCurrentStamina" }, // 1877127190
 		{ &Z_Construct_UFunction_Afpscharacter_GetMaxHealth, "GetMaxHealth" }, // 2374698544
 		{ &Z_Construct_UFunction_Afpscharacter_GetMaxStamina, "GetMaxStamina" }, // 3774589202
 		{ &Z_Construct_UFunction_Afpscharacter_HandleFire, "HandleFire" }, // 3290021116
 		{ &Z_Construct_UFunction_Afpscharacter_Interact, "Interact" }, // 2837811715
 		{ &Z_Construct_UFunction_Afpscharacter_InteractPressed, "InteractPressed" }, // 3915637269
+		{ &Z_Construct_UFunction_Afpscharacter_InteractWithNameOnly, "InteractWithNameOnly" }, // 2027393690
 		{ &Z_Construct_UFunction_Afpscharacter_LoseStamina, "LoseStamina" }, // 3542002802
 		{ &Z_Construct_UFunction_Afpscharacter_MoveX, "MoveX" }, // 1139188873
 		{ &Z_Construct_UFunction_Afpscharacter_MoveY, "MoveY" }, // 2819240834
@@ -2007,8 +2181,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_PickupWeapon, "PickupWeapon" }, // 1931033833
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP, "PositionAndAttachGunInFP" }, // 260365713
 		{ &Z_Construct_UFunction_Afpscharacter_PressSprint, "PressSprint" }, // 2378583722
-		{ &Z_Construct_UFunction_Afpscharacter_RaycastInteractCheck, "RaycastInteractCheck" }, // 1975891563
+		{ &Z_Construct_UFunction_Afpscharacter_RaycastInteractCheck, "RaycastInteractCheck" }, // 2645496397
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseSprint, "ReleaseSprint" }, // 3846209980
+		{ &Z_Construct_UFunction_Afpscharacter_ServerInteract, "ServerInteract" }, // 2423912466
 		{ &Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon, "ServerPickupWeapon" }, // 633494461
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSetSprinting, "ServerSetSprinting" }, // 1602645312
 		{ &Z_Construct_UFunction_Afpscharacter_ServerStartJump, "ServerStartJump" }, // 1084212856
@@ -2089,6 +2264,13 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractTimerHandle = { "InteractTimerHandle", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, InteractTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractTimerHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractTimerHandle_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentInteractionName_MetaData[] = {
+		{ "Category", "fpscharacter" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentInteractionName = { "CurrentInteractionName", nullptr, (EPropertyFlags)0x0020080000002015, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, CurrentInteractionName), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentInteractionName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentInteractionName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractInterval_MetaData[] = {
 		{ "Category", "fpscharacter" },
@@ -2420,6 +2602,16 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_FPSMesh = { "FPSMesh", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, FPSMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_FPSMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_FPSMesh_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_ThirdPersonGunMesh_MetaData[] = {
+		{ "Category", "Mesh" },
+		{ "Comment", "//Mesh for third person\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Mesh for third person" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_ThirdPersonGunMesh = { "ThirdPersonGunMesh", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, ThirdPersonGunMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_ThirdPersonGunMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_ThirdPersonGunMesh_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_CrouchTime_MetaData[] = {
 		{ "Category", "Crouch" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
@@ -2448,6 +2640,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_SwitchWeaponAfterPickup,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractInputIntervalTimerHandle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractTimerHandle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentInteractionName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractInterval,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MaxInteractRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_bCanInteract,
@@ -2485,6 +2678,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_FPSGunComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_FPSCameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_FPSMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_ThirdPersonGunMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_CrouchTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_StaminaTimerHandle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EquippedGun_Underlying,
@@ -2517,7 +2711,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 2082889067);
+	IMPLEMENT_CLASS(Afpscharacter, 1606480910);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

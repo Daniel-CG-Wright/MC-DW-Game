@@ -266,6 +266,10 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractionTime_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InteractionTime;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractionName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_InteractionName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -305,10 +309,20 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionTime = { "InteractionTime", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UInteractableObjectComponent, InteractionTime), METADATA_PARAMS(Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionTime_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionName_MetaData[] = {
+		{ "Category", "InteractableObjectComponent" },
+		{ "Comment", "//Name of interaction which will be shown in the HUD\n" },
+		{ "ModuleRelativePath", "InteractableObjectComponent.h" },
+		{ "ToolTip", "Name of interaction which will be shown in the HUD" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionName = { "InteractionName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UInteractableObjectComponent, InteractionName), METADATA_PARAMS(Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInteractableObjectComponent_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_ThisInteractionType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_ThisInteractionType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionTime,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionName,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UInteractableObjectComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UInteractableObjectComponent>::IsAbstract,
@@ -337,7 +351,7 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UInteractableObjectComponent, 3869087542);
+	IMPLEMENT_CLASS(UInteractableObjectComponent, 1507607332);
 	template<> FPSGAME_API UClass* StaticClass<UInteractableObjectComponent>()
 	{
 		return UInteractableObjectComponent::StaticClass();

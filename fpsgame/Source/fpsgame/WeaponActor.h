@@ -24,8 +24,11 @@ UENUM(BlueprintType)
 enum class Guns : uint8 {
 	NONE,
 	//Default testing pistol
-	PROTOTYPE_PISTOL,
-	PROTOTYPE_AR
+	PROTOTYPE_PISTOL UMETA(DisplayName = "Prototype Pistol"),
+	//testing AR
+	PROTOTYPE_AR UMETA(Displayname = "Prototype AR"),
+
+	LAST
 };
 
 UENUM(BlueprintType)
@@ -67,6 +70,9 @@ USTRUCT(BlueprintType)
 struct FWeaponDataStruct
 {
 	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		FName WeaponName;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 		TSubclassOf<class AProjectileBullet> ProjectileClass;

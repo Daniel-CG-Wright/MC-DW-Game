@@ -30,10 +30,12 @@ Afpscharacter::Afpscharacter()
 	FPSMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMesh"));
 	check(FPSMesh != nullptr);
 
+	ThirdPersonGunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ThirdPersonMesh"));
+	check(ThirdPersonGunMesh != nullptr)
 	//Only owning player sees this mesh
 	FPSMesh->SetOnlyOwnerSee(true);
-
-
+	ThirdPersonGunMesh->SetOwnerNoSee(true);
+	ThirdPersonGunMesh->SetupAttachment(GetMesh());
 
 	//Disable some environmental shadows to preserve the illusion of using a single mesh
 	FPSMesh->bCastDynamicShadow = false;
@@ -187,10 +189,49 @@ void Afpscharacter::InteractPressed()
 	//Logic for pressing interact goes here
 	if (bCanInteract)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Interacting"));
+		//Stop floooding of interact actions, we are giving a lot of power to the client here so may need to strengthen this later and move to server, but that defeats the purpose
+		//as this function is designed to stop overloading the server with interact RPCs
+		bCanInteract = false;
+		GetWorld()->GetTimerManager().SetTimer(InteractInputIntervalTimerHandle, this, &Afpscharacter::EnableCanInteract, InteractInterval, false);
 		Interact();
 
 	}
 }
+
+void Afpscharacter::EnableCanInteract()
+{
+	bCanInteract = true;
+}
+
+//Ticking function to get what we are currently looking at
+bool Afpscharacter::GetCurrentlyAvailableInteractable()
+{
+
+	//Hide if can't interact
+	if (!bCanInteract)
+	{
+		return false;
+	}
+
+	//Define output fname
+	FName interactname = FName();
+	//Perform interact checks but as a just looking
+	InteractWithNameOnly(interactname);
+
+	CurrentInteractionName = interactname;
+	
+	if (!interactname.IsNone())
+	{
+		//interaction availalbe
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 
 void Afpscharacter::SwitchPrimaryInputImplementation()
 {
@@ -488,6 +529,18 @@ void Afpscharacter::OnRep_ChangeWeapon()
 
 bool Afpscharacter::CollisionInteractCheck(AActor* CollidingActor)
 {
+	//Currently, there does not seem to be a need to implement collision-based picking up of guns.
+	/*
+	If we were to implement it, we would do the following:
+	- Use data structs to store the gun actor reference and the time the collision overlap started
+	- Store the struct in a set at the begin overlap event
+	- When trying to pick up a gun, we would iterate through the set, return the oldest gun added to the set
+	- We would then pick this gun up
+	- When the on end overlap event for a gun fires, we remove its struct from the set.
+
+
+	If we do not implement it, we should delete the collision components on the weapon actors.
+	*/
 	return false;
 }
 
@@ -508,7 +561,12 @@ bool Afpscharacter::RaycastInteractCheck(FHitResult &ResultOutHit)
 	CollisionParams.AddIgnoredActor(this->GetOwner());
 
 	//Draw debug line
-	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 5, 0, 1);
+	if (GetLocalRole() == ROLE_Authority)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Imma be sick just now"));
+		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 5, 0, 1);
+
+	}
 
 	//Performs raycast
 	return GetWorld()->LineTraceSingleByChannel(ResultOutHit, Start, End, ECC_Visibility, CollisionParams);
@@ -519,9 +577,10 @@ bool Afpscharacter::RaycastInteractCheck(FHitResult &ResultOutHit)
 void Afpscharacter::Interact()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Interacting"));
-
+	DebugFunction();
 	//First we need to check for raycast for where we are looking as this takes priority; we can always make this an option to change later
-	//Where the output is at
+		//Where the output is at
+		//We check if the client gets a hit first, if they do then we can check on server, as otherwsie there is no point running it on the server.
 	FHitResult OutHit;
 	//Perform raycast check
 	bool IsHit = RaycastInteractCheck(OutHit);
@@ -549,20 +608,85 @@ void Afpscharacter::Interact()
 		//If the item is interactable, we continue
 		if (HitInteractableComponent != nullptr)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("We got a component bois"));
-
-			switch (HitInteractableComponent->GetInteractionType())
+			
+			//Seems valid on client, let's run on the server
+			if (GetLocalRole() < ROLE_Authority)
 			{
-			case InteractionTypes::WEAPON_PICKUP:
-				//Logic for weapon pickup
-				UE_LOG(LogTemp, Warning, TEXT("We got a pickup bois"));
-
-				PickupWeapon(Cast<AWeaponActor>(HitActor));
+				ServerInteract();
 			}
+			else
+			{
+				switch (HitInteractableComponent->GetInteractionType())
+				{
+				case InteractionTypes::WEAPON_PICKUP:
+					//Logic for weapon pickup
+					UE_LOG(LogTemp, Warning, TEXT("We got a pickup bois"));
+
+					PickupWeapon(Cast<AWeaponActor>(HitActor));
+				}
+			}
+			
+
 		}
 	}
+	
 
 	
+}
+
+void Afpscharacter::ServerInteract_Implementation()
+{
+	Interact();
+}
+
+bool Afpscharacter::ServerInteract_Validate()
+{
+	return true;
+}
+
+
+void Afpscharacter::InteractWithNameOnly(FName& OutName)
+{
+
+	//First we need to check for raycast for where we are looking as this takes priority; we can always make this an option to change later
+	//Where the output is at
+	FHitResult OutHit;
+	//Perform raycast check
+	bool IsHit = RaycastInteractCheck(OutHit);
+	AActor* HitActor;
+
+	if (!IsHit)
+	{
+		//Move onto the collision check
+
+	}
+	else
+	{
+		//		HitActor = OutHit.GetActor();
+
+	}
+	HitActor = OutHit.GetActor();
+
+	//Logic for if a hit was detected in collision or raycast
+	if (IsHit && HitActor)
+	{
+		UInteractableObjectComponent* HitInteractableComponent = HitActor->FindComponentByClass<UInteractableObjectComponent>();
+
+		//If the item is interactable, we continue
+		if (HitInteractableComponent != nullptr)
+		{
+			OutName = HitInteractableComponent->InteractionName;
+
+		}
+		else
+		{
+			OutName = FName();
+		}
+	}
+	else
+	{
+		OutName = FName();
+	}
 }
 void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 {
@@ -571,7 +695,7 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 	//Need to run RPC on server
 	if (GetLocalRole() < ROLE_Authority)
 	{
-		ServerPickupWeapon(WeaponPickup);
+		//ServerPickupWeapon(WeaponPickup);
 	}
 
 	//Logic for picking up weapon goes here

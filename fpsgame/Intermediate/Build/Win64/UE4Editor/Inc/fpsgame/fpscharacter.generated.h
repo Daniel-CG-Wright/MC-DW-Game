@@ -28,6 +28,8 @@ struct FHitResult;
 	virtual bool ServerSetSprinting_Validate(bool ); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
+	virtual bool ServerInteract_Validate(); \
+	virtual void ServerInteract_Implementation(); \
  \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
@@ -66,8 +68,12 @@ struct FHitResult;
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
 	DECLARE_FUNCTION(execMoveY); \
+	DECLARE_FUNCTION(execGetCurrentlyAvailableInteractable); \
 	DECLARE_FUNCTION(execCollisionInteractCheck); \
 	DECLARE_FUNCTION(execRaycastInteractCheck); \
+	DECLARE_FUNCTION(execInteractWithNameOnly); \
+	DECLARE_FUNCTION(execEnableCanInteract); \
+	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
 	DECLARE_FUNCTION(execInteractPressed);
 
@@ -80,6 +86,8 @@ struct FHitResult;
 	virtual bool ServerSetSprinting_Validate(bool ); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
+	virtual bool ServerInteract_Validate(); \
+	virtual void ServerInteract_Implementation(); \
  \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
@@ -118,8 +126,12 @@ struct FHitResult;
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
 	DECLARE_FUNCTION(execMoveY); \
+	DECLARE_FUNCTION(execGetCurrentlyAvailableInteractable); \
 	DECLARE_FUNCTION(execCollisionInteractCheck); \
 	DECLARE_FUNCTION(execRaycastInteractCheck); \
+	DECLARE_FUNCTION(execInteractWithNameOnly); \
+	DECLARE_FUNCTION(execEnableCanInteract); \
+	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
 	DECLARE_FUNCTION(execInteractPressed);
 
@@ -219,6 +231,7 @@ public: \
 	FORCEINLINE static uint32 __PPO__SwitchWeaponAfterPickup() { return STRUCT_OFFSET(Afpscharacter, SwitchWeaponAfterPickup); } \
 	FORCEINLINE static uint32 __PPO__InteractInputIntervalTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractInputIntervalTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__InteractTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractTimerHandle); } \
+	FORCEINLINE static uint32 __PPO__CurrentInteractionName() { return STRUCT_OFFSET(Afpscharacter, CurrentInteractionName); } \
 	FORCEINLINE static uint32 __PPO__InteractInterval() { return STRUCT_OFFSET(Afpscharacter, InteractInterval); } \
 	FORCEINLINE static uint32 __PPO__MaxInteractRange() { return STRUCT_OFFSET(Afpscharacter, MaxInteractRange); } \
 	FORCEINLINE static uint32 __PPO__bCanInteract() { return STRUCT_OFFSET(Afpscharacter, bCanInteract); } \

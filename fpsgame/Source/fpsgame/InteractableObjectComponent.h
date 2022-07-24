@@ -38,6 +38,10 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	//Name of interaction which will be shown in the HUD
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FName InteractionName;
+
 	UFUNCTION(BlueprintCallable)
 		InteractionTypes GetInteractionType() { return ThisInteractionType; }
 

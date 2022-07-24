@@ -56,6 +56,20 @@ protected:
 	May call ServerPickupWeapon RPC
 	*/
 
+	UFUNCTION(Server, Reliable, WithValidation)
+	
+		void ServerInteract();
+	
+	UFUNCTION()
+		void EnableCanInteract();
+
+	
+	//Overload for if we are just looking, and want the interaction name instead
+	UFUNCTION()
+		void InteractWithNameOnly(FName& OutName);
+	//Will not call an RPC
+
+
 	//Checks for interact via raycast
 	UFUNCTION()
 		bool RaycastInteractCheck(FHitResult &ResultOutHit);
@@ -72,6 +86,8 @@ protected:
 		//used to ensure that interaction takes 'interactiontime' seconds @UInteractableObjectComponent
 		FTimerHandle InteractTimerHandle;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Transient)
+		FName CurrentInteractionName;
 
 	UPROPERTY(EditAnywhere)
 		float InteractInterval; //time interval in secondsfor interactions to take place
@@ -82,6 +98,10 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Transient)
 		bool bCanInteract;
+
+	//Gets the weapon actor the player is currently looking at within view range, and returns the fstring of its name. To be implemented in HUD blueprints from the return value
+	UFUNCTION(BlueprintCallable, Category = "Interaction")
+		bool GetCurrentlyAvailableInteractable();
 
 	//Handles movement inputs for forward-backward
 	UFUNCTION()
@@ -373,6 +393,10 @@ public:
 	//FPS mesh component, visible only to the owning player
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 		USkeletalMeshComponent* FPSMesh;
+
+	//Mesh for third person
+	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+		USkeletalMeshComponent* ThirdPersonGunMesh;
 
 	UPROPERTY(EditAnywhere, Category = "Crouch")
 		float CrouchTime;

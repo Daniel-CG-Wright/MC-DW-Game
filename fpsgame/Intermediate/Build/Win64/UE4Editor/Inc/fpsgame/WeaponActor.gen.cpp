@@ -239,7 +239,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		return Guns_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_Guns(Guns_StaticEnum, TEXT("/Script/fpsgame"), TEXT("Guns"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_Guns_Hash() { return 4016207450U; }
+	uint32 Get_Z_Construct_UEnum_fpsgame_Guns_Hash() { return 2462140954U; }
 	UEnum* Z_Construct_UEnum_fpsgame_Guns()
 	{
 #if WITH_HOT_RELOAD
@@ -254,14 +254,20 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 				{ "Guns::NONE", (int64)Guns::NONE },
 				{ "Guns::PROTOTYPE_PISTOL", (int64)Guns::PROTOTYPE_PISTOL },
 				{ "Guns::PROTOTYPE_AR", (int64)Guns::PROTOTYPE_AR },
+				{ "Guns::LAST", (int64)Guns::LAST },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
+				{ "LAST.Name", "Guns::LAST" },
 				{ "ModuleRelativePath", "WeaponActor.h" },
 				{ "NONE.Name", "Guns::NONE" },
+				{ "PROTOTYPE_AR.Comment", "//testing AR\n" },
+				{ "PROTOTYPE_AR.Displayname", "Prototype AR" },
 				{ "PROTOTYPE_AR.Name", "Guns::PROTOTYPE_AR" },
+				{ "PROTOTYPE_AR.ToolTip", "testing AR" },
 				{ "PROTOTYPE_PISTOL.Comment", "//Default testing pistol\n" },
+				{ "PROTOTYPE_PISTOL.DisplayName", "Prototype Pistol" },
 				{ "PROTOTYPE_PISTOL.Name", "Guns::PROTOTYPE_PISTOL" },
 				{ "PROTOTYPE_PISTOL.ToolTip", "Default testing pistol" },
 			};
@@ -372,6 +378,10 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponDataStruct
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_WeaponName;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ProjectileClass;
@@ -449,6 +459,13 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponDataStruct
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FWeaponDataStruct>();
 	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_WeaponName_MetaData[] = {
+		{ "Category", "Weapon Info" },
+		{ "ModuleRelativePath", "WeaponActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_WeaponName = { "WeaponName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponDataStruct, WeaponName), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_WeaponName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_WeaponName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_ProjectileClass_MetaData[] = {
 		{ "Category", "Projectile" },
@@ -588,6 +605,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponDataStruct
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_BaseScale = { "BaseScale", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponDataStruct, BaseScale), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_BaseScale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_BaseScale_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_WeaponName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_ProjectileClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MaxRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_FireRate,
@@ -637,7 +655,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponDataStruct
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponDataStruct_Hash() { return 503532017U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponDataStruct_Hash() { return 2718820048U; }
 	DEFINE_FUNCTION(AWeaponActor::execSetWeaponDataStruct)
 	{
 		P_GET_STRUCT(FWeaponDataStruct,Z_Param_NewWeaponDataStruct);
