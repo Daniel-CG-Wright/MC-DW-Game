@@ -35,7 +35,7 @@ Afpscharacter::Afpscharacter()
 	//Only owning player sees this mesh
 	FPSMesh->SetOnlyOwnerSee(true);
 	ThirdPersonGunMesh->SetOwnerNoSee(true);
-	ThirdPersonGunMesh->SetupAttachment(GetMesh());
+	ThirdPersonGunMesh->SetupAttachment(GetMesh(), TEXT("TP_GunSocket"));
 
 	//Disable some environmental shadows to preserve the illusion of using a single mesh
 	FPSMesh->bCastDynamicShadow = false;
@@ -123,6 +123,13 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	//Replicate gun
 	DOREPLIFETIME(Afpscharacter, EquippedGun);
 
+	//Replicate weapon data so that players know what gun you have equipped
+	DOREPLIFETIME(Afpscharacter, PrimaryData);
+
+	DOREPLIFETIME(Afpscharacter, SecondaryData);
+
+	//For replicating pitch
+	DOREPLIFETIME_CONDITION(Afpscharacter, SynchronisedControlRotation, COND_SimulatedOnly);
 }
 
 
@@ -290,6 +297,19 @@ void Afpscharacter::MoveX(float Value)
 
 }
 
+void Afpscharacter::ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation)
+{
+	if (!IsLocallyControlled())
+	{
+		FPSCameraComponent->SetWorldRotation(NewSynchronisedControlRotation);
+		SynchronisedControlRotation = NewSynchronisedControlRotation;
+	}
+}
+
+void Afpscharacter::OnRep_ControlRotation()
+{
+	FPSCameraComponent->SetWorldRotation(SynchronisedControlRotation);
+}
 void Afpscharacter::ApplySensitivityAndInversionToMouseInputX(float Value)
 {
 	///Applies sensitivity and inversion to mouse input X.
@@ -305,6 +325,11 @@ void Afpscharacter::ApplySensitivityAndInversionToMouseInputY(float Value)
 
 	AddControllerPitchInput((InvertY ? -1 * (Value * YSensitivity) : (Value * YSensitivity)));
 
+	//to sync pitch input
+	if (IsLocallyControlled())
+	{
+		ServerSyncControlRotation(GetControlRotation());
+	}
 }
 
 //These jump functions should set the bPressedJump variable
@@ -696,8 +721,9 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 	if (GetLocalRole() < ROLE_Authority)
 	{
 		//ServerPickupWeapon(WeaponPickup);
+		UE_LOG(LogTemp, Warning, TEXT("Disgusting client"));
 	}
-
+	UE_LOG(LogTemp, Warning, TEXT("Servertime"));
 	//Logic for picking up weapon goes here
 
 	//Get weapon data, and weapon equip type
@@ -805,6 +831,7 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 	BulletClass = PrimaryData.ProjectileClass;
 
 	EquippedGun = Equips::PRIMARY;
+	PositionAndAttachGunInTP(PrimaryData);
 
 	CurrentlyEquippedWeaponData = PrimaryData;
 
@@ -841,10 +868,11 @@ void Afpscharacter::DebugFunction()
 
 void Afpscharacter::SwitchSecondary(bool bIsRep)
 {
-
+	
 	//Stop crashes if no secondary exists
 	if (SecondaryGun == Guns::NONE)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("ahh no"));
 		return;
 	}
 	UE_LOG(LogTemp, Warning, TEXT("Equipping secondary"));
@@ -861,6 +889,8 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 
 	
 	}
+
+	PositionAndAttachGunInTP(SecondaryData);
 	BulletClass = SecondaryData.ProjectileClass;
 	EquippedGun = Equips::SECONDARY;
 	
@@ -886,7 +916,7 @@ void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 	FPSGunComponent->SetRelativeScale3D(GunToEquip.BaseScale);
 
 	//Attach gun to scene component
-	FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
+	//FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
 
 	//Set gun mesh to be fps mesh
 	FPSMesh->SetSkeletalMesh(GunToEquip.GunMesh);
@@ -897,7 +927,15 @@ void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 
 }
 
+void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
+{
+	//Correctly positioning gun, we do not account for left-handedness in TP as there is no need
+	ThirdPersonGunMesh->SetRelativeLocation(GunToEquip.TPBasePosition);
+	ThirdPersonGunMesh->SetRelativeRotation(GunToEquip.TPBaseRotation);
+	ThirdPersonGunMesh->SetRelativeScale3D(GunToEquip.TPBaseScale);
 
+	ThirdPersonGunMesh->SetSkeletalMesh(GunToEquip.GunMesh);
+}
 void Afpscharacter::StartFire()
 {
 	Guns CurrentSelectedGun;

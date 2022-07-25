@@ -13,6 +13,7 @@ class AController;
 class AActor;
 struct FWeaponDataStruct;
 class AWeaponActor;
+struct FRotator;
 struct FHitResult;
 #ifdef FPSGAME_fpscharacter_generated_h
 #error "fpscharacter.generated.h already included, missing '#pragma once' in fpscharacter.h"
@@ -28,6 +29,7 @@ struct FHitResult;
 	virtual bool ServerSetSprinting_Validate(bool ); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
+	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual bool ServerInteract_Validate(); \
 	virtual void ServerInteract_Implementation(); \
  \
@@ -44,6 +46,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execStartFire); \
 	DECLARE_FUNCTION(execServerSwitchSecondary); \
 	DECLARE_FUNCTION(execServerSwitchPrimary); \
+	DECLARE_FUNCTION(execPositionAndAttachGunInTP); \
 	DECLARE_FUNCTION(execPositionAndAttachGunInFP); \
 	DECLARE_FUNCTION(execSwitchSecondary); \
 	DECLARE_FUNCTION(execSwitchSecondaryInputImplementation); \
@@ -64,6 +67,8 @@ struct FHitResult;
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
 	DECLARE_FUNCTION(execStartJump); \
+	DECLARE_FUNCTION(execOnRep_ControlRotation); \
+	DECLARE_FUNCTION(execServerSyncControlRotation); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputY); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
@@ -86,6 +91,7 @@ struct FHitResult;
 	virtual bool ServerSetSprinting_Validate(bool ); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
+	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual bool ServerInteract_Validate(); \
 	virtual void ServerInteract_Implementation(); \
  \
@@ -102,6 +108,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execStartFire); \
 	DECLARE_FUNCTION(execServerSwitchSecondary); \
 	DECLARE_FUNCTION(execServerSwitchPrimary); \
+	DECLARE_FUNCTION(execPositionAndAttachGunInTP); \
 	DECLARE_FUNCTION(execPositionAndAttachGunInFP); \
 	DECLARE_FUNCTION(execSwitchSecondary); \
 	DECLARE_FUNCTION(execSwitchSecondaryInputImplementation); \
@@ -122,6 +129,8 @@ struct FHitResult;
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
 	DECLARE_FUNCTION(execStartJump); \
+	DECLARE_FUNCTION(execOnRep_ControlRotation); \
+	DECLARE_FUNCTION(execServerSyncControlRotation); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputY); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputX); \
 	DECLARE_FUNCTION(execMoveX); \
@@ -159,6 +168,10 @@ struct FHitResult;
 	struct fpscharacter_eventServerSetSprinting_Parms \
 	{ \
 		bool NewSprinting; \
+	}; \
+	struct fpscharacter_eventServerSyncControlRotation_Parms \
+	{ \
+		FRotator NewSynchronisedControlRotation; \
 	};
 
 
@@ -173,7 +186,10 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		CurrentlyCrouching=NETFIELD_REP_START, \
+		SynchronisedControlRotation=NETFIELD_REP_START, \
+		PrimaryData, \
+		SecondaryData, \
+		CurrentlyCrouching, \
 		CurrentStamina, \
 		CurrentHealth, \
 		IsSprinting, \
@@ -192,7 +208,10 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		CurrentlyCrouching=NETFIELD_REP_START, \
+		SynchronisedControlRotation=NETFIELD_REP_START, \
+		PrimaryData, \
+		SecondaryData, \
+		CurrentlyCrouching, \
 		CurrentStamina, \
 		CurrentHealth, \
 		IsSprinting, \
@@ -235,6 +254,7 @@ public: \
 	FORCEINLINE static uint32 __PPO__InteractInterval() { return STRUCT_OFFSET(Afpscharacter, InteractInterval); } \
 	FORCEINLINE static uint32 __PPO__MaxInteractRange() { return STRUCT_OFFSET(Afpscharacter, MaxInteractRange); } \
 	FORCEINLINE static uint32 __PPO__bCanInteract() { return STRUCT_OFFSET(Afpscharacter, bCanInteract); } \
+	FORCEINLINE static uint32 __PPO__SynchronisedControlRotation() { return STRUCT_OFFSET(Afpscharacter, SynchronisedControlRotation); } \
 	FORCEINLINE static uint32 __PPO__lognum() { return STRUCT_OFFSET(Afpscharacter, lognum); } \
 	FORCEINLINE static uint32 __PPO__PrimaryData() { return STRUCT_OFFSET(Afpscharacter, PrimaryData); } \
 	FORCEINLINE static uint32 __PPO__SecondaryData() { return STRUCT_OFFSET(Afpscharacter, SecondaryData); } \

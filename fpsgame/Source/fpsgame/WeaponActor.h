@@ -132,8 +132,20 @@ struct FWeaponDataStruct
 	//Ensures correct scale
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		FVector BaseScale;
+	
+	//Ensures correct scale for TP
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FVector TPBaseScale;
+	
+	//Ensures correct rotation fro TP
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FRotator TPBaseRotation;
+	
+	//Ensures correct position for TP
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FVector TPBasePosition;
 
-
+	
 };
 
 UCLASS()

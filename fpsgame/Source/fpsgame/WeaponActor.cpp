@@ -15,12 +15,12 @@ AWeaponActor::AWeaponActor()
 
 	//Setting up weapon's mesh
 	StaticGunMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GunMesh"));
-	StaticGunMesh->AttachToComponent(RootSceneComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
+	StaticGunMesh->SetupAttachment(RootSceneComponent);
 	//GunMesh->SetRelativeScale3D(BaseScale);
 
 	//Creating collision component
 	CollisionComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
-	CollisionComponent->AttachToComponent(RootSceneComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
+	CollisionComponent->SetupAttachment(RootSceneComponent);
 
 	BoxCollisionSize = FVector(15.0f, 15.0f, 15.0f);
 

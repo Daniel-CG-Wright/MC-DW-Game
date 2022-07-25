@@ -118,6 +118,16 @@ protected:
 	UFUNCTION()
 		void ApplySensitivityAndInversionToMouseInputY(float Value);
 
+	UFUNCTION(Server, Unreliable)
+		//Unreliable RPC call to sync server camera pitch.
+		void ServerSyncControlRotation(FRotator NewSynchronisedControlRotation);
+
+	UFUNCTION()
+		void OnRep_ControlRotation();
+
+	UPROPERTY(ReplicatedUsing = OnRep_ControlRotation)
+		FRotator SynchronisedControlRotation;
+
 	//Used to handle jumping
 	//Sets jump flag when key is pressed to jump
 	UFUNCTION()
@@ -147,10 +157,10 @@ protected:
 #endif
 
 	//Stores data for primary weapon
-	UPROPERTY()
+	UPROPERTY(Replicated)
 		FWeaponDataStruct PrimaryData;
 
-	UPROPERTY()
+	UPROPERTY(Replicated)
 		FWeaponDataStruct SecondaryData;
 
 	UPROPERTY()
@@ -275,11 +285,6 @@ protected:
 	UPROPERTY()
 		Guns SecondaryGun;
 
-
-	UFUNCTION(BlueprintImplementableEvent)
-		void SpawnAndEquipGun();
-
-
 	UFUNCTION()
 		//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.
 		void OnRep_ChangeWeapon();
@@ -308,6 +313,9 @@ protected:
 	UFUNCTION()
 		//Does the actual positioning of gun in first person
 		void PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip);
+
+	UFUNCTION()
+		void PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip);
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon", Server, Reliable)
 		//Logic for causing visual swap to primary weapon on server goes here, along with setting equipped weapon variables
