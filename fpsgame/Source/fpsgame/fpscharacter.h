@@ -125,7 +125,7 @@ protected:
 	UFUNCTION()
 		void OnRep_ControlRotation();
 
-	UPROPERTY(ReplicatedUsing = OnRep_ControlRotation)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, ReplicatedUsing = OnRep_ControlRotation)
 		FRotator SynchronisedControlRotation;
 
 	//Used to handle jumping
@@ -222,7 +222,10 @@ protected:
 	UFUNCTION(Server, Reliable)
 		void ServerStartJump();
 
-	
+	//Checks if uncrouching is possible using a raycast
+	UFUNCTION(BlueprintCallable)
+		bool CanUncrouch();
+
 	UFUNCTION()
 		void OnRep_CurrentlyCrouching();
 

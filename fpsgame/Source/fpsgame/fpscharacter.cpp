@@ -443,6 +443,32 @@ void Afpscharacter::ServerSetSprinting_Implementation(bool NewSprinting)
 	SetSprinting(NewSprinting);
 }
 
+bool Afpscharacter::CanUncrouch()
+{
+	//Use a raycast to check if space above player is clear
+	//If it is we can uncrouch
+	FHitResult ResultOutHit;
+
+	FVector Start = GetCapsuleComponent()->GetComponentLocation();
+	//multiply by 2 as it is half height
+	FVector End = Start + (FVector(0.0f, 0.0f, 1.0f) * ((DefaultHalfHeight * 2) -  CrouchedHalfHeight));
+
+	FCollisionQueryParams CollisionParams;
+	//Ignore ourselves
+	CollisionParams.AddIgnoredActor(this->GetOwner());
+
+	//Draw debug line
+	if (GetLocalRole() == ROLE_Authority)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Imma be sick just now"));
+		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 5, 0, 1);
+
+	}
+
+	//Performs raycast, returns true if nothing is present
+	return !GetWorld()->LineTraceSingleByChannel(ResultOutHit, Start, End, ECC_Visibility, CollisionParams);
+}
+
 void Afpscharacter::OnHealthUpdate()
 {
 	//Client-specific functionality

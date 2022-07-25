@@ -62,6 +62,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
 	DECLARE_FUNCTION(execOnRep_CurrentStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentlyCrouching); \
+	DECLARE_FUNCTION(execCanUncrouch); \
 	DECLARE_FUNCTION(execServerStartJump); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
@@ -124,6 +125,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execOnRep_CurrentHealth); \
 	DECLARE_FUNCTION(execOnRep_CurrentStamina); \
 	DECLARE_FUNCTION(execOnRep_CurrentlyCrouching); \
+	DECLARE_FUNCTION(execCanUncrouch); \
 	DECLARE_FUNCTION(execServerStartJump); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
