@@ -1018,7 +1018,6 @@ void Afpscharacter::ClientHitscanCheckFire()
 	if (MultiRaycastInCameraDirection(HitResults, CurrentlyEquippedWeaponData.MaxRange))
 	{
 		//Run RPC on server to ensure shot hit
-
 	}
 }
 
