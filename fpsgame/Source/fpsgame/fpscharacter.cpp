@@ -87,7 +87,6 @@ Afpscharacter::Afpscharacter()
 	//Initialize landing time
 	LandingTime = 0.5f;
 
-	bIsFiringWeapon = false;
 	DistanceToPlaceProjectileFromCamera = 25.0f;
 
 	bCanInteract = true;
@@ -181,7 +180,7 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	//ALERT this is now done entirely in blueprints.
 
 	//Binding fire action
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::StartFire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::ClientValidateFire);
 
 	//binding for weapon slots
 	PlayerInputComponent->BindAction("PrimaryGun", IE_Pressed, this, &Afpscharacter::SwitchPrimaryInputImplementation);
@@ -595,7 +594,7 @@ bool Afpscharacter::CollisionInteractCheck(AActor* CollidingActor)
 	return false;
 }
 
-bool Afpscharacter::RaycastInteractCheck(FHitResult &ResultOutHit)
+bool Afpscharacter::SingleRaycastInCameraDirection(FHitResult& ResultOutHit, float RaycastRange, ECollisionChannel CollisionChannel)
 {
 
 
@@ -605,25 +604,41 @@ bool Afpscharacter::RaycastInteractCheck(FHitResult &ResultOutHit)
 	FVector ForwardVector = FPSCameraComponent->GetForwardVector();
 
 	//End coordinate is range away from start
-	FVector End = Start + (ForwardVector * MaxInteractRange);
+	FVector End = Start + (ForwardVector * RaycastRange);
 
 	FCollisionQueryParams CollisionParams;
 	//Ignore ourselves
 	CollisionParams.AddIgnoredActor(this->GetOwner());
 
-	//Draw debug line
-	if (GetLocalRole() == ROLE_Authority)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Imma be sick just now"));
-		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 5, 0, 1);
-
-	}
+	
 
 	//Performs raycast
 	return GetWorld()->LineTraceSingleByChannel(ResultOutHit, Start, End, ECC_Visibility, CollisionParams);
 
 }
 
+bool Afpscharacter::MultiRaycastInCameraDirection(TArray<FHitResult>& ResultOutHit, float RaycastRange, ECollisionChannel CollisionChannel)
+{
+
+
+	//Start coordinates are in FPS camera
+	FVector Start = FPSCameraComponent->GetComponentLocation();
+	//Gets direction player is looking at
+	FVector ForwardVector = FPSCameraComponent->GetForwardVector();
+
+	//End coordinate is range away from start
+	FVector End = Start + (ForwardVector * RaycastRange);
+
+	FCollisionQueryParams CollisionParams;
+	//Ignore ourselves
+	CollisionParams.AddIgnoredActor(this->GetOwner());
+
+
+
+	//Performs raycast
+	return GetWorld()->LineTraceMultiByChannel(ResultOutHit, Start, End, CollisionChannel, CollisionParams);
+
+}
 
 void Afpscharacter::Interact()
 {
@@ -634,7 +649,7 @@ void Afpscharacter::Interact()
 		//We check if the client gets a hit first, if they do then we can check on server, as otherwsie there is no point running it on the server.
 	FHitResult OutHit;
 	//Perform raycast check
-	bool IsHit = RaycastInteractCheck(OutHit);
+	bool IsHit = SingleRaycastInCameraDirection(OutHit, MaxInteractRange);
 	UE_LOG(LogTemp, Warning, TEXT("IsHit =  %s"), (IsHit ? TEXT("TRUE") : TEXT("FALSE")));
 	AActor* HitActor;
 
@@ -703,7 +718,7 @@ void Afpscharacter::InteractWithNameOnly(FName& OutName)
 	//Where the output is at
 	FHitResult OutHit;
 	//Perform raycast check
-	bool IsHit = RaycastInteractCheck(OutHit);
+	bool IsHit = SingleRaycastInCameraDirection(OutHit, MaxInteractRange);
 	AActor* HitActor;
 
 	if (!IsHit)
@@ -962,54 +977,57 @@ void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 
 	ThirdPersonGunMesh->SetSkeletalMesh(GunToEquip.GunMesh);
 }
-void Afpscharacter::StartFire()
+
+
+
+void Afpscharacter::ClientValidateFire()
 {
-	Guns CurrentSelectedGun;
-
-	switch (EquippedGun)
+	//If we dont have a gun equipped, return
+	if ((EquippedGun == Equips::PRIMARY && PrimaryGun == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryGun == Guns::NONE))
 	{
-	case Equips::PRIMARY:
-		CurrentSelectedGun = PrimaryGun;
-		break;
-
-	case Equips::SECONDARY:
-		CurrentSelectedGun = SecondaryGun;
-		break;
-
-	default:
-		CurrentSelectedGun = Guns::NONE;
-		break;
+		return;
 	}
-	if (!bIsFiringWeapon && CurrentSelectedGun != Guns::NONE)
-	{
-		//Need to implement burst, semi, auto and beam weapon logic, and hitscan ands stuff
-		bIsFiringWeapon = true;
-		UWorld* World = GetWorld();
-		float trueFireRate = CurrentlyEquippedWeaponData.FireRate;
-		World->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::StopFire, trueFireRate, false);
 
-		HandleFire();
+	//Checking if we have ammo for firing
+	if (CurrentMagAmmo > 0)
+	{
+		//Activate firing functions based on firing type
+		switch (CurrentlyEquippedWeaponData.WAWeaponHitDetectionType)
+		{
+		case FireType::HITSCAN:
+			ClientHitscanCheckFire();
+			break;
+		case FireType::PROJECTILE:
+			//add projectile logic
+			break;
+		case FireType::HYBRID:
+			//Add hybrid logic
+			break;
+		default:
+			UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
+			break;
+		}
 
 	}
 }
 
-void Afpscharacter::StopFire()
+void Afpscharacter::ClientHitscanCheckFire()
 {
-	bIsFiringWeapon = false;
+	TArray<FHitResult> HitResults;
+
+	if (MultiRaycastInCameraDirection(HitResults, CurrentlyEquippedWeaponData.MaxRange))
+	{
+		//Run RPC on server to ensure shot hit
+
+	}
+}
+
+void Afpscharacter::ServerValidateFire_Implementation()
+{
 
 }
 
-void Afpscharacter::HandleFire_Implementation()
+void Afpscharacter::ServerHitscanCheckFire()
 {
-	FVector spawnLocation = FPSCameraComponent->GetComponentLocation();
-	FRotator spawnRotation = GetControlRotation();
 
-	FActorSpawnParameters spawnParameters;
-	spawnParameters.Instigator = GetInstigator();
-	spawnParameters.Owner = this;
-
-	UE_LOG(LogTemp, Warning, TEXT("Spawning"));
-	AProjectileBullet* spawnedProjectile = GetWorld()->SpawnActor<AProjectileBullet>(BulletClass, spawnLocation, spawnRotation, spawnParameters);
-	spawnedProjectile->SetProjectileSpeed(CurrentlyEquippedWeaponData.ProjectileSpeed);
-	spawnedProjectile->FireInDirection(GetActorForwardVector());
 }

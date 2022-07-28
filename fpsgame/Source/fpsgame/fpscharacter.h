@@ -42,7 +42,24 @@ protected:
 		bool SwitchWeaponAfterPickup;
 
 	
-		
+//Firing functions
+protected:
+	//Checks if the client can fire (checks ammo, fire rate, animation etc). If so, we move onto ClientFire
+	UFUNCTION()
+		void ClientValidateFire();
+
+	//Checks if the client will hit anything on their side when they fire (hitscan)
+	UFUNCTION()
+		void ClientHitscanCheckFire();
+
+	//Checks on server if the player could actually fire, to prevent cheating with ammo or firerates etc. RPC calle by ClientHitscanCheckFire
+	UFUNCTION(Server, Unreliable)
+		void ServerValidateFire();
+	
+	//Checks if the player hit anything on the server, requires rewinds and stuff. Not an RPC as called by ServerValidateFire
+	UFUNCTION()
+		void ServerHitscanCheckFire();
+
 //Player input functions
 protected:
 	//Function for pressing interact
@@ -70,10 +87,14 @@ protected:
 	//Will not call an RPC
 
 
-	//Checks for interact via raycast
+	//Used to send a raycast forwards from camera, 
 	UFUNCTION()
-		bool RaycastInteractCheck(FHitResult &ResultOutHit);
+		bool SingleRaycastInCameraDirection(FHitResult &ResultOutHit, float RaycastRange, ECollisionChannel CollisionChannel = ECC_Visibility);
 	
+	//Used in shooting, multi raycast
+	UFUNCTION()
+		bool MultiRaycastInCameraDirection(TArray<FHitResult>& ResultOutHit, float RaycastRange, ECollisionChannel CollisionChannel = ECC_Visibility);
+
 	//Checks for interact via collision
 	UFUNCTION()
 		bool CollisionInteractCheck(AActor* CollidingActor);
@@ -165,6 +186,14 @@ protected:
 
 	UPROPERTY()
 		FWeaponDataStruct CurrentlyEquippedWeaponData;
+
+	//Ripped from currently equipped weapon data
+	UPROPERTY()
+		int CurrentMaxMagSize;
+	
+	//Ripped intiially from currently equipped weapon data, and we change it rather than changing the weapon data during events like firing, and only change the weapon data upon dropping the weapon to reflect mag
+	UPROPERTY()
+		int CurrentMagAmmo;
 
 	//Whether player is currently crouching
 	UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing = OnRep_CurrentlyCrouching)
@@ -331,28 +360,6 @@ protected:
 	//Should be set by weapon when equipped.
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon | Projectile")
 		TSubclassOf<class AProjectileBullet> BulletClass;
-
-	bool bIsFiringWeapon;
-
-	UFUNCTION(BlueprintCallable, Category = "Weapon")
-		//Fires weapon
-		void StartFire();
-
-	UFUNCTION(BlueprintCallable, Category = "Weapon")
-		//Function for stopping weapon fire. Once this is called, the player can call StartFire again
-		void StopFire();
-
-	//Server function for spawning projectiles
-	UFUNCTION(Server, Reliable)
-		//WARNING - RELIABLE RPC CALL
-		void HandleFire();
-
-
-	//Timer handle used to provide the fire rate delay in game
-	FTimerHandle FiringTimer;
-
-
-
 
 public:
 	// Called every frame

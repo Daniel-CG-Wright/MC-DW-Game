@@ -30,6 +30,7 @@ AWeaponActor::AWeaponActor()
 	//Creating interaction component
 	InteractionComponent = CreateDefaultSubobject<UInteractableObjectComponent>(TEXT("InteractionComponent"));
 	
+	
 }
 
 // Called when the game starts or when spawned
@@ -37,7 +38,7 @@ void AWeaponActor::BeginPlay()
 {
 	Super::BeginPlay();
 	
-
+	
 }
 
 // Called every frame

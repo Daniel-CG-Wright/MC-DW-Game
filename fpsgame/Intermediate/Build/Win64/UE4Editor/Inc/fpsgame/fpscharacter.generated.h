@@ -22,7 +22,6 @@ struct FHitResult;
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_22_SPARSE_DATA
 #define fpsgame_Source_fpsgame_fpscharacter_h_22_RPC_WRAPPERS \
-	virtual void HandleFire_Implementation(); \
 	virtual void ServerSwitchSecondary_Implementation(); \
 	virtual void ServerSwitchPrimary_Implementation(); \
 	virtual void ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup); \
@@ -32,6 +31,7 @@ struct FHitResult;
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual bool ServerInteract_Validate(); \
 	virtual void ServerInteract_Implementation(); \
+	virtual void ServerValidateFire_Implementation(); \
  \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
@@ -41,9 +41,6 @@ struct FHitResult;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
-	DECLARE_FUNCTION(execHandleFire); \
-	DECLARE_FUNCTION(execStopFire); \
-	DECLARE_FUNCTION(execStartFire); \
 	DECLARE_FUNCTION(execServerSwitchSecondary); \
 	DECLARE_FUNCTION(execServerSwitchPrimary); \
 	DECLARE_FUNCTION(execPositionAndAttachGunInTP); \
@@ -76,16 +73,20 @@ struct FHitResult;
 	DECLARE_FUNCTION(execMoveY); \
 	DECLARE_FUNCTION(execGetCurrentlyAvailableInteractable); \
 	DECLARE_FUNCTION(execCollisionInteractCheck); \
-	DECLARE_FUNCTION(execRaycastInteractCheck); \
+	DECLARE_FUNCTION(execMultiRaycastInCameraDirection); \
+	DECLARE_FUNCTION(execSingleRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execInteractWithNameOnly); \
 	DECLARE_FUNCTION(execEnableCanInteract); \
 	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
-	DECLARE_FUNCTION(execInteractPressed);
+	DECLARE_FUNCTION(execInteractPressed); \
+	DECLARE_FUNCTION(execServerHitscanCheckFire); \
+	DECLARE_FUNCTION(execServerValidateFire); \
+	DECLARE_FUNCTION(execClientHitscanCheckFire); \
+	DECLARE_FUNCTION(execClientValidateFire);
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	virtual void HandleFire_Implementation(); \
 	virtual void ServerSwitchSecondary_Implementation(); \
 	virtual void ServerSwitchPrimary_Implementation(); \
 	virtual void ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup); \
@@ -95,6 +96,7 @@ struct FHitResult;
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual bool ServerInteract_Validate(); \
 	virtual void ServerInteract_Implementation(); \
+	virtual void ServerValidateFire_Implementation(); \
  \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
@@ -104,9 +106,6 @@ struct FHitResult;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
-	DECLARE_FUNCTION(execHandleFire); \
-	DECLARE_FUNCTION(execStopFire); \
-	DECLARE_FUNCTION(execStartFire); \
 	DECLARE_FUNCTION(execServerSwitchSecondary); \
 	DECLARE_FUNCTION(execServerSwitchPrimary); \
 	DECLARE_FUNCTION(execPositionAndAttachGunInTP); \
@@ -139,12 +138,17 @@ struct FHitResult;
 	DECLARE_FUNCTION(execMoveY); \
 	DECLARE_FUNCTION(execGetCurrentlyAvailableInteractable); \
 	DECLARE_FUNCTION(execCollisionInteractCheck); \
-	DECLARE_FUNCTION(execRaycastInteractCheck); \
+	DECLARE_FUNCTION(execMultiRaycastInCameraDirection); \
+	DECLARE_FUNCTION(execSingleRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execInteractWithNameOnly); \
 	DECLARE_FUNCTION(execEnableCanInteract); \
 	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
-	DECLARE_FUNCTION(execInteractPressed);
+	DECLARE_FUNCTION(execInteractPressed); \
+	DECLARE_FUNCTION(execServerHitscanCheckFire); \
+	DECLARE_FUNCTION(execServerValidateFire); \
+	DECLARE_FUNCTION(execClientHitscanCheckFire); \
+	DECLARE_FUNCTION(execClientValidateFire);
 
 
 #if WITH_EDITOR
@@ -261,6 +265,8 @@ public: \
 	FORCEINLINE static uint32 __PPO__PrimaryData() { return STRUCT_OFFSET(Afpscharacter, PrimaryData); } \
 	FORCEINLINE static uint32 __PPO__SecondaryData() { return STRUCT_OFFSET(Afpscharacter, SecondaryData); } \
 	FORCEINLINE static uint32 __PPO__CurrentlyEquippedWeaponData() { return STRUCT_OFFSET(Afpscharacter, CurrentlyEquippedWeaponData); } \
+	FORCEINLINE static uint32 __PPO__CurrentMaxMagSize() { return STRUCT_OFFSET(Afpscharacter, CurrentMaxMagSize); } \
+	FORCEINLINE static uint32 __PPO__CurrentMagAmmo() { return STRUCT_OFFSET(Afpscharacter, CurrentMagAmmo); } \
 	FORCEINLINE static uint32 __PPO__CurrentlyCrouching() { return STRUCT_OFFSET(Afpscharacter, CurrentlyCrouching); } \
 	FORCEINLINE static uint32 __PPO__JustLanded() { return STRUCT_OFFSET(Afpscharacter, JustLanded); } \
 	FORCEINLINE static uint32 __PPO__DefaultHalfHeight() { return STRUCT_OFFSET(Afpscharacter, DefaultHalfHeight); } \

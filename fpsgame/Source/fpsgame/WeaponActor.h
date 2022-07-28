@@ -93,6 +93,14 @@ struct FWeaponDataStruct
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		int BurstNumber;
 
+	//Maximum ammo the mag can store
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		int MaxMagSize;
+
+	//Ammo in the mag currently
+	UPROPERTY(Transient)
+		int MagAmmo;
+
 	//Speed of projectile rounds fired
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float ProjectileSpeed;
