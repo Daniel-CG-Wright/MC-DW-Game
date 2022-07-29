@@ -8,6 +8,7 @@
 #include "GameFramework/Character.h"
 #include "WeaponActor.h"
 #include "InteractableObjectComponent.h"
+#include "FPSGameState.h"
 //Should always be the last include
 #include "fpscharacter.generated.h"
 
@@ -54,11 +55,11 @@ protected:
 
 	//Checks on server if the player could actually fire, to prevent cheating with ammo or firerates etc. RPC calle by ClientHitscanCheckFire
 	UFUNCTION(Server, Unreliable)
-		void ServerValidateFire();
+		void ServerValidateFire(float ClientFireTime);
 	
 	//Checks if the player hit anything on the server, requires rewinds and stuff. Not an RPC as called by ServerValidateFire
 	UFUNCTION()
-		void ServerHitscanCheckFire();
+		void ServerHitscanCheckFire(float ClientFireTime);
 
 //Player input functions
 protected:

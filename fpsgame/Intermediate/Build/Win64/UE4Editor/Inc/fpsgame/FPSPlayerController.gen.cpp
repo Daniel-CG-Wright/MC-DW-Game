@@ -42,6 +42,13 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerController() {}
 		P_THIS->ClientReportServerTime_Implementation(Z_Param_requestWorldTime,Z_Param_serverTime);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AFPSPlayerController::execGetServerTime)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetServerTime();
+		P_NATIVE_END;
+	}
 	static FName NAME_AFPSPlayerController_ClientReportServerTime = FName(TEXT("ClientReportServerTime"));
 	void AFPSPlayerController::ClientReportServerTime(float requestWorldTime, float serverTime)
 	{
@@ -63,6 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerController() {}
 		UClass* Class = AFPSPlayerController::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ClientReportServerTime", &AFPSPlayerController::execClientReportServerTime },
+			{ "GetServerTime", &AFPSPlayerController::execGetServerTime },
 			{ "ServerRequestServerTime", &AFPSPlayerController::execServerRequestServerTime },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -97,6 +105,40 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerController() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerController_ClientReportServerTime_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics
+	{
+		struct FPSPlayerController_eventGetServerTime_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FPSPlayerController_eventGetServerTime_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/** Returns the network-synced time from the server.\n      * Corresponds to GetWorld()->GetTimeSeconds()\n      * on the server. This doesn't actually make a network\n      * request; it just returns the cached, locally-simulated\n      * and lag-corrected ServerTime value which was synced\n      * with the server at the time of this PlayerController's\n      * last restart. */" },
+		{ "ModuleRelativePath", "FPSPlayerController.h" },
+		{ "ToolTip", "Returns the network-synced time from the server.\nCorresponds to GetWorld()->GetTimeSeconds()\non the server. This doesn't actually make a network\nrequest; it just returns the cached, locally-simulated\nand lag-corrected ServerTime value which was synced\nwith the server at the time of this PlayerController's\nlast restart." },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerController, nullptr, "GetServerTime", nullptr, nullptr, sizeof(FPSPlayerController_eventGetServerTime_Parms), Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFPSPlayerController_GetServerTime()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerController_GetServerTime_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -144,6 +186,11 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerController() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ServerTime_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ServerTime;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -153,6 +200,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerController() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFPSPlayerController_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AFPSPlayerController_ClientReportServerTime, "ClientReportServerTime" }, // 3805714655
+		{ &Z_Construct_UFunction_AFPSPlayerController_GetServerTime, "GetServerTime" }, // 74194535
 		{ &Z_Construct_UFunction_AFPSPlayerController_ServerRequestServerTime, "ServerRequestServerTime" }, // 3521302423
 	};
 #if WITH_METADATA
@@ -163,6 +211,18 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerController() {}
 		{ "ModuleRelativePath", "FPSPlayerController.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerController_Statics::NewProp_ServerTime_MetaData[] = {
+		{ "Category", "FPSPlayerController" },
+		{ "Comment", "//The actual synched server time\n" },
+		{ "ModuleRelativePath", "FPSPlayerController.h" },
+		{ "ToolTip", "The actual synched server time" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSPlayerController_Statics::NewProp_ServerTime = { "ServerTime", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerController, ServerTime), METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerController_Statics::NewProp_ServerTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerController_Statics::NewProp_ServerTime_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFPSPlayerController_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerController_Statics::NewProp_ServerTime,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFPSPlayerController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFPSPlayerController>::IsAbstract,
 	};
@@ -172,11 +232,11 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerController() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		FuncInfo,
-		nullptr,
+		Z_Construct_UClass_AFPSPlayerController_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerController_Statics::PropPointers),
 		0,
 		0x009002A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerController_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerController_Statics::Class_MetaDataParams))
@@ -190,7 +250,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSPlayerController, 3864761983);
+	IMPLEMENT_CLASS(AFPSPlayerController, 3428649777);
 	template<> FPSGAME_API UClass* StaticClass<AFPSPlayerController>()
 	{
 		return AFPSPlayerController::StaticClass();

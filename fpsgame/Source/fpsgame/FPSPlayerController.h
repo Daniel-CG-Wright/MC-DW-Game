@@ -17,7 +17,6 @@ class FPSGAME_API AFPSPlayerController : public APlayerController
 
 
 public:
-    AFPSPlayerController();
 
     //https://medium.com/@invicticide/accurately-syncing-unreals-network-clock-87a3f9262594
     /** Returns the network-synced time from the server.
@@ -27,7 +26,8 @@ public:
       * and lag-corrected ServerTime value which was synced
       * with the server at the time of this PlayerController's
       * last restart. */
-    virtual float GetServerTime() { return ServerTime; }
+    UFUNCTION()
+        virtual float GetServerTime() { return ServerTime; }
 
     virtual void ReceivedPlayer() override;
 
@@ -50,5 +50,7 @@ protected:
             float requestWorldTime
         );
 
-    float ServerTime = 0.0f;
+    //The actual synched server time
+    UPROPERTY(EditAnywhere, BlueprintReadOnly)
+        float ServerTime = 0.0f;
 };

@@ -21,7 +21,8 @@ class APlayerController;
 	virtual void ClientReportServerTime_Implementation(float requestWorldTime, float serverTime); \
  \
 	DECLARE_FUNCTION(execServerRequestServerTime); \
-	DECLARE_FUNCTION(execClientReportServerTime);
+	DECLARE_FUNCTION(execClientReportServerTime); \
+	DECLARE_FUNCTION(execGetServerTime);
 
 
 #define fpsgame_Source_fpsgame_FPSPlayerController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -30,7 +31,8 @@ class APlayerController;
 	virtual void ClientReportServerTime_Implementation(float requestWorldTime, float serverTime); \
  \
 	DECLARE_FUNCTION(execServerRequestServerTime); \
-	DECLARE_FUNCTION(execClientReportServerTime);
+	DECLARE_FUNCTION(execClientReportServerTime); \
+	DECLARE_FUNCTION(execGetServerTime);
 
 
 #define fpsgame_Source_fpsgame_FPSPlayerController_h_16_EVENT_PARMS \
@@ -67,7 +69,7 @@ public: \
 
 #define fpsgame_Source_fpsgame_FPSPlayerController_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AFPSPlayerController(const FObjectInitializer& ObjectInitializer); \
+	NO_API AFPSPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSPlayerController) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AFPSPlayerController); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFPSPlayerController); \
@@ -79,6 +81,8 @@ public:
 
 
 #define fpsgame_Source_fpsgame_FPSPlayerController_h_16_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API AFPSPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AFPSPlayerController(AFPSPlayerController&&); \
@@ -86,10 +90,13 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AFPSPlayerController); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFPSPlayerController); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFPSPlayerController)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSPlayerController)
 
 
-#define fpsgame_Source_fpsgame_FPSPlayerController_h_16_PRIVATE_PROPERTY_OFFSET
+#define fpsgame_Source_fpsgame_FPSPlayerController_h_16_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__ServerTime() { return STRUCT_OFFSET(AFPSPlayerController, ServerTime); }
+
+
 #define fpsgame_Source_fpsgame_FPSPlayerController_h_13_PROLOG \
 	fpsgame_Source_fpsgame_FPSPlayerController_h_16_EVENT_PARMS
 

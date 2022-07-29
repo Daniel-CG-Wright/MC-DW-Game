@@ -5,9 +5,8 @@
 
 float AFPSGameState::GetServerWorldTimeSeconds() const
 {
-    if (AFPSPlayerController* pc = GetGameInstance()->
-        GetFirstLocalPlayerController(GetWorld())
-        )
+    AFPSPlayerController* pc = Cast<AFPSPlayerController>(GetGameInstance()->GetFirstLocalPlayerController(AActor::GetWorld()));
+    if (pc)
     {
         return pc->GetServerTime();
     }
@@ -15,4 +14,9 @@ float AFPSGameState::GetServerWorldTimeSeconds() const
     {
         return GetWorld()->GetTimeSeconds();
     }
+}
+
+void AFPSGameState::AddRewindComponent(URewindComponent* RewindComponent)
+{
+    RewindComponentsArray.Emplace(RewindComponent);
 }

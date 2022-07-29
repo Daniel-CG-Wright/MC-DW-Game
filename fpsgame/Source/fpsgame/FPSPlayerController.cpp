@@ -4,10 +4,7 @@
 #include "FPSPlayerController.h"
 
 
-AFPSPlayerController::AFPSPlayerController()
-{
-    APlayerController();
-}
+
 
 void AFPSPlayerController::ServerRequestServerTime_Implementation(
     APlayerController* requester,
@@ -40,6 +37,7 @@ void AFPSPlayerController::ClientReportServerTime_Implementation(
     ServerTime = adjustedTime;
 }
 
+//Performs time synching handshake at start of join
 void AFPSPlayerController::ReceivedPlayer()
 {
     Super::ReceivedPlayer();

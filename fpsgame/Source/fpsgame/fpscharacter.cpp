@@ -1017,16 +1017,81 @@ void Afpscharacter::ClientHitscanCheckFire()
 
 	if (MultiRaycastInCameraDirection(HitResults, CurrentlyEquippedWeaponData.MaxRange))
 	{
+		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 		//Run RPC on server to ensure shot hit
+		if (clienttime)
+		{
+			ServerValidateFire(clienttime);
+
+		}
+
 	}
 }
 
-void Afpscharacter::ServerValidateFire_Implementation()
+void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 {
 
+	
+
+	//checks if the player can actually fire with server variables
+	//If we dont have a gun equipped, return
+	if ((EquippedGun == Equips::PRIMARY && PrimaryGun == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryGun == Guns::NONE))
+	{
+		return;
+	}
+
+	//Checking if we have ammo for firing
+	if (CurrentMagAmmo > 0)
+	{
+		//Activate firing functions based on firing type
+		switch (CurrentlyEquippedWeaponData.WAWeaponHitDetectionType)
+		{
+		case FireType::HITSCAN:
+			ServerHitscanCheckFire(ClientFireTime);
+			break;
+		case FireType::PROJECTILE:
+			//add projectile logic
+			break;
+		case FireType::HYBRID:
+			//Add hybrid logic
+			break;
+		default:
+			UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
+			break;
+		}
+
+	}
+	
 }
 
-void Afpscharacter::ServerHitscanCheckFire()
+void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 {
+	//The meaty part. Here is where we rewind the poses and stuff using the game state to check if the shot hit.
 
+	/*
+	This section will consist of several stages:
+	1. We get the time the client fired at, and find the latency (current server time - the time the client fired at)
+	2. If the latency is below the latency threshold (e.g. 400 ms), we check for the timestamp next below this time (e.g. if timestamps went 10, 20... and client time was 15, we would use timestamp 10)
+	3. We get the transforms for all objects with the rewindcomponent for this timestamp, and the one after, and interpolate to get their transforms at the specific time.
+	4. We also get the pose snapshots from these timestamps and interpolate between them.
+	5. We save the current transforms and poses of all actors with the rewindcomponent.
+	6. We set all actors with the RC to their interpolated transforms and poses.
+	7. We perform the raycast
+	8. We deal damage and perform visual effects as necessary, on all clients.
+	*/
+
+	//STAGE 1
+	//First we need to get the current game state reference for ease of use later
+	AFPSGameState* CurrentGameState = Cast<AFPSGameState>(GetWorld()->GetGameState());
+	//Now we decide on latency
+	if (CurrentGameState->GetServerWorldTimeSeconds() - ClientFireTime > CurrentGameState->GetMaxAllowedLatency())
+	{
+		//For if the latency is too high, we skip rewind and check straight for firing.
+	}
+	else
+	{
+		//Normal procedures here
+		//STAGE 2
+
+	}
 }

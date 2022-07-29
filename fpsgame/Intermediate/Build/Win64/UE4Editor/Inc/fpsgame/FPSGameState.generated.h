@@ -8,14 +8,27 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class URewindComponent;
 #ifdef FPSGAME_FPSGameState_generated_h
 #error "FPSGameState.generated.h already included, missing '#pragma once' in FPSGameState.h"
 #endif
 #define FPSGAME_FPSGameState_generated_h
 
 #define fpsgame_Source_fpsgame_FPSGameState_h_15_SPARSE_DATA
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_RPC_WRAPPERS
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define fpsgame_Source_fpsgame_FPSGameState_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execAddRewindComponent); \
+	DECLARE_FUNCTION(execGetRewindComponentsArray); \
+	DECLARE_FUNCTION(execGetMaxAllowedLatency);
+
+
+#define fpsgame_Source_fpsgame_FPSGameState_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execAddRewindComponent); \
+	DECLARE_FUNCTION(execGetRewindComponentsArray); \
+	DECLARE_FUNCTION(execGetMaxAllowedLatency);
+
+
 #define fpsgame_Source_fpsgame_FPSGameState_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSGameState(); \
@@ -60,7 +73,11 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSGameState)
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_PRIVATE_PROPERTY_OFFSET
+#define fpsgame_Source_fpsgame_FPSGameState_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__MaxAllowedLatencyForRewind() { return STRUCT_OFFSET(AFPSGameState, MaxAllowedLatencyForRewind); } \
+	FORCEINLINE static uint32 __PPO__RewindComponentsArray() { return STRUCT_OFFSET(AFPSGameState, RewindComponentsArray); }
+
+
 #define fpsgame_Source_fpsgame_FPSGameState_h_12_PROLOG
 #define fpsgame_Source_fpsgame_FPSGameState_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

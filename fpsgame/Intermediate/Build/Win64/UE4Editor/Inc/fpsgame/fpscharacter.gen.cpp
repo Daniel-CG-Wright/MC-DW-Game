@@ -403,16 +403,18 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	}
 	DEFINE_FUNCTION(Afpscharacter::execServerHitscanCheckFire)
 	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_ClientFireTime);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->ServerHitscanCheckFire();
+		P_THIS->ServerHitscanCheckFire(Z_Param_ClientFireTime);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execServerValidateFire)
 	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_ClientFireTime);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->ServerValidateFire_Implementation();
+		P_THIS->ServerValidateFire_Implementation(Z_Param_ClientFireTime);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execClientHitscanCheckFire)
@@ -485,9 +487,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerSyncControlRotation),&Parms);
 	}
 	static FName NAME_Afpscharacter_ServerValidateFire = FName(TEXT("ServerValidateFire"));
-	void Afpscharacter::ServerValidateFire()
+	void Afpscharacter::ServerValidateFire(float ClientFireTime)
 	{
-		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerValidateFire),NULL);
+		fpscharacter_eventServerValidateFire_Parms Parms;
+		Parms.ClientFireTime=ClientFireTime;
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerValidateFire),&Parms);
 	}
 	void Afpscharacter::StaticRegisterNativesAfpscharacter()
 	{
@@ -1527,10 +1531,20 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	}
 	struct Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics
 	{
+		struct fpscharacter_eventServerHitscanCheckFire_Parms
+		{
+			float ClientFireTime;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ClientFireTime;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::NewProp_ClientFireTime = { "ClientFireTime", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventServerHitscanCheckFire_Parms, ClientFireTime), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::NewProp_ClientFireTime,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::Function_MetaDataParams[] = {
@@ -1539,7 +1553,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ "ToolTip", "Checks if the player hit anything on the server, requires rewinds and stuff. Not an RPC as called by ServerValidateFire" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerHitscanCheckFire", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerHitscanCheckFire", nullptr, nullptr, sizeof(fpscharacter_eventServerHitscanCheckFire_Parms), Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -1745,10 +1759,16 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	}
 	struct Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics
 	{
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ClientFireTime;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::NewProp_ClientFireTime = { "ClientFireTime", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventServerValidateFire_Parms, ClientFireTime), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::NewProp_ClientFireTime,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::Function_MetaDataParams[] = {
@@ -1757,7 +1777,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ "ToolTip", "Checks on server if the player could actually fire, to prevent cheating with ammo or firerates etc. RPC calle by ClientHitscanCheckFire" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerValidateFire", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00280C40, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerValidateFire", nullptr, nullptr, sizeof(fpscharacter_eventServerValidateFire_Parms), Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00280C40, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_Afpscharacter_ServerValidateFire()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -2443,7 +2463,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInTP, "PositionAndAttachGunInTP" }, // 967761929
 		{ &Z_Construct_UFunction_Afpscharacter_PressSprint, "PressSprint" }, // 2378583722
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseSprint, "ReleaseSprint" }, // 3846209980
-		{ &Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire, "ServerHitscanCheckFire" }, // 431082263
+		{ &Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire, "ServerHitscanCheckFire" }, // 3336954870
 		{ &Z_Construct_UFunction_Afpscharacter_ServerInteract, "ServerInteract" }, // 2423912466
 		{ &Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon, "ServerPickupWeapon" }, // 633494461
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSetSprinting, "ServerSetSprinting" }, // 1602645312
@@ -2451,7 +2471,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary, "ServerSwitchPrimary" }, // 1283072070
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary, "ServerSwitchSecondary" }, // 3818391139
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSyncControlRotation, "ServerSyncControlRotation" }, // 3548193946
-		{ &Z_Construct_UFunction_Afpscharacter_ServerValidateFire, "ServerValidateFire" }, // 3922973785
+		{ &Z_Construct_UFunction_Afpscharacter_ServerValidateFire, "ServerValidateFire" }, // 2050018562
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentHealth, "SetCurrentHealth" }, // 2344965713
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentStamina, "SetCurrentStamina" }, // 3815298331
 		{ &Z_Construct_UFunction_Afpscharacter_SetSprinting, "SetSprinting" }, // 3499647627
@@ -2998,7 +3018,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 161318794);
+	IMPLEMENT_CLASS(Afpscharacter, 77696002);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();
