@@ -44,6 +44,9 @@ Afpscharacter::Afpscharacter()
 	//Hides third person mesh from owner
 	GetMesh()->SetOwnerNoSee(true);
 
+	//Created on client but doens't do anything unless on server
+	//FPSRewindComponent = CreateDefaultSubobject<URewindComponent>(TEXT("RewindComponent"));
+	
 
 	//Creating the FPS weapon scene component, which is separate from the 3rd person gun mesh.
 	FPSGunComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Scene Component"));
@@ -138,10 +141,12 @@ void Afpscharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//server only things
 	if (GetLocalRole() == ROLE_Authority)
 	{
 		GetWorldTimerManager().SetTimer(StaminaTimerHandle, this, &Afpscharacter::UpdateStamina, StaminaUpdateIntervalInSeconds, true);
-
+		FPSRewindComponent = NewObject<URewindComponent>(this);
+		FPSRewindComponent->RegisterComponent();
 	}
 
 

@@ -6,6 +6,17 @@
 #include "Components/ActorComponent.h"
 #include "RewindComponent.generated.h"
 
+struct FSortedMapPredicateTimestampDescending
+{
+	FORCEINLINE bool operator()(const float A, const float B) const
+	{
+
+		//sroting ascending key
+		return A < B;
+
+	}
+};
+
 //Struct used to store data about parent transform and pose for snapshots.
 USTRUCT()
 struct FRewindDataStruct
@@ -40,29 +51,46 @@ public:
 	// Sets default values for this component's properties
 	URewindComponent();
 
+private:
+	//stores the current tick server time so it only has to be gained once per tick.
+	float ThisTickServerTime;
+	//stores the cached max ping from AFPSGameState->GetMaxAllowedLatency so we only have to access it once.
+	float CachedMaxPing;
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	//Stores timestamps and corresponding data in the data struct
-	UPROPERTY()
-		TMap<float, FRewindDataStruct> RewindTimestampsAndData;
+	//Stores timestamps and corresponding data in the data struct, we use a sorted map because it's better for checking timestamps
+	TSortedMap<float, FRewindDataStruct, FDefaultAllocator, FSortedMapPredicateTimestampDescending> RewindTimestampsAndData;
 
 	UFUNCTION()
-		void AddToGameState();
+		void AddToGameMode();
 
 	//Records transform and pose each tick, adds them to timestamp TMap
 	UFUNCTION()
 		void RecordDetailsThisTick();
 
 	//To be implemented in blueprints, will get the current tick pose snapshot and store it as current pose snapshot
-	UFUNCTION(BlueprintImplementableEvent)
-		FPoseSnapshot GetCurrentTickPoseSnapshotBP();
+	UFUNCTION()
+		void GetCurrentTickPoseSnapshot(FPoseSnapshot& OutSnapshot) const;
 
+	UFUNCTION()
+		void DeleteOldRecords();
 
+	UPROPERTY()
+		AActor* OwnerComponent;
+
+	//set only if bshouldsaveanimationposes is true
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USkeletalMeshComponent* SkeletalMeshToRewind;
+
+	//set to true when the actor has an animated mesh whihc is important for rewinds (mainly the player character)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool bShouldSaveAnimationPoses;
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+	
 };
+

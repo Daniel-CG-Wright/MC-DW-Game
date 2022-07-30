@@ -8,15 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class URewindComponent;
 #ifdef FPSGAME_FPSGameModeDefault_generated_h
 #error "FPSGameModeDefault.generated.h already included, missing '#pragma once' in FPSGameModeDefault.h"
 #endif
 #define FPSGAME_FPSGameModeDefault_generated_h
 
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_SPARSE_DATA
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_RPC_WRAPPERS
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_SPARSE_DATA
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execAddRewindComponent); \
+	DECLARE_FUNCTION(execGetRewindComponentsArray);
+
+
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execAddRewindComponent); \
+	DECLARE_FUNCTION(execGetRewindComponentsArray);
+
+
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSGameModeDefault(); \
 	friend struct Z_Construct_UClass_AFPSGameModeDefault_Statics; \
@@ -25,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(AFPSGameModeDefault)
 
 
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_INCLASS \
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesAFPSGameModeDefault(); \
 	friend struct Z_Construct_UClass_AFPSGameModeDefault_Statics; \
@@ -34,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(AFPSGameModeDefault)
 
 
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFPSGameModeDefault(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSGameModeDefault) \
@@ -47,7 +58,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFPSGameModeDefault(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -60,28 +71,31 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSGameModeDefault)
 
 
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_PRIVATE_PROPERTY_OFFSET
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_12_PROLOG
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__RewindComponentsArray() { return STRUCT_OFFSET(AFPSGameModeDefault, RewindComponentsArray); }
+
+
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_13_PROLOG
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_SPARSE_DATA \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_INCLASS \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_SPARSE_DATA \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_INCLASS \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_SPARSE_DATA \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_FPSGameModeDefault_h_15_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_SPARSE_DATA \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

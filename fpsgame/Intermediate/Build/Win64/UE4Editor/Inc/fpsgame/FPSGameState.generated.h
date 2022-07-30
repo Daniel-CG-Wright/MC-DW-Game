@@ -8,28 +8,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class URewindComponent;
 #ifdef FPSGAME_FPSGameState_generated_h
 #error "FPSGameState.generated.h already included, missing '#pragma once' in FPSGameState.h"
 #endif
 #define FPSGAME_FPSGameState_generated_h
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_SPARSE_DATA
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_SPARSE_DATA
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execAddRewindComponent); \
-	DECLARE_FUNCTION(execGetRewindComponentsArray); \
 	DECLARE_FUNCTION(execGetMaxAllowedLatency);
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execAddRewindComponent); \
-	DECLARE_FUNCTION(execGetRewindComponentsArray); \
 	DECLARE_FUNCTION(execGetMaxAllowedLatency);
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSGameState(); \
 	friend struct Z_Construct_UClass_AFPSGameState_Statics; \
@@ -38,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(AFPSGameState)
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_INCLASS \
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAFPSGameState(); \
 	friend struct Z_Construct_UClass_AFPSGameState_Statics; \
@@ -47,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(AFPSGameState)
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFPSGameState(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSGameState) \
@@ -60,7 +55,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFPSGameState(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -73,32 +68,31 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSGameState)
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__MaxAllowedLatencyForRewind() { return STRUCT_OFFSET(AFPSGameState, MaxAllowedLatencyForRewind); } \
-	FORCEINLINE static uint32 __PPO__RewindComponentsArray() { return STRUCT_OFFSET(AFPSGameState, RewindComponentsArray); }
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__MaxAllowedLatencyForRewind() { return STRUCT_OFFSET(AFPSGameState, MaxAllowedLatencyForRewind); }
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_12_PROLOG
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_FPSGameState_h_11_PROLOG
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_SPARSE_DATA \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_INCLASS \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_SPARSE_DATA \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_INCLASS \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_FPSGameState_h_15_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_FPSGameState_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_SPARSE_DATA \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_FPSGameState_h_15_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_SPARSE_DATA \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_FPSGameState_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

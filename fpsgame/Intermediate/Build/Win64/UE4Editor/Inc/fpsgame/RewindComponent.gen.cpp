@@ -21,6 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeRewindComponent() {}
 	FPSGAME_API UClass* Z_Construct_UClass_URewindComponent_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_URewindComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 // End Cross Module References
 class UScriptStruct* FRewindDataStruct::StaticStruct()
 {
@@ -147,6 +149,21 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FRewindDataStruct_Hash() { return 847806005U; }
+	DEFINE_FUNCTION(URewindComponent::execDeleteOldRecords)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DeleteOldRecords();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(URewindComponent::execGetCurrentTickPoseSnapshot)
+	{
+		P_GET_STRUCT_REF(FPoseSnapshot,Z_Param_Out_OutSnapshot);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GetCurrentTickPoseSnapshot(Z_Param_Out_OutSnapshot);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(URewindComponent::execRecordDetailsThisTick)
 	{
 		P_FINISH;
@@ -154,30 +171,25 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		P_THIS->RecordDetailsThisTick();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(URewindComponent::execAddToGameState)
+	DEFINE_FUNCTION(URewindComponent::execAddToGameMode)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->AddToGameState();
+		P_THIS->AddToGameMode();
 		P_NATIVE_END;
-	}
-	static FName NAME_URewindComponent_GetCurrentTickPoseSnapshotBP = FName(TEXT("GetCurrentTickPoseSnapshotBP"));
-	FPoseSnapshot URewindComponent::GetCurrentTickPoseSnapshotBP()
-	{
-		RewindComponent_eventGetCurrentTickPoseSnapshotBP_Parms Parms;
-		ProcessEvent(FindFunctionChecked(NAME_URewindComponent_GetCurrentTickPoseSnapshotBP),&Parms);
-		return Parms.ReturnValue;
 	}
 	void URewindComponent::StaticRegisterNativesURewindComponent()
 	{
 		UClass* Class = URewindComponent::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "AddToGameState", &URewindComponent::execAddToGameState },
+			{ "AddToGameMode", &URewindComponent::execAddToGameMode },
+			{ "DeleteOldRecords", &URewindComponent::execDeleteOldRecords },
+			{ "GetCurrentTickPoseSnapshot", &URewindComponent::execGetCurrentTickPoseSnapshot },
 			{ "RecordDetailsThisTick", &URewindComponent::execRecordDetailsThisTick },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_URewindComponent_AddToGameState_Statics
+	struct Z_Construct_UFunction_URewindComponent_AddToGameMode_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -185,47 +197,73 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URewindComponent_AddToGameState_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URewindComponent_AddToGameMode_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "RewindComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URewindComponent_AddToGameState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URewindComponent, nullptr, "AddToGameState", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URewindComponent_AddToGameState_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_AddToGameState_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_URewindComponent_AddToGameState()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URewindComponent_AddToGameMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URewindComponent, nullptr, "AddToGameMode", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URewindComponent_AddToGameMode_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_AddToGameMode_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URewindComponent_AddToGameMode()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URewindComponent_AddToGameState_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URewindComponent_AddToGameMode_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics
+	struct Z_Construct_UFunction_URewindComponent_DeleteOldRecords_Statics
 	{
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URewindComponent_DeleteOldRecords_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RewindComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URewindComponent_DeleteOldRecords_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URewindComponent, nullptr, "DeleteOldRecords", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URewindComponent_DeleteOldRecords_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_DeleteOldRecords_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URewindComponent_DeleteOldRecords()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URewindComponent_DeleteOldRecords_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics
+	{
+		struct RewindComponent_eventGetCurrentTickPoseSnapshot_Parms
+		{
+			FPoseSnapshot OutSnapshot;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_OutSnapshot;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RewindComponent_eventGetCurrentTickPoseSnapshotBP_Parms, ReturnValue), Z_Construct_UScriptStruct_FPoseSnapshot, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::NewProp_ReturnValue,
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::NewProp_OutSnapshot = { "OutSnapshot", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RewindComponent_eventGetCurrentTickPoseSnapshot_Parms, OutSnapshot), Z_Construct_UScriptStruct_FPoseSnapshot, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::NewProp_OutSnapshot,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::Function_MetaDataParams[] = {
 		{ "Comment", "//To be implemented in blueprints, will get the current tick pose snapshot and store it as current pose snapshot\n" },
 		{ "ModuleRelativePath", "RewindComponent.h" },
 		{ "ToolTip", "To be implemented in blueprints, will get the current tick pose snapshot and store it as current pose snapshot" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URewindComponent, nullptr, "GetCurrentTickPoseSnapshotBP", nullptr, nullptr, sizeof(RewindComponent_eventGetCurrentTickPoseSnapshotBP_Parms), Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URewindComponent, nullptr, "GetCurrentTickPoseSnapshot", nullptr, nullptr, sizeof(RewindComponent_eventGetCurrentTickPoseSnapshot_Parms), Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x40480401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -264,16 +302,19 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RewindTimestampsAndData_ValueProp;
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RewindTimestampsAndData_Key_KeyProp;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RewindTimestampsAndData_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OwnerComponent_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FMapPropertyParams NewProp_RewindTimestampsAndData;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OwnerComponent;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentPoseSnapshot_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkeletalMeshToRewind_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_CurrentPoseSnapshot;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SkeletalMeshToRewind;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bShouldSaveAnimationPoses_MetaData[];
+#endif
+		static void NewProp_bShouldSaveAnimationPoses_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bShouldSaveAnimationPoses;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -283,8 +324,9 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_URewindComponent_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_URewindComponent_AddToGameState, "AddToGameState" }, // 1926495974
-		{ &Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshotBP, "GetCurrentTickPoseSnapshotBP" }, // 1517789089
+		{ &Z_Construct_UFunction_URewindComponent_AddToGameMode, "AddToGameMode" }, // 2666400372
+		{ &Z_Construct_UFunction_URewindComponent_DeleteOldRecords, "DeleteOldRecords" }, // 1339786654
+		{ &Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot, "GetCurrentTickPoseSnapshot" }, // 2875911115
 		{ &Z_Construct_UFunction_URewindComponent_RecordDetailsThisTick, "RecordDetailsThisTick" }, // 3545378675
 	};
 #if WITH_METADATA
@@ -297,30 +339,39 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		{ "ModuleRelativePath", "RewindComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData_ValueProp = { "RewindTimestampsAndData", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FRewindDataStruct, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData_Key_KeyProp = { "RewindTimestampsAndData_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData_MetaData[] = {
-		{ "Comment", "//Stores timestamps and corresponding data in the data struct\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URewindComponent_Statics::NewProp_OwnerComponent_MetaData[] = {
 		{ "ModuleRelativePath", "RewindComponent.h" },
-		{ "ToolTip", "Stores timestamps and corresponding data in the data struct" },
 	};
 #endif
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData = { "RewindTimestampsAndData", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(URewindComponent, RewindTimestampsAndData), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_URewindComponent_Statics::NewProp_OwnerComponent = { "OwnerComponent", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(URewindComponent, OwnerComponent), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_URewindComponent_Statics::NewProp_OwnerComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URewindComponent_Statics::NewProp_OwnerComponent_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URewindComponent_Statics::NewProp_CurrentPoseSnapshot_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URewindComponent_Statics::NewProp_SkeletalMeshToRewind_MetaData[] = {
 		{ "Category", "RewindComponent" },
-		{ "Comment", "//Output for getting current tick pose snapshot\n" },
+		{ "Comment", "//set only if bshouldsaveanimationposes is true\n" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "RewindComponent.h" },
-		{ "ToolTip", "Output for getting current tick pose snapshot" },
+		{ "ToolTip", "set only if bshouldsaveanimationposes is true" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_URewindComponent_Statics::NewProp_CurrentPoseSnapshot = { "CurrentPoseSnapshot", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(URewindComponent, CurrentPoseSnapshot), Z_Construct_UScriptStruct_FPoseSnapshot, METADATA_PARAMS(Z_Construct_UClass_URewindComponent_Statics::NewProp_CurrentPoseSnapshot_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URewindComponent_Statics::NewProp_CurrentPoseSnapshot_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_URewindComponent_Statics::NewProp_SkeletalMeshToRewind = { "SkeletalMeshToRewind", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(URewindComponent, SkeletalMeshToRewind), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_URewindComponent_Statics::NewProp_SkeletalMeshToRewind_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URewindComponent_Statics::NewProp_SkeletalMeshToRewind_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URewindComponent_Statics::NewProp_bShouldSaveAnimationPoses_MetaData[] = {
+		{ "Category", "RewindComponent" },
+		{ "Comment", "//set to true when the actor has an animated mesh whihc is important for rewinds (mainly the player character)\n" },
+		{ "ModuleRelativePath", "RewindComponent.h" },
+		{ "ToolTip", "set to true when the actor has an animated mesh whihc is important for rewinds (mainly the player character)" },
+	};
+#endif
+	void Z_Construct_UClass_URewindComponent_Statics::NewProp_bShouldSaveAnimationPoses_SetBit(void* Obj)
+	{
+		((URewindComponent*)Obj)->bShouldSaveAnimationPoses = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_URewindComponent_Statics::NewProp_bShouldSaveAnimationPoses = { "bShouldSaveAnimationPoses", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(URewindComponent), &Z_Construct_UClass_URewindComponent_Statics::NewProp_bShouldSaveAnimationPoses_SetBit, METADATA_PARAMS(Z_Construct_UClass_URewindComponent_Statics::NewProp_bShouldSaveAnimationPoses_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URewindComponent_Statics::NewProp_bShouldSaveAnimationPoses_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_URewindComponent_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData_ValueProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData_Key_KeyProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URewindComponent_Statics::NewProp_RewindTimestampsAndData,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URewindComponent_Statics::NewProp_CurrentPoseSnapshot,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URewindComponent_Statics::NewProp_OwnerComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URewindComponent_Statics::NewProp_SkeletalMeshToRewind,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URewindComponent_Statics::NewProp_bShouldSaveAnimationPoses,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_URewindComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<URewindComponent>::IsAbstract,
@@ -349,7 +400,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(URewindComponent, 1181932873);
+	IMPLEMENT_CLASS(URewindComponent, 2715886779);
 	template<> FPSGAME_API UClass* StaticClass<URewindComponent>()
 	{
 		return URewindComponent::StaticClass();

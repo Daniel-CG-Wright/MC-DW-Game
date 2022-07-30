@@ -1,4 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+#include "FPSGameModeDefault.h"
 #include "FPSGameState.h"
 #include "RewindComponent.h"
 
@@ -7,7 +8,10 @@ URewindComponent::URewindComponent()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
+
+	//This component will only be created on server objects, and will not be replicated.
 	PrimaryComponentTick.bCanEverTick = true;
+
 
 	// ...
 }
@@ -18,29 +22,48 @@ void URewindComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Need to record this in game state
-	AddToGameState();
+	OwnerComponent = GetOwner();
+	UE_LOG(LogTemp, Warning, TEXT("Aboiut to add meself to the gamemode"));
+	AddToGameMode();
+	CachedMaxPing = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetMaxAllowedLatency();
 	
 }
 
-void URewindComponent::AddToGameState()
+void URewindComponent::GetCurrentTickPoseSnapshot(FPoseSnapshot& OutSnapshot) const
 {
-	Cast<AFPSGameState>(GetWorld()->GetGameState())->AddRewindComponent(this);
+	if (!SkeletalMeshToRewind)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Tried to rewind a mesh animation pose, but no skeletal mesh was set!"));
+		return;
+	}
+	SkeletalMeshToRewind->GetAnimInstance()->SnapshotPose(OutSnapshot);
+	
+}
+
+void URewindComponent::AddToGameMode()
+{
+	//Called on beginplay to record this rewind component
+	
+	Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->AddRewindComponent(this);
 
 }
 // Called every frame
 void URewindComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	ThisTickServerTime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 
+	UE_LOG(LogTemp, Warning, TEXT("Ticking"));
+	RecordDetailsThisTick();
+	DeleteOldRecords();
 	// ...
 }
 
+//This will be run on server only
 void URewindComponent::RecordDetailsThisTick()
 {
 	FRewindDataStruct RewindDataForThisTick;
 
-	AActor* OwnerComponent = GetOwner();
 	if (OwnerComponent)
 	{
 		//Set positions and stuff here
@@ -48,9 +71,38 @@ void URewindComponent::RecordDetailsThisTick()
 		RewindDataForThisTick.SnapshotRotation = OwnerComponent->GetActorRotation();
 		RewindDataForThisTick.SnapshotScale = OwnerComponent->GetActorScale();
 
-
 	}
 	
-	
-	//RewindTimestampsAndData.Emplace()
+	//if set to do so we save the current tick pose snapshot
+	if (bShouldSaveAnimationPoses)
+	{
+		GetCurrentTickPoseSnapshot(RewindDataForThisTick.PoseSnapshot);
+	}
+	//add data marked with timestamp to map.
+	RewindTimestampsAndData.Emplace(Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds(), RewindDataForThisTick);
+	UE_LOG(LogTemp, Warning, TEXT("Server time: %f"), Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds());
+}
+
+void URewindComponent::DeleteOldRecords()
+{
+	//We must delete records older than 400 ms to save space in the queue
+
+
+	//Tmap is already sorted as it is type tsortedmap, sorted by ascending key (timestamp) so most recent entries last.
+	//We check from the bottom to delete the oldest values
+
+	for (auto& Elem : RewindTimestampsAndData)
+	{
+		if (Elem.Key < ThisTickServerTime - CachedMaxPing)
+		{
+			//too old, delete
+			RewindTimestampsAndData.Remove(Elem.Key);
+		}
+		else
+		{
+			//if we have reached valid items we know the rest of them must be valid as the data structure has been sorted,
+			//so we can break the loop
+			break;
+		}
+	}
 }

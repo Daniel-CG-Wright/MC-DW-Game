@@ -1,0 +1,2206 @@
+﻿Log file open, 07/30/22 18:28:21
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: fpsgame
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 17 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.212631
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogInit: Display: Loading text-based GConfig....
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin GameplayCameras
+LogPluginManager: Mounting plugin OodleData
+LogPluginManager: Mounting plugin OodleNetwork
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PixWinPlugin
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin TextureFormatOodle
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin OpenImageDenoise
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OpenXR
+LogPluginManager: Mounting plugin OpenXREyeTracker
+LogPluginManager: Mounting plugin OpenXRHandTracking
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+PixWinPlugin: PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.27-CL-18319896
+LogInit: Engine Version: 4.27.2-18319896+++UE4+Release-4.27
+LogInit: Compatible Engine Version: 4.27.0-17155196+++UE4+Release-4.27
+LogInit: Net CL: 17155196
+LogInit: OS: Windows 10 (Release 2009) (), CPU: AMD Ryzen 5 3600X 6-Core Processor             , GPU: AMD Radeon RX 5700 XT
+LogInit: Compiled (64-bit): Nov 30 2021 07:12:08
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.27
+LogInit: Command Line:  /Game/Maps/TestMap -game -PIEVIACONSOLE -Multiprocess -server -log "GameUserSettingsINI=C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/PIEGameUserSettings0.ini" -MultiprocessSaveConfig -forcepassthrough -messaging -SessionName="Play in Standalone Game" -port=17777 -windowed
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 14
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 45
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 47
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.07.30-17.28.22:141][  0]LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+[2022.07.30-17.28.22:141][  0]LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.07.30-17.28.22:142][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.07.30-17.28.22:142][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2022.07.30-17.28.22:142][  0]LogConfig: Setting CVar [[r.Mobile.DisableVertexFog:1]]
+[2022.07.30-17.28.22:142][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxMobileCascades:2]]
+[2022.07.30-17.28.22:143][  0]LogConfig: Setting CVar [[r.MobileMSAA:1]]
+[2022.07.30-17.28.22:143][  0]LogConfig: Setting CVar [[r.Mobile.AllowDitheredLODTransition:0]]
+[2022.07.30-17.28.22:144][  0]LogConfig: Setting CVar [[r.Mobile.AllowSoftwareOcclusion:0]]
+[2022.07.30-17.28.22:144][  0]LogConfig: Setting CVar [[r.Mobile.VirtualTextures:0]]
+[2022.07.30-17.28.22:144][  0]LogConfig: Setting CVar [[r.DiscardUnusedQuality:0]]
+[2022.07.30-17.28.22:145][  0]LogConfig: Setting CVar [[r.AllowOcclusionQueries:1]]
+[2022.07.30-17.28.22:145][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForLights:0.030000]]
+[2022.07.30-17.28.22:145][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForDepthPrepass:0.030000]]
+[2022.07.30-17.28.22:145][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForCSMDepth:0.010000]]
+[2022.07.30-17.28.22:146][  0]LogConfig: Setting CVar [[r.PrecomputedVisibilityWarning:0]]
+[2022.07.30-17.28.22:146][  0]LogConfig: Setting CVar [[r.TextureStreaming:1]]
+[2022.07.30-17.28.22:146][  0]LogConfig: Setting CVar [[Compat.UseDXT5NormalMaps:0]]
+[2022.07.30-17.28.22:146][  0]LogConfig: Setting CVar [[r.VirtualTextures:0]]
+[2022.07.30-17.28.22:147][  0]LogConfig: Setting CVar [[r.VT.EnableAutoImport:1]]
+[2022.07.30-17.28.22:149][  0]LogConfig: Setting CVar [[r.VirtualTexturedLightmaps:0]]
+[2022.07.30-17.28.22:149][  0]LogConfig: Setting CVar [[r.VT.TileSize:128]]
+[2022.07.30-17.28.22:149][  0]LogConfig: Setting CVar [[r.VT.TileBorderSize:4]]
+[2022.07.30-17.28.22:150][  0]LogConfig: Setting CVar [[r.vt.FeedbackFactor:16]]
+[2022.07.30-17.28.22:150][  0]LogConfig: Setting CVar [[r.VT.EnableCompressZlib:1]]
+[2022.07.30-17.28.22:150][  0]LogConfig: Setting CVar [[r.VT.EnableCompressCrunch:0]]
+[2022.07.30-17.28.22:150][  0]LogConfig: Setting CVar [[r.ClearCoatNormal:0]]
+[2022.07.30-17.28.22:151][  0]LogConfig: Setting CVar [[r.ReflectionCaptureResolution:128]]
+[2022.07.30-17.28.22:151][  0]LogConfig: Setting CVar [[r.Mobile.ReflectionCaptureCompression:0]]
+[2022.07.30-17.28.22:151][  0]LogConfig: Setting CVar [[r.ReflectionEnvironmentLightmapMixBasedOnRoughness:1]]
+[2022.07.30-17.28.22:152][  0]LogConfig: Setting CVar [[r.ForwardShading:0]]
+[2022.07.30-17.28.22:152][  0]LogConfig: Setting CVar [[r.VertexFoggingForOpaque:1]]
+[2022.07.30-17.28.22:152][  0]LogConfig: Setting CVar [[r.AllowStaticLighting:1]]
+[2022.07.30-17.28.22:152][  0]LogConfig: Setting CVar [[r.NormalMapsForStaticLighting:0]]
+[2022.07.30-17.28.22:153][  0]LogConfig: Setting CVar [[r.GenerateMeshDistanceFields:0]]
+[2022.07.30-17.28.22:153][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.EightBit:0]]
+[2022.07.30-17.28.22:153][  0]LogConfig: Setting CVar [[r.GenerateLandscapeGIData:0]]
+[2022.07.30-17.28.22:154][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.Compress:0]]
+[2022.07.30-17.28.22:154][  0]LogConfig: Setting CVar [[r.TessellationAdaptivePixelsPerTriangle:48.000000]]
+[2022.07.30-17.28.22:154][  0]LogConfig: Setting CVar [[r.SeparateTranslucency:1]]
+[2022.07.30-17.28.22:154][  0]LogConfig: Setting CVar [[r.TranslucentSortPolicy:0]]
+[2022.07.30-17.28.22:155][  0]LogConfig: Setting CVar [[vr.VRS.HMDFixedFoveationLevel:0]]
+[2022.07.30-17.28.22:155][  0]LogConfig: Setting CVar [[r.CustomDepth:1]]
+[2022.07.30-17.28.22:155][  0]LogConfig: Setting CVar [[r.CustomDepthTemporalAAJitter:1]]
+[2022.07.30-17.28.22:155][  0]LogConfig: Setting CVar [[r.PostProcessing.PropagateAlpha:0]]
+[2022.07.30-17.28.22:156][  0]LogConfig: Setting CVar [[r.DefaultFeature.Bloom:1]]
+[2022.07.30-17.28.22:156][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusion:1]]
+[2022.07.30-17.28.22:156][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusionStaticFraction:1]]
+[2022.07.30-17.28.22:156][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2022.07.30-17.28.22:157][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Method:0]]
+[2022.07.30-17.28.22:157][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Bias:1.000000]]
+[2022.07.30-17.28.22:157][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:0]]
+[2022.07.30-17.28.22:157][  0]LogConfig: Setting CVar [[r.UsePreExposure:1]]
+[2022.07.30-17.28.22:158][  0]LogConfig: Setting CVar [[r.EyeAdaptation.EditorOnly:0]]
+[2022.07.30-17.28.22:158][  0]LogConfig: Setting CVar [[r.DefaultFeature.MotionBlur:0]]
+[2022.07.30-17.28.22:158][  0]LogConfig: Setting CVar [[r.DefaultFeature.LensFlare:0]]
+[2022.07.30-17.28.22:158][  0]LogConfig: Setting CVar [[r.TemporalAA.Upsampling:0]]
+[2022.07.30-17.28.22:159][  0]LogConfig: Setting CVar [[r.SSGI.Enable:0]]
+[2022.07.30-17.28.22:159][  0]LogConfig: Setting CVar [[r.DefaultFeature.AntiAliasing:0]]
+[2022.07.30-17.28.22:159][  0]LogConfig: Setting CVar [[r.DefaultFeature.LightUnits:1]]
+[2022.07.30-17.28.22:160][  0]LogConfig: Setting CVar [[r.DefaultBackBufferPixelFormat:4]]
+[2022.07.30-17.28.22:160][  0]LogConfig: Setting CVar [[r.Shadow.UnbuiltPreviewInGame:1]]
+[2022.07.30-17.28.22:160][  0]LogConfig: Setting CVar [[r.StencilForLODDither:0]]
+[2022.07.30-17.28.22:160][  0]LogConfig: Setting CVar [[r.EarlyZPass:3]]
+[2022.07.30-17.28.22:161][  0]LogConfig: Setting CVar [[r.EarlyZPassOnlyMaterialMasking:0]]
+[2022.07.30-17.28.22:161][  0]LogConfig: Setting CVar [[r.DBuffer:1]]
+[2022.07.30-17.28.22:161][  0]LogConfig: Setting CVar [[r.ClearSceneMethod:1]]
+[2022.07.30-17.28.22:161][  0]LogConfig: Setting CVar [[r.BasePassOutputsVelocity:0]]
+[2022.07.30-17.28.22:162][  0]LogConfig: Setting CVar [[r.VertexDeformationOutputsVelocity:0]]
+[2022.07.30-17.28.22:162][  0]LogConfig: Setting CVar [[r.SelectiveBasePassOutputs:0]]
+[2022.07.30-17.28.22:162][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeX:1024]]
+[2022.07.30-17.28.22:163][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeY:1024]]
+[2022.07.30-17.28.22:165][  0]LogConfig: Setting CVar [[r.AllowGlobalClipPlane:0]]
+[2022.07.30-17.28.22:166][  0]LogConfig: Setting CVar [[r.GBufferFormat:1]]
+[2022.07.30-17.28.22:166][  0]LogConfig: Setting CVar [[r.MorphTarget.Mode:1]]
+[2022.07.30-17.28.22:166][  0]LogConfig: Setting CVar [[vr.InstancedStereo:0]]
+[2022.07.30-17.28.22:166][  0]LogConfig: Setting CVar [[r.MobileHDR:1]]
+[2022.07.30-17.28.22:167][  0]LogConfig: Setting CVar [[vr.MobileMultiView:0]]
+[2022.07.30-17.28.22:167][  0]LogConfig: Setting CVar [[r.Mobile.UseHWsRGBEncoding:0]]
+[2022.07.30-17.28.22:167][  0]LogConfig: Setting CVar [[vr.RoundRobinOcclusion:0]]
+[2022.07.30-17.28.22:167][  0]LogConfig: Setting CVar [[vr.ODSCapture:0]]
+[2022.07.30-17.28.22:168][  0]LogConfig: Setting CVar [[r.MeshStreaming:0]]
+[2022.07.30-17.28.22:168][  0]LogConfig: Setting CVar [[r.WireframeCullThreshold:5.000000]]
+[2022.07.30-17.28.22:168][  0]LogConfig: Setting CVar [[r.RayTracing:0]]
+[2022.07.30-17.28.22:168][  0]LogConfig: Setting CVar [[r.RayTracing.UseTextureLod:0]]
+[2022.07.30-17.28.22:169][  0]LogConfig: Setting CVar [[r.SupportStationarySkylight:1]]
+[2022.07.30-17.28.22:169][  0]LogConfig: Setting CVar [[r.SupportLowQualityLightmaps:1]]
+[2022.07.30-17.28.22:169][  0]LogConfig: Setting CVar [[r.SupportPointLightWholeSceneShadows:1]]
+[2022.07.30-17.28.22:169][  0]LogConfig: Setting CVar [[r.SupportAtmosphericFog:1]]
+[2022.07.30-17.28.22:170][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphere:1]]
+[2022.07.30-17.28.22:170][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphereAffectsHeightFog:0]]
+[2022.07.30-17.28.22:170][  0]LogConfig: Setting CVar [[r.SkinCache.CompileShaders:0]]
+[2022.07.30-17.28.22:170][  0]LogConfig: Setting CVar [[r.SkinCache.DefaultBehavior:1]]
+[2022.07.30-17.28.22:171][  0]LogConfig: Setting CVar [[r.SkinCache.SceneMemoryLimitInMB:128.000000]]
+[2022.07.30-17.28.22:171][  0]LogConfig: Setting CVar [[r.Mobile.EnableStaticAndCSMShadowReceivers:1]]
+[2022.07.30-17.28.22:171][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableLightCSMShaderCulling:1]]
+[2022.07.30-17.28.22:172][  0]LogConfig: Setting CVar [[r.Mobile.AllowDistanceFieldShadows:1]]
+[2022.07.30-17.28.22:172][  0]LogConfig: Setting CVar [[r.Mobile.AllowMovableDirectionalLights:1]]
+[2022.07.30-17.28.22:172][  0]LogConfig: Setting CVar [[r.MobileNumDynamicPointLights:4]]
+[2022.07.30-17.28.22:172][  0]LogConfig: Setting CVar [[r.MobileDynamicPointLightsUseStaticBranch:1]]
+[2022.07.30-17.28.22:173][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlights:0]]
+[2022.07.30-17.28.22:173][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlightsShadow:0]]
+[2022.07.30-17.28.22:173][  0]LogConfig: Setting CVar [[r.GPUSkin.Support16BitBoneIndex:0]]
+[2022.07.30-17.28.22:173][  0]LogConfig: Setting CVar [[r.GPUSkin.Limit2BoneInfluences:0]]
+[2022.07.30-17.28.22:174][  0]LogConfig: Setting CVar [[r.SupportDepthOnlyIndexBuffers:1]]
+[2022.07.30-17.28.22:174][  0]LogConfig: Setting CVar [[r.SupportReversedIndexBuffers:1]]
+[2022.07.30-17.28.22:174][  0]LogConfig: Setting CVar [[r.LightPropagationVolume:0]]
+[2022.07.30-17.28.22:174][  0]LogConfig: Setting CVar [[r.Mobile.AmbientOcclusion:0]]
+[2022.07.30-17.28.22:175][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluences:0]]
+[2022.07.30-17.28.22:175][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluencesThreshold:8]]
+[2022.07.30-17.28.22:175][  0]LogConfig: Setting CVar [[r.Mobile.PlanarReflectionMode:0]]
+[2022.07.30-17.28.22:175][  0]LogConfig: Setting CVar [[r.Mobile.SupportsGen4TAA:0]]
+[2022.07.30-17.28.22:176][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.07.30-17.28.22:176][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.07.30-17.28.22:176][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2022.07.30-17.28.22:176][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2022.07.30-17.28.22:177][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2022.07.30-17.28.22:177][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2022.07.30-17.28.22:177][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2022.07.30-17.28.22:178][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2022.07.30-17.28.22:178][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2022.07.30-17.28.22:178][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2022.07.30-17.28.22:178][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2022.07.30-17.28.22:179][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2022.07.30-17.28.22:181][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2022.07.30-17.28.22:181][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2022.07.30-17.28.22:182][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2022.07.30-17.28.22:182][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2022.07.30-17.28.22:182][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.07.30-17.28.22:183][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2022.07.30-17.28.22:183][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2022.07.30-17.28.22:183][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2022.07.30-17.28.22:183][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2022.07.30-17.28.22:184][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2022.07.30-17.28.22:184][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2022.07.30-17.28.22:184][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2022.07.30-17.28.22:184][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2022.07.30-17.28.22:185][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2022.07.30-17.28.22:185][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2022.07.30-17.28.22:185][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2022.07.30-17.28.22:185][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2022.07.30-17.28.22:186][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2022.07.30-17.28.22:186][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2022.07.30-17.28.22:186][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.07.30-17.28.22:187][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.07.30-17.28.22:187][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:187][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.07.30-17.28.22:187][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.07.30-17.28.22:188][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:188][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.07.30-17.28.22:188][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:188][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.07.30-17.28.22:189][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.07.30-17.28.22:189][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.07.30-17.28.22:189][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.07.30-17.28.22:190][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.07.30-17.28.22:190][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.07.30-17.28.22:190][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.07.30-17.28.22:190][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.07.30-17.28.22:191][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.07.30-17.28.22:191][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.07.30-17.28.22:191][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.07.30-17.28.22:191][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.07.30-17.28.22:192][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.07.30-17.28.22:192][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.07.30-17.28.22:192][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.07.30-17.28.22:192][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.07.30-17.28.22:193][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.07.30-17.28.22:193][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.07.30-17.28.22:193][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:194][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.07.30-17.28.22:194][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.07.30-17.28.22:194][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.07.30-17.28.22:194][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.07.30-17.28.22:195][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.07.30-17.28.22:197][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.07.30-17.28.22:197][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.07.30-17.28.22:198][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.07.30-17.28.22:198][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.07.30-17.28.22:198][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.07.30-17.28.22:198][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.07.30-17.28.22:199][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.07.30-17.28.22:199][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.07.30-17.28.22:199][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.07.30-17.28.22:199][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.07.30-17.28.22:200][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.07.30-17.28.22:200][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.07.30-17.28.22:200][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.07.30-17.28.22:200][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.07.30-17.28.22:201][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.07.30-17.28.22:201][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.07.30-17.28.22:201][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.07.30-17.28.22:202][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.07.30-17.28.22:202][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.07.30-17.28.22:202][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.07.30-17.28.22:202][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.07.30-17.28.22:203][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.07.30-17.28.22:203][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.07.30-17.28.22:203][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.07.30-17.28.22:204][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.07.30-17.28.22:204][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:204][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.07.30-17.28.22:204][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.07.30-17.28.22:205][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.07.30-17.28.22:205][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.07.30-17.28.22:205][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.07.30-17.28.22:205][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.07.30-17.28.22:206][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.07.30-17.28.22:206][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.07.30-17.28.22:206][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.07.30-17.28.22:207][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:207][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.07.30-17.28.22:207][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.07.30-17.28.22:207][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.07.30-17.28.22:208][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.07.30-17.28.22:208][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.07.30-17.28.22:208][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.07.30-17.28.22:209][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.07.30-17.28.22:209][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.07.30-17.28.22:209][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.07.30-17.28.22:209][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.07.30-17.28.22:210][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.07.30-17.28.22:210][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.07.30-17.28.22:210][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.07.30-17.28.22:210][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.07.30-17.28.22:211][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.07.30-17.28.22:213][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.07.30-17.28.22:214][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.07.30-17.28.22:214][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.07.30-17.28.22:215][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.07.30-17.28.22:215][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.07.30-17.28.22:216][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.07.30-17.28.22:216][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.07.30-17.28.22:216][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.07.30-17.28.22:217][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.07.30-17.28.22:217][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.07.30-17.28.22:217][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.07.30-17.28.22:217][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.07.30-17.28.22:218][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.07.30-17.28.22:218][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:218][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.07.30-17.28.22:218][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.07.30-17.28.22:219][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:219][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.07.30-17.28.22:219][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.07.30-17.28.22:219][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.07.30-17.28.22:220][  0]LogInit: Selected Device Profile: [Windows]
+[2022.07.30-17.28.22:220][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2022.07.30-17.28.22:220][  0]LogHAL: Display: Platform has ~ 16 GB [17128247296 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2022.07.30-17.28.22:221][  0]LogInit: Going up to parent DeviceProfile []
+[2022.07.30-17.28.22:221][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:221][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.07.30-17.28.22:221][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.07.30-17.28.22:222][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:222][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.07.30-17.28.22:222][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:223][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.07.30-17.28.22:223][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.07.30-17.28.22:223][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.07.30-17.28.22:223][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.07.30-17.28.22:224][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.07.30-17.28.22:224][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.07.30-17.28.22:224][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.07.30-17.28.22:224][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.07.30-17.28.22:225][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.07.30-17.28.22:225][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.07.30-17.28.22:225][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.07.30-17.28.22:225][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.07.30-17.28.22:226][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.07.30-17.28.22:226][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.07.30-17.28.22:226][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.07.30-17.28.22:226][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.07.30-17.28.22:227][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.07.30-17.28.22:230][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.07.30-17.28.22:230][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:231][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.07.30-17.28.22:231][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.07.30-17.28.22:231][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.07.30-17.28.22:231][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.07.30-17.28.22:232][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.07.30-17.28.22:232][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.07.30-17.28.22:232][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.07.30-17.28.22:233][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.07.30-17.28.22:233][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.07.30-17.28.22:233][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.07.30-17.28.22:233][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.07.30-17.28.22:234][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.07.30-17.28.22:234][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.07.30-17.28.22:234][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.07.30-17.28.22:234][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.07.30-17.28.22:235][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.07.30-17.28.22:235][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.07.30-17.28.22:235][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.07.30-17.28.22:235][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.07.30-17.28.22:236][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.07.30-17.28.22:236][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.07.30-17.28.22:236][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.07.30-17.28.22:236][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.07.30-17.28.22:237][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.07.30-17.28.22:237][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.07.30-17.28.22:237][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.07.30-17.28.22:237][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.07.30-17.28.22:238][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.07.30-17.28.22:238][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.07.30-17.28.22:238][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.07.30-17.28.22:239][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:239][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.07.30-17.28.22:239][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.07.30-17.28.22:239][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.07.30-17.28.22:240][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.07.30-17.28.22:240][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.07.30-17.28.22:240][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.07.30-17.28.22:241][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.07.30-17.28.22:241][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.07.30-17.28.22:241][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.07.30-17.28.22:241][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:242][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.07.30-17.28.22:242][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.07.30-17.28.22:242][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.07.30-17.28.22:242][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.07.30-17.28.22:243][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.07.30-17.28.22:245][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.07.30-17.28.22:245][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.07.30-17.28.22:246][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.07.30-17.28.22:246][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.07.30-17.28.22:246][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.07.30-17.28.22:246][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.07.30-17.28.22:247][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.07.30-17.28.22:247][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.07.30-17.28.22:247][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.07.30-17.28.22:247][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.07.30-17.28.22:248][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.07.30-17.28.22:248][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.07.30-17.28.22:248][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.07.30-17.28.22:248][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.07.30-17.28.22:249][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.07.30-17.28.22:249][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.07.30-17.28.22:249][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.07.30-17.28.22:250][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.07.30-17.28.22:250][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.07.30-17.28.22:250][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.07.30-17.28.22:250][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.07.30-17.28.22:251][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.07.30-17.28.22:251][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.07.30-17.28.22:251][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:251][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.07.30-17.28.22:252][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.07.30-17.28.22:252][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.07.30-17.28.22:252][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.07.30-17.28.22:252][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.07.30-17.28.22:253][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.07.30-17.28.22:253][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2022.07.30-17.28.22:254][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2022.07.30-17.28.22:254][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2022.07.30-17.28.22:254][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2022.07.30-17.28.22:254][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.07.30-17.28.22:255][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Editor.ini]
+[2022.07.30-17.28.22:255][  0]LogInit: Computer: DESKTOP-QG36584
+[2022.07.30-17.28.22:255][  0]LogInit: User: danie
+[2022.07.30-17.28.22:255][  0]LogInit: CPU Page size=4096, Cores=6
+[2022.07.30-17.28.22:256][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2022.07.30-17.28.22:256][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2022.07.30-17.28.22:256][  0]LogMemory: Platform Memory Stats for Windows
+[2022.07.30-17.28.22:256][  0]LogMemory: Process Physical Memory: 136.56 MB used, 136.56 MB peak
+[2022.07.30-17.28.22:257][  0]LogMemory: Process Virtual Memory: 115.22 MB used, 115.22 MB peak
+[2022.07.30-17.28.22:257][  0]LogMemory: Physical Memory: 12973.36 MB used,  3361.41 MB free, 16334.77 MB total
+[2022.07.30-17.28.22:257][  0]LogMemory: Virtual Memory: 134212816.00 MB used,  4913.54 MB free, 134217728.00 MB total
+[2022.07.30-17.28.22:260][  0]LogWindows: WindowsPlatformFeatures disabled or dedicated server build
+[2022.07.30-17.28.22:270][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2022.07.30-17.28.22:270][  0]LogInit: Using OS detected language (en-US).
+[2022.07.30-17.28.22:270][  0]LogInit: Using OS detected locale (en-GB).
+[2022.07.30-17.28.22:273][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2022.07.30-17.28.22:654][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2022.07.30-17.28.22:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2022.07.30-17.28.22:660][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2022.07.30-17.28.22:663][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2022.07.30-17.28.22:663][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2022.07.30-17.28.22:667][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2022.07.30-17.28.22:682][  0]LogTextureFormatOodle: Display: Oodle Texture 2.9.0 init RDO Off
+[2022.07.30-17.28.22:695][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2022.07.30-17.28.22:696][  0]LogShaderCompilers: Guid format shader working directory is -27 characters bigger than the processId version (../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Intermediate/Shaders/WorkingDirectory/19184/).
+[2022.07.30-17.28.22:696][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/danie/AppData/Local/Temp/UnrealShaderWorkingDir/A5EC66F44841F32966D2669271898A76/'.
+[2022.07.30-17.28.22:696][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2022.07.30-17.28.22:697][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2022.07.30-17.28.22:698][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2022.07.30-17.28.23:168][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2022.07.30-17.28.23:226][  0]LogDerivedDataCache: Loaded boot cache 0.06s 95MB C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2022.07.30-17.28.23:226][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc
+[2022.07.30-17.28.23:227][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2022.07.30-17.28.23:227][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2022.07.30-17.28.23:227][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.07.30-17.28.23:228][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2022.07.30-17.28.23:245][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2022.07.30-17.28.23:246][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.07.30-17.28.23:246][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2022.07.30-17.28.23:254][  0]LogDerivedDataCache: Speed tests for C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2022.07.30-17.28.23:255][  0]LogDerivedDataCache: Display: Performance to C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.03ms. RandomReadSpeed=320.39MBs, RandomWriteSpeed=190.36MBs. Assigned SpeedClass 'Local'
+[2022.07.30-17.28.23:255][  0]LogDerivedDataCache: Using Local data cache path C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2022.07.30-17.28.23:256][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2022.07.30-17.28.23:256][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2022.07.30-17.28.23:257][  0]LogInit: Using OS detected language (en-US).
+[2022.07.30-17.28.23:257][  0]LogInit: Using OS detected locale (en-GB).
+[2022.07.30-17.28.23:258][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the language.
+[2022.07.30-17.28.23:258][  0]LogTextLocalizationManager: No localization for 'en-GB' exists, so 'en' will be used for the locale.
+[2022.07.30-17.28.23:261][  0]LogTextLocalizationManager: Compacting localization data took   0.01ms
+[2022.07.30-17.28.23:261][  0]LogAssetRegistry: FAssetRegistry took 0.0020 seconds to start up
+[2022.07.30-17.28.23:422][  0]LogPackageLocalizationCache: Processed 27 localized package path(s) for 1 prioritized culture(s) in 0.000947 seconds
+[2022.07.30-17.28.23:504][  0]LogInit: Selected Device Profile: [Windows]
+[2022.07.30-17.28.23:504][  0]LogInit: Active device profile: [000001CCB5B40500][000001CCB1393440 49] Windows
+[2022.07.30-17.28.23:505][  0]LogInit: Profiles: [000001CCB5B40500][000001CCB1393440 49] Windows, [000001CCB5B32D00][000001CCB13A1700 49] WindowsNoEditor, [000001CCB5B30100][000001CCB13A59C0 49] WindowsServer, [000001CCB5B43000][000001CCB13A8100 49] WindowsClient, [000001CCB5B40200][000001CCB1396380 49] IOS, [000001CCB5B37D00][000001CCB13AC600 49] iPadAir, [000001CCB5B43A00][000001CCB13B48C0 49] iPadAir2, [000001CCB5ACC200][000001CCB13CEE00 49] IPadPro, [000001CCB5AC7F00][000001CCB13B8E40 49] iPadAir3, [000001CCB5B30700][000001CCB13C7100 49] iPadAir4, [000001CCB5AC4500][000001CCB13C33C0 49] iPadMini2, [000001CCB5B30200][000001CCB13CB680 49] iPadMini3, [000001CCB5AC5200][000001CCB13D9940 49] iPadMini4, [000001CCB5B32F00][000001CCB13DDC00 49] iPadMini5, [000001CCB5B35600][000001CCB0D9A580 49] iPhone6, [000001CCB5B35700][000001CCB0D8E5C0 49] iPodTouch6, [000001CCB5AC6100][000001CCB0DA6AC0 49] iPhone7, [000001CCB5AC6200][000001CCB13B0B00 49] iPodTouch7, [000001CCB5B36600][000001CCB0D9EDC0 49] iPhone5S, [000001CCB5AC7100][000001CCB0D93080 49] iPhone6Plus, [000001CCB5B37B00][000001CCB0DA3340 49] iPhone6S, [000001CCB5AC6B00][000001CCB0DAB600 49] iPhone6SPlus, [000001CCB5B34A00][000001CCB0DAF8C0 49] iPhone7Plus, [000001CCB5AC6F00][000001CCB0DB3B80 49] iPhoneSE, [000001CCB5B35000][000001CCB0DB62C0 49] iPhone8, [000001CCB5AC7C00][000001CCB0DBA580 49] iPhone8Plus, [000001CCB5B37200][000001CCB0D96800 49] iPhoneX, [000001CCB5AC6C00][000001CCB0DC2AC0 49] iPhoneXS, [000001CCB5B36B00][000001CCB0DC6D80 49] iPhoneXSMax, [000001CCB5AC6900][000001CCB0DCB040 49] iPhoneXR, [000001CCB5B36F00][000001CCB0DCF300 49] iPhone11, [000001CCB5AC4A00][000001CCB0DD35C0 49] iPhone11Pro, [000001CCB5B37E00][000001CCB0DD7880 49] iPhone11ProMax, [000001CCB5AC5400][000001CCB0DDBB40 49] iPhoneSE2, [000001CCB5B37F00][000001CCB0DDE280 49] iPhone12Mini, [000001CCB5AC7D00][000001CCB0DE2540 49] iPhone12, [000001CCB5B35200][000001CCB0DBE7C0 49] iPhone12Pro, [000001CCB5AC7500][000001CCB0DE6A40 49] iPhone12ProMax, [000001CCB5B34200][000001CCB0DEED00 49] iPadPro105, [000001CCB5AC5A00][000001CCB0DF2FC0 49] iPadPro129, [000001CCB5B34D00][000001CCB0DF7280 49] iPadPro97, [000001CCB5AC4900][000001CCB0DFB540 49] iPadPro2_129, [000001CCB5B35A00][000001CCB0DFF800 49] iPad5, [000001CCB5AC5C00][000001CCB0E03AC0 49] iPad6, [000001CCB5B37900][000001CCB0E06200 49] iPad7, [000001CCB5AC6600][000001CCB0E0A4C0 49] iPad8, [000001CCB5B37000][000001CCB0E0E780 49] iPadPro11, [000001CCB5AC5500][000001CCB0DEAA00 49] iPadPro2_11, [000001CCB5B36100][000001CCB0E12C80 49] iPadPro3_129, [000001CCB5AC5D00][000001CCB0E1AF40 49] iPadPro4_129, [000001CCB5B36400][000001CCB0E1F200 49] AppleTV, [000001CCB5AC6E00][000001CCB0E234C0 49] AppleTV4K, [000001CCB5B34500][000001CCB0E27780 49] TVOS, [000001CCB5AC7A00][000001CCB0E2BA40 49] Mac, [000001CCB5B36900][000001CCB0E2E180 49] MacClient, [000001CCB5AC5700][000001CCB0E32440 49] MacNoEditor, [000001CCB5B35100][000001CCB0E36700 49] MacServer, [000001CCB5AC7B00][000001CCB0E3A9C0 49] Linux, [000001CCB5B34600][000001CCB0E16C40 49] LinuxAArch64, [000001CCB5AC4400][000001CCB0E3EEC0 49] LinuxNoEditor, [000001CCB5B36200][000001CCB0E47180 49] LinuxAArch64NoEditor, [000001CCB5B40100][000001CCB0E4B440 49] LinuxClient, [000001CCB5ACC700][000001CCB0E4F700 49] LinuxAArch64Client, [000001CCB5B41900][000001CCB0E539C0 49] LinuxServer, [000001CCB5ACCA00][000001CCB0E56100 49] LinuxAArch64Server, [000001CCB5B42D00][000001CCB0E5A3C0 49] Android, [000001CCB5ACD400][000001CCB0E5E680 49] Android_Low, [000001CCB5B41100][000001CCB0E62940 49] Android_Mid, [000001CCB5ACCE00][000001CCB0E66C00 49] Android_High, [000001CCB5B40800][000001CCB0E42E80 49] Android_Default, [000001CCB5ACE600][000001CCB0E6B100 49] Android_Adreno4xx, [000001CCB5B41400][000001CCB0E733C0 49] Android_Adreno5xx_Low, [000001CCB5ACE400][000001CCB0E77680 49] Android_Adreno5xx, [000001CCB5B40700][000001CCB0E7B940 49] Android_Adreno6xx, [000001CCB5ACEC00][000001CCB0E7FC00 49] Android_Adreno6xx_Vulkan, [000001CCB5B43B00][000001CCB0E82340 49] Android_Mali_T6xx, [000001CCB5ACC500][000001CCB0E86600 49] Android_Mali_T7xx, [000001CCB5B40300][000001CCB0E8A8C0 49] Android_Mali_T8xx, [000001CCB5ACF000][000001CCB0E8EB80 49] Android_Mali_G71, [000001CCB5B42900][000001CCB0E92E40 49] Android_Mali_G72, [000001CCB5ACE500][000001CCB0E6F0C0 49] Android_Mali_G72_Vulkan, [000001CCB5B41B00][000001CCB0E97340 49] Android_Mali_G76, [000001CCB5ACF100][000001CCB0E9F600 49] Android_Mali_G76_Vulkan, [000001CCB5B41E00][000001CCB0EA38C0 49] Android_Mali_G77, [000001CCB5ACFB00][000001CCB0EA7B80 49] Android_Mali_G77_Vulkan, [000001CCB5B43C00][000001CCB0EAA2C0 49] Android_Mali_G78, [000001CCB5ACFF00][000001CCB0EAE580 49] Android_Mali_G78_Vulkan, [000001CCB5B42400][000001CCB0EB2840 49] Android_Mali_G710, [000001CCB5ACD300][000001CCB0EB6B00 49] Android_Mali_G710_Vulkan, [000001CCB5B43100][000001CCB0EBADC0 49] Android_Vulkan_SM5, [000001CCB5AC6400][000001CCB0EBF080 49] Android_PowerVR_G6xxx, [000001CCB5B41D00][000001CCB0E9B300 49] Android_PowerVR_GT7xxx, [000001CCB5AC4100][000001CCB0EC3580 49] Android_PowerVR_GE8xxx, [000001CCB5B43200][000001CCB0ECB840 49] Android_PowerVR_GM9xxx, [000001CCB5AC4300][000001CCB0ECFB00 49] Android_PowerVR_GM9xxx_Vulkan, [000001CCB5B43300][000001CCB0ED2240 49] Android_TegraK1, [000001CCB5AC5600][000001CCB0ED6500 49] Android_Unknown_Vulkan, [000001CCB5B42000][000001CCB0EDA7C0 49] Lumin, [000001CCB5AC4B00][000001CCB0EDEA80 49] Lumin_Desktop, [000001CCB5B40D00][000001CCB0EE2D40 49] HoloLens, 
+[2022.07.30-17.28.23:524][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2022.07.30-17.28.23:525][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2022.07.30-17.28.23:525][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2022.07.30-17.28.23:525][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2022.07.30-17.28.23:526][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2022.07.30-17.28.23:536][  0]LogNetVersion: fpsgame 1.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 3215450660)
+[2022.07.30-17.28.23:623][  0]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/DaylightAmbientCubemap.DaylightAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2022.07.30-17.28.23:637][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2022.07.30-17.28.23:700][  0]LogPython: Using Python 3.7.7
+[2022.07.30-17.28.24:107][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: B31C2A844739F75690354592AB6533CD | Instance: E2B29C694A9C9677F3DEFBA9D425F222 (DESKTOP-QG36584-19184).
+[2022.07.30-17.28.24:120][  0]LogCollectionManager: Loaded 0 collections in 0.001698 seconds
+[2022.07.30-17.28.24:123][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Collections/' took 0.00s
+[2022.07.30-17.28.24:123][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Developers/danie/Collections/' took 0.00s
+[2022.07.30-17.28.24:123][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Collections/' took 0.00s
+[2022.07.30-17.28.24:123][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000001 seconds (updated 0 objects)
+[2022.07.30-17.28.24:190][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2022.07.30-17.28.24:191][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2022.07.30-17.28.24:249][  0]SourceControl: Source control is disabled
+[2022.07.30-17.28.24:250][  0]SourceControl: Source control is disabled
+[2022.07.30-17.28.24:251][  0]SourceControl: Source control is disabled
+[2022.07.30-17.28.24:253][  0]LogUProjectInfo: Found projects:
+[2022.07.30-17.28.24:292][  0]LogOpenImageDenoise: OIDN starting up
+[2022.07.30-17.28.24:315][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2022.07.30-17.28.24:323][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.07.30-17.28.24:323][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.07.30-17.28.24:366][  0]LogOcInput: OculusInput pre-init called
+[2022.07.30-17.28.24:374][  0]LogUObjectArray: 22250 objects as part of root set at end of initial load.
+[2022.07.30-17.28.24:374][  0]LogUObjectAllocator: 6032336 out of 0 bytes used by permanent object pool.
+[2022.07.30-17.28.24:375][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2022.07.30-17.28.24:408][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotPosition is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.07.30-17.28.24:408][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotRotation is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.07.30-17.28.24:409][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotScale is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.07.30-17.28.24:409][  0]LogClass: Display: FloatProperty FWeaponDataStruct::MaxRange is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:409][  0]LogClass: Display: FloatProperty FWeaponDataStruct::FireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:410][  0]LogClass: Display: IntProperty FWeaponDataStruct::CartridgeBullets is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:410][  0]LogClass: Display: IntProperty FWeaponDataStruct::BurstNumber is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:410][  0]LogClass: Display: IntProperty FWeaponDataStruct::MaxMagSize is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:410][  0]LogClass: Display: IntProperty FWeaponDataStruct::MagAmmo is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:411][  0]LogClass: Display: FloatProperty FWeaponDataStruct::ProjectileSpeed is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:411][  0]LogClass: Display: EnumProperty FWeaponDataStruct::WAWeaponType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:411][  0]LogClass: Display: EnumProperty FWeaponDataStruct::WAWeaponFireType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:411][  0]LogClass: Display: EnumProperty FWeaponDataStruct::WAWeaponHitDetectionType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:412][  0]LogClass: Warning: ObjectProperty FWeaponDataStruct::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:412][  0]LogClass: Display: EnumProperty FWeaponDataStruct::TypeOfEquip is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:412][  0]LogClass: Display: EnumProperty FWeaponDataStruct::GunModel is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:413][  0]LogClass: Display: StructProperty FWeaponDataStruct::BasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:413][  0]LogClass: Display: StructProperty FWeaponDataStruct::BaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:413][  0]LogClass: Display: StructProperty FWeaponDataStruct::BaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:414][  0]LogClass: Display: StructProperty FWeaponDataStruct::TPBaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:414][  0]LogClass: Display: StructProperty FWeaponDataStruct::TPBaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:414][  0]LogClass: Display: StructProperty FWeaponDataStruct::TPBasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:415][  0]LogClass: Display: 22 Uninitialized script struct members found including 1 object properties
+[2022.07.30-17.28.24:415][  0]LogAutomationTest: Warning: ObjectProperty FWeaponDataStruct::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.07.30-17.28.24:416][  0]LogEngine: Initializing Engine...
+[2022.07.30-17.28.24:417][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2022.07.30-17.28.24:430][  0]LogInit: Initializing FReadOnlyCVARCache
+[2022.07.30-17.28.24:430][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2022.07.30-17.28.24:433][  0]LogInit: Texture streaming: Disabled
+[2022.07.30-17.28.24:457][  0]LogInit: Display: Game Engine Initialized.
+[2022.07.30-17.28.24:457][  0]LogNiagaraEditor: GEditor isn't valid! Particle reset commands will not work for Niagara components!
+[2022.07.30-17.28.24:488][  0]LogInit: Display: Starting Game.
+[2022.07.30-17.28.24:489][  0]LogNet: Browse: /Game/Maps/TestMap?Name=Player
+[2022.07.30-17.28.24:489][  0]LogLoad: LoadMap: /Game/Maps/TestMap?Name=Player
+[2022.07.30-17.28.24:490][  0]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2022.07.30-17.28.24:492][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2022.07.30-17.28.24:501][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2022.07.30-17.28.24:515][  0]LogClass: Warning: Property TPBaseRotation of TPBaseRotation has a struct type mismatch (tag Vector != prop Rotator) in package:  ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Blueprints/Weapons/Guns/Prototypes/BP_PrototypePistol.uasset. If that struct got renamed, add an entry to ActiveStructRedirects.
+[2022.07.30-17.28.24:580][  0]LogAIModule: Creating AISystem for world TestMap
+[2022.07.30-17.28.24:790][  0]LogLoad: Game class is 'BP_FPSGameModeDefault_C'
+[2022.07.30-17.28.24:790][  0]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2022.07.30-17.28.24:791][  0]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2022.07.30-17.28.24:791][  0]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2022.07.30-17.28.24:792][  0]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2022.07.30-17.28.24:792][  0]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.07.30-17.28.24:792][  0]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
+[2022.07.30-17.28.24:794][  0]LogWorld: Bringing World /Game/Maps/TestMap.TestMap up for play (max tick rate 30) at 2022.07.30-18.28.24
+[2022.07.30-17.28.24:794][  0]LogWorld: Bringing up level for play took: 0.001231
+[2022.07.30-17.28.24:795][  0]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2022.07.30-17.28.24:795][  0]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2022.07.30-17.28.24:795][  0]LogLoad: Took 0.306470 seconds to LoadMap(/Game/Maps/TestMap)
+[2022.07.30-17.28.24:800][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2022.07.30-17.28.24:800][  0]LogLoad: (Engine Initialization) Total time: 4.73 seconds
+[2022.07.30-17.28.24:800][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2022.07.30-17.28.24:967][  4]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58980
+[2022.07.30-17.28.24:967][  4]LogHandshake: SendConnectChallenge. Timestamp: 0.165755, Cookie: 231217149225151077229031194222179094065166111070177002096229
+[2022.07.30-17.28.25:000][  5]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58980
+[2022.07.30-17.28.25:000][  5]LogHandshake: SendChallengeAck. InCookie: 231217149225151077229031194222179094065166111070177002096229
+[2022.07.30-17.28.25:001][  5]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58980
+[2022.07.30-17.28.25:002][  5]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.07.30-17.28.25:002][  5]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 07/30/22 18:28:25, [UNetConnection] RemoteAddr: 127.0.0.1:58980, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.07.30-17.28.25:003][  5]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58980, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.07.30-17.28.25:034][  6]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/TestMap.TestMap: Accepted
+[2022.07.30-17.28.25:034][  6]LogNet: Remote platform little endian=1
+[2022.07.30-17.28.25:034][  6]LogNet: This platform little endian=1
+[2022.07.30-17.28.25:035][  6]LogNetVersion: fpsgame 1.0.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 1484303137)
+[2022.07.30-17.28.25:067][  7]LogNet: Login request: ?Name=DESKTOP-QG36584-24CF10284DBE25C348797384EA94E889 userId: NULL:DESKTOP-QG36584-24CF10284DBE25C348797384EA94E889 platform: NULL
+[2022.07.30-17.28.25:133][  9]LogNet: Client netspeed is 100000
+[2022.07.30-17.28.25:133][  9]LogNet: Join request: /Engine/Maps/Entry?Name=DESKTOP-QG36584-24CF10284DBE25C348797384EA94E889?SplitscreenCount=1
+[2022.07.30-17.28.25:134][  9]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.07.30-17.28.25:135][  9]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2022.07.30-17.28.25:136][  9]LogTemp: Warning: Aboiut to add meself to the gamemode
+[2022.07.30-17.28.25:137][  9]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2022.07.30-17.28.25:137][  9]LogNet: Join succeeded: DESKTOP-QG36584-24CF
+[2022.07.30-17.28.25:138][  9]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:138][  9]LogTemp: Warning: Server time: 0.331906
+[2022.07.30-17.28.25:167][ 10]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:168][ 10]LogTemp: Warning: Server time: 0.365446
+[2022.07.30-17.28.25:200][ 11]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:201][ 11]LogTemp: Warning: Server time: 0.398472
+[2022.07.30-17.28.25:235][ 12]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:235][ 12]LogTemp: Warning: Server time: 0.432537
+[2022.07.30-17.28.25:267][ 13]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:268][ 13]LogTemp: Warning: Server time: 0.465544
+[2022.07.30-17.28.25:300][ 14]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:301][ 14]LogTemp: Warning: Server time: 0.499080
+[2022.07.30-17.28.25:334][ 15]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:335][ 15]LogTemp: Warning: Server time: 0.533113
+[2022.07.30-17.28.25:368][ 16]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:369][ 16]LogTemp: Warning: Server time: 0.566141
+[2022.07.30-17.28.25:401][ 17]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:402][ 17]LogTemp: Warning: Server time: 0.599168
+[2022.07.30-17.28.25:434][ 18]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:435][ 18]LogTemp: Warning: Server time: 0.632204
+[2022.07.30-17.28.25:467][ 19]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:468][ 19]LogTemp: Warning: Server time: 0.665743
+[2022.07.30-17.28.25:501][ 20]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58983
+[2022.07.30-17.28.25:501][ 20]LogHandshake: SendConnectChallenge. Timestamp: 0.699766, Cookie: 035025214252053204101194042089235044228216077079238214220187
+[2022.07.30-17.28.25:503][ 20]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:503][ 20]LogTemp: Warning: Server time: 0.699766
+[2022.07.30-17.28.25:534][ 21]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58983
+[2022.07.30-17.28.25:534][ 21]LogHandshake: SendChallengeAck. InCookie: 035025214252053204101194042089235044228216077079238214220187
+[2022.07.30-17.28.25:535][ 21]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58983
+[2022.07.30-17.28.25:536][ 21]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.07.30-17.28.25:536][ 21]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 07/30/22 18:28:25, [UNetConnection] RemoteAddr: 127.0.0.1:58983, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.07.30-17.28.25:536][ 21]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58983, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.07.30-17.28.25:537][ 21]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/TestMap.TestMap: Accepted
+[2022.07.30-17.28.25:537][ 21]LogNet: Remote platform little endian=1
+[2022.07.30-17.28.25:537][ 21]LogNet: This platform little endian=1
+[2022.07.30-17.28.25:538][ 21]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:538][ 21]LogTemp: Warning: Server time: 0.732796
+[2022.07.30-17.28.25:568][ 22]LogNet: Login request: ?Name=DESKTOP-QG36584-F7195D0F4B98F50820CF99B0D8AC90EF userId: NULL:DESKTOP-QG36584-F7195D0F4B98F50820CF99B0D8AC90EF platform: NULL
+[2022.07.30-17.28.25:568][ 22]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:569][ 22]LogTemp: Warning: Server time: 0.766340
+[2022.07.30-17.28.25:601][ 23]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:602][ 23]LogTemp: Warning: Server time: 0.799368
+[2022.07.30-17.28.25:634][ 24]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:635][ 24]LogTemp: Warning: Server time: 0.832394
+[2022.07.30-17.28.25:668][ 25]LogNet: Client netspeed is 100000
+[2022.07.30-17.28.25:668][ 25]LogNet: Join request: /Engine/Maps/Entry?Name=DESKTOP-QG36584-F7195D0F4B98F50820CF99B0D8AC90EF?SplitscreenCount=1
+[2022.07.30-17.28.25:669][ 25]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.07.30-17.28.25:670][ 25]LogTemp: Warning: Aboiut to add meself to the gamemode
+[2022.07.30-17.28.25:670][ 25]LogNet: Join succeeded: DESKTOP-QG36584-F719
+[2022.07.30-17.28.25:671][ 25]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:671][ 25]LogTemp: Warning: Server time: 0.866425
+[2022.07.30-17.28.25:672][ 25]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:672][ 25]LogTemp: Warning: Server time: 0.866425
+[2022.07.30-17.28.25:702][ 26]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:703][ 26]LogTemp: Warning: Server time: 0.900521
+[2022.07.30-17.28.25:704][ 26]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:704][ 26]LogTemp: Warning: Server time: 0.900521
+[2022.07.30-17.28.25:736][ 27]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:737][ 27]LogTemp: Warning: Server time: 0.934492
+[2022.07.30-17.28.25:738][ 27]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:738][ 27]LogTemp: Warning: Server time: 0.934492
+[2022.07.30-17.28.25:770][ 28]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:771][ 28]LogTemp: Warning: Server time: 0.968515
+[2022.07.30-17.28.25:771][ 28]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:772][ 28]LogTemp: Warning: Server time: 0.968515
+[2022.07.30-17.28.25:803][ 29]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:804][ 29]LogTemp: Warning: Server time: 1.001545
+[2022.07.30-17.28.25:805][ 29]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:805][ 29]LogTemp: Warning: Server time: 1.001545
+[2022.07.30-17.28.25:837][ 30]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:838][ 30]LogTemp: Warning: Server time: 1.035576
+[2022.07.30-17.28.25:839][ 30]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:839][ 30]LogTemp: Warning: Server time: 1.035576
+[2022.07.30-17.28.25:871][ 31]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:871][ 31]LogTemp: Warning: Server time: 1.069605
+[2022.07.30-17.28.25:872][ 31]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:872][ 31]LogTemp: Warning: Server time: 1.069605
+[2022.07.30-17.28.25:905][ 32]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:906][ 32]LogTemp: Warning: Server time: 1.103639
+[2022.07.30-17.28.25:906][ 32]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:907][ 32]LogTemp: Warning: Server time: 1.103639
+[2022.07.30-17.28.25:938][ 33]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:939][ 33]LogTemp: Warning: Server time: 1.136672
+[2022.07.30-17.28.25:939][ 33]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:940][ 33]LogTemp: Warning: Server time: 1.136672
+[2022.07.30-17.28.25:971][ 34]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:971][ 34]LogTemp: Warning: Server time: 1.169701
+[2022.07.30-17.28.25:973][ 34]LogTemp: Warning: Ticking
+[2022.07.30-17.28.25:973][ 34]LogTemp: Warning: Server time: 1.169701
+[2022.07.30-17.28.26:004][ 35]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:005][ 35]LogTemp: Warning: Server time: 1.202747
+[2022.07.30-17.28.26:006][ 35]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:006][ 35]LogTemp: Warning: Server time: 1.202747
+[2022.07.30-17.28.26:038][ 36]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:039][ 36]LogTemp: Warning: Server time: 1.236763
+[2022.07.30-17.28.26:039][ 36]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:040][ 36]LogTemp: Warning: Server time: 1.236763
+[2022.07.30-17.28.26:072][ 37]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:073][ 37]LogTemp: Warning: Server time: 1.270791
+[2022.07.30-17.28.26:073][ 37]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:074][ 37]LogTemp: Warning: Server time: 1.270791
+[2022.07.30-17.28.26:106][ 38]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:107][ 38]LogTemp: Warning: Server time: 1.304819
+[2022.07.30-17.28.26:107][ 38]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:108][ 38]LogTemp: Warning: Server time: 1.304819
+[2022.07.30-17.28.26:141][ 39]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:142][ 39]LogTemp: Warning: Server time: 1.339007
+[2022.07.30-17.28.26:142][ 39]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:142][ 39]LogTemp: Warning: Server time: 1.339007
+[2022.07.30-17.28.26:173][ 40]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:173][ 40]LogTemp: Warning: Server time: 1.371884
+[2022.07.30-17.28.26:174][ 40]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:174][ 40]LogTemp: Warning: Server time: 1.371884
+[2022.07.30-17.28.26:206][ 41]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:207][ 41]LogTemp: Warning: Server time: 1.404914
+[2022.07.30-17.28.26:208][ 41]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:208][ 41]LogTemp: Warning: Server time: 1.404914
+[2022.07.30-17.28.26:240][ 42]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:240][ 42]LogTemp: Warning: Server time: 1.438945
+[2022.07.30-17.28.26:241][ 42]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:241][ 42]LogTemp: Warning: Server time: 1.438945
+[2022.07.30-17.28.26:273][ 43]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:274][ 43]LogTemp: Warning: Server time: 1.471986
+[2022.07.30-17.28.26:275][ 43]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:275][ 43]LogTemp: Warning: Server time: 1.471986
+[2022.07.30-17.28.26:306][ 44]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:307][ 44]LogTemp: Warning: Server time: 1.505009
+[2022.07.30-17.28.26:307][ 44]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:308][ 44]LogTemp: Warning: Server time: 1.505009
+[2022.07.30-17.28.26:339][ 45]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:340][ 45]LogTemp: Warning: Server time: 1.538036
+[2022.07.30-17.28.26:340][ 45]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:341][ 45]LogTemp: Warning: Server time: 1.538036
+[2022.07.30-17.28.26:373][ 46]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:374][ 46]LogTemp: Warning: Server time: 1.572069
+[2022.07.30-17.28.26:375][ 46]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:375][ 46]LogTemp: Warning: Server time: 1.572069
+[2022.07.30-17.28.26:407][ 47]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:408][ 47]LogTemp: Warning: Server time: 1.606095
+[2022.07.30-17.28.26:409][ 47]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:409][ 47]LogTemp: Warning: Server time: 1.606095
+[2022.07.30-17.28.26:441][ 48]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:442][ 48]LogTemp: Warning: Server time: 1.639124
+[2022.07.30-17.28.26:443][ 48]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:443][ 48]LogTemp: Warning: Server time: 1.639124
+[2022.07.30-17.28.26:475][ 49]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:476][ 49]LogTemp: Warning: Server time: 1.673157
+[2022.07.30-17.28.26:476][ 49]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:477][ 49]LogTemp: Warning: Server time: 1.673157
+[2022.07.30-17.28.26:509][ 50]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:510][ 50]LogTemp: Warning: Server time: 1.707187
+[2022.07.30-17.28.26:511][ 50]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:511][ 50]LogTemp: Warning: Server time: 1.707187
+[2022.07.30-17.28.26:543][ 51]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:544][ 51]LogTemp: Warning: Server time: 1.741246
+[2022.07.30-17.28.26:544][ 51]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:545][ 51]LogTemp: Warning: Server time: 1.741246
+[2022.07.30-17.28.26:577][ 52]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:578][ 52]LogTemp: Warning: Server time: 1.775249
+[2022.07.30-17.28.26:578][ 52]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:579][ 52]LogTemp: Warning: Server time: 1.775249
+[2022.07.30-17.28.26:611][ 53]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:612][ 53]LogTemp: Warning: Server time: 1.809281
+[2022.07.30-17.28.26:612][ 53]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:613][ 53]LogTemp: Warning: Server time: 1.809281
+[2022.07.30-17.28.26:644][ 54]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:646][ 54]LogTemp: Warning: Server time: 1.842311
+[2022.07.30-17.28.26:646][ 54]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:647][ 54]LogTemp: Warning: Server time: 1.842311
+[2022.07.30-17.28.26:677][ 55]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:678][ 55]LogTemp: Warning: Server time: 1.875341
+[2022.07.30-17.28.26:678][ 55]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:679][ 55]LogTemp: Warning: Server time: 1.875341
+[2022.07.30-17.28.26:711][ 56]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:711][ 56]LogTemp: Warning: Server time: 1.909370
+[2022.07.30-17.28.26:712][ 56]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:713][ 56]LogTemp: Warning: Server time: 1.909370
+[2022.07.30-17.28.26:744][ 57]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:745][ 57]LogTemp: Warning: Server time: 1.942402
+[2022.07.30-17.28.26:746][ 57]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:746][ 57]LogTemp: Warning: Server time: 1.942402
+[2022.07.30-17.28.26:777][ 58]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:778][ 58]LogTemp: Warning: Server time: 1.975436
+[2022.07.30-17.28.26:778][ 58]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:779][ 58]LogTemp: Warning: Server time: 1.975436
+[2022.07.30-17.28.26:810][ 59]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:811][ 59]LogTemp: Warning: Server time: 2.008460
+[2022.07.30-17.28.26:812][ 59]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:812][ 59]LogTemp: Warning: Server time: 2.008460
+[2022.07.30-17.28.26:844][ 60]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:845][ 60]LogTemp: Warning: Server time: 2.042502
+[2022.07.30-17.28.26:845][ 60]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:846][ 60]LogTemp: Warning: Server time: 2.042502
+[2022.07.30-17.28.26:877][ 61]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:878][ 61]LogTemp: Warning: Server time: 2.075539
+[2022.07.30-17.28.26:879][ 61]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:879][ 61]LogTemp: Warning: Server time: 2.075539
+[2022.07.30-17.28.26:911][ 62]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:912][ 62]LogTemp: Warning: Server time: 2.109555
+[2022.07.30-17.28.26:912][ 62]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:913][ 62]LogTemp: Warning: Server time: 2.109555
+[2022.07.30-17.28.26:945][ 63]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:946][ 63]LogTemp: Warning: Server time: 2.143585
+[2022.07.30-17.28.26:947][ 63]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:947][ 63]LogTemp: Warning: Server time: 2.143585
+[2022.07.30-17.28.26:979][ 64]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:980][ 64]LogTemp: Warning: Server time: 2.177614
+[2022.07.30-17.28.26:981][ 64]LogTemp: Warning: Ticking
+[2022.07.30-17.28.26:981][ 64]LogTemp: Warning: Server time: 2.177614
+[2022.07.30-17.28.27:013][ 65]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:014][ 65]LogTemp: Warning: Server time: 2.211649
+[2022.07.30-17.28.27:014][ 65]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:014][ 65]LogTemp: Warning: Server time: 2.211649
+[2022.07.30-17.28.27:046][ 66]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:047][ 66]LogTemp: Warning: Server time: 2.244678
+[2022.07.30-17.28.27:048][ 66]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:048][ 66]LogTemp: Warning: Server time: 2.244678
+[2022.07.30-17.28.27:079][ 67]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:079][ 67]LogTemp: Warning: Server time: 2.277705
+[2022.07.30-17.28.27:080][ 67]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:080][ 67]LogTemp: Warning: Server time: 2.277705
+[2022.07.30-17.28.27:112][ 68]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:113][ 68]LogTemp: Warning: Server time: 2.310734
+[2022.07.30-17.28.27:114][ 68]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:114][ 68]LogTemp: Warning: Server time: 2.310734
+[2022.07.30-17.28.27:146][ 69]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:147][ 69]LogTemp: Warning: Server time: 2.344767
+[2022.07.30-17.28.27:148][ 69]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:148][ 69]LogTemp: Warning: Server time: 2.344767
+[2022.07.30-17.28.27:179][ 70]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:180][ 70]LogTemp: Warning: Server time: 2.377799
+[2022.07.30-17.28.27:181][ 70]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:181][ 70]LogTemp: Warning: Server time: 2.377799
+[2022.07.30-17.28.27:212][ 71]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:213][ 71]LogTemp: Warning: Server time: 2.410827
+[2022.07.30-17.28.27:214][ 71]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:214][ 71]LogTemp: Warning: Server time: 2.410827
+[2022.07.30-17.28.27:245][ 72]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:246][ 72]LogTemp: Warning: Server time: 2.443857
+[2022.07.30-17.28.27:246][ 72]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:247][ 72]LogTemp: Warning: Server time: 2.443857
+[2022.07.30-17.28.27:278][ 73]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:279][ 73]LogTemp: Warning: Server time: 2.476885
+[2022.07.30-17.28.27:279][ 73]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:280][ 73]LogTemp: Warning: Server time: 2.476885
+[2022.07.30-17.28.27:311][ 74]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:312][ 74]LogTemp: Warning: Server time: 2.509918
+[2022.07.30-17.28.27:313][ 74]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:313][ 74]LogTemp: Warning: Server time: 2.509918
+[2022.07.30-17.28.27:344][ 75]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:345][ 75]LogTemp: Warning: Server time: 2.542953
+[2022.07.30-17.28.27:346][ 75]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:346][ 75]LogTemp: Warning: Server time: 2.542953
+[2022.07.30-17.28.27:378][ 76]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:379][ 76]LogTemp: Warning: Server time: 2.576978
+[2022.07.30-17.28.27:379][ 76]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:379][ 76]LogTemp: Warning: Server time: 2.576978
+[2022.07.30-17.28.27:411][ 77]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:412][ 77]LogTemp: Warning: Server time: 2.610008
+[2022.07.30-17.28.27:412][ 77]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:413][ 77]LogTemp: Warning: Server time: 2.610008
+[2022.07.30-17.28.27:445][ 78]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:446][ 78]LogTemp: Warning: Server time: 2.644041
+[2022.07.30-17.28.27:447][ 78]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:447][ 78]LogTemp: Warning: Server time: 2.644041
+[2022.07.30-17.28.27:479][ 79]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:480][ 79]LogTemp: Warning: Server time: 2.678076
+[2022.07.30-17.28.27:480][ 79]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:481][ 79]LogTemp: Warning: Server time: 2.678076
+[2022.07.30-17.28.27:513][ 80]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:514][ 80]LogTemp: Warning: Server time: 2.712107
+[2022.07.30-17.28.27:515][ 80]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:515][ 80]LogTemp: Warning: Server time: 2.712107
+[2022.07.30-17.28.27:548][ 81]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:549][ 81]LogTemp: Warning: Server time: 2.746132
+[2022.07.30-17.28.27:550][ 81]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:550][ 81]LogTemp: Warning: Server time: 2.746132
+[2022.07.30-17.28.27:582][ 82]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:583][ 82]LogTemp: Warning: Server time: 2.780162
+[2022.07.30-17.28.27:583][ 82]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:583][ 82]LogTemp: Warning: Server time: 2.780162
+[2022.07.30-17.28.27:615][ 83]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:616][ 83]LogTemp: Warning: Server time: 2.813197
+[2022.07.30-17.28.27:616][ 83]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:617][ 83]LogTemp: Warning: Server time: 2.813197
+[2022.07.30-17.28.27:649][ 84]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:650][ 84]LogTemp: Warning: Server time: 2.847242
+[2022.07.30-17.28.27:651][ 84]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:651][ 84]LogTemp: Warning: Server time: 2.847242
+[2022.07.30-17.28.27:683][ 85]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:684][ 85]LogTemp: Warning: Server time: 2.881255
+[2022.07.30-17.28.27:684][ 85]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:685][ 85]LogTemp: Warning: Server time: 2.881255
+[2022.07.30-17.28.27:717][ 86]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:718][ 86]LogTemp: Warning: Server time: 2.915289
+[2022.07.30-17.28.27:718][ 86]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:719][ 86]LogTemp: Warning: Server time: 2.915289
+[2022.07.30-17.28.27:751][ 87]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:752][ 87]LogTemp: Warning: Server time: 2.949316
+[2022.07.30-17.28.27:752][ 87]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:753][ 87]LogTemp: Warning: Server time: 2.949316
+[2022.07.30-17.28.27:784][ 88]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:785][ 88]LogTemp: Warning: Server time: 2.982344
+[2022.07.30-17.28.27:785][ 88]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:785][ 88]LogTemp: Warning: Server time: 2.982344
+[2022.07.30-17.28.27:817][ 89]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:818][ 89]LogTemp: Warning: Server time: 3.015374
+[2022.07.30-17.28.27:818][ 89]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:819][ 89]LogTemp: Warning: Server time: 3.015374
+[2022.07.30-17.28.27:850][ 90]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:851][ 90]LogTemp: Warning: Server time: 3.048410
+[2022.07.30-17.28.27:851][ 90]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:851][ 90]LogTemp: Warning: Server time: 3.048410
+[2022.07.30-17.28.27:883][ 91]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:884][ 91]LogTemp: Warning: Server time: 3.081438
+[2022.07.30-17.28.27:885][ 91]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:885][ 91]LogTemp: Warning: Server time: 3.081438
+[2022.07.30-17.28.27:917][ 92]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:918][ 92]LogTemp: Warning: Server time: 3.115468
+[2022.07.30-17.28.27:919][ 92]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:919][ 92]LogTemp: Warning: Server time: 3.115468
+[2022.07.30-17.28.27:951][ 93]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:952][ 93]LogTemp: Warning: Server time: 3.149499
+[2022.07.30-17.28.27:952][ 93]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:953][ 93]LogTemp: Warning: Server time: 3.149499
+[2022.07.30-17.28.27:984][ 94]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:985][ 94]LogTemp: Warning: Server time: 3.182529
+[2022.07.30-17.28.27:986][ 94]LogTemp: Warning: Ticking
+[2022.07.30-17.28.27:986][ 94]LogTemp: Warning: Server time: 3.182529
+[2022.07.30-17.28.28:018][ 95]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:019][ 95]LogTemp: Warning: Server time: 3.216563
+[2022.07.30-17.28.28:019][ 95]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:020][ 95]LogTemp: Warning: Server time: 3.216563
+[2022.07.30-17.28.28:052][ 96]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:053][ 96]LogTemp: Warning: Server time: 3.250590
+[2022.07.30-17.28.28:053][ 96]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:054][ 96]LogTemp: Warning: Server time: 3.250590
+[2022.07.30-17.28.28:085][ 97]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:086][ 97]LogTemp: Warning: Server time: 3.283622
+[2022.07.30-17.28.28:086][ 97]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:087][ 97]LogTemp: Warning: Server time: 3.283622
+[2022.07.30-17.28.28:118][ 98]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:119][ 98]LogTemp: Warning: Server time: 3.316651
+[2022.07.30-17.28.28:119][ 98]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:119][ 98]LogTemp: Warning: Server time: 3.316651
+[2022.07.30-17.28.28:151][ 99]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:152][ 99]LogTemp: Warning: Server time: 3.349684
+[2022.07.30-17.28.28:153][ 99]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:153][ 99]LogTemp: Warning: Server time: 3.349684
+[2022.07.30-17.28.28:185][100]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:186][100]LogTemp: Warning: Server time: 3.383713
+[2022.07.30-17.28.28:186][100]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:186][100]LogTemp: Warning: Server time: 3.383713
+[2022.07.30-17.28.28:218][101]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:219][101]LogTemp: Warning: Server time: 3.416742
+[2022.07.30-17.28.28:219][101]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:220][101]LogTemp: Warning: Server time: 3.416742
+[2022.07.30-17.28.28:251][102]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:251][102]LogTemp: Warning: Server time: 3.449774
+[2022.07.30-17.28.28:253][102]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:253][102]LogTemp: Warning: Server time: 3.449774
+[2022.07.30-17.28.28:285][103]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:286][103]LogTemp: Warning: Server time: 3.483806
+[2022.07.30-17.28.28:287][103]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:287][103]LogTemp: Warning: Server time: 3.483806
+[2022.07.30-17.28.28:318][104]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:319][104]LogTemp: Warning: Server time: 3.516833
+[2022.07.30-17.28.28:320][104]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:320][104]LogTemp: Warning: Server time: 3.516833
+[2022.07.30-17.28.28:352][105]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:353][105]LogTemp: Warning: Server time: 3.550863
+[2022.07.30-17.28.28:354][105]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:354][105]LogTemp: Warning: Server time: 3.550863
+[2022.07.30-17.28.28:386][106]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:387][106]LogTemp: Warning: Server time: 3.584902
+[2022.07.30-17.28.28:388][106]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:388][106]LogTemp: Warning: Server time: 3.584902
+[2022.07.30-17.28.28:420][107]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:421][107]LogTemp: Warning: Server time: 3.618926
+[2022.07.30-17.28.28:422][107]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:422][107]LogTemp: Warning: Server time: 3.618926
+[2022.07.30-17.28.28:454][108]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:455][108]LogTemp: Warning: Server time: 3.652956
+[2022.07.30-17.28.28:455][108]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:455][108]LogTemp: Warning: Server time: 3.652956
+[2022.07.30-17.28.28:487][109]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:488][109]LogTemp: Warning: Server time: 3.685985
+[2022.07.30-17.28.28:488][109]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:489][109]LogTemp: Warning: Server time: 3.685985
+[2022.07.30-17.28.28:520][110]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:521][110]LogTemp: Warning: Server time: 3.719016
+[2022.07.30-17.28.28:522][110]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:522][110]LogTemp: Warning: Server time: 3.719016
+[2022.07.30-17.28.28:554][111]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:555][111]LogTemp: Warning: Server time: 3.753050
+[2022.07.30-17.28.28:556][111]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:556][111]LogTemp: Warning: Server time: 3.753050
+[2022.07.30-17.28.28:588][112]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:589][112]LogTemp: Warning: Server time: 3.787077
+[2022.07.30-17.28.28:591][112]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:591][112]LogTemp: Warning: Server time: 3.787077
+[2022.07.30-17.28.28:622][113]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:623][113]LogTemp: Warning: Server time: 3.821109
+[2022.07.30-17.28.28:623][113]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:624][113]LogTemp: Warning: Server time: 3.821109
+[2022.07.30-17.28.28:657][114]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:658][114]LogTemp: Warning: Server time: 3.855136
+[2022.07.30-17.28.28:658][114]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:659][114]LogTemp: Warning: Server time: 3.855136
+[2022.07.30-17.28.28:691][115]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:691][115]LogTemp: Warning: Server time: 3.888173
+[2022.07.30-17.28.28:691][115]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:692][115]LogTemp: Warning: Server time: 3.888173
+[2022.07.30-17.28.28:723][116]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:724][116]LogTemp: Warning: Server time: 3.921199
+[2022.07.30-17.28.28:724][116]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:725][116]LogTemp: Warning: Server time: 3.921199
+[2022.07.30-17.28.28:757][117]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:758][117]LogTemp: Warning: Server time: 3.955231
+[2022.07.30-17.28.28:758][117]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:758][117]LogTemp: Warning: Server time: 3.955231
+[2022.07.30-17.28.28:790][118]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:791][118]LogTemp: Warning: Server time: 3.988263
+[2022.07.30-17.28.28:792][118]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:792][118]LogTemp: Warning: Server time: 3.988263
+[2022.07.30-17.28.28:824][119]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:825][119]LogTemp: Warning: Server time: 4.022292
+[2022.07.30-17.28.28:825][119]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:825][119]LogTemp: Warning: Server time: 4.022292
+[2022.07.30-17.28.28:857][120]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:858][120]LogTemp: Warning: Server time: 4.055321
+[2022.07.30-17.28.28:858][120]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:859][120]LogTemp: Warning: Server time: 4.055321
+[2022.07.30-17.28.28:890][121]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:891][121]LogTemp: Warning: Server time: 4.088355
+[2022.07.30-17.28.28:892][121]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:892][121]LogTemp: Warning: Server time: 4.088355
+[2022.07.30-17.28.28:924][122]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:925][122]LogTemp: Warning: Server time: 4.122385
+[2022.07.30-17.28.28:926][122]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:926][122]LogTemp: Warning: Server time: 4.122385
+[2022.07.30-17.28.28:958][123]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:959][123]LogTemp: Warning: Server time: 4.156415
+[2022.07.30-17.28.28:959][123]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:959][123]LogTemp: Warning: Server time: 4.156415
+[2022.07.30-17.28.28:991][124]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:992][124]LogTemp: Warning: Server time: 4.189445
+[2022.07.30-17.28.28:993][124]LogTemp: Warning: Ticking
+[2022.07.30-17.28.28:993][124]LogTemp: Warning: Server time: 4.189445
+[2022.07.30-17.28.29:025][125]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:026][125]LogTemp: Warning: Server time: 4.223489
+[2022.07.30-17.28.29:026][125]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:026][125]LogTemp: Warning: Server time: 4.223489
+[2022.07.30-17.28.29:058][126]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:059][126]LogTemp: Warning: Server time: 4.256507
+[2022.07.30-17.28.29:060][126]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:060][126]LogTemp: Warning: Server time: 4.256507
+[2022.07.30-17.28.29:091][127]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:092][127]LogTemp: Warning: Server time: 4.289537
+[2022.07.30-17.28.29:093][127]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:093][127]LogTemp: Warning: Server time: 4.289537
+[2022.07.30-17.28.29:124][128]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:125][128]LogTemp: Warning: Server time: 4.322570
+[2022.07.30-17.28.29:126][128]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:126][128]LogTemp: Warning: Server time: 4.322570
+[2022.07.30-17.28.29:158][129]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:159][129]LogTemp: Warning: Server time: 4.356596
+[2022.07.30-17.28.29:159][129]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:160][129]LogTemp: Warning: Server time: 4.356596
+[2022.07.30-17.28.29:191][130]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:192][130]LogTemp: Warning: Server time: 4.389629
+[2022.07.30-17.28.29:193][130]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:193][130]LogTemp: Warning: Server time: 4.389629
+[2022.07.30-17.28.29:225][131]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:226][131]LogTemp: Warning: Server time: 4.423659
+[2022.07.30-17.28.29:227][131]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:227][131]LogTemp: Warning: Server time: 4.423659
+[2022.07.30-17.28.29:259][132]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:260][132]LogTemp: Warning: Server time: 4.457686
+[2022.07.30-17.28.29:260][132]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:261][132]LogTemp: Warning: Server time: 4.457686
+[2022.07.30-17.28.29:293][133]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:294][133]LogTemp: Warning: Server time: 4.491718
+[2022.07.30-17.28.29:295][133]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:295][133]LogTemp: Warning: Server time: 4.491718
+[2022.07.30-17.28.29:327][134]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:328][134]LogTemp: Warning: Server time: 4.525752
+[2022.07.30-17.28.29:328][134]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:329][134]LogTemp: Warning: Server time: 4.525752
+[2022.07.30-17.28.29:360][135]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:360][135]LogTemp: Warning: Server time: 4.558779
+[2022.07.30-17.28.29:362][135]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:362][135]LogTemp: Warning: Server time: 4.558779
+[2022.07.30-17.28.29:393][136]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:394][136]LogTemp: Warning: Server time: 4.591811
+[2022.07.30-17.28.29:395][136]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:395][136]LogTemp: Warning: Server time: 4.591811
+[2022.07.30-17.28.29:426][137]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:427][137]LogTemp: Warning: Server time: 4.624841
+[2022.07.30-17.28.29:427][137]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:428][137]LogTemp: Warning: Server time: 4.624841
+[2022.07.30-17.28.29:460][138]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:462][138]LogTemp: Warning: Server time: 4.658874
+[2022.07.30-17.28.29:462][138]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:463][138]LogTemp: Warning: Server time: 4.658874
+[2022.07.30-17.28.29:493][139]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:494][139]LogTemp: Warning: Server time: 4.691904
+[2022.07.30-17.28.29:495][139]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:495][139]LogTemp: Warning: Server time: 4.691904
+[2022.07.30-17.28.29:527][140]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:528][140]LogTemp: Warning: Server time: 4.725932
+[2022.07.30-17.28.29:529][140]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:529][140]LogTemp: Warning: Server time: 4.725932
+[2022.07.30-17.28.29:561][141]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:562][141]LogTemp: Warning: Server time: 4.759962
+[2022.07.30-17.28.29:562][141]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:562][141]LogTemp: Warning: Server time: 4.759962
+[2022.07.30-17.28.29:594][142]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:595][142]LogTemp: Warning: Server time: 4.792994
+[2022.07.30-17.28.29:596][142]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:596][142]LogTemp: Warning: Server time: 4.792994
+[2022.07.30-17.28.29:627][143]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:628][143]LogTemp: Warning: Server time: 4.826023
+[2022.07.30-17.28.29:628][143]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:628][143]LogTemp: Warning: Server time: 4.826023
+[2022.07.30-17.28.29:660][144]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:661][144]LogTemp: Warning: Server time: 4.859056
+[2022.07.30-17.28.29:661][144]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:662][144]LogTemp: Warning: Server time: 4.859056
+[2022.07.30-17.28.29:693][145]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:695][145]LogTemp: Warning: Server time: 4.892086
+[2022.07.30-17.28.29:695][145]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:696][145]LogTemp: Warning: Server time: 4.892086
+[2022.07.30-17.28.29:726][146]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:727][146]LogTemp: Warning: Server time: 4.925115
+[2022.07.30-17.28.29:728][146]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:728][146]LogTemp: Warning: Server time: 4.925115
+[2022.07.30-17.28.29:761][147]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:762][147]LogTemp: Warning: Server time: 4.959150
+[2022.07.30-17.28.29:763][147]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:763][147]LogTemp: Warning: Server time: 4.959150
+[2022.07.30-17.28.29:794][148]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:795][148]LogTemp: Warning: Server time: 4.992173
+[2022.07.30-17.28.29:795][148]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:796][148]LogTemp: Warning: Server time: 4.992173
+[2022.07.30-17.28.29:827][149]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:828][149]LogTemp: Warning: Server time: 5.025203
+[2022.07.30-17.28.29:828][149]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:829][149]LogTemp: Warning: Server time: 5.025203
+[2022.07.30-17.28.29:860][150]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:861][150]LogTemp: Warning: Server time: 5.058235
+[2022.07.30-17.28.29:861][150]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:861][150]LogTemp: Warning: Server time: 5.058235
+[2022.07.30-17.28.29:894][151]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:895][151]LogTemp: Warning: Server time: 5.092265
+[2022.07.30-17.28.29:896][151]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:896][151]LogTemp: Warning: Server time: 5.092265
+[2022.07.30-17.28.29:927][152]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:928][152]LogTemp: Warning: Server time: 5.125294
+[2022.07.30-17.28.29:928][152]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:929][152]LogTemp: Warning: Server time: 5.125294
+[2022.07.30-17.28.29:960][153]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:961][153]LogTemp: Warning: Server time: 5.158324
+[2022.07.30-17.28.29:961][153]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:962][153]LogTemp: Warning: Server time: 5.158324
+[2022.07.30-17.28.29:993][154]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:995][154]LogTemp: Warning: Server time: 5.191355
+[2022.07.30-17.28.29:995][154]LogTemp: Warning: Ticking
+[2022.07.30-17.28.29:996][154]LogTemp: Warning: Server time: 5.191355
+[2022.07.30-17.28.30:026][155]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:027][155]LogTemp: Warning: Server time: 5.224386
+[2022.07.30-17.28.30:028][155]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:028][155]LogTemp: Warning: Server time: 5.224386
+[2022.07.30-17.28.30:060][156]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:062][156]LogTemp: Warning: Server time: 5.258422
+[2022.07.30-17.28.30:063][156]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:064][156]LogTemp: Warning: Server time: 5.258422
+[2022.07.30-17.28.30:093][157]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:095][157]LogTemp: Warning: Server time: 5.291446
+[2022.07.30-17.28.30:095][157]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:095][157]LogTemp: Warning: Server time: 5.291446
+[2022.07.30-17.28.30:126][158]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:127][158]LogTemp: Warning: Server time: 5.324480
+[2022.07.30-17.28.30:127][158]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:128][158]LogTemp: Warning: Server time: 5.324480
+[2022.07.30-17.28.30:160][159]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:161][159]LogTemp: Warning: Server time: 5.358507
+[2022.07.30-17.28.30:161][159]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:161][159]LogTemp: Warning: Server time: 5.358507
+[2022.07.30-17.28.30:193][160]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:194][160]LogTemp: Warning: Server time: 5.391535
+[2022.07.30-17.28.30:195][160]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:195][160]LogTemp: Warning: Server time: 5.391535
+[2022.07.30-17.28.30:227][161]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:228][161]LogTemp: Warning: Server time: 5.425571
+[2022.07.30-17.28.30:228][161]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:228][161]LogTemp: Warning: Server time: 5.425571
+[2022.07.30-17.28.30:260][162]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:261][162]LogTemp: Warning: Server time: 5.458598
+[2022.07.30-17.28.30:261][162]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:262][162]LogTemp: Warning: Server time: 5.458598
+[2022.07.30-17.28.30:294][163]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:295][163]LogTemp: Warning: Server time: 5.492650
+[2022.07.30-17.28.30:295][163]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:296][163]LogTemp: Warning: Server time: 5.492650
+[2022.07.30-17.28.30:328][164]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:329][164]LogTemp: Warning: Server time: 5.526658
+[2022.07.30-17.28.30:330][164]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:330][164]LogTemp: Warning: Server time: 5.526658
+[2022.07.30-17.28.30:361][165]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:362][165]LogTemp: Warning: Server time: 5.559690
+[2022.07.30-17.28.30:363][165]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:363][165]LogTemp: Warning: Server time: 5.559690
+[2022.07.30-17.28.30:394][166]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:395][166]LogTemp: Warning: Server time: 5.592721
+[2022.07.30-17.28.30:396][166]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:396][166]LogTemp: Warning: Server time: 5.592721
+[2022.07.30-17.28.30:427][167]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:428][167]LogTemp: Warning: Server time: 5.625753
+[2022.07.30-17.28.30:428][167]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:429][167]LogTemp: Warning: Server time: 5.625753
+[2022.07.30-17.28.30:460][168]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:461][168]LogTemp: Warning: Server time: 5.658782
+[2022.07.30-17.28.30:462][168]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:462][168]LogTemp: Warning: Server time: 5.658782
+[2022.07.30-17.28.30:493][169]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:493][169]LogTemp: Warning: Server time: 5.691809
+[2022.07.30-17.28.30:494][169]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:494][169]LogTemp: Warning: Server time: 5.691809
+[2022.07.30-17.28.30:526][170]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:527][170]LogTemp: Warning: Server time: 5.724841
+[2022.07.30-17.28.30:528][170]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:529][170]LogTemp: Warning: Server time: 5.724841
+[2022.07.30-17.28.30:559][171]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:559][171]LogTemp: Warning: Server time: 5.757870
+[2022.07.30-17.28.30:561][171]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:562][171]LogTemp: Warning: Server time: 5.757870
+[2022.07.30-17.28.30:592][172]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:593][172]LogTemp: Warning: Server time: 5.790901
+[2022.07.30-17.28.30:594][172]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:594][172]LogTemp: Warning: Server time: 5.790901
+[2022.07.30-17.28.30:625][173]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:626][173]LogTemp: Warning: Server time: 5.823930
+[2022.07.30-17.28.30:627][173]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:627][173]LogTemp: Warning: Server time: 5.823930
+[2022.07.30-17.28.30:658][174]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:659][174]LogTemp: Warning: Server time: 5.856959
+[2022.07.30-17.28.30:660][174]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:660][174]LogTemp: Warning: Server time: 5.856959
+[2022.07.30-17.28.30:692][175]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:693][175]LogTemp: Warning: Server time: 5.890991
+[2022.07.30-17.28.30:694][175]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:694][175]LogTemp: Warning: Server time: 5.890991
+[2022.07.30-17.28.30:725][176]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:726][176]LogTemp: Warning: Server time: 5.924020
+[2022.07.30-17.28.30:727][176]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:727][176]LogTemp: Warning: Server time: 5.924020
+[2022.07.30-17.28.30:759][177]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:760][177]LogTemp: Warning: Server time: 5.958054
+[2022.07.30-17.28.30:760][177]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:760][177]LogTemp: Warning: Server time: 5.958054
+[2022.07.30-17.28.30:792][178]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:793][178]LogTemp: Warning: Server time: 5.991082
+[2022.07.30-17.28.30:794][178]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:794][178]LogTemp: Warning: Server time: 5.991082
+[2022.07.30-17.28.30:826][179]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:827][179]LogTemp: Warning: Server time: 6.025116
+[2022.07.30-17.28.30:827][179]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:828][179]LogTemp: Warning: Server time: 6.025116
+[2022.07.30-17.28.30:860][180]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:861][180]LogTemp: Warning: Server time: 6.058144
+[2022.07.30-17.28.30:862][180]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:862][180]LogTemp: Warning: Server time: 6.058144
+[2022.07.30-17.28.30:893][181]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:894][181]LogTemp: Warning: Server time: 6.091172
+[2022.07.30-17.28.30:894][181]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:895][181]LogTemp: Warning: Server time: 6.091172
+[2022.07.30-17.28.30:926][182]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:927][182]LogTemp: Warning: Server time: 6.124202
+[2022.07.30-17.28.30:927][182]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:928][182]LogTemp: Warning: Server time: 6.124202
+[2022.07.30-17.28.30:960][183]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:961][183]LogTemp: Warning: Server time: 6.158236
+[2022.07.30-17.28.30:962][183]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:962][183]LogTemp: Warning: Server time: 6.158236
+[2022.07.30-17.28.30:993][184]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:994][184]LogTemp: Warning: Server time: 6.191263
+[2022.07.30-17.28.30:994][184]LogTemp: Warning: Ticking
+[2022.07.30-17.28.30:995][184]LogTemp: Warning: Server time: 6.191263
+[2022.07.30-17.28.31:027][185]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:028][185]LogTemp: Warning: Server time: 6.225300
+[2022.07.30-17.28.31:028][185]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:029][185]LogTemp: Warning: Server time: 6.225300
+[2022.07.30-17.28.31:060][186]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:061][186]LogTemp: Warning: Server time: 6.258326
+[2022.07.30-17.28.31:062][186]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:063][186]LogTemp: Warning: Server time: 6.258326
+[2022.07.30-17.28.31:093][187]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:094][187]LogTemp: Warning: Server time: 6.291359
+[2022.07.30-17.28.31:094][187]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:095][187]LogTemp: Warning: Server time: 6.291359
+[2022.07.30-17.28.31:126][188]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:127][188]LogTemp: Warning: Server time: 6.324389
+[2022.07.30-17.28.31:128][188]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:128][188]LogTemp: Warning: Server time: 6.324389
+[2022.07.30-17.28.31:159][189]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:160][189]LogTemp: Warning: Server time: 6.357414
+[2022.07.30-17.28.31:160][189]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:160][189]LogTemp: Warning: Server time: 6.357414
+[2022.07.30-17.28.31:192][190]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:193][190]LogTemp: Warning: Server time: 6.390449
+[2022.07.30-17.28.31:194][190]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:194][190]LogTemp: Warning: Server time: 6.390449
+[2022.07.30-17.28.31:226][191]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:227][191]LogTemp: Warning: Server time: 6.424475
+[2022.07.30-17.28.31:227][191]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:228][191]LogTemp: Warning: Server time: 6.424475
+[2022.07.30-17.28.31:260][192]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:262][192]LogTemp: Warning: Server time: 6.458512
+[2022.07.30-17.28.31:263][192]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:264][192]LogTemp: Warning: Server time: 6.458512
+[2022.07.30-17.28.31:293][193]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:294][193]LogTemp: Warning: Server time: 6.491539
+[2022.07.30-17.28.31:295][193]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:295][193]LogTemp: Warning: Server time: 6.491539
+[2022.07.30-17.28.31:327][194]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:328][194]LogTemp: Warning: Server time: 6.525567
+[2022.07.30-17.28.31:329][194]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:329][194]LogTemp: Warning: Server time: 6.525567
+[2022.07.30-17.28.31:360][195]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:361][195]LogTemp: Warning: Server time: 6.558598
+[2022.07.30-17.28.31:361][195]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:362][195]LogTemp: Warning: Server time: 6.558598
+[2022.07.30-17.28.31:394][196]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:395][196]LogTemp: Warning: Server time: 6.592630
+[2022.07.30-17.28.31:395][196]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:396][196]LogTemp: Warning: Server time: 6.592630
+[2022.07.30-17.28.31:428][197]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:429][197]LogTemp: Warning: Server time: 6.626664
+[2022.07.30-17.28.31:429][197]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:429][197]LogTemp: Warning: Server time: 6.626664
+[2022.07.30-17.28.31:461][198]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:462][198]LogTemp: Warning: Server time: 6.659192
+[2022.07.30-17.28.31:463][198]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:463][198]LogTemp: Warning: Server time: 6.659192
+[2022.07.30-17.28.31:494][199]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:494][199]LogTemp: Warning: Server time: 6.692225
+[2022.07.30-17.28.31:495][199]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:495][199]LogTemp: Warning: Server time: 6.692225
+[2022.07.30-17.28.31:528][200]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:529][200]LogTemp: Warning: Server time: 6.726258
+[2022.07.30-17.28.31:529][200]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:530][200]LogTemp: Warning: Server time: 6.726258
+[2022.07.30-17.28.31:561][201]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:562][201]LogTemp: Warning: Server time: 6.759285
+[2022.07.30-17.28.31:562][201]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:563][201]LogTemp: Warning: Server time: 6.759285
+[2022.07.30-17.28.31:594][202]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:595][202]LogTemp: Warning: Server time: 6.792318
+[2022.07.30-17.28.31:595][202]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:596][202]LogTemp: Warning: Server time: 6.792318
+[2022.07.30-17.28.31:627][203]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:628][203]LogTemp: Warning: Server time: 6.825343
+[2022.07.30-17.28.31:628][203]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:629][203]LogTemp: Warning: Server time: 6.825343
+[2022.07.30-17.28.31:660][204]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:661][204]LogTemp: Warning: Server time: 6.858379
+[2022.07.30-17.28.31:661][204]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:662][204]LogTemp: Warning: Server time: 6.858379
+[2022.07.30-17.28.31:694][205]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:695][205]LogTemp: Warning: Server time: 6.892406
+[2022.07.30-17.28.31:695][205]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:696][205]LogTemp: Warning: Server time: 6.892406
+[2022.07.30-17.28.31:727][206]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:728][206]LogTemp: Warning: Server time: 6.925435
+[2022.07.30-17.28.31:728][206]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:728][206]LogTemp: Warning: Server time: 6.925435
+[2022.07.30-17.28.31:760][207]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:761][207]LogTemp: Warning: Server time: 6.958470
+[2022.07.30-17.28.31:761][207]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:762][207]LogTemp: Warning: Server time: 6.958470
+[2022.07.30-17.28.31:793][208]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:794][208]LogTemp: Warning: Server time: 6.991497
+[2022.07.30-17.28.31:794][208]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:795][208]LogTemp: Warning: Server time: 6.991497
+[2022.07.30-17.28.31:826][209]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:827][209]LogTemp: Warning: Server time: 7.024524
+[2022.07.30-17.28.31:827][209]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:828][209]LogTemp: Warning: Server time: 7.024524
+[2022.07.30-17.28.31:859][210]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:859][210]LogTemp: Warning: Server time: 7.058064
+[2022.07.30-17.28.31:861][210]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:861][210]LogTemp: Warning: Server time: 7.058064
+[2022.07.30-17.28.31:893][211]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:894][211]LogTemp: Warning: Server time: 7.092095
+[2022.07.30-17.28.31:894][211]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:895][211]LogTemp: Warning: Server time: 7.092095
+[2022.07.30-17.28.31:928][212]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:929][212]LogTemp: Warning: Server time: 7.126126
+[2022.07.30-17.28.31:930][212]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:930][212]LogTemp: Warning: Server time: 7.126126
+[2022.07.30-17.28.31:962][213]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:963][213]LogTemp: Warning: Server time: 7.160154
+[2022.07.30-17.28.31:964][213]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:964][213]LogTemp: Warning: Server time: 7.160154
+[2022.07.30-17.28.31:996][214]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:996][214]LogTemp: Warning: Server time: 7.194185
+[2022.07.30-17.28.31:997][214]LogTemp: Warning: Ticking
+[2022.07.30-17.28.31:997][214]LogTemp: Warning: Server time: 7.194185
+[2022.07.30-17.28.32:029][215]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:030][215]LogTemp: Warning: Server time: 7.227220
+[2022.07.30-17.28.32:030][215]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:031][215]LogTemp: Warning: Server time: 7.227220
+[2022.07.30-17.28.32:062][216]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:063][216]LogTemp: Warning: Server time: 7.260245
+[2022.07.30-17.28.32:064][216]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:064][216]LogTemp: Warning: Server time: 7.260245
+[2022.07.30-17.28.32:096][217]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:097][217]LogTemp: Warning: Server time: 7.294281
+[2022.07.30-17.28.32:097][217]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:098][217]LogTemp: Warning: Server time: 7.294281
+[2022.07.30-17.28.32:130][218]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:131][218]LogTemp: Warning: Server time: 7.328306
+[2022.07.30-17.28.32:132][218]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:132][218]LogTemp: Warning: Server time: 7.328306
+[2022.07.30-17.28.32:164][219]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:165][219]LogTemp: Warning: Server time: 7.362338
+[2022.07.30-17.28.32:166][219]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:166][219]LogTemp: Warning: Server time: 7.362338
+[2022.07.30-17.28.32:197][220]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:197][220]LogTemp: Warning: Server time: 7.395370
+[2022.07.30-17.28.32:198][220]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:198][220]LogTemp: Warning: Server time: 7.395370
+[2022.07.30-17.28.32:230][221]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:231][221]LogTemp: Warning: Server time: 7.428397
+[2022.07.30-17.28.32:232][221]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:232][221]LogTemp: Warning: Server time: 7.428397
+[2022.07.30-17.28.32:264][222]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:264][222]LogTemp: Warning: Server time: 7.462428
+[2022.07.30-17.28.32:265][222]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:266][222]LogTemp: Warning: Server time: 7.462428
+[2022.07.30-17.28.32:298][223]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:299][223]LogTemp: Warning: Server time: 7.496459
+[2022.07.30-17.28.32:299][223]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:300][223]LogTemp: Warning: Server time: 7.496459
+[2022.07.30-17.28.32:331][224]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:332][224]LogTemp: Warning: Server time: 7.529488
+[2022.07.30-17.28.32:332][224]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:333][224]LogTemp: Warning: Server time: 7.529488
+[2022.07.30-17.28.32:365][225]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:366][225]LogTemp: Warning: Server time: 7.563520
+[2022.07.30-17.28.32:366][225]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:367][225]LogTemp: Warning: Server time: 7.563520
+[2022.07.30-17.28.32:398][226]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:399][226]LogTemp: Warning: Server time: 7.596550
+[2022.07.30-17.28.32:400][226]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:400][226]LogTemp: Warning: Server time: 7.596550
+[2022.07.30-17.28.32:432][227]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:433][227]LogTemp: Warning: Server time: 7.630582
+[2022.07.30-17.28.32:434][227]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:434][227]LogTemp: Warning: Server time: 7.630582
+[2022.07.30-17.28.32:466][228]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:467][228]LogTemp: Warning: Server time: 7.664609
+[2022.07.30-17.28.32:467][228]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:467][228]LogTemp: Warning: Server time: 7.664609
+[2022.07.30-17.28.32:499][229]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:500][229]LogTemp: Warning: Server time: 7.697641
+[2022.07.30-17.28.32:500][229]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:501][229]LogTemp: Warning: Server time: 7.697641
+[2022.07.30-17.28.32:532][230]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:533][230]LogTemp: Warning: Server time: 7.730671
+[2022.07.30-17.28.32:534][230]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:534][230]LogTemp: Warning: Server time: 7.730671
+[2022.07.30-17.28.32:565][231]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:566][231]LogTemp: Warning: Server time: 7.763699
+[2022.07.30-17.28.32:567][231]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:568][231]LogTemp: Warning: Server time: 7.763699
+[2022.07.30-17.28.32:598][232]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:599][232]LogTemp: Warning: Server time: 7.796732
+[2022.07.30-17.28.32:600][232]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:601][232]LogTemp: Warning: Server time: 7.796732
+[2022.07.30-17.28.32:631][233]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:632][233]LogTemp: Warning: Server time: 7.829761
+[2022.07.30-17.28.32:632][233]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:633][233]LogTemp: Warning: Server time: 7.829761
+[2022.07.30-17.28.32:664][234]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:665][234]LogTemp: Warning: Server time: 7.862792
+[2022.07.30-17.28.32:665][234]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:666][234]LogTemp: Warning: Server time: 7.862792
+[2022.07.30-17.28.32:698][235]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:699][235]LogTemp: Warning: Server time: 7.896822
+[2022.07.30-17.28.32:699][235]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:700][235]LogTemp: Warning: Server time: 7.896822
+[2022.07.30-17.28.32:731][236]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:731][236]LogTemp: Warning: Server time: 7.929853
+[2022.07.30-17.28.32:732][236]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:733][236]LogTemp: Warning: Server time: 7.929853
+[2022.07.30-17.28.32:765][237]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:766][237]LogTemp: Warning: Server time: 7.963884
+[2022.07.30-17.28.32:767][237]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:767][237]LogTemp: Warning: Server time: 7.963884
+[2022.07.30-17.28.32:799][238]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:800][238]LogTemp: Warning: Server time: 7.997915
+[2022.07.30-17.28.32:800][238]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:800][238]LogTemp: Warning: Server time: 7.997915
+[2022.07.30-17.28.32:832][239]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:833][239]LogTemp: Warning: Server time: 8.030945
+[2022.07.30-17.28.32:833][239]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:834][239]LogTemp: Warning: Server time: 8.030945
+[2022.07.30-17.28.32:866][240]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:867][240]LogTemp: Warning: Server time: 8.064979
+[2022.07.30-17.28.32:868][240]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:868][240]LogTemp: Warning: Server time: 8.064979
+[2022.07.30-17.28.32:900][241]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:901][241]LogTemp: Warning: Server time: 8.099007
+[2022.07.30-17.28.32:901][241]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:902][241]LogTemp: Warning: Server time: 8.099007
+[2022.07.30-17.28.32:933][242]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:934][242]LogTemp: Warning: Server time: 8.132037
+[2022.07.30-17.28.32:934][242]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:935][242]LogTemp: Warning: Server time: 8.132037
+[2022.07.30-17.28.32:966][243]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:968][243]LogTemp: Warning: Server time: 8.165070
+[2022.07.30-17.28.32:968][243]LogTemp: Warning: Ticking
+[2022.07.30-17.28.32:968][243]LogTemp: Warning: Server time: 8.165070
+[2022.07.30-17.28.32:999][244]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:000][244]LogTemp: Warning: Server time: 8.198095
+[2022.07.30-17.28.33:001][244]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:001][244]LogTemp: Warning: Server time: 8.198095
+[2022.07.30-17.28.33:033][245]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:034][245]LogTemp: Warning: Server time: 8.231133
+[2022.07.30-17.28.33:035][245]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:035][245]LogTemp: Warning: Server time: 8.231133
+[2022.07.30-17.28.33:066][246]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:067][246]LogTemp: Warning: Server time: 8.264158
+[2022.07.30-17.28.33:067][246]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:068][246]LogTemp: Warning: Server time: 8.264158
+[2022.07.30-17.28.33:100][247]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:101][247]LogTemp: Warning: Server time: 8.298192
+[2022.07.30-17.28.33:101][247]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:101][247]LogTemp: Warning: Server time: 8.298192
+[2022.07.30-17.28.33:133][248]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:134][248]LogTemp: Warning: Server time: 8.331220
+[2022.07.30-17.28.33:135][248]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:135][248]LogTemp: Warning: Server time: 8.331220
+[2022.07.30-17.28.33:167][249]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:167][249]LogTemp: Warning: Server time: 8.365249
+[2022.07.30-17.28.33:168][249]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:168][249]LogTemp: Warning: Server time: 8.365249
+[2022.07.30-17.28.33:200][250]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:201][250]LogTemp: Warning: Server time: 8.398785
+[2022.07.30-17.28.33:201][250]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:202][250]LogTemp: Warning: Server time: 8.398785
+[2022.07.30-17.28.33:234][251]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:235][251]LogTemp: Warning: Server time: 8.432817
+[2022.07.30-17.28.33:237][251]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:239][251]LogTemp: Warning: Server time: 8.432817
+[2022.07.30-17.28.33:268][252]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:269][252]LogTemp: Warning: Server time: 8.466847
+[2022.07.30-17.28.33:270][252]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:270][252]LogTemp: Warning: Server time: 8.466847
+[2022.07.30-17.28.33:302][253]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:303][253]LogTemp: Warning: Server time: 8.500877
+[2022.07.30-17.28.33:303][253]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:304][253]LogTemp: Warning: Server time: 8.500877
+[2022.07.30-17.28.33:336][254]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:336][254]LogTemp: Warning: Server time: 8.534909
+[2022.07.30-17.28.33:337][254]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:337][254]LogTemp: Warning: Server time: 8.534909
+[2022.07.30-17.28.33:369][255]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:370][255]LogTemp: Warning: Server time: 8.567940
+[2022.07.30-17.28.33:370][255]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:371][255]LogTemp: Warning: Server time: 8.567940
+[2022.07.30-17.28.33:402][256]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:402][256]LogTemp: Warning: Server time: 8.600967
+[2022.07.30-17.28.33:403][256]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:403][256]LogTemp: Warning: Server time: 8.600967
+[2022.07.30-17.28.33:435][257]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:436][257]LogTemp: Warning: Server time: 8.634007
+[2022.07.30-17.28.33:437][257]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:437][257]LogTemp: Warning: Server time: 8.634007
+[2022.07.30-17.28.33:468][258]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:468][258]LogTemp: Warning: Server time: 8.667029
+[2022.07.30-17.28.33:470][258]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:470][258]LogTemp: Warning: Server time: 8.667029
+[2022.07.30-17.28.33:502][259]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:503][259]LogTemp: Warning: Server time: 8.701059
+[2022.07.30-17.28.33:504][259]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:505][259]LogTemp: Warning: Server time: 8.701059
+[2022.07.30-17.28.33:535][260]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:536][260]LogTemp: Warning: Server time: 8.734094
+[2022.07.30-17.28.33:537][260]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:537][260]LogTemp: Warning: Server time: 8.734094
+[2022.07.30-17.28.33:570][261]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:571][261]LogTemp: Warning: Server time: 8.768122
+[2022.07.30-17.28.33:572][261]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:572][261]LogTemp: Warning: Server time: 8.768122
+[2022.07.30-17.28.33:604][262]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:605][262]LogTemp: Warning: Server time: 8.802158
+[2022.07.30-17.28.33:606][262]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:606][262]LogTemp: Warning: Server time: 8.802158
+[2022.07.30-17.28.33:638][263]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:639][263]LogTemp: Warning: Server time: 8.836182
+[2022.07.30-17.28.33:639][263]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:639][263]LogTemp: Warning: Server time: 8.836182
+[2022.07.30-17.28.33:671][264]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:672][264]LogTemp: Warning: Server time: 8.869216
+[2022.07.30-17.28.33:675][264]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:677][264]LogTemp: Warning: Server time: 8.869216
+[2022.07.30-17.28.33:705][265]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:706][265]LogTemp: Warning: Server time: 8.903251
+[2022.07.30-17.28.33:706][265]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:706][265]LogTemp: Warning: Server time: 8.903251
+[2022.07.30-17.28.33:738][266]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:739][266]LogTemp: Warning: Server time: 8.936274
+[2022.07.30-17.28.33:740][266]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:741][266]LogTemp: Warning: Server time: 8.936274
+[2022.07.30-17.28.33:772][267]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:773][267]LogTemp: Warning: Server time: 8.970307
+[2022.07.30-17.28.33:773][267]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:774][267]LogTemp: Warning: Server time: 8.970307
+[2022.07.30-17.28.33:805][268]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:806][268]LogTemp: Warning: Server time: 9.003338
+[2022.07.30-17.28.33:806][268]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:807][268]LogTemp: Warning: Server time: 9.003338
+[2022.07.30-17.28.33:838][269]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:839][269]LogTemp: Warning: Server time: 9.036370
+[2022.07.30-17.28.33:840][269]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:840][269]LogTemp: Warning: Server time: 9.036370
+[2022.07.30-17.28.33:872][270]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:873][270]LogTemp: Warning: Server time: 9.070397
+[2022.07.30-17.28.33:874][270]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:874][270]LogTemp: Warning: Server time: 9.070397
+[2022.07.30-17.28.33:906][271]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:906][271]LogTemp: Warning: Server time: 9.104427
+[2022.07.30-17.28.33:907][271]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:907][271]LogTemp: Warning: Server time: 9.104427
+[2022.07.30-17.28.33:939][272]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:940][272]LogTemp: Warning: Server time: 9.137460
+[2022.07.30-17.28.33:941][272]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:941][272]LogTemp: Warning: Server time: 9.137460
+[2022.07.30-17.28.33:972][273]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:973][273]LogTemp: Warning: Server time: 9.170494
+[2022.07.30-17.28.33:973][273]LogTemp: Warning: Ticking
+[2022.07.30-17.28.33:974][273]LogTemp: Warning: Server time: 9.170494
+[2022.07.30-17.28.34:005][274]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:006][274]LogTemp: Warning: Server time: 9.203523
+[2022.07.30-17.28.34:007][274]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:007][274]LogTemp: Warning: Server time: 9.203523
+[2022.07.30-17.28.34:039][275]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:040][275]LogTemp: Warning: Server time: 9.237549
+[2022.07.30-17.28.34:041][275]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:041][275]LogTemp: Warning: Server time: 9.237549
+[2022.07.30-17.28.34:072][276]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:073][276]LogTemp: Warning: Server time: 9.270579
+[2022.07.30-17.28.34:074][276]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:074][276]LogTemp: Warning: Server time: 9.270579
+[2022.07.30-17.28.34:106][277]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:107][277]LogTemp: Warning: Server time: 9.304609
+[2022.07.30-17.28.34:107][277]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:108][277]LogTemp: Warning: Server time: 9.304609
+[2022.07.30-17.28.34:139][278]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:140][278]LogTemp: Warning: Server time: 9.337641
+[2022.07.30-17.28.34:140][278]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:141][278]LogTemp: Warning: Server time: 9.337641
+[2022.07.30-17.28.34:172][279]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:173][279]LogTemp: Warning: Server time: 9.370671
+[2022.07.30-17.28.34:173][279]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:174][279]LogTemp: Warning: Server time: 9.370671
+[2022.07.30-17.28.34:205][280]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:206][280]LogTemp: Warning: Server time: 9.403705
+[2022.07.30-17.28.34:207][280]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:207][280]LogTemp: Warning: Server time: 9.403705
+[2022.07.30-17.28.34:239][281]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:240][281]LogTemp: Warning: Server time: 9.437732
+[2022.07.30-17.28.34:240][281]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:241][281]LogTemp: Warning: Server time: 9.437732
+[2022.07.30-17.28.34:272][282]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:273][282]LogTemp: Warning: Server time: 9.470762
+[2022.07.30-17.28.34:274][282]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:274][282]LogTemp: Warning: Server time: 9.470762
+[2022.07.30-17.28.34:305][283]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:306][283]LogTemp: Warning: Server time: 9.503795
+[2022.07.30-17.28.34:307][283]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:308][283]LogTemp: Warning: Server time: 9.503795
+[2022.07.30-17.28.34:338][284]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:339][284]LogTemp: Warning: Server time: 9.536821
+[2022.07.30-17.28.34:340][284]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:340][284]LogTemp: Warning: Server time: 9.536821
+[2022.07.30-17.28.34:371][285]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:372][285]LogTemp: Warning: Server time: 9.569854
+[2022.07.30-17.28.34:373][285]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:373][285]LogTemp: Warning: Server time: 9.569854
+[2022.07.30-17.28.34:405][286]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:406][286]LogTemp: Warning: Server time: 9.603883
+[2022.07.30-17.28.34:406][286]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:407][286]LogTemp: Warning: Server time: 9.603883
+[2022.07.30-17.28.34:439][287]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:440][287]LogTemp: Warning: Server time: 9.637912
+[2022.07.30-17.28.34:441][287]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:441][287]LogTemp: Warning: Server time: 9.637912
+[2022.07.30-17.28.34:472][288]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:473][288]LogTemp: Warning: Server time: 9.670942
+[2022.07.30-17.28.34:473][288]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:474][288]LogTemp: Warning: Server time: 9.670942
+[2022.07.30-17.28.34:505][289]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:506][289]LogTemp: Warning: Server time: 9.703976
+[2022.07.30-17.28.34:507][289]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:507][289]LogTemp: Warning: Server time: 9.703976
+[2022.07.30-17.28.34:539][290]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:540][290]LogTemp: Warning: Server time: 9.738010
+[2022.07.30-17.28.34:540][290]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:540][290]LogTemp: Warning: Server time: 9.738010
+[2022.07.30-17.28.34:573][291]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:574][291]LogTemp: Warning: Server time: 9.772034
+[2022.07.30-17.28.34:575][291]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:575][291]LogTemp: Warning: Server time: 9.772034
+[2022.07.30-17.28.34:607][292]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:608][292]LogTemp: Warning: Server time: 9.806065
+[2022.07.30-17.28.34:609][292]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:609][292]LogTemp: Warning: Server time: 9.806065
+[2022.07.30-17.28.34:640][293]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:641][293]LogTemp: Warning: Server time: 9.839096
+[2022.07.30-17.28.34:641][293]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:642][293]LogTemp: Warning: Server time: 9.839096
+[2022.07.30-17.28.34:674][294]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:675][294]LogTemp: Warning: Server time: 9.872125
+[2022.07.30-17.28.34:675][294]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:676][294]LogTemp: Warning: Server time: 9.872125
+[2022.07.30-17.28.34:707][295]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:708][295]LogTemp: Warning: Server time: 9.905157
+[2022.07.30-17.28.34:709][295]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:709][295]LogTemp: Warning: Server time: 9.905157
+[2022.07.30-17.28.34:741][296]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:742][296]LogTemp: Warning: Server time: 9.939188
+[2022.07.30-17.28.34:742][296]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:743][296]LogTemp: Warning: Server time: 9.939188
+[2022.07.30-17.28.34:775][297]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:775][297]LogTemp: Warning: Server time: 9.973219
+[2022.07.30-17.28.34:776][297]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:776][297]LogTemp: Warning: Server time: 9.973219
+[2022.07.30-17.28.34:809][298]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:810][298]LogTemp: Warning: Server time: 10.007248
+[2022.07.30-17.28.34:810][298]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:811][298]LogTemp: Warning: Server time: 10.007248
+[2022.07.30-17.28.34:842][299]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:842][299]LogTemp: Warning: Server time: 10.040277
+[2022.07.30-17.28.34:843][299]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:844][299]LogTemp: Warning: Server time: 10.040277
+[2022.07.30-17.28.34:875][300]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:876][300]LogTemp: Warning: Server time: 10.073324
+[2022.07.30-17.28.34:876][300]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:877][300]LogTemp: Warning: Server time: 10.073324
+[2022.07.30-17.28.34:908][301]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:908][301]LogTemp: Warning: Server time: 10.106340
+[2022.07.30-17.28.34:910][301]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:912][301]LogTemp: Warning: Server time: 10.106340
+[2022.07.30-17.28.34:941][302]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:942][302]LogTemp: Warning: Server time: 10.139368
+[2022.07.30-17.28.34:944][302]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:944][302]LogTemp: Warning: Server time: 10.139368
+[2022.07.30-17.28.34:974][303]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:975][303]LogTemp: Warning: Server time: 10.172399
+[2022.07.30-17.28.34:975][303]LogTemp: Warning: Ticking
+[2022.07.30-17.28.34:976][303]LogTemp: Warning: Server time: 10.172399
+[2022.07.30-17.28.35:008][304]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:009][304]LogTemp: Warning: Server time: 10.206433
+[2022.07.30-17.28.35:010][304]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:010][304]LogTemp: Warning: Server time: 10.206433
+[2022.07.30-17.28.35:042][305]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:043][305]LogTemp: Warning: Server time: 10.240459
+[2022.07.30-17.28.35:043][305]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:044][305]LogTemp: Warning: Server time: 10.240459
+[2022.07.30-17.28.35:076][306]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:077][306]LogTemp: Warning: Server time: 10.274490
+[2022.07.30-17.28.35:078][306]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:078][306]LogTemp: Warning: Server time: 10.274490
+[2022.07.30-17.28.35:110][307]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:111][307]LogTemp: Warning: Server time: 10.308524
+[2022.07.30-17.28.35:111][307]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:111][307]LogTemp: Warning: Server time: 10.308524
+[2022.07.30-17.28.35:143][308]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:144][308]LogTemp: Warning: Server time: 10.341551
+[2022.07.30-17.28.35:145][308]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:145][308]LogTemp: Warning: Server time: 10.341551
+[2022.07.30-17.28.35:176][309]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:177][309]LogTemp: Warning: Server time: 10.374583
+[2022.07.30-17.28.35:177][309]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:178][309]LogTemp: Warning: Server time: 10.374583
+[2022.07.30-17.28.35:209][310]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:210][310]LogTemp: Warning: Server time: 10.407614
+[2022.07.30-17.28.35:211][310]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:213][310]LogTemp: Warning: Server time: 10.407614
+[2022.07.30-17.28.35:242][311]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:243][311]LogTemp: Warning: Server time: 10.440647
+[2022.07.30-17.28.35:243][311]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:244][311]LogTemp: Warning: Server time: 10.440647
+[2022.07.30-17.28.35:276][312]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:277][312]LogTemp: Warning: Server time: 10.474673
+[2022.07.30-17.28.35:278][312]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:279][312]LogTemp: Warning: Server time: 10.474673
+[2022.07.30-17.28.35:309][313]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:310][313]LogTemp: Warning: Server time: 10.507710
+[2022.07.30-17.28.35:311][313]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:311][313]LogTemp: Warning: Server time: 10.507710
+[2022.07.30-17.28.35:342][314]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:343][314]LogTemp: Warning: Server time: 10.540734
+[2022.07.30-17.28.35:343][314]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:344][314]LogTemp: Warning: Server time: 10.540734
+[2022.07.30-17.28.35:375][315]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:376][315]LogTemp: Warning: Server time: 10.573767
+[2022.07.30-17.28.35:377][315]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:377][315]LogTemp: Warning: Server time: 10.573767
+[2022.07.30-17.28.35:409][316]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:410][316]LogTemp: Warning: Server time: 10.607800
+[2022.07.30-17.28.35:410][316]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:410][316]LogTemp: Warning: Server time: 10.607800
+[2022.07.30-17.28.35:442][317]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:443][317]LogTemp: Warning: Server time: 10.640829
+[2022.07.30-17.28.35:443][317]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:445][317]LogTemp: Warning: Server time: 10.640829
+[2022.07.30-17.28.35:475][318]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:476][318]LogTemp: Warning: Server time: 10.673860
+[2022.07.30-17.28.35:476][318]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:476][318]LogTemp: Warning: Server time: 10.673860
+[2022.07.30-17.28.35:508][319]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:509][319]LogTemp: Warning: Server time: 10.706886
+[2022.07.30-17.28.35:509][319]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:511][319]LogTemp: Warning: Server time: 10.706886
+[2022.07.30-17.28.35:542][320]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:543][320]LogTemp: Warning: Server time: 10.740920
+[2022.07.30-17.28.35:543][320]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:544][320]LogTemp: Warning: Server time: 10.740920
+[2022.07.30-17.28.35:575][321]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:576][321]LogTemp: Warning: Server time: 10.773949
+[2022.07.30-17.28.35:576][321]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:577][321]LogTemp: Warning: Server time: 10.773949
+[2022.07.30-17.28.35:608][322]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:609][322]LogTemp: Warning: Server time: 10.806978
+[2022.07.30-17.28.35:610][322]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:611][322]LogTemp: Warning: Server time: 10.806978
+[2022.07.30-17.28.35:641][323]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:642][323]LogTemp: Warning: Server time: 10.840007
+[2022.07.30-17.28.35:642][323]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:643][323]LogTemp: Warning: Server time: 10.840007
+[2022.07.30-17.28.35:675][324]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:676][324]LogTemp: Warning: Server time: 10.874042
+[2022.07.30-17.28.35:677][324]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:677][324]LogTemp: Warning: Server time: 10.874042
+[2022.07.30-17.28.35:709][325]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:710][325]LogTemp: Warning: Server time: 10.908079
+[2022.07.30-17.28.35:710][325]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:712][325]LogTemp: Warning: Server time: 10.908079
+[2022.07.30-17.28.35:742][326]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:743][326]LogTemp: Warning: Server time: 10.941102
+[2022.07.30-17.28.35:743][326]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:743][326]LogTemp: Warning: Server time: 10.941102
+[2022.07.30-17.28.35:776][327]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:777][327]LogTemp: Warning: Server time: 10.974133
+[2022.07.30-17.28.35:778][327]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:778][327]LogTemp: Warning: Server time: 10.974133
+[2022.07.30-17.28.35:810][328]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:810][328]LogTemp: Warning: Server time: 11.008162
+[2022.07.30-17.28.35:811][328]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:811][328]LogTemp: Warning: Server time: 11.008162
+[2022.07.30-17.28.35:843][329]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:844][329]LogTemp: Warning: Server time: 11.041193
+[2022.07.30-17.28.35:845][329]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:845][329]LogTemp: Warning: Server time: 11.041193
+[2022.07.30-17.28.35:876][330]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:877][330]LogTemp: Warning: Server time: 11.074224
+[2022.07.30-17.28.35:878][330]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:879][330]LogTemp: Warning: Server time: 11.074224
+[2022.07.30-17.28.35:910][331]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:911][331]LogTemp: Warning: Server time: 11.108253
+[2022.07.30-17.28.35:911][331]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:912][331]LogTemp: Warning: Server time: 11.108253
+[2022.07.30-17.28.35:943][332]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:944][332]LogTemp: Warning: Server time: 11.141302
+[2022.07.30-17.28.35:944][332]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:945][332]LogTemp: Warning: Server time: 11.141302
+[2022.07.30-17.28.35:977][333]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:978][333]LogTemp: Warning: Server time: 11.175312
+[2022.07.30-17.28.35:978][333]LogTemp: Warning: Ticking
+[2022.07.30-17.28.35:980][333]LogTemp: Warning: Server time: 11.175312
+[2022.07.30-17.28.36:010][334]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:011][334]LogTemp: Warning: Server time: 11.208345
+[2022.07.30-17.28.36:012][334]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:012][334]LogTemp: Warning: Server time: 11.208345
+[2022.07.30-17.28.36:044][335]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:045][335]LogTemp: Warning: Server time: 11.242375
+[2022.07.30-17.28.36:045][335]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:046][335]LogTemp: Warning: Server time: 11.242375
+[2022.07.30-17.28.36:078][336]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:079][336]LogTemp: Warning: Server time: 11.276405
+[2022.07.30-17.28.36:079][336]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:080][336]LogTemp: Warning: Server time: 11.276405
+[2022.07.30-17.28.36:112][337]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:113][337]LogTemp: Warning: Server time: 11.310436
+[2022.07.30-17.28.36:114][337]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:114][337]LogTemp: Warning: Server time: 11.310436
+[2022.07.30-17.28.36:145][338]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:145][338]LogTemp: Warning: Server time: 11.343466
+[2022.07.30-17.28.36:146][338]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:146][338]LogTemp: Warning: Server time: 11.343466
+[2022.07.30-17.28.36:179][339]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:181][339]LogTemp: Warning: Server time: 11.377497
+[2022.07.30-17.28.36:181][339]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:181][339]LogTemp: Warning: Server time: 11.377497
+[2022.07.30-17.28.36:212][340]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:213][340]LogTemp: Warning: Server time: 11.410529
+[2022.07.30-17.28.36:214][340]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:214][340]LogTemp: Warning: Server time: 11.410529
+[2022.07.30-17.28.36:246][341]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:247][341]LogTemp: Warning: Server time: 11.444564
+[2022.07.30-17.28.36:248][341]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:248][341]LogTemp: Warning: Server time: 11.444564
+[2022.07.30-17.28.36:279][342]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:280][342]LogTemp: Warning: Server time: 11.477607
+[2022.07.30-17.28.36:281][342]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:281][342]LogTemp: Warning: Server time: 11.477607
+[2022.07.30-17.28.36:313][343]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:314][343]LogTemp: Warning: Server time: 11.511617
+[2022.07.30-17.28.36:314][343]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:315][343]LogTemp: Warning: Server time: 11.511617
+[2022.07.30-17.28.36:347][344]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:348][344]LogTemp: Warning: Server time: 11.545648
+[2022.07.30-17.28.36:348][344]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:349][344]LogTemp: Warning: Server time: 11.545648
+[2022.07.30-17.28.36:380][345]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:381][345]LogTemp: Warning: Server time: 11.578678
+[2022.07.30-17.28.36:381][345]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:382][345]LogTemp: Warning: Server time: 11.578678
+[2022.07.30-17.28.36:414][346]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:415][346]LogTemp: Warning: Server time: 11.612713
+[2022.07.30-17.28.36:415][346]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:416][346]LogTemp: Warning: Server time: 11.612713
+[2022.07.30-17.28.36:447][347]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:448][347]LogTemp: Warning: Server time: 11.645739
+[2022.07.30-17.28.36:448][347]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:449][347]LogTemp: Warning: Server time: 11.645739
+[2022.07.30-17.28.36:480][348]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:480][348]LogTemp: Warning: Server time: 11.678769
+[2022.07.30-17.28.36:481][348]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:481][348]LogTemp: Warning: Server time: 11.678769
+[2022.07.30-17.28.36:513][349]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:514][349]LogTemp: Warning: Server time: 11.711799
+[2022.07.30-17.28.36:515][349]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:515][349]LogTemp: Warning: Server time: 11.711799
+[2022.07.30-17.28.36:547][350]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:548][350]LogTemp: Warning: Server time: 11.745833
+[2022.07.30-17.28.36:549][350]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:549][350]LogTemp: Warning: Server time: 11.745833
+[2022.07.30-17.28.36:581][351]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:582][351]LogTemp: Warning: Server time: 11.779860
+[2022.07.30-17.28.36:582][351]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:583][351]LogTemp: Warning: Server time: 11.779860
+[2022.07.30-17.28.36:615][352]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:616][352]LogTemp: Warning: Server time: 11.813893
+[2022.07.30-17.28.36:617][352]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:617][352]LogTemp: Warning: Server time: 11.813893
+[2022.07.30-17.28.36:649][353]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:650][353]LogTemp: Warning: Server time: 11.847926
+[2022.07.30-17.28.36:650][353]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:651][353]LogTemp: Warning: Server time: 11.847926
+[2022.07.30-17.28.36:682][354]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:683][354]LogTemp: Warning: Server time: 11.880953
+[2022.07.30-17.28.36:683][354]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:683][354]LogTemp: Warning: Server time: 11.880953
+[2022.07.30-17.28.36:715][355]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:716][355]LogTemp: Warning: Server time: 11.913985
+[2022.07.30-17.28.36:717][355]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:718][355]LogTemp: Warning: Server time: 11.913985
+[2022.07.30-17.28.36:749][356]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:750][356]LogTemp: Warning: Server time: 11.948017
+[2022.07.30-17.28.36:751][356]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:751][356]LogTemp: Warning: Server time: 11.948017
+[2022.07.30-17.28.36:782][357]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:783][357]LogTemp: Warning: Server time: 11.981044
+[2022.07.30-17.28.36:783][357]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:784][357]LogTemp: Warning: Server time: 11.981044
+[2022.07.30-17.28.36:815][358]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:816][358]LogTemp: Warning: Server time: 12.014076
+[2022.07.30-17.28.36:817][358]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:818][358]LogTemp: Warning: Server time: 12.014076
+[2022.07.30-17.28.36:848][359]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:849][359]LogTemp: Warning: Server time: 12.047106
+[2022.07.30-17.28.36:849][359]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:850][359]LogTemp: Warning: Server time: 12.047106
+[2022.07.30-17.28.36:882][360]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:883][360]LogTemp: Warning: Server time: 12.080134
+[2022.07.30-17.28.36:884][360]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:884][360]LogTemp: Warning: Server time: 12.080134
+[2022.07.30-17.28.36:915][361]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:916][361]LogTemp: Warning: Server time: 12.113165
+[2022.07.30-17.28.36:916][361]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:917][361]LogTemp: Warning: Server time: 12.113165
+[2022.07.30-17.28.36:949][362]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:950][362]LogTemp: Warning: Server time: 12.147198
+[2022.07.30-17.28.36:951][362]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:951][362]LogTemp: Warning: Server time: 12.147198
+[2022.07.30-17.28.36:983][363]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:984][363]LogTemp: Warning: Server time: 12.181226
+[2022.07.30-17.28.36:984][363]LogTemp: Warning: Ticking
+[2022.07.30-17.28.36:985][363]LogTemp: Warning: Server time: 12.181226
+[2022.07.30-17.28.37:016][364]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:017][364]LogTemp: Warning: Server time: 12.214256
+[2022.07.30-17.28.37:017][364]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:018][364]LogTemp: Warning: Server time: 12.214256
+[2022.07.30-17.28.37:049][365]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:050][365]LogTemp: Warning: Server time: 12.247286
+[2022.07.30-17.28.37:051][365]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:051][365]LogTemp: Warning: Server time: 12.247286
+[2022.07.30-17.28.37:082][366]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:083][366]LogTemp: Warning: Server time: 12.280318
+[2022.07.30-17.28.37:084][366]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:084][366]LogTemp: Warning: Server time: 12.280318
+[2022.07.30-17.28.37:116][367]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:117][367]LogTemp: Warning: Server time: 12.314350
+[2022.07.30-17.28.37:118][367]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:118][367]LogTemp: Warning: Server time: 12.314350
+[2022.07.30-17.28.37:150][368]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:151][368]LogTemp: Warning: Server time: 12.348381
+[2022.07.30-17.28.37:151][368]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:152][368]LogTemp: Warning: Server time: 12.348381
+[2022.07.30-17.28.37:184][369]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:185][369]LogTemp: Warning: Server time: 12.382410
+[2022.07.30-17.28.37:185][369]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:186][369]LogTemp: Warning: Server time: 12.382410
+[2022.07.30-17.28.37:217][370]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:218][370]LogTemp: Warning: Server time: 12.415439
+[2022.07.30-17.28.37:219][370]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:219][370]LogTemp: Warning: Server time: 12.415439
+[2022.07.30-17.28.37:250][371]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:250][371]LogTemp: Warning: Server time: 12.448467
+[2022.07.30-17.28.37:251][371]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:251][371]LogTemp: Warning: Server time: 12.448467
+[2022.07.30-17.28.37:283][372]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:284][372]LogTemp: Warning: Server time: 12.481499
+[2022.07.30-17.28.37:285][372]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:285][372]LogTemp: Warning: Server time: 12.481499
+[2022.07.30-17.28.37:317][373]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:318][373]LogTemp: Warning: Server time: 12.515530
+[2022.07.30-17.28.37:318][373]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:318][373]LogTemp: Warning: Server time: 12.515530
+[2022.07.30-17.28.37:350][374]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:351][374]LogTemp: Warning: Server time: 12.548559
+[2022.07.30-17.28.37:352][374]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:352][374]LogTemp: Warning: Server time: 12.548559
+[2022.07.30-17.28.37:384][375]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:384][375]LogTemp: Warning: Server time: 12.582590
+[2022.07.30-17.28.37:386][375]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:387][375]LogTemp: Warning: Server time: 12.582590
+[2022.07.30-17.28.37:417][376]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:418][376]LogTemp: Warning: Server time: 12.615623
+[2022.07.30-17.28.37:419][376]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:419][376]LogTemp: Warning: Server time: 12.615623
+[2022.07.30-17.28.37:450][377]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:451][377]LogTemp: Warning: Server time: 12.648654
+[2022.07.30-17.28.37:451][377]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:452][377]LogTemp: Warning: Server time: 12.648654
+[2022.07.30-17.28.37:484][378]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:485][378]LogTemp: Warning: Server time: 12.682682
+[2022.07.30-17.28.37:486][378]LogTemp: Warning: Ticking
+[2022.07.30-17.28.37:486][378]LogTemp: Warning: Server time: 12.682682

@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameState.h"
-#include "RewindComponent.h"
 #include "FPSGameState.generated.h"
 /**
  * 
@@ -19,9 +18,7 @@ protected:
 	UPROPERTY()
 		float MaxAllowedLatencyForRewind = 0.400f;
 
-	//Stores references to all the rewind components, all rewind components add themselves to this on Beginplay
-	UPROPERTY()
-		TArray<URewindComponent*> RewindComponentsArray;
+	
 
 public:
 	float GetServerWorldTimeSeconds() const override;
@@ -29,9 +26,5 @@ public:
 	UFUNCTION()
 		float GetMaxAllowedLatency() { return MaxAllowedLatencyForRewind; }
 	
-	UFUNCTION()
-		TArray<URewindComponent*> GetRewindComponentsArray() { return RewindComponentsArray; }
-
-	UFUNCTION()
-		void AddRewindComponent(URewindComponent* RewindComponent);
+	
 };

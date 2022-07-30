@@ -14,35 +14,31 @@ struct FPoseSnapshot;
 #endif
 #define FPSGAME_RewindComponent_generated_h
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_13_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_RewindComponent_h_24_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRewindDataStruct_Statics; \
 	FPSGAME_API static class UScriptStruct* StaticStruct();
 
 
 template<> FPSGAME_API UScriptStruct* StaticStruct<struct FRewindDataStruct>();
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_SPARSE_DATA
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_SPARSE_DATA
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execDeleteOldRecords); \
+	DECLARE_FUNCTION(execGetCurrentTickPoseSnapshot); \
 	DECLARE_FUNCTION(execRecordDetailsThisTick); \
-	DECLARE_FUNCTION(execAddToGameState);
+	DECLARE_FUNCTION(execAddToGameMode);
 
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execDeleteOldRecords); \
+	DECLARE_FUNCTION(execGetCurrentTickPoseSnapshot); \
 	DECLARE_FUNCTION(execRecordDetailsThisTick); \
-	DECLARE_FUNCTION(execAddToGameState);
+	DECLARE_FUNCTION(execAddToGameMode);
 
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_EVENT_PARMS \
-	struct RewindComponent_eventGetCurrentTickPoseSnapshotBP_Parms \
-	{ \
-		FPoseSnapshot ReturnValue; \
-	};
-
-
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_CALLBACK_WRAPPERS
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURewindComponent(); \
 	friend struct Z_Construct_UClass_URewindComponent_Statics; \
@@ -51,7 +47,7 @@ public: \
 	DECLARE_SERIALIZER(URewindComponent)
 
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_INCLASS \
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_INCLASS \
 private: \
 	static void StaticRegisterNativesURewindComponent(); \
 	friend struct Z_Construct_UClass_URewindComponent_Statics; \
@@ -60,7 +56,7 @@ public: \
 	DECLARE_SERIALIZER(URewindComponent)
 
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URewindComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(URewindComponent) \
@@ -73,7 +69,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API URewindComponent(URewindComponent&&); \
@@ -84,37 +80,33 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(URewindComponent)
 
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__RewindTimestampsAndData() { return STRUCT_OFFSET(URewindComponent, RewindTimestampsAndData); } \
-	FORCEINLINE static uint32 __PPO__CurrentPoseSnapshot() { return STRUCT_OFFSET(URewindComponent, CurrentPoseSnapshot); }
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__OwnerComponent() { return STRUCT_OFFSET(URewindComponent, OwnerComponent); } \
+	FORCEINLINE static uint32 __PPO__SkeletalMeshToRewind() { return STRUCT_OFFSET(URewindComponent, SkeletalMeshToRewind); } \
+	FORCEINLINE static uint32 __PPO__bShouldSaveAnimationPoses() { return STRUCT_OFFSET(URewindComponent, bShouldSaveAnimationPoses); }
 
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_34_PROLOG \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_EVENT_PARMS
-
-
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_RewindComponent_h_45_PROLOG
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_SPARSE_DATA \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_CALLBACK_WRAPPERS \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_INCLASS \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_SPARSE_DATA \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_INCLASS \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_RewindComponent_h_37_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_RewindComponent_h_48_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_SPARSE_DATA \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_CALLBACK_WRAPPERS \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_RewindComponent_h_37_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_SPARSE_DATA \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_RewindComponent_h_48_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

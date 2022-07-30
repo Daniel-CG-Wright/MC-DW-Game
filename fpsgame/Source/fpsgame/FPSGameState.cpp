@@ -16,7 +16,3 @@ float AFPSGameState::GetServerWorldTimeSeconds() const
     }
 }
 
-void AFPSGameState::AddRewindComponent(URewindComponent* RewindComponent)
-{
-    RewindComponentsArray.Emplace(RewindComponent);
-}

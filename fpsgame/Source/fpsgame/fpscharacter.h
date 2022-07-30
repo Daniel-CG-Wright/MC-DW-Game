@@ -8,7 +8,9 @@
 #include "GameFramework/Character.h"
 #include "WeaponActor.h"
 #include "InteractableObjectComponent.h"
+#include "RewindComponent.h"
 #include "FPSGameState.h"
+
 //Should always be the last include
 #include "fpscharacter.generated.h"
 
@@ -42,7 +44,6 @@ protected:
 	UPROPERTY(EditAnywhere)
 		bool SwitchWeaponAfterPickup;
 
-	
 //Firing functions
 protected:
 	//Checks if the client can fire (checks ammo, fire rate, animation etc). If so, we move onto ClientFire
@@ -408,6 +409,9 @@ public:
 	//FPS camera component
 	UPROPERTY(VisibleAnywhere)
 		UCameraComponent* FPSCameraComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		URewindComponent* FPSRewindComponent;
 
 	//FPS mesh component, visible only to the owning player
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
