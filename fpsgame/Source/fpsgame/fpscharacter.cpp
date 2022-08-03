@@ -200,7 +200,6 @@ void Afpscharacter::InteractPressed()
 	//Logic for pressing interact goes here
 	if (bCanInteract)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Interacting"));
 		//Stop floooding of interact actions, we are giving a lot of power to the client here so may need to strengthen this later and move to server, but that defeats the purpose
 		//as this function is designed to stop overloading the server with interact RPCs
 		bCanInteract = false;
@@ -679,10 +678,11 @@ void Afpscharacter::Interact()
 		//If the item is interactable, we continue
 		if (HitInteractableComponent != nullptr)
 		{
-			
+			UE_LOG(LogTemp, Warning, TEXT("interactable component found"));
 			//Seems valid on client, let's run on the server
 			if (GetLocalRole() < ROLE_Authority)
 			{
+				
 				ServerInteract();
 			}
 			else
@@ -763,7 +763,7 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 {
 	//Pick up weapon
 
-	//Need to run RPC on server
+	//Need to run RPC on server, this function itself should only run on server so the rpc does not need calling
 	if (GetLocalRole() < ROLE_Authority)
 	{
 		//ServerPickupWeapon(WeaponPickup);
@@ -775,32 +775,27 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 	//Get weapon data, and weapon equip type
 	FWeaponDataStruct WeaponData = WeaponPickup->GetWeaponDataStruct();
 	Equips WeaponEquipType = WeaponData.TypeOfEquip;
-
+	
 	//First we must decide whether to switch our primary or secondary depending on which weapon type the gun is.
 	switch (WeaponEquipType)
 	{
 	case Equips::PRIMARY:
 		PrimaryData = WeaponData;
-		PrimaryGun = WeaponData.GunModel;
 
 		break;
 
 	case Equips::SECONDARY:
 		SecondaryData = WeaponData;
-		SecondaryGun = WeaponData.GunModel;
-
 		break;
 
 	case Equips::BOTH:
 		if (EquippedGun == Equips::PRIMARY)
 		{
 			PrimaryData = WeaponData;
-			PrimaryGun = WeaponData.GunModel;
 		}
 		else
 		{
 			SecondaryData = WeaponData;
-			SecondaryGun = WeaponData.GunModel;
 		}
 		break;
 
@@ -856,7 +851,7 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 {
 	//Switch to primary gun
 	//Stop crashes if no primary exists
-	if (PrimaryGun == Guns::NONE)
+	if (PrimaryData.GunModel == Guns::NONE)
 	{
 		return;
 	}
@@ -916,7 +911,7 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 {
 	
 	//Stop crashes if no secondary exists
-	if (SecondaryGun == Guns::NONE)
+	if (SecondaryData.GunModel == Guns::NONE)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("ahh no"));
 		return;
@@ -988,7 +983,7 @@ void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 void Afpscharacter::ClientValidateFire()
 {
 	//If we dont have a gun equipped, return
-	if ((EquippedGun == Equips::PRIMARY && PrimaryGun == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryGun == Guns::NONE))
+	if ((EquippedGun == Equips::PRIMARY && PrimaryData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.GunModel == Guns::NONE))
 	{
 		return;
 	}
@@ -1018,10 +1013,13 @@ void Afpscharacter::ClientValidateFire()
 
 void Afpscharacter::ClientHitscanCheckFire()
 {
+	//Called when we can fire. Should probably implement sounds for client to hear on this function,a s well as clientside hit images and stuff
+	//to make it feel more responsive (tho if it was a miss serverside we will get ghost markers, so maybe make this an option).
 	TArray<FHitResult> HitResults;
 
 	if (MultiRaycastInCameraDirection(HitResults, CurrentlyEquippedWeaponData.MaxRange))
 	{
+		//If we score a hit this is the logic that will be played
 		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 		//Run RPC on server to ensure shot hit
 		if (clienttime)
@@ -1040,7 +1038,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 
 	//checks if the player can actually fire with server variables
 	//If we dont have a gun equipped, return
-	if ((EquippedGun == Equips::PRIMARY && PrimaryGun == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryGun == Guns::NONE))
+	if ((EquippedGun == Equips::PRIMARY && PrimaryData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.GunModel == Guns::NONE))
 	{
 		return;
 	}
@@ -1096,7 +1094,98 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 	else
 	{
 		//Normal procedures here
-		//STAGE 2
+		//STAGE 2, 3
+		//get the interpolated transforms for all the rewind components
+		TMap<AActor*, FRewindDataStruct> ActorTransformMap;
+		ServerGetInterpolatedTransformsForRewind(ClientFireTime, ActorTransformMap);
+		//Now that we have the interpolated values, we move onto stage 4 and stage 5
+		//STAGE 4 - STILL NEEDS IMPLEMENTATION
+		//TODO ADD STAGE 4
+		//STAGE 5, 6, 7, 8
+		ServerRewindAndPerformHitscan(ActorTransformMap);
 
+	}
+}
+
+void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTime, TMap<AActor*, FRewindDataStruct> OutActorTransformsToBeRewinded) const
+{
+	//first we must get the rewind component set and lerp between each one
+	TSet<URewindComponent*> RewindComponents = Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->GetRewindComponentsSet();
+	float PreviousTimestamp;
+	FRewindDataStruct PreviousTransform;
+	float NextTimestamp;
+	FRewindDataStruct NextTransform;
+	FRewindDataStruct ResultTransform;
+
+	float LerpTime;
+	//We must complete the process for all the rewind components
+	for (auto& Elem : RewindComponents)
+	{
+		//Iterating over each rewindcomponent to get its parent actor and that actor's initial transform
+		AActor* ParentActor = Elem->GetOwnerActor();
+		
+		//used in next section to determine which timestamps are either side of the client fire time.
+		
+
+		//iterate over all elements in the rewind component map of timestamps
+		for (auto& mapElems : Elem->GetRewindTimestampsAndData())
+		{
+			//this section checks for the key lower to the client fire time, and the key higher than the client fire time, and their values,
+			//so that we can use them for interpolation
+			if (mapElems.Key < ClientFireTime)
+			{
+				PreviousTimestamp = mapElems.Key;
+				PreviousTransform = mapElems.Value;
+			}
+			else
+			{
+				//> / ==
+				NextTimestamp = mapElems.Key;
+				NextTransform = mapElems.Value;
+				break;
+			}
+			
+		}
+
+		//Now is the time for lerping the values to get the interpolated pose snapshot, and transforms
+		//Normalized alpha value for lerp (e.g. if client time = 15, previous time = 10, next time = 20)
+		//then alpha would be 5/10 = 0.5 here, so we would lerp for halfway between the timestamps.
+		LerpTime = (ClientFireTime - PreviousTimestamp) / NextTimestamp - PreviousTimestamp;
+		
+		//lerping positonal vector
+		ResultTransform.SnapshotPosition = FMath::Lerp(PreviousTransform.SnapshotPosition, NextTransform.SnapshotPosition, LerpTime);
+		//lerping rotation vector
+		ResultTransform.SnapshotRotation = FMath::Lerp(PreviousTransform.SnapshotRotation, NextTransform.SnapshotRotation, LerpTime);
+		//Lerping scale vector
+		ResultTransform.SnapshotScale = FMath::Lerp(PreviousTransform.SnapshotScale, NextTransform.SnapshotScale, LerpTime);
+		//Lerping pose should be done here, but we still need to implement.
+		//EDIT lerping pose will likely be delegated to performing blending in a blendspace at the time where we set everything to its old position to perform the hitscan
+
+		//Finally we add the actor and data struct to the map output
+		OutActorTransformsToBeRewinded.Emplace(ParentActor, ResultTransform);
+	}
+}
+
+void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind)
+{
+	//Call a gamemode function which rewinds everything
+	Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->RewindActors(ValuesToBeUsedInRewind);
+
+	//Perform the actual hitscan with the hitscan function
+	ServerPerformHitscan();
+
+	//Call a gamemode function which reverts everything to the normal state
+	Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->ResetActorPositionsToBefore();
+}
+
+void Afpscharacter::ServerPerformHitscan()
+{
+	//Here is where we actually perform the hitscan to see if we hit anything.
+	TArray<FHitResult> HitResults;
+
+	if (MultiRaycastInCameraDirection(HitResults, CurrentlyEquippedWeaponData.MaxRange))
+	{
+		//If we score a hit we must look at all the hit results and create hit markers and sound fx and stuff and deal dmg
+		UE_LOG(LogTemp, Warning, TEXT("Got a hit"));
 	}
 }

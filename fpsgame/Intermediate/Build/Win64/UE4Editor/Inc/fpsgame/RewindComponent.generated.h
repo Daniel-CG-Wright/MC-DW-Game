@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 struct FPoseSnapshot;
 #ifdef FPSGAME_RewindComponent_generated_h
 #error "RewindComponent.generated.h already included, missing '#pragma once' in RewindComponent.h"
@@ -24,6 +25,7 @@ template<> FPSGAME_API UScriptStruct* StaticStruct<struct FRewindDataStruct>();
 #define fpsgame_Source_fpsgame_RewindComponent_h_48_SPARSE_DATA
 #define fpsgame_Source_fpsgame_RewindComponent_h_48_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetOwnerActor); \
 	DECLARE_FUNCTION(execDeleteOldRecords); \
 	DECLARE_FUNCTION(execGetCurrentTickPoseSnapshot); \
 	DECLARE_FUNCTION(execRecordDetailsThisTick); \
@@ -32,6 +34,7 @@ template<> FPSGAME_API UScriptStruct* StaticStruct<struct FRewindDataStruct>();
 
 #define fpsgame_Source_fpsgame_RewindComponent_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetOwnerActor); \
 	DECLARE_FUNCTION(execDeleteOldRecords); \
 	DECLARE_FUNCTION(execGetCurrentTickPoseSnapshot); \
 	DECLARE_FUNCTION(execRecordDetailsThisTick); \

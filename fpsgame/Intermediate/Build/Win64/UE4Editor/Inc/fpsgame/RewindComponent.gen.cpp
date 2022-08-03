@@ -149,6 +149,13 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FRewindDataStruct_Hash() { return 847806005U; }
+	DEFINE_FUNCTION(URewindComponent::execGetOwnerActor)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AActor**)Z_Param__Result=P_THIS->GetOwnerActor();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(URewindComponent::execDeleteOldRecords)
 	{
 		P_FINISH;
@@ -185,6 +192,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 			{ "AddToGameMode", &URewindComponent::execAddToGameMode },
 			{ "DeleteOldRecords", &URewindComponent::execDeleteOldRecords },
 			{ "GetCurrentTickPoseSnapshot", &URewindComponent::execGetCurrentTickPoseSnapshot },
+			{ "GetOwnerActor", &URewindComponent::execGetOwnerActor },
 			{ "RecordDetailsThisTick", &URewindComponent::execRecordDetailsThisTick },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -267,6 +275,38 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics
+	{
+		struct RewindComponent_eventGetOwnerActor_Parms
+		{
+			AActor* ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RewindComponent_eventGetOwnerActor_Parms, ReturnValue), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RewindComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URewindComponent, nullptr, "GetOwnerActor", nullptr, nullptr, sizeof(RewindComponent_eventGetOwnerActor_Parms), Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x40020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URewindComponent_GetOwnerActor()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URewindComponent_GetOwnerActor_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_URewindComponent_RecordDetailsThisTick_Statics
 	{
 #if WITH_METADATA
@@ -327,6 +367,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		{ &Z_Construct_UFunction_URewindComponent_AddToGameMode, "AddToGameMode" }, // 2666400372
 		{ &Z_Construct_UFunction_URewindComponent_DeleteOldRecords, "DeleteOldRecords" }, // 1339786654
 		{ &Z_Construct_UFunction_URewindComponent_GetCurrentTickPoseSnapshot, "GetCurrentTickPoseSnapshot" }, // 2875911115
+		{ &Z_Construct_UFunction_URewindComponent_GetOwnerActor, "GetOwnerActor" }, // 182696084
 		{ &Z_Construct_UFunction_URewindComponent_RecordDetailsThisTick, "RecordDetailsThisTick" }, // 3545378675
 	};
 #if WITH_METADATA
@@ -400,7 +441,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFRewindDataStruct
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(URewindComponent, 2715886779);
+	IMPLEMENT_CLASS(URewindComponent, 1425209960);
 	template<> FPSGAME_API UClass* StaticClass<URewindComponent>()
 	{
 		return URewindComponent::StaticClass();

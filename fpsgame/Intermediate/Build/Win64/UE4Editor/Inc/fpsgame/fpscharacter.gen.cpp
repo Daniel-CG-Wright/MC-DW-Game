@@ -22,11 +22,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	ENGINE_API UEnum* Z_Construct_UEnum_Engine_ECollisionChannel();
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor_NoRegister();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponDataStruct();
+	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FRewindDataStruct();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FDamageEvent();
 	ENGINE_API UClass* Z_Construct_UClass_AController_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
-	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_Guns();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	FPSGAME_API UClass* Z_Construct_UClass_AProjectileBullet_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
@@ -402,6 +402,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->InteractPressed();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execServerPerformHitscan)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ServerPerformHitscan();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execServerRewindAndPerformHitscan)
+	{
+		P_GET_TMAP(AActor*,FRewindDataStruct,Z_Param_ValuesToBeUsedInRewind);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ServerRewindAndPerformHitscan(Z_Param_ValuesToBeUsedInRewind);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execServerGetInterpolatedTransformsForRewind)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_ClientFireTime);
+		P_GET_TMAP(AActor*,FRewindDataStruct,Z_Param_OutActorTransformsToBeRewinded);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ServerGetInterpolatedTransformsForRewind(Z_Param_ClientFireTime,Z_Param_OutActorTransformsToBeRewinded);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(Afpscharacter::execServerHitscanCheckFire)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_ClientFireTime);
@@ -531,9 +555,12 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "PositionAndAttachGunInTP", &Afpscharacter::execPositionAndAttachGunInTP },
 			{ "PressSprint", &Afpscharacter::execPressSprint },
 			{ "ReleaseSprint", &Afpscharacter::execReleaseSprint },
+			{ "ServerGetInterpolatedTransformsForRewind", &Afpscharacter::execServerGetInterpolatedTransformsForRewind },
 			{ "ServerHitscanCheckFire", &Afpscharacter::execServerHitscanCheckFire },
 			{ "ServerInteract", &Afpscharacter::execServerInteract },
+			{ "ServerPerformHitscan", &Afpscharacter::execServerPerformHitscan },
 			{ "ServerPickupWeapon", &Afpscharacter::execServerPickupWeapon },
+			{ "ServerRewindAndPerformHitscan", &Afpscharacter::execServerRewindAndPerformHitscan },
 			{ "ServerSetSprinting", &Afpscharacter::execServerSetSprinting },
 			{ "ServerStartJump", &Afpscharacter::execServerStartJump },
 			{ "ServerSwitchPrimary", &Afpscharacter::execServerSwitchPrimary },
@@ -1276,9 +1303,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.\n" },
+		{ "Comment", "//Stores current weapon being held, also used on server rep and sdtuff\n//UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)\n//Guns EquippedGun;\n//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually." },
+		{ "ToolTip", "Stores current weapon being held, also used on server rep and sdtuff\nUPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)\nGuns EquippedGun;\nReplicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually." },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "OnRep_ChangeWeapon", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon_Statics::Function_MetaDataParams)) };
@@ -1530,6 +1557,50 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics
+	{
+		struct fpscharacter_eventServerGetInterpolatedTransformsForRewind_Parms
+		{
+			float ClientFireTime;
+			TMap<AActor*,FRewindDataStruct> OutActorTransformsToBeRewinded;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ClientFireTime;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_OutActorTransformsToBeRewinded_ValueProp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OutActorTransformsToBeRewinded_Key_KeyProp;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_OutActorTransformsToBeRewinded;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::NewProp_ClientFireTime = { "ClientFireTime", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventServerGetInterpolatedTransformsForRewind_Parms, ClientFireTime), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::NewProp_OutActorTransformsToBeRewinded_ValueProp = { "OutActorTransformsToBeRewinded", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FRewindDataStruct, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::NewProp_OutActorTransformsToBeRewinded_Key_KeyProp = { "OutActorTransformsToBeRewinded_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::NewProp_OutActorTransformsToBeRewinded = { "OutActorTransformsToBeRewinded", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventServerGetInterpolatedTransformsForRewind_Parms, OutActorTransformsToBeRewinded), EMapPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::NewProp_ClientFireTime,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::NewProp_OutActorTransformsToBeRewinded_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::NewProp_OutActorTransformsToBeRewinded_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::NewProp_OutActorTransformsToBeRewinded,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Used to get the interpolated transforms for all rewind components, for the specific timestamp\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Used to get the interpolated transforms for all rewind components, for the specific timestamp" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerGetInterpolatedTransformsForRewind", nullptr, nullptr, sizeof(fpscharacter_eventServerGetInterpolatedTransformsForRewind_Parms), Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x40080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire_Statics
 	{
 		struct fpscharacter_eventServerHitscanCheckFire_Parms
@@ -1588,6 +1659,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Performs the serverside hitscan - we also deal damage and stuff here\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Performs the serverside hitscan - we also deal damage and stuff here" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerPerformHitscan", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon_Statics
 	{
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WeaponPickup;
@@ -1616,6 +1711,54 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics
+	{
+		struct fpscharacter_eventServerRewindAndPerformHitscan_Parms
+		{
+			TMap<AActor*,FRewindDataStruct> ValuesToBeUsedInRewind;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ValuesToBeUsedInRewind_ValueProp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ValuesToBeUsedInRewind_Key_KeyProp;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ValuesToBeUsedInRewind_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ValuesToBeUsedInRewind;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind_ValueProp = { "ValuesToBeUsedInRewind", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FRewindDataStruct, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind_Key_KeyProp = { "ValuesToBeUsedInRewind_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind = { "ValuesToBeUsedInRewind", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventServerRewindAndPerformHitscan_Parms, ValuesToBeUsedInRewind), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::NewProp_ValuesToBeUsedInRewind,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//rewinds all the actors to the previous point, and then performs the hitscan, and then returns them back\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "rewinds all the actors to the previous point, and then performs the hitscan, and then returns them back" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerRewindAndPerformHitscan", nullptr, nullptr, sizeof(fpscharacter_eventServerRewindAndPerformHitscan_Parms), Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2350,16 +2493,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 		static void NewProp_IsSprinting_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsSprinting;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_PrimaryGun_Underlying;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PrimaryGun_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PrimaryGun;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_SecondaryGun_Underlying;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SecondaryGun_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_SecondaryGun;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BulletClass_MetaData[];
 #endif
@@ -2458,7 +2591,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_MoveY, "MoveY" }, // 2819240834
 		{ &Z_Construct_UFunction_Afpscharacter_MultiRaycastInCameraDirection, "MultiRaycastInCameraDirection" }, // 3425216501
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting, "OnRep_ChangeSprinting" }, // 2106207384
-		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon, "OnRep_ChangeWeapon" }, // 371153054
+		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon, "OnRep_ChangeWeapon" }, // 21635020
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ControlRotation, "OnRep_ControlRotation" }, // 1226333665
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentHealth, "OnRep_CurrentHealth" }, // 2772940714
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching, "OnRep_CurrentlyCrouching" }, // 4044249521
@@ -2468,9 +2601,12 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInTP, "PositionAndAttachGunInTP" }, // 967761929
 		{ &Z_Construct_UFunction_Afpscharacter_PressSprint, "PressSprint" }, // 2378583722
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseSprint, "ReleaseSprint" }, // 3846209980
+		{ &Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind, "ServerGetInterpolatedTransformsForRewind" }, // 3380560277
 		{ &Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire, "ServerHitscanCheckFire" }, // 3336954870
 		{ &Z_Construct_UFunction_Afpscharacter_ServerInteract, "ServerInteract" }, // 2423912466
+		{ &Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan, "ServerPerformHitscan" }, // 1576683055
 		{ &Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon, "ServerPickupWeapon" }, // 633494461
+		{ &Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan, "ServerRewindAndPerformHitscan" }, // 4167897062
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSetSprinting, "ServerSetSprinting" }, // 1602645312
 		{ &Z_Construct_UFunction_Afpscharacter_ServerStartJump, "ServerStartJump" }, // 1084212856
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary, "ServerSwitchPrimary" }, // 1283072070
@@ -2785,22 +2921,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		((Afpscharacter*)Obj)->IsSprinting = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting = { "IsSprinting", "OnRep_ChangeSprinting", (EPropertyFlags)0x0020080100020035, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun_MetaData[] = {
-		{ "Comment", "//Stores current weapon being held, also used on server rep and sdtuff\n//UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)\n//Guns EquippedGun;\n" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Stores current weapon being held, also used on server rep and sdtuff\nUPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)\nGuns EquippedGun;" },
-	};
-#endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun = { "PrimaryGun", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, PrimaryGun), Z_Construct_UEnum_fpsgame_Guns, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun_MetaData[] = {
-		{ "ModuleRelativePath", "fpscharacter.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun = { "SecondaryGun", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, SecondaryGun), Z_Construct_UEnum_fpsgame_Guns, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass_MetaData[] = {
 		{ "Category", "Weapon | Projectile" },
@@ -2984,10 +3104,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MaxHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_PrimaryGun,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_SecondaryGun,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_XSensitivity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_YSensitivity,
@@ -3032,7 +3148,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 3896433957);
+	IMPLEMENT_CLASS(Afpscharacter, 4275546841);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

@@ -18,13 +18,28 @@ class FPSGAME_API AFPSGameModeDefault : public AGameMode
 protected:
 	//Stores references to all the rewind components, all rewind components add themselves to this on Beginplay
 	UPROPERTY()
-		TArray<URewindComponent*> RewindComponentsArray;
+		TSet<URewindComponent*> RewindComponentsSet;
+
+	//Saved data storing all the actors and their rewind data structs needed from before a rewind takes place,
+	//so that the rewinded actors can be set back to their original positions afterwards.
+	UPROPERTY()
+		TMap<AActor*, FRewindDataStruct> SavedRewindValues;
 
 public:
 	UFUNCTION()
-		TArray<URewindComponent*> GetRewindComponentsArray() { return RewindComponentsArray; }
+		TSet<URewindComponent*> GetRewindComponentsSet() { return RewindComponentsSet; }
 
 	UFUNCTION()
-		void AddRewindComponent(URewindComponent* RewindComponent);
-	
+		void AddRewindComponent(URewindComponent* const RewindComponent);
+
+	UFUNCTION()
+		void RemoveRewindComponent(URewindComponent* const RewindComponent);
+
+	//Rewinds actors to the values set in the input parameter
+	UFUNCTION()
+		void RewindActors(TMap<AActor*, FRewindDataStruct> const ValuesToUseInRewind);
+
+	//Sets actors back to their original positions, based on the last saved data
+	UFUNCTION()
+		void ResetActorPositionsToBefore();
 };

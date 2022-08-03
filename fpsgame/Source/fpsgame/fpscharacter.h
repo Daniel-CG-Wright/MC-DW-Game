@@ -10,6 +10,7 @@
 #include "InteractableObjectComponent.h"
 #include "RewindComponent.h"
 #include "FPSGameState.h"
+#include "FPSGameModeDefault.h"
 
 //Should always be the last include
 #include "fpscharacter.generated.h"
@@ -61,6 +62,18 @@ protected:
 	//Checks if the player hit anything on the server, requires rewinds and stuff. Not an RPC as called by ServerValidateFire
 	UFUNCTION()
 		void ServerHitscanCheckFire(float ClientFireTime);
+
+	//Used to get the interpolated transforms for all rewind components, for the specific timestamp
+	UFUNCTION()
+		void ServerGetInterpolatedTransformsForRewind(float ClientFireTime, TMap<AActor*, FRewindDataStruct> OutActorTransformsToBeRewinded) const;
+
+	//rewinds all the actors to the previous point, and then performs the hitscan, and then returns them back
+	UFUNCTION()
+		void ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind);
+
+	//Performs the serverside hitscan - we also deal damage and stuff here
+	UFUNCTION()
+		void ServerPerformHitscan();
 
 //Player input functions
 protected:
@@ -313,11 +326,6 @@ protected:
 	//UPROPERTY(ReplicatedUsing = OnRep_ChangeWeapon)
 		//Guns EquippedGun;
 
-	UPROPERTY()
-		Guns PrimaryGun;
-
-	UPROPERTY()
-		Guns SecondaryGun;
 
 	UFUNCTION()
 		//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.

@@ -23,7 +23,6 @@ void URewindComponent::BeginPlay()
 	Super::BeginPlay();
 
 	OwnerComponent = GetOwner();
-	UE_LOG(LogTemp, Warning, TEXT("Aboiut to add meself to the gamemode"));
 	AddToGameMode();
 	CachedMaxPing = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetMaxAllowedLatency();
 	
@@ -53,7 +52,6 @@ void URewindComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	ThisTickServerTime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 
-	UE_LOG(LogTemp, Warning, TEXT("Ticking"));
 	RecordDetailsThisTick();
 	DeleteOldRecords();
 	// ...
@@ -80,7 +78,6 @@ void URewindComponent::RecordDetailsThisTick()
 	}
 	//add data marked with timestamp to map.
 	RewindTimestampsAndData.Emplace(Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds(), RewindDataForThisTick);
-	UE_LOG(LogTemp, Warning, TEXT("Server time: %f"), Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds());
 }
 
 void URewindComponent::DeleteOldRecords()
@@ -91,12 +88,13 @@ void URewindComponent::DeleteOldRecords()
 	//Tmap is already sorted as it is type tsortedmap, sorted by ascending key (timestamp) so most recent entries last.
 	//We check from the bottom to delete the oldest values
 
-	for (auto& Elem : RewindTimestampsAndData)
+	for (auto It = RewindTimestampsAndData.CreateConstIterator(); It; ++It)
 	{
-		if (Elem.Key < ThisTickServerTime - CachedMaxPing)
+
+		if (It.Key() < ThisTickServerTime - CachedMaxPing)
 		{
 			//too old, delete
-			RewindTimestampsAndData.Remove(Elem.Key);
+			RewindTimestampsAndData.Remove(It.Key());
 		}
 		else
 		{

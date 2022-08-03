@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor; struct FRewindDataStruct;
 class URewindComponent;
 #ifdef FPSGAME_FPSGameModeDefault_generated_h
 #error "FPSGameModeDefault.generated.h already included, missing '#pragma once' in FPSGameModeDefault.h"
@@ -17,14 +18,20 @@ class URewindComponent;
 #define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_SPARSE_DATA
 #define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execResetActorPositionsToBefore); \
+	DECLARE_FUNCTION(execRewindActors); \
+	DECLARE_FUNCTION(execRemoveRewindComponent); \
 	DECLARE_FUNCTION(execAddRewindComponent); \
-	DECLARE_FUNCTION(execGetRewindComponentsArray);
+	DECLARE_FUNCTION(execGetRewindComponentsSet);
 
 
 #define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execResetActorPositionsToBefore); \
+	DECLARE_FUNCTION(execRewindActors); \
+	DECLARE_FUNCTION(execRemoveRewindComponent); \
 	DECLARE_FUNCTION(execAddRewindComponent); \
-	DECLARE_FUNCTION(execGetRewindComponentsArray);
+	DECLARE_FUNCTION(execGetRewindComponentsSet);
 
 
 #define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_INCLASS_NO_PURE_DECLS \
@@ -72,7 +79,8 @@ public: \
 
 
 #define fpsgame_Source_fpsgame_FPSGameModeDefault_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__RewindComponentsArray() { return STRUCT_OFFSET(AFPSGameModeDefault, RewindComponentsArray); }
+	FORCEINLINE static uint32 __PPO__RewindComponentsSet() { return STRUCT_OFFSET(AFPSGameModeDefault, RewindComponentsSet); } \
+	FORCEINLINE static uint32 __PPO__SavedRewindValues() { return STRUCT_OFFSET(AFPSGameModeDefault, SavedRewindValues); }
 
 
 #define fpsgame_Source_fpsgame_FPSGameModeDefault_h_13_PROLOG
