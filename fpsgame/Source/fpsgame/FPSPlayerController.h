@@ -31,6 +31,8 @@ public:
 
     virtual void ReceivedPlayer() override;
 
+    virtual void Tick(float DeltaTime) override;
+
 protected:
 
     /** Reports the current server time to clients in response
@@ -53,4 +55,5 @@ protected:
     //The actual synched server time
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
         float ServerTime = 0.0f;
+
 };

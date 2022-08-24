@@ -94,6 +94,7 @@ public:
 	UFUNCTION()
 		AActor* GetOwnerActor() const { return OwnerComponent; }
 
+	
 	TSortedMap<float, FRewindDataStruct, FDefaultAllocator, FSortedMapPredicateTimestampDescending> GetRewindTimestampsAndData() const { return RewindTimestampsAndData; }
 };
 

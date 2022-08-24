@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Engine\Classes\GameFramework\CharacterMovementComponent.h"
 #include "TimerManager.h"
+//#include "Kismet/KismetSystemLibrary.h"
 #include "DrawDebugHelpers.h"
 
 // Sets default values
@@ -157,7 +158,16 @@ void Afpscharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-
+	/*
+	if (GetLocalRole() < ROLE_Authority)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Client time = %f"), Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds());
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Server time = %f"), Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds());
+	}
+	*/
 }
 
 // Called to bind functionality to input
@@ -452,24 +462,22 @@ bool Afpscharacter::CanUncrouch()
 	//If it is we can uncrouch
 	FHitResult ResultOutHit;
 
-	FVector Start = GetCapsuleComponent()->GetComponentLocation();
+	FVector Start = GetCapsuleComponent()->GetComponentLocation() + FVector(0.0f, 0.0f, (DefaultHalfHeight-CrouchedHalfHeight));
 	//multiply by 2 as it is half height
-	FVector End = Start + (FVector(0.0f, 0.0f, 1.0f) * ((DefaultHalfHeight * 2) -  CrouchedHalfHeight));
+	FVector End = Start;// + (FVector(0.0f, 0.0f, 1.0f) * ((DefaultHalfHeight * 2) -  CrouchedHalfHeight));
 
 	FCollisionQueryParams CollisionParams;
 	//Ignore ourselves
 	CollisionParams.AddIgnoredActor(this->GetOwner());
 
-	//Draw debug line
-	if (GetLocalRole() == ROLE_Authority)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Imma be sick just now"));
-		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 5, 0, 1);
+	FCollisionShape CollisionShape = FCollisionShape::MakeCapsule(GetCapsuleComponent()->GetScaledCapsuleRadius() * 0.6f, DefaultHalfHeight);
 
-	}
+	
+	//UKismetSystemLibrary::DrawDebugCapsule(this, Start, DefaultHalfHeight, GetCapsuleComponent()->GetScaledCapsuleRadius() * 0.6f, GetCapsuleComponent()->GetComponentRotation(), FLinearColor::Green, 5.0f, 2.0f);
 
+	
 	//Performs raycast, returns true if nothing is present
-	return !GetWorld()->LineTraceSingleByChannel(ResultOutHit, Start, End, ECC_Visibility, CollisionParams);
+	return !GetWorld()->SweepSingleByChannel(ResultOutHit, Start, End, GetActorRotation().Quaternion(), ECC_Visibility, CollisionShape, CollisionParams);
 }
 
 void Afpscharacter::OnHealthUpdate()
@@ -580,7 +588,22 @@ void Afpscharacter::OnRep_ChangeWeapon()
 	}
 }
 
+FWeaponDataStruct Afpscharacter::GetCurrentlyEquippedWeaponData()
+{
+	//Replaced the use of a third vairable, CurrentlyEquippedWeaponData, to avoid copying data redundantly.
 
+	switch (EquippedGun)
+	{
+	case Equips::PRIMARY:
+		return PrimaryData;
+	
+	case Equips::SECONDARY:
+		return SecondaryData;
+
+	default:
+		return PrimaryData;
+	}
+}
 bool Afpscharacter::CollisionInteractCheck(AActor* CollidingActor)
 {
 	//Currently, there does not seem to be a need to implement collision-based picking up of guns.
@@ -874,8 +897,7 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 	EquippedGun = Equips::PRIMARY;
 	PositionAndAttachGunInTP(PrimaryData);
 
-	CurrentlyEquippedWeaponData = PrimaryData;
-
+	UpdateAmmoDisplay();
 }
 
 void Afpscharacter::ServerSwitchPrimary_Implementation()
@@ -934,9 +956,7 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	PositionAndAttachGunInTP(SecondaryData);
 	BulletClass = SecondaryData.ProjectileClass;
 	EquippedGun = Equips::SECONDARY;
-	
-	CurrentlyEquippedWeaponData = SecondaryData;
-	
+	UpdateAmmoDisplay();
 }
 
 void Afpscharacter::ServerSwitchSecondary_Implementation()
@@ -987,12 +1007,12 @@ void Afpscharacter::ClientValidateFire()
 	{
 		return;
 	}
-
+	UE_LOG(LogTemp, Warning, TEXT("ClientValidateFire"));
 	//Checking if we have ammo for firing
-	if (CurrentMagAmmo > 0)
+	if (GetCurrentlyEquippedWeaponData().MagAmmo > 0)
 	{
 		//Activate firing functions based on firing type
-		switch (CurrentlyEquippedWeaponData.WAWeaponHitDetectionType)
+		switch (GetCurrentlyEquippedWeaponData().WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
 			ClientHitscanCheckFire();
@@ -1011,19 +1031,55 @@ void Afpscharacter::ClientValidateFire()
 	}
 }
 
+void Afpscharacter::SetCurrentAmmo(int NewAmmo)
+{
+
+	//Should only be called on server, no effect if called on client.
+	if ((EquippedGun == Equips::PRIMARY && PrimaryData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.GunModel == Guns::NONE))
+	{
+		return;
+	}
+	else
+	{
+		switch (EquippedGun)
+		{
+		case Equips::PRIMARY:
+			PrimaryData.MagAmmo = FMath::Clamp(NewAmmo, 0, PrimaryData.MaxMagSize);
+			break;
+		case Equips::SECONDARY:
+			SecondaryData.MagAmmo = FMath::Clamp(NewAmmo, 0, SecondaryData.MaxMagSize);
+			break;
+		default:
+			break;
+		}
+	}
+
+	UpdateAmmoDisplay();
+}
+
+void Afpscharacter::UpdateAmmoDisplay()
+{
+	AmmoDisplay = FString();
+	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().MagAmmo);
+	AmmoDisplay.Append(TEXT("/"));
+	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().MaxMagSize);
+}
+
 void Afpscharacter::ClientHitscanCheckFire()
 {
 	//Called when we can fire. Should probably implement sounds for client to hear on this function,a s well as clientside hit images and stuff
 	//to make it feel more responsive (tho if it was a miss serverside we will get ghost markers, so maybe make this an option).
 	TArray<FHitResult> HitResults;
-
-	if (MultiRaycastInCameraDirection(HitResults, CurrentlyEquippedWeaponData.MaxRange))
+	UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
+	if (MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().MaxRange))
 	{
 		//If we score a hit this is the logic that will be played
 		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 		//Run RPC on server to ensure shot hit
 		if (clienttime)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("client time = %f"), clienttime);
+
 			ServerValidateFire(clienttime);
 
 		}
@@ -1034,20 +1090,20 @@ void Afpscharacter::ClientHitscanCheckFire()
 void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 {
 
-	
-
 	//checks if the player can actually fire with server variables
 	//If we dont have a gun equipped, return
+
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.GunModel == Guns::NONE))
 	{
 		return;
 	}
 
+	UE_LOG(LogTemp, Warning, TEXT("Server validate fire"));
 	//Checking if we have ammo for firing
-	if (CurrentMagAmmo > 0)
+	if (GetCurrentlyEquippedWeaponData().MagAmmo > 0)
 	{
 		//Activate firing functions based on firing type
-		switch (CurrentlyEquippedWeaponData.WAWeaponHitDetectionType)
+		switch (GetCurrentlyEquippedWeaponData().WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
 			ServerHitscanCheckFire(ClientFireTime);
@@ -1063,6 +1119,10 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 			break;
 		}
 
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Out of ammo!"));
 	}
 	
 }
@@ -1082,19 +1142,30 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 	7. We perform the raycast
 	8. We deal damage and perform visual effects as necessary, on all clients.
 	*/
-
+	if (GetLocalRole() < ROLE_Authority)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("invsqW"));
+	}
+	UE_LOG(LogTemp, Warning, TEXT("ServerHitscanCheckFire start"));
 	//STAGE 1
 	//First we need to get the current game state reference for ease of use later
 	AFPSGameState* CurrentGameState = Cast<AFPSGameState>(GetWorld()->GetGameState());
+	UE_LOG(LogTemp, Warning, TEXT("Server time for hitscan check = %f"), CurrentGameState->GetServerWorldTimeSeconds());
+
 	//Now we decide on latency
 	if (CurrentGameState->GetServerWorldTimeSeconds() - ClientFireTime > CurrentGameState->GetMaxAllowedLatency())
 	{
 		//For if the latency is too high, we skip rewind and check straight for firing.
+		UE_LOG(LogTemp, Warning, TEXT("Latency measured = %f"), (CurrentGameState->GetServerWorldTimeSeconds() - ClientFireTime));
+
 	}
 	else
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Latency measured = %f"), (CurrentGameState->GetServerWorldTimeSeconds() - ClientFireTime));
+
 		//Normal procedures here
 		//STAGE 2, 3
+		UE_LOG(LogTemp, Warning, TEXT("Stag 2,3"));
 		//get the interpolated transforms for all the rewind components
 		TMap<AActor*, FRewindDataStruct> ActorTransformMap;
 		ServerGetInterpolatedTransformsForRewind(ClientFireTime, ActorTransformMap);
@@ -1107,7 +1178,7 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 	}
 }
 
-void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTime, TMap<AActor*, FRewindDataStruct> OutActorTransformsToBeRewinded) const
+void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTime, TMap<AActor*, FRewindDataStruct> &OutActorTransformsToBeRewinded) const
 {
 	//first we must get the rewind component set and lerp between each one
 	TSet<URewindComponent*> RewindComponents = Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->GetRewindComponentsSet();
@@ -1115,12 +1186,14 @@ void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTim
 	FRewindDataStruct PreviousTransform;
 	float NextTimestamp;
 	FRewindDataStruct NextTransform;
-	FRewindDataStruct ResultTransform;
 
+	UE_LOG(LogTemp, Warning, TEXT("Interp"));
 	float LerpTime;
 	//We must complete the process for all the rewind components
 	for (auto& Elem : RewindComponents)
 	{
+		FRewindDataStruct ResultTransform;
+
 		//Iterating over each rewindcomponent to get its parent actor and that actor's initial transform
 		AActor* ParentActor = Elem->GetOwnerActor();
 		
@@ -1150,7 +1223,7 @@ void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTim
 		//Now is the time for lerping the values to get the interpolated pose snapshot, and transforms
 		//Normalized alpha value for lerp (e.g. if client time = 15, previous time = 10, next time = 20)
 		//then alpha would be 5/10 = 0.5 here, so we would lerp for halfway between the timestamps.
-		LerpTime = (ClientFireTime - PreviousTimestamp) / NextTimestamp - PreviousTimestamp;
+		LerpTime = (ClientFireTime - PreviousTimestamp) / (NextTimestamp - PreviousTimestamp);
 		
 		//lerping positonal vector
 		ResultTransform.SnapshotPosition = FMath::Lerp(PreviousTransform.SnapshotPosition, NextTransform.SnapshotPosition, LerpTime);
@@ -1160,14 +1233,17 @@ void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTim
 		ResultTransform.SnapshotScale = FMath::Lerp(PreviousTransform.SnapshotScale, NextTransform.SnapshotScale, LerpTime);
 		//Lerping pose should be done here, but we still need to implement.
 		//EDIT lerping pose will likely be delegated to performing blending in a blendspace at the time where we set everything to its old position to perform the hitscan
-
+		//Currently there isn't even any need to lerp pose.
 		//Finally we add the actor and data struct to the map output
 		OutActorTransformsToBeRewinded.Emplace(ParentActor, ResultTransform);
 	}
+
+	UE_LOG(LogTemp, Warning, TEXT("Rewind transforms = %d"), OutActorTransformsToBeRewinded.Num());
 }
 
 void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Final stages"));
 	//Call a gamemode function which rewinds everything
 	Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->RewindActors(ValuesToBeUsedInRewind);
 
@@ -1183,7 +1259,7 @@ void Afpscharacter::ServerPerformHitscan()
 	//Here is where we actually perform the hitscan to see if we hit anything.
 	TArray<FHitResult> HitResults;
 
-	if (MultiRaycastInCameraDirection(HitResults, CurrentlyEquippedWeaponData.MaxRange))
+	if (MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().MaxRange))
 	{
 		//If we score a hit we must look at all the hit results and create hit markers and sound fx and stuff and deal dmg
 		UE_LOG(LogTemp, Warning, TEXT("Got a hit"));

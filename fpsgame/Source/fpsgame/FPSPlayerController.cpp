@@ -50,3 +50,10 @@ void AFPSPlayerController::ReceivedPlayer()
         );
     }
 }
+
+void AFPSPlayerController::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+    //UE_LOG(LogTemp, Warning, TEXT("Ticking = %f"), ServerTime);
+    ServerTime += DeltaTime;
+}

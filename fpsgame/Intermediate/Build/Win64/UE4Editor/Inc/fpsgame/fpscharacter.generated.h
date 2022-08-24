@@ -34,6 +34,8 @@ class AActor; struct FRewindDataStruct;
 	virtual void ServerInteract_Implementation(); \
 	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
  \
+	DECLARE_FUNCTION(execGetCurrentAmmo); \
+	DECLARE_FUNCTION(execSetCurrentAmmo); \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
 	DECLARE_FUNCTION(execGetCurrentStamina); \
@@ -62,6 +64,8 @@ class AActor; struct FRewindDataStruct;
 	DECLARE_FUNCTION(execOnRep_CurrentlyCrouching); \
 	DECLARE_FUNCTION(execCanUncrouch); \
 	DECLARE_FUNCTION(execServerStartJump); \
+	DECLARE_FUNCTION(execUpdateAmmoDisplay); \
+	DECLARE_FUNCTION(execGetCurrentlyEquippedWeaponData); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
@@ -102,6 +106,8 @@ class AActor; struct FRewindDataStruct;
 	virtual void ServerInteract_Implementation(); \
 	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
  \
+	DECLARE_FUNCTION(execGetCurrentAmmo); \
+	DECLARE_FUNCTION(execSetCurrentAmmo); \
 	DECLARE_FUNCTION(execLoseStamina); \
 	DECLARE_FUNCTION(execSetCurrentStamina); \
 	DECLARE_FUNCTION(execGetCurrentStamina); \
@@ -130,6 +136,8 @@ class AActor; struct FRewindDataStruct;
 	DECLARE_FUNCTION(execOnRep_CurrentlyCrouching); \
 	DECLARE_FUNCTION(execCanUncrouch); \
 	DECLARE_FUNCTION(execServerStartJump); \
+	DECLARE_FUNCTION(execUpdateAmmoDisplay); \
+	DECLARE_FUNCTION(execGetCurrentlyEquippedWeaponData); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
@@ -275,9 +283,7 @@ public: \
 	FORCEINLINE static uint32 __PPO__lognum() { return STRUCT_OFFSET(Afpscharacter, lognum); } \
 	FORCEINLINE static uint32 __PPO__PrimaryData() { return STRUCT_OFFSET(Afpscharacter, PrimaryData); } \
 	FORCEINLINE static uint32 __PPO__SecondaryData() { return STRUCT_OFFSET(Afpscharacter, SecondaryData); } \
-	FORCEINLINE static uint32 __PPO__CurrentlyEquippedWeaponData() { return STRUCT_OFFSET(Afpscharacter, CurrentlyEquippedWeaponData); } \
-	FORCEINLINE static uint32 __PPO__CurrentMaxMagSize() { return STRUCT_OFFSET(Afpscharacter, CurrentMaxMagSize); } \
-	FORCEINLINE static uint32 __PPO__CurrentMagAmmo() { return STRUCT_OFFSET(Afpscharacter, CurrentMagAmmo); } \
+	FORCEINLINE static uint32 __PPO__AmmoDisplay() { return STRUCT_OFFSET(Afpscharacter, AmmoDisplay); } \
 	FORCEINLINE static uint32 __PPO__CurrentlyCrouching() { return STRUCT_OFFSET(Afpscharacter, CurrentlyCrouching); } \
 	FORCEINLINE static uint32 __PPO__JustLanded() { return STRUCT_OFFSET(Afpscharacter, JustLanded); } \
 	FORCEINLINE static uint32 __PPO__DefaultHalfHeight() { return STRUCT_OFFSET(Afpscharacter, DefaultHalfHeight); } \

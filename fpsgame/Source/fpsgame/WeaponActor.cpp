@@ -30,6 +30,7 @@ AWeaponActor::AWeaponActor()
 	//Creating interaction component
 	InteractionComponent = CreateDefaultSubobject<UInteractableObjectComponent>(TEXT("InteractionComponent"));
 	
+
 	
 }
 
@@ -37,7 +38,8 @@ AWeaponActor::AWeaponActor()
 void AWeaponActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	//placeholder to set mag ammo to max ammo, will need changing later.
+	WeaponData.MagAmmo = WeaponData.MaxMagSize;
 	
 }
 

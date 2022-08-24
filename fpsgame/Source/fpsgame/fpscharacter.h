@@ -65,7 +65,7 @@ protected:
 
 	//Used to get the interpolated transforms for all rewind components, for the specific timestamp
 	UFUNCTION()
-		void ServerGetInterpolatedTransformsForRewind(float ClientFireTime, TMap<AActor*, FRewindDataStruct> OutActorTransformsToBeRewinded) const;
+		void ServerGetInterpolatedTransformsForRewind(float ClientFireTime, TMap<AActor*, FRewindDataStruct> &OutActorTransformsToBeRewinded) const;
 
 	//rewinds all the actors to the previous point, and then performs the hitscan, and then returns them back
 	UFUNCTION()
@@ -199,16 +199,15 @@ protected:
 	UPROPERTY(Replicated)
 		FWeaponDataStruct SecondaryData;
 
-	UPROPERTY()
-		FWeaponDataStruct CurrentlyEquippedWeaponData;
+	UFUNCTION(BlueprintCallable)
+		FWeaponDataStruct GetCurrentlyEquippedWeaponData();
 
-	//Ripped from currently equipped weapon data
-	UPROPERTY()
-		int CurrentMaxMagSize;
-	
-	//Ripped intiially from currently equipped weapon data, and we change it rather than changing the weapon data during events like firing, and only change the weapon data upon dropping the weapon to reflect mag
-	UPROPERTY()
-		int CurrentMagAmmo;
+	UFUNCTION()
+		void UpdateAmmoDisplay();
+
+	//Used to display the ammo of the player, updated whenever ammo is changed.
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		FString AmmoDisplay;
 
 	//Whether player is currently crouching
 	UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing = OnRep_CurrentlyCrouching)
@@ -474,6 +473,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_ChangeWeapon)
 		Equips EquippedGun;
 
-	
+	//SHOULD BE USED WHEN NEEDING TO CHANGE CURRENT AMMO, AS IT CHANGES DISPLAY AMMO TOO
+	UFUNCTION()
+		void SetCurrentAmmo(int NewAmmo);
+
+	UFUNCTION()
+		int GetCurrentAmmo() { return GetCurrentlyEquippedWeaponData().MagAmmo; }
 
 };

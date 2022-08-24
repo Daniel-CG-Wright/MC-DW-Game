@@ -22,10 +22,25 @@ void URewindComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	OwnerComponent = GetOwner();
-	AddToGameMode();
-	CachedMaxPing = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetMaxAllowedLatency();
+	//THIS BIT COULD BE CAUSE OF ERROR (or see belwo)
+	if (GetOwnerActor()->GetLocalRole() != ROLE_Authority)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Destroying..."));
+		DestroyComponent();
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Setting up..."));
+
+		
+		OwnerComponent = GetOwner();
+		AddToGameMode();
+		CachedMaxPing = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetMaxAllowedLatency();
+	}
 	
+	/*OwnerComponent = GetOwner();
+	AddToGameMode();
+	CachedMaxPing = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetMaxAllowedLatency();*/
 }
 
 void URewindComponent::GetCurrentTickPoseSnapshot(FPoseSnapshot& OutSnapshot) const
@@ -43,7 +58,12 @@ void URewindComponent::AddToGameMode()
 {
 	//Called on beginplay to record this rewind component
 	
-	Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->AddRewindComponent(this);
+	// OR IT COULD BE THIS BIT
+	if (GetOwner()->GetLocalRole() == ROLE_Authority)
+	{
+		Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->AddRewindComponent(this);
+
+	}
 
 }
 // Called every frame

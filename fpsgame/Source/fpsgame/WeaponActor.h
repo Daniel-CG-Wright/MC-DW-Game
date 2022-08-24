@@ -98,7 +98,7 @@ struct FWeaponDataStruct
 		int MaxMagSize;
 
 	//Ammo in the mag currently
-	UPROPERTY(Transient)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		int MagAmmo;
 
 	//Speed of projectile rounds fired

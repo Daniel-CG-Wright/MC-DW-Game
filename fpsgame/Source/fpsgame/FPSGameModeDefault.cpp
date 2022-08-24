@@ -26,9 +26,11 @@ void AFPSGameModeDefault::RemoveRewindComponent(URewindComponent* const RewindCo
 
 void AFPSGameModeDefault::RewindActors(TMap<AActor*, FRewindDataStruct> const ValuesToUseInRewind)
 {
+    UE_LOG(LogTemp, Warning, TEXT("Rewinding"));
     //First gotta clear the saved rewind values
     SavedRewindValues.Reset();
     FRewindDataStruct CurrentTransformData;
+    UE_LOG(LogTemp, Warning, TEXT("Rewind length = %d"), ValuesToUseInRewind.Num())
 
     //We iterate through all the entries to perform the rewind on each actor.
     for (auto& Elem : ValuesToUseInRewind)
@@ -51,6 +53,7 @@ void AFPSGameModeDefault::RewindActors(TMap<AActor*, FRewindDataStruct> const Va
 
 void AFPSGameModeDefault::ResetActorPositionsToBefore()
 {
+    UE_LOG(LogTemp, Warning, TEXT("Resetting"));
     //Now we reset all the actor positions
     for (auto& Elem : SavedRewindValues)
     {

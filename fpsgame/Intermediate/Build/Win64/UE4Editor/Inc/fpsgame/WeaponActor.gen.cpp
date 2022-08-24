@@ -540,12 +540,13 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponDataStruct
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MaxMagSize = { "MaxMagSize", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponDataStruct, MaxMagSize), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MaxMagSize_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MaxMagSize_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MagAmmo_MetaData[] = {
+		{ "Category", "WeaponDataStruct" },
 		{ "Comment", "//Ammo in the mag currently\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Ammo in the mag currently" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MagAmmo = { "MagAmmo", nullptr, (EPropertyFlags)0x0010000000002000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponDataStruct, MagAmmo), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MagAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MagAmmo_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MagAmmo = { "MagAmmo", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponDataStruct, MagAmmo), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MagAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_MagAmmo_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponDataStruct_Statics::NewProp_ProjectileSpeed_MetaData[] = {
 		{ "Category", "Weapon stats" },
@@ -724,7 +725,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponDataStruct
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponDataStruct_Hash() { return 3178826775U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponDataStruct_Hash() { return 2965925550U; }
 	DEFINE_FUNCTION(AWeaponActor::execSetWeaponDataStruct)
 	{
 		P_GET_STRUCT(FWeaponDataStruct,Z_Param_NewWeaponDataStruct);
