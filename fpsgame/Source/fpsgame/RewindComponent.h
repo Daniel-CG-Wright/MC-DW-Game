@@ -56,6 +56,10 @@ private:
 	float ThisTickServerTime;
 	//stores the cached max ping from AFPSGameState->GetMaxAllowedLatency so we only have to access it once.
 	float CachedMaxPing;
+
+	//Stores whether or not the component should destroy itself (e.g. bad actor owner) on the next tick
+	bool DestroyOnNextTick = false;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

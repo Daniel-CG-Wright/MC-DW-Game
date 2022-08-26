@@ -1,0 +1,2200 @@
+﻿Log file open, 08/26/22 16:29:04
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: fpsgame
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.228913
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogInit: Display: Loading text-based GConfig....
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin PixWinPlugin
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin GameplayCameras
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin OodleData
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin OodleNetwork
+LogPluginManager: Mounting plugin TextureFormatOodle
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin OpenImageDenoise
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin OpenXR
+LogPluginManager: Mounting plugin OpenXREyeTracker
+LogPluginManager: Mounting plugin OpenXRHandTracking
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+PixWinPlugin: PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogOculusPluginWrapper: OculusPlugin initialized successfully
+LogHMD: Failed initializing OVRPlugin 1.59.0
+LogInit: Build: ++UE4+Release-4.27-CL-18319896
+LogInit: Engine Version: 4.27.2-18319896+++UE4+Release-4.27
+LogInit: Compatible Engine Version: 4.27.0-17155196+++UE4+Release-4.27
+LogInit: Net CL: 17155196
+LogInit: OS: Windows 10 (Release 2009) (), CPU: AMD Ryzen 5 3600X 6-Core Processor             , GPU: AMD Radeon RX 5700 XT
+LogInit: Compiled (64-bit): Nov 30 2021 07:12:08
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.27
+LogInit: Command Line:  127.0.0.1:17777 -game -PIEVIACONSOLE -Multiprocess "GameUserSettingsINI=C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/PIEGameUserSettings1.ini" -MultiprocessSaveConfig -forcepassthrough -messaging -SessionName="Play in Standalone Game" -PktLagMin=200 -PktLagMax=200 -PktLoss=0 -PktIncomingLagMin=200 -PktIncomingLagMax=200 -PktIncomingLoss=0 -windowed -WinX=0 -WinY=24 SAVEWINPOS=1 -ResX=640 -ResY=480
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 14
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 45
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 47
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.08.26-15.29.04:894][  0]LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+[2022.08.26-15.29.04:894][  0]LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.08.26-15.29.04:894][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.DisableVertexFog:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxMobileCascades:2]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.MobileMSAA:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.AllowDitheredLODTransition:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.AllowSoftwareOcclusion:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.VirtualTextures:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DiscardUnusedQuality:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.AllowOcclusionQueries:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForLights:0.030000]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForDepthPrepass:0.030000]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForCSMDepth:0.010000]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.PrecomputedVisibilityWarning:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.TextureStreaming:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[Compat.UseDXT5NormalMaps:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VirtualTextures:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VT.EnableAutoImport:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VirtualTexturedLightmaps:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VT.TileSize:128]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VT.TileBorderSize:4]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.vt.FeedbackFactor:16]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VT.EnableCompressZlib:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VT.EnableCompressCrunch:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.ClearCoatNormal:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.ReflectionCaptureResolution:128]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.ReflectionCaptureCompression:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.ReflectionEnvironmentLightmapMixBasedOnRoughness:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.ForwardShading:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VertexFoggingForOpaque:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.AllowStaticLighting:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.NormalMapsForStaticLighting:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.GenerateMeshDistanceFields:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.EightBit:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.GenerateLandscapeGIData:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.Compress:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.TessellationAdaptivePixelsPerTriangle:48.000000]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SeparateTranslucency:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.TranslucentSortPolicy:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[vr.VRS.HMDFixedFoveationLevel:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.CustomDepth:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.CustomDepthTemporalAAJitter:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.PostProcessing.PropagateAlpha:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.Bloom:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusion:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusionStaticFraction:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Method:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Bias:1.000000]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.UsePreExposure:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.EyeAdaptation.EditorOnly:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.MotionBlur:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.LensFlare:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.TemporalAA.Upsampling:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SSGI.Enable:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.AntiAliasing:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultFeature.LightUnits:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DefaultBackBufferPixelFormat:4]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Shadow.UnbuiltPreviewInGame:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.StencilForLODDither:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.EarlyZPass:3]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.EarlyZPassOnlyMaterialMasking:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.DBuffer:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.ClearSceneMethod:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.BasePassOutputsVelocity:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.VertexDeformationOutputsVelocity:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SelectiveBasePassOutputs:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeX:1024]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeY:1024]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.AllowGlobalClipPlane:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.GBufferFormat:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.MorphTarget.Mode:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[vr.InstancedStereo:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.MobileHDR:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[vr.MobileMultiView:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.UseHWsRGBEncoding:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[vr.RoundRobinOcclusion:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[vr.ODSCapture:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.MeshStreaming:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.WireframeCullThreshold:5.000000]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.RayTracing:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.RayTracing.UseTextureLod:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SupportStationarySkylight:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SupportLowQualityLightmaps:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SupportPointLightWholeSceneShadows:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SupportAtmosphericFog:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphere:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphereAffectsHeightFog:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SkinCache.CompileShaders:0]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SkinCache.DefaultBehavior:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.SkinCache.SceneMemoryLimitInMB:128.000000]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.EnableStaticAndCSMShadowReceivers:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableLightCSMShaderCulling:1]]
+[2022.08.26-15.29.04:895][  0]LogConfig: Setting CVar [[r.Mobile.AllowDistanceFieldShadows:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.Mobile.AllowMovableDirectionalLights:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.MobileNumDynamicPointLights:4]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.MobileDynamicPointLightsUseStaticBranch:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlights:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlightsShadow:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.GPUSkin.Support16BitBoneIndex:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.GPUSkin.Limit2BoneInfluences:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.SupportDepthOnlyIndexBuffers:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.SupportReversedIndexBuffers:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.LightPropagationVolume:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.Mobile.AmbientOcclusion:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluences:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluencesThreshold:8]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.Mobile.PlanarReflectionMode:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[r.Mobile.SupportsGen4TAA:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.08.26-15.29.04:896][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2022.08.26-15.29.04:896][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.08.26-15.29.04:896][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.08.26-15.29.04:907][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.08.26-15.29.04:907][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.08.26-15.29.04:908][  0]LogInit: Selected Device Profile: [Windows]
+[2022.08.26-15.29.04:908][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2022.08.26-15.29.04:908][  0]LogHAL: Display: Platform has ~ 16 GB [17128247296 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2022.08.26-15.29.04:908][  0]LogInit: Going up to parent DeviceProfile []
+[2022.08.26-15.29.04:908][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.08.26-15.29.04:908][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:908][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.08.26-15.29.04:909][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2022.08.26-15.29.04:910][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2022.08.26-15.29.04:910][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2022.08.26-15.29.04:910][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2022.08.26-15.29.04:910][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.08.26-15.29.04:910][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Editor.ini]
+[2022.08.26-15.29.04:910][  0]LogInit: Computer: DESKTOP-QG36584
+[2022.08.26-15.29.04:910][  0]LogInit: User: danie
+[2022.08.26-15.29.04:910][  0]LogInit: CPU Page size=4096, Cores=6
+[2022.08.26-15.29.04:910][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2022.08.26-15.29.04:910][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2022.08.26-15.29.04:910][  0]LogMemory: Platform Memory Stats for Windows
+[2022.08.26-15.29.04:910][  0]LogMemory: Process Physical Memory: 148.84 MB used, 148.84 MB peak
+[2022.08.26-15.29.04:910][  0]LogMemory: Process Virtual Memory: 127.96 MB used, 127.96 MB peak
+[2022.08.26-15.29.04:910][  0]LogMemory: Physical Memory: 9058.95 MB used,  7275.82 MB free, 16334.77 MB total
+[2022.08.26-15.29.04:910][  0]LogMemory: Virtual Memory: 134214000.00 MB used,  3725.71 MB free, 134217728.00 MB total
+[2022.08.26-15.29.04:914][  0]LogWindows: WindowsPlatformFeatures enabled
+[2022.08.26-15.29.04:932][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2022.08.26-15.29.04:932][  0]LogInit: Using OS detected language (en-US).
+[2022.08.26-15.29.04:932][  0]LogInit: Using OS detected locale (en-GB).
+[2022.08.26-15.29.04:935][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2022.08.26-15.29.05:114][  0]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2022.08.26-15.29.05:136][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2022.08.26-15.29.05:136][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2022.08.26-15.29.05:155][  0]LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+[2022.08.26-15.29.05:157][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2022.08.26-15.29.05:157][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2022.08.26-15.29.05:157][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2022.08.26-15.29.05:157][  0]LogD3D11RHI: D3D11 adapters:
+[2022.08.26-15.29.05:191][  0]LogD3D11RHI:    0. 'AMD Radeon RX 5700 XT' (Feature Level 11_0)
+[2022.08.26-15.29.05:191][  0]LogD3D11RHI:       8151/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x1002
+[2022.08.26-15.29.05:192][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2022.08.26-15.29.05:192][  0]LogD3D11RHI:       0/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI: Chosen D3D11 Adapter:
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     Description : AMD Radeon RX 5700 XT
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     VendorId    : 1002
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     DeviceId    : 731f
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     SubSysId    : 23131458
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     Revision    : 00c1
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     DedicatedVideoMemory : 8547471360 bytes
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     DedicatedSystemMemory : 0 bytes
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     SharedSystemMemory : 8564123648 bytes
+[2022.08.26-15.29.05:193][  0]LogD3D11RHI:     AdapterLuid : 0 53089
+[2022.08.26-15.29.05:199][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2022.08.26-15.29.05:199][  0]LogD3D11RHI:     GPU DeviceId: 0x731f (for the marketing name, search the web for "GPU Device Id")
+[2022.08.26-15.29.05:199][  0]LogWindows: EnumDisplayDevices:
+[2022.08.26-15.29.05:199][  0]LogWindows:    0. 'AMD Radeon RX 5700 XT' (P:1 D:1)
+[2022.08.26-15.29.05:199][  0]LogWindows:    1. 'AMD Radeon RX 5700 XT' (P:0 D:1)
+[2022.08.26-15.29.05:199][  0]LogWindows:    2. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.08.26-15.29.05:200][  0]LogWindows:    3. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.08.26-15.29.05:200][  0]LogWindows:    4. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.08.26-15.29.05:200][  0]LogWindows:    5. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.08.26-15.29.05:200][  0]LogWindows:    6. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.08.26-15.29.05:200][  0]LogWindows: DebugString: FoundDriverCount:7 
+[2022.08.26-15.29.05:200][  0]LogD3D11RHI:     Adapter Name: AMD Radeon RX 5700 XT
+[2022.08.26-15.29.05:201][  0]LogD3D11RHI:   Driver Version: AMD Software: Adrenalin Edition 22.5.1 (internal:30.0.15021.11005, unified:30.0.15021.11005)
+[2022.08.26-15.29.05:201][  0]LogD3D11RHI:      Driver Date: 4-28-2022
+[2022.08.26-15.29.05:201][  0]LogRHI: Texture pool is 5168 MB (70% of 7383 MB)
+[2022.08.26-15.29.05:226][  0]LogD3D11RHI: Creating D3DDevice with AMD AGS, using adapter:
+[2022.08.26-15.29.05:226][  0]LogD3D11RHI:     Description : AMD Radeon RX 5700 XT
+[2022.08.26-15.29.05:226][  0]LogD3D11RHI:     VendorId    : 1002
+[2022.08.26-15.29.05:227][  0]LogD3D11RHI:     DeviceId    : 731f
+[2022.08.26-15.29.05:227][  0]LogD3D11RHI:     SubSysId    : 23131458
+[2022.08.26-15.29.05:227][  0]LogD3D11RHI:     Revision    : 00c1
+[2022.08.26-15.29.05:227][  0]LogD3D11RHI:     DedicatedVideoMemory : 8547471360 bytes
+[2022.08.26-15.29.05:227][  0]LogD3D11RHI:     DedicatedSystemMemory : 0 bytes
+[2022.08.26-15.29.05:227][  0]LogD3D11RHI:     SharedSystemMemory : 8564123648 bytes
+[2022.08.26-15.29.05:227][  0]LogD3D11RHI:     AdapterLuid : 0 53089
+[2022.08.26-15.29.05:256][  0]LogD3D11RHI: Created device via AGS, feature level 11_0, supported extensions 1fffffbf.
+[2022.08.26-15.29.05:256][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2022.08.26-15.29.05:256][  0]LogD3D11RHI: Async texture creation enabled
+[2022.08.26-15.29.05:256][  0]LogD3D11RHI: Array index from any shader is supported
+[2022.08.26-15.29.05:270][  0]LogD3D11RHI: GPU Timing Frequency: 100.000000 (Debug: 2 1)
+[2022.08.26-15.29.05:494][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2022.08.26-15.29.05:499][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2022.08.26-15.29.05:503][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2022.08.26-15.29.05:507][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2022.08.26-15.29.05:507][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2022.08.26-15.29.05:513][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2022.08.26-15.29.05:539][  0]LogTextureFormatOodle: Display: Oodle Texture 2.9.0 init RDO Off
+[2022.08.26-15.29.05:562][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2022.08.26-15.29.05:562][  0]LogShaderCompilers: Guid format shader working directory is -27 characters bigger than the processId version (../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Intermediate/Shaders/WorkingDirectory/14624/).
+[2022.08.26-15.29.05:563][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/danie/AppData/Local/Temp/UnrealShaderWorkingDir/2DCED5D84C0CE7595812E3A852509740/'.
+[2022.08.26-15.29.05:563][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2022.08.26-15.29.05:563][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2022.08.26-15.29.05:563][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2022.08.26-15.29.06:214][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2022.08.26-15.29.06:262][  0]LogDerivedDataCache: Loaded boot cache 0.05s 95MB C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2022.08.26-15.29.06:262][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc
+[2022.08.26-15.29.06:262][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2022.08.26-15.29.06:262][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2022.08.26-15.29.06:262][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.08.26-15.29.06:262][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2022.08.26-15.29.06:280][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2022.08.26-15.29.06:280][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.08.26-15.29.06:280][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2022.08.26-15.29.06:290][  0]LogDerivedDataCache: Speed tests for C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2022.08.26-15.29.06:290][  0]LogDerivedDataCache: Display: Performance to C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.03ms. RandomReadSpeed=360.34MBs, RandomWriteSpeed=145.05MBs. Assigned SpeedClass 'Local'
+[2022.08.26-15.29.06:290][  0]LogDerivedDataCache: Using Local data cache path C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2022.08.26-15.29.06:290][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2022.08.26-15.29.06:291][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2022.08.26-15.29.06:322][  0]LogSlate: Using FreeType 2.10.0
+[2022.08.26-15.29.06:323][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2022.08.26-15.29.06:398][  0]LogInit: Using OS detected language (en-US).
+[2022.08.26-15.29.06:398][  0]LogInit: Using OS detected locale (en-GB).
+[2022.08.26-15.29.06:399][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the language.
+[2022.08.26-15.29.06:399][  0]LogTextLocalizationManager: No localization for 'en-GB' exists, so 'en' will be used for the locale.
+[2022.08.26-15.29.06:399][  0]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2022.08.26-15.29.06:399][  0]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2022.08.26-15.29.06:402][  0]LogTextLocalizationManager: Compacting localization data took   0.00ms
+[2022.08.26-15.29.06:402][  0]LogAssetRegistry: FAssetRegistry took 0.0019 seconds to start up
+[2022.08.26-15.29.06:549][  0]LogPackageLocalizationCache: Processed 27 localized package path(s) for 1 prioritized culture(s) in 0.000983 seconds
+[2022.08.26-15.29.06:614][  0]LogInit: Selected Device Profile: [Windows]
+[2022.08.26-15.29.06:614][  0]LogInit: Active device profile: [000002014B1E2E00][0000020145429800 49] Windows
+[2022.08.26-15.29.06:614][  0]LogInit: Profiles: [000002014B1E2E00][0000020145429800 49] Windows, [000002014B182A00][000002014542D940 49] WindowsNoEditor, [000002014B1E1100][00000201445B5A80 49] WindowsServer, [000002014B1E1800][00000201445BDC00 49] WindowsClient, [000002014B180E00][00000201445C0200 49] IOS, [000002014B183D00][00000201445C4380 49] iPadAir, [000002014B17B100][00000201445C8500 49] iPadAir2, [000002014B120800][000002014535A7C0 49] IPadPro, [000002014B120900][0000020145356800 49] iPadAir3, [000002014B182600][000002014535E980 49] iPadAir4, [000002014B121500][0000020145362B00 49] iPadMini2, [000002014B183E00][0000020145366C80 49] iPadMini3, [000002014B123000][000002014536AE00 49] iPadMini4, [000002014B181400][000002014536EF80 49] iPadMini5, [000002014B1E1700][0000020145377240 49] iPhone6, [000002014B113F00][0000020145373280 49] iPodTouch6, [000002014B179700][000002014537F540 49] iPhone7, [000002014B179600][000002014537B580 49] iPodTouch7, [000002014B122A00][0000020145383700 49] iPhone5S, [000002014B17A900][0000020145387880 49] iPhone6Plus, [000002014B122700][00000201445B99C0 49] iPhone6S, [000002014B17AB00][000002014538BB00 49] iPhone6SPlus, [000002014B17AC00][000002014538E0C0 49] iPhone7Plus, [000002014B110C00][0000020145396240 49] iPhoneSE, [000002014B179400][000002014539A3C0 49] iPhone8, [000002014B112300][000002014539E540 49] iPhone8Plus, [000002014B17B300][000002014A4026C0 49] iPhoneX, [000002014B112100][000002014A406840 49] iPhoneXS, [000002014B17B400][000002014A40A9C0 49] iPhoneXSMax, [000002014B112600][000002014A40EB40 49] iPhoneXR, [000002014B121100][000002014A412CC0 49] iPhone11, [000002014B111600][000002014A416E40 49] iPhone11Pro, [000002014B120F00][000002014A41AFC0 49] iPhone11ProMax, [000002014B110B00][000002014A41F140 49] iPhoneSE2, [000002014B121B00][000002014A4232C0 49] iPhone12Mini, [000002014B112F00][000002014A427440 49] iPhone12, [000002014B120D00][000002014A42B5C0 49] iPhone12Pro, [000002014B111000][000002014A42F740 49] iPhone12ProMax, [000002014B121700][000002014A4338C0 49] iPadPro105, [000002014B113600][000002014A437A40 49] iPadPro129, [000002014B120100][0000020145393B80 49] iPadPro97, [000002014B113100][000002014A43A140 49] iPadPro2_129, [000002014B122000][000002014A43E280 49] iPad5, [000002014B110800][000002014A4423C0 49] iPad6, [000002014B121200][000002014A44A540 49] iPad7, [000002014B112B00][000002014A44E6C0 49] iPad8, [000002014B122600][000002014A452840 49] iPadPro11, [000002014B111900][000002014A4569C0 49] iPadPro2_11, [000002014B122200][000002014A45AB40 49] iPadPro3_129, [000002014B110300][0000020144400CC0 49] iPadPro4_129, [000002014B120500][0000020144404E40 49] AppleTV, [000002014B112900][0000020144408FC0 49] AppleTV4K, [000002014B123F00][000002014440D140 49] TVOS, [000002014B110600][00000201444112C0 49] Mac, [000002014B123D00][0000020144415440 49] MacClient, [000002014B113000][00000201444195C0 49] MacNoEditor, [000002014B121800][000002014441D740 49] MacServer, [000002014B111E00][00000201444218C0 49] Linux, [000002014B120C00][0000020144425A40 49] LinuxAArch64, [000002014B110D00][0000020144429BC0 49] LinuxNoEditor, [000002014B122B00][000002014A446180 49] LinuxAArch64NoEditor, [000002014B113400][000002014442C2C0 49] LinuxClient, [000002014B120700][0000020144430400 49] LinuxAArch64Client, [000002014B110F00][0000020144434540 49] LinuxServer, [000002014B123500][000002014443C6C0 49] LinuxAArch64Server, [000002014B112500][0000020144440840 49] Android, [000002014B121000][00000201444449C0 49] Android_Low, [000002014B111500][0000020144448B40 49] Android_Mid, [000002014B120B00][000002014444CCC0 49] Android_High, [000002014B112700][0000020144450E40 49] Android_Default, [000002014B120200][0000020144454FC0 49] Android_Adreno4xx, [000002014B113B00][0000020144459140 49] Android_Adreno5xx_Low, [000002014B120A00][000002014445D2C0 49] Android_Adreno5xx, [000002014B111100][0000020144461440 49] Android_Adreno6xx, [000002014B121600][00000201444655C0 49] Android_Adreno6xx_Vulkan, [000002014B112800][0000020144469740 49] Android_Mali_T6xx, [000002014B123200][000002014446D8C0 49] Android_Mali_T7xx, [000002014B178D00][0000020144471A40 49] Android_Mali_T8xx, [000002014B1E2F00][0000020144475BC0 49] Android_Mali_G71, [000002014B17B800][00000201444781C0 49] Android_Mali_G72, [000002014B1E1900][000002014447C340 49] Android_Mali_G72_Vulkan, [000002014B17B600][0000020144438480 49] Android_Mali_G76, [000002014B1E0700][00000201444805C0 49] Android_Mali_G76_Vulkan, [000002014B17BE00][0000020144484700 49] Android_Mali_G77, [000002014B1E1A00][000002014448C880 49] Android_Mali_G77_Vulkan, [000002014B179300][0000020144490A00 49] Android_Mali_G78, [000002014B1E2900][0000020144494B80 49] Android_Mali_G78_Vulkan, [000002014B17A500][0000020144498D00 49] Android_Mali_G710, [000002014B1E0800][000002014449CE80 49] Android_Mali_G710_Vulkan, [000002014B17BA00][00000201444A1000 49] Android_Vulkan_SM5, [000002014B1E3500][00000201444A5180 49] Android_PowerVR_G6xxx, [000002014B17A400][00000201444A9300 49] Android_PowerVR_GT7xxx, [000002014B1E2100][00000201444AD480 49] Android_PowerVR_GE8xxx, [000002014B179C00][00000201444B1600 49] Android_PowerVR_GM9xxx, [000002014B1E0D00][00000201444B5780 49] Android_PowerVR_GM9xxx_Vulkan, [000002014B17AD00][00000201444B9900 49] Android_TegraK1, [000002014B1E0F00][00000201444BDA80 49] Android_Unknown_Vulkan, [000002014B17B200][00000201444C1C00 49] Lumin, [000002014B1E1200][00000201444C4200 49] Lumin_Desktop, [000002014B112D00][00000201444C8380 49] HoloLens, 
+[2022.08.26-15.29.06:647][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2022.08.26-15.29.06:647][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2022.08.26-15.29.06:647][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2022.08.26-15.29.06:647][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2022.08.26-15.29.06:647][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2022.08.26-15.29.06:735][  0]LogNetVersion: fpsgame 1.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 3215450660)
+[2022.08.26-15.29.06:935][  0]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/DaylightAmbientCubemap.DaylightAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2022.08.26-15.29.06:979][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2022.08.26-15.29.07:070][  0]LogMoviePlayer: Initializing movie player
+[2022.08.26-15.29.07:169][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: 418A1BEB4EBA6CC94532B4959AEE79FA | Instance: CE7A93514EB9FF4F8302398E0F208161 (DESKTOP-QG36584-14624).
+[2022.08.26-15.29.07:187][  0]LogCollectionManager: Loaded 0 collections in 0.001602 seconds
+[2022.08.26-15.29.07:189][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Collections/' took 0.00s
+[2022.08.26-15.29.07:189][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Developers/danie/Collections/' took 0.00s
+[2022.08.26-15.29.07:189][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Collections/' took 0.00s
+[2022.08.26-15.29.07:189][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000002 seconds (updated 0 objects)
+[2022.08.26-15.29.07:205][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2022.08.26-15.29.07:272][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2022.08.26-15.29.07:294][  0]LogPython: Using Python 3.7.7
+[2022.08.26-15.29.07:736][  0]SourceControl: Source control is disabled
+[2022.08.26-15.29.07:736][  0]SourceControl: Source control is disabled
+[2022.08.26-15.29.07:739][  0]SourceControl: Source control is disabled
+[2022.08.26-15.29.07:743][  0]LogUProjectInfo: Found projects:
+[2022.08.26-15.29.07:779][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2022.08.26-15.29.07:792][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.08.26-15.29.07:792][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.08.26-15.29.07:875][  0]LogOpenImageDenoise: OIDN starting up
+[2022.08.26-15.29.07:939][  0]LogOcInput: OculusInput pre-init called
+[2022.08.26-15.29.07:946][  0]LogUObjectArray: 22496 objects as part of root set at end of initial load.
+[2022.08.26-15.29.07:946][  0]LogUObjectAllocator: 6116672 out of 0 bytes used by permanent object pool.
+[2022.08.26-15.29.07:946][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2022.08.26-15.29.07:988][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotPosition is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotRotation is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotScale is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: FloatProperty FWeaponDataStruct::MaxRange is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: FloatProperty FWeaponDataStruct::FireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: IntProperty FWeaponDataStruct::CartridgeBullets is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: IntProperty FWeaponDataStruct::BurstNumber is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: IntProperty FWeaponDataStruct::MaxMagSize is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: IntProperty FWeaponDataStruct::MagAmmo is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: FloatProperty FWeaponDataStruct::ProjectileSpeed is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: EnumProperty FWeaponDataStruct::WAWeaponType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:988][  0]LogClass: Display: EnumProperty FWeaponDataStruct::WAWeaponFireType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: EnumProperty FWeaponDataStruct::WAWeaponHitDetectionType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Warning: ObjectProperty FWeaponDataStruct::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: EnumProperty FWeaponDataStruct::TypeOfEquip is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: EnumProperty FWeaponDataStruct::GunModel is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: StructProperty FWeaponDataStruct::BasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: StructProperty FWeaponDataStruct::BaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: StructProperty FWeaponDataStruct::BaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: StructProperty FWeaponDataStruct::TPBaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: StructProperty FWeaponDataStruct::TPBaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: StructProperty FWeaponDataStruct::TPBasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogClass: Display: 22 Uninitialized script struct members found including 1 object properties
+[2022.08.26-15.29.07:989][  0]LogAutomationTest: Warning: ObjectProperty FWeaponDataStruct::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.08.26-15.29.07:989][  0]LogEngine: Initializing Engine...
+[2022.08.26-15.29.07:992][  0]LogHMD: Failed to enumerate extensions. Please check that you have a valid OpenXR runtime installed.
+[2022.08.26-15.29.07:992][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2022.08.26-15.29.07:992][  0]LogMagicLeap: Warning: VR disabled because ZI is not enabled.  To enable, in the editor, Edit -> Project Settings -> Plugins -> Magic Leap Plugin -> Enable Zero Iteration
+[2022.08.26-15.29.07:993][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2022.08.26-15.29.08:065][  0]LogInit: Initializing FReadOnlyCVARCache
+[2022.08.26-15.29.08:065][  0]LogAudio: Display: Initializing Audio Device Manager...
+[2022.08.26-15.29.08:068][  0]LogAudio: Display: Loading Default Audio Settings Objects...
+[2022.08.26-15.29.08:068][  0]LogAudio: Display: No default SoundConcurrencyObject specified (or failed to load).
+[2022.08.26-15.29.08:068][  0]LogAudio: Display: Audio Device Manager Initialized
+[2022.08.26-15.29.08:068][  0]LogAudio: Display: Creating Audio Device:                 Id: 1, Scope: Shared, Realtime: True
+[2022.08.26-15.29.08:069][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.08.26-15.29.08:069][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.08.26-15.29.08:069][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.08.26-15.29.08:069][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.08.26-15.29.08:069][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.08.26-15.29.08:069][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.08.26-15.29.08:069][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.08.26-15.29.08:069][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.08.26-15.29.08:069][  0]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.08.26-15.29.08:069][  0]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.08.26-15.29.08:069][  0]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.08.26-15.29.08:069][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2022.08.26-15.29.08:079][  0]LogAudioMixer: Display: 0: FrontLeft
+[2022.08.26-15.29.08:079][  0]LogAudioMixer: Display: 1: FrontRight
+[2022.08.26-15.29.08:098][  0]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2022.08.26-15.29.08:102][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.08.26-15.29.08:104][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.08.26-15.29.08:104][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.08.26-15.29.08:104][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.08.26-15.29.08:105][  0]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.08.26-15.29.08:105][  0]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.08.26-15.29.08:105][  0]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.08.26-15.29.08:105][  0]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.08.26-15.29.08:105][  0]LogInit: FAudioDevice initialized.
+[2022.08.26-15.29.08:106][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2022.08.26-15.29.08:107][  0]LogInit: Texture streaming: Enabled
+[2022.08.26-15.29.08:162][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+[2022.08.26-15.29.08:162][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.08.26-15.29.08:163][  0]LogInit: Display: Game Engine Initialized.
+[2022.08.26-15.29.08:163][  0]LogNiagaraEditor: GEditor isn't valid! Particle reset commands will not work for Niagara components!
+[2022.08.26-15.29.08:255][  0]LogInit: Display: Starting Game.
+[2022.08.26-15.29.08:255][  0]LogNet: Browse: 127.0.0.1:17777/Engine/Maps/Templates/Template_Default?Name=Player
+[2022.08.26-15.29.08:255][  0]LogNet: PktLoss set to 0
+[2022.08.26-15.29.08:255][  0]LogNet: PktLagMin set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktLagMax set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktIncomingLagMin set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktIncomingLagMax set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktIncomingLoss set to 0
+[2022.08.26-15.29.08:255][  0]LogNet: PktLoss set to 0
+[2022.08.26-15.29.08:255][  0]LogNet: PktLagMin set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktLagMax set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktIncomingLagMin set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktIncomingLagMax set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktIncomingLoss set to 0
+[2022.08.26-15.29.08:255][  0]LogNet: PktLoss set to 0
+[2022.08.26-15.29.08:255][  0]LogNet: PktLagMin set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktLagMax set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktIncomingLagMin set to 200
+[2022.08.26-15.29.08:255][  0]LogNet: PktIncomingLagMax set to 200
+[2022.08.26-15.29.08:256][  0]LogNet: PktIncomingLoss set to 0
+[2022.08.26-15.29.08:256][  0]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2022.08.26-15.29.08:256][  0]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2022.08.26-15.29.08:256][  0]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.08.26-15.29.08:256][  0]LogNet: Game client on port 17777, rate 100000
+[2022.08.26-15.29.08:360][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2022.08.26-15.29.08:360][  0]LogLoad: (Engine Initialization) Total time: 4.47 seconds
+[2022.08.26-15.29.08:360][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2022.08.26-15.29.08:362][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2022.08.26-15.29.08:364][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.08.26-15.29.09:279][306]LogHandshake: SendChallengeResponse. Timestamp: 0.695216, Cookie: 201077058139166212024049255184213164050177197090137190119048
+[2022.08.26-15.29.09:311][431]LogNetVersion: fpsgame 1.0.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 1484303137)
+[2022.08.26-15.29.09:311][431]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: PendingNetDriver IpNetDriver_0, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.08.26-15.29.10:173][265]LogNet: Welcomed by server (Level: /Game/Maps/TestMap, Game: /Game/Blueprints/BP_FPSGameModeDefault.BP_FPSGameModeDefault_C)
+[2022.08.26-15.29.10:173][265]LogLoad: LoadMap: 127.0.0.1:17777/Game/Maps/TestMap?Name=Player?game=/Game/Blueprints/BP_FPSGameModeDefault.BP_FPSGameModeDefault_C
+[2022.08.26-15.29.10:173][265]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2022.08.26-15.29.10:173][265]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2022.08.26-15.29.10:173][265]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.08.26-15.29.10:187][265]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.08.26-15.29.10:189][265]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2022.08.26-15.29.10:322][265]LogAudio: Display: Audio Device (ID: 1) registered with world 'TestMap'.
+[2022.08.26-15.29.10:323][265]LogNet: PktLoss set to 0
+[2022.08.26-15.29.10:323][265]LogNet: PktLagMin set to 200
+[2022.08.26-15.29.10:323][265]LogNet: PktLagMax set to 200
+[2022.08.26-15.29.10:323][265]LogNet: PktIncomingLagMin set to 200
+[2022.08.26-15.29.10:323][265]LogNet: PktIncomingLagMax set to 200
+[2022.08.26-15.29.10:323][265]LogNet: PktIncomingLoss set to 0
+[2022.08.26-15.29.10:325][265]LogWorld: Bringing World /Game/Maps/TestMap.TestMap up for play (max tick rate 0) at 2022.08.26-16.29.10
+[2022.08.26-15.29.10:325][265]LogWorld: Bringing up level for play took: 0.001471
+[2022.08.26-15.29.10:325][265]LogSlate: Took 0.000194 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2022.08.26-15.29.10:325][265]LogLoad: Took 0.152712 seconds to LoadMap(/Game/Maps/TestMap)
+[2022.08.26-15.29.10:326][265]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2022.08.26-15.29.10:353][267]LogRenderer: Reallocating scene render targets to support 640x480 Format 10 NumSamples 1 (Frame:1).
+[2022.08.26-15.29.10:806][358]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.08.26-15.29.11:233][534]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:235][535]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:238][536]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:241][537]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:243][538]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:246][539]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:248][540]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:250][541]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:253][542]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:254][543]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:256][544]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:259][545]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:261][546]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:263][547]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:266][548]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:268][549]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:271][550]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:275][551]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:277][552]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:282][553]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:285][554]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:287][555]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:290][556]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:293][557]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:295][558]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:297][559]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:300][560]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:302][561]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:304][562]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:306][563]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:308][564]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:310][565]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:313][566]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:316][567]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:318][568]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:320][569]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:322][570]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:324][571]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:326][572]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:329][573]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:331][574]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:333][575]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:336][576]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:338][577]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:340][578]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:343][579]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:346][580]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:348][581]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:350][582]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:352][583]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:355][584]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:357][585]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:359][586]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:360][587]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:363][588]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:365][589]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:367][590]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:370][591]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:373][592]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:375][593]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:377][594]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:380][595]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:382][596]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:384][597]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:386][598]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:388][599]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:390][600]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:392][601]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:394][602]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:396][603]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:399][604]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:401][605]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:403][606]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:406][607]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:408][608]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:410][609]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:412][610]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:414][611]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:417][612]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:419][613]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:421][614]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:423][615]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:425][616]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:427][617]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:429][618]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:431][619]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:434][620]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:437][621]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:439][622]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:441][623]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:443][624]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:446][625]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:448][626]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:450][627]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:452][628]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:454][629]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:456][630]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:458][631]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:460][632]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:462][633]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:464][634]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:467][635]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:469][636]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:471][637]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:474][638]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:476][639]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:479][640]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:481][641]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:484][642]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:486][643]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:489][644]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:490][645]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:492][646]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:494][647]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:496][648]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:499][649]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.08.26-15.29.11:499][649]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:501][650]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:503][651]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:506][652]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:508][653]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:510][654]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:513][655]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:516][656]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:518][657]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:520][658]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:522][659]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:524][660]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:526][661]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:528][662]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:531][663]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:533][664]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:535][665]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:538][666]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:541][667]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:543][668]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:545][669]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:547][670]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:549][671]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:551][672]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:553][673]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:556][674]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:558][675]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:560][676]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:562][677]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:564][678]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:567][679]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:570][680]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:572][681]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:574][682]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:576][683]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:578][684]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:580][685]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:583][686]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:585][687]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:587][688]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:589][689]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:591][690]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:594][691]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:596][692]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:599][693]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:601][694]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:603][695]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:606][696]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:608][697]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:611][698]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:613][699]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:615][700]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:617][701]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:619][702]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:621][703]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:623][704]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:625][705]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:627][706]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:630][707]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:632][708]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:635][709]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:638][710]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:640][711]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:642][712]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:645][713]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:647][714]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:650][715]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:651][716]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:653][717]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:655][718]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:657][719]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:660][720]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:662][721]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:664][722]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:666][723]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:669][724]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:671][725]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:674][726]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:677][727]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:679][728]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:682][729]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:684][730]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:686][731]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:688][732]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:691][733]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:693][734]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:695][735]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:698][736]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:700][737]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:703][738]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:705][739]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:707][740]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:709][741]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:711][742]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:714][743]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:717][744]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:719][745]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:721][746]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:724][747]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:726][748]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:728][749]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:731][750]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:733][751]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:735][752]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:737][753]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:738][754]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:740][755]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:742][756]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:744][757]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:747][758]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:749][759]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:751][760]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:753][761]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:756][762]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:758][763]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:761][764]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:763][765]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:765][766]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:767][767]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:770][768]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:772][769]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:774][770]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:776][771]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:778][772]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:781][773]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:783][774]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:786][775]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:788][776]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:790][777]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:792][778]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:795][779]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:798][780]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:800][781]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:802][782]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:805][783]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:807][784]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:810][785]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:812][786]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:814][787]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:817][788]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:819][789]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:821][790]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:824][791]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:826][792]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:828][793]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:831][794]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:832][795]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:835][796]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:837][797]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:839][798]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:841][799]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:843][800]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:845][801]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:848][802]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:851][803]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:853][804]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:855][805]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:858][806]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:860][807]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:862][808]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:865][809]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:867][810]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:870][811]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:872][812]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:874][813]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:877][814]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:879][815]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:882][816]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:884][817]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:886][818]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:889][819]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:891][820]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:893][821]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:895][822]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:897][823]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:900][824]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:902][825]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:904][826]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:906][827]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:908][828]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:910][829]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:912][830]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:915][831]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:917][832]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:919][833]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:922][834]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:924][835]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:926][836]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:928][837]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:931][838]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:933][839]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:935][840]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:937][841]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:939][842]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:941][843]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:943][844]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:946][845]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:948][846]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:950][847]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:952][848]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:955][849]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:958][850]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:960][851]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:962][852]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:964][853]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:967][854]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:969][855]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:972][856]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:974][857]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:976][858]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:978][859]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:981][860]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:984][861]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:986][862]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:988][863]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:991][864]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:993][865]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:996][866]LogTemp: Warning: LookCall
+[2022.08.26-15.29.11:998][867]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:000][868]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:002][869]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:004][870]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:006][871]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:009][872]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:011][873]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:013][874]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:015][875]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:018][876]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:020][877]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:023][878]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:025][879]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:027][880]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:029][881]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:032][882]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:034][883]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:037][884]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:039][885]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:041][886]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:044][887]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:046][888]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:048][889]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:050][890]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:052][891]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:054][892]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:056][893]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:058][894]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:061][895]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:063][896]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:066][897]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:068][898]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:070][899]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:073][900]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:075][901]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:078][902]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:080][903]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:082][904]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:084][905]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:086][906]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:088][907]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:091][908]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:093][909]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:095][910]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:097][911]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:099][912]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:101][913]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:104][914]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:106][915]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:108][916]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:111][917]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:113][918]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:115][919]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:118][920]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:120][921]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:122][922]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:124][923]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:126][924]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:129][925]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:131][926]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:134][927]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:137][928]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:139][929]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:141][930]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:144][931]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:146][932]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:148][933]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:151][934]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:152][935]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:155][936]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:157][937]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:159][938]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:161][939]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:163][940]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:165][941]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:167][942]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:170][943]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:173][944]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:175][945]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:177][946]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:179][947]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:182][948]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:184][949]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:186][950]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:189][951]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:191][952]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:193][953]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:195][954]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:198][955]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:200][956]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:202][957]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:204][958]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:206][959]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:209][960]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:211][961]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:213][962]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:215][963]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:218][964]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:221][965]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:223][966]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:225][967]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:227][968]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:230][969]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:232][970]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:234][971]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:237][972]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:238][973]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:241][974]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:243][975]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:245][976]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:247][977]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:249][978]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:252][979]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:254][980]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:256][981]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:259][982]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:261][983]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:264][984]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:266][985]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:268][986]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:270][987]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:272][988]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:274][989]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:277][990]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:279][991]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:282][992]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:284][993]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:286][994]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:288][995]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:290][996]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:292][997]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:294][998]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:296][999]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:298][  0]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:301][  1]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:303][  2]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:305][  3]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:308][  4]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:311][  5]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:313][  6]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:315][  7]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:317][  8]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:319][  9]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:321][ 10]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:323][ 11]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:325][ 12]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:327][ 13]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:329][ 14]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:332][ 15]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:334][ 16]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:336][ 17]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:338][ 18]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:340][ 19]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:342][ 20]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:344][ 21]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:346][ 22]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:348][ 23]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:350][ 24]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:352][ 25]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:354][ 26]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:357][ 27]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:359][ 28]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:361][ 29]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:363][ 30]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:365][ 31]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:368][ 32]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:370][ 33]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:372][ 34]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:374][ 35]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:377][ 36]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:378][ 37]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:381][ 38]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:384][ 39]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:386][ 40]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:388][ 41]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:391][ 42]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:393][ 43]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:395][ 44]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:398][ 45]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:400][ 46]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:401][ 47]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:403][ 48]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:405][ 49]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:408][ 50]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:410][ 51]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:412][ 52]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:414][ 53]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:417][ 54]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:420][ 55]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:422][ 56]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:424][ 57]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:426][ 58]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:429][ 59]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:431][ 60]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:433][ 61]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:435][ 62]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:437][ 63]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:439][ 64]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:441][ 65]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:443][ 66]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:445][ 67]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:448][ 68]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:451][ 69]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:453][ 70]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:455][ 71]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:457][ 72]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:460][ 73]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:462][ 74]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:464][ 75]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:466][ 76]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:468][ 77]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:471][ 78]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:473][ 79]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:475][ 80]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:477][ 81]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:480][ 82]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:482][ 83]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:485][ 84]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:487][ 85]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:489][ 86]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:491][ 87]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:493][ 88]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:495][ 89]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:497][ 90]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:499][ 91]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:501][ 92]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:503][ 93]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:506][ 94]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:508][ 95]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:511][ 96]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:513][ 97]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:515][ 98]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:518][ 99]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:520][100]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:522][101]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:524][102]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:526][103]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:528][104]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:530][105]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:532][106]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:534][107]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:536][108]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:538][109]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:541][110]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:544][111]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:546][112]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:548][113]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:550][114]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:552][115]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:554][116]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:556][117]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:558][118]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:561][119]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:563][120]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:565][121]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:567][122]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:569][123]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:572][124]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:574][125]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:576][126]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:579][127]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:581][128]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:583][129]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:586][130]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:588][131]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:590][132]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:592][133]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:595][134]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:598][135]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:600][136]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:602][137]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:604][138]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:607][139]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:610][140]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:612][141]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:614][142]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:616][143]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:618][144]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:621][145]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:623][146]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:625][147]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:627][148]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:630][149]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:632][150]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:635][151]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:637][152]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:639][153]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:642][154]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:644][155]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:647][156]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:649][157]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:651][158]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:654][159]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:656][160]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:659][161]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:661][162]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:664][163]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:666][164]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:669][165]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:671][166]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:673][167]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:675][168]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:678][169]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:680][170]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:682][171]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:684][172]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:686][173]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:688][174]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:691][175]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:693][176]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:695][177]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:697][178]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:700][179]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:702][180]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:704][181]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:707][182]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:709][183]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:711][184]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:714][185]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:716][186]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:718][187]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:720][188]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:722][189]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:724][190]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:727][191]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:729][192]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:732][193]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:734][194]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:736][195]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:738][196]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:741][197]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:744][198]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:746][199]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:749][200]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:751][201]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:753][202]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:757][203]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:759][204]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:762][205]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:763][206]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:766][207]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:768][208]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:771][209]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:773][210]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:775][211]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:778][212]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:780][213]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:783][214]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:785][215]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:787][216]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:790][217]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:792][218]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:795][219]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:797][220]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:799][221]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:801][222]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:804][223]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:806][224]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:808][225]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:811][226]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:813][227]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:817][228]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:820][229]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:822][230]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:824][231]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:827][232]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:829][233]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:831][234]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:834][235]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:836][236]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:838][237]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:841][238]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:843][239]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:845][240]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:848][241]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:851][242]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:853][243]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:856][244]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:858][245]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:860][246]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:863][247]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:865][248]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:868][249]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:870][250]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:872][251]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:875][252]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:877][253]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:880][254]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:882][255]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:885][256]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:888][257]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:890][258]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:893][259]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:895][260]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:897][261]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:900][262]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:903][263]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:906][264]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:908][265]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:911][266]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:913][267]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:916][268]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:919][269]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:921][270]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:923][271]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:925][272]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:928][273]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:931][274]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:933][275]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:936][276]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:938][277]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:941][278]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:943][279]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:946][280]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:948][281]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:950][282]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:952][283]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:955][284]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:957][285]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:959][286]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:961][287]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:964][288]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:966][289]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:968][290]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:970][291]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:973][292]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:975][293]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:978][294]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:981][295]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:983][296]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:985][297]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:988][298]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:990][299]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:993][300]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:995][301]LogTemp: Warning: LookCall
+[2022.08.26-15.29.12:997][302]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:000][303]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:002][304]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:004][305]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:006][306]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:009][307]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:011][308]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:014][309]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:016][310]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:018][311]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:021][312]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:024][313]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:027][314]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:029][315]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:031][316]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:034][317]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:037][318]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:039][319]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:041][320]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:043][321]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:046][322]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:049][323]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:051][324]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:053][325]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:055][326]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:058][327]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:060][328]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:063][329]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:065][330]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:067][331]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:070][332]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:072][333]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:074][334]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:077][335]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:079][336]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:082][337]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:084][338]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:086][339]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:088][340]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:091][341]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:093][342]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:095][343]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:097][344]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:099][345]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:101][346]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:104][347]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:107][348]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:109][349]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:112][350]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:114][351]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:117][352]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:119][353]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:121][354]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:123][355]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:125][356]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:127][357]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:130][358]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:133][359]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:135][360]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:138][361]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:140][362]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:143][363]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:146][364]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:148][365]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:150][366]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:152][367]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:154][368]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:157][369]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:159][370]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:161][371]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:164][372]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:166][373]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:169][374]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:172][375]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:174][376]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:177][377]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:179][378]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:181][379]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:183][380]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:186][381]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:188][382]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:190][383]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:192][384]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:195][385]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:197][386]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:200][387]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:202][388]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:204][389]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:207][390]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:209][391]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:211][392]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:213][393]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:215][394]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:217][395]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:220][396]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:222][397]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:225][398]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:227][399]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:230][400]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:233][401]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:235][402]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:238][403]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:240][404]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:242][405]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:244][406]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:246][407]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:249][408]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:251][409]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:253][410]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:255][411]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:257][412]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:259][413]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:262][414]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:265][415]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:267][416]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:269][417]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:271][418]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:273][419]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:275][420]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:278][421]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:280][422]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:282][423]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:285][424]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:287][425]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:290][426]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:293][427]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:295][428]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:297][429]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:300][430]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:302][431]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:305][432]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:307][433]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:309][434]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:312][435]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:314][436]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:316][437]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:318][438]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:320][439]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:322][440]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:325][441]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:327][442]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:329][443]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:331][444]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:334][445]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:337][446]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:339][447]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:341][448]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:344][449]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:347][450]LogTemp: Warning: LookCall
+[2022.08.26-15.29.13:349][451]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:561][970]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:564][971]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:566][972]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:568][973]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:571][974]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:573][975]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:575][976]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:577][977]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:579][978]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:581][979]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:584][980]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:587][981]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:589][982]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:591][983]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:594][984]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:596][985]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:598][986]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:600][987]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:602][988]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:605][989]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:608][990]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:611][991]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:613][992]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:616][993]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:618][994]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:621][995]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:624][996]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:626][997]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:628][998]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:631][999]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:633][  0]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:635][  1]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:637][  2]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:639][  3]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:642][  4]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:644][  5]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:645][  6]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:648][  7]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:651][  8]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:653][  9]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:655][ 10]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:657][ 11]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:660][ 12]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:662][ 13]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:664][ 14]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:666][ 15]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:668][ 16]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:670][ 17]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:672][ 18]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:675][ 19]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:677][ 20]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:679][ 21]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:682][ 22]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:684][ 23]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:687][ 24]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:689][ 25]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:691][ 26]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:693][ 27]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:695][ 28]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:697][ 29]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:699][ 30]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:701][ 31]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:704][ 32]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:707][ 33]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:709][ 34]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:711][ 35]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:714][ 36]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:717][ 37]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:719][ 38]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:721][ 39]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:723][ 40]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:725][ 41]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:728][ 42]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:730][ 43]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:733][ 44]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:735][ 45]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:737][ 46]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:739][ 47]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:742][ 48]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:744][ 49]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:746][ 50]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:748][ 51]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:750][ 52]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:753][ 53]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:755][ 54]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:758][ 55]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:760][ 56]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:761][ 57]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:763][ 58]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:765][ 59]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:768][ 60]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:771][ 61]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:773][ 62]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:775][ 63]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:778][ 64]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:780][ 65]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:782][ 66]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:784][ 67]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:786][ 68]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:789][ 69]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:791][ 70]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:792][ 71]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:794][ 72]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:797][ 73]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:799][ 74]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:801][ 75]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:803][ 76]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:805][ 77]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:808][ 78]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:810][ 79]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:812][ 80]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:814][ 81]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:817][ 82]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:819][ 83]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:821][ 84]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:823][ 85]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:825][ 86]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:826][ 87]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:829][ 88]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:831][ 89]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:833][ 90]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:835][ 91]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:838][ 92]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:840][ 93]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:842][ 94]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:845][ 95]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:848][ 96]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:850][ 97]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:852][ 98]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:855][ 99]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:857][100]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:859][101]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:862][102]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:864][103]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:866][104]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:869][105]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:871][106]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:873][107]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:876][108]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:879][109]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:881][110]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:883][111]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:885][112]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:888][113]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:890][114]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:892][115]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:894][116]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:896][117]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:898][118]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:900][119]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:903][120]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:905][121]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:907][122]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:909][123]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:911][124]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:913][125]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:916][126]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:918][127]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:920][128]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:923][129]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:925][130]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:927][131]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:929][132]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:932][133]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:934][134]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:936][135]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:937][136]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:939][137]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:942][138]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:945][139]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:948][140]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:950][141]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:952][142]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:955][143]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:959][144]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:961][145]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:963][146]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:965][147]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:968][148]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:971][149]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:974][150]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:977][151]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:979][152]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:983][153]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:986][154]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:989][155]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:992][156]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:994][157]LogTemp: Warning: LookCall
+[2022.08.26-15.29.14:997][158]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:000][159]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:003][160]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:006][161]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:009][162]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:012][163]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:015][164]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:017][165]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:020][166]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:024][167]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:027][168]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:030][169]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:033][170]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:036][171]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:039][172]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:042][173]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:044][174]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:046][175]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:049][176]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:060][177]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:063][178]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:066][179]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:068][180]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:070][181]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:073][182]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:075][183]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:079][184]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:082][185]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:084][186]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:087][187]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:089][188]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:092][189]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:095][190]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:097][191]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:099][192]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:101][193]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:104][194]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:106][195]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:108][196]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:111][197]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:113][198]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:116][199]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:119][200]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:122][201]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:124][202]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:126][203]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:129][204]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:133][205]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:135][206]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:138][207]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:140][208]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:143][209]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:146][210]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:148][211]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:151][212]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:154][213]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:157][214]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:160][215]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:163][216]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:166][217]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:168][218]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:170][219]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:173][220]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:176][221]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:178][222]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:180][223]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:182][224]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:185][225]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:187][226]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:189][227]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:191][228]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:193][229]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:195][230]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:198][231]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:200][232]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:203][233]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:205][234]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:207][235]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:210][236]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:212][237]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:214][238]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:217][239]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:219][240]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:222][241]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:224][242]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:226][243]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:229][244]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:231][245]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:233][246]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:236][247]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:238][248]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:240][249]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:242][250]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:245][251]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:247][252]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:249][253]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:251][254]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:254][255]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:256][256]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:258][257]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:261][258]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:264][259]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:267][260]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:270][261]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:272][262]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:275][263]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:277][264]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:279][265]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:281][266]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:284][267]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:286][268]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:289][269]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:291][270]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:294][271]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:297][272]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:299][273]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:301][274]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:304][275]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:307][276]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:310][277]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:312][278]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:315][279]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:319][280]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:321][281]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:324][282]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:326][283]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:330][284]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:333][285]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:335][286]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:338][287]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:341][288]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:343][289]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:346][290]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:349][291]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:352][292]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:354][293]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:357][294]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:360][295]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:362][296]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:365][297]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:367][298]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:369][299]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:372][300]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:375][301]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:377][302]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:379][303]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:382][304]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:385][305]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:387][306]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:389][307]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:392][308]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:395][309]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:398][310]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:400][311]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:403][312]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:405][313]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:408][314]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:411][315]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:413][316]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:415][317]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:418][318]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:421][319]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:424][320]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:426][321]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:429][322]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:431][323]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:433][324]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:436][325]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:438][326]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:440][327]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:442][328]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:444][329]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:446][330]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:449][331]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:451][332]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:454][333]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:457][334]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:459][335]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:462][336]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:465][337]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:467][338]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:469][339]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:472][340]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:474][341]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:476][342]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:479][343]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:481][344]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:484][345]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:486][346]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:489][347]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:493][348]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:496][349]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:498][350]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:501][351]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:504][352]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:506][353]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:509][354]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:512][355]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:514][356]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:516][357]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:522][358]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:525][359]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:527][360]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:530][361]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:534][362]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:537][363]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:540][364]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:543][365]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:548][366]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:550][367]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:552][368]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:555][369]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:557][370]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:561][371]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:563][372]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:565][373]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:567][374]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:570][375]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:572][376]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:575][377]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:577][378]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:579][379]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:582][380]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:584][381]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:586][382]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:589][383]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:592][384]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:595][385]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:598][386]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:601][387]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:604][388]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:607][389]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:610][390]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:613][391]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:616][392]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:618][393]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:620][394]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:623][395]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:632][396]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:635][397]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:638][398]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:640][399]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:643][400]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:645][401]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:647][402]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:650][403]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:652][404]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:655][405]LogTemp: Warning: LookCall
+[2022.08.26-15.29.15:657][406]LogTemp: Warning: LookCall

@@ -26,11 +26,9 @@ class AActor; struct FRewindDataStruct;
 	virtual void ServerSwitchSecondary_Implementation(); \
 	virtual void ServerSwitchPrimary_Implementation(); \
 	virtual void ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup); \
-	virtual bool ServerSetSprinting_Validate(bool ); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
-	virtual bool ServerInteract_Validate(); \
 	virtual void ServerInteract_Implementation(); \
 	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
  \
@@ -98,11 +96,9 @@ class AActor; struct FRewindDataStruct;
 	virtual void ServerSwitchSecondary_Implementation(); \
 	virtual void ServerSwitchPrimary_Implementation(); \
 	virtual void ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup); \
-	virtual bool ServerSetSprinting_Validate(bool ); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
-	virtual bool ServerInteract_Validate(); \
 	virtual void ServerInteract_Implementation(); \
 	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
  \

@@ -45,6 +45,8 @@ protected:
 	UPROPERTY(EditAnywhere)
 		bool SwitchWeaponAfterPickup;
 
+
+
 //Firing functions
 protected:
 	//Checks if the client can fire (checks ammo, fire rate, animation etc). If so, we move onto ClientFire
@@ -88,7 +90,7 @@ protected:
 	May call ServerPickupWeapon RPC
 	*/
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable)
 	
 		void ServerInteract();
 	
@@ -262,7 +264,7 @@ protected:
 		float CurrentStamina;
 
 	//RPC for jumping, so stamina loss and stuff works properly
-	UFUNCTION(Server, Reliable)
+	UFUNCTION(Server, Unreliable)
 		void ServerStartJump();
 
 	//Checks if uncrouching is possible using a raycast
@@ -312,7 +314,7 @@ protected:
 		void SetSprinting(bool NewSprinting);
 
 	//This RPC function runs on server and is respknsible for actually modifying player's speed
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Unreliable)
 		void ServerSetSprinting(bool NewSprinting);
 
 

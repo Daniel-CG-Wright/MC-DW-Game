@@ -149,7 +149,7 @@ void Afpscharacter::BeginPlay()
 		FPSRewindComponent = NewObject<URewindComponent>(this);
 		FPSRewindComponent->RegisterComponent();
 	}
-
+	
 
 }
 
@@ -272,9 +272,10 @@ void Afpscharacter::MoveY(float Value)
 
 	float dotProduct = FVector::DotProduct(GetActorForwardVector(), GetVelocity());
 
-	if (Value != 1.0f || (dotProduct < 30.0f && dotProduct > -30.0f))
+	if (IsSprinting && (Value != 1.0f || (dotProduct < 30.0f && dotProduct > -30.0f)))
 	{
 		//Ensures player only sprints if they are holding forward and moving forward.
+		UE_LOG(LogTemp, Warning, TEXT("LookCall"));
 		SetSprinting(false);
 	}
 	AddMovementInput(Direction, Value);
@@ -363,6 +364,8 @@ void Afpscharacter::StartJump()
 
 void Afpscharacter::ServerStartJump_Implementation()
 {
+	UE_LOG(LogTemp, Warning, TEXT("JUMP RELIABLE RPC CALL"));
+	
 	LoseStamina(StaminaLossWhenJumping);
 
 }
@@ -396,16 +399,19 @@ void Afpscharacter::PressSprint()
 		if (IsSprinting)
 		{
 			//Start walking
+			UE_LOG(LogTemp, Warning, TEXT("Stop toggle sprint call"));
 			SetSprinting(false);
 		}
 		else
 		{
 			//Start sprinting
-			SetSprinting(false);
+			UE_LOG(LogTemp, Warning, TEXT("start toggle sprint call"));
+			SetSprinting(true);
 		}
 	}
 	else
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Start hold sprint call"));
 		SetSprinting(true);
 	}
 }
@@ -418,6 +424,7 @@ void Afpscharacter::ReleaseSprint()
 	}
 	if (!ToggleSprint)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Release sprint call"));
 		SetSprinting(false);
 
 	}
@@ -430,7 +437,7 @@ void Afpscharacter::SetSprinting(bool NewSprinting)
 		//Send RPC call to server to start server sprinting
 		ServerSetSprinting(NewSprinting);
 	}
-
+		
 	IsSprinting = NewSprinting;
 	GetCharacterMovement()->MaxWalkSpeed = IsSprinting ? SprintSpeed : DefaultSpeed;
 }
@@ -445,14 +452,10 @@ void Afpscharacter::OnRep_ChangeSprinting()
 
 
 //RPC for serve rto start sprinting
-bool Afpscharacter::ServerSetSprinting_Validate(bool NewSprinting)
-{
-	//Add server validation for if we should start sprinting here
-	return true;
-}
 
 void Afpscharacter::ServerSetSprinting_Implementation(bool NewSprinting)
 {
+	UE_LOG(LogTemp, Warning, TEXT("RELIABLE SPRINT RPC CALL"));
 	SetSprinting(NewSprinting);
 }
 
@@ -540,6 +543,7 @@ void Afpscharacter::OnStaminaUpdate()
 	{
 		if (CurrentStamina <= 0)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("OUT OF STAMINA CALL"));
 			//Out of stamina
 			SetSprinting(false);
 		}
@@ -635,12 +639,12 @@ bool Afpscharacter::SingleRaycastInCameraDirection(FHitResult& ResultOutHit, flo
 
 	FCollisionQueryParams CollisionParams;
 	//Ignore ourselves
-	CollisionParams.AddIgnoredActor(this->GetOwner());
+	CollisionParams.AddIgnoredActor(GetOwner());
 
 	
-
+	bool result = GetWorld()->LineTraceSingleByChannel(ResultOutHit, Start, End, CollisionChannel, CollisionParams);
 	//Performs raycast
-	return GetWorld()->LineTraceSingleByChannel(ResultOutHit, Start, End, ECC_Visibility, CollisionParams);
+	return result;
 
 }
 
@@ -657,13 +661,25 @@ bool Afpscharacter::MultiRaycastInCameraDirection(TArray<FHitResult>& ResultOutH
 	FVector End = Start + (ForwardVector * RaycastRange);
 
 	FCollisionQueryParams CollisionParams;
+	
 	//Ignore ourselves
-	CollisionParams.AddIgnoredActor(this->GetOwner());
+	CollisionParams.AddIgnoredActor(GetOwner());
+	CollisionParams.bReturnPhysicalMaterial = true;
 
-
-
+	//UE_LOG(LogTemp, Warning, TEXT("The Actor's name is %s"), *GetOwner()->GetName());
+	//UE_LOG(LogTemp, Warning, TEXT("Th name is %s"), *GetName());
+	/*DrawDebugLine(
+		GetWorld(),
+		FPSCameraComponent->GetComponentLocation(),
+		End,
+		FColor(255, 0, 0),
+		false, 5.0f, 0,
+		12.333
+	);*/
 	//Performs raycast
-	return GetWorld()->LineTraceMultiByChannel(ResultOutHit, Start, End, CollisionChannel, CollisionParams);
+
+	bool result = GetWorld()->LineTraceMultiByChannel(ResultOutHit, Start, End, CollisionChannel, CollisionParams);
+	return result;
 
 }
 
@@ -730,13 +746,11 @@ void Afpscharacter::Interact()
 
 void Afpscharacter::ServerInteract_Implementation()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Interact RPC call"));
 	Interact();
 }
 
-bool Afpscharacter::ServerInteract_Validate()
-{
-	return true;
-}
+
 
 
 void Afpscharacter::InteractWithNameOnly(FName& OutName)
@@ -867,6 +881,7 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 void Afpscharacter::ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup)
 {
 	//Server impleemntation of pickup weapon
+	UE_LOG(LogTemp, Warning, TEXT("Reliable pickup call"));
 	PickupWeapon(WeaponPickup);
 }
 
@@ -902,6 +917,7 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 
 void Afpscharacter::ServerSwitchPrimary_Implementation()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Switch primary rpc call"));
 	SwitchPrimary(false);
 }
 
@@ -961,6 +977,7 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 
 void Afpscharacter::ServerSwitchSecondary_Implementation()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Secondary pickup reliable switch call"));
 	SwitchSecondary(false);
 }
 
@@ -1007,7 +1024,7 @@ void Afpscharacter::ClientValidateFire()
 	{
 		return;
 	}
-	UE_LOG(LogTemp, Warning, TEXT("ClientValidateFire"));
+	//UE_LOG(LogTemp, Warning, TEXT("ClientValidateFire"));
 	//Checking if we have ammo for firing
 	if (GetCurrentlyEquippedWeaponData().MagAmmo > 0)
 	{
@@ -1024,7 +1041,7 @@ void Afpscharacter::ClientValidateFire()
 			//Add hybrid logic
 			break;
 		default:
-			UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
+			//UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
 			break;
 		}
 
@@ -1070,9 +1087,10 @@ void Afpscharacter::ClientHitscanCheckFire()
 	//Called when we can fire. Should probably implement sounds for client to hear on this function,a s well as clientside hit images and stuff
 	//to make it feel more responsive (tho if it was a miss serverside we will get ghost markers, so maybe make this an option).
 	TArray<FHitResult> HitResults;
-	UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
+	//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
 	if (MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().MaxRange))
 	{
+		
 		//If we score a hit this is the logic that will be played
 		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 		//Run RPC on server to ensure shot hit
@@ -1098,7 +1116,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 		return;
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("Server validate fire"));
+	//UE_LOG(LogTemp, Warning, TEXT("Server validate fire"));
 	//Checking if we have ammo for firing
 	if (GetCurrentlyEquippedWeaponData().MagAmmo > 0)
 	{
@@ -1122,7 +1140,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Out of ammo!"));
+		//UE_LOG(LogTemp, Warning, TEXT("Out of ammo!"));
 	}
 	
 }
@@ -1146,11 +1164,11 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("invsqW"));
 	}
-	UE_LOG(LogTemp, Warning, TEXT("ServerHitscanCheckFire start"));
+	//UE_LOG(LogTemp, Warning, TEXT("ServerHitscanCheckFire start"));
 	//STAGE 1
 	//First we need to get the current game state reference for ease of use later
 	AFPSGameState* CurrentGameState = Cast<AFPSGameState>(GetWorld()->GetGameState());
-	UE_LOG(LogTemp, Warning, TEXT("Server time for hitscan check = %f"), CurrentGameState->GetServerWorldTimeSeconds());
+	//UE_LOG(LogTemp, Warning, TEXT("Server time for hitscan check = %f"), CurrentGameState->GetServerWorldTimeSeconds());
 
 	//Now we decide on latency
 	if (CurrentGameState->GetServerWorldTimeSeconds() - ClientFireTime > CurrentGameState->GetMaxAllowedLatency())
@@ -1161,11 +1179,11 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Latency measured = %f"), (CurrentGameState->GetServerWorldTimeSeconds() - ClientFireTime));
+		//UE_LOG(LogTemp, Warning, TEXT("Latency measured = %f"), (CurrentGameState->GetServerWorldTimeSeconds() - ClientFireTime));
 
 		//Normal procedures here
 		//STAGE 2, 3
-		UE_LOG(LogTemp, Warning, TEXT("Stag 2,3"));
+		//UE_LOG(LogTemp, Warning, TEXT("Stag 2,3"));
 		//get the interpolated transforms for all the rewind components
 		TMap<AActor*, FRewindDataStruct> ActorTransformMap;
 		ServerGetInterpolatedTransformsForRewind(ClientFireTime, ActorTransformMap);
@@ -1187,7 +1205,7 @@ void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTim
 	float NextTimestamp;
 	FRewindDataStruct NextTransform;
 
-	UE_LOG(LogTemp, Warning, TEXT("Interp"));
+	//UE_LOG(LogTemp, Warning, TEXT("Interp"));
 	float LerpTime;
 	//We must complete the process for all the rewind components
 	for (auto& Elem : RewindComponents)
@@ -1238,30 +1256,34 @@ void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTim
 		OutActorTransformsToBeRewinded.Emplace(ParentActor, ResultTransform);
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("Rewind transforms = %d"), OutActorTransformsToBeRewinded.Num());
+	//UE_LOG(LogTemp, Warning, TEXT("Rewind transforms = %d"), OutActorTransformsToBeRewinded.Num());
 }
 
 void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Final stages"));
+	//UE_LOG(LogTemp, Warning, TEXT("Final stages"));
 	//Call a gamemode function which rewinds everything
-	Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->RewindActors(ValuesToBeUsedInRewind);
+	//Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->RewindActors(ValuesToBeUsedInRewind);
 
 	//Perform the actual hitscan with the hitscan function
 	ServerPerformHitscan();
 
 	//Call a gamemode function which reverts everything to the normal state
-	Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->ResetActorPositionsToBefore();
+	//Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->ResetActorPositionsToBefore();
 }
 
 void Afpscharacter::ServerPerformHitscan()
 {
 	//Here is where we actually perform the hitscan to see if we hit anything.
 	TArray<FHitResult> HitResults;
-
-	if (MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().MaxRange))
+	MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().MaxRange);
+	if (HitResults.Num() > 0)
 	{
 		//If we score a hit we must look at all the hit results and create hit markers and sound fx and stuff and deal dmg
 		UE_LOG(LogTemp, Warning, TEXT("Got a hit"));
+
+
 	}
+
+	
 }

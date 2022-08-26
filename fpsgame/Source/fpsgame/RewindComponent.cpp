@@ -22,21 +22,15 @@ void URewindComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//THIS BIT COULD BE CAUSE OF ERROR (or see belwo)
-	if (GetOwnerActor()->GetLocalRole() != ROLE_Authority)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Destroying..."));
-		DestroyComponent();
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Setting up..."));
+	
+
+	
+	//UE_LOG(LogTemp, Warning, TEXT("Setting up..."));
 
 		
-		OwnerComponent = GetOwner();
-		AddToGameMode();
-		CachedMaxPing = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetMaxAllowedLatency();
-	}
+	OwnerComponent = GetOwner();
+	AddToGameMode();
+	CachedMaxPing = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetMaxAllowedLatency();
 	
 	/*OwnerComponent = GetOwner();
 	AddToGameMode();
@@ -59,17 +53,20 @@ void URewindComponent::AddToGameMode()
 	//Called on beginplay to record this rewind component
 	
 	// OR IT COULD BE THIS BIT
-	if (GetOwner()->GetLocalRole() == ROLE_Authority)
-	{
-		Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->AddRewindComponent(this);
-
-	}
+	
+	Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->AddRewindComponent(this);
+	
 
 }
 // Called every frame
 void URewindComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	if (DestroyOnNextTick)
+	{
+		DestroyComponent();
+	}
+
 	ThisTickServerTime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 
 	RecordDetailsThisTick();
