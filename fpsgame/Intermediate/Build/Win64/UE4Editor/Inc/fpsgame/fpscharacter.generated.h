@@ -16,6 +16,7 @@ class AWeaponActor;
 struct FRotator;
 struct FHitResult;
 class AActor; struct FRewindDataStruct;
+struct FVector;
 #ifdef FPSGAME_fpscharacter_generated_h
 #error "fpscharacter.generated.h already included, missing '#pragma once' in fpscharacter.h"
 #endif
@@ -83,6 +84,7 @@ class AActor; struct FRewindDataStruct;
 	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
 	DECLARE_FUNCTION(execInteractPressed); \
+	DECLARE_FUNCTION(execDamageLogic); \
 	DECLARE_FUNCTION(execServerPerformHitscan); \
 	DECLARE_FUNCTION(execServerRewindAndPerformHitscan); \
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
@@ -153,6 +155,7 @@ class AActor; struct FRewindDataStruct;
 	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
 	DECLARE_FUNCTION(execInteractPressed); \
+	DECLARE_FUNCTION(execDamageLogic); \
 	DECLARE_FUNCTION(execServerPerformHitscan); \
 	DECLARE_FUNCTION(execServerRewindAndPerformHitscan); \
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
@@ -193,6 +196,16 @@ class AActor; struct FRewindDataStruct;
 	struct fpscharacter_eventServerValidateFire_Parms \
 	{ \
 		float ClientFireTime; \
+	}; \
+	struct fpscharacter_eventShowHitscanFireEffectFP_Parms \
+	{ \
+		FVector StartLocation; \
+		FVector EndLocation; \
+	}; \
+	struct fpscharacter_eventShowHitscanFireEffectTP_Parms \
+	{ \
+		FVector StartLocation; \
+		FVector EndLocation; \
 	};
 
 

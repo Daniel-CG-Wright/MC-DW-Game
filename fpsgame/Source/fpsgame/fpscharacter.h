@@ -76,7 +76,21 @@ protected:
 	//Performs the serverside hitscan - we also deal damage and stuff here
 	UFUNCTION()
 		void ServerPerformHitscan();
+	
+	//Performs the damage logic on hitting targets.
+	UFUNCTION()
+		void DamageLogic();
 
+	//Shows cosmetic hitscan bullet trace for third person
+	UFUNCTION(BlueprintImplementableEvent)
+		void ShowHitscanFireEffectTP(FVector const StartLocation, FVector EndLocation) const;
+
+	//Shows first person cosmetic hitscan bullet trace
+	UFUNCTION(BlueprintImplementableEvent)
+		void ShowHitscanFireEffectFP(FVector const StartLocation, FVector const EndLocation) const;
+
+	
+	
 //Player input functions
 protected:
 	//Function for pressing interact
@@ -480,6 +494,6 @@ public:
 		void SetCurrentAmmo(int NewAmmo);
 
 	UFUNCTION()
-		int GetCurrentAmmo() { return GetCurrentlyEquippedWeaponData().MagAmmo; }
+		int GetCurrentAmmo() { return GetCurrentlyEquippedWeaponData().Stats.MagAmmo; }
 
 };

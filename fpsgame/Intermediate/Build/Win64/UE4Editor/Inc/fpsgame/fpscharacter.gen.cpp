@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor_NoRegister();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FRewindDataStruct();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FDamageEvent();
 	ENGINE_API UClass* Z_Construct_UClass_AController_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
@@ -421,6 +422,13 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->InteractPressed();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execDamageLogic)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DamageLogic();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(Afpscharacter::execServerPerformHitscan)
 	{
 		P_FINISH;
@@ -537,6 +545,22 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		Parms.ClientFireTime=ClientFireTime;
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerValidateFire),&Parms);
 	}
+	static FName NAME_Afpscharacter_ShowHitscanFireEffectFP = FName(TEXT("ShowHitscanFireEffectFP"));
+	void Afpscharacter::ShowHitscanFireEffectFP(const FVector StartLocation, const FVector EndLocation) const
+	{
+		fpscharacter_eventShowHitscanFireEffectFP_Parms Parms;
+		Parms.StartLocation=StartLocation;
+		Parms.EndLocation=EndLocation;
+		const_cast<Afpscharacter*>(this)->ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ShowHitscanFireEffectFP),&Parms);
+	}
+	static FName NAME_Afpscharacter_ShowHitscanFireEffectTP = FName(TEXT("ShowHitscanFireEffectTP"));
+	void Afpscharacter::ShowHitscanFireEffectTP(const FVector StartLocation, FVector EndLocation) const
+	{
+		fpscharacter_eventShowHitscanFireEffectTP_Parms Parms;
+		Parms.StartLocation=StartLocation;
+		Parms.EndLocation=EndLocation;
+		const_cast<Afpscharacter*>(this)->ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ShowHitscanFireEffectTP),&Parms);
+	}
 	void Afpscharacter::StaticRegisterNativesAfpscharacter()
 	{
 		UClass* Class = Afpscharacter::StaticClass();
@@ -547,6 +571,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "ClientHitscanCheckFire", &Afpscharacter::execClientHitscanCheckFire },
 			{ "ClientValidateFire", &Afpscharacter::execClientValidateFire },
 			{ "CollisionInteractCheck", &Afpscharacter::execCollisionInteractCheck },
+			{ "DamageLogic", &Afpscharacter::execDamageLogic },
 #if WITH_EDITOR
 			{ "DebugFunction", &Afpscharacter::execDebugFunction },
 #endif // WITH_EDITOR
@@ -821,6 +846,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_CollisionInteractCheck_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Performs the damage logic on hitting targets.\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Performs the damage logic on hitting targets." },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "DamageLogic", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_DamageLogic()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2161,6 +2210,96 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StartLocation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndLocation;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_StartLocation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_StartLocation = { "StartLocation", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowHitscanFireEffectFP_Parms, StartLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_StartLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_StartLocation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_EndLocation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_EndLocation = { "EndLocation", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowHitscanFireEffectFP_Parms, EndLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_EndLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_EndLocation_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_StartLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::NewProp_EndLocation,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Shows first person cosmetic hitscan bullet trace\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Shows first person cosmetic hitscan bullet trace" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ShowHitscanFireEffectFP", nullptr, nullptr, sizeof(fpscharacter_eventShowHitscanFireEffectFP_Parms), Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48880800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StartLocation;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndLocation;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::NewProp_StartLocation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::NewProp_StartLocation = { "StartLocation", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowHitscanFireEffectTP_Parms, StartLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::NewProp_StartLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::NewProp_StartLocation_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::NewProp_EndLocation = { "EndLocation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowHitscanFireEffectTP_Parms, EndLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::NewProp_StartLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::NewProp_EndLocation,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Shows cosmetic hitscan bullet trace for third person\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Shows cosmetic hitscan bullet trace for third person" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ShowHitscanFireEffectTP", nullptr, nullptr, sizeof(fpscharacter_eventShowHitscanFireEffectTP_Parms), Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48880800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_SingleRaycastInCameraDirection_Statics
 	{
 		struct fpscharacter_eventSingleRaycastInCameraDirection_Parms
@@ -2709,6 +2848,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ClientHitscanCheckFire, "ClientHitscanCheckFire" }, // 2018308127
 		{ &Z_Construct_UFunction_Afpscharacter_ClientValidateFire, "ClientValidateFire" }, // 4176438478
 		{ &Z_Construct_UFunction_Afpscharacter_CollisionInteractCheck, "CollisionInteractCheck" }, // 2820686847
+		{ &Z_Construct_UFunction_Afpscharacter_DamageLogic, "DamageLogic" }, // 458781228
 #if WITH_EDITOR
 		{ &Z_Construct_UFunction_Afpscharacter_DebugFunction, "DebugFunction" }, // 2576565601
 #endif //WITH_EDITOR
@@ -2754,6 +2894,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentHealth, "SetCurrentHealth" }, // 2344965713
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentStamina, "SetCurrentStamina" }, // 3815298331
 		{ &Z_Construct_UFunction_Afpscharacter_SetSprinting, "SetSprinting" }, // 3499647627
+		{ &Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP, "ShowHitscanFireEffectFP" }, // 208323572
+		{ &Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP, "ShowHitscanFireEffectTP" }, // 1103101919
 		{ &Z_Construct_UFunction_Afpscharacter_SingleRaycastInCameraDirection, "SingleRaycastInCameraDirection" }, // 4236554935
 		{ &Z_Construct_UFunction_Afpscharacter_StartJump, "StartJump" }, // 694071235
 		{ &Z_Construct_UFunction_Afpscharacter_StopJump, "StopJump" }, // 3383577609
@@ -3272,7 +3414,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 2265921400);
+	IMPLEMENT_CLASS(Afpscharacter, 3620277273);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

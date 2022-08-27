@@ -71,12 +71,114 @@ struct FWeaponDataStruct
 {
 	GENERATED_BODY()
 
+public:
+	//The human-readable weapon name, stored for things such as interaction text
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
 		FName WeaponName;
+	
+	//The details containing how the weapon is positioned in space, and attachment and muzzle positions
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponPositionalDetails PositionalDetails;
+
+	//The asset references for the gun
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponVisualAssets VisualAssets;
+
+	//The metadata storing gun info like fire type
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponMetaData MetaData;
+
+	//The stats of the weapon such as damage
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponStats Stats;
+
+};
+
+USTRUCT(BlueprintType)
+struct FWeaponPositionalDetails
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		//Stores translation vectors to position weapon correctly
+		FVector BasePosition;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		//Used to ensure rotation of gun is consistent to make it look pretty.
+		FRotator BaseRotation;
+
+	//Ensures correct scale
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FVector BaseScale;
+
+	//Ensures correct scale for TP
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FVector TPBaseScale;
+
+	//Ensures correct rotation fro TP
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FRotator TPBaseRotation;
+
+	//Ensures correct position for TP
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FVector TPBasePosition;
+
+	//Muzzle position relative to base position
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		FVector MuzzlePosition;
+};
+
+USTRUCT(BlueprintType)
+struct FWeaponVisualAssets
+{
+	GENERATED_BODY()
+
+public:
+	//Mesh of gun
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		USkeletalMesh* GunMesh;
+
+	//Particle system for gun tracers
+	
+};
+
+USTRUCT(BlueprintType)
+struct FWeaponMetaData
+{
+	GENERATED_BODY()
+
+public:
+	//Actual gun model name
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		Guns GunModel;
+
+	//Type of weapon
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		WeaponType WAWeaponType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		//Whether gun fires as burst, auto etc
+		FireMode WAWeaponFireType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		//Hit check type
+		FireType WAWeaponHitDetectionType;
+
+	//Gun is primary, secondary
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		Equips TypeOfEquip;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 		TSubclassOf<class AProjectileBullet> ProjectileClass;
+};
 
+USTRUCT(BlueprintType)
+struct FWeaponStats
+{
+	GENERATED_BODY()
+
+public:
 	//Max range of hitscan weapons in cm
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float MaxRange;
@@ -105,55 +207,6 @@ struct FWeaponDataStruct
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float ProjectileSpeed;
 
-	//Type of weapon
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		WeaponType WAWeaponType;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		//Whether gun fires as burst, auto etc
-		FireMode WAWeaponFireType;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		//Hit check type
-		FireType WAWeaponHitDetectionType;
-
-	//Mesh of gun
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		USkeletalMesh* GunMesh;
-
-	//Gun is primary, secondary
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		Equips TypeOfEquip;
-
-	//Actual gun model
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		Guns GunModel;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		//Stores translation vectors to position weapon correctly
-		FVector BasePosition;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		//Used to ensure rotation of gun is consistent to make it look pretty.
-		FRotator BaseRotation;
-
-	//Ensures correct scale
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		FVector BaseScale;
-	
-	//Ensures correct scale for TP
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		FVector TPBaseScale;
-	
-	//Ensures correct rotation fro TP
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		FRotator TPBaseRotation;
-	
-	//Ensures correct position for TP
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		FVector TPBasePosition;
-
-	
 };
 
 UCLASS()

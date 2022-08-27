@@ -11,7 +11,7 @@ AWeaponActor::AWeaponActor()
 
 	RootSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
 	SetRootComponent(RootSceneComponent);
-	SetActorScale3D(WeaponData.BaseScale);
+	SetActorScale3D(WeaponData.PositionalDetails.BaseScale);
 
 	//Setting up weapon's mesh
 	StaticGunMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GunMesh"));
@@ -39,7 +39,7 @@ void AWeaponActor::BeginPlay()
 {
 	Super::BeginPlay();
 	//placeholder to set mag ammo to max ammo, will need changing later.
-	WeaponData.MagAmmo = WeaponData.MaxMagSize;
+	WeaponData.Stats.MagAmmo = WeaponData.Stats.MaxMagSize;
 	
 }
 

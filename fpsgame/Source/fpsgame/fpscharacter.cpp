@@ -663,7 +663,7 @@ bool Afpscharacter::MultiRaycastInCameraDirection(TArray<FHitResult>& ResultOutH
 	FCollisionQueryParams CollisionParams;
 	
 	//Ignore ourselves
-	CollisionParams.AddIgnoredActor(GetOwner());
+	CollisionParams.AddIgnoredActor(this);
 	CollisionParams.bReturnPhysicalMaterial = true;
 
 	//UE_LOG(LogTemp, Warning, TEXT("The Actor's name is %s"), *GetOwner()->GetName());
@@ -811,7 +811,7 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 
 	//Get weapon data, and weapon equip type
 	FWeaponDataStruct WeaponData = WeaponPickup->GetWeaponDataStruct();
-	Equips WeaponEquipType = WeaponData.TypeOfEquip;
+	Equips WeaponEquipType = WeaponData.MetaData.TypeOfEquip;
 	
 	//First we must decide whether to switch our primary or secondary depending on which weapon type the gun is.
 	switch (WeaponEquipType)
@@ -889,7 +889,7 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 {
 	//Switch to primary gun
 	//Stop crashes if no primary exists
-	if (PrimaryData.GunModel == Guns::NONE)
+	if (PrimaryData.MetaData.GunModel == Guns::NONE)
 	{
 		return;
 	}
@@ -907,7 +907,7 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 	}
 	//Still need a lot fo equip logic here
 
-	BulletClass = PrimaryData.ProjectileClass;
+	BulletClass = PrimaryData.MetaData.ProjectileClass;
 
 	EquippedGun = Equips::PRIMARY;
 	PositionAndAttachGunInTP(PrimaryData);
@@ -949,7 +949,7 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 {
 	
 	//Stop crashes if no secondary exists
-	if (SecondaryData.GunModel == Guns::NONE)
+	if (SecondaryData.MetaData.GunModel == Guns::NONE)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("ahh no"));
 		return;
@@ -970,7 +970,7 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	}
 
 	PositionAndAttachGunInTP(SecondaryData);
-	BulletClass = SecondaryData.ProjectileClass;
+	BulletClass = SecondaryData.MetaData.ProjectileClass;
 	EquippedGun = Equips::SECONDARY;
 	UpdateAmmoDisplay();
 }
@@ -986,18 +986,18 @@ void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 
 	//Correctly positioning gun
 	//Takes into account left-handedness
-	FVector PositionVector = (IsLeftHanded) ? FVector(GunToEquip.BasePosition.X, -1.0f * GunToEquip.BasePosition.Y, GunToEquip.BasePosition.Z) : GunToEquip.BasePosition;
-	FRotator PositionRotator = (IsLeftHanded) ? FRotator(GunToEquip.BaseRotation.Pitch, GunToEquip.BaseRotation.Yaw, -1.0f * GunToEquip.BaseRotation.Roll) : GunToEquip.BaseRotation;
+	FVector PositionVector = (IsLeftHanded) ? FVector(GunToEquip.PositionalDetails.BasePosition.X, -1.0f * GunToEquip.PositionalDetails.BasePosition.Y, GunToEquip.PositionalDetails.BasePosition.Z) : GunToEquip.PositionalDetails.BasePosition;
+	FRotator PositionRotator = (IsLeftHanded) ? FRotator(GunToEquip.PositionalDetails.BaseRotation.Pitch, GunToEquip.PositionalDetails.BaseRotation.Yaw, -1.0f * GunToEquip.PositionalDetails.BaseRotation.Roll) : GunToEquip.PositionalDetails.BaseRotation;
 
 	FPSGunComponent->SetRelativeLocation(PositionVector);
 	FPSGunComponent->SetRelativeRotation(PositionRotator);
-	FPSGunComponent->SetRelativeScale3D(GunToEquip.BaseScale);
+	FPSGunComponent->SetRelativeScale3D(GunToEquip.PositionalDetails.BaseScale);
 
 	//Attach gun to scene component
 	//FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
 
 	//Set gun mesh to be fps mesh
-	FPSMesh->SetSkeletalMesh(GunToEquip.GunMesh);
+	FPSMesh->SetSkeletalMesh(GunToEquip.VisualAssets.GunMesh);
 
 	//The above way is easier than showing gun object as it allows us to avoid having to reset eveyrthing when gun object is dropped again.
 
@@ -1008,11 +1008,11 @@ void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 {
 	//Correctly positioning gun, we do not account for left-handedness in TP as there is no need
-	ThirdPersonGunMesh->SetRelativeLocation(GunToEquip.TPBasePosition);
-	ThirdPersonGunMesh->SetRelativeRotation(GunToEquip.TPBaseRotation);
-	ThirdPersonGunMesh->SetRelativeScale3D(GunToEquip.TPBaseScale);
+	ThirdPersonGunMesh->SetRelativeLocation(GunToEquip.PositionalDetails.TPBasePosition);
+	ThirdPersonGunMesh->SetRelativeRotation(GunToEquip.PositionalDetails.TPBaseRotation);
+	ThirdPersonGunMesh->SetRelativeScale3D(GunToEquip.PositionalDetails.TPBaseScale);
 
-	ThirdPersonGunMesh->SetSkeletalMesh(GunToEquip.GunMesh);
+	ThirdPersonGunMesh->SetSkeletalMesh(GunToEquip.VisualAssets.GunMesh);
 }
 
 
@@ -1020,16 +1020,16 @@ void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 void Afpscharacter::ClientValidateFire()
 {
 	//If we dont have a gun equipped, return
-	if ((EquippedGun == Equips::PRIMARY && PrimaryData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.GunModel == Guns::NONE))
+	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
 		return;
 	}
 	//UE_LOG(LogTemp, Warning, TEXT("ClientValidateFire"));
 	//Checking if we have ammo for firing
-	if (GetCurrentlyEquippedWeaponData().MagAmmo > 0)
+	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0)
 	{
 		//Activate firing functions based on firing type
-		switch (GetCurrentlyEquippedWeaponData().WAWeaponHitDetectionType)
+		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
 			ClientHitscanCheckFire();
@@ -1052,7 +1052,7 @@ void Afpscharacter::SetCurrentAmmo(int NewAmmo)
 {
 
 	//Should only be called on server, no effect if called on client.
-	if ((EquippedGun == Equips::PRIMARY && PrimaryData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.GunModel == Guns::NONE))
+	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
 		return;
 	}
@@ -1061,10 +1061,10 @@ void Afpscharacter::SetCurrentAmmo(int NewAmmo)
 		switch (EquippedGun)
 		{
 		case Equips::PRIMARY:
-			PrimaryData.MagAmmo = FMath::Clamp(NewAmmo, 0, PrimaryData.MaxMagSize);
+			PrimaryData.Stats.MagAmmo = FMath::Clamp(NewAmmo, 0, PrimaryData.Stats.MaxMagSize);
 			break;
 		case Equips::SECONDARY:
-			SecondaryData.MagAmmo = FMath::Clamp(NewAmmo, 0, SecondaryData.MaxMagSize);
+			SecondaryData.Stats.MagAmmo = FMath::Clamp(NewAmmo, 0, SecondaryData.Stats.MaxMagSize);
 			break;
 		default:
 			break;
@@ -1077,9 +1077,9 @@ void Afpscharacter::SetCurrentAmmo(int NewAmmo)
 void Afpscharacter::UpdateAmmoDisplay()
 {
 	AmmoDisplay = FString();
-	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().MagAmmo);
+	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().Stats.MagAmmo);
 	AmmoDisplay.Append(TEXT("/"));
-	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().MaxMagSize);
+	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().Stats.MaxMagSize);
 }
 
 void Afpscharacter::ClientHitscanCheckFire()
@@ -1088,9 +1088,11 @@ void Afpscharacter::ClientHitscanCheckFire()
 	//to make it feel more responsive (tho if it was a miss serverside we will get ghost markers, so maybe make this an option).
 	TArray<FHitResult> HitResults;
 	//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
-	if (MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().MaxRange))
+	if (MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange))
 	{
-		
+		//Show visual effects using final point as the end point for tracer
+		ShowHitscanFireEffectFP(GetCurrentlyEquippedWeaponData().PositionalDetails.MuzzlePosition , HitResults.Last().Location);
+
 		//If we score a hit this is the logic that will be played
 		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 		//Run RPC on server to ensure shot hit
@@ -1103,6 +1105,15 @@ void Afpscharacter::ClientHitscanCheckFire()
 		}
 
 	}
+	else
+	{
+		//Still need to show visual effects, use the max range as the end point.
+		ShowHitscanFireEffectFP(
+			GetCurrentlyEquippedWeaponData().PositionalDetails.MuzzlePosition,
+			(GetCurrentlyEquippedWeaponData().PositionalDetails.MuzzlePosition + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange))
+		);
+
+	}
 }
 
 void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
@@ -1111,17 +1122,17 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 	//checks if the player can actually fire with server variables
 	//If we dont have a gun equipped, return
 
-	if ((EquippedGun == Equips::PRIMARY && PrimaryData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.GunModel == Guns::NONE))
+	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
 		return;
 	}
 
 	//UE_LOG(LogTemp, Warning, TEXT("Server validate fire"));
 	//Checking if we have ammo for firing
-	if (GetCurrentlyEquippedWeaponData().MagAmmo > 0)
+	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0)
 	{
 		//Activate firing functions based on firing type
-		switch (GetCurrentlyEquippedWeaponData().WAWeaponHitDetectionType)
+		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
 			ServerHitscanCheckFire(ClientFireTime);
@@ -1164,6 +1175,8 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("invsqW"));
 	}
+	//Do cosmetic firing first
+	//ShowHitscanFireEffectTP();
 	//UE_LOG(LogTemp, Warning, TEXT("ServerHitscanCheckFire start"));
 	//STAGE 1
 	//First we need to get the current game state reference for ease of use later
@@ -1263,6 +1276,8 @@ void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruc
 {
 	//UE_LOG(LogTemp, Warning, TEXT("Final stages"));
 	//Call a gamemode function which rewinds everything
+
+	//NOTE REWIND CURRENTLY DISABLED DUE TO BUGS, NEEDS MORE TESTING IN ACTUAL SCENARIOS
 	//Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->RewindActors(ValuesToBeUsedInRewind);
 
 	//Perform the actual hitscan with the hitscan function
@@ -1276,14 +1291,24 @@ void Afpscharacter::ServerPerformHitscan()
 {
 	//Here is where we actually perform the hitscan to see if we hit anything.
 	TArray<FHitResult> HitResults;
-	MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().MaxRange);
+	MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
 	if (HitResults.Num() > 0)
 	{
 		//If we score a hit we must look at all the hit results and create hit markers and sound fx and stuff and deal dmg
 		UE_LOG(LogTemp, Warning, TEXT("Got a hit"));
-
+		//REMEMBER - HIT RESULTS WILL SHOW ALL BODY PARTS OF AN ACTOR WHICH HAS BEEN HIT - ONLY INCLUDE THE FIRST ONE.
+		
 
 	}
-
+	for (auto& El : HitResults)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *El.Actor->GetName())
+	}
 	
 }
+
+void Afpscharacter::DamageLogic()
+{
+
+}
+
