@@ -8,6 +8,7 @@
 #include "Components/BoxComponent.h"
 #include "FPSProjectile.h"
 #include "InteractableObjectComponent.h"
+#include "NiagaraSystem.h"
 #include "ProjectileBullet.h"
 #include "WeaponActor.generated.h"
 
@@ -67,34 +68,6 @@ UENUM(BlueprintType)
 	};
 
 USTRUCT(BlueprintType)
-struct FWeaponDataStruct
-{
-	GENERATED_BODY()
-
-public:
-	//The human-readable weapon name, stored for things such as interaction text
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
-		FName WeaponName;
-	
-	//The details containing how the weapon is positioned in space, and attachment and muzzle positions
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FWeaponPositionalDetails PositionalDetails;
-
-	//The asset references for the gun
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FWeaponVisualAssets VisualAssets;
-
-	//The metadata storing gun info like fire type
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FWeaponMetaData MetaData;
-
-	//The stats of the weapon such as damage
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FWeaponStats Stats;
-
-};
-
-USTRUCT(BlueprintType)
 struct FWeaponPositionalDetails
 {
 	GENERATED_BODY()
@@ -124,7 +97,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		FVector TPBasePosition;
 
-	//Muzzle position relative to base position
+	//Muzzle position relative to base position, will be scaled for you
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		FVector MuzzlePosition;
 };
@@ -139,8 +112,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		USkeletalMesh* GunMesh;
 
-	//Particle system for gun tracers
-	
+	//Particle system for gun tracers when using hitscan weapons.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		UNiagaraSystem* TracerEffect;
 };
 
 USTRUCT(BlueprintType)
@@ -209,6 +183,38 @@ public:
 
 };
 
+USTRUCT(BlueprintType)
+struct FWeaponDataStruct
+{
+	GENERATED_BODY()
+
+public:
+	//The human-readable weapon name, stored for things such as interaction text
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Info")
+		FName WeaponName;
+	
+	//The details containing how the weapon is positioned in space, and attachment and muzzle positions
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponPositionalDetails PositionalDetails;
+
+	//The asset references for the gun
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponVisualAssets VisualAssets;
+
+	//The metadata storing gun info like fire type
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponMetaData MetaData;
+
+	//The stats of the weapon such as damage
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponStats Stats;
+
+};
+
+
+
+
+
 UCLASS()
 class FPSGAME_API AWeaponActor : public AActor
 {
@@ -239,8 +245,8 @@ public:
 		USceneComponent* RootSceneComponent;
 
 	//Used to detect whether gun is near player for pickups
-	UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")
-		UBoxComponent* CollisionComponent;
+	//UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")
+	//	UBoxComponent* CollisionComponent;
 
 	UPROPERTY(EditAnywhere, Category = "Weapon Collision")
 		FVector BoxCollisionSize;

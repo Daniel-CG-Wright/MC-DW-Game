@@ -11,6 +11,7 @@
 #include "RewindComponent.h"
 #include "FPSGameState.h"
 #include "FPSGameModeDefault.h"
+#include "NiagaraSystem.h"
 
 //Should always be the last include
 #include "fpscharacter.generated.h"
@@ -83,11 +84,11 @@ protected:
 
 	//Shows cosmetic hitscan bullet trace for third person
 	UFUNCTION(BlueprintImplementableEvent)
-		void ShowHitscanFireEffectTP(FVector const StartLocation, FVector EndLocation) const;
+		void ShowHitscanFireEffectTP(FVector const StartLocation, FVector const EndLocation, UNiagaraSystem* TracerEffect) const;
 
 	//Shows first person cosmetic hitscan bullet trace
 	UFUNCTION(BlueprintImplementableEvent)
-		void ShowHitscanFireEffectFP(FVector const StartLocation, FVector const EndLocation) const;
+		void ShowHitscanFireEffectFP(FVector const StartLocation, FVector const EndLocation, UNiagaraSystem* TracerEffect) const;
 
 	
 	
@@ -443,6 +444,9 @@ public:
 	//Mesh for third person
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 		USkeletalMeshComponent* ThirdPersonGunMesh;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		USceneComponent* FPSMuzzleComponent;
 
 	UPROPERTY(EditAnywhere, Category = "Crouch")
 		float CrouchTime;

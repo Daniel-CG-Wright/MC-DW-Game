@@ -19,13 +19,13 @@ AWeaponActor::AWeaponActor()
 	//GunMesh->SetRelativeScale3D(BaseScale);
 
 	//Creating collision component
-	CollisionComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
-	CollisionComponent->SetupAttachment(RootSceneComponent);
+	//CollisionComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
+	//CollisionComponent->SetupAttachment(RootSceneComponent);
 
-	BoxCollisionSize = FVector(15.0f, 15.0f, 15.0f);
+	//BoxCollisionSize = FVector(15.0f, 15.0f, 15.0f);
 
 	//Sizing colliison component
-	CollisionComponent->InitBoxExtent(BoxCollisionSize);
+	//CollisionComponent->InitBoxExtent(BoxCollisionSize);
 
 	//Creating interaction component
 	InteractionComponent = CreateDefaultSubobject<UInteractableObjectComponent>(TEXT("InteractionComponent"));

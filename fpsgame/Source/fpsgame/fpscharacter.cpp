@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Engine\Classes\GameFramework\CharacterMovementComponent.h"
 #include "TimerManager.h"
-//#include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "DrawDebugHelpers.h"
 
 // Sets default values
@@ -52,6 +52,10 @@ Afpscharacter::Afpscharacter()
 	//Creating the FPS weapon scene component, which is separate from the 3rd person gun mesh.
 	FPSGunComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Scene Component"));
 	FPSGunComponent->SetupAttachment(FPSCameraComponent);
+
+	FPSMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Muzzle Component"));
+	FPSMuzzleComponent->SetupAttachment(FPSMesh);
+
 	/*The above scene component is where the weapon object will actually attach to when equipped.*/
 
 	//Attaches the FPS mesh to the FPS camera
@@ -993,6 +997,7 @@ void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 	FPSGunComponent->SetRelativeRotation(PositionRotator);
 	FPSGunComponent->SetRelativeScale3D(GunToEquip.PositionalDetails.BaseScale);
 
+	FPSMuzzleComponent->SetRelativeLocation(GunToEquip.PositionalDetails.MuzzlePosition);
 	//Attach gun to scene component
 	//FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
 
@@ -1084,14 +1089,38 @@ void Afpscharacter::UpdateAmmoDisplay()
 
 void Afpscharacter::ClientHitscanCheckFire()
 {
+	//This variable stores the start point of any tracer emitter particles
+	FVector EmitterStartPoint = FPSMuzzleComponent->GetComponentLocation();
+
+	UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint, 10.0f, 10, FLinearColor::Green, 5.0f, 1.0f);
+
 	//Called when we can fire. Should probably implement sounds for client to hear on this function,a s well as clientside hit images and stuff
 	//to make it feel more responsive (tho if it was a miss serverside we will get ghost markers, so maybe make this an option).
 	TArray<FHitResult> HitResults;
 	//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
-	if (MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange))
+	MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
+	if (HitResults.Num() > 0)
 	{
 		//Show visual effects using final point as the end point for tracer
-		ShowHitscanFireEffectFP(GetCurrentlyEquippedWeaponData().PositionalDetails.MuzzlePosition , HitResults.Last().Location);
+
+		//If the last hit was a blocking hit then we use that, otherwise we just use up until the range.
+		//This will need fine tuning
+		if (HitResults.Last().bBlockingHit)
+		{
+			ShowHitscanFireEffectFP(EmitterStartPoint, HitResults.Last().Location, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
+			UKismetSystemLibrary::DrawDebugSphere(GetWorld(), HitResults.Last().Location, 10.0f, 10, FLinearColor::Red, 5.0f, 1.0f);
+
+		}
+		else
+		{
+			ShowHitscanFireEffectFP(
+				EmitterStartPoint,
+				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
+				GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
+			);
+			UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange), 10.0f, 10, FLinearColor::Blue, 5.0f, 1.0f);
+
+		}
 
 		//If we score a hit this is the logic that will be played
 		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
@@ -1109,9 +1138,11 @@ void Afpscharacter::ClientHitscanCheckFire()
 	{
 		//Still need to show visual effects, use the max range as the end point.
 		ShowHitscanFireEffectFP(
-			GetCurrentlyEquippedWeaponData().PositionalDetails.MuzzlePosition,
-			(GetCurrentlyEquippedWeaponData().PositionalDetails.MuzzlePosition + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange))
+			EmitterStartPoint,
+			(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
+			GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
 		);
+		UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange), 10.0f, 10, FLinearColor::Yellow, 5.0f, 1.0f);
 
 	}
 }
@@ -1300,10 +1331,10 @@ void Afpscharacter::ServerPerformHitscan()
 		
 
 	}
-	for (auto& El : HitResults)
+	/*for (auto& El : HitResults)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *El.Actor->GetName())
-	}
+	}*/
 	
 }
 
