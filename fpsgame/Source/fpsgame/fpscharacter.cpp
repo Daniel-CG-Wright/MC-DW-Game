@@ -1108,7 +1108,6 @@ void Afpscharacter::ClientHitscanCheckFire()
 		if (HitResults.Last().bBlockingHit)
 		{
 			ShowHitscanFireEffectFP(EmitterStartPoint, HitResults.Last().Location, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
-			UKismetSystemLibrary::DrawDebugSphere(GetWorld(), HitResults.Last().Location, 10.0f, 10, FLinearColor::Red, 5.0f, 1.0f);
 
 		}
 		else
@@ -1118,7 +1117,6 @@ void Afpscharacter::ClientHitscanCheckFire()
 				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
 				GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
 			);
-			UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange), 10.0f, 10, FLinearColor::Blue, 5.0f, 1.0f);
 
 		}
 
@@ -1142,7 +1140,6 @@ void Afpscharacter::ClientHitscanCheckFire()
 			(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
 			GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
 		);
-		UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange), 10.0f, 10, FLinearColor::Yellow, 5.0f, 1.0f);
 
 	}
 }
