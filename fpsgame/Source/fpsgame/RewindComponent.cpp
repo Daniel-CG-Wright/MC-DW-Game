@@ -16,6 +16,11 @@ URewindComponent::URewindComponent()
 	// ...
 }
 
+//NOTE ON TIME STAMPS
+/*
+added a WorldTime variable that updates on tick and also readjusts itself to a server sent timestamp once a second, it seems more accurate than hoping the GameState World Server Seconds is synced up since it tends to drift
+*/
+//tRY The above to implement an accurate network clock.
 
 // Called when the game starts
 void URewindComponent::BeginPlay()

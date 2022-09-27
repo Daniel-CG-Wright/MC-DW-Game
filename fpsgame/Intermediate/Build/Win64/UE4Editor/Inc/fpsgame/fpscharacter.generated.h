@@ -209,6 +209,18 @@ class UNiagaraSystem;
 		FVector StartLocation; \
 		FVector EndLocation; \
 		UNiagaraSystem* TracerEffect; \
+	}; \
+	struct fpscharacter_eventShowMuzzleFlashFP_Parms \
+	{ \
+		FVector StartLocation; \
+		FVector Direction; \
+		UNiagaraSystem* MuzzleFlashEffect; \
+	}; \
+	struct fpscharacter_eventShowMuzzleFlashTP_Parms \
+	{ \
+		FVector StartLocation; \
+		FVector Direction; \
+		UNiagaraSystem* MuzzleFlashEffect; \
 	};
 
 

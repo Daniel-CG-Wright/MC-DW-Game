@@ -496,13 +496,19 @@ void Afpscharacter::OnHealthUpdate()
 		if (CurrentHealth <= 0)
 		{
 			//Out of health - death events here
+			
 		}
 	}
 
 	//Server-specific functionality
 	if (GetLocalRole() == ROLE_Authority)
 	{
+		if (CurrentHealth <= 0)
+		{
+			//Out of health - death events here
+			UE_LOG(LogTemp, Warning, TEXT("%s has been killed"), *GetName());
 
+		}
 	}
 
 	//Functions that occur on all machines - such as special death effects
@@ -527,6 +533,7 @@ void Afpscharacter::SetCurrentHealth(float healthValue)
 
 float Afpscharacter::TakeDamage(float DamageTaken, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Damaging"));
 	//Applying simple health deduction right now
 	float damageApplied = CurrentHealth - DamageTaken;
 	SetCurrentHealth(damageApplied);
@@ -1112,6 +1119,12 @@ void Afpscharacter::ClientHitscanCheckFire()
 		}
 		else
 		{
+			ShowMuzzleFlashFP(
+				EmitterStartPoint,
+				FPSMuzzleComponent->GetForwardVector(),
+				GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
+			);
+
 			ShowHitscanFireEffectFP(
 				EmitterStartPoint,
 				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
@@ -1306,13 +1319,21 @@ void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruc
 	//Call a gamemode function which rewinds everything
 
 	//NOTE REWIND CURRENTLY DISABLED DUE TO BUGS, NEEDS MORE TESTING IN ACTUAL SCENARIOS
-	//Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->RewindActors(ValuesToBeUsedInRewind);
+	if (doRewind)
+	{
+		Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->RewindActors(ValuesToBeUsedInRewind);
+
+	}
 
 	//Perform the actual hitscan with the hitscan function
 	ServerPerformHitscan();
 
 	//Call a gamemode function which reverts everything to the normal state
-	//Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->ResetActorPositionsToBefore();
+	if (doRewind)
+	{
+		Cast<AFPSGameModeDefault>(GetWorld()->GetAuthGameMode())->ResetActorPositionsToBefore();
+
+	}
 }
 
 void Afpscharacter::ServerPerformHitscan()
@@ -1335,8 +1356,42 @@ void Afpscharacter::ServerPerformHitscan()
 	
 }
 
-void Afpscharacter::DamageLogic()
+void Afpscharacter::DamageLogic(TArray<FHitResult> const HitResults)
 {
+
+	//Here is where we apply damage to actors which have been hit.
+
+	//This list stores the actors which have been registered, to only register damage to each actor once.
+
+	//27/9/22 ALERT CAUSE OF ERROR PROBABLY HERE
+	TArray<AActor> HitActors;
+
+	//TODO ADD TEAM PROTECTION (avoiding friendly fire)
+
+	//We iterate over the hit results, to perform the damage as needed
+	for (FHitResult Element : HitResults)
+	{
+		//First check if actor is already registered
+		if (HitActors.Contains(Element.GetActor()))
+		{
+			continue;
+		}
+
+		//Register actor if not registered
+		//WARNING MAY BE INEFFICIENT TO USE ARRAY
+		HitActors.Emplace(Element.GetActor());
+
+		//Now we test if it was a player character, and do damage to it if it was accordingly:
+		if (Element.GetActor()->IsA(Afpscharacter::StaticClass()))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Yes"));
+			//do damage
+			Cast<Afpscharacter>(Element.GetActor())->TakeDamage(GetCurrentlyEquippedWeaponData().Stats.BaseDamage, FDamageEvent(), GetController(), this);
+
+			//Probably TODO add a radial damage indicator thing
+			//TODO add damage animations and sounds and ting for serverside, clientside can also do its own thing.
+		}
+	}
 
 }
 

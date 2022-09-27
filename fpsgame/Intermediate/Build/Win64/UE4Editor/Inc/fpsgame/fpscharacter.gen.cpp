@@ -18,8 +18,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponDataStruct();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponDataStruct();
 	ENGINE_API UEnum* Z_Construct_UEnum_Engine_ECollisionChannel();
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor_NoRegister();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FRewindDataStruct();
@@ -425,9 +425,10 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	}
 	DEFINE_FUNCTION(Afpscharacter::execDamageLogic)
 	{
+		P_GET_TARRAY(FHitResult,Z_Param_HitResults);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->DamageLogic();
+		P_THIS->DamageLogic(Z_Param_HitResults);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execServerPerformHitscan)
@@ -563,6 +564,24 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		Parms.EndLocation=EndLocation;
 		Parms.TracerEffect=TracerEffect;
 		const_cast<Afpscharacter*>(this)->ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ShowHitscanFireEffectTP),&Parms);
+	}
+	static FName NAME_Afpscharacter_ShowMuzzleFlashFP = FName(TEXT("ShowMuzzleFlashFP"));
+	void Afpscharacter::ShowMuzzleFlashFP(const FVector StartLocation, const FVector Direction, UNiagaraSystem* MuzzleFlashEffect) const
+	{
+		fpscharacter_eventShowMuzzleFlashFP_Parms Parms;
+		Parms.StartLocation=StartLocation;
+		Parms.Direction=Direction;
+		Parms.MuzzleFlashEffect=MuzzleFlashEffect;
+		const_cast<Afpscharacter*>(this)->ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ShowMuzzleFlashFP),&Parms);
+	}
+	static FName NAME_Afpscharacter_ShowMuzzleFlashTP = FName(TEXT("ShowMuzzleFlashTP"));
+	void Afpscharacter::ShowMuzzleFlashTP(const FVector StartLocation, const FVector Direction, UNiagaraSystem* MuzzleFlashEffect) const
+	{
+		fpscharacter_eventShowMuzzleFlashTP_Parms Parms;
+		Parms.StartLocation=StartLocation;
+		Parms.Direction=Direction;
+		Parms.MuzzleFlashEffect=MuzzleFlashEffect;
+		const_cast<Afpscharacter*>(this)->ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ShowMuzzleFlashTP),&Parms);
 	}
 	void Afpscharacter::StaticRegisterNativesAfpscharacter()
 	{
@@ -854,10 +873,31 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	}
 	struct Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics
 	{
+		struct fpscharacter_eventDamageLogic_Parms
+		{
+			TArray<FHitResult> HitResults;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HitResults_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HitResults_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_HitResults;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::NewProp_HitResults_Inner = { "HitResults", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::NewProp_HitResults_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::NewProp_HitResults = { "HitResults", nullptr, (EPropertyFlags)0x0010008000000082, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventDamageLogic_Parms, HitResults), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::NewProp_HitResults_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::NewProp_HitResults_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::NewProp_HitResults_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::NewProp_HitResults,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::Function_MetaDataParams[] = {
@@ -866,7 +906,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ "ToolTip", "Performs the damage logic on hitting targets." },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "DamageLogic", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "DamageLogic", nullptr, nullptr, sizeof(fpscharacter_eventDamageLogic_Parms), Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_DamageLogic_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_Afpscharacter_DamageLogic()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -2317,6 +2357,110 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StartLocation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Direction_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Direction;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MuzzleFlashEffect;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_StartLocation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_StartLocation = { "StartLocation", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowMuzzleFlashFP_Parms, StartLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_StartLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_StartLocation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_Direction_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowMuzzleFlashFP_Parms, Direction), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_Direction_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_Direction_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_MuzzleFlashEffect = { "MuzzleFlashEffect", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowMuzzleFlashFP_Parms, MuzzleFlashEffect), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_StartLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_Direction,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::NewProp_MuzzleFlashEffect,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Shows cosmetic muzzle flash in first person\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Shows cosmetic muzzle flash in first person" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ShowMuzzleFlashFP", nullptr, nullptr, sizeof(fpscharacter_eventShowMuzzleFlashFP_Parms), Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48880800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StartLocation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Direction_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Direction;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MuzzleFlashEffect;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_StartLocation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_StartLocation = { "StartLocation", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowMuzzleFlashTP_Parms, StartLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_StartLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_StartLocation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_Direction_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowMuzzleFlashTP_Parms, Direction), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_Direction_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_Direction_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_MuzzleFlashEffect = { "MuzzleFlashEffect", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventShowMuzzleFlashTP_Parms, MuzzleFlashEffect), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_StartLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_Direction,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::NewProp_MuzzleFlashEffect,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Shows cosmetic muzzle flash in third person\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Shows cosmetic muzzle flash in third person" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ShowMuzzleFlashTP", nullptr, nullptr, sizeof(fpscharacter_eventShowMuzzleFlashTP_Parms), Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48880800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_SingleRaycastInCameraDirection_Statics
 	{
 		struct fpscharacter_eventSingleRaycastInCameraDirection_Parms
@@ -2869,7 +3013,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ClientHitscanCheckFire, "ClientHitscanCheckFire" }, // 2018308127
 		{ &Z_Construct_UFunction_Afpscharacter_ClientValidateFire, "ClientValidateFire" }, // 4176438478
 		{ &Z_Construct_UFunction_Afpscharacter_CollisionInteractCheck, "CollisionInteractCheck" }, // 2820686847
-		{ &Z_Construct_UFunction_Afpscharacter_DamageLogic, "DamageLogic" }, // 458781228
+		{ &Z_Construct_UFunction_Afpscharacter_DamageLogic, "DamageLogic" }, // 2452030100
 #if WITH_EDITOR
 		{ &Z_Construct_UFunction_Afpscharacter_DebugFunction, "DebugFunction" }, // 2576565601
 #endif //WITH_EDITOR
@@ -2917,6 +3061,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_SetSprinting, "SetSprinting" }, // 3499647627
 		{ &Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP, "ShowHitscanFireEffectFP" }, // 2355345348
 		{ &Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP, "ShowHitscanFireEffectTP" }, // 1567916911
+		{ &Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP, "ShowMuzzleFlashFP" }, // 3421156960
+		{ &Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP, "ShowMuzzleFlashTP" }, // 246472214
 		{ &Z_Construct_UFunction_Afpscharacter_SingleRaycastInCameraDirection, "SingleRaycastInCameraDirection" }, // 4236554935
 		{ &Z_Construct_UFunction_Afpscharacter_StartJump, "StartJump" }, // 694071235
 		{ &Z_Construct_UFunction_Afpscharacter_StopJump, "StopJump" }, // 3383577609
@@ -3444,7 +3590,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 2430501810);
+	IMPLEMENT_CLASS(Afpscharacter, 154772514);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

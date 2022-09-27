@@ -33,6 +33,10 @@ public:
 	//Property replication
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+private:
+	//Whether or not to perform rewind component rewinding
+	bool doRewind = false;
+
 protected:
 	//Records whether player is left handed - if so, mirrors gun transform and rotation on equip to be positioned on left side.
 	UPROPERTY(EditAnywhere)
@@ -80,7 +84,7 @@ protected:
 	
 	//Performs the damage logic on hitting targets.
 	UFUNCTION()
-		void DamageLogic();
+		void DamageLogic(TArray<FHitResult> const HitResults);
 
 	//Shows cosmetic hitscan bullet trace for third person
 	UFUNCTION(BlueprintImplementableEvent)
@@ -89,6 +93,14 @@ protected:
 	//Shows first person cosmetic hitscan bullet trace
 	UFUNCTION(BlueprintImplementableEvent)
 		void ShowHitscanFireEffectFP(FVector const StartLocation, FVector const EndLocation, UNiagaraSystem* TracerEffect) const;
+
+	//Shows cosmetic muzzle flash in first person
+	UFUNCTION(BlueprintImplementableEvent)
+		void ShowMuzzleFlashFP(FVector const StartLocation, FVector const Direction, UNiagaraSystem* MuzzleFlashEffect) const;
+
+	//Shows cosmetic muzzle flash in third person
+	UFUNCTION(BlueprintImplementableEvent)
+		void ShowMuzzleFlashTP(FVector const StartLocation, FVector const Direction, UNiagaraSystem* MuzzleFlashEffect) const;
 
 	
 	

@@ -115,6 +115,12 @@ public:
 	//Particle system for gun tracers when using hitscan weapons.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		UNiagaraSystem* TracerEffect;
+	
+	//Particle system for gun muzzle flash.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
+		UNiagaraSystem* MuzzleFlash;
+
+
 };
 
 USTRUCT(BlueprintType)
@@ -180,6 +186,10 @@ public:
 	//Speed of projectile rounds fired
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float ProjectileSpeed;
+
+	//Base damage of projectile, TODO implement damage falloff
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float BaseDamage;
 
 };
 
