@@ -243,7 +243,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 		return Guns_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_Guns(Guns_StaticEnum, TEXT("/Script/fpsgame"), TEXT("Guns"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_Guns_Hash() { return 2462140954U; }
+	uint32 Get_Z_Construct_UEnum_fpsgame_Guns_Hash() { return 2979419140U; }
 	UEnum* Z_Construct_UEnum_fpsgame_Guns()
 	{
 #if WITH_HOT_RELOAD
@@ -258,6 +258,8 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 				{ "Guns::NONE", (int64)Guns::NONE },
 				{ "Guns::PROTOTYPE_PISTOL", (int64)Guns::PROTOTYPE_PISTOL },
 				{ "Guns::PROTOTYPE_AR", (int64)Guns::PROTOTYPE_AR },
+				{ "Guns::PROTOTYPE_BURST", (int64)Guns::PROTOTYPE_BURST },
+				{ "Guns::PROTOTYPE_SHOTGUN", (int64)Guns::PROTOTYPE_SHOTGUN },
 				{ "Guns::LAST", (int64)Guns::LAST },
 			};
 #if WITH_METADATA
@@ -270,10 +272,18 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 				{ "PROTOTYPE_AR.Displayname", "Prototype AR" },
 				{ "PROTOTYPE_AR.Name", "Guns::PROTOTYPE_AR" },
 				{ "PROTOTYPE_AR.ToolTip", "testing AR" },
+				{ "PROTOTYPE_BURST.Comment", "//testing burst\n" },
+				{ "PROTOTYPE_BURST.Displayname", "Prototype Burst" },
+				{ "PROTOTYPE_BURST.Name", "Guns::PROTOTYPE_BURST" },
+				{ "PROTOTYPE_BURST.ToolTip", "testing burst" },
 				{ "PROTOTYPE_PISTOL.Comment", "//Default testing pistol\n" },
 				{ "PROTOTYPE_PISTOL.DisplayName", "Prototype Pistol" },
 				{ "PROTOTYPE_PISTOL.Name", "Guns::PROTOTYPE_PISTOL" },
 				{ "PROTOTYPE_PISTOL.ToolTip", "Default testing pistol" },
+				{ "PROTOTYPE_SHOTGUN.Comment", "//Testing shotgun\n" },
+				{ "PROTOTYPE_SHOTGUN.Displayname", "Prototype Shotgun" },
+				{ "PROTOTYPE_SHOTGUN.Name", "Guns::PROTOTYPE_SHOTGUN" },
+				{ "PROTOTYPE_SHOTGUN.ToolTip", "Testing shotgun" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -540,6 +550,10 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_BurstNumber;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BurstFireRate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BurstFireRate;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxMagSize_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxMagSize;
@@ -613,6 +627,15 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstNumber = { "BurstNumber", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BurstNumber), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstNumber_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstNumber_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate_MetaData[] = {
+		{ "Category", "Weapon stats" },
+		{ "Comment", "//Fire rate of bursts\n" },
+		{ "ModuleRelativePath", "WeaponActor.h" },
+		{ "ToolTip", "Fire rate of bursts" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate = { "BurstFireRate", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BurstFireRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxMagSize_MetaData[] = {
 		{ "Category", "Weapon stats" },
 		{ "Comment", "//Maximum ammo the mag can store\n" },
@@ -671,6 +694,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_FireRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_CartridgeBullets,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstNumber,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxMagSize,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MagAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_ProjectileSpeed,
@@ -706,7 +730,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponStats_Hash() { return 230441530U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponStats_Hash() { return 4054920644U; }
 class UScriptStruct* FWeaponMetaData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -53,11 +53,33 @@ protected:
 	//Stores whether or not the player is currently holding down the fire button.
 	bool bIsFiring;
 
+	//Stores whether or not the player is currently firing a burst
+	bool bIsFiringBurst;
+
+	//Used to store how many burst rounds have been fired - decrements to 0 for end of burst.
+	int BurstRoundsToFire;
+
 	//Used to delay firing to match weapon fire rate.
 	FTimerHandle FiringTimer;
 
+	//Used to time burst fire
+	FTimerHandle BurstFireTimer;
+
 //Firing functions
 protected:
+
+	//Called on pressing fire, used for burst weapons and stuff
+	UFUNCTION()
+		void OnPressFire();
+
+	//For reloading the gun
+	UFUNCTION()
+		void OnReload();
+
+	//Stops firing burst
+	UFUNCTION()
+		void StopFiring();
+
 	//Called on timer if the weapon is automatic, so that if the fire key is held down the weapon will fire continuosuly.
 	UFUNCTION()
 		void AutomaticFire();

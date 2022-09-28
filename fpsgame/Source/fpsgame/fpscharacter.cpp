@@ -201,21 +201,45 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	//ALERT this is now done entirely in blueprints.
 
 	//Binding fire action
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::ClientValidateFire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::OnPressFire);
 	PlayerInputComponent->BindAction("Fire", IE_Released, this, &Afpscharacter::ReleaseFire);
 
 	//binding for weapon slots
 	PlayerInputComponent->BindAction("PrimaryGun", IE_Pressed, this, &Afpscharacter::SwitchPrimaryInputImplementation);
 	PlayerInputComponent->BindAction("SecondaryGun", IE_Pressed, this, &Afpscharacter::SwitchSecondaryInputImplementation);
 
+	//Binding reload
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &Afpscharacter::OnReload);
+
 	//Binding for interaction
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &Afpscharacter::InteractPressed);
 }
 
+void Afpscharacter::OnPressFire()
+{
+
+	
+	if (((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel != Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel != Guns::NONE)) && !GetWorld()->GetTimerManager().TimerExists(BurstFireTimer))
+	{
+		if (GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f)
+		{
+			ClientValidateFire();
+		}
+		else
+		{
+			BurstRoundsToFire = GetCurrentlyEquippedWeaponData().Stats.BurstNumber;
+			UE_LOG(LogTemp, Warning, TEXT("Bursting"));
+			GetWorld()->GetTimerManager().SetTimer(BurstFireTimer, this, &Afpscharacter::ClientValidateFire, GetCurrentlyEquippedWeaponData().Stats.BurstFireRate, true);
+		}
+
+	}
+	//ClientValidateFire();
+
+}
 void Afpscharacter::ReleaseFire()
 {
 	bIsFiring = false;
-
+	
 }
 
 void Afpscharacter::InteractPressed()
@@ -230,6 +254,16 @@ void Afpscharacter::InteractPressed()
 		Interact();
 
 	}
+}
+
+void Afpscharacter::StopFiring()
+{
+	UE_LOG(LogTemp, Warning, TEXT("No longer bursting"));
+	//Stops firing burst
+	GetWorld()->GetTimerManager().ClearTimer(BurstFireTimer);
+	//Also stops firing auto
+	bIsFiring = false;
+
 }
 
 void Afpscharacter::EnableCanInteract()
@@ -919,6 +953,10 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 		ServerSwitchPrimary();
 	}
 
+	//Interrupt automatic fire
+	bIsFiring = false;
+	StopFiring();
+
 	//Logic for switching primary.
 	if (IsLocallyControlled())
 	{
@@ -981,9 +1019,15 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 		ServerSwitchSecondary();
 	}
 
+	//Interrupt automatic fire.
+	bIsFiring = false;
+	StopFiring();
+	
 	//Only owner needs this
 	if (IsLocallyControlled())
 	{
+
+		//TODO REPLACE THIS AND PRIMARY WITH A SWITCHING ANIMATION PLS
 		PositionAndAttachGunInFP(SecondaryData);
 
 	
@@ -1043,6 +1087,10 @@ void Afpscharacter::AutomaticFire()
 	{
 		ClientValidateFire();
 	}
+	else
+	{
+		GetWorld()->GetTimerManager().ClearTimer(FiringTimer);
+	}
 }
 
 void Afpscharacter::ClientValidateFire()
@@ -1051,21 +1099,25 @@ void Afpscharacter::ClientValidateFire()
 	//Set bIsFiring to false until able to fire, so we don;t have to repeat set to false for all non-firing cases.
 	bIsFiring = false;
 
-
+	UE_LOG(LogTemp, Warning, TEXT("Validate"));
 	//If we dont have a gun equipped, return
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
-
+		
+		StopFiring();
 		return;
 	}
 	//UE_LOG(LogTemp, Warning, TEXT("ClientValidateFire"));
 	//Checking if we have ammo for firing
-	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0)
+	UE_LOG(LogTemp, Warning, TEXT("hell yea"));
+	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0 && ((BurstRoundsToFire > 0 && GetCurrentlyEquippedWeaponData().Stats.BurstFireRate > 0.0f) || GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f))
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Activating"));
 		//Activate firing functions based on firing type
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
+			UE_LOG(LogTemp, Warning, TEXT("Hitscan"));
 			bIsFiring = true;
 			ClientHitscanCheckFire();
 			break;
@@ -1077,11 +1129,14 @@ void Afpscharacter::ClientValidateFire()
 			break;
 		default:
 			//UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
-			bIsFiring = false;
 
 			break;
 		}
 
+	}
+	else
+	{
+		StopFiring();
 	}
 }
 
@@ -1123,17 +1178,21 @@ void Afpscharacter::ClientHitscanCheckFire()
 {
 	//This variable stores the start point of any tracer emitter particles
 	FVector EmitterStartPoint = FPSMuzzleComponent->GetComponentLocation();
-
+	UE_LOG(LogTemp, Warning, TEXT("BurstFrenzy"));
 	//Start the timer for automatic fire if the weapon is automatic, so that firing can happen often.
 	if (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponFireType == FireMode::AUTO)
 	{
 		GetWorld()->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::AutomaticFire, GetCurrentlyEquippedWeaponData().Stats.FireRate, true);
 
 	}
+	BurstRoundsToFire -= 1;
+	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
+
 	//UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint, 10.0f, 10, FLinearColor::Green, 5.0f, 1.0f);
 
 	//Called when we can fire. Should probably implement sounds for client to hear on this function,a s well as clientside hit images and stuff
 	//to make it feel more responsive (tho if it was a miss serverside we will get ghost markers, so maybe make this an option).
+	
 	TArray<FHitResult> HitResults;
 	//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
 	MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
@@ -1444,3 +1503,13 @@ void Afpscharacter::DamageLogic(TArray<FHitResult> const HitResults)
 
 }
 
+
+void Afpscharacter::OnReload()
+{
+	//template class for now
+	//TODO refurbish with animations and stuff, maybe switch to blueprint
+	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel != Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel != Guns::NONE))
+	{
+		SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MaxMagSize);
+	}
+}

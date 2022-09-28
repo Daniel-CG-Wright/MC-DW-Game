@@ -28,6 +28,10 @@ enum class Guns : uint8 {
 	PROTOTYPE_PISTOL UMETA(DisplayName = "Prototype Pistol"),
 	//testing AR
 	PROTOTYPE_AR UMETA(Displayname = "Prototype AR"),
+	//testing burst
+	PROTOTYPE_BURST UMETA(Displayname = "Prototype Burst"),
+	//Testing shotgun
+	PROTOTYPE_SHOTGUN UMETA(Displayname = "Prototype Shotgun"),
 
 	LAST
 };
@@ -174,6 +178,10 @@ public:
 	//Number of rounds fired per burst (usually 1, may be more for burst weapons)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		int BurstNumber;
+
+	//Fire rate of bursts
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float BurstFireRate;
 
 	//Maximum ammo the mag can store
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")

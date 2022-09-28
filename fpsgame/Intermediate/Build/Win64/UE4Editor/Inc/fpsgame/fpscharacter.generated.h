@@ -94,7 +94,10 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
 	DECLARE_FUNCTION(execReleaseFire); \
-	DECLARE_FUNCTION(execAutomaticFire);
+	DECLARE_FUNCTION(execAutomaticFire); \
+	DECLARE_FUNCTION(execStopFiring); \
+	DECLARE_FUNCTION(execOnReload); \
+	DECLARE_FUNCTION(execOnPressFire);
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -167,7 +170,10 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
 	DECLARE_FUNCTION(execReleaseFire); \
-	DECLARE_FUNCTION(execAutomaticFire);
+	DECLARE_FUNCTION(execAutomaticFire); \
+	DECLARE_FUNCTION(execStopFiring); \
+	DECLARE_FUNCTION(execOnReload); \
+	DECLARE_FUNCTION(execOnPressFire);
 
 
 #if WITH_EDITOR

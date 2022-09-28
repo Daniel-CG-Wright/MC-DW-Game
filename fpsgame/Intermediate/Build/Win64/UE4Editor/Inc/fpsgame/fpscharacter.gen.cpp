@@ -499,6 +499,27 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->AutomaticFire();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execStopFiring)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopFiring();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execOnReload)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnReload();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execOnPressFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnPressFire();
+		P_NATIVE_END;
+	}
 #if WITH_EDITOR
 	DEFINE_FUNCTION(Afpscharacter::execDebugFunction)
 	{
@@ -627,6 +648,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "MoveX", &Afpscharacter::execMoveX },
 			{ "MoveY", &Afpscharacter::execMoveY },
 			{ "MultiRaycastInCameraDirection", &Afpscharacter::execMultiRaycastInCameraDirection },
+			{ "OnPressFire", &Afpscharacter::execOnPressFire },
+			{ "OnReload", &Afpscharacter::execOnReload },
 			{ "OnRep_ChangeSprinting", &Afpscharacter::execOnRep_ChangeSprinting },
 			{ "OnRep_ChangeWeapon", &Afpscharacter::execOnRep_ChangeWeapon },
 			{ "OnRep_ControlRotation", &Afpscharacter::execOnRep_ControlRotation },
@@ -657,6 +680,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "SetSprinting", &Afpscharacter::execSetSprinting },
 			{ "SingleRaycastInCameraDirection", &Afpscharacter::execSingleRaycastInCameraDirection },
 			{ "StartJump", &Afpscharacter::execStartJump },
+			{ "StopFiring", &Afpscharacter::execStopFiring },
 			{ "StopJump", &Afpscharacter::execStopJump },
 			{ "SwitchPrimary", &Afpscharacter::execSwitchPrimary },
 			{ "SwitchPrimaryInputImplementation", &Afpscharacter::execSwitchPrimaryInputImplementation },
@@ -1486,6 +1510,54 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_MultiRaycastInCameraDirection_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_OnPressFire_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_OnPressFire_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Called on pressing fire, used for burst weapons and stuff\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Called on pressing fire, used for burst weapons and stuff" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_OnPressFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "OnPressFire", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_OnPressFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_OnPressFire_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_OnPressFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_OnPressFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_OnReload_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_OnReload_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//For reloading the gun\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "For reloading the gun" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_OnReload_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "OnReload", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_OnReload_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_OnReload_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_OnReload()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_OnReload_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2600,6 +2672,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_StopFiring_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_StopFiring_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Stops firing burst\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Stops firing burst" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_StopFiring_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "StopFiring", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_StopFiring_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_StopFiring_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_StopFiring()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_StopFiring_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_StopJump_Statics
 	{
 #if WITH_METADATA
@@ -3097,6 +3193,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_MoveX, "MoveX" }, // 1139188873
 		{ &Z_Construct_UFunction_Afpscharacter_MoveY, "MoveY" }, // 2819240834
 		{ &Z_Construct_UFunction_Afpscharacter_MultiRaycastInCameraDirection, "MultiRaycastInCameraDirection" }, // 3425216501
+		{ &Z_Construct_UFunction_Afpscharacter_OnPressFire, "OnPressFire" }, // 2617117134
+		{ &Z_Construct_UFunction_Afpscharacter_OnReload, "OnReload" }, // 1864971520
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeSprinting, "OnRep_ChangeSprinting" }, // 2106207384
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ChangeWeapon, "OnRep_ChangeWeapon" }, // 21635020
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_ControlRotation, "OnRep_ControlRotation" }, // 1226333665
@@ -3131,6 +3229,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP, "ShowMuzzleFlashTP" }, // 246472214
 		{ &Z_Construct_UFunction_Afpscharacter_SingleRaycastInCameraDirection, "SingleRaycastInCameraDirection" }, // 4236554935
 		{ &Z_Construct_UFunction_Afpscharacter_StartJump, "StartJump" }, // 694071235
+		{ &Z_Construct_UFunction_Afpscharacter_StopFiring, "StopFiring" }, // 1180545881
 		{ &Z_Construct_UFunction_Afpscharacter_StopJump, "StopJump" }, // 3383577609
 		{ &Z_Construct_UFunction_Afpscharacter_SwitchPrimary, "SwitchPrimary" }, // 1404102473
 		{ &Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation, "SwitchPrimaryInputImplementation" }, // 967562103
@@ -3656,7 +3755,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 786044730);
+	IMPLEMENT_CLASS(Afpscharacter, 2803038887);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();
