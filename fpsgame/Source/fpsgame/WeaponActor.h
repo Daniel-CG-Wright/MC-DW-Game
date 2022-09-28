@@ -187,10 +187,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float ProjectileSpeed;
 
-	//Base damage of projectile, TODO implement damage falloff
+	//Base damage of projectile in torso, TODO implement damage falloff
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float BaseDamage;
+		float BaseDamageTorso;
 
+	//Base damage of projectile in head
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float BaseDamageHead;
+
+	//Base damage of projectile in legs
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float BaseDamageLegs;
 };
 
 USTRUCT(BlueprintType)

@@ -485,6 +485,20 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->ClientValidateFire();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execReleaseFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ReleaseFire();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execAutomaticFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AutomaticFire();
+		P_NATIVE_END;
+	}
 #if WITH_EDITOR
 	DEFINE_FUNCTION(Afpscharacter::execDebugFunction)
 	{
@@ -589,6 +603,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ApplySensitivityAndInversionToMouseInputX", &Afpscharacter::execApplySensitivityAndInversionToMouseInputX },
 			{ "ApplySensitivityAndInversionToMouseInputY", &Afpscharacter::execApplySensitivityAndInversionToMouseInputY },
+			{ "AutomaticFire", &Afpscharacter::execAutomaticFire },
 			{ "CanUncrouch", &Afpscharacter::execCanUncrouch },
 			{ "ClientHitscanCheckFire", &Afpscharacter::execClientHitscanCheckFire },
 			{ "ClientValidateFire", &Afpscharacter::execClientValidateFire },
@@ -622,6 +637,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "PositionAndAttachGunInFP", &Afpscharacter::execPositionAndAttachGunInFP },
 			{ "PositionAndAttachGunInTP", &Afpscharacter::execPositionAndAttachGunInTP },
 			{ "PressSprint", &Afpscharacter::execPressSprint },
+			{ "ReleaseFire", &Afpscharacter::execReleaseFire },
 			{ "ReleaseSprint", &Afpscharacter::execReleaseSprint },
 			{ "ServerGetInterpolatedTransformsForRewind", &Afpscharacter::execServerGetInterpolatedTransformsForRewind },
 			{ "ServerHitscanCheckFire", &Afpscharacter::execServerHitscanCheckFire },
@@ -715,6 +731,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputY_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Called on timer if the weapon is automatic, so that if the fire key is held down the weapon will fire continuosuly.\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Called on timer if the weapon is automatic, so that if the fire key is held down the weapon will fire continuosuly." },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "AutomaticFire", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_AutomaticFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1711,6 +1751,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_PressSprint_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ReleaseFire_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ReleaseFire_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Called when no longer pressing fire button\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Called when no longer pressing fire button" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ReleaseFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ReleaseFire", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ReleaseFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ReleaseFire_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ReleaseFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ReleaseFire_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3008,6 +3072,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_Afpscharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputX, "ApplySensitivityAndInversionToMouseInputX" }, // 44909788
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputY, "ApplySensitivityAndInversionToMouseInputY" }, // 2463904650
+		{ &Z_Construct_UFunction_Afpscharacter_AutomaticFire, "AutomaticFire" }, // 2711848787
 		{ &Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching, "BlueprintRep_CurrentlyCrouching" }, // 3925505741
 		{ &Z_Construct_UFunction_Afpscharacter_CanUncrouch, "CanUncrouch" }, // 2800277747
 		{ &Z_Construct_UFunction_Afpscharacter_ClientHitscanCheckFire, "ClientHitscanCheckFire" }, // 2018308127
@@ -3042,6 +3107,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP, "PositionAndAttachGunInFP" }, // 260365713
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInTP, "PositionAndAttachGunInTP" }, // 967761929
 		{ &Z_Construct_UFunction_Afpscharacter_PressSprint, "PressSprint" }, // 2378583722
+		{ &Z_Construct_UFunction_Afpscharacter_ReleaseFire, "ReleaseFire" }, // 2997776266
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseSprint, "ReleaseSprint" }, // 3846209980
 		{ &Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind, "ServerGetInterpolatedTransformsForRewind" }, // 2845924246
 		{ &Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire, "ServerHitscanCheckFire" }, // 3336954870
@@ -3590,7 +3656,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 154772514);
+	IMPLEMENT_CLASS(Afpscharacter, 786044730);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

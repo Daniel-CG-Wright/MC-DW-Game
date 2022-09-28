@@ -8,6 +8,7 @@
 #include "TimerManager.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "DrawDebugHelpers.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
 
 // Sets default values
 Afpscharacter::Afpscharacter()
@@ -99,6 +100,7 @@ Afpscharacter::Afpscharacter()
 
 	bCanInteract = true;
 	InteractInterval = 0.5f;
+	bIsFiring = false;
 
 	//Interact range in centimetres
 	MaxInteractRange = 250.0f;
@@ -200,6 +202,7 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 	//Binding fire action
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &Afpscharacter::ClientValidateFire);
+	PlayerInputComponent->BindAction("Fire", IE_Released, this, &Afpscharacter::ReleaseFire);
 
 	//binding for weapon slots
 	PlayerInputComponent->BindAction("PrimaryGun", IE_Pressed, this, &Afpscharacter::SwitchPrimaryInputImplementation);
@@ -207,6 +210,12 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 	//Binding for interaction
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &Afpscharacter::InteractPressed);
+}
+
+void Afpscharacter::ReleaseFire()
+{
+	bIsFiring = false;
+
 }
 
 void Afpscharacter::InteractPressed()
@@ -1027,13 +1036,26 @@ void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 	ThirdPersonGunMesh->SetSkeletalMesh(GunToEquip.VisualAssets.GunMesh);
 }
 
-
+void Afpscharacter::AutomaticFire()
+{
+	//Call ClientValidateFire if still held down fire button.
+	if (bIsFiring)
+	{
+		ClientValidateFire();
+	}
+}
 
 void Afpscharacter::ClientValidateFire()
 {
+
+	//Set bIsFiring to false until able to fire, so we don;t have to repeat set to false for all non-firing cases.
+	bIsFiring = false;
+
+
 	//If we dont have a gun equipped, return
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
+
 		return;
 	}
 	//UE_LOG(LogTemp, Warning, TEXT("ClientValidateFire"));
@@ -1044,6 +1066,7 @@ void Afpscharacter::ClientValidateFire()
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
+			bIsFiring = true;
 			ClientHitscanCheckFire();
 			break;
 		case FireType::PROJECTILE:
@@ -1054,6 +1077,8 @@ void Afpscharacter::ClientValidateFire()
 			break;
 		default:
 			//UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
+			bIsFiring = false;
+
 			break;
 		}
 
@@ -1099,13 +1124,26 @@ void Afpscharacter::ClientHitscanCheckFire()
 	//This variable stores the start point of any tracer emitter particles
 	FVector EmitterStartPoint = FPSMuzzleComponent->GetComponentLocation();
 
-	UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint, 10.0f, 10, FLinearColor::Green, 5.0f, 1.0f);
+	//Start the timer for automatic fire if the weapon is automatic, so that firing can happen often.
+	if (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponFireType == FireMode::AUTO)
+	{
+		GetWorld()->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::AutomaticFire, GetCurrentlyEquippedWeaponData().Stats.FireRate, true);
+
+	}
+	//UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint, 10.0f, 10, FLinearColor::Green, 5.0f, 1.0f);
 
 	//Called when we can fire. Should probably implement sounds for client to hear on this function,a s well as clientside hit images and stuff
 	//to make it feel more responsive (tho if it was a miss serverside we will get ghost markers, so maybe make this an option).
 	TArray<FHitResult> HitResults;
 	//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
 	MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
+
+	ShowMuzzleFlashFP(
+		EmitterStartPoint,
+		FPSMuzzleComponent->GetForwardVector(),
+		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
+	);
+
 	if (HitResults.Num() > 0)
 	{
 		//Show visual effects using final point as the end point for tracer
@@ -1114,16 +1152,12 @@ void Afpscharacter::ClientHitscanCheckFire()
 		//This will need fine tuning
 		if (HitResults.Last().bBlockingHit)
 		{
+
 			ShowHitscanFireEffectFP(EmitterStartPoint, HitResults.Last().Location, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
 
 		}
 		else
 		{
-			ShowMuzzleFlashFP(
-				EmitterStartPoint,
-				FPSMuzzleComponent->GetForwardVector(),
-				GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
-			);
 
 			ShowHitscanFireEffectFP(
 				EmitterStartPoint,
@@ -1347,13 +1381,14 @@ void Afpscharacter::ServerPerformHitscan()
 		UE_LOG(LogTemp, Warning, TEXT("Got a hit"));
 		//REMEMBER - HIT RESULTS WILL SHOW ALL BODY PARTS OF AN ACTOR WHICH HAS BEEN HIT - ONLY INCLUDE THE FIRST ONE.
 		
+		//Do damage logic here
+		DamageLogic(HitResults);
 
 	}
 	/*for (auto& El : HitResults)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *El.Actor->GetName())
 	}*/
-	
 }
 
 void Afpscharacter::DamageLogic(TArray<FHitResult> const HitResults)
@@ -1363,17 +1398,17 @@ void Afpscharacter::DamageLogic(TArray<FHitResult> const HitResults)
 
 	//This list stores the actors which have been registered, to only register damage to each actor once.
 
-	//27/9/22 ALERT CAUSE OF ERROR PROBABLY HERE
-	TArray<AActor> HitActors;
+	TArray<AActor*> HitActors;
 
 	//TODO ADD TEAM PROTECTION (avoiding friendly fire)
 
 	//We iterate over the hit results, to perform the damage as needed
 	for (FHitResult Element : HitResults)
 	{
-		//First check if actor is already registered
-		if (HitActors.Contains(Element.GetActor()))
+		//First check if actor is already registered, or if the actor is null (e.g. a stair brush)
+		if (HitActors.Contains(Element.GetActor()) || Element.GetComponent()->GetAttachmentRootActor() == nullptr)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("Continuing"));
 			continue;
 		}
 
@@ -1382,11 +1417,25 @@ void Afpscharacter::DamageLogic(TArray<FHitResult> const HitResults)
 		HitActors.Emplace(Element.GetActor());
 
 		//Now we test if it was a player character, and do damage to it if it was accordingly:
+		
+		
+
 		if (Element.GetActor()->IsA(Afpscharacter::StaticClass()))
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Yes"));
 			//do damage
-			Cast<Afpscharacter>(Element.GetActor())->TakeDamage(GetCurrentlyEquippedWeaponData().Stats.BaseDamage, FDamageEvent(), GetController(), this);
+			//NOTE we could do it based on priority of body part hit, rather than whichever is hit first - for example if hitting torso and head, then headshot damage.
+			//Could be hard to balance but it could be more responsive and feel nice, TODO play around with it.
+
+			UPhysicalMaterial* HitPhysicalMaterial = Element.PhysMaterial.Get();
+
+			Afpscharacter* CastedActor = Cast<Afpscharacter>(Element.GetActor());
+
+
+			//Doing damage based on hit body part
+			//UE_LOG(LogTemp, Warning, TEXT("Physics object hit: %s"), *hitPhysicalMaterial->GetFName().ToString());
+
+			CastedActor->TakeDamage(GetCurrentlyEquippedWeaponData().Stats.BaseDamageTorso, FDamageEvent(), GetController(), this);
 
 			//Probably TODO add a radial damage indicator thing
 			//TODO add damage animations and sounds and ting for serverside, clientside can also do its own thing.

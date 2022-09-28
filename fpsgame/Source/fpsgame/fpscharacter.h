@@ -50,10 +50,22 @@ protected:
 	UPROPERTY(EditAnywhere)
 		bool SwitchWeaponAfterPickup;
 
+	//Stores whether or not the player is currently holding down the fire button.
+	bool bIsFiring;
 
+	//Used to delay firing to match weapon fire rate.
+	FTimerHandle FiringTimer;
 
 //Firing functions
 protected:
+	//Called on timer if the weapon is automatic, so that if the fire key is held down the weapon will fire continuosuly.
+	UFUNCTION()
+		void AutomaticFire();
+
+	//Called when no longer pressing fire button
+	UFUNCTION()
+		void ReleaseFire();
+
 	//Checks if the client can fire (checks ammo, fire rate, animation etc). If so, we move onto ClientFire
 	UFUNCTION()
 		void ClientValidateFire();

@@ -552,9 +552,17 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ProjectileSpeed;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseDamage_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseDamageTorso_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseDamage;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseDamageTorso;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseDamageHead_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseDamageHead;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseDamageLegs_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseDamageLegs;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -632,14 +640,32 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_ProjectileSpeed = { "ProjectileSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, ProjectileSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_ProjectileSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_ProjectileSpeed_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamage_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso_MetaData[] = {
 		{ "Category", "Weapon stats" },
-		{ "Comment", "//Base damage of projectile, TODO implement damage falloff\n" },
+		{ "Comment", "//Base damage of projectile in torso, TODO implement damage falloff\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
-		{ "ToolTip", "Base damage of projectile, TODO implement damage falloff" },
+		{ "ToolTip", "Base damage of projectile in torso, TODO implement damage falloff" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamage = { "BaseDamage", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseDamage), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamage_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso = { "BaseDamageTorso", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseDamageTorso), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead_MetaData[] = {
+		{ "Category", "Weapon stats" },
+		{ "Comment", "//Base damage of projectile in head\n" },
+		{ "ModuleRelativePath", "WeaponActor.h" },
+		{ "ToolTip", "Base damage of projectile in head" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead = { "BaseDamageHead", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseDamageHead), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs_MetaData[] = {
+		{ "Category", "Weapon stats" },
+		{ "Comment", "//Base damage of projectile in legs\n" },
+		{ "ModuleRelativePath", "WeaponActor.h" },
+		{ "ToolTip", "Base damage of projectile in legs" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs = { "BaseDamageLegs", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseDamageLegs), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FWeaponStats_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_FireRate,
@@ -648,7 +674,9 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxMagSize,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MagAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_ProjectileSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWeaponStats_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
@@ -678,7 +706,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponStats_Hash() { return 3496809511U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponStats_Hash() { return 230441530U; }
 class UScriptStruct* FWeaponMetaData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
