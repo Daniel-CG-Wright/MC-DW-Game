@@ -206,6 +206,15 @@ public:
 	//Base damage of projectile in legs
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float BaseDamageLegs;
+
+	//Base spread when firing in hipfire - probably just use multiples for ADS and crouchwalk (e.g. 0.1x for ads, 0.2x for crouchwalk)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float BaseHipfireSpreadAngleInDegrees;
+
+	//Movement multiplier for spread
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+		float BaseMovementSpreadMultiplier;
+
 };
 
 USTRUCT(BlueprintType)

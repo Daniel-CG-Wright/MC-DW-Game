@@ -65,6 +65,9 @@ protected:
 	//Used to time burst fire
 	FTimerHandle BurstFireTimer;
 
+	//Above this speed accuracy begins to be reduced (cm/s)
+	float SpeedForLosingAccuracy = 10000.0f;
+
 //Firing functions
 protected:
 
@@ -136,7 +139,11 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent)
 		void ShowMuzzleFlashTP(FVector const StartLocation, FVector const Direction, UNiagaraSystem* MuzzleFlashEffect) const;
 
-	
+	//Gets the end vector from the spread cone of the gun using the spread angle determined (which should be found randomyl first), for feeding into the correct hitscan function
+	//Spread angle should be the same on client and server, for consistency.
+	UFUNCTION()
+		FVector CalculateSpreadDestination(FVector const StartPoint, FRotator ForwardRotation, float Range, float Modifier, float SpreadAngleInDegress) const;
+
 	
 //Player input functions
 protected:
@@ -172,6 +179,10 @@ protected:
 	//Used in shooting, multi raycast
 	UFUNCTION()
 		bool MultiRaycastInCameraDirection(TArray<FHitResult>& ResultOutHit, float RaycastRange, ECollisionChannel CollisionChannel = ECC_Visibility);
+
+	//Used in shooting with spread - does not actually create the spread cone, merely performs the actual beam at the desired angle. Cone should be generated before.
+	UFUNCTION()
+		bool MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndPoint, ECollisionChannel CollisionChannel = ECC_Visibility);
 
 	//Checks for interact via collision
 	UFUNCTION()

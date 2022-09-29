@@ -1174,6 +1174,34 @@ void Afpscharacter::UpdateAmmoDisplay()
 	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().Stats.MaxMagSize);
 }
 
+bool Afpscharacter::MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndPoint, ECollisionChannel CollisionChannel = ECC_Visibility)
+{
+	//This performs a multi raycast, but is used for functions like spread angles by
+	//taking a predetermined end point.
+
+	FCollisionQueryParams CollisionParams;
+
+	CollisionParams.AddIgnoredActor(this);
+	CollisionParams.bReturnPhysicalMaterial = true;
+
+	bool result = GetWorld()->LineTraceMultiByChannel(ResultOutHit, StartPoint, EndPoint, CollisionChannel, CollisionParams);
+	return result;
+	
+}
+
+FVector Afpscharacter::CalculateSpreadDestination(FVector StartPoint, FRotator ForwardRotation, float Range, float Modifier, float SpreadAngleInDegress) const
+{
+	//Using rotators - first we get the control rotation 
+	//Don't need roll rotation as the bullet doesn't need to roll
+	//Modifier can be increased for movement, and decreased for not movement.
+	FRotator AimRotation = ForwardRotation + FRotator(SpreadAngleInDegress, SpreadAngleInDegress, 0) * Modifier;
+	
+	FVector EndPoint = StartPoint + (AimRotation.Vector() * Range);
+
+	return EndPoint;
+
+}
+
 void Afpscharacter::ClientHitscanCheckFire()
 {
 	//This variable stores the start point of any tracer emitter particles
@@ -1195,7 +1223,19 @@ void Afpscharacter::ClientHitscanCheckFire()
 	
 	TArray<FHitResult> HitResults;
 	//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
-	MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
+	//TODO add spread and recoil here (do the multiraycasts at angles)
+	//Preferably replacing this function as it can still serve the purpose of getting data from straight ahead.
+	//Need to sync the random values between client and server.
+	float RandomSpread = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
+	float SpreadModifier = FMath::Clamp((SpeedForLosingAccuracy - 1) * GetCurrentlyEquippedWeaponData().Stats.BaseMovementSpreadMultiplier * GetVelocity().Size(), 1.0f, 5.0f);
+	//Add checks for ADS here
+
+	//Add logic to reduce spread if ads or moving
+
+	MultiRaycastDirectional(HitResults, FPSCameraComponent->GetComponentLocation(),
+		CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, RandomSpread));
+
+	//MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
 
 	ShowMuzzleFlashFP(
 		EmitterStartPoint,
