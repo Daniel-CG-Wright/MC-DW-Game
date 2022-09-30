@@ -211,7 +211,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float BaseHipfireSpreadAngleInDegrees;
 
-	//Movement multiplier for spread
+	//Movement multiplier for spread - 1 = 100%
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float BaseMovementSpreadMultiplier;
 

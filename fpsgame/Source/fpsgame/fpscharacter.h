@@ -66,7 +66,16 @@ protected:
 	FTimerHandle BurstFireTimer;
 
 	//Above this speed accuracy begins to be reduced (cm/s)
-	float SpeedForLosingAccuracy = 10000.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon spread")
+		float SpeedForLosingAccuracy;
+
+	//This is the maximum spread modifier multiplier possible from movement
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon spread")
+		float MaxMovementSpreadModifier;
+
+	//This is the minimum spread modifier
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon spread")
+		float MinMovementSpreadModifier;
 
 //Firing functions
 protected:
@@ -99,13 +108,17 @@ protected:
 	UFUNCTION()
 		void ClientHitscanCheckFire();
 
+	//Calculates spread modifier
+	UFUNCTION()
+		float CalculateSpreadModifier();
+
 	//Checks on server if the player could actually fire, to prevent cheating with ammo or firerates etc. RPC calle by ClientHitscanCheckFire
-	UFUNCTION(Server, Unreliable)
-		void ServerValidateFire(float ClientFireTime);
+	UFUNCTION(Server, Unreliable, WithValidation)
+		void ServerValidateFire(float ClientFireTime, const TArray<float>& SpreadAngles);
 	
 	//Checks if the player hit anything on the server, requires rewinds and stuff. Not an RPC as called by ServerValidateFire
 	UFUNCTION()
-		void ServerHitscanCheckFire(float ClientFireTime);
+		void ServerHitscanCheckFire(float ClientFireTime, TArray<float> SpreadAngles);
 
 	//Used to get the interpolated transforms for all rewind components, for the specific timestamp
 	UFUNCTION()
@@ -113,11 +126,11 @@ protected:
 
 	//rewinds all the actors to the previous point, and then performs the hitscan, and then returns them back
 	UFUNCTION()
-		void ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind);
+		void ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind, TArray<float> SpreadAngles);
 
 	//Performs the serverside hitscan - we also deal damage and stuff here
 	UFUNCTION()
-		void ServerPerformHitscan();
+		void ServerPerformHitscan(TArray<float> SpreadAngles);
 	
 	//Performs the damage logic on hitting targets.
 	UFUNCTION()
@@ -196,17 +209,18 @@ protected:
 		//used to ensure that interaction takes 'interactiontime' seconds @UInteractableObjectComponent
 		FTimerHandle InteractTimerHandle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Transient)
+	//time interval in secondsfor interactions to take place
+	UPROPERTY(BlueprintReadOnly, Transient)
 		FName CurrentInteractionName;
 
-	UPROPERTY(EditAnywhere)
-		float InteractInterval; //time interval in secondsfor interactions to take place
+	UPROPERTY(EditAnywhere, Category = "Interaction")
+		float InteractInterval; 
 
 	//maximum interaction range
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Interaction")
 		float MaxInteractRange;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Transient)
+	UPROPERTY()
 		bool bCanInteract;
 
 	//Gets the weapon actor the player is currently looking at within view range, and returns the fstring of its name. To be implemented in HUD blueprints from the return value
@@ -235,7 +249,7 @@ protected:
 	UFUNCTION()
 		void OnRep_ControlRotation();
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, ReplicatedUsing = OnRep_ControlRotation)
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_ControlRotation)
 		FRotator SynchronisedControlRotation;
 
 	//Used to handle jumping
@@ -284,16 +298,16 @@ protected:
 		FString AmmoDisplay;
 
 	//Whether player is currently crouching
-	UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing = OnRep_CurrentlyCrouching)
+	UPROPERTY(Transient, BlueprintReadWrite, ReplicatedUsing = OnRep_CurrentlyCrouching)
 		bool CurrentlyCrouching;
 
 	
 	//Stores if the player has just landed, logic altered in blueprints.
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UPROPERTY(BlueprintReadWrite, Transient)
 		bool JustLanded;
 
 	//Obtained at start, by getting capsule component half height.
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Heights")
 		float DefaultHalfHeight;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Heights")
@@ -374,7 +388,7 @@ protected:
 
 
 	//Tracks sprinting
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, ReplicatedUsing = OnRep_ChangeSprinting)
+	UPROPERTY(Transient, BlueprintReadOnly, ReplicatedUsing = OnRep_ChangeSprinting)
 		bool IsSprinting;
 
 	//updates stamina , called every @StaminaUpdateIntervalInSeconds by timer
@@ -491,7 +505,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 		UCameraComponent* FPSCameraComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		URewindComponent* FPSRewindComponent;
 
 	//FPS mesh component, visible only to the owning player
@@ -502,8 +516,12 @@ public:
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 		USkeletalMeshComponent* ThirdPersonGunMesh;
 
-	UPROPERTY(VisibleDefaultsOnly)
+	UPROPERTY(VisibleAnywhere)
 		USceneComponent* FPSMuzzleComponent;
+
+	//Third person muzzle location for calculating muzzle flash and tracers.
+	UPROPERTY(VisibleDefaultsOnly)
+		USceneComponent* TPMuzzleComponent;
 
 	UPROPERTY(EditAnywhere, Category = "Crouch")
 		float CrouchTime;
@@ -547,7 +565,7 @@ public:
 		float LoseStamina(float LostStamina);
 
 	//Stores the currently equipped item (e.g. gun, knife) using enum
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_ChangeWeapon)
+	UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_ChangeWeapon)
 		Equips EquippedGun;
 
 	//SHOULD BE USED WHEN NEEDING TO CHANGE CURRENT AMMO, AS IT CHANGES DISPLAY AMMO TOO

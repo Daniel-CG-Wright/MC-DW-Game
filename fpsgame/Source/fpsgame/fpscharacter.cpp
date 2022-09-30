@@ -28,14 +28,17 @@ Afpscharacter::Afpscharacter()
 	//Position the camera at eye level
 	FPSCameraComponent->SetRelativeLocation(FVector(0.0f, 0.0f, BaseEyeHeight-10.0f));
 
+
 	//Creating the FPS mesh component for the owning player
 	FPSMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMesh"));
+
 	check(FPSMesh != nullptr);
 
 	ThirdPersonGunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ThirdPersonMesh"));
 	check(ThirdPersonGunMesh != nullptr)
 	//Only owning player sees this mesh
 	FPSMesh->SetOnlyOwnerSee(true);
+
 	ThirdPersonGunMesh->SetOwnerNoSee(true);
 	ThirdPersonGunMesh->SetupAttachment(GetMesh(), TEXT("TP_GunSocket"));
 
@@ -49,18 +52,23 @@ Afpscharacter::Afpscharacter()
 	//Created on client but doens't do anything unless on server
 	//FPSRewindComponent = CreateDefaultSubobject<URewindComponent>(TEXT("RewindComponent"));
 	
-
 	//Creating the FPS weapon scene component, which is separate from the 3rd person gun mesh.
 	FPSGunComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Scene Component"));
 	FPSGunComponent->SetupAttachment(FPSCameraComponent);
 
-	FPSMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Muzzle Component"));
+	FPSMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("FPS Gun Muzzle Component"));
 	FPSMuzzleComponent->SetupAttachment(FPSMesh);
+
+	FPSMesh->SetupAttachment(FPSGunComponent);
+
+
+	TPMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Third Person Gun Muzzle Component"));
+	TPMuzzleComponent->SetupAttachment(ThirdPersonGunMesh);
+	check(TPMuzzleComponent != nullptr);
 
 	/*The above scene component is where the weapon object will actually attach to when equipped.*/
 
 	//Attaches the FPS mesh to the FPS camera
-	FPSMesh->SetupAttachment(FPSGunComponent);
 	//Enables the pawn base of the character to control camera rotation
 	FPSCameraComponent->bUsePawnControlRotation = true;
 
@@ -941,6 +949,8 @@ void Afpscharacter::ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup
 
 void Afpscharacter::SwitchPrimary(bool bIsRep)
 {
+	UE_LOG(LogTemp, Warning, TEXT("prime"));
+	DebugFunction();
 	//Switch to primary gun
 	//Stop crashes if no primary exists
 	if (PrimaryData.MetaData.GunModel == Guns::NONE)
@@ -1047,7 +1057,7 @@ void Afpscharacter::ServerSwitchSecondary_Implementation()
 
 void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 {
-
+	DebugFunction();
 	//Correctly positioning gun
 	//Takes into account left-handedness
 	FVector PositionVector = (IsLeftHanded) ? FVector(GunToEquip.PositionalDetails.BasePosition.X, -1.0f * GunToEquip.PositionalDetails.BasePosition.Y, GunToEquip.PositionalDetails.BasePosition.Z) : GunToEquip.PositionalDetails.BasePosition;
@@ -1057,6 +1067,15 @@ void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 	FPSGunComponent->SetRelativeRotation(PositionRotator);
 	FPSGunComponent->SetRelativeScale3D(GunToEquip.PositionalDetails.BaseScale);
 
+
+
+	if (FPSMuzzleComponent == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("NULL ERROR ALERT"));
+	}
+	UE_LOG(LogTemp, Warning, TEXT("name = %s"), *FPSMuzzleComponent->GetFName().ToString());
+	UE_LOG(LogTemp, Warning, TEXT("name2 = %s"), *FPSMuzzleComponent->GetAttachmentRootActor()->GetFName().ToString());
+	
 	FPSMuzzleComponent->SetRelativeLocation(GunToEquip.PositionalDetails.MuzzlePosition);
 	//Attach gun to scene component
 	//FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
@@ -1073,11 +1092,18 @@ void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
 void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 {
 	//Correctly positioning gun, we do not account for left-handedness in TP as there is no need
+
+	UE_LOG(LogTemp, Warning, TEXT("TP attach"));
 	ThirdPersonGunMesh->SetRelativeLocation(GunToEquip.PositionalDetails.TPBasePosition);
 	ThirdPersonGunMesh->SetRelativeRotation(GunToEquip.PositionalDetails.TPBaseRotation);
 	ThirdPersonGunMesh->SetRelativeScale3D(GunToEquip.PositionalDetails.TPBaseScale);
 
 	ThirdPersonGunMesh->SetSkeletalMesh(GunToEquip.VisualAssets.GunMesh);
+
+	//Sets muzzle component
+	TPMuzzleComponent->SetRelativeLocation(GunToEquip.PositionalDetails.MuzzlePosition);
+
+	
 }
 
 void Afpscharacter::AutomaticFire()
@@ -1174,7 +1200,7 @@ void Afpscharacter::UpdateAmmoDisplay()
 	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().Stats.MaxMagSize);
 }
 
-bool Afpscharacter::MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndPoint, ECollisionChannel CollisionChannel = ECC_Visibility)
+bool Afpscharacter::MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndPoint, ECollisionChannel CollisionChannel)
 {
 	//This performs a multi raycast, but is used for functions like spread angles by
 	//taking a predetermined end point.
@@ -1202,10 +1228,24 @@ FVector Afpscharacter::CalculateSpreadDestination(FVector StartPoint, FRotator F
 
 }
 
+float Afpscharacter::CalculateSpreadModifier()
+{
+	//Uses movement speed, ADS etc to calculate spread modifier.
+	//Calculated movement spread here, do ADS and stuff too
+	float SpreadModifier = 1.0f;
+	if (GetVelocity().Size() > SpeedForLosingAccuracy)
+	{
+		SpreadModifier = FMath::Clamp(GetCurrentlyEquippedWeaponData().Stats.BaseMovementSpreadMultiplier * ((GetVelocity().Size() - SpeedForLosingAccuracy) * 0.01f), MinMovementSpreadModifier, MaxMovementSpreadModifier);
+	}
+
+	//Add checks for ADS here
+	return SpreadModifier;
+
+}
 void Afpscharacter::ClientHitscanCheckFire()
 {
 	//This variable stores the start point of any tracer emitter particles
-	FVector EmitterStartPoint = FPSMuzzleComponent->GetComponentLocation();
+	FVector EmitterStartPoint =FPSMuzzleComponent->GetComponentLocation();
 	UE_LOG(LogTemp, Warning, TEXT("BurstFrenzy"));
 	//Start the timer for automatic fire if the weapon is automatic, so that firing can happen often.
 	if (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponFireType == FireMode::AUTO)
@@ -1221,22 +1261,73 @@ void Afpscharacter::ClientHitscanCheckFire()
 	//Called when we can fire. Should probably implement sounds for client to hear on this function,a s well as clientside hit images and stuff
 	//to make it feel more responsive (tho if it was a miss serverside we will get ghost markers, so maybe make this an option).
 	
+	//Stores combined hit results from all shots
 	TArray<FHitResult> HitResults;
-	//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
+	//Storing all the randomised spread angles so that they can be used on the server effectively.
+	TArray<float> SpreadAngles;
+	
+	float SpreadModifier = CalculateSpreadModifier();
+
+	
+	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
+	{
+		//Stores temporary details for this cartridge
+		TArray<FHitResult> TempHitResults;
+		//WE NEED TO REPEAT FROM HERE
+		//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
 	//TODO add spread and recoil here (do the multiraycasts at angles)
 	//Preferably replacing this function as it can still serve the purpose of getting data from straight ahead.
 	//Need to sync the random values between client and server.
-	float RandomSpread = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
-	float SpreadModifier = FMath::Clamp((SpeedForLosingAccuracy - 1) * GetCurrentlyEquippedWeaponData().Stats.BaseMovementSpreadMultiplier * GetVelocity().Size(), 1.0f, 5.0f);
-	//Add checks for ADS here
+		float RandomSpread = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
 
-	//Add logic to reduce spread if ads or moving
 
-	MultiRaycastDirectional(HitResults, FPSCameraComponent->GetComponentLocation(),
-		CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, RandomSpread));
 
-	//MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
+		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
+			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, RandomSpread));
 
+		//MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
+
+		//TO HERE FOR SHOTGUNS, AND SEND ALL THE SPREAD DATA IN ONE GO TO THE SERVER
+		HitResults += TempHitResults;
+
+		SpreadAngles.Emplace(RandomSpread);
+
+		//Need to show visual tracers for each shot (not just for one shot)
+		//If the last hit was a blocking hit then we use that, otherwise we just use up until the range.
+		//This will need fine tuning
+		if (TempHitResults.Num() > 0)
+		{
+			if (TempHitResults.Last().bBlockingHit)
+			{
+
+				ShowHitscanFireEffectFP(EmitterStartPoint, TempHitResults.Last().Location, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
+
+			}
+			else
+			{
+
+				ShowHitscanFireEffectFP(
+					EmitterStartPoint,
+					(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
+					GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
+				);
+
+			}
+		}
+		else
+		{
+			//Still need to show visual effects, use the max range as the end point.
+			ShowHitscanFireEffectFP(
+				EmitterStartPoint,
+				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
+				GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
+			);
+
+		}
+		
+
+	}
+	
 	ShowMuzzleFlashFP(
 		EmitterStartPoint,
 		FPSMuzzleComponent->GetForwardVector(),
@@ -1245,26 +1336,7 @@ void Afpscharacter::ClientHitscanCheckFire()
 
 	if (HitResults.Num() > 0)
 	{
-		//Show visual effects using final point as the end point for tracer
-
-		//If the last hit was a blocking hit then we use that, otherwise we just use up until the range.
-		//This will need fine tuning
-		if (HitResults.Last().bBlockingHit)
-		{
-
-			ShowHitscanFireEffectFP(EmitterStartPoint, HitResults.Last().Location, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
-
-		}
-		else
-		{
-
-			ShowHitscanFireEffectFP(
-				EmitterStartPoint,
-				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
-				GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
-			);
-
-		}
+		
 
 		//If we score a hit this is the logic that will be played
 		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
@@ -1273,28 +1345,29 @@ void Afpscharacter::ClientHitscanCheckFire()
 		{
 			UE_LOG(LogTemp, Warning, TEXT("client time = %f"), clienttime);
 
-			ServerValidateFire(clienttime);
+			ServerValidateFire(clienttime, SpreadAngles);
 
 		}
 
 	}
-	else
-	{
-		//Still need to show visual effects, use the max range as the end point.
-		ShowHitscanFireEffectFP(
-			EmitterStartPoint,
-			(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
-			GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
-		);
-
-	}
+	
 }
 
-void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
+bool Afpscharacter::ServerValidateFire_Validate(float ClientFireTime, const TArray<float>& SpreadAngles)
+{
+	//This is here for future validation.
+	return true;
+
+	
+}
+void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime, const TArray<float>& SpreadAngles)
 {
 
 	//checks if the player can actually fire with server variables
 	//If we dont have a gun equipped, return
+
+	//Currently we don't care about bursts, but this may have to change if exploits are available.
+	//this is because bursts work on client-side, keeping track of how much burst has been used, which may be modifiable causing infinite bursts or something.
 
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
@@ -1309,7 +1382,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
-			ServerHitscanCheckFire(ClientFireTime);
+			ServerHitscanCheckFire(ClientFireTime, SpreadAngles);
 			break;
 		case FireType::PROJECTILE:
 			//add projectile logic
@@ -1330,7 +1403,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 	
 }
 
-void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
+void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime, TArray<float> SpreadAngles)
 {
 	//The meaty part. Here is where we rewind the poses and stuff using the game state to check if the shot hit.
 
@@ -1349,9 +1422,7 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("invsqW"));
 	}
-	//Do cosmetic firing first
-	//ShowHitscanFireEffectTP();
-	//UE_LOG(LogTemp, Warning, TEXT("ServerHitscanCheckFire start"));
+
 	//STAGE 1
 	//First we need to get the current game state reference for ease of use later
 	AFPSGameState* CurrentGameState = Cast<AFPSGameState>(GetWorld()->GetGameState());
@@ -1378,7 +1449,7 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 		//STAGE 4 - STILL NEEDS IMPLEMENTATION
 		//TODO ADD STAGE 4
 		//STAGE 5, 6, 7, 8
-		ServerRewindAndPerformHitscan(ActorTransformMap);
+		ServerRewindAndPerformHitscan(ActorTransformMap, SpreadAngles);
 
 	}
 }
@@ -1446,7 +1517,7 @@ void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTim
 	//UE_LOG(LogTemp, Warning, TEXT("Rewind transforms = %d"), OutActorTransformsToBeRewinded.Num());
 }
 
-void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind)
+void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind, TArray<float> SpreadAngles)
 {
 	//UE_LOG(LogTemp, Warning, TEXT("Final stages"));
 	//Call a gamemode function which rewinds everything
@@ -1459,7 +1530,7 @@ void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruc
 	}
 
 	//Perform the actual hitscan with the hitscan function
-	ServerPerformHitscan();
+	ServerPerformHitscan(SpreadAngles);
 
 	//Call a gamemode function which reverts everything to the normal state
 	if (doRewind)
@@ -1469,11 +1540,63 @@ void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruc
 	}
 }
 
-void Afpscharacter::ServerPerformHitscan()
+void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 {
 	//Here is where we actually perform the hitscan to see if we hit anything.
+	//First please do a third person muzzle flash
+
+	//Muzzle start point for third person
+	FVector EmitterStartPoint = TPMuzzleComponent->GetComponentLocation();
+	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
+
 	TArray<FHitResult> HitResults;
-	MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
+
+	float SpreadModifier = CalculateSpreadModifier();
+
+	//This relies on the cartridge bullets measured by the client, SO COULD BE PRONE TO EXPLOIT - MAY NEED REVISION
+	for (float Angle : SpreadAngles)
+	{
+		//Iter for all spreadangles as shots
+		TArray<FHitResult> TempHitResults;
+
+		//Actual raycast
+		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
+			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetController()->GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, Angle));
+
+		HitResults += TempHitResults;
+
+		//Now show tracers
+		if (TempHitResults.Num() > 0)
+		{
+			if (TempHitResults.Last().bBlockingHit)
+			{
+				ShowHitscanFireEffectTP(EmitterStartPoint, TempHitResults.Last().Location, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
+			}
+			else
+			{
+				
+				ShowHitscanFireEffectTP(
+					EmitterStartPoint,
+					(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
+					GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
+				);
+			}
+		
+		}
+		else
+		{
+			ShowHitscanFireEffectTP(
+				EmitterStartPoint,
+				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
+				GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
+			);
+
+		}
+
+	}
+
+	//Raycast done
+
 	if (HitResults.Num() > 0)
 	{
 		//If we score a hit we must look at all the hit results and create hit markers and sound fx and stuff and deal dmg

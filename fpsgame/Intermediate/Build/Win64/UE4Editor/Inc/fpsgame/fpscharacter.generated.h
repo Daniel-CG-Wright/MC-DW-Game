@@ -15,8 +15,8 @@ struct FWeaponDataStruct;
 class AWeaponActor;
 struct FRotator;
 struct FHitResult;
-class AActor; struct FRewindDataStruct;
 struct FVector;
+class AActor; struct FRewindDataStruct;
 class UNiagaraSystem;
 #ifdef FPSGAME_fpscharacter_generated_h
 #error "fpscharacter.generated.h already included, missing '#pragma once' in fpscharacter.h"
@@ -32,7 +32,8 @@ class UNiagaraSystem;
 	virtual void ServerStartJump_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual void ServerInteract_Implementation(); \
-	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
+	virtual bool ServerValidateFire_Validate(float , TArray<float> const& ); \
+	virtual void ServerValidateFire_Implementation(float ClientFireTime, TArray<float> const& SpreadAngles); \
  \
 	DECLARE_FUNCTION(execGetCurrentAmmo); \
 	DECLARE_FUNCTION(execSetCurrentAmmo); \
@@ -78,6 +79,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execMoveY); \
 	DECLARE_FUNCTION(execGetCurrentlyAvailableInteractable); \
 	DECLARE_FUNCTION(execCollisionInteractCheck); \
+	DECLARE_FUNCTION(execMultiRaycastDirectional); \
 	DECLARE_FUNCTION(execMultiRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execSingleRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execInteractWithNameOnly); \
@@ -85,12 +87,14 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
 	DECLARE_FUNCTION(execInteractPressed); \
+	DECLARE_FUNCTION(execCalculateSpreadDestination); \
 	DECLARE_FUNCTION(execDamageLogic); \
 	DECLARE_FUNCTION(execServerPerformHitscan); \
 	DECLARE_FUNCTION(execServerRewindAndPerformHitscan); \
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
 	DECLARE_FUNCTION(execServerHitscanCheckFire); \
 	DECLARE_FUNCTION(execServerValidateFire); \
+	DECLARE_FUNCTION(execCalculateSpreadModifier); \
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
 	DECLARE_FUNCTION(execReleaseFire); \
@@ -108,7 +112,8 @@ class UNiagaraSystem;
 	virtual void ServerStartJump_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual void ServerInteract_Implementation(); \
-	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
+	virtual bool ServerValidateFire_Validate(float , TArray<float> const& ); \
+	virtual void ServerValidateFire_Implementation(float ClientFireTime, TArray<float> const& SpreadAngles); \
  \
 	DECLARE_FUNCTION(execGetCurrentAmmo); \
 	DECLARE_FUNCTION(execSetCurrentAmmo); \
@@ -154,6 +159,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execMoveY); \
 	DECLARE_FUNCTION(execGetCurrentlyAvailableInteractable); \
 	DECLARE_FUNCTION(execCollisionInteractCheck); \
+	DECLARE_FUNCTION(execMultiRaycastDirectional); \
 	DECLARE_FUNCTION(execMultiRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execSingleRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execInteractWithNameOnly); \
@@ -161,12 +167,14 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
 	DECLARE_FUNCTION(execInteractPressed); \
+	DECLARE_FUNCTION(execCalculateSpreadDestination); \
 	DECLARE_FUNCTION(execDamageLogic); \
 	DECLARE_FUNCTION(execServerPerformHitscan); \
 	DECLARE_FUNCTION(execServerRewindAndPerformHitscan); \
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
 	DECLARE_FUNCTION(execServerHitscanCheckFire); \
 	DECLARE_FUNCTION(execServerValidateFire); \
+	DECLARE_FUNCTION(execCalculateSpreadModifier); \
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
 	DECLARE_FUNCTION(execReleaseFire); \
@@ -207,6 +215,7 @@ class UNiagaraSystem;
 	struct fpscharacter_eventServerValidateFire_Parms \
 	{ \
 		float ClientFireTime; \
+		TArray<float> SpreadAngles; \
 	}; \
 	struct fpscharacter_eventShowHitscanFireEffectFP_Parms \
 	{ \
@@ -307,6 +316,9 @@ public: \
 	FORCEINLINE static uint32 __PPO__IsLeftHanded() { return STRUCT_OFFSET(Afpscharacter, IsLeftHanded); } \
 	FORCEINLINE static uint32 __PPO__DistanceToPlaceProjectileFromCamera() { return STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera); } \
 	FORCEINLINE static uint32 __PPO__SwitchWeaponAfterPickup() { return STRUCT_OFFSET(Afpscharacter, SwitchWeaponAfterPickup); } \
+	FORCEINLINE static uint32 __PPO__SpeedForLosingAccuracy() { return STRUCT_OFFSET(Afpscharacter, SpeedForLosingAccuracy); } \
+	FORCEINLINE static uint32 __PPO__MaxMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MaxMovementSpreadModifier); } \
+	FORCEINLINE static uint32 __PPO__MinMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier); } \
 	FORCEINLINE static uint32 __PPO__InteractInputIntervalTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractInputIntervalTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__InteractTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__CurrentInteractionName() { return STRUCT_OFFSET(Afpscharacter, CurrentInteractionName); } \
