@@ -56,13 +56,14 @@ Afpscharacter::Afpscharacter()
 	FPSGunComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Scene Component"));
 	FPSGunComponent->SetupAttachment(FPSCameraComponent);
 
-	FPSMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("FPS Gun Muzzle Component"));
+	
+	FPSMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Muzzle"));
 	FPSMuzzleComponent->SetupAttachment(FPSMesh);
+	check(FPSMuzzleComponent != nullptr);
 
 	FPSMesh->SetupAttachment(FPSGunComponent);
 
-
-	TPMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Third Person Gun Muzzle Component"));
+	TPMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("TP Muzzle"));
 	TPMuzzleComponent->SetupAttachment(ThirdPersonGunMesh);
 	check(TPMuzzleComponent != nullptr);
 
@@ -780,12 +781,14 @@ void Afpscharacter::Interact()
 		if (HitInteractableComponent != nullptr)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("interactable component found"));
-			//Seems valid on client, let's run on the server
-			if (GetLocalRole() < ROLE_Authority)
+			//Seems valid on client, let's run on the server if needed
+			//Should only be used for stationary objects, as guns and stuff can desync and we need to fix this NOTE
+			/*if (GetLocalRole() < ROLE_Authority)
 			{
 				
 				ServerInteract();
 			}
+		
 			else
 			{
 				switch (HitInteractableComponent->GetInteractionType())
@@ -796,6 +799,14 @@ void Afpscharacter::Interact()
 
 					PickupWeapon(Cast<AWeaponActor>(HitActor));
 				}
+			}*/
+			switch (HitInteractableComponent->GetInteractionType())
+			{
+			case InteractionTypes::WEAPON_PICKUP:
+				//Logic for weapon pickup
+				UE_LOG(LogTemp, Warning, TEXT("We got a pickup bois"));
+
+				PickupWeapon(Cast<AWeaponActor>(HitActor));
 			}
 			
 
@@ -863,12 +874,15 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 	//Pick up weapon
 
 	//Need to run RPC on server, this function itself should only run on server so the rpc does not need calling
+	//I have commitment isuses, it should now because of the shfit from interaction to client.
 	if (GetLocalRole() < ROLE_Authority)
 	{
 		//ServerPickupWeapon(WeaponPickup);
 		UE_LOG(LogTemp, Warning, TEXT("Disgusting client"));
+		ServerPickupWeapon(WeaponPickup);
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Servertime"));
+
+
 	//Logic for picking up weapon goes here
 
 	//Get weapon data, and weapon equip type
@@ -907,6 +921,7 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 	//Switch weapon if this is a player preference
 	if (SwitchWeaponAfterPickup)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("vomitingin"));
 		switch (WeaponEquipType)
 		{
 		case Equips::PRIMARY:
@@ -921,6 +936,7 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 	}
 	else
 	{
+		UE_LOG(LogTemp, Warning, TEXT("diarrhea"));
 		if (EquippedGun == WeaponEquipType)
 		{
 			if (EquippedGun == Equips::PRIMARY)
@@ -966,10 +982,10 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 	//Interrupt automatic fire
 	bIsFiring = false;
 	StopFiring();
-
 	//Logic for switching primary.
 	if (IsLocallyControlled())
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Primary FP"));
 		PositionAndAttachGunInFP(PrimaryData);
 
 	}
@@ -1032,7 +1048,8 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	//Interrupt automatic fire.
 	bIsFiring = false;
 	StopFiring();
-	
+	check(FPSMuzzleComponent != nullptr);
+
 	//Only owner needs this
 	if (IsLocallyControlled())
 	{

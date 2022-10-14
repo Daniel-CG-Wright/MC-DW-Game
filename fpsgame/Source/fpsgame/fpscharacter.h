@@ -505,7 +505,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 		UCameraComponent* FPSCameraComponent;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		URewindComponent* FPSRewindComponent;
 
 	//FPS mesh component, visible only to the owning player
@@ -516,7 +516,7 @@ public:
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 		USkeletalMeshComponent* ThirdPersonGunMesh;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleDefaultsOnly)
 		USceneComponent* FPSMuzzleComponent;
 
 	//Third person muzzle location for calculating muzzle flash and tracers.
