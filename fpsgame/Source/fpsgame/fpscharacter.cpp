@@ -105,6 +105,11 @@ Afpscharacter::Afpscharacter()
 	//Initialize landing time
 	LandingTime = 0.5f;
 
+	//Spread defaults
+	SpeedForLosingAccuracy = 200.0f;
+	MaxMovementSpreadModifier = 5.0f;
+	MinMovementSpreadModifier = 1.0f;
+
 	DistanceToPlaceProjectileFromCamera = 25.0f;
 
 	bCanInteract = true;
