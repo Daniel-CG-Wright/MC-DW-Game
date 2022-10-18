@@ -23,8 +23,8 @@ class UNiagaraSystem;
 #endif
 #define FPSGAME_fpscharacter_generated_h
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_SPARSE_DATA
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_SPARSE_DATA
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_RPC_WRAPPERS \
 	virtual void ServerSwitchSecondary_Implementation(); \
 	virtual void ServerSwitchPrimary_Implementation(); \
 	virtual void ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup); \
@@ -104,7 +104,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execOnPressFire);
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void ServerSwitchSecondary_Implementation(); \
 	virtual void ServerSwitchPrimary_Implementation(); \
 	virtual void ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup); \
@@ -185,21 +185,21 @@ class UNiagaraSystem;
 
 
 #if WITH_EDITOR
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_EDITOR_ONLY_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_EDITOR_ONLY_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execDebugFunction);
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execDebugFunction);
 
 
 #else
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_EDITOR_ONLY_RPC_WRAPPERS
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_EDITOR_ONLY_RPC_WRAPPERS
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS
 #endif //WITH_EDITOR
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_EVENT_PARMS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_EVENT_PARMS \
 	struct fpscharacter_eventServerPickupWeapon_Parms \
 	{ \
 		AWeaponActor* WeaponPickup; \
@@ -243,8 +243,8 @@ class UNiagaraSystem;
 	};
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_CALLBACK_WRAPPERS
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_CALLBACK_WRAPPERS
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAfpscharacter(); \
 	friend struct Z_Construct_UClass_Afpscharacter_Statics; \
@@ -266,7 +266,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_INCLASS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_INCLASS \
 private: \
 	static void StaticRegisterNativesAfpscharacter(); \
 	friend struct Z_Construct_UClass_Afpscharacter_Statics; \
@@ -288,7 +288,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API Afpscharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(Afpscharacter) \
@@ -301,7 +301,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API Afpscharacter(Afpscharacter&&); \
@@ -312,13 +312,16 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(Afpscharacter)
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_PRIVATE_PROPERTY_OFFSET \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__IsLeftHanded() { return STRUCT_OFFSET(Afpscharacter, IsLeftHanded); } \
 	FORCEINLINE static uint32 __PPO__DistanceToPlaceProjectileFromCamera() { return STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera); } \
 	FORCEINLINE static uint32 __PPO__SwitchWeaponAfterPickup() { return STRUCT_OFFSET(Afpscharacter, SwitchWeaponAfterPickup); } \
 	FORCEINLINE static uint32 __PPO__SpeedForLosingAccuracy() { return STRUCT_OFFSET(Afpscharacter, SpeedForLosingAccuracy); } \
 	FORCEINLINE static uint32 __PPO__MaxMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MaxMovementSpreadModifier); } \
 	FORCEINLINE static uint32 __PPO__MinMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier); } \
+	FORCEINLINE static uint32 __PPO__HeadMaterial() { return STRUCT_OFFSET(Afpscharacter, HeadMaterial); } \
+	FORCEINLINE static uint32 __PPO__TorsoMaterial() { return STRUCT_OFFSET(Afpscharacter, TorsoMaterial); } \
+	FORCEINLINE static uint32 __PPO__LegMaterial() { return STRUCT_OFFSET(Afpscharacter, LegMaterial); } \
 	FORCEINLINE static uint32 __PPO__InteractInputIntervalTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractInputIntervalTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__InteractTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__CurrentInteractionName() { return STRUCT_OFFSET(Afpscharacter, CurrentInteractionName); } \
@@ -349,34 +352,34 @@ public: \
 	FORCEINLINE static uint32 __PPO__BulletClass() { return STRUCT_OFFSET(Afpscharacter, BulletClass); }
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_24_PROLOG \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_EVENT_PARMS
+#define fpsgame_Source_fpsgame_fpscharacter_h_25_PROLOG \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_EVENT_PARMS
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_SPARSE_DATA \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_EDITOR_ONLY_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_CALLBACK_WRAPPERS \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_INCLASS \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_SPARSE_DATA \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_EDITOR_ONLY_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_CALLBACK_WRAPPERS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_INCLASS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_fpscharacter_h_27_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_fpscharacter_h_28_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_SPARSE_DATA \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_CALLBACK_WRAPPERS \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_fpscharacter_h_27_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_SPARSE_DATA \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_CALLBACK_WRAPPERS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_fpscharacter_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

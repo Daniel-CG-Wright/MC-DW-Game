@@ -12,6 +12,7 @@
 #include "FPSGameState.h"
 #include "FPSGameModeDefault.h"
 #include "NiagaraSystem.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
 
 //Should always be the last include
 #include "fpscharacter.generated.h"
@@ -157,7 +158,17 @@ protected:
 	UFUNCTION()
 		FVector CalculateSpreadDestination(FVector const StartPoint, FRotator ForwardRotation, float Range, float Modifier, float SpreadAngleInDegress) const;
 
-	
+	//Config for torso, headhsot, legshot etc
+	UPROPERTY(EditDefaultsOnly)
+		UPhysicalMaterial* HeadMaterial;
+
+	UPROPERTY(EditDefaultsOnly)
+		UPhysicalMaterial* TorsoMaterial;
+
+	UPROPERTY(EditDefaultsOnly)
+		UPhysicalMaterial* LegMaterial;
+
+
 //Player input functions
 protected:
 	//Function for pressing interact

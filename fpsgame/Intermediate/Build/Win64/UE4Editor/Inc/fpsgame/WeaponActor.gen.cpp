@@ -591,7 +591,9 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+		{ "Comment", "/*\nCurrently damage is hardcoded to the weapon itself, along with other stats.\nTo implement things like suppressors, bullets etc which could change these stats, we could use one of 2 approaches:\n\x09- Store all the attachment stats and apply them as necessary, based on the attached state\n\x09- On attaching, check which attachments have been selected and apply them to the gun itself. This assumes the gun cannot change during battle, although we could always modify if needed.\n\x09This second method is probably simpler, and would not require any extra processing or storing of attachment pointers post-start but we need to have a think.\n\n*/" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
+		{ "ToolTip", "Currently damage is hardcoded to the weapon itself, along with other stats.\nTo implement things like suppressors, bullets etc which could change these stats, we could use one of 2 approaches:\n       - Store all the attachment stats and apply them as necessary, based on the attached state\n       - On attaching, check which attachments have been selected and apply them to the gun itself. This assumes the gun cannot change during battle, although we could always modify if needed.\n       This second method is probably simpler, and would not require any extra processing or storing of attachment pointers post-start but we need to have a think." },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FWeaponStats_Statics::NewStructOps()
@@ -758,7 +760,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponStats_Hash() { return 1319077269U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponStats_Hash() { return 619319961U; }
 class UScriptStruct* FWeaponMetaData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

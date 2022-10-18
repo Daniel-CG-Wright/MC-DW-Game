@@ -1669,17 +1669,37 @@ void Afpscharacter::DamageLogic(TArray<FHitResult> const HitResults)
 			UE_LOG(LogTemp, Warning, TEXT("Yes"));
 			//do damage
 			//NOTE we could do it based on priority of body part hit, rather than whichever is hit first - for example if hitting torso and head, then headshot damage.
-			//Could be hard to balance but it could be more responsive and feel nice, TODO play around with it.
-
+			//Could be hard to balance (and makes having low ground extremely advantageous) but it could be more responsive and feel nice, TODO play around with it.
+			//WE COULD ALSO have dfiferent levels of leniency for headshots i.e. a gun with larger bullets or that relies on hitting headshots could count as a headshot if a larger area around the head
+			// is hit, compared to something like an smg which would require direct contact.
 			UPhysicalMaterial* HitPhysicalMaterial = Element.PhysMaterial.Get();
 
 			Afpscharacter* CastedActor = Cast<Afpscharacter>(Element.GetActor());
+			FDamageEvent DamageEvent = FDamageEvent();
 
 
 			//Doing damage based on hit body part
 			//UE_LOG(LogTemp, Warning, TEXT("Physics object hit: %s"), *hitPhysicalMaterial->GetFName().ToString());
+			if (HitPhysicalMaterial == HeadMaterial)
+			{
+				//Headshot
+				CastedActor->TakeDamage(GetCurrentlyEquippedWeaponData().Stats.BaseDamageHead, DamageEvent, GetController(), this);
+				UE_LOG(LogTemp, Warning, TEXT("Headshot"));
+			}
+			else if (HitPhysicalMaterial == LegMaterial)
+			{
+				//Bodyshot
+				CastedActor->TakeDamage(GetCurrentlyEquippedWeaponData().Stats.BaseDamageLegs, DamageEvent, GetController(), this);
+				UE_LOG(LogTemp, Warning, TEXT("Legshot"));
 
-			CastedActor->TakeDamage(GetCurrentlyEquippedWeaponData().Stats.BaseDamageTorso, FDamageEvent(), GetController(), this);
+			}
+			else
+			{
+				//Armshot/torso
+				CastedActor->TakeDamage(GetCurrentlyEquippedWeaponData().Stats.BaseDamageTorso, DamageEvent, GetController(), this);
+				UE_LOG(LogTemp, Warning, TEXT("Torsoshot"));
+
+			}
 
 			//Probably TODO add a radial damage indicator thing
 			//TODO add damage animations and sounds and ting for serverside, clientside can also do its own thing.
