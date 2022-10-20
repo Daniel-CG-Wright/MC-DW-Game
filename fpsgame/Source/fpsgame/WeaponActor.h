@@ -156,6 +156,15 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 		TSubclassOf<class AProjectileBullet> ProjectileClass;
 };
+/*
+Currently damage is hardcoded to the weapon itself, along with other stats.
+To implement things like suppressors, bullets etc which could change these stats, we could use one of 2 approaches:
+	- Store all the attachment stats and apply them as necessary, based on the attached state
+	- On attaching, check which attachments have been selected and apply them to the gun itself. This assumes the gun cannot change during battle, although we could always modify if needed.
+	This second method is probably simpler, and would not require any extra processing or storing of attachment pointers post-start but we need to have a think.
+
+*/
+
 
 USTRUCT(BlueprintType)
 struct FWeaponStats
