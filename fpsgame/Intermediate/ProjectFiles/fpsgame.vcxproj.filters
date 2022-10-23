@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\fpsgame.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{DD01E81D-18D6-46EC-A6A0-161CDB5B4532}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\fpsgame.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\fpsgameEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{5E30FE66-D8E8-4DF2-B505-B7254345648C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\fpsgame">
+      <UniqueIdentifier>{D52A231A-1C01-4358-AF70-B91F1BD4E75A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\fpsgame\fpscharacter.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\fpscharacter.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\fpsgame\fpsgame.Build.cs">
+      <Filter>Source\fpsgame</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\fpsgame\fpsgame.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\fpsgame.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\fpsgameGameModeBase.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\fpsgameGameModeBase.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\FPSGameModeDefault.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\FPSGameModeDefault.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\FPSGameState.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\FPSGameState.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\FPSPlayerController.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\FPSPlayerController.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\FPSProjectile.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\FPSProjectile.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\InteractableObjectComponent.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\InteractableObjectComponent.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\ProjectileBullet.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\ProjectileBullet.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\RewindComponent.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\RewindComponent.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\WeaponActor.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\WeaponActor.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

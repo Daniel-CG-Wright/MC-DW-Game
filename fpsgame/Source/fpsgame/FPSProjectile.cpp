@@ -50,12 +50,6 @@ AFPSProjectile::AFPSProjectile()
 
 	}
 
-	//Sets destroy particle effect
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> DefaultDestroyEffect(TEXT("ParticleSystem'/Game/Particles/P_Explosion.P_Explosion'"));
-	if (DefaultDestroyEffect.Succeeded())
-	{
-		DestroyEffect = DefaultDestroyEffect.Object;
-	}
 
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
 	ProjectileMovementComponent->SetUpdatedComponent(CollisionComponent);

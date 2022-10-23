@@ -1147,7 +1147,6 @@ void Afpscharacter::ClientValidateFire()
 	//Set bIsFiring to false until able to fire, so we don;t have to repeat set to false for all non-firing cases.
 	bIsFiring = false;
 
-	UE_LOG(LogTemp, Warning, TEXT("Validate"));
 	//If we dont have a gun equipped, return
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
@@ -1155,32 +1154,40 @@ void Afpscharacter::ClientValidateFire()
 		StopFiring();
 		return;
 	}
+	
 	//UE_LOG(LogTemp, Warning, TEXT("ClientValidateFire"));
 	//Checking if we have ammo for firing
-	UE_LOG(LogTemp, Warning, TEXT("hell yea"));
 	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0 && ((BurstRoundsToFire > 0 && GetCurrentlyEquippedWeaponData().Stats.BurstFireRate > 0.0f) || GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Activating"));
+		TArray<float> SpreadAngles;
 		//Activate firing functions based on firing type
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
-			UE_LOG(LogTemp, Warning, TEXT("Hitscan"));
 			bIsFiring = true;
-			ClientHitscanCheckFire();
+			SpreadAngles = ClientHitscanCheckFire();
 			break;
 		case FireType::PROJECTILE:
 			//add projectile logic
+			bIsFiring = true;
+			SpreadAngles = ClientProjectileCheckFire();
+
 			break;
-		case FireType::HYBRID:
-			//Add hybrid logic
-			break;
+
 		default:
 			//UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
-
-			break;
+			return;
 		}
+		//Always need to check on server, as if player misses we still want to show this.
+		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
+		//Run RPC on server to ensure shot hit
+		if (clienttime)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("client time = %f"), clienttime);
 
+			ServerValidateFire(clienttime, SpreadAngles);
+
+		}
 	}
 	else
 	{
@@ -1264,17 +1271,61 @@ float Afpscharacter::CalculateSpreadModifier()
 	return SpreadModifier;
 
 }
-void Afpscharacter::ClientHitscanCheckFire()
+
+TArray<float> Afpscharacter::ClientProjectileCheckFire()
 {
-	//This variable stores the start point of any tracer emitter particles
-	FVector EmitterStartPoint =FPSMuzzleComponent->GetComponentLocation();
-	UE_LOG(LogTemp, Warning, TEXT("BurstFrenzy"));
-	//Start the timer for automatic fire if the weapon is automatic, so that firing can happen often.
+	//For firing projectiles
+	FVector EmitterStartPoint = FPSMuzzleComponent->GetComponentLocation();
+
+	//Start automatic fire weapon timer
 	if (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponFireType == FireMode::AUTO)
 	{
 		GetWorld()->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::AutomaticFire, GetCurrentlyEquippedWeaponData().Stats.FireRate, true);
 
 	}
+
+	BurstRoundsToFire -= 1;
+	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
+
+	//First bit copied from clienthitscancheckfire
+	TArray<float> SpreadAngles;
+
+	float SpreadModifier = CalculateSpreadModifier();
+
+
+	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
+	{
+
+		float RandomSpread = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
+
+		//Spawn projectile, they do their own damage and effects and stuff in their destroy thing so no need to worry about that here
+		FVector SpawnLocation = FPSCameraComponent->GetComponentLocation() + (FPSCameraComponent->GetForwardVector() * DistanceToPlaceProjectileFromCamera);
+		FRotator SpawnRotation = GetControlRotation();
+		AProjectileBullet* SpawnedProjectile;
+
+		SpawnedProjectile = SpawnProjectileBullet(SpawnLocation, SpawnRotation, SpreadModifier, RandomSpread);
+		
+
+
+
+	}
+	//Show muzzle flash
+
+	ShowMuzzleFlashFP(
+		EmitterStartPoint,
+		FPSMuzzleComponent->GetForwardVector(),
+		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
+	);
+
+	return SpreadAngles;
+}
+
+TArray<float> Afpscharacter::ClientHitscanCheckFire()
+{
+	//This variable stores the start point of any tracer emitter particles
+	FVector EmitterStartPoint =FPSMuzzleComponent->GetComponentLocation();
+	//Start the timer for automatic fire if the weapon is automatic, so that firing can happen often.
+	
 	BurstRoundsToFire -= 1;
 	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
 
@@ -1356,22 +1407,8 @@ void Afpscharacter::ClientHitscanCheckFire()
 		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
 	);
 
-	if (HitResults.Num() > 0)
-	{
-		
-
-		//If we score a hit this is the logic that will be played
-		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
-		//Run RPC on server to ensure shot hit
-		if (clienttime)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("client time = %f"), clienttime);
-
-			ServerValidateFire(clienttime, SpreadAngles);
-
-		}
-
-	}
+	return SpreadAngles;
+	
 	
 }
 
@@ -1408,12 +1445,12 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime, cons
 			break;
 		case FireType::PROJECTILE:
 			//add projectile logic
+			ServerProjectileCheckFire(SpreadAngles);
 			break;
-		case FireType::HYBRID:
-			//Add hybrid logic
-			break;
+
 		default:
 			UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
+			return;
 			break;
 		}
 
@@ -1425,6 +1462,49 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime, cons
 	
 }
 
+AProjectileBullet* Afpscharacter::SpawnProjectileBullet(FVector Location, FRotator Rotation, float Modifier, float SpreadAngleInDegrees)
+{
+	FActorSpawnParameters spawnParams;
+	spawnParams.Instigator = GetInstigator();
+	spawnParams.Owner = this;
+
+	//Need to consider spread angles as well, roll is unnecessary
+	FRotator FinalRotation = Rotation + FRotator(SpreadAngleInDegrees, SpreadAngleInDegrees, 0) * Modifier;
+
+	return GetWorld()->SpawnActor<AProjectileBullet>(Location, FinalRotation, spawnParams);
+
+
+
+}
+void Afpscharacter::ServerProjectileCheckFire(TArray<float> SpreadAngles)
+{
+	//server firing projectiles
+
+	//Currently no prediction is used - the player will have to lead projectiles at high lag, which we may want to change, but this is unlikely to be much of a problem seeing as you have to lead projectiles anyway.
+
+	FVector EmitterStartPoint = TPMuzzleComponent->GetComponentLocation();
+
+	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
+
+	float SpreadModifier = CalculateSpreadModifier();
+
+	for (float Angle : SpreadAngles)
+	{
+		FVector SpawnLoaction = FPSCameraComponent->GetComponentLocation() + (FPSCameraComponent->GetForwardVector() * DistanceToPlaceProjectileFromCamera);
+		FRotator SpawnRotation = GetControlRotation();
+
+		AProjectileBullet* SpawnedProjectile;
+
+		SpawnedProjectile = SpawnProjectileBullet(SpawnLoaction, SpawnRotation, SpreadModifier, Angle);
+
+	}
+
+	ShowMuzzleFlashFP(
+		EmitterStartPoint,
+		FPSMuzzleComponent->GetForwardVector(),
+		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
+	);
+}
 void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime, TArray<float> SpreadAngles)
 {
 	//The meaty part. Here is where we rewind the poses and stuff using the game state to check if the shot hit.
@@ -1575,6 +1655,7 @@ void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 
 	float SpreadModifier = CalculateSpreadModifier();
 
+	UE_LOG(LogTemp, Warning, TEXT("Weapon name: %s"), *GetCurrentlyEquippedWeaponData().WeaponName.ToString());
 	//This relies on the cartridge bullets measured by the client, SO COULD BE PRONE TO EXPLOIT - MAY NEED REVISION
 	for (float Angle : SpreadAngles)
 	{
@@ -1592,11 +1673,12 @@ void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 		{
 			if (TempHitResults.Last().bBlockingHit)
 			{
+				UE_LOG(LogTemp, Warning, TEXT("Blocking"));
 				ShowHitscanFireEffectTP(EmitterStartPoint, TempHitResults.Last().Location, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
 			}
 			else
 			{
-				
+				UE_LOG(LogTemp, Warning, TEXT("Hit"));
 				ShowHitscanFireEffectTP(
 					EmitterStartPoint,
 					(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
@@ -1607,6 +1689,7 @@ void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 		}
 		else
 		{
+			UE_LOG(LogTemp, Warning, TEXT("miss"));
 			ShowHitscanFireEffectTP(
 				EmitterStartPoint,
 				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
@@ -1622,7 +1705,6 @@ void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 	if (HitResults.Num() > 0)
 	{
 		//If we score a hit we must look at all the hit results and create hit markers and sound fx and stuff and deal dmg
-		UE_LOG(LogTemp, Warning, TEXT("Got a hit"));
 		//REMEMBER - HIT RESULTS WILL SHOW ALL BODY PARTS OF AN ACTOR WHICH HAS BEEN HIT - ONLY INCLUDE THE FIRST ONE.
 		
 		//Do damage logic here

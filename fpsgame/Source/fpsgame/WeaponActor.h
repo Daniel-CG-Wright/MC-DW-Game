@@ -42,8 +42,7 @@ UENUM(BlueprintType)
 		HITSCAN,
 		//Projectile weapon
 		PROJECTILE,
-		//Checks for hitscan, if not, fires projectile
-		HYBRID
+
 
 
 	};
@@ -57,9 +56,10 @@ UENUM(BlueprintType)
 		//Semi - tap fire
 		SEMI,
 		//Bolt, requires animation between shots
-		BOLT,
-		//Beam, probably not used
-		BEAM
+		BOLT
+
+		//Beam weapons should be implemented by using an automatic weapon with very high rate of fire and no spread.
+		//Also configure the tracer so that it looks constant.
 	};
 
 UENUM(BlueprintType)
@@ -127,6 +127,7 @@ public:
 
 };
 
+//If you get undeclared struct errors is probably because structs were declatred in wrong order.
 USTRUCT(BlueprintType)
 struct FWeaponMetaData
 {

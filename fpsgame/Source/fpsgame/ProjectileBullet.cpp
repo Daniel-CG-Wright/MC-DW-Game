@@ -22,7 +22,7 @@ void AProjectileBullet::Destroyed()
 {
 	FVector spawnLocation = GetActorLocation();
 	//Spawns explosion effect - doesn't directly replicate, but  destrouctin of actor does, so this msut play on all clients.
-	UGameplayStatics::SpawnEmitterAtLocation(this, DestroyEffect, spawnLocation, FRotator::ZeroRotator, true, EPSCPoolMethod::AutoRelease);
+	
 }
 
 void AProjectileBullet::OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)

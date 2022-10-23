@@ -81,6 +81,17 @@ protected:
 //Firing functions
 protected:
 
+	//Called for firing projectiles
+	UFUNCTION()
+		TArray<float> ClientProjectileCheckFire();
+
+	UFUNCTION()
+		void ServerProjectileCheckFire(TArray<float> SpreadAngles);
+
+	//Used to spawn a projectile
+	UFUNCTION()
+		AProjectileBullet * SpawnProjectileBullet(FVector Location, FRotator Rotation, float Modifier, float SpreadAngleInDegrees);
+
 	//Called on pressing fire, used for burst weapons and stuff
 	UFUNCTION()
 		void OnPressFire();
@@ -107,7 +118,7 @@ protected:
 
 	//Checks if the client will hit anything on their side when they fire (hitscan)
 	UFUNCTION()
-		void ClientHitscanCheckFire();
+		TArray<float> ClientHitscanCheckFire();
 
 	//Calculates spread modifier
 	UFUNCTION()
