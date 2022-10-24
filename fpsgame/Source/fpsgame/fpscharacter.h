@@ -148,6 +148,30 @@ protected:
 	UFUNCTION()
 		void DamageLogic(TArray<FHitResult> const HitResults);
 
+	//The way we handle firing tracers on hitscan:
+	// We change a variable, which will be FVector of the end location for the trace, which is replicated across all clients except owner
+	//We then use this replicated variable to call a replicatedUsing function which then calls all cosmetic stuff.
+	//However, we cannot use parameters in this or any child variables. Luckily we know that the start location is the muzzle, and the effect will
+	//be the weapon's tracer or muzzle effect (depending on function). However, we will not know the endpoint for a tracer.
+	//This is why this must be the variable replicated - any changes to this will therefore be able to activate the tracers as needed.
+
+	//For muzzle flash we will just increment an integer for shots fired
+
+	UPROPERTY(ReplicatedUsing = OnRep_MuzzleCounter)
+		int MuzzleCounter;
+
+	UFUNCTION()
+		void OnRep_MuzzleCounter();
+
+	//Here is our replicated endpoint
+	//This endpoint will be duff for projectiles, and will not matter, as we will only use it for the hitscan tracer effect.
+	UPROPERTY(ReplicatedUsing = OnRep_EndPoint)
+		FVector EndPoint;
+
+	//Here is the repNotify function
+	UFUNCTION()
+		void OnRep_EndPoint();
+
 	//Shows cosmetic hitscan bullet trace for third person
 	UFUNCTION(BlueprintImplementableEvent)
 		void ShowHitscanFireEffectTP(FVector const StartLocation, FVector const EndLocation, UNiagaraSystem* TracerEffect) const;
@@ -161,6 +185,7 @@ protected:
 		void ShowMuzzleFlashFP(FVector const StartLocation, FVector const Direction, UNiagaraSystem* MuzzleFlashEffect) const;
 
 	//Shows cosmetic muzzle flash in third person
+	//Direction will be calculated using the facing direction of the muzzle compnent.
 	UFUNCTION(BlueprintImplementableEvent)
 		void ShowMuzzleFlashTP(FVector const StartLocation, FVector const Direction, UNiagaraSystem* MuzzleFlashEffect) const;
 
@@ -178,6 +203,7 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly)
 		UPhysicalMaterial* LegMaterial;
+
 
 
 //Player input functions
@@ -217,7 +243,7 @@ protected:
 
 	//Used in shooting with spread - does not actually create the spread cone, merely performs the actual beam at the desired angle. Cone should be generated before.
 	UFUNCTION()
-		bool MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndPoint, ECollisionChannel CollisionChannel = ECC_Visibility);
+		bool MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndLocation, ECollisionChannel CollisionChannel = ECC_Visibility);
 
 	//Checks for interact via collision
 	UFUNCTION()

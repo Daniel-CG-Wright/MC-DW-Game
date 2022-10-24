@@ -372,11 +372,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	{
 		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_ResultOutHit);
 		P_GET_STRUCT(FVector,Z_Param_StartPoint);
-		P_GET_STRUCT(FVector,Z_Param_EndPoint);
+		P_GET_STRUCT(FVector,Z_Param_EndLocation);
 		P_GET_PROPERTY(FByteProperty,Z_Param_CollisionChannel);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(bool*)Z_Param__Result=P_THIS->MultiRaycastDirectional(Z_Param_Out_ResultOutHit,Z_Param_StartPoint,Z_Param_EndPoint,ECollisionChannel(Z_Param_CollisionChannel));
+		*(bool*)Z_Param__Result=P_THIS->MultiRaycastDirectional(Z_Param_Out_ResultOutHit,Z_Param_StartPoint,Z_Param_EndLocation,ECollisionChannel(Z_Param_CollisionChannel));
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execMultiRaycastInCameraDirection)
@@ -445,6 +445,20 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(FVector*)Z_Param__Result=P_THIS->CalculateSpreadDestination(Z_Param_StartPoint,Z_Param_ForwardRotation,Z_Param_Range,Z_Param_Modifier,Z_Param_SpreadAngleInDegress);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execOnRep_EndPoint)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_EndPoint();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execOnRep_MuzzleCounter)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_MuzzleCounter();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execDamageLogic)
@@ -727,6 +741,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "OnRep_CurrentHealth", &Afpscharacter::execOnRep_CurrentHealth },
 			{ "OnRep_CurrentlyCrouching", &Afpscharacter::execOnRep_CurrentlyCrouching },
 			{ "OnRep_CurrentStamina", &Afpscharacter::execOnRep_CurrentStamina },
+			{ "OnRep_EndPoint", &Afpscharacter::execOnRep_EndPoint },
+			{ "OnRep_MuzzleCounter", &Afpscharacter::execOnRep_MuzzleCounter },
 			{ "PickupWeapon", &Afpscharacter::execPickupWeapon },
 			{ "PositionAndAttachGunInFP", &Afpscharacter::execPositionAndAttachGunInFP },
 			{ "PositionAndAttachGunInTP", &Afpscharacter::execPositionAndAttachGunInTP },
@@ -1684,7 +1700,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{
 			TArray<FHitResult> ResultOutHit;
 			FVector StartPoint;
-			FVector EndPoint;
+			FVector EndLocation;
 			TEnumAsByte<ECollisionChannel> CollisionChannel;
 			bool ReturnValue;
 		};
@@ -1695,9 +1711,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StartPoint;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndPoint_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndLocation_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndPoint;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndLocation;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_CollisionChannel;
 		static void NewProp_ReturnValue_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
@@ -1716,11 +1732,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_StartPoint = { "StartPoint", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventMultiRaycastDirectional_Parms, StartPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_StartPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_StartPoint_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndPoint_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndLocation_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndPoint = { "EndPoint", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventMultiRaycastDirectional_Parms, EndPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndPoint_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndLocation = { "EndLocation", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventMultiRaycastDirectional_Parms, EndLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndLocation_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_CollisionChannel = { "CollisionChannel", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventMultiRaycastDirectional_Parms, CollisionChannel), Z_Construct_UEnum_Engine_ECollisionChannel, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 	{
@@ -1731,7 +1747,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_ResultOutHit_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_ResultOutHit,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_StartPoint,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndPoint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_EndLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_CollisionChannel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional_Statics::NewProp_ReturnValue,
 	};
@@ -1991,6 +2007,52 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_OnRep_CurrentStamina_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Here is the repNotify function\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Here is the repNotify function" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "OnRep_EndPoint", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "OnRep_MuzzleCounter", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2951,9 +3013,9 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Shows cosmetic muzzle flash in third person\n" },
+		{ "Comment", "//Shows cosmetic muzzle flash in third person\n//Direction will be calculated using the facing direction of the muzzle compnent.\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Shows cosmetic muzzle flash in third person" },
+		{ "ToolTip", "Shows cosmetic muzzle flash in third person\nDirection will be calculated using the facing direction of the muzzle compnent." },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ShowMuzzleFlashTP", nullptr, nullptr, sizeof(fpscharacter_eventShowMuzzleFlashTP_Parms), Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48880800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP_Statics::Function_MetaDataParams)) };
@@ -3408,6 +3470,14 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinMovementSpreadModifier;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MuzzleCounter_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MuzzleCounter;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndPoint_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndPoint;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeadMaterial_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HeadMaterial;
@@ -3642,7 +3712,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_LoseStamina, "LoseStamina" }, // 3542002802
 		{ &Z_Construct_UFunction_Afpscharacter_MoveX, "MoveX" }, // 1139188873
 		{ &Z_Construct_UFunction_Afpscharacter_MoveY, "MoveY" }, // 2819240834
-		{ &Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional, "MultiRaycastDirectional" }, // 208334619
+		{ &Z_Construct_UFunction_Afpscharacter_MultiRaycastDirectional, "MultiRaycastDirectional" }, // 2311772849
 		{ &Z_Construct_UFunction_Afpscharacter_MultiRaycastInCameraDirection, "MultiRaycastInCameraDirection" }, // 3425216501
 		{ &Z_Construct_UFunction_Afpscharacter_OnPressFire, "OnPressFire" }, // 2617117134
 		{ &Z_Construct_UFunction_Afpscharacter_OnReload, "OnReload" }, // 1864971520
@@ -3652,6 +3722,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentHealth, "OnRep_CurrentHealth" }, // 2772940714
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentlyCrouching, "OnRep_CurrentlyCrouching" }, // 4044249521
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentStamina, "OnRep_CurrentStamina" }, // 3514113238
+		{ &Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint, "OnRep_EndPoint" }, // 3506385511
+		{ &Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter, "OnRep_MuzzleCounter" }, // 30205078
 		{ &Z_Construct_UFunction_Afpscharacter_PickupWeapon, "PickupWeapon" }, // 1931033833
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP, "PositionAndAttachGunInFP" }, // 260365713
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInTP, "PositionAndAttachGunInTP" }, // 967761929
@@ -3678,7 +3750,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectFP, "ShowHitscanFireEffectFP" }, // 2355345348
 		{ &Z_Construct_UFunction_Afpscharacter_ShowHitscanFireEffectTP, "ShowHitscanFireEffectTP" }, // 1567916911
 		{ &Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP, "ShowMuzzleFlashFP" }, // 3421156960
-		{ &Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP, "ShowMuzzleFlashTP" }, // 246472214
+		{ &Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP, "ShowMuzzleFlashTP" }, // 143480358
 		{ &Z_Construct_UFunction_Afpscharacter_SingleRaycastInCameraDirection, "SingleRaycastInCameraDirection" }, // 4236554935
 		{ &Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet, "SpawnProjectileBullet" }, // 1304784369
 		{ &Z_Construct_UFunction_Afpscharacter_StartJump, "StartJump" }, // 694071235
@@ -3763,6 +3835,22 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier = { "MinMovementSpreadModifier", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter_MetaData[] = {
+		{ "Comment", "//For muzzle flash we will just increment an integer for shots fired\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "For muzzle flash we will just increment an integer for shots fired" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter = { "MuzzleCounter", "OnRep_MuzzleCounter", (EPropertyFlags)0x0020080100000020, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, MuzzleCounter), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint_MetaData[] = {
+		{ "Comment", "//Here is our replicated endpoint\n//This endpoint will be duff for projectiles, and will not matter, as we will only use it for the hitscan tracer effect.\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Here is our replicated endpoint\nThis endpoint will be duff for projectiles, and will not matter, as we will only use it for the hitscan tracer effect." },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint = { "EndPoint", "OnRep_EndPoint", (EPropertyFlags)0x0020080100000020, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, EndPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_HeadMaterial_MetaData[] = {
 		{ "Category", "fpscharacter" },
@@ -4200,6 +4288,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_SpeedForLosingAccuracy,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MaxMovementSpreadModifier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_HeadMaterial,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_TorsoMaterial,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_LegMaterial,
@@ -4276,7 +4366,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 1098160796);
+	IMPLEMENT_CLASS(Afpscharacter, 560237685);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();
@@ -4285,6 +4375,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 
 	void Afpscharacter::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 	{
+		static const FName Name_MuzzleCounter(TEXT("MuzzleCounter"));
+		static const FName Name_EndPoint(TEXT("EndPoint"));
 		static const FName Name_SynchronisedControlRotation(TEXT("SynchronisedControlRotation"));
 		static const FName Name_PrimaryData(TEXT("PrimaryData"));
 		static const FName Name_SecondaryData(TEXT("SecondaryData"));
@@ -4295,6 +4387,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static const FName Name_EquippedGun(TEXT("EquippedGun"));
 
 		const bool bIsValid = true
+			&& Name_MuzzleCounter == ClassReps[(int32)ENetFields_Private::MuzzleCounter].Property->GetFName()
+			&& Name_EndPoint == ClassReps[(int32)ENetFields_Private::EndPoint].Property->GetFName()
 			&& Name_SynchronisedControlRotation == ClassReps[(int32)ENetFields_Private::SynchronisedControlRotation].Property->GetFName()
 			&& Name_PrimaryData == ClassReps[(int32)ENetFields_Private::PrimaryData].Property->GetFName()
 			&& Name_SecondaryData == ClassReps[(int32)ENetFields_Private::SecondaryData].Property->GetFName()

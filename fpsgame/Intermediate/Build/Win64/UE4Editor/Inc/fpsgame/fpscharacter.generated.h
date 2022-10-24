@@ -89,6 +89,8 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execInteract); \
 	DECLARE_FUNCTION(execInteractPressed); \
 	DECLARE_FUNCTION(execCalculateSpreadDestination); \
+	DECLARE_FUNCTION(execOnRep_EndPoint); \
+	DECLARE_FUNCTION(execOnRep_MuzzleCounter); \
 	DECLARE_FUNCTION(execDamageLogic); \
 	DECLARE_FUNCTION(execServerPerformHitscan); \
 	DECLARE_FUNCTION(execServerRewindAndPerformHitscan); \
@@ -172,6 +174,8 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execInteract); \
 	DECLARE_FUNCTION(execInteractPressed); \
 	DECLARE_FUNCTION(execCalculateSpreadDestination); \
+	DECLARE_FUNCTION(execOnRep_EndPoint); \
+	DECLARE_FUNCTION(execOnRep_MuzzleCounter); \
 	DECLARE_FUNCTION(execDamageLogic); \
 	DECLARE_FUNCTION(execServerPerformHitscan); \
 	DECLARE_FUNCTION(execServerRewindAndPerformHitscan); \
@@ -261,7 +265,9 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		SynchronisedControlRotation=NETFIELD_REP_START, \
+		MuzzleCounter=NETFIELD_REP_START, \
+		EndPoint, \
+		SynchronisedControlRotation, \
 		PrimaryData, \
 		SecondaryData, \
 		CurrentlyCrouching, \
@@ -283,7 +289,9 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		SynchronisedControlRotation=NETFIELD_REP_START, \
+		MuzzleCounter=NETFIELD_REP_START, \
+		EndPoint, \
+		SynchronisedControlRotation, \
 		PrimaryData, \
 		SecondaryData, \
 		CurrentlyCrouching, \
@@ -326,6 +334,8 @@ public: \
 	FORCEINLINE static uint32 __PPO__SpeedForLosingAccuracy() { return STRUCT_OFFSET(Afpscharacter, SpeedForLosingAccuracy); } \
 	FORCEINLINE static uint32 __PPO__MaxMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MaxMovementSpreadModifier); } \
 	FORCEINLINE static uint32 __PPO__MinMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier); } \
+	FORCEINLINE static uint32 __PPO__MuzzleCounter() { return STRUCT_OFFSET(Afpscharacter, MuzzleCounter); } \
+	FORCEINLINE static uint32 __PPO__EndPoint() { return STRUCT_OFFSET(Afpscharacter, EndPoint); } \
 	FORCEINLINE static uint32 __PPO__HeadMaterial() { return STRUCT_OFFSET(Afpscharacter, HeadMaterial); } \
 	FORCEINLINE static uint32 __PPO__TorsoMaterial() { return STRUCT_OFFSET(Afpscharacter, TorsoMaterial); } \
 	FORCEINLINE static uint32 __PPO__LegMaterial() { return STRUCT_OFFSET(Afpscharacter, LegMaterial); } \

@@ -153,6 +153,11 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 
 	//For replicating pitch
 	DOREPLIFETIME_CONDITION(Afpscharacter, SynchronisedControlRotation, COND_SimulatedOnly);
+
+	//Replicating gun cosmetics
+	DOREPLIFETIME_CONDITION(Afpscharacter, MuzzleCounter, COND_SkipOwner);
+	DOREPLIFETIME_CONDITION(Afpscharacter, EndPoint, COND_SkipOwner);
+
 }
 
 
@@ -1229,7 +1234,7 @@ void Afpscharacter::UpdateAmmoDisplay()
 	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().Stats.MaxMagSize);
 }
 
-bool Afpscharacter::MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndPoint, ECollisionChannel CollisionChannel)
+bool Afpscharacter::MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndLocation, ECollisionChannel CollisionChannel)
 {
 	//This performs a multi raycast, but is used for functions like spread angles by
 	//taking a predetermined end point.
@@ -1239,7 +1244,7 @@ bool Afpscharacter::MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FV
 	CollisionParams.AddIgnoredActor(this);
 	CollisionParams.bReturnPhysicalMaterial = true;
 
-	bool result = GetWorld()->LineTraceMultiByChannel(ResultOutHit, StartPoint, EndPoint, CollisionChannel, CollisionParams);
+	bool result = GetWorld()->LineTraceMultiByChannel(ResultOutHit, StartPoint, EndLocation, CollisionChannel, CollisionParams);
 	return result;
 	
 }
@@ -1251,9 +1256,9 @@ FVector Afpscharacter::CalculateSpreadDestination(FVector StartPoint, FRotator F
 	//Modifier can be increased for movement, and decreased for not movement.
 	FRotator AimRotation = ForwardRotation + FRotator(SpreadAngleInDegress, SpreadAngleInDegress, 0) * Modifier;
 	
-	FVector EndPoint = StartPoint + (AimRotation.Vector() * Range);
+	FVector EndLocation = StartPoint + (AimRotation.Vector() * Range);
 
-	return EndPoint;
+	return EndLocation;
 
 }
 
@@ -1412,6 +1417,7 @@ TArray<float> Afpscharacter::ClientHitscanCheckFire()
 	
 }
 
+
 bool Afpscharacter::ServerValidateFire_Validate(float ClientFireTime, const TArray<float>& SpreadAngles)
 {
 	//This is here for future validation.
@@ -1499,11 +1505,18 @@ void Afpscharacter::ServerProjectileCheckFire(TArray<float> SpreadAngles)
 
 	}
 
-	ShowMuzzleFlashFP(
-		EmitterStartPoint,
-		FPSMuzzleComponent->GetForwardVector(),
-		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
-	);
+	MuzzleCounter += 1;
+}
+void Afpscharacter::OnRep_EndPoint()
+{
+	ShowHitscanFireEffectTP(TPMuzzleComponent->GetComponentLocation(), EndPoint, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
+}
+void Afpscharacter::OnRep_MuzzleCounter()
+{
+
+	ShowMuzzleFlashTP(TPMuzzleComponent->GetComponentLocation(), TPMuzzleComponent->GetForwardVector(), GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash);
+
+	
 }
 void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime, TArray<float> SpreadAngles)
 {
@@ -1674,31 +1687,26 @@ void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 			if (TempHitResults.Last().bBlockingHit)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Blocking"));
-				ShowHitscanFireEffectTP(EmitterStartPoint, TempHitResults.Last().Location, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
+				EndPoint = TempHitResults.Last().Location;
 			}
 			else
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Hit"));
-				ShowHitscanFireEffectTP(
-					EmitterStartPoint,
-					(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
-					GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
-				);
+				EndPoint = EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange);
 			}
 		
 		}
 		else
 		{
 			UE_LOG(LogTemp, Warning, TEXT("miss"));
-			ShowHitscanFireEffectTP(
-				EmitterStartPoint,
-				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
-				GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
-			);
+			EndPoint = EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange);
 
 		}
 
 	}
+	
+	//Muzzlw Flash
+	MuzzleCounter += 1;
 
 	//Raycast done
 
