@@ -8,9 +8,9 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
 class UPrimitiveComponent;
 class AActor;
-struct FVector;
 struct FHitResult;
 #ifdef FPSGAME_FPSProjectile_generated_h
 #error "FPSProjectile.generated.h already included, missing '#pragma once' in FPSProjectile.h"
@@ -23,7 +23,8 @@ struct FHitResult;
 	DECLARE_FUNCTION(execSetProjectileSpeed); \
 	DECLARE_FUNCTION(execSetProjectileRadius); \
 	DECLARE_FUNCTION(execGetProjectileRadius); \
-	DECLARE_FUNCTION(execOnProjectileImpact);
+	DECLARE_FUNCTION(execFireInDirection); \
+	DECLARE_FUNCTION(execOnHit);
 
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -31,7 +32,8 @@ struct FHitResult;
 	DECLARE_FUNCTION(execSetProjectileSpeed); \
 	DECLARE_FUNCTION(execSetProjectileRadius); \
 	DECLARE_FUNCTION(execGetProjectileRadius); \
-	DECLARE_FUNCTION(execOnProjectileImpact);
+	DECLARE_FUNCTION(execFireInDirection); \
+	DECLARE_FUNCTION(execOnHit);
 
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_INCLASS_NO_PURE_DECLS \
@@ -77,8 +79,7 @@ public: \
 
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ProjectileRadius() { return STRUCT_OFFSET(AFPSProjectile, ProjectileRadius); } \
-	FORCEINLINE static uint32 __PPO__MaxProjectileSpeed() { return STRUCT_OFFSET(AFPSProjectile, MaxProjectileSpeed); }
+	FORCEINLINE static uint32 __PPO__ProjectileRadius() { return STRUCT_OFFSET(AFPSProjectile, ProjectileRadius); }
 
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_12_PROLOG

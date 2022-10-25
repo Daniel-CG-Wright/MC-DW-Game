@@ -45,7 +45,7 @@ protected:
 
 	UPROPERTY(EditAnywhere)
 		//The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)
-		float DistanceToPlaceProjectileFromCamera;
+		FVector DistanceToPlaceProjectileFromCamera;
 
 	//Records if the player should switch weapon to the pick up weapon after picking a weapon up
 	UPROPERTY(EditAnywhere)
@@ -54,6 +54,9 @@ protected:
 	//Stores whether or not the player is currently holding down the fire button.
 	bool bIsFiring;
 
+	//Controls whether the gun can fire again, to prevent abuse of semi guns (e.g. using autoclickers)
+	//Currently only controlled on client-side so may need to move functionality to server side in case of cheating.
+	bool bCanFire;
 	//Stores whether or not the player is currently firing a burst
 	bool bIsFiringBurst;
 
@@ -100,13 +103,16 @@ protected:
 	UFUNCTION()
 		void OnReload();
 
+	//Server reload function, to regulate times and stuff
+	UFUNCTION(Server, Reliable, WithValidation)
+		void ServerReload();
 	//Stops firing burst
 	UFUNCTION()
 		void StopFiring();
 
-	//Called on timer if the weapon is automatic, so that if the fire key is held down the weapon will fire continuosuly.
+	//Called on timer to allow weapon to fire at its fire rate. Integrates automatic weapon functions as needed.
 	UFUNCTION()
-		void AutomaticFire();
+		void RepeatFire();
 
 	//Called when no longer pressing fire button
 	UFUNCTION()

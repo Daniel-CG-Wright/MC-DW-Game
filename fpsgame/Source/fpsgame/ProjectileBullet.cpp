@@ -20,20 +20,23 @@ AProjectileBullet::AProjectileBullet()
 
 void AProjectileBullet::Destroyed()
 {
+
 	FVector spawnLocation = GetActorLocation();
 	//Spawns explosion effect - doesn't directly replicate, but  destrouctin of actor does, so this msut play on all clients.
 	
 }
 
-void AProjectileBullet::OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+void AProjectileBullet::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
+	UE_LOG(LogTemp, Warning, TEXT("destroyed"));
+
 	if (OtherActor)
 	{
 		//Runs if another actror was hit
 		UGameplayStatics::ApplyPointDamage(OtherActor, Damage, NormalImpulse, Hit, GetInstigator()->Controller, this, DamageType);
 	}
-
 	Destroy();
+	
 }
 
 void AProjectileBullet::BeginPlay()
@@ -41,11 +44,6 @@ void AProjectileBullet::BeginPlay()
 	Super::BeginPlay();
 
 
-}
-
-void AProjectileBullet::FireInDirection(const FVector& FireDirection)
-{
-	ProjectileMovementComponent->Velocity = FireDirection * ProjectileMovementComponent->InitialSpeed;
 }
 
 void AProjectileBullet::SetDamage(float newDamage)

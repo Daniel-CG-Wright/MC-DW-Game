@@ -110,12 +110,13 @@ Afpscharacter::Afpscharacter()
 	MaxMovementSpreadModifier = 5.0f;
 	MinMovementSpreadModifier = 1.0f;
 
-	DistanceToPlaceProjectileFromCamera = 25.0f;
+	DistanceToPlaceProjectileFromCamera = FVector(100.0f, 0.0f, 0.0f);
 
 	bCanInteract = true;
 	InteractInterval = 0.5f;
 	bIsFiring = false;
 
+	bCanFire = true;
 	//Interact range in centimetres
 	MaxInteractRange = 250.0f;
 }
@@ -242,12 +243,14 @@ void Afpscharacter::OnPressFire()
 	{
 		if (GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("Start"));
 			ClientValidateFire();
 		}
 		else
 		{
 			BurstRoundsToFire = GetCurrentlyEquippedWeaponData().Stats.BurstNumber;
 			UE_LOG(LogTemp, Warning, TEXT("Bursting"));
+			ClientValidateFire();
 			GetWorld()->GetTimerManager().SetTimer(BurstFireTimer, this, &Afpscharacter::ClientValidateFire, GetCurrentlyEquippedWeaponData().Stats.BurstFireRate, true);
 		}
 
@@ -765,7 +768,7 @@ void Afpscharacter::Interact()
 		//We check if the client gets a hit first, if they do then we can check on server, as otherwsie there is no point running it on the server.
 	FHitResult OutHit;
 	//Perform raycast check
-	bool IsHit = SingleRaycastInCameraDirection(OutHit, MaxInteractRange);
+	bool IsHit = SingleRaycastInCameraDirection(OutHit, MaxInteractRange, ECC_GameTraceChannel1);
 	UE_LOG(LogTemp, Warning, TEXT("IsHit =  %s"), (IsHit ? TEXT("TRUE") : TEXT("FALSE")));
 	AActor* HitActor;
 
@@ -843,7 +846,7 @@ void Afpscharacter::InteractWithNameOnly(FName& OutName)
 	//Where the output is at
 	FHitResult OutHit;
 	//Perform raycast check
-	bool IsHit = SingleRaycastInCameraDirection(OutHit, MaxInteractRange);
+	bool IsHit = SingleRaycastInCameraDirection(OutHit, MaxInteractRange, ECC_GameTraceChannel1);
 	AActor* HitActor;
 
 	if (!IsHit)
@@ -1133,25 +1136,30 @@ void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 	
 }
 
-void Afpscharacter::AutomaticFire()
+void Afpscharacter::RepeatFire()
 {
+	//Allow gun to be fired again
+	bCanFire = true;
+
 	//Call ClientValidateFire if still held down fire button.
-	if (bIsFiring)
+	if (bIsFiring && GetCurrentlyEquippedWeaponData().MetaData.WAWeaponFireType == FireMode::AUTO)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("AutoFire"));
 		ClientValidateFire();
 	}
-	else
-	{
-		GetWorld()->GetTimerManager().ClearTimer(FiringTimer);
-	}
+	
 }
 
 void Afpscharacter::ClientValidateFire()
 {
-
+	UE_LOG(LogTemp, Warning, TEXT("Burst client validate"))
 	//Set bIsFiring to false until able to fire, so we don;t have to repeat set to false for all non-firing cases.
 	bIsFiring = false;
-
+	float BurstFireRate = GetCurrentlyEquippedWeaponData().Stats.BurstFireRate;
+	if (!bCanFire && (BurstFireRate == 0.0f || (BurstFireRate > 0.0f && BurstRoundsToFire == 0)))
+	{
+		return;
+	}
 	//If we dont have a gun equipped, return
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
@@ -1282,12 +1290,11 @@ TArray<float> Afpscharacter::ClientProjectileCheckFire()
 	//For firing projectiles
 	FVector EmitterStartPoint = FPSMuzzleComponent->GetComponentLocation();
 
-	//Start automatic fire weapon timer
-	if (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponFireType == FireMode::AUTO)
-	{
-		GetWorld()->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::AutomaticFire, GetCurrentlyEquippedWeaponData().Stats.FireRate, true);
+	//Start fire weapon timer
+	bCanFire = false;
+	GetWorld()->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::RepeatFire, GetCurrentlyEquippedWeaponData().Stats.FireRate, false);
 
-	}
+	
 
 	BurstRoundsToFire -= 1;
 	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
@@ -1302,9 +1309,10 @@ TArray<float> Afpscharacter::ClientProjectileCheckFire()
 	{
 
 		float RandomSpread = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
+		
 
 		//Spawn projectile, they do their own damage and effects and stuff in their destroy thing so no need to worry about that here
-		FVector SpawnLocation = FPSCameraComponent->GetComponentLocation() + (FPSCameraComponent->GetForwardVector() * DistanceToPlaceProjectileFromCamera);
+		FVector SpawnLocation = FPSCameraComponent->GetComponentLocation() + FTransform(GetControlRotation()).TransformVector(DistanceToPlaceProjectileFromCamera);
 		FRotator SpawnRotation = GetControlRotation();
 		AProjectileBullet* SpawnedProjectile;
 
@@ -1330,6 +1338,10 @@ TArray<float> Afpscharacter::ClientHitscanCheckFire()
 	//This variable stores the start point of any tracer emitter particles
 	FVector EmitterStartPoint =FPSMuzzleComponent->GetComponentLocation();
 	//Start the timer for automatic fire if the weapon is automatic, so that firing can happen often.
+	//Start automatic fire weapon timer
+	bCanFire = false;
+	GetWorld()->GetTimerManager().SetTimer(FiringTimer, this, &Afpscharacter::RepeatFire, GetCurrentlyEquippedWeaponData().Stats.FireRate, false);
+
 	
 	BurstRoundsToFire -= 1;
 	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
@@ -1361,7 +1373,7 @@ TArray<float> Afpscharacter::ClientHitscanCheckFire()
 
 
 		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
-			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, RandomSpread));
+			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, RandomSpread), ECC_GameTraceChannel2);
 
 		//MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
 
@@ -1457,7 +1469,6 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime, cons
 		default:
 			UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
 			return;
-			break;
 		}
 
 	}
@@ -1477,8 +1488,13 @@ AProjectileBullet* Afpscharacter::SpawnProjectileBullet(FVector Location, FRotat
 	//Need to consider spread angles as well, roll is unnecessary
 	FRotator FinalRotation = Rotation + FRotator(SpreadAngleInDegrees, SpreadAngleInDegrees, 0) * Modifier;
 
-	return GetWorld()->SpawnActor<AProjectileBullet>(Location, FinalRotation, spawnParams);
-
+	//Bullet speed is handled in bullet itself now.
+	AProjectileBullet* Bullet = GetWorld()->SpawnActor<AProjectileBullet>(Location, FinalRotation, spawnParams);
+	if (Bullet)
+	{
+		Bullet->FireInDirection(GetControlRotation().Vector());
+	}
+	return Bullet;
 
 
 }
@@ -1677,7 +1693,7 @@ void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 
 		//Actual raycast
 		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
-			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetController()->GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, Angle));
+			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetController()->GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, Angle), ECC_GameTraceChannel2);
 
 		HitResults += TempHitResults;
 
@@ -1803,8 +1819,24 @@ void Afpscharacter::OnReload()
 {
 	//template class for now
 	//TODO refurbish with animations and stuff, maybe switch to blueprint
+	
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel != Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel != Guns::NONE))
 	{
+		if (GetLocalRole() < ROLE_Authority)
+		{
+			ServerReload();
+		}
 		SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MaxMagSize);
 	}
+}
+
+bool Afpscharacter::ServerReload_Validate()
+{
+	return true;
+
+}
+
+void Afpscharacter::ServerReload_Implementation()
+{
+	OnReload();
 }

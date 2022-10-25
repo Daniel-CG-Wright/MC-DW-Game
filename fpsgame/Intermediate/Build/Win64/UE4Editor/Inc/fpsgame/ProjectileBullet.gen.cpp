@@ -17,18 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeProjectileBullet() {}
 	FPSGAME_API UClass* Z_Construct_UClass_AProjectileBullet();
 	FPSGAME_API UClass* Z_Construct_UClass_AFPSProjectile();
 	UPackage* Z_Construct_UPackage__Script_fpsgame();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_UDamageType_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(AProjectileBullet::execFireInDirection)
-	{
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_FireDirection);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->FireInDirection(Z_Param_Out_FireDirection);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(AProjectileBullet::execSetDamageType)
 	{
 		P_GET_OBJECT(UClass,Z_Param_newDamageType);
@@ -63,55 +54,12 @@ void EmptyLinkFunctionForGeneratedCodeProjectileBullet() {}
 	{
 		UClass* Class = AProjectileBullet::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "FireInDirection", &AProjectileBullet::execFireInDirection },
 			{ "GetDamage", &AProjectileBullet::execGetDamage },
 			{ "GetDamageType", &AProjectileBullet::execGetDamageType },
 			{ "SetDamage", &AProjectileBullet::execSetDamage },
 			{ "SetDamageType", &AProjectileBullet::execSetDamageType },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics
-	{
-		struct ProjectileBullet_eventFireInDirection_Parms
-		{
-			FVector FireDirection;
-		};
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireDirection_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_FireDirection;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::NewProp_FireDirection_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::NewProp_FireDirection = { "FireDirection", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ProjectileBullet_eventFireInDirection_Parms, FireDirection), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::NewProp_FireDirection_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::NewProp_FireDirection_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::NewProp_FireDirection,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Called when bullet is created.\n" },
-		{ "ModuleRelativePath", "ProjectileBullet.h" },
-		{ "ToolTip", "Called when bullet is created." },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AProjectileBullet, nullptr, "FireInDirection", nullptr, nullptr, sizeof(ProjectileBullet_eventFireInDirection_Parms), Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C20401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AProjectileBullet_FireInDirection()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AProjectileBullet_FireInDirection_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AProjectileBullet_GetDamage_Statics
 	{
@@ -269,7 +217,6 @@ void EmptyLinkFunctionForGeneratedCodeProjectileBullet() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AProjectileBullet_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AProjectileBullet_FireInDirection, "FireInDirection" }, // 633161139
 		{ &Z_Construct_UFunction_AProjectileBullet_GetDamage, "GetDamage" }, // 3692565660
 		{ &Z_Construct_UFunction_AProjectileBullet_GetDamageType, "GetDamageType" }, // 2271530512
 		{ &Z_Construct_UFunction_AProjectileBullet_SetDamage, "SetDamage" }, // 1593526119
@@ -288,7 +235,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectileBullet() {}
 		{ "ModuleRelativePath", "ProjectileBullet.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AProjectileBullet_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProjectileBullet, Damage), METADATA_PARAMS(Z_Construct_UClass_AProjectileBullet_Statics::NewProp_Damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProjectileBullet_Statics::NewProp_Damage_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AProjectileBullet_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProjectileBullet, Damage), METADATA_PARAMS(Z_Construct_UClass_AProjectileBullet_Statics::NewProp_Damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProjectileBullet_Statics::NewProp_Damage_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectileBullet_Statics::NewProp_DamageType_MetaData[] = {
 		{ "Category", "Damage" },
@@ -327,7 +274,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectileBullet() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProjectileBullet, 947566915);
+	IMPLEMENT_CLASS(AProjectileBullet, 2320452373);
 	template<> FPSGAME_API UClass* StaticClass<AProjectileBullet>()
 	{
 		return AProjectileBullet::StaticClass();

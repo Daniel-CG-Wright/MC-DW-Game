@@ -22,15 +22,14 @@ protected:
 
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage")
 		float Damage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage")
 		TSubclassOf<class UDamageType> DamageType;
 
 	//used when projectile hits something
-	
-	virtual void OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
 public:
 
@@ -46,7 +45,5 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void SetDamageType(TSubclassOf<class UDamageType> newDamageType);
 
-	UFUNCTION()
-		//Called when bullet is created.
-		void FireInDirection(const FVector& FireDirection);
+
 };

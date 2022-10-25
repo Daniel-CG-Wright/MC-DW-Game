@@ -35,6 +35,8 @@ class UNiagaraSystem;
 	virtual void ServerInteract_Implementation(); \
 	virtual bool ServerValidateFire_Validate(float , TArray<float> const& ); \
 	virtual void ServerValidateFire_Implementation(float ClientFireTime, TArray<float> const& SpreadAngles); \
+	virtual bool ServerReload_Validate(); \
+	virtual void ServerReload_Implementation(); \
  \
 	DECLARE_FUNCTION(execGetCurrentAmmo); \
 	DECLARE_FUNCTION(execSetCurrentAmmo); \
@@ -101,8 +103,9 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
 	DECLARE_FUNCTION(execReleaseFire); \
-	DECLARE_FUNCTION(execAutomaticFire); \
+	DECLARE_FUNCTION(execRepeatFire); \
 	DECLARE_FUNCTION(execStopFiring); \
+	DECLARE_FUNCTION(execServerReload); \
 	DECLARE_FUNCTION(execOnReload); \
 	DECLARE_FUNCTION(execOnPressFire); \
 	DECLARE_FUNCTION(execSpawnProjectileBullet); \
@@ -120,6 +123,8 @@ class UNiagaraSystem;
 	virtual void ServerInteract_Implementation(); \
 	virtual bool ServerValidateFire_Validate(float , TArray<float> const& ); \
 	virtual void ServerValidateFire_Implementation(float ClientFireTime, TArray<float> const& SpreadAngles); \
+	virtual bool ServerReload_Validate(); \
+	virtual void ServerReload_Implementation(); \
  \
 	DECLARE_FUNCTION(execGetCurrentAmmo); \
 	DECLARE_FUNCTION(execSetCurrentAmmo); \
@@ -186,8 +191,9 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
 	DECLARE_FUNCTION(execReleaseFire); \
-	DECLARE_FUNCTION(execAutomaticFire); \
+	DECLARE_FUNCTION(execRepeatFire); \
 	DECLARE_FUNCTION(execStopFiring); \
+	DECLARE_FUNCTION(execServerReload); \
 	DECLARE_FUNCTION(execOnReload); \
 	DECLARE_FUNCTION(execOnPressFire); \
 	DECLARE_FUNCTION(execSpawnProjectileBullet); \

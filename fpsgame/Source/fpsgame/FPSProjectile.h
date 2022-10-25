@@ -26,21 +26,21 @@ protected:
 
 	//used when projectile hits something
 	UFUNCTION(Category = "Projectile")
-		virtual void OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
 		float ProjectileRadius;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-		float MaxProjectileSpeed;
+
+
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	//Sphere collision component
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile)
 		class USphereComponent* CollisionComponent;
 
 	//Provides a visual representation of the projectile
@@ -48,14 +48,15 @@ public:
 		class UStaticMeshComponent* StaticMesh;
 
 	//Movement component
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement)
 		class UProjectileMovementComponent* ProjectileMovementComponent;
 
 	//Particle for when projectile hits something
 	UPROPERTY(EditAnywhere, Category = "Effects")
 		class UParticleSystem* DestroyEffect;
 
-
+	UFUNCTION()
+		void FireInDirection(const FVector& ShootDirection);
 
 	UFUNCTION(BlueprintCallable)
 		float GetProjectileRadius() const { return ProjectileRadius; }

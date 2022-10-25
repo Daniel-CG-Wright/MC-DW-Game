@@ -18,7 +18,7 @@ AFPSProjectile::AFPSProjectile()
 	bReplicates = true;
 
 
-	//Intiialize Projectile Radius
+	//Intiialize Projectile Radius default 15.0f
 	ProjectileRadius = 15.0f;
 
 	//Use a sphere, it is a simple collision representation
@@ -27,41 +27,30 @@ AFPSProjectile::AFPSProjectile()
 	//Set the sphere's collision radius
 	CollisionComponent->InitSphereRadius(ProjectileRadius);
 
-	CollisionComponent->SetCollisionProfileName(TEXT("BlockAllDynamic"));
 
 	//Set the root component to be the collision component
 	RootComponent = CollisionComponent;
 
 	//Registers the projectile impact functioon on a hit event
-	if (GetLocalRole() == ROLE_Authority)
-	{
-		CollisionComponent->OnComponentHit.AddDynamic(this, &AFPSProjectile::OnProjectileImpact);
-	}
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> DefaultMesh(TEXT("StaticMesh'/Game/Meshes/Shape_Sphere.Shape_Sphere'"));
+	CollisionComponent->OnComponentHit.AddDynamic(this, &AFPSProjectile::OnHit);
+
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	StaticMesh->SetupAttachment(RootComponent);
 
-	//Set the static mesh adn its position and scale if we successfully found a mesh
-	if (DefaultMesh.Succeeded())
-	{
-		StaticMesh->SetStaticMesh(DefaultMesh.Object);
-		StaticMesh->SetRelativeLocation(FVector(0.0f, 0.0f, -37.5f));
-		StaticMesh->SetRelativeScale3D(FVector(0.75f, 0.75f, 0.75f));
 
-	}
 
 
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
 	ProjectileMovementComponent->SetUpdatedComponent(CollisionComponent);
 	//Should be changed to the speeds used by the firing weapon
 	ProjectileMovementComponent->InitialSpeed = 1500.0f;
-	ProjectileMovementComponent->MaxSpeed = MaxProjectileSpeed = 1500.0f;
+	ProjectileMovementComponent->MaxSpeed = 1500.0f;
 	ProjectileMovementComponent->bRotationFollowsVelocity = true;
 	ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 
 
 
-	//Intial projectile lifespan
+	//Intial projectile lifespan, default 1.0 seconds
 	InitialLifeSpan = 1.0f;
 }
 
@@ -69,7 +58,8 @@ AFPSProjectile::AFPSProjectile()
 void AFPSProjectile::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	CollisionComponent->IgnoreActorWhenMoving(GetOwner(), true);
+
 }
 
 void AFPSProjectile::SetProjectileSpeed(float newProjectileSpeed)
@@ -89,16 +79,23 @@ void AFPSProjectile::SetProjectileRadius(float NewProjectileRadius)
 	
 }
 
+void AFPSProjectile::FireInDirection(const FVector& ShootDirection)
+{
+	UE_LOG(LogTemp, Warning, TEXT("FireInDirection"));
+	ProjectileMovementComponent->Velocity = ShootDirection * ProjectileMovementComponent->InitialSpeed;
+}
+
 void AFPSProjectile::Destroyed()
 {
+	UE_LOG(LogTemp, Warning, TEXT("destroyed"));
 	FVector spawnLocation = GetActorLocation();
 	//Spawns explosion effect - doesn't directly replicate, but  destrouctin of actor does, so this msut play on all clients.
 	UGameplayStatics::SpawnEmitterAtLocation(this, DestroyEffect, spawnLocation, FRotator::ZeroRotator, true, EPSCPoolMethod::AutoRelease);
 }
 
-void AFPSProjectile::OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+void AFPSProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	
+	UE_LOG(LogTemp, Warning, TEXT("Impact"))
 
 	Destroy();
 }

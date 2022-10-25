@@ -546,11 +546,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->ReleaseFire();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(Afpscharacter::execAutomaticFire)
+	DEFINE_FUNCTION(Afpscharacter::execRepeatFire)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->AutomaticFire();
+		P_THIS->RepeatFire();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execStopFiring)
@@ -558,6 +558,18 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->StopFiring();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execServerReload)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->ServerReload_Validate())
+		{
+			RPC_ValidateFailed(TEXT("ServerReload_Validate"));
+			return;
+		}
+		P_THIS->ServerReload_Implementation();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execOnReload)
@@ -625,6 +637,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		fpscharacter_eventServerPickupWeapon_Parms Parms;
 		Parms.WeaponPickup=WeaponPickup;
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerPickupWeapon),&Parms);
+	}
+	static FName NAME_Afpscharacter_ServerReload = FName(TEXT("ServerReload"));
+	void Afpscharacter::ServerReload()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerReload),NULL);
 	}
 	static FName NAME_Afpscharacter_ServerSetSprinting = FName(TEXT("ServerSetSprinting"));
 	void Afpscharacter::ServerSetSprinting(bool NewSprinting)
@@ -705,7 +722,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ApplySensitivityAndInversionToMouseInputX", &Afpscharacter::execApplySensitivityAndInversionToMouseInputX },
 			{ "ApplySensitivityAndInversionToMouseInputY", &Afpscharacter::execApplySensitivityAndInversionToMouseInputY },
-			{ "AutomaticFire", &Afpscharacter::execAutomaticFire },
 			{ "CalculateSpreadDestination", &Afpscharacter::execCalculateSpreadDestination },
 			{ "CalculateSpreadModifier", &Afpscharacter::execCalculateSpreadModifier },
 			{ "CanUncrouch", &Afpscharacter::execCanUncrouch },
@@ -749,12 +765,14 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "PressSprint", &Afpscharacter::execPressSprint },
 			{ "ReleaseFire", &Afpscharacter::execReleaseFire },
 			{ "ReleaseSprint", &Afpscharacter::execReleaseSprint },
+			{ "RepeatFire", &Afpscharacter::execRepeatFire },
 			{ "ServerGetInterpolatedTransformsForRewind", &Afpscharacter::execServerGetInterpolatedTransformsForRewind },
 			{ "ServerHitscanCheckFire", &Afpscharacter::execServerHitscanCheckFire },
 			{ "ServerInteract", &Afpscharacter::execServerInteract },
 			{ "ServerPerformHitscan", &Afpscharacter::execServerPerformHitscan },
 			{ "ServerPickupWeapon", &Afpscharacter::execServerPickupWeapon },
 			{ "ServerProjectileCheckFire", &Afpscharacter::execServerProjectileCheckFire },
+			{ "ServerReload", &Afpscharacter::execServerReload },
 			{ "ServerRewindAndPerformHitscan", &Afpscharacter::execServerRewindAndPerformHitscan },
 			{ "ServerSetSprinting", &Afpscharacter::execServerSetSprinting },
 			{ "ServerStartJump", &Afpscharacter::execServerStartJump },
@@ -844,30 +862,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputY_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Called on timer if the weapon is automatic, so that if the fire key is held down the weapon will fire continuosuly.\n" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Called on timer if the weapon is automatic, so that if the fire key is held down the weapon will fire continuosuly." },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "AutomaticFire", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_Afpscharacter_AutomaticFire()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_AutomaticFire_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2227,6 +2221,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_RepeatFire_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RepeatFire_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Called on timer to allow weapon to fire at its fire rate. Integrates automatic weapon functions as needed.\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Called on timer to allow weapon to fire at its fire rate. Integrates automatic weapon functions as needed." },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RepeatFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RepeatFire", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RepeatFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RepeatFire_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_RepeatFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_RepeatFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind_Statics
 	{
 		struct fpscharacter_eventServerGetInterpolatedTransformsForRewind_Parms
@@ -2436,6 +2454,30 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerProjectileCheckFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerReload_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerReload_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Server reload function, to regulate times and stuff\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Server reload function, to regulate times and stuff" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerReload_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerReload", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerReload_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerReload_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerReload()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerReload_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3451,7 +3493,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DistanceToPlaceProjectileFromCamera_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DistanceToPlaceProjectileFromCamera;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DistanceToPlaceProjectileFromCamera;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SwitchWeaponAfterPickup_MetaData[];
 #endif
@@ -3685,7 +3727,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_Afpscharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputX, "ApplySensitivityAndInversionToMouseInputX" }, // 44909788
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputY, "ApplySensitivityAndInversionToMouseInputY" }, // 2463904650
-		{ &Z_Construct_UFunction_Afpscharacter_AutomaticFire, "AutomaticFire" }, // 2711848787
 		{ &Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching, "BlueprintRep_CurrentlyCrouching" }, // 3925505741
 		{ &Z_Construct_UFunction_Afpscharacter_CalculateSpreadDestination, "CalculateSpreadDestination" }, // 2882979023
 		{ &Z_Construct_UFunction_Afpscharacter_CalculateSpreadModifier, "CalculateSpreadModifier" }, // 4014985952
@@ -3730,12 +3771,14 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_PressSprint, "PressSprint" }, // 2378583722
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseFire, "ReleaseFire" }, // 2997776266
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseSprint, "ReleaseSprint" }, // 3846209980
+		{ &Z_Construct_UFunction_Afpscharacter_RepeatFire, "RepeatFire" }, // 2386414830
 		{ &Z_Construct_UFunction_Afpscharacter_ServerGetInterpolatedTransformsForRewind, "ServerGetInterpolatedTransformsForRewind" }, // 2845924246
 		{ &Z_Construct_UFunction_Afpscharacter_ServerHitscanCheckFire, "ServerHitscanCheckFire" }, // 2840121526
 		{ &Z_Construct_UFunction_Afpscharacter_ServerInteract, "ServerInteract" }, // 1505482562
 		{ &Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan, "ServerPerformHitscan" }, // 852134808
 		{ &Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon, "ServerPickupWeapon" }, // 633494461
 		{ &Z_Construct_UFunction_Afpscharacter_ServerProjectileCheckFire, "ServerProjectileCheckFire" }, // 2828371505
+		{ &Z_Construct_UFunction_Afpscharacter_ServerReload, "ServerReload" }, // 2258726239
 		{ &Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan, "ServerRewindAndPerformHitscan" }, // 2290925026
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSetSprinting, "ServerSetSprinting" }, // 3999721245
 		{ &Z_Construct_UFunction_Afpscharacter_ServerStartJump, "ServerStartJump" }, // 164328876
@@ -3794,7 +3837,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ "ToolTip", "The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera = { "DistanceToPlaceProjectileFromCamera", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera = { "DistanceToPlaceProjectileFromCamera", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_DistanceToPlaceProjectileFromCamera_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_SwitchWeaponAfterPickup_MetaData[] = {
 		{ "Category", "fpscharacter" },
@@ -4366,7 +4409,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 560237685);
+	IMPLEMENT_CLASS(Afpscharacter, 1259894958);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

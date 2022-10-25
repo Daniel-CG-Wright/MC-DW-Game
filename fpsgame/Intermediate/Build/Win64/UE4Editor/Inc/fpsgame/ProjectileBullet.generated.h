@@ -8,7 +8,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-struct FVector;
 class UDamageType;
 #ifdef FPSGAME_ProjectileBullet_generated_h
 #error "ProjectileBullet.generated.h already included, missing '#pragma once' in ProjectileBullet.h"
@@ -18,7 +17,6 @@ class UDamageType;
 #define fpsgame_Source_fpsgame_ProjectileBullet_h_15_SPARSE_DATA
 #define fpsgame_Source_fpsgame_ProjectileBullet_h_15_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execFireInDirection); \
 	DECLARE_FUNCTION(execSetDamageType); \
 	DECLARE_FUNCTION(execSetDamage); \
 	DECLARE_FUNCTION(execGetDamageType); \
@@ -27,7 +25,6 @@ class UDamageType;
 
 #define fpsgame_Source_fpsgame_ProjectileBullet_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execFireInDirection); \
 	DECLARE_FUNCTION(execSetDamageType); \
 	DECLARE_FUNCTION(execSetDamage); \
 	DECLARE_FUNCTION(execGetDamageType); \

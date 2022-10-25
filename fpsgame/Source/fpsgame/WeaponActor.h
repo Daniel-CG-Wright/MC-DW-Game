@@ -202,8 +202,9 @@ public:
 		int MagAmmo;
 
 	//Speed of projectile rounds fired
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float ProjectileSpeed;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+	//	float ProjectileSpeed;
+	//Bullet speed is handled in bullet blueprint itself now.
 
 	//Base damage of projectile in torso, TODO implement damage falloff
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
