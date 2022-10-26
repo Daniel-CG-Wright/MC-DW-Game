@@ -8,34 +8,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-struct FVector;
-class UPrimitiveComponent;
-class AActor;
-struct FHitResult;
 #ifdef FPSGAME_FPSProjectile_generated_h
 #error "FPSProjectile.generated.h already included, missing '#pragma once' in FPSProjectile.h"
 #endif
 #define FPSGAME_FPSProjectile_generated_h
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_SPARSE_DATA
-#define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execSetProjectileSpeed); \
-	DECLARE_FUNCTION(execSetProjectileRadius); \
-	DECLARE_FUNCTION(execGetProjectileRadius); \
-	DECLARE_FUNCTION(execFireInDirection); \
-	DECLARE_FUNCTION(execOnHit);
-
-
-#define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execSetProjectileSpeed); \
-	DECLARE_FUNCTION(execSetProjectileRadius); \
-	DECLARE_FUNCTION(execGetProjectileRadius); \
-	DECLARE_FUNCTION(execFireInDirection); \
-	DECLARE_FUNCTION(execOnHit);
-
-
+#define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS
+#define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSProjectile(); \
@@ -78,10 +58,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFPSProjectile)
 
 
-#define fpsgame_Source_fpsgame_FPSProjectile_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ProjectileRadius() { return STRUCT_OFFSET(AFPSProjectile, ProjectileRadius); }
-
-
+#define fpsgame_Source_fpsgame_FPSProjectile_h_15_PRIVATE_PROPERTY_OFFSET
 #define fpsgame_Source_fpsgame_FPSProjectile_h_12_PROLOG
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

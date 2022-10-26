@@ -25,7 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponMetaData();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponStats();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	FPSGAME_API UClass* Z_Construct_UClass_AProjectileBullet_NoRegister();
+	FPSGAME_API UClass* Z_Construct_UClass_AFPSProjectile_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMesh_NoRegister();
 	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
@@ -867,7 +867,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponMetaData
 		{ "ModuleRelativePath", "WeaponActor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FWeaponMetaData_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponMetaData, ProjectileClass), Z_Construct_UClass_AProjectileBullet_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponMetaData_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponMetaData_Statics::NewProp_ProjectileClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FWeaponMetaData_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponMetaData, ProjectileClass), Z_Construct_UClass_AFPSProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponMetaData_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponMetaData_Statics::NewProp_ProjectileClass_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FWeaponMetaData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponMetaData_Statics::NewProp_GunModel_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponMetaData_Statics::NewProp_GunModel,
@@ -909,7 +909,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponMetaData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponMetaData_Hash() { return 694494292U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponMetaData_Hash() { return 1915466941U; }
 class UScriptStruct* FWeaponVisualAssets::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

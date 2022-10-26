@@ -22,50 +22,27 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	virtual void Destroyed() override;
-
-	//used when projectile hits something
-	UFUNCTION(Category = "Projectile")
-		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
-
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
-		float ProjectileRadius;
-
-
-
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	//Sphere collision component
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile)
-		class USphereComponent* CollisionComponent;
+	//Spherical collision component
+	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
+		USphereComponent* CollisionComponent;
 
-	//Provides a visual representation of the projectile
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
-		class UStaticMeshComponent* StaticMesh;
+	//Projectile Movement Component
+	UPROPERTY(VisibleAnywhere, Category = Movement)
+		UProjectileMovementComponent* ProjectileMovementComponent;
 
-	//Movement component
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement)
-		class UProjectileMovementComponent* ProjectileMovementComponent;
+	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
+		UStaticMeshComponent* ProjectileMeshComponent;
 
-	//Particle for when projectile hits something
-	UPROPERTY(EditAnywhere, Category = "Effects")
-		class UParticleSystem* DestroyEffect;
 
-	UFUNCTION()
-		void FireInDirection(const FVector& ShootDirection);
 
-	UFUNCTION(BlueprintCallable)
-		float GetProjectileRadius() const { return ProjectileRadius; }
+	//Function to intiialize projectile velocity in the shoot direction
+	void FireInDirection(const FVector& ShootDirection);
 
-	UFUNCTION(BlueprintCallable)
-		void SetProjectileRadius(float newProjectileRadius);
-
-	UFUNCTION(BlueprintCallable)
-		void SetProjectileSpeed(float newProjectileSpeed);
 
 	
 

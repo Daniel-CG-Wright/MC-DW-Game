@@ -17,7 +17,7 @@ struct FRotator;
 struct FHitResult;
 struct FVector;
 class AActor; struct FRewindDataStruct;
-class AProjectileBullet;
+class AFPSProjectile;
 class UNiagaraSystem;
 #ifdef FPSGAME_fpscharacter_generated_h
 #error "fpscharacter.generated.h already included, missing '#pragma once' in fpscharacter.h"
@@ -371,8 +371,7 @@ public: \
 	FORCEINLINE static uint32 __PPO__CurrentStamina() { return STRUCT_OFFSET(Afpscharacter, CurrentStamina); } \
 	FORCEINLINE static uint32 __PPO__MaxHealth() { return STRUCT_OFFSET(Afpscharacter, MaxHealth); } \
 	FORCEINLINE static uint32 __PPO__CurrentHealth() { return STRUCT_OFFSET(Afpscharacter, CurrentHealth); } \
-	FORCEINLINE static uint32 __PPO__IsSprinting() { return STRUCT_OFFSET(Afpscharacter, IsSprinting); } \
-	FORCEINLINE static uint32 __PPO__BulletClass() { return STRUCT_OFFSET(Afpscharacter, BulletClass); }
+	FORCEINLINE static uint32 __PPO__IsSprinting() { return STRUCT_OFFSET(Afpscharacter, IsSprinting); }
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_25_PROLOG \

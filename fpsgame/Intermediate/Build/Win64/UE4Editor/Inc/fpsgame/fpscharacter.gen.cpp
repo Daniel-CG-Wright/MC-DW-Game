@@ -26,12 +26,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor_NoRegister();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FRewindDataStruct();
 	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
-	FPSGAME_API UClass* Z_Construct_UClass_AProjectileBullet_NoRegister();
+	FPSGAME_API UClass* Z_Construct_UClass_AFPSProjectile_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FDamageEvent();
 	ENGINE_API UClass* Z_Construct_UClass_AController_NoRegister();
 	PHYSICSCORE_API UClass* Z_Construct_UClass_UPhysicalMaterial_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_URewindComponent_NoRegister();
@@ -594,7 +593,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_GET_PROPERTY(FFloatProperty,Z_Param_SpreadAngleInDegrees);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(AProjectileBullet**)Z_Param__Result=P_THIS->SpawnProjectileBullet(Z_Param_Location,Z_Param_Rotation,Z_Param_Modifier,Z_Param_SpreadAngleInDegrees);
+		*(AFPSProjectile**)Z_Param__Result=P_THIS->SpawnProjectileBullet(Z_Param_Location,Z_Param_Rotation,Z_Param_Modifier,Z_Param_SpreadAngleInDegrees);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execServerProjectileCheckFire)
@@ -3129,7 +3128,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			FRotator Rotation;
 			float Modifier;
 			float SpreadAngleInDegrees;
-			AProjectileBullet* ReturnValue;
+			AFPSProjectile* ReturnValue;
 		};
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Location;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Rotation;
@@ -3146,7 +3145,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventSpawnProjectileBullet_Parms, Rotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet_Statics::NewProp_Modifier = { "Modifier", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventSpawnProjectileBullet_Parms, Modifier), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet_Statics::NewProp_SpreadAngleInDegrees = { "SpreadAngleInDegrees", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventSpawnProjectileBullet_Parms, SpreadAngleInDegrees), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventSpawnProjectileBullet_Parms, ReturnValue), Z_Construct_UClass_AProjectileBullet_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventSpawnProjectileBullet_Parms, ReturnValue), Z_Construct_UClass_AFPSProjectile_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet_Statics::NewProp_Location,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet_Statics::NewProp_Rotation,
@@ -3644,10 +3643,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static void NewProp_IsSprinting_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsSprinting;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BulletClass_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_BulletClass;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_XSensitivity_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_XSensitivity;
@@ -3795,7 +3790,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashFP, "ShowMuzzleFlashFP" }, // 3421156960
 		{ &Z_Construct_UFunction_Afpscharacter_ShowMuzzleFlashTP, "ShowMuzzleFlashTP" }, // 143480358
 		{ &Z_Construct_UFunction_Afpscharacter_SingleRaycastInCameraDirection, "SingleRaycastInCameraDirection" }, // 4236554935
-		{ &Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet, "SpawnProjectileBullet" }, // 1304784369
+		{ &Z_Construct_UFunction_Afpscharacter_SpawnProjectileBullet, "SpawnProjectileBullet" }, // 1361992826
 		{ &Z_Construct_UFunction_Afpscharacter_StartJump, "StartJump" }, // 694071235
 		{ &Z_Construct_UFunction_Afpscharacter_StopFiring, "StopFiring" }, // 1180545881
 		{ &Z_Construct_UFunction_Afpscharacter_StopJump, "StopJump" }, // 3383577609
@@ -4157,15 +4152,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting = { "IsSprinting", "OnRep_ChangeSprinting", (EPropertyFlags)0x0020080100002034, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass_MetaData[] = {
-		{ "Category", "Weapon | Projectile" },
-		{ "Comment", "//Should be set by weapon when equipped.\n" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Should be set by weapon when equipped." },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass = { "BulletClass", nullptr, (EPropertyFlags)0x0024080000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, BulletClass), Z_Construct_UClass_AProjectileBullet_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_XSensitivity_MetaData[] = {
 		{ "Category", "Mouse Input" },
 		{ "Comment", "//Stores X sensitivity for mouse\n" },
@@ -4363,7 +4349,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MaxHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_IsSprinting,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_BulletClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_XSensitivity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_YSensitivity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_InvertX,
@@ -4409,7 +4394,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 1259894958);
+	IMPLEMENT_CLASS(Afpscharacter, 1453671435);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

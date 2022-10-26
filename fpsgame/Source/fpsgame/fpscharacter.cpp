@@ -1004,8 +1004,6 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 	}
 	//Still need a lot fo equip logic here
 
-	BulletClass = PrimaryData.MetaData.ProjectileClass;
-
 	EquippedGun = Equips::PRIMARY;
 	PositionAndAttachGunInTP(PrimaryData);
 
@@ -1074,7 +1072,7 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	}
 
 	PositionAndAttachGunInTP(SecondaryData);
-	BulletClass = SecondaryData.MetaData.ProjectileClass;
+
 	EquippedGun = Equips::SECONDARY;
 	UpdateAmmoDisplay();
 }
@@ -1314,7 +1312,7 @@ TArray<float> Afpscharacter::ClientProjectileCheckFire()
 		//Spawn projectile, they do their own damage and effects and stuff in their destroy thing so no need to worry about that here
 		FVector SpawnLocation = FPSCameraComponent->GetComponentLocation() + FTransform(GetControlRotation()).TransformVector(DistanceToPlaceProjectileFromCamera);
 		FRotator SpawnRotation = GetControlRotation();
-		AProjectileBullet* SpawnedProjectile;
+		AFPSProjectile* SpawnedProjectile;
 
 		SpawnedProjectile = SpawnProjectileBullet(SpawnLocation, SpawnRotation, SpreadModifier, RandomSpread);
 		
@@ -1479,7 +1477,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime, cons
 	
 }
 
-AProjectileBullet* Afpscharacter::SpawnProjectileBullet(FVector Location, FRotator Rotation, float Modifier, float SpreadAngleInDegrees)
+AFPSProjectile* Afpscharacter::SpawnProjectileBullet(FVector Location, FRotator Rotation, float Modifier, float SpreadAngleInDegrees)
 {
 	FActorSpawnParameters spawnParams;
 	spawnParams.Instigator = GetInstigator();
@@ -1488,11 +1486,22 @@ AProjectileBullet* Afpscharacter::SpawnProjectileBullet(FVector Location, FRotat
 	//Need to consider spread angles as well, roll is unnecessary
 	FRotator FinalRotation = Rotation + FRotator(SpreadAngleInDegrees, SpreadAngleInDegrees, 0) * Modifier;
 
+
+	FVector TempLocation = FPSCameraComponent->GetComponentLocation();
+
+	//We need to get the bullet class from the gun now as well
+	TSubclassOf<AFPSProjectile> ProjectileClass = GetCurrentlyEquippedWeaponData().MetaData.ProjectileClass;
+
 	//Bullet speed is handled in bullet itself now.
-	AProjectileBullet* Bullet = GetWorld()->SpawnActor<AProjectileBullet>(Location, FinalRotation, spawnParams);
+	//AFPSProjectile* Bullet = GetWorld()->SpawnActor<AFPSProjectile>(TempLocation, FinalRotation, spawnParams);
+	AFPSProjectile* Bullet =  GetWorld()->SpawnActor<AFPSProjectile>(*ProjectileClass, Location, FinalRotation, spawnParams);
+	
+
 	if (Bullet)
 	{
 		Bullet->FireInDirection(GetControlRotation().Vector());
+		UE_LOG(LogTemp, Warning, TEXT("Name = %s"), *Bullet->CollisionComponent->GetFName().ToString());
+		UE_LOG(LogTemp, Warning, TEXT("MeshName = %s"), *Bullet->ProjectileMeshComponent->GetStaticMesh()->GetFName().ToString());
 	}
 	return Bullet;
 
@@ -1515,7 +1524,7 @@ void Afpscharacter::ServerProjectileCheckFire(TArray<float> SpreadAngles)
 		FVector SpawnLoaction = FPSCameraComponent->GetComponentLocation() + (FPSCameraComponent->GetForwardVector() * DistanceToPlaceProjectileFromCamera);
 		FRotator SpawnRotation = GetControlRotation();
 
-		AProjectileBullet* SpawnedProjectile;
+		AFPSProjectile* SpawnedProjectile;
 
 		SpawnedProjectile = SpawnProjectileBullet(SpawnLoaction, SpawnRotation, SpreadModifier, Angle);
 

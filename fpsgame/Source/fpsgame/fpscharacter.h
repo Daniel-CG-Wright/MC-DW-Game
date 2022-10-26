@@ -93,7 +93,7 @@ protected:
 
 	//Used to spawn a projectile
 	UFUNCTION()
-		AProjectileBullet * SpawnProjectileBullet(FVector Location, FRotator Rotation, float Modifier, float SpreadAngleInDegrees);
+		AFPSProjectile* SpawnProjectileBullet(FVector Location, FRotator Rotation, float Modifier, float SpreadAngleInDegrees);
 
 	//Called on pressing fire, used for burst weapons and stuff
 	UFUNCTION()
@@ -508,9 +508,6 @@ protected:
 		//Like above but for secondary weapon
 		void ServerSwitchSecondary();
 
-	//Should be set by weapon when equipped.
-	UPROPERTY(EditDefaultsOnly, Category = "Weapon | Projectile")
-		TSubclassOf<class AProjectileBullet> BulletClass;
 
 public:
 	// Called every frame

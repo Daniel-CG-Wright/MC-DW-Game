@@ -9,7 +9,7 @@
 #include "FPSProjectile.h"
 #include "InteractableObjectComponent.h"
 #include "NiagaraSystem.h"
-#include "ProjectileBullet.h"
+#include "FPSProjectile.h"
 #include "WeaponActor.generated.h"
 
 UENUM(BlueprintType)
@@ -155,7 +155,7 @@ public:
 		Equips TypeOfEquip;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
-		TSubclassOf<class AProjectileBullet> ProjectileClass;
+		TSubclassOf<class AFPSProjectile> ProjectileClass;
 };
 /*
 Currently damage is hardcoded to the weapon itself, along with other stats.
