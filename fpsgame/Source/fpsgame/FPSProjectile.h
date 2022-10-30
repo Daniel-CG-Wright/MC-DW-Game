@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
-
+#include "NiagaraComponent.h"
 #include "FPSProjectile.generated.h"
 
 UCLASS()
@@ -28,23 +28,38 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	//Spherical collision component
-	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Projectile)
 		USphereComponent* CollisionComponent;
 
 	//Projectile Movement Component
-	UPROPERTY(VisibleAnywhere, Category = Movement)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement)
 		UProjectileMovementComponent* ProjectileMovementComponent;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Projectile)
 		UStaticMeshComponent* ProjectileMeshComponent;
 
+	//We will need to allow for particle effects like smoke or trace
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Projectile)
+		UNiagaraComponent* ProjectileParticleSystem;
+	
+	//Cosmetics scene component to link all the cosmetics together
+	//This is what will be blended
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile)
+		USceneComponent* CosmeticSceneComponent;
+
+
+	/*
+	Function implemented with blueprints to blend the mesh to the correct spot
+	This will set the world position of the mesh and particle system to the muzzle of the gun,
+	then blend it forward to the collision component.
+	We implement in blueprint for ease of use.
+	*/
+	UFUNCTION(BlueprintImplementableEvent)
+		void BlendVisualsToCollision(const FVector MuzzlePosition);
 
 
 	//Function to intiialize projectile velocity in the shoot direction
 	void FireInDirection(const FVector& ShootDirection);
-
-
-	
 
 	
 };

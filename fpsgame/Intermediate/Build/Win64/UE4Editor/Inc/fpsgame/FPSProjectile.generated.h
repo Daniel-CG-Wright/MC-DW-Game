@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
 #ifdef FPSGAME_FPSProjectile_generated_h
 #error "FPSProjectile.generated.h already included, missing '#pragma once' in FPSProjectile.h"
 #endif
@@ -16,6 +17,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_SPARSE_DATA
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define fpsgame_Source_fpsgame_FPSProjectile_h_15_EVENT_PARMS \
+	struct FPSProjectile_eventBlendVisualsToCollision_Parms \
+	{ \
+		FVector MuzzlePosition; \
+	};
+
+
+#define fpsgame_Source_fpsgame_FPSProjectile_h_15_CALLBACK_WRAPPERS
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSProjectile(); \
@@ -59,13 +68,17 @@ public: \
 
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_PRIVATE_PROPERTY_OFFSET
-#define fpsgame_Source_fpsgame_FPSProjectile_h_12_PROLOG
+#define fpsgame_Source_fpsgame_FPSProjectile_h_12_PROLOG \
+	fpsgame_Source_fpsgame_FPSProjectile_h_15_EVENT_PARMS
+
+
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_PRIVATE_PROPERTY_OFFSET \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_SPARSE_DATA \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_FPSProjectile_h_15_CALLBACK_WRAPPERS \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_INCLASS \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_STANDARD_CONSTRUCTORS \
 public: \
@@ -78,6 +91,7 @@ public: \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_PRIVATE_PROPERTY_OFFSET \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_SPARSE_DATA \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_FPSProjectile_h_15_CALLBACK_WRAPPERS \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_INCLASS_NO_PURE_DECLS \
 	fpsgame_Source_fpsgame_FPSProjectile_h_15_ENHANCED_CONSTRUCTORS \
 private: \

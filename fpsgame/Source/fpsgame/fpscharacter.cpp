@@ -1316,6 +1316,7 @@ TArray<float> Afpscharacter::ClientProjectileCheckFire()
 
 		SpawnedProjectile = SpawnProjectileBullet(SpawnLocation, SpawnRotation, SpreadModifier, RandomSpread);
 		
+		SpawnedProjectile->BlendVisualsToCollision(EmitterStartPoint);
 
 
 
@@ -1528,6 +1529,7 @@ void Afpscharacter::ServerProjectileCheckFire(TArray<float> SpreadAngles)
 
 		SpawnedProjectile = SpawnProjectileBullet(SpawnLoaction, SpawnRotation, SpreadModifier, Angle);
 
+		
 	}
 
 	MuzzleCounter += 1;

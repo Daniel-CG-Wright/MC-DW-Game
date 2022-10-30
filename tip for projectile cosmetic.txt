@@ -1,0 +1,5 @@
+If you’re using real projectiles, you can fire the projectile from the camera. Then visually offset where the projectile to align it to weapon during the initial shot. Shortly after being fired, blend the visual from the gun position to the real position of the projectile.
+
+That’s what the games I’ve shipped did. There’s some tuning to be done on how quickly you blend the visual, but normally it can blend really quickly and things will look fine.
+
+For non-projectiles, do a ray cast from your camera to see where it would “hit” and just connect that position to your weapon to fake the shot.

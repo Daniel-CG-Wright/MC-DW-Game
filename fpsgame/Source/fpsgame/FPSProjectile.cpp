@@ -29,6 +29,7 @@ AFPSProjectile::AFPSProjectile()
 		RootComponent = CollisionComponent;
 	}
 
+
 	if (!ProjectileMovementComponent)
 	{
 		//Use this component to drive projectile movement
@@ -42,15 +43,18 @@ AFPSProjectile::AFPSProjectile()
 		ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 	}
 
-	if (!ProjectileMeshComponent)
-	{
-		ProjectileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMeshComponent"));
 
-	}
+	CosmeticSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("CosmeticSceneComponent"));
+	CosmeticSceneComponent->SetupAttachment(RootComponent);
+	ProjectileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMeshComponent"));
+	ProjectileMeshComponent->SetupAttachment(CosmeticSceneComponent);
 
-	ProjectileMeshComponent->SetupAttachment(RootComponent);
-	
+
+	ProjectileParticleSystem = CreateDefaultSubobject<UNiagaraComponent>(TEXT("ParticleComponent"));
+	ProjectileParticleSystem->SetupAttachment(CosmeticSceneComponent);
+
 	InitialLifeSpan = 3.0f;
+
 
 }
 
@@ -70,7 +74,7 @@ void AFPSProjectile::Tick(float DeltaTime)
 
 void AFPSProjectile::FireInDirection(const FVector& ShootDirection)
 {
-	UE_LOG(LogTemp, Warning, TEXT("firigni3r39"));
 	ProjectileMovementComponent->Velocity = ShootDirection * ProjectileMovementComponent->InitialSpeed;
 }
+
 
