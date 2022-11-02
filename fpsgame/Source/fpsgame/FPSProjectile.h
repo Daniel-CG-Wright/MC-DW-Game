@@ -35,8 +35,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement)
 		UProjectileMovementComponent* ProjectileMovementComponent;
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Projectile)
-		UStaticMeshComponent* ProjectileMeshComponent;
+
 
 	//We will need to allow for particle effects like smoke or trace
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Projectile)
@@ -54,12 +53,21 @@ public:
 	then blend it forward to the collision component.
 	We implement in blueprint for ease of use.
 	*/
+
+	//Custom hit function to implement custom hit behaviours for different projectile instances
+	UFUNCTION(BlueprintImplementableEvent)
+		void Blueprint_OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
+
 	UFUNCTION(BlueprintImplementableEvent)
 		void BlendVisualsToCollision(const FVector MuzzlePosition);
 
 
 	//Function to intiialize projectile velocity in the shoot direction
 	void FireInDirection(const FVector& ShootDirection);
+
+	//Function called on hitting something
+	UFUNCTION()
+		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
 	
 };

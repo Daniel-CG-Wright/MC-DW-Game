@@ -8,19 +8,38 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
 struct FVector;
+struct FHitResult;
 #ifdef FPSGAME_FPSProjectile_generated_h
 #error "FPSProjectile.generated.h already included, missing '#pragma once' in FPSProjectile.h"
 #endif
 #define FPSGAME_FPSProjectile_generated_h
 
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_SPARSE_DATA
-#define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS
-#define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnHit);
+
+
+#define fpsgame_Source_fpsgame_FPSProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnHit);
+
+
 #define fpsgame_Source_fpsgame_FPSProjectile_h_15_EVENT_PARMS \
 	struct FPSProjectile_eventBlendVisualsToCollision_Parms \
 	{ \
 		FVector MuzzlePosition; \
+	}; \
+	struct FPSProjectile_eventBlueprint_OnHit_Parms \
+	{ \
+		UPrimitiveComponent* HitComponent; \
+		AActor* OtherActor; \
+		UPrimitiveComponent* OtherComponent; \
+		FVector NormalImpulse; \
+		FHitResult Hit; \
 	};
 
 

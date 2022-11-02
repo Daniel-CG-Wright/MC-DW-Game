@@ -5,4 +5,8 @@ Just run the code on the client, there is no point checking for server.
 
 - Muzzle flash functions need BP implementation once you're ready.
 
-- Replicate pitch and stuff https://www.youtube.com/watch?v=_UlqmpH0AXs&t=49s we got as far as creating a TP mesh but need to attach to socket.
+- We need to check projectile onHit for BP implementations. We need to check against character (player/AI), 
+destructible object (such as glass)/physics based object (such as a basketball) and 
+non-destructible object  (such as outer walls). We could maybe do this 
+through a 'hitInteraction' component and utilize something similar for hitscan. 
+The component would be used for all interactions on being hit.

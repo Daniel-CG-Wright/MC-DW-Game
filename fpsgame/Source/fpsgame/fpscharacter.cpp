@@ -1502,7 +1502,6 @@ AFPSProjectile* Afpscharacter::SpawnProjectileBullet(FVector Location, FRotator 
 	{
 		Bullet->FireInDirection(GetControlRotation().Vector());
 		UE_LOG(LogTemp, Warning, TEXT("Name = %s"), *Bullet->CollisionComponent->GetFName().ToString());
-		UE_LOG(LogTemp, Warning, TEXT("MeshName = %s"), *Bullet->ProjectileMeshComponent->GetStaticMesh()->GetFName().ToString());
 	}
 	return Bullet;
 

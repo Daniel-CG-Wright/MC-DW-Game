@@ -46,18 +46,33 @@ AFPSProjectile::AFPSProjectile()
 
 	CosmeticSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("CosmeticSceneComponent"));
 	CosmeticSceneComponent->SetupAttachment(RootComponent);
-	ProjectileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMeshComponent"));
-	ProjectileMeshComponent->SetupAttachment(CosmeticSceneComponent);
-
+	//ProjectileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMeshComponent"));
+	//ProjectileMeshComponent->SetupAttachment(CosmeticSceneComponent);
+	//Instead of using meshes, we now use static mesh niagara particles - it is easier to configure, and is better performance-wise
 
 	ProjectileParticleSystem = CreateDefaultSubobject<UNiagaraComponent>(TEXT("ParticleComponent"));
 	ProjectileParticleSystem->SetupAttachment(CosmeticSceneComponent);
+
+	//Event called when component hits something
+	CollisionComponent->OnComponentHit.AddDynamic(this, &AFPSProjectile::OnHit);
 
 	InitialLifeSpan = 3.0f;
 
 
 }
 
+//Function called when the projectile hits something
+void AFPSProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (OtherActor != this)
+	{
+		//damage effects and stuff here. Implemented via custom blueprint function
+		Blueprint_OnHit(HitComponent, OtherActor, OtherComponent, NormalImpulse, Hit);
+	}
+
+	Destroy();
+
+}
 // Called when the game starts or when spawned
 void AFPSProjectile::BeginPlay()
 {
