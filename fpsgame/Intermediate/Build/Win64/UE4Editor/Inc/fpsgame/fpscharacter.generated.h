@@ -33,8 +33,8 @@ class UNiagaraSystem;
 	virtual void ServerStartJump_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual void ServerInteract_Implementation(); \
-	virtual bool ServerValidateFire_Validate(float , TArray<float> const& ); \
-	virtual void ServerValidateFire_Implementation(float ClientFireTime, TArray<float> const& SpreadAngles); \
+	virtual bool ServerValidateFire_Validate(float ); \
+	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
 	virtual bool ServerReload_Validate(); \
 	virtual void ServerReload_Implementation(); \
  \
@@ -99,6 +99,9 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
 	DECLARE_FUNCTION(execServerHitscanCheckFire); \
 	DECLARE_FUNCTION(execServerValidateFire); \
+	DECLARE_FUNCTION(execPerformRecoilWithGunMovement); \
+	DECLARE_FUNCTION(execPerformRecoilWithControlRotation); \
+	DECLARE_FUNCTION(execCalculateRecoil); \
 	DECLARE_FUNCTION(execCalculateSpreadModifier); \
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
@@ -109,6 +112,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execOnReload); \
 	DECLARE_FUNCTION(execOnPressFire); \
 	DECLARE_FUNCTION(execSpawnProjectileBullet); \
+	DECLARE_FUNCTION(execCalculateNewBatchOfSpreadAngles); \
 	DECLARE_FUNCTION(execServerProjectileCheckFire); \
 	DECLARE_FUNCTION(execClientProjectileCheckFire);
 
@@ -121,8 +125,8 @@ class UNiagaraSystem;
 	virtual void ServerStartJump_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual void ServerInteract_Implementation(); \
-	virtual bool ServerValidateFire_Validate(float , TArray<float> const& ); \
-	virtual void ServerValidateFire_Implementation(float ClientFireTime, TArray<float> const& SpreadAngles); \
+	virtual bool ServerValidateFire_Validate(float ); \
+	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
 	virtual bool ServerReload_Validate(); \
 	virtual void ServerReload_Implementation(); \
  \
@@ -187,6 +191,9 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
 	DECLARE_FUNCTION(execServerHitscanCheckFire); \
 	DECLARE_FUNCTION(execServerValidateFire); \
+	DECLARE_FUNCTION(execPerformRecoilWithGunMovement); \
+	DECLARE_FUNCTION(execPerformRecoilWithControlRotation); \
+	DECLARE_FUNCTION(execCalculateRecoil); \
 	DECLARE_FUNCTION(execCalculateSpreadModifier); \
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
@@ -197,6 +204,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execOnReload); \
 	DECLARE_FUNCTION(execOnPressFire); \
 	DECLARE_FUNCTION(execSpawnProjectileBullet); \
+	DECLARE_FUNCTION(execCalculateNewBatchOfSpreadAngles); \
 	DECLARE_FUNCTION(execServerProjectileCheckFire); \
 	DECLARE_FUNCTION(execClientProjectileCheckFire);
 
@@ -232,7 +240,6 @@ class UNiagaraSystem;
 	struct fpscharacter_eventServerValidateFire_Parms \
 	{ \
 		float ClientFireTime; \
-		TArray<float> SpreadAngles; \
 	}; \
 	struct fpscharacter_eventShowHitscanFireEffectFP_Parms \
 	{ \
@@ -271,7 +278,9 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		MuzzleCounter=NETFIELD_REP_START, \
+		ReplicatedSpreadAngles=NETFIELD_REP_START, \
+		RecoilRecovery, \
+		MuzzleCounter, \
 		EndPoint, \
 		SynchronisedControlRotation, \
 		PrimaryData, \
@@ -295,7 +304,9 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		MuzzleCounter=NETFIELD_REP_START, \
+		ReplicatedSpreadAngles=NETFIELD_REP_START, \
+		RecoilRecovery, \
+		MuzzleCounter, \
 		EndPoint, \
 		SynchronisedControlRotation, \
 		PrimaryData, \
@@ -337,9 +348,11 @@ public: \
 	FORCEINLINE static uint32 __PPO__IsLeftHanded() { return STRUCT_OFFSET(Afpscharacter, IsLeftHanded); } \
 	FORCEINLINE static uint32 __PPO__DistanceToPlaceProjectileFromCamera() { return STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera); } \
 	FORCEINLINE static uint32 __PPO__SwitchWeaponAfterPickup() { return STRUCT_OFFSET(Afpscharacter, SwitchWeaponAfterPickup); } \
+	FORCEINLINE static uint32 __PPO__ReplicatedSpreadAngles() { return STRUCT_OFFSET(Afpscharacter, ReplicatedSpreadAngles); } \
 	FORCEINLINE static uint32 __PPO__SpeedForLosingAccuracy() { return STRUCT_OFFSET(Afpscharacter, SpeedForLosingAccuracy); } \
 	FORCEINLINE static uint32 __PPO__MaxMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MaxMovementSpreadModifier); } \
 	FORCEINLINE static uint32 __PPO__MinMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier); } \
+	FORCEINLINE static uint32 __PPO__RecoilRecovery() { return STRUCT_OFFSET(Afpscharacter, RecoilRecovery); } \
 	FORCEINLINE static uint32 __PPO__MuzzleCounter() { return STRUCT_OFFSET(Afpscharacter, MuzzleCounter); } \
 	FORCEINLINE static uint32 __PPO__EndPoint() { return STRUCT_OFFSET(Afpscharacter, EndPoint); } \
 	FORCEINLINE static uint32 __PPO__HeadMaterial() { return STRUCT_OFFSET(Afpscharacter, HeadMaterial); } \

@@ -159,6 +159,8 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	DOREPLIFETIME_CONDITION(Afpscharacter, MuzzleCounter, COND_SkipOwner);
 	DOREPLIFETIME_CONDITION(Afpscharacter, EndPoint, COND_SkipOwner);
 
+	//Replicating spread
+	DOREPLIFETIME_CONDITION(Afpscharacter, ReplicatedSpreadAngles, COND_OwnerOnly);
 }
 
 
@@ -1002,8 +1004,8 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 		PositionAndAttachGunInFP(PrimaryData);
 
 	}
-	//Still need a lot fo equip logic here
-
+	//Still need a lot fo equip logic here TODO animatios, sounds etc
+	CalculateNewBatchOfSpreadAngles();
 	EquippedGun = Equips::PRIMARY;
 	PositionAndAttachGunInTP(PrimaryData);
 
@@ -1070,7 +1072,7 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 
 	
 	}
-
+	CalculateNewBatchOfSpreadAngles();
 	PositionAndAttachGunInTP(SecondaryData);
 
 	EquippedGun = Equips::SECONDARY;
@@ -1170,18 +1172,17 @@ void Afpscharacter::ClientValidateFire()
 	//Checking if we have ammo for firing
 	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0 && ((BurstRoundsToFire > 0 && GetCurrentlyEquippedWeaponData().Stats.BurstFireRate > 0.0f) || GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f))
 	{
-		TArray<float> SpreadAngles;
 		//Activate firing functions based on firing type
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
 			bIsFiring = true;
-			SpreadAngles = ClientHitscanCheckFire();
+			ClientHitscanCheckFire();
 			break;
 		case FireType::PROJECTILE:
 			//add projectile logic
 			bIsFiring = true;
-			SpreadAngles = ClientProjectileCheckFire();
+			ClientProjectileCheckFire();
 
 			break;
 
@@ -1196,7 +1197,7 @@ void Afpscharacter::ClientValidateFire()
 		{
 			UE_LOG(LogTemp, Warning, TEXT("client time = %f"), clienttime);
 
-			ServerValidateFire(clienttime, SpreadAngles);
+			ServerValidateFire(clienttime);
 
 		}
 	}
@@ -1283,7 +1284,74 @@ float Afpscharacter::CalculateSpreadModifier()
 
 }
 
-TArray<float> Afpscharacter::ClientProjectileCheckFire()
+FRotator Afpscharacter::CalculateRecoil()
+{
+	FWeaponRecoil RecoilStats = GetCurrentlyEquippedWeaponData().Recoil;
+
+	FRotator RecoilRotator; //pitch, yaw, roll. Only need pitch and yaw
+
+	FVector ForwardVector = FPSCameraComponent->GetForwardVector();
+
+	//The vertical recoil calculations can be completely predicted for client and server so can be used separately on server for calculation whilst looking the same on client, 
+	//preventing potential no-vertical-recoil hacks.
+
+	//Sorting vertical recoil
+
+	if (RecoilRecovery == 1.0f || !RecoilStats.bHasRecoil)
+	{
+		//First shot, no recoil.
+		//This is very strict, TODO maybe change this to be rounded so that you can fire with full accuiracy a bit sooner during recovery.
+		//i.e. if you do (1-recoilrecovery) * length of spread array and you get something like 0.4, round to 0 and use full accuracy.
+
+		//No visual recoil needed
+		return FRotator().ZeroRotator;
+	}
+
+	else if (RecoilRecovery > 0.0f)
+	{
+		//still using spread patterns.
+		//Ceil for the length multiplied by 1-the recoil recovery
+		RecoilRotator = FRotator(RecoilStats.InitialSpreadDegrees[FMath::CeilToInt((RecoilStats.InitialSpreadDegrees.Num()-1) * (1 - RecoilRecovery))], 0.0f, 0.0f);
+
+	}
+
+	else
+	{
+		//Using the greatest vertical recoil
+		RecoilRotator = FRotator(RecoilStats.InitialSpreadDegrees.Last());
+
+	}
+
+	//Cosmetic functions that aren't actually cosmetic
+	if (!RecoilStats.bUsesControlRotationForHipfireRecoil && bIsADS)
+	{
+		PerformRecoilWithGunMovement(RecoilRotator);
+
+	}
+	else
+	{
+		PerformRecoilWithControlRotation(RecoilRotator);
+
+	}
+	
+	return RecoilRotator;
+
+}
+void Afpscharacter::PerformRecoilWithControlRotation(FRotator RecoilRotation)
+{
+	//Moves the control rotation for recoil. Best for vertical recoil and ADS recoil.
+	AddControllerPitchInput(RecoilRotation.Pitch);
+	
+}
+
+void Afpscharacter::PerformRecoilWithGunMovement(FRotator RecoilRotation)
+{
+	//Moves the gun to perform recoil.
+	//This may need to be changed NOTE
+	FPSGunComponent->AddRelativeRotation(RecoilRotation);
+}
+
+void Afpscharacter::ClientProjectileCheckFire()
 {
 	//For firing projectiles
 	FVector EmitterStartPoint = FPSMuzzleComponent->GetComponentLocation();
@@ -1297,8 +1365,6 @@ TArray<float> Afpscharacter::ClientProjectileCheckFire()
 	BurstRoundsToFire -= 1;
 	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
 
-	//First bit copied from clienthitscancheckfire
-	TArray<float> SpreadAngles;
 
 	float SpreadModifier = CalculateSpreadModifier();
 
@@ -1306,7 +1372,6 @@ TArray<float> Afpscharacter::ClientProjectileCheckFire()
 	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
 	{
 
-		float RandomSpread = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
 		
 
 		//Spawn projectile, they do their own damage and effects and stuff in their destroy thing so no need to worry about that here
@@ -1314,7 +1379,7 @@ TArray<float> Afpscharacter::ClientProjectileCheckFire()
 		FRotator SpawnRotation = GetControlRotation();
 		AFPSProjectile* SpawnedProjectile;
 
-		SpawnedProjectile = SpawnProjectileBullet(SpawnLocation, SpawnRotation, SpreadModifier, RandomSpread);
+		SpawnedProjectile = SpawnProjectileBullet(SpawnLocation, SpawnRotation, SpreadModifier, ReplicatedSpreadAngles[i]);
 		
 		SpawnedProjectile->BlendVisualsToCollision(EmitterStartPoint);
 
@@ -1329,10 +1394,9 @@ TArray<float> Afpscharacter::ClientProjectileCheckFire()
 		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
 	);
 
-	return SpreadAngles;
 }
 
-TArray<float> Afpscharacter::ClientHitscanCheckFire()
+void Afpscharacter::ClientHitscanCheckFire()
 {
 	//This variable stores the start point of any tracer emitter particles
 	FVector EmitterStartPoint =FPSMuzzleComponent->GetComponentLocation();
@@ -1352,8 +1416,6 @@ TArray<float> Afpscharacter::ClientHitscanCheckFire()
 	
 	//Stores combined hit results from all shots
 	TArray<FHitResult> HitResults;
-	//Storing all the randomised spread angles so that they can be used on the server effectively.
-	TArray<float> SpreadAngles;
 	
 	float SpreadModifier = CalculateSpreadModifier();
 
@@ -1366,20 +1428,15 @@ TArray<float> Afpscharacter::ClientHitscanCheckFire()
 		//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
 	//TODO add spread and recoil here (do the multiraycasts at angles)
 	//Preferably replacing this function as it can still serve the purpose of getting data from straight ahead.
-	//Need to sync the random values between client and server.
-		float RandomSpread = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
-
-
 
 		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
-			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, RandomSpread), ECC_GameTraceChannel2);
+			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, ReplicatedSpreadAngles[i]), ECC_GameTraceChannel2);
 
 		//MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
 
 		//TO HERE FOR SHOTGUNS, AND SEND ALL THE SPREAD DATA IN ONE GO TO THE SERVER
 		HitResults += TempHitResults;
 
-		SpreadAngles.Emplace(RandomSpread);
 
 		//Need to show visual tracers for each shot (not just for one shot)
 		//If the last hit was a blocking hit then we use that, otherwise we just use up until the range.
@@ -1423,20 +1480,19 @@ TArray<float> Afpscharacter::ClientHitscanCheckFire()
 		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
 	);
 
-	return SpreadAngles;
 	
 	
 }
 
 
-bool Afpscharacter::ServerValidateFire_Validate(float ClientFireTime, const TArray<float>& SpreadAngles)
+bool Afpscharacter::ServerValidateFire_Validate(float ClientFireTime)
 {
 	//This is here for future validation.
 	return true;
 
 	
 }
-void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime, const TArray<float>& SpreadAngles)
+void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 {
 
 	//checks if the player can actually fire with server variables
@@ -1458,11 +1514,11 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime, cons
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
-			ServerHitscanCheckFire(ClientFireTime, SpreadAngles);
+			ServerHitscanCheckFire(ClientFireTime);
 			break;
 		case FireType::PROJECTILE:
 			//add projectile logic
-			ServerProjectileCheckFire(SpreadAngles);
+			ServerProjectileCheckFire();
 			break;
 
 		default:
@@ -1507,7 +1563,21 @@ AFPSProjectile* Afpscharacter::SpawnProjectileBullet(FVector Location, FRotator 
 
 
 }
-void Afpscharacter::ServerProjectileCheckFire(TArray<float> SpreadAngles)
+void Afpscharacter::CalculateNewBatchOfSpreadAngles()
+{
+	//Store them temporarily in this variable so as to avoid a lot of replication through the loop. May work, may not, but it's a small price.
+	TArray<float> tempSpreadAngles;
+	tempSpreadAngles.SetNum(GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets);
+
+	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
+	{
+		//Calculating the spread angles in advance and replicating to client so that they can see the same spread as the server.
+		tempSpreadAngles[i] = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
+	}
+
+	ReplicatedSpreadAngles = tempSpreadAngles;
+}
+void Afpscharacter::ServerProjectileCheckFire()
 {
 	//server firing projectiles
 
@@ -1519,18 +1589,20 @@ void Afpscharacter::ServerProjectileCheckFire(TArray<float> SpreadAngles)
 
 	float SpreadModifier = CalculateSpreadModifier();
 
-	for (float Angle : SpreadAngles)
+	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
 	{
 		FVector SpawnLoaction = FPSCameraComponent->GetComponentLocation() + (FPSCameraComponent->GetForwardVector() * DistanceToPlaceProjectileFromCamera);
 		FRotator SpawnRotation = GetControlRotation();
 
 		AFPSProjectile* SpawnedProjectile;
 
-		SpawnedProjectile = SpawnProjectileBullet(SpawnLoaction, SpawnRotation, SpreadModifier, Angle);
+		
+		
+		SpawnedProjectile = SpawnProjectileBullet(SpawnLoaction, SpawnRotation, SpreadModifier, ReplicatedSpreadAngles[i]);
 
 		
 	}
-
+	CalculateNewBatchOfSpreadAngles();
 	MuzzleCounter += 1;
 }
 void Afpscharacter::OnRep_EndPoint()
@@ -1544,7 +1616,7 @@ void Afpscharacter::OnRep_MuzzleCounter()
 
 	
 }
-void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime, TArray<float> SpreadAngles)
+void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime)
 {
 	//The meaty part. Here is where we rewind the poses and stuff using the game state to check if the shot hit.
 
@@ -1590,7 +1662,7 @@ void Afpscharacter::ServerHitscanCheckFire(float ClientFireTime, TArray<float> S
 		//STAGE 4 - STILL NEEDS IMPLEMENTATION
 		//TODO ADD STAGE 4
 		//STAGE 5, 6, 7, 8
-		ServerRewindAndPerformHitscan(ActorTransformMap, SpreadAngles);
+		ServerRewindAndPerformHitscan(ActorTransformMap);
 
 	}
 }
@@ -1658,7 +1730,7 @@ void Afpscharacter::ServerGetInterpolatedTransformsForRewind(float ClientFireTim
 	//UE_LOG(LogTemp, Warning, TEXT("Rewind transforms = %d"), OutActorTransformsToBeRewinded.Num());
 }
 
-void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind, TArray<float> SpreadAngles)
+void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind)
 {
 	//UE_LOG(LogTemp, Warning, TEXT("Final stages"));
 	//Call a gamemode function which rewinds everything
@@ -1671,7 +1743,7 @@ void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruc
 	}
 
 	//Perform the actual hitscan with the hitscan function
-	ServerPerformHitscan(SpreadAngles);
+	ServerPerformHitscan();
 
 	//Call a gamemode function which reverts everything to the normal state
 	if (doRewind)
@@ -1681,7 +1753,7 @@ void Afpscharacter::ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruc
 	}
 }
 
-void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
+void Afpscharacter::ServerPerformHitscan()
 {
 	//Here is where we actually perform the hitscan to see if we hit anything.
 	//First please do a third person muzzle flash
@@ -1696,7 +1768,7 @@ void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 
 	UE_LOG(LogTemp, Warning, TEXT("Weapon name: %s"), *GetCurrentlyEquippedWeaponData().WeaponName.ToString());
 	//This relies on the cartridge bullets measured by the client, SO COULD BE PRONE TO EXPLOIT - MAY NEED REVISION
-	for (float Angle : SpreadAngles)
+	for (float Angle : ReplicatedSpreadAngles)
 	{
 		//Iter for all spreadangles as shots
 		TArray<FHitResult> TempHitResults;
@@ -1733,6 +1805,7 @@ void Afpscharacter::ServerPerformHitscan(TArray<float> SpreadAngles)
 	
 	//Muzzlw Flash
 	MuzzleCounter += 1;
+	CalculateNewBatchOfSpreadAngles();
 
 	//Raycast done
 

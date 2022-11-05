@@ -54,6 +54,9 @@ protected:
 	//Stores whether or not the player is currently holding down the fire button.
 	bool bIsFiring;
 
+	//Stores if ads is happening
+	bool bIsADS;
+
 	//Controls whether the gun can fire again, to prevent abuse of semi guns (e.g. using autoclickers)
 	//Currently only controlled on client-side so may need to move functionality to server side in case of cheating.
 	bool bCanFire;
@@ -68,6 +71,11 @@ protected:
 
 	//Used to time burst fire
 	FTimerHandle BurstFireTimer;
+
+	//This is the next batch of angles for weapon spread, calculated randomly beforehand on server so it can't be modified by client.
+	//Purely replicated so that the client can see the same spread the server is using, whcih looks better
+	UPROPERTY(Replicated)
+		TArray<float> ReplicatedSpreadAngles;
 
 	//Above this speed accuracy begins to be reduced (cm/s)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon spread")
@@ -86,10 +94,15 @@ protected:
 
 	//Called for firing projectiles
 	UFUNCTION()
-		TArray<float> ClientProjectileCheckFire();
+		void ClientProjectileCheckFire();
 
 	UFUNCTION()
-		void ServerProjectileCheckFire(TArray<float> SpreadAngles);
+		void ServerProjectileCheckFire();
+
+	//Calculates the spread angles to be used for the next shot so that the client has the same random spread angles as the server.
+	//Generated on server. Caluclated after firing, and after equipping weapon
+	UFUNCTION()
+		void CalculateNewBatchOfSpreadAngles();
 
 	//Used to spawn a projectile
 	UFUNCTION()
@@ -124,19 +137,38 @@ protected:
 
 	//Checks if the client will hit anything on their side when they fire (hitscan)
 	UFUNCTION()
-		TArray<float> ClientHitscanCheckFire();
+		void ClientHitscanCheckFire();
 
 	//Calculates spread modifier
 	UFUNCTION()
 		float CalculateSpreadModifier();
 
-	//Checks on server if the player could actually fire, to prevent cheating with ammo or firerates etc. RPC calle by ClientHitscanCheckFire
+	//Calculates the weapon recoil
+	UFUNCTION()
+		FRotator CalculateRecoil();
+
+	//Performs recoil with the camera moving (moves whole control rotation upwards)
+	UFUNCTION()
+		void PerformRecoilWithControlRotation(FRotator RecoilRotation);
+
+	//Performs recoil without the camera moving (just the gun moves upward visibly), best used for horizontal recoil
+	UFUNCTION()
+		void PerformRecoilWithGunMovement(FRotator RecoilRotation);
+
+	//Both recoil functions above use the same recoil stats, neither is more powerful thhan the other.
+	//Stores recoil recovery. Reset to 100 on weapon pickup/switching, but the time taken to switch weapons should negate this.
+	//May need replication from server if handling recoil recovery on server. Lost from shooting, gained from waiting
+	//As the recovery returns to 100%, correct the aim back downward again maybe (but make this an option). Replicate that too.
+	UPROPERTY(Replicated)
+		float RecoilRecovery = 1.0f;
+
+	//Checks on server if the player could actually fire, to prevent cheating with ammo or firerates etc. RPC called by ClientHitscanCheckFire
 	UFUNCTION(Server, Unreliable, WithValidation)
-		void ServerValidateFire(float ClientFireTime, const TArray<float>& SpreadAngles);
+		void ServerValidateFire(float ClientFireTime);
 	
 	//Checks if the player hit anything on the server, requires rewinds and stuff. Not an RPC as called by ServerValidateFire
 	UFUNCTION()
-		void ServerHitscanCheckFire(float ClientFireTime, TArray<float> SpreadAngles);
+		void ServerHitscanCheckFire(float ClientFireTime);
 
 	//Used to get the interpolated transforms for all rewind components, for the specific timestamp
 	UFUNCTION()
@@ -144,11 +176,11 @@ protected:
 
 	//rewinds all the actors to the previous point, and then performs the hitscan, and then returns them back
 	UFUNCTION()
-		void ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind, TArray<float> SpreadAngles);
+		void ServerRewindAndPerformHitscan(TMap<AActor*, FRewindDataStruct> const ValuesToBeUsedInRewind);
 
 	//Performs the serverside hitscan - we also deal damage and stuff here
 	UFUNCTION()
-		void ServerPerformHitscan(TArray<float> SpreadAngles);
+		void ServerPerformHitscan();
 	
 	//Performs the damage logic on hitting targets.
 	UFUNCTION()

@@ -226,6 +226,46 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float BaseMovementSpreadMultiplier;
 
+
+};
+
+USTRUCT(BlueprintType)
+struct FWeaponRecoil
+{
+	GENERATED_BODY()
+
+public:
+
+	//Whether this gun has recoil
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
+		bool bHasRecoil;
+
+	//Whether this gun uses control rotation or gun recoil for hipfire recoil.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
+		bool bUsesControlRotationForHipfireRecoil;
+
+	//Recoil initial vertical patterns
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
+		TArray<float> InitialSpreadDegrees;
+
+	//Recoil max vertical delta is calculated from the difference between the last spread angles above.
+
+	//Past the highest spread degrees in the array the gun shall not rise.
+
+	//The horizontal recoil, randomly picked for this value left and right
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
+	//	float HorizontalRecoil;
+	//Horizontal recoil currently works the same as spread so we might as well not have it.
+
+	//The time before recoil recovery kicks in
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
+		float RecoilRecoveryTime;
+
+	//The percentage of recoil recovery per second
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
+		float PercentageRecoilRecoveryGainedPerSecond;
+
+	//Recoil percentage is lost each shot until it reaches 0% at the end of the recoil degree pattern.
 };
 
 USTRUCT(BlueprintType)
@@ -253,6 +293,10 @@ public:
 	//The stats of the weapon such as damage
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FWeaponStats Stats;
+
+	//The recoil properties of the weapon
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponRecoil Recoil;
 
 };
 
