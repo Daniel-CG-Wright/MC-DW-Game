@@ -11,12 +11,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FDamageEvent;
 class AController;
 class AActor;
+struct FRotator;
 struct FWeaponDataStruct;
 class AWeaponActor;
-struct FRotator;
 struct FHitResult;
 struct FVector;
 class AActor; struct FRewindDataStruct;
+struct FTimerHandle;
 class AFPSProjectile;
 class UNiagaraSystem;
 #ifdef FPSGAME_fpscharacter_generated_h
@@ -48,6 +49,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
+	DECLARE_FUNCTION(execCosmeticRecoil); \
 	DECLARE_FUNCTION(execServerSwitchSecondary); \
 	DECLARE_FUNCTION(execServerSwitchPrimary); \
 	DECLARE_FUNCTION(execPositionAndAttachGunInTP); \
@@ -99,6 +101,11 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
 	DECLARE_FUNCTION(execServerHitscanCheckFire); \
 	DECLARE_FUNCTION(execServerValidateFire); \
+	DECLARE_FUNCTION(execOnRep_ReceiveRecoilRecoveryChanges); \
+	DECLARE_FUNCTION(execReduceRecoilRecovery); \
+	DECLARE_FUNCTION(execRecoverFPRotationOfGun); \
+	DECLARE_FUNCTION(execTimedRecoilRecoveryFunction); \
+	DECLARE_FUNCTION(execPerformRecoilWithTPGunMovement); \
 	DECLARE_FUNCTION(execPerformRecoilWithGunMovement); \
 	DECLARE_FUNCTION(execPerformRecoilWithControlRotation); \
 	DECLARE_FUNCTION(execCalculateRecoil); \
@@ -140,6 +147,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
+	DECLARE_FUNCTION(execCosmeticRecoil); \
 	DECLARE_FUNCTION(execServerSwitchSecondary); \
 	DECLARE_FUNCTION(execServerSwitchPrimary); \
 	DECLARE_FUNCTION(execPositionAndAttachGunInTP); \
@@ -191,6 +199,11 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
 	DECLARE_FUNCTION(execServerHitscanCheckFire); \
 	DECLARE_FUNCTION(execServerValidateFire); \
+	DECLARE_FUNCTION(execOnRep_ReceiveRecoilRecoveryChanges); \
+	DECLARE_FUNCTION(execReduceRecoilRecovery); \
+	DECLARE_FUNCTION(execRecoverFPRotationOfGun); \
+	DECLARE_FUNCTION(execTimedRecoilRecoveryFunction); \
+	DECLARE_FUNCTION(execPerformRecoilWithTPGunMovement); \
 	DECLARE_FUNCTION(execPerformRecoilWithGunMovement); \
 	DECLARE_FUNCTION(execPerformRecoilWithControlRotation); \
 	DECLARE_FUNCTION(execCalculateRecoil); \
@@ -279,7 +292,7 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		ReplicatedSpreadAngles=NETFIELD_REP_START, \
-		RecoilRecovery, \
+		DeltaRecoil, \
 		MuzzleCounter, \
 		EndPoint, \
 		SynchronisedControlRotation, \
@@ -305,7 +318,7 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		ReplicatedSpreadAngles=NETFIELD_REP_START, \
-		RecoilRecovery, \
+		DeltaRecoil, \
 		MuzzleCounter, \
 		EndPoint, \
 		SynchronisedControlRotation, \
@@ -353,6 +366,9 @@ public: \
 	FORCEINLINE static uint32 __PPO__MaxMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MaxMovementSpreadModifier); } \
 	FORCEINLINE static uint32 __PPO__MinMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier); } \
 	FORCEINLINE static uint32 __PPO__RecoilRecovery() { return STRUCT_OFFSET(Afpscharacter, RecoilRecovery); } \
+	FORCEINLINE static uint32 __PPO__RecoilRecoveryTime() { return STRUCT_OFFSET(Afpscharacter, RecoilRecoveryTime); } \
+	FORCEINLINE static uint32 __PPO__RecoilRecoveryHandle() { return STRUCT_OFFSET(Afpscharacter, RecoilRecoveryHandle); } \
+	FORCEINLINE static uint32 __PPO__DeltaRecoil() { return STRUCT_OFFSET(Afpscharacter, DeltaRecoil); } \
 	FORCEINLINE static uint32 __PPO__MuzzleCounter() { return STRUCT_OFFSET(Afpscharacter, MuzzleCounter); } \
 	FORCEINLINE static uint32 __PPO__EndPoint() { return STRUCT_OFFSET(Afpscharacter, EndPoint); } \
 	FORCEINLINE static uint32 __PPO__HeadMaterial() { return STRUCT_OFFSET(Afpscharacter, HeadMaterial); } \

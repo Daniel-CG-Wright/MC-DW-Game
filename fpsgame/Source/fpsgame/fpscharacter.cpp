@@ -161,6 +161,10 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 
 	//Replicating spread
 	DOREPLIFETIME_CONDITION(Afpscharacter, ReplicatedSpreadAngles, COND_OwnerOnly);
+
+	//Replicating recoil recovery
+	DOREPLIFETIME_CONDITION(Afpscharacter, DeltaRecoil, COND_OwnerOnly);
+
 }
 
 
@@ -1311,46 +1315,132 @@ FRotator Afpscharacter::CalculateRecoil()
 	{
 		//still using spread patterns.
 		//Ceil for the length multiplied by 1-the recoil recovery
-		RecoilRotator = FRotator(RecoilStats.InitialSpreadDegrees[FMath::CeilToInt((RecoilStats.InitialSpreadDegrees.Num()-1) * (1 - RecoilRecovery))], 0.0f, 0.0f);
+		RecoilRotator = FRotator((-1.0f) * RecoilStats.InitialSpreadDegrees[FMath::CeilToInt((RecoilStats.InitialSpreadDegrees.Num()-1) * (1 - RecoilRecovery))], 0.0f, 0.0f);
 
 	}
 
 	else
 	{
 		//Using the greatest vertical recoil
-		RecoilRotator = FRotator(RecoilStats.InitialSpreadDegrees.Last());
+		RecoilRotator = FRotator((-1.0f) * RecoilStats.InitialSpreadDegrees.Last());
 
 	}
 
-	//Cosmetic functions that aren't actually cosmetic
-	if (!RecoilStats.bUsesControlRotationForHipfireRecoil && bIsADS)
+	
+	
+	return RecoilRotator;
+
+}
+void Afpscharacter::TimedRecoilRecoveryFunction(FTimerHandle TimerHandle)
+{
+	
+	//run on timer, stops timer when full
+	//Run on server
+	DeltaRecoil = GetCurrentlyEquippedWeaponData().Recoil.PercentageRecoilRecoveryGainedPerSecond * RecoilRecoveryTime;
+	RecoilRecovery += DeltaRecoil;
+
+	RecoilRecovery = FMath::Clamp(RecoilRecovery, 0.0f, 1.0f);
+
+	UE_LOG(LogTemp, Warning, TEXT("RecoveredRecoil = %f"), RecoilRecovery);
+
+	if (RecoilRecovery == 1.0f)
 	{
+		//Stop the timer for recoil recovery
+		TimerHandle.Invalidate();
+
+	}
+}
+void Afpscharacter::OnRep_ReceiveRecoilRecoveryChanges()
+{
+	RecoilRecovery += DeltaRecoil;
+	RecoilRecovery = FMath::Clamp(RecoilRecovery, 0.0f, 1.0f);
+
+	UE_LOG(LogTemp, Warning, TEXT("DeltaRecoil = %f"), RecoilRecovery);
+
+	if (DeltaRecoil > 0)
+	{
+		//Recovery in progress (don't need the inverse as this is performed automatically during firing)
+		RecoverFPRotationOfGun();
+
+	}
+}
+void Afpscharacter::RecoverFPRotationOfGun()
+{
+	//Should be run on a timer for recoil recovery
+
+	FRotator DestinationRotation = GetControlRotation();
+
+	FRotator CurrentRotation = FPSGunComponent->GetComponentRotation();
+
+	//Lerp between the two values
+	FRotator LerpedRotation = FMath::Lerp(CurrentRotation, DestinationRotation, RecoilRecovery);
+	FPSGunComponent->SetWorldRotation(LerpedRotation);
+
+}
+void Afpscharacter::CosmeticRecoil(FRotator const RecoilRotator)
+{
+	//TODO ADD JIGGLING AND STUFF TO MAKE IT LOOK MORE REALISTIC (NOT JUST ROTATION)
+	//Cosmetic functions that aren't actually cosmetic
+	if (!GetCurrentlyEquippedWeaponData().Recoil.bUsesControlRotationForHipfireRecoil && bIsADS)
+	{
+		//dont change control rotation
 		PerformRecoilWithGunMovement(RecoilRotator);
 
 	}
 	else
 	{
+		//change control rotation
 		PerformRecoilWithControlRotation(RecoilRotator);
 
 	}
-	
-	return RecoilRotator;
-
 }
-void Afpscharacter::PerformRecoilWithControlRotation(FRotator RecoilRotation)
+void Afpscharacter::PerformRecoilWithControlRotation(FRotator const RecoilRotation)
 {
+	UE_LOG(LogTemp, Warning, TEXT("RecoilControlRotation"));
+
 	//Moves the control rotation for recoil. Best for vertical recoil and ADS recoil.
 	AddControllerPitchInput(RecoilRotation.Pitch);
-	
+	AddControllerYawInput(RecoilRotation.Yaw);
+
 }
 
-void Afpscharacter::PerformRecoilWithGunMovement(FRotator RecoilRotation)
+void Afpscharacter::PerformRecoilWithGunMovement(FRotator const RecoilRotation)
 {
+	UE_LOG(LogTemp, Warning, TEXT("RecoilgunMovement"));
+
 	//Moves the gun to perform recoil.
 	//This may need to be changed NOTE
+		//need to reset this on recovery
+
 	FPSGunComponent->AddRelativeRotation(RecoilRotation);
 }
 
+void Afpscharacter::PerformRecoilWithTPGunMovement()
+{
+	//Moves the gun in third person to perform visual recoil
+	//Should only be called on server
+	//TODO add jiggling and stuff rather than just rotation
+		//need to reset this on recovery (or faster for TP)
+
+	
+
+}
+
+void Afpscharacter::ReduceRecoilRecovery()
+{
+	//Only run on server please
+	if (IsLocallyControlled())
+	{
+		return;
+	}
+
+	int Count = GetCurrentlyEquippedWeaponData().Recoil.InitialSpreadDegrees.Num();
+	//int currentRecoilIndex = FMath::CeilToInt((GetCurrentlyEquippedWeaponData().Recoil.InitialSpreadDegrees.Num() - 1) * (1 - RecoilRecovery));
+
+	DeltaRecoil = -1.0f * (1.0f / Count);
+	UE_LOG(LogTemp, Warning, TEXT("ReduceRecoil = %f"), DeltaRecoil);
+
+}
 void Afpscharacter::ClientProjectileCheckFire()
 {
 	//For firing projectiles
@@ -1367,7 +1457,8 @@ void Afpscharacter::ClientProjectileCheckFire()
 
 
 	float SpreadModifier = CalculateSpreadModifier();
-
+	FRotator RecoilRotation = CalculateRecoil();
+	FRotator ForwardRotation = GetControlRotation() + RecoilRotation;
 
 	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
 	{
@@ -1376,10 +1467,10 @@ void Afpscharacter::ClientProjectileCheckFire()
 
 		//Spawn projectile, they do their own damage and effects and stuff in their destroy thing so no need to worry about that here
 		FVector SpawnLocation = FPSCameraComponent->GetComponentLocation() + FTransform(GetControlRotation()).TransformVector(DistanceToPlaceProjectileFromCamera);
-		FRotator SpawnRotation = GetControlRotation();
+
 		AFPSProjectile* SpawnedProjectile;
 
-		SpawnedProjectile = SpawnProjectileBullet(SpawnLocation, SpawnRotation, SpreadModifier, ReplicatedSpreadAngles[i]);
+		SpawnedProjectile = SpawnProjectileBullet(SpawnLocation, ForwardRotation, SpreadModifier, ReplicatedSpreadAngles[i]);
 		
 		SpawnedProjectile->BlendVisualsToCollision(EmitterStartPoint);
 
@@ -1393,6 +1484,11 @@ void Afpscharacter::ClientProjectileCheckFire()
 		FPSMuzzleComponent->GetForwardVector(),
 		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
 	);
+
+	//Show cosmetic recoil
+	CosmeticRecoil(RecoilRotation);
+
+	
 
 }
 
@@ -1419,7 +1515,10 @@ void Afpscharacter::ClientHitscanCheckFire()
 	
 	float SpreadModifier = CalculateSpreadModifier();
 
-	
+	FRotator RecoilRotation = CalculateRecoil();
+
+	//Apply recoil rotation, even if not applied to control rotation
+	FRotator ForwardRotation = GetControlRotation() + RecoilRotation;
 	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
 	{
 		//Stores temporary details for this cartridge
@@ -1430,7 +1529,7 @@ void Afpscharacter::ClientHitscanCheckFire()
 	//Preferably replacing this function as it can still serve the purpose of getting data from straight ahead.
 
 		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
-			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, ReplicatedSpreadAngles[i]), ECC_GameTraceChannel2);
+			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), ForwardRotation, GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, ReplicatedSpreadAngles[i]), ECC_GameTraceChannel2);
 
 		//MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
 
@@ -1474,13 +1573,15 @@ void Afpscharacter::ClientHitscanCheckFire()
 
 	}
 	
+	//Show cosmetic reocil and muzzle flasdh
 	ShowMuzzleFlashFP(
 		EmitterStartPoint,
 		FPSMuzzleComponent->GetForwardVector(),
 		GetCurrentlyEquippedWeaponData().VisualAssets.MuzzleFlash
 	);
 
-	
+	CosmeticRecoil(RecoilRotation);
+
 	
 }
 
@@ -1588,11 +1689,12 @@ void Afpscharacter::ServerProjectileCheckFire()
 	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
 
 	float SpreadModifier = CalculateSpreadModifier();
+	FRotator RecoilRotation = CalculateRecoil();
 
 	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
 	{
 		FVector SpawnLoaction = FPSCameraComponent->GetComponentLocation() + (FPSCameraComponent->GetForwardVector() * DistanceToPlaceProjectileFromCamera);
-		FRotator SpawnRotation = GetControlRotation();
+		FRotator SpawnRotation = GetControlRotation() + RecoilRotation;
 
 		AFPSProjectile* SpawnedProjectile;
 
@@ -1603,6 +1705,14 @@ void Afpscharacter::ServerProjectileCheckFire()
 		
 	}
 	CalculateNewBatchOfSpreadAngles();
+	PerformRecoilWithTPGunMovement();
+	//Reduce recoil recovery
+	ReduceRecoilRecovery();
+	//Activate recoil recovery
+	float TimerDelay = GetCurrentlyEquippedWeaponData().Recoil.RecoilRecoveryTime;
+
+	GetWorldTimerManager().SetTimer(RecoilRecoveryHandle, this, &Afpscharacter::TimedRecoilRecoveryFunction, RecoilRecoveryTime, true, TimerDelay);
+
 	MuzzleCounter += 1;
 }
 void Afpscharacter::OnRep_EndPoint()
@@ -1766,7 +1876,9 @@ void Afpscharacter::ServerPerformHitscan()
 
 	float SpreadModifier = CalculateSpreadModifier();
 
-	UE_LOG(LogTemp, Warning, TEXT("Weapon name: %s"), *GetCurrentlyEquippedWeaponData().WeaponName.ToString());
+	FRotator RecoilRotation = CalculateRecoil();
+	FRotator ForwardsRotation = RecoilRotation + GetController()->GetControlRotation();
+
 	//This relies on the cartridge bullets measured by the client, SO COULD BE PRONE TO EXPLOIT - MAY NEED REVISION
 	for (float Angle : ReplicatedSpreadAngles)
 	{
@@ -1775,7 +1887,7 @@ void Afpscharacter::ServerPerformHitscan()
 
 		//Actual raycast
 		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
-			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetController()->GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, Angle), ECC_GameTraceChannel2);
+			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), ForwardsRotation, GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, Angle), ECC_GameTraceChannel2);
 
 		HitResults += TempHitResults;
 
@@ -1806,6 +1918,10 @@ void Afpscharacter::ServerPerformHitscan()
 	//Muzzlw Flash
 	MuzzleCounter += 1;
 	CalculateNewBatchOfSpreadAngles();
+	PerformRecoilWithTPGunMovement();
+	ReduceRecoilRecovery();
+
+	GetWorldTimerManager().SetTimer(RecoilRecoveryHandle, this, &Afpscharacter::TimedRecoilRecoveryFunction, RecoilRecoveryTime, true, TimerDelay);
 
 	//Raycast done
 

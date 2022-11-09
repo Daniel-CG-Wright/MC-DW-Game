@@ -265,6 +265,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
 		float PercentageRecoilRecoveryGainedPerSecond;
 
+
 	//Recoil percentage is lost each shot until it reaches 0% at the end of the recoil degree pattern.
 };
 

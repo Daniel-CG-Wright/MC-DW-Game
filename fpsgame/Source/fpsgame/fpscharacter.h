@@ -155,12 +155,45 @@ protected:
 	UFUNCTION()
 		void PerformRecoilWithGunMovement(FRotator RecoilRotation);
 
+	//Performs third person recoil, will not actually sync with gun mvoement
+	UFUNCTION()
+		void PerformRecoilWithTPGunMovement();
+
+	UFUNCTION()
+		//Handled by a timer, responsible for recoil recovery
+		void TimedRecoilRecoveryFunction(FTimerHandle TimerHandle);
+
+	UFUNCTION()
+		//Recovers the gun rotation (but not control rotation).
+		void RecoverFPRotationOfGun();
+
 	//Both recoil functions above use the same recoil stats, neither is more powerful thhan the other.
 	//Stores recoil recovery. Reset to 100 on weapon pickup/switching, but the time taken to switch weapons should negate this.
 	//May need replication from server if handling recoil recovery on server. Lost from shooting, gained from waiting
 	//As the recovery returns to 100%, correct the aim back downward again maybe (but make this an option). Replicate that too.
-	UPROPERTY(Replicated)
+	//This is indirectly replicated by changing DeltaRecoil, if deltaRecoil is positive then do recoil recovery stuff
+	UPROPERTY()
 		float RecoilRecovery = 1.0f;
+
+	//Rate at which recoil recovery timer runs to increase recoil recovery.
+	//Smaller values = smoother, but more processing required
+	UPROPERTY()
+		float RecoilRecoveryTime = 0.1f;
+
+	UPROPERTY()
+		FTimerHandle RecoilRecoveryHandle;
+
+	UPROPERTY(ReplicatedUsing = OnRep_ReceiveRecoilRecoveryChanges)
+		//Last server change to recoil.
+		float DeltaRecoil;
+
+	UFUNCTION()
+		//Reduce recoil recovery, to be run on server
+		void ReduceRecoilRecovery();
+
+	//Performs alterations to gun model rotation and stuff to recover recoil based on recoil recovery increasing
+	UFUNCTION()
+		void OnRep_ReceiveRecoilRecoveryChanges();
 
 	//Checks on server if the player could actually fire, to prevent cheating with ammo or firerates etc. RPC called by ClientHitscanCheckFire
 	UFUNCTION(Server, Unreliable, WithValidation)
@@ -540,6 +573,9 @@ protected:
 		//Like above but for secondary weapon
 		void ServerSwitchSecondary();
 
+	UFUNCTION()
+		//Executes cosmetic recoil, should only be done after caluclating recoil to avoid changes to control rotation stacking.
+		void CosmeticRecoil(FRotator const RecoilRotator);
 
 public:
 	// Called every frame
