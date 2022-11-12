@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\fpsgame.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1FE34666-09BE-4BFE-B2AF-165334990519}</UniqueIdentifier>
+      <UniqueIdentifier>{E3A158BC-0192-4B4A-9819-690A5C81C7C5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\fpsgame.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{58DEBE1A-ACC1-40BA-A975-BF6A2ADBA8F3}</UniqueIdentifier>
+      <UniqueIdentifier>{9CCD071F-D8F0-4FC4-B54D-935C2112CE56}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\fpsgame">
-      <UniqueIdentifier>{0DE17581-0974-4774-B209-352CC5CD889E}</UniqueIdentifier>
+      <UniqueIdentifier>{395DCCA7-6D54-4CA1-8793-26338658F47E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\fpsgame\fpscharacter.cpp">
       <Filter>Source\fpsgame</Filter>

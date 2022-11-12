@@ -143,25 +143,6 @@ protected:
 	UFUNCTION()
 		float CalculateSpreadModifier();
 
-	//Calculates the weapon recoil
-	UFUNCTION()
-		FRotator CalculateRecoil();
-
-	//Performs recoil with the camera moving (moves whole control rotation upwards)
-	UFUNCTION()
-		void PerformRecoilWithControlRotation(FRotator RecoilRotation);
-
-	//Performs recoil without the camera moving (just the gun moves upward visibly), best used for horizontal recoil
-	UFUNCTION()
-		void PerformRecoilWithGunMovement(FRotator RecoilRotation);
-
-	//Both recoil functions above use the same recoil stats, neither is more powerful thhan the other.
-	//Stores recoil recovery. Reset to 100 on weapon pickup/switching, but the time taken to switch weapons should negate this.
-	//May need replication from server if handling recoil recovery on server. Lost from shooting, gained from waiting
-	//As the recovery returns to 100%, correct the aim back downward again maybe (but make this an option). Replicate that too.
-	UPROPERTY(Replicated)
-		float RecoilRecovery = 1.0f;
-
 	//Checks on server if the player could actually fire, to prevent cheating with ammo or firerates etc. RPC called by ClientHitscanCheckFire
 	UFUNCTION(Server, Unreliable, WithValidation)
 		void ServerValidateFire(float ClientFireTime);
