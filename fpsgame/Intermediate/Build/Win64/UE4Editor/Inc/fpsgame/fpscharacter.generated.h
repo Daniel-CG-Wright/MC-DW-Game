@@ -32,6 +32,7 @@ class UNiagaraSystem;
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
+	virtual void SetClientControlRotationFromServer_Implementation(FRotator Rotation); \
 	virtual void ServerInteract_Implementation(); \
 	virtual bool ServerValidateFire_Validate(float ); \
 	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
@@ -86,6 +87,15 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execMultiRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execSingleRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execInteractWithNameOnly); \
+	DECLARE_FUNCTION(execRecoveryStart); \
+	DECLARE_FUNCTION(execRecoilTimerFunction); \
+	DECLARE_FUNCTION(execSetClientControlRotationFromServer); \
+	DECLARE_FUNCTION(execSetControlRotation); \
+	DECLARE_FUNCTION(execRecoilRecoveryTimerFunction); \
+	DECLARE_FUNCTION(execRecoilStop); \
+	DECLARE_FUNCTION(execRecoilStart); \
+	DECLARE_FUNCTION(execRecoveryApply); \
+	DECLARE_FUNCTION(execRecoilApply); \
 	DECLARE_FUNCTION(execEnableCanInteract); \
 	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
@@ -99,9 +109,6 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
 	DECLARE_FUNCTION(execServerHitscanCheckFire); \
 	DECLARE_FUNCTION(execServerValidateFire); \
-	DECLARE_FUNCTION(execPerformRecoilWithGunMovement); \
-	DECLARE_FUNCTION(execPerformRecoilWithControlRotation); \
-	DECLARE_FUNCTION(execCalculateRecoil); \
 	DECLARE_FUNCTION(execCalculateSpreadModifier); \
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
@@ -124,6 +131,7 @@ class UNiagaraSystem;
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
+	virtual void SetClientControlRotationFromServer_Implementation(FRotator Rotation); \
 	virtual void ServerInteract_Implementation(); \
 	virtual bool ServerValidateFire_Validate(float ); \
 	virtual void ServerValidateFire_Implementation(float ClientFireTime); \
@@ -178,6 +186,15 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execMultiRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execSingleRaycastInCameraDirection); \
 	DECLARE_FUNCTION(execInteractWithNameOnly); \
+	DECLARE_FUNCTION(execRecoveryStart); \
+	DECLARE_FUNCTION(execRecoilTimerFunction); \
+	DECLARE_FUNCTION(execSetClientControlRotationFromServer); \
+	DECLARE_FUNCTION(execSetControlRotation); \
+	DECLARE_FUNCTION(execRecoilRecoveryTimerFunction); \
+	DECLARE_FUNCTION(execRecoilStop); \
+	DECLARE_FUNCTION(execRecoilStart); \
+	DECLARE_FUNCTION(execRecoveryApply); \
+	DECLARE_FUNCTION(execRecoilApply); \
 	DECLARE_FUNCTION(execEnableCanInteract); \
 	DECLARE_FUNCTION(execServerInteract); \
 	DECLARE_FUNCTION(execInteract); \
@@ -191,9 +208,6 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerGetInterpolatedTransformsForRewind); \
 	DECLARE_FUNCTION(execServerHitscanCheckFire); \
 	DECLARE_FUNCTION(execServerValidateFire); \
-	DECLARE_FUNCTION(execPerformRecoilWithGunMovement); \
-	DECLARE_FUNCTION(execPerformRecoilWithControlRotation); \
-	DECLARE_FUNCTION(execCalculateRecoil); \
 	DECLARE_FUNCTION(execCalculateSpreadModifier); \
 	DECLARE_FUNCTION(execClientHitscanCheckFire); \
 	DECLARE_FUNCTION(execClientValidateFire); \
@@ -241,6 +255,10 @@ class UNiagaraSystem;
 	{ \
 		float ClientFireTime; \
 	}; \
+	struct fpscharacter_eventSetClientControlRotationFromServer_Parms \
+	{ \
+		FRotator Rotation; \
+	}; \
 	struct fpscharacter_eventShowHitscanFireEffectFP_Parms \
 	{ \
 		FVector StartLocation; \
@@ -279,7 +297,6 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		ReplicatedSpreadAngles=NETFIELD_REP_START, \
-		RecoilRecovery, \
 		MuzzleCounter, \
 		EndPoint, \
 		SynchronisedControlRotation, \
@@ -305,7 +322,6 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		ReplicatedSpreadAngles=NETFIELD_REP_START, \
-		RecoilRecovery, \
 		MuzzleCounter, \
 		EndPoint, \
 		SynchronisedControlRotation, \
@@ -352,12 +368,18 @@ public: \
 	FORCEINLINE static uint32 __PPO__SpeedForLosingAccuracy() { return STRUCT_OFFSET(Afpscharacter, SpeedForLosingAccuracy); } \
 	FORCEINLINE static uint32 __PPO__MaxMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MaxMovementSpreadModifier); } \
 	FORCEINLINE static uint32 __PPO__MinMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier); } \
-	FORCEINLINE static uint32 __PPO__RecoilRecovery() { return STRUCT_OFFSET(Afpscharacter, RecoilRecovery); } \
 	FORCEINLINE static uint32 __PPO__MuzzleCounter() { return STRUCT_OFFSET(Afpscharacter, MuzzleCounter); } \
 	FORCEINLINE static uint32 __PPO__EndPoint() { return STRUCT_OFFSET(Afpscharacter, EndPoint); } \
 	FORCEINLINE static uint32 __PPO__HeadMaterial() { return STRUCT_OFFSET(Afpscharacter, HeadMaterial); } \
 	FORCEINLINE static uint32 __PPO__TorsoMaterial() { return STRUCT_OFFSET(Afpscharacter, TorsoMaterial); } \
 	FORCEINLINE static uint32 __PPO__LegMaterial() { return STRUCT_OFFSET(Afpscharacter, LegMaterial); } \
+	FORCEINLINE static uint32 __PPO__RecoilTimer() { return STRUCT_OFFSET(Afpscharacter, RecoilTimer); } \
+	FORCEINLINE static uint32 __PPO__RecoilTimerLength() { return STRUCT_OFFSET(Afpscharacter, RecoilTimerLength); } \
+	FORCEINLINE static uint32 __PPO__RecoilDeltaRotation() { return STRUCT_OFFSET(Afpscharacter, RecoilDeltaRotation); } \
+	FORCEINLINE static uint32 __PPO__RecoilRecoveryTimerHandle() { return STRUCT_OFFSET(Afpscharacter, RecoilRecoveryTimerHandle); } \
+	FORCEINLINE static uint32 __PPO__RecoilStartRotation() { return STRUCT_OFFSET(Afpscharacter, RecoilStartRotation); } \
+	FORCEINLINE static uint32 __PPO__bIsRecoiling() { return STRUCT_OFFSET(Afpscharacter, bIsRecoiling); } \
+	FORCEINLINE static uint32 __PPO__bDoRecoilRecovery() { return STRUCT_OFFSET(Afpscharacter, bDoRecoilRecovery); } \
 	FORCEINLINE static uint32 __PPO__InteractInputIntervalTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractInputIntervalTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__InteractTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__CurrentInteractionName() { return STRUCT_OFFSET(Afpscharacter, CurrentInteractionName); } \

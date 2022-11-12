@@ -245,7 +245,77 @@ protected:
 	UFUNCTION()
 		void EnableCanInteract();
 
+	//For starting recoil on starting holding fire
+	UFUNCTION()
+		void RecoilApply(float DeltaTime);
+
+	//Applying recoil recovery as a sub of the recoil apply function
+	UFUNCTION()
+		void RecoveryApply(float DeltaTime);
+
+	//For when recoil should start
+	UFUNCTION()
+		void RecoilStart();
+
+	//For when recoil should end and recovery should begin to apply
+	UFUNCTION()
+		void RecoilStop();
+
+	//Called on timer, for recoil recovery
+	UFUNCTION()
+		void RecoilRecoveryTimerFunction();
+
+	//Determines whether to use client's setrotation or RPC for server, to improve multifunctionality of code for client and servers
+	UFUNCTION()
+		void SetControlRotation(FRotator Rotation);
+
+
+	//Used to set the control rotation on clients, from the server
+	UFUNCTION(Unreliable, Client)
+		void SetClientControlRotationFromServer(FRotator Rotation);
+
+	/*
+	This part is a bit strange
+	We are getting it from youtube video
+	https://www.youtube.com/watch?v=ny6GS--qPFU
+	we are setting a timer, and the longer this timer has been running, the greater the recoil will be, based on the weapon's recoil vector curve
+	This could always be changed later, but for now it works I guess.
 	
+	*/
+	UPROPERTY()
+		FTimerHandle RecoilTimer;
+
+	UFUNCTION()
+		void RecoilTimerFunction();
+
+	//Used to set timer lenght for recoil - quote:
+	//"I have set it to 10s but dependeding how long it takes to empty the gun mag, you can increase the time."
+	UPROPERTY()
+		float RecoilTimerLength;
+
+	UPROPERTY()
+		FRotator RecoilDeltaRotation;
+
+	//For recoil recovery start
+	UFUNCTION()
+		void RecoveryStart();
+
+	UPROPERTY()
+		FTimerHandle RecoilRecoveryTimerHandle;
+
+	//The starting control rotation when recoil was beginning to be applied. If this pitch is less than the final pitch,
+	//recovery will occur to correct pitch (point gun back down)
+	UPROPERTY()
+		FRotator RecoilStartRotation;
+
+	//Whether to apply recoil on recoiltick or not 
+	UPROPERTY()
+		bool bIsRecoiling;
+	//Whether recoil recovery should kick in
+	UPROPERTY()
+		bool bDoRecoilRecovery;
+
+
 	//Overload for if we are just looking, and want the interaction name instead
 	UFUNCTION()
 		void InteractWithNameOnly(FName& OutName);

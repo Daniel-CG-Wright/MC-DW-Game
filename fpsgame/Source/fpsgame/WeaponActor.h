@@ -10,6 +10,7 @@
 #include "InteractableObjectComponent.h"
 #include "NiagaraSystem.h"
 #include "FPSProjectile.h"
+#include "Curves/CurveVector.h"
 #include "WeaponActor.generated.h"
 
 UENUM(BlueprintType)
@@ -244,26 +245,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
 		bool bUsesControlRotationForHipfireRecoil;
 
-	//Recoil initial vertical patterns
+	//Recoil curve patterns
+	//Pitch is Y
+	//Yaw is Z
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
-		TArray<float> InitialSpreadDegrees;
+		UCurveVector* RecoilVectorCurve;
 
-	//Recoil max vertical delta is calculated from the difference between the last spread angles above.
-
-	//Past the highest spread degrees in the array the gun shall not rise.
-
-	//The horizontal recoil, randomly picked for this value left and right
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
-	//	float HorizontalRecoil;
-	//Horizontal recoil currently works the same as spread so we might as well not have it.
-
-	//The time before recoil recovery kicks in
+	//Time taken for weapon to recover
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
-		float RecoilRecoveryTime;
+		float RecoveryTime;
 
-	//The percentage of recoil recovery per second
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
-		float PercentageRecoilRecoveryGainedPerSecond;
 
 	//Recoil percentage is lost each shot until it reaches 0% at the end of the recoil degree pattern.
 };

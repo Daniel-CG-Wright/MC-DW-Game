@@ -17,8 +17,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	FPSGAME_API UClass* Z_Construct_UClass_Afpscharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_fpsgame();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponDataStruct();
@@ -406,6 +406,73 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->InteractWithNameOnly(Z_Param_Out_OutName);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execRecoveryStart)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RecoveryStart();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execRecoilTimerFunction)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RecoilTimerFunction();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execSetClientControlRotationFromServer)
+	{
+		P_GET_STRUCT(FRotator,Z_Param_Rotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetClientControlRotationFromServer_Implementation(Z_Param_Rotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execSetControlRotation)
+	{
+		P_GET_STRUCT(FRotator,Z_Param_Rotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetControlRotation(Z_Param_Rotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execRecoilRecoveryTimerFunction)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RecoilRecoveryTimerFunction();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execRecoilStop)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RecoilStop();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execRecoilStart)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RecoilStart();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execRecoveryApply)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_DeltaTime);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RecoveryApply(Z_Param_DeltaTime);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execRecoilApply)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_DeltaTime);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RecoilApply(Z_Param_DeltaTime);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(Afpscharacter::execEnableCanInteract)
 	{
 		P_FINISH;
@@ -511,29 +578,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			return;
 		}
 		P_THIS->ServerValidateFire_Implementation(Z_Param_ClientFireTime);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(Afpscharacter::execPerformRecoilWithGunMovement)
-	{
-		P_GET_STRUCT(FRotator,Z_Param_RecoilRotation);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->PerformRecoilWithGunMovement(Z_Param_RecoilRotation);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(Afpscharacter::execPerformRecoilWithControlRotation)
-	{
-		P_GET_STRUCT(FRotator,Z_Param_RecoilRotation);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->PerformRecoilWithControlRotation(Z_Param_RecoilRotation);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(Afpscharacter::execCalculateRecoil)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(FRotator*)Z_Param__Result=P_THIS->CalculateRecoil();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execCalculateSpreadModifier)
@@ -703,6 +747,13 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		Parms.ClientFireTime=ClientFireTime;
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerValidateFire),&Parms);
 	}
+	static FName NAME_Afpscharacter_SetClientControlRotationFromServer = FName(TEXT("SetClientControlRotationFromServer"));
+	void Afpscharacter::SetClientControlRotationFromServer(FRotator Rotation)
+	{
+		fpscharacter_eventSetClientControlRotationFromServer_Parms Parms;
+		Parms.Rotation=Rotation;
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_SetClientControlRotationFromServer),&Parms);
+	}
 	static FName NAME_Afpscharacter_ShowHitscanFireEffectFP = FName(TEXT("ShowHitscanFireEffectFP"));
 	void Afpscharacter::ShowHitscanFireEffectFP(const FVector StartLocation, const FVector EndLocation, UNiagaraSystem* TracerEffect) const
 	{
@@ -746,7 +797,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "ApplySensitivityAndInversionToMouseInputX", &Afpscharacter::execApplySensitivityAndInversionToMouseInputX },
 			{ "ApplySensitivityAndInversionToMouseInputY", &Afpscharacter::execApplySensitivityAndInversionToMouseInputY },
 			{ "CalculateNewBatchOfSpreadAngles", &Afpscharacter::execCalculateNewBatchOfSpreadAngles },
-			{ "CalculateRecoil", &Afpscharacter::execCalculateRecoil },
 			{ "CalculateSpreadDestination", &Afpscharacter::execCalculateSpreadDestination },
 			{ "CalculateSpreadModifier", &Afpscharacter::execCalculateSpreadModifier },
 			{ "CanUncrouch", &Afpscharacter::execCanUncrouch },
@@ -784,12 +834,17 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "OnRep_CurrentStamina", &Afpscharacter::execOnRep_CurrentStamina },
 			{ "OnRep_EndPoint", &Afpscharacter::execOnRep_EndPoint },
 			{ "OnRep_MuzzleCounter", &Afpscharacter::execOnRep_MuzzleCounter },
-			{ "PerformRecoilWithControlRotation", &Afpscharacter::execPerformRecoilWithControlRotation },
-			{ "PerformRecoilWithGunMovement", &Afpscharacter::execPerformRecoilWithGunMovement },
 			{ "PickupWeapon", &Afpscharacter::execPickupWeapon },
 			{ "PositionAndAttachGunInFP", &Afpscharacter::execPositionAndAttachGunInFP },
 			{ "PositionAndAttachGunInTP", &Afpscharacter::execPositionAndAttachGunInTP },
 			{ "PressSprint", &Afpscharacter::execPressSprint },
+			{ "RecoilApply", &Afpscharacter::execRecoilApply },
+			{ "RecoilRecoveryTimerFunction", &Afpscharacter::execRecoilRecoveryTimerFunction },
+			{ "RecoilStart", &Afpscharacter::execRecoilStart },
+			{ "RecoilStop", &Afpscharacter::execRecoilStop },
+			{ "RecoilTimerFunction", &Afpscharacter::execRecoilTimerFunction },
+			{ "RecoveryApply", &Afpscharacter::execRecoveryApply },
+			{ "RecoveryStart", &Afpscharacter::execRecoveryStart },
 			{ "ReleaseFire", &Afpscharacter::execReleaseFire },
 			{ "ReleaseSprint", &Afpscharacter::execReleaseSprint },
 			{ "RepeatFire", &Afpscharacter::execRepeatFire },
@@ -807,6 +862,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "ServerSwitchSecondary", &Afpscharacter::execServerSwitchSecondary },
 			{ "ServerSyncControlRotation", &Afpscharacter::execServerSyncControlRotation },
 			{ "ServerValidateFire", &Afpscharacter::execServerValidateFire },
+			{ "SetClientControlRotationFromServer", &Afpscharacter::execSetClientControlRotationFromServer },
+			{ "SetControlRotation", &Afpscharacter::execSetControlRotation },
 			{ "SetCurrentAmmo", &Afpscharacter::execSetCurrentAmmo },
 			{ "SetCurrentHealth", &Afpscharacter::execSetCurrentHealth },
 			{ "SetCurrentStamina", &Afpscharacter::execSetCurrentStamina },
@@ -936,40 +993,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_CalculateNewBatchOfSpreadAngles_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics
-	{
-		struct fpscharacter_eventCalculateRecoil_Parms
-		{
-			FRotator ReturnValue;
-		};
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventCalculateRecoil_Parms, ReturnValue), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Calculates the weapon recoil\n" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Calculates the weapon recoil" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "CalculateRecoil", nullptr, nullptr, sizeof(fpscharacter_eventCalculateRecoil_Parms), Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00880401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_Afpscharacter_CalculateRecoil()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_CalculateRecoil_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2109,74 +2132,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics
-	{
-		struct fpscharacter_eventPerformRecoilWithControlRotation_Parms
-		{
-			FRotator RecoilRotation;
-		};
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RecoilRotation;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::NewProp_RecoilRotation = { "RecoilRotation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventPerformRecoilWithControlRotation_Parms, RecoilRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::NewProp_RecoilRotation,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Performs recoil with the camera moving (moves whole control rotation upwards)\n" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Performs recoil with the camera moving (moves whole control rotation upwards)" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "PerformRecoilWithControlRotation", nullptr, nullptr, sizeof(fpscharacter_eventPerformRecoilWithControlRotation_Parms), Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00880401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics
-	{
-		struct fpscharacter_eventPerformRecoilWithGunMovement_Parms
-		{
-			FRotator RecoilRotation;
-		};
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RecoilRotation;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::NewProp_RecoilRotation = { "RecoilRotation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventPerformRecoilWithGunMovement_Parms, RecoilRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::NewProp_RecoilRotation,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//Performs recoil without the camera moving (just the gun moves upward visibly), best used for horizontal recoil\n" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Performs recoil without the camera moving (just the gun moves upward visibly), best used for horizontal recoil" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "PerformRecoilWithGunMovement", nullptr, nullptr, sizeof(fpscharacter_eventPerformRecoilWithGunMovement_Parms), Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00880401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	struct Z_Construct_UFunction_Afpscharacter_PickupWeapon_Statics
 	{
 		struct fpscharacter_eventPickupWeapon_Parms
@@ -2299,6 +2254,192 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_PressSprint_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics
+	{
+		struct fpscharacter_eventRecoilApply_Parms
+		{
+			float DeltaTime;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DeltaTime;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::NewProp_DeltaTime = { "DeltaTime", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventRecoilApply_Parms, DeltaTime), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::NewProp_DeltaTime,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//For starting recoil on starting holding fire\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "For starting recoil on starting holding fire" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RecoilApply", nullptr, nullptr, sizeof(fpscharacter_eventRecoilApply_Parms), Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_RecoilApply()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_RecoilApply_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_RecoilRecoveryTimerFunction_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RecoilRecoveryTimerFunction_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Called on timer, for recoil recovery\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Called on timer, for recoil recovery" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RecoilRecoveryTimerFunction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RecoilRecoveryTimerFunction", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RecoilRecoveryTimerFunction_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoilRecoveryTimerFunction_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_RecoilRecoveryTimerFunction()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_RecoilRecoveryTimerFunction_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_RecoilStart_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RecoilStart_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//For when recoil should start\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "For when recoil should start" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RecoilStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RecoilStart", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RecoilStart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoilStart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_RecoilStart()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_RecoilStart_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_RecoilStop_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RecoilStop_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//For when recoil should end and recovery should begin to apply\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "For when recoil should end and recovery should begin to apply" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RecoilStop_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RecoilStop", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RecoilStop_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoilStop_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_RecoilStop()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_RecoilStop_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_RecoilTimerFunction_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RecoilTimerFunction_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RecoilTimerFunction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RecoilTimerFunction", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RecoilTimerFunction_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoilTimerFunction_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_RecoilTimerFunction()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_RecoilTimerFunction_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics
+	{
+		struct fpscharacter_eventRecoveryApply_Parms
+		{
+			float DeltaTime;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DeltaTime;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::NewProp_DeltaTime = { "DeltaTime", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventRecoveryApply_Parms, DeltaTime), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::NewProp_DeltaTime,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Applying recoil recovery as a sub of the recoil apply function\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Applying recoil recovery as a sub of the recoil apply function" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RecoveryApply", nullptr, nullptr, sizeof(fpscharacter_eventRecoveryApply_Parms), Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_RecoveryApply()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_RecoveryApply_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_RecoveryStart_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_RecoveryStart_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//For recoil recovery start\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "For recoil recovery start" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_RecoveryStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "RecoveryStart", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_RecoveryStart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_RecoveryStart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_RecoveryStart()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_RecoveryStart_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2789,6 +2930,70 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerValidateFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics
+	{
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Rotation;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventSetClientControlRotationFromServer_Parms, Rotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::NewProp_Rotation,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Used to set the control rotation on clients, from the server\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Used to set the control rotation on clients, from the server" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "SetClientControlRotationFromServer", nullptr, nullptr, sizeof(fpscharacter_eventSetClientControlRotationFromServer_Parms), Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01880C40, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics
+	{
+		struct fpscharacter_eventSetControlRotation_Parms
+		{
+			FRotator Rotation;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Rotation;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(fpscharacter_eventSetControlRotation_Parms, Rotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::NewProp_Rotation,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Determines whether to use client's setrotation or RPC for server, to improve multifunctionality of code for client and servers\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Determines whether to use client's setrotation or RPC for server, to improve multifunctionality of code for client and servers" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "SetControlRotation", nullptr, nullptr, sizeof(fpscharacter_eventSetControlRotation_Parms), Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00880401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_SetControlRotation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_SetControlRotation_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3590,10 +3795,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinMovementSpreadModifier;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoilRecovery_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RecoilRecovery;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MuzzleCounter_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MuzzleCounter;
@@ -3613,6 +3814,36 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LegMaterial_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LegMaterial;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoilTimer_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RecoilTimer;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoilTimerLength_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RecoilTimerLength;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoilDeltaRotation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RecoilDeltaRotation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoilRecoveryTimerHandle_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RecoilRecoveryTimerHandle;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoilStartRotation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RecoilStartRotation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsRecoiling_MetaData[];
+#endif
+		static void NewProp_bIsRecoiling_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsRecoiling;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bDoRecoilRecovery_MetaData[];
+#endif
+		static void NewProp_bDoRecoilRecovery_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDoRecoilRecovery;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractInputIntervalTimerHandle_MetaData[];
 #endif
@@ -3807,7 +4038,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ApplySensitivityAndInversionToMouseInputY, "ApplySensitivityAndInversionToMouseInputY" }, // 2463904650
 		{ &Z_Construct_UFunction_Afpscharacter_BlueprintRep_CurrentlyCrouching, "BlueprintRep_CurrentlyCrouching" }, // 3925505741
 		{ &Z_Construct_UFunction_Afpscharacter_CalculateNewBatchOfSpreadAngles, "CalculateNewBatchOfSpreadAngles" }, // 2760414076
-		{ &Z_Construct_UFunction_Afpscharacter_CalculateRecoil, "CalculateRecoil" }, // 2162269155
 		{ &Z_Construct_UFunction_Afpscharacter_CalculateSpreadDestination, "CalculateSpreadDestination" }, // 2882979023
 		{ &Z_Construct_UFunction_Afpscharacter_CalculateSpreadModifier, "CalculateSpreadModifier" }, // 4014985952
 		{ &Z_Construct_UFunction_Afpscharacter_CanUncrouch, "CanUncrouch" }, // 2800277747
@@ -3845,12 +4075,17 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_CurrentStamina, "OnRep_CurrentStamina" }, // 3514113238
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_EndPoint, "OnRep_EndPoint" }, // 3506385511
 		{ &Z_Construct_UFunction_Afpscharacter_OnRep_MuzzleCounter, "OnRep_MuzzleCounter" }, // 30205078
-		{ &Z_Construct_UFunction_Afpscharacter_PerformRecoilWithControlRotation, "PerformRecoilWithControlRotation" }, // 3414128886
-		{ &Z_Construct_UFunction_Afpscharacter_PerformRecoilWithGunMovement, "PerformRecoilWithGunMovement" }, // 1345217734
 		{ &Z_Construct_UFunction_Afpscharacter_PickupWeapon, "PickupWeapon" }, // 1931033833
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInFP, "PositionAndAttachGunInFP" }, // 260365713
 		{ &Z_Construct_UFunction_Afpscharacter_PositionAndAttachGunInTP, "PositionAndAttachGunInTP" }, // 967761929
 		{ &Z_Construct_UFunction_Afpscharacter_PressSprint, "PressSprint" }, // 2378583722
+		{ &Z_Construct_UFunction_Afpscharacter_RecoilApply, "RecoilApply" }, // 1639586967
+		{ &Z_Construct_UFunction_Afpscharacter_RecoilRecoveryTimerFunction, "RecoilRecoveryTimerFunction" }, // 1579597232
+		{ &Z_Construct_UFunction_Afpscharacter_RecoilStart, "RecoilStart" }, // 665244160
+		{ &Z_Construct_UFunction_Afpscharacter_RecoilStop, "RecoilStop" }, // 2181969726
+		{ &Z_Construct_UFunction_Afpscharacter_RecoilTimerFunction, "RecoilTimerFunction" }, // 3745703432
+		{ &Z_Construct_UFunction_Afpscharacter_RecoveryApply, "RecoveryApply" }, // 1330940019
+		{ &Z_Construct_UFunction_Afpscharacter_RecoveryStart, "RecoveryStart" }, // 847671734
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseFire, "ReleaseFire" }, // 2997776266
 		{ &Z_Construct_UFunction_Afpscharacter_ReleaseSprint, "ReleaseSprint" }, // 3846209980
 		{ &Z_Construct_UFunction_Afpscharacter_RepeatFire, "RepeatFire" }, // 2386414830
@@ -3868,6 +4103,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary, "ServerSwitchSecondary" }, // 3818391139
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSyncControlRotation, "ServerSyncControlRotation" }, // 3548193946
 		{ &Z_Construct_UFunction_Afpscharacter_ServerValidateFire, "ServerValidateFire" }, // 3765246955
+		{ &Z_Construct_UFunction_Afpscharacter_SetClientControlRotationFromServer, "SetClientControlRotationFromServer" }, // 4052725317
+		{ &Z_Construct_UFunction_Afpscharacter_SetControlRotation, "SetControlRotation" }, // 2227651183
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentAmmo, "SetCurrentAmmo" }, // 3816281578
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentHealth, "SetCurrentHealth" }, // 2344965713
 		{ &Z_Construct_UFunction_Afpscharacter_SetCurrentStamina, "SetCurrentStamina" }, // 3815298331
@@ -3970,14 +4207,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier = { "MinMovementSpreadModifier", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecovery_MetaData[] = {
-		{ "Comment", "//Both recoil functions above use the same recoil stats, neither is more powerful thhan the other.\n//Stores recoil recovery. Reset to 100 on weapon pickup/switching, but the time taken to switch weapons should negate this.\n//May need replication from server if handling recoil recovery on server. Lost from shooting, gained from waiting\n//As the recovery returns to 100%, correct the aim back downward again maybe (but make this an option). Replicate that too.\n" },
-		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Both recoil functions above use the same recoil stats, neither is more powerful thhan the other.\nStores recoil recovery. Reset to 100 on weapon pickup/switching, but the time taken to switch weapons should negate this.\nMay need replication from server if handling recoil recovery on server. Lost from shooting, gained from waiting\nAs the recovery returns to 100%, correct the aim back downward again maybe (but make this an option). Replicate that too." },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecovery = { "RecoilRecovery", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, RecoilRecovery), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecovery_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecovery_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter_MetaData[] = {
 		{ "Comment", "//For muzzle flash we will just increment an integer for shots fired\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
@@ -4016,6 +4245,66 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_LegMaterial = { "LegMaterial", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, LegMaterial), Z_Construct_UClass_UPhysicalMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_LegMaterial_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_LegMaterial_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimer_MetaData[] = {
+		{ "Comment", "/*\n\x09This part is a bit strange\n\x09We are getting it from youtube video\n\x09https://www.youtube.com/watch?v=ny6GS--qPFU\n\x09we are setting a timer, and the longer this timer has been running, the greater the recoil will be, based on the weapon's recoil vector curve\n\x09This could always be changed later, but for now it works I guess.\n\x09\n\x09*/" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "This part is a bit strange\nWe are getting it from youtube video\nhttps://www.youtube.com/watch?v=ny6GS--qPFU\nwe are setting a timer, and the longer this timer has been running, the greater the recoil will be, based on the weapon's recoil vector curve\nThis could always be changed later, but for now it works I guess." },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimer = { "RecoilTimer", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, RecoilTimer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimer_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimerLength_MetaData[] = {
+		{ "Comment", "//Used to set timer lenght for recoil - quote:\n//\"I have set it to 10s but dependeding how long it takes to empty the gun mag, you can increase the time.\"\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Used to set timer lenght for recoil - quote:\n\"I have set it to 10s but dependeding how long it takes to empty the gun mag, you can increase the time.\"" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimerLength = { "RecoilTimerLength", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, RecoilTimerLength), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimerLength_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimerLength_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilDeltaRotation_MetaData[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilDeltaRotation = { "RecoilDeltaRotation", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, RecoilDeltaRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilDeltaRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilDeltaRotation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecoveryTimerHandle_MetaData[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecoveryTimerHandle = { "RecoilRecoveryTimerHandle", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, RecoilRecoveryTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecoveryTimerHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecoveryTimerHandle_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilStartRotation_MetaData[] = {
+		{ "Comment", "//The starting control rotation when recoil was beginning to be applied. If this pitch is less than the final pitch,\n//recovery will occur to correct pitch (point gun back down)\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "The starting control rotation when recoil was beginning to be applied. If this pitch is less than the final pitch,\nrecovery will occur to correct pitch (point gun back down)" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilStartRotation = { "RecoilStartRotation", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, RecoilStartRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilStartRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilStartRotation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_bIsRecoiling_MetaData[] = {
+		{ "Comment", "//Whether to apply recoil on recoiltick or not \n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Whether to apply recoil on recoiltick or not" },
+	};
+#endif
+	void Z_Construct_UClass_Afpscharacter_Statics::NewProp_bIsRecoiling_SetBit(void* Obj)
+	{
+		((Afpscharacter*)Obj)->bIsRecoiling = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_bIsRecoiling = { "bIsRecoiling", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_bIsRecoiling_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_bIsRecoiling_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_bIsRecoiling_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_bDoRecoilRecovery_MetaData[] = {
+		{ "Comment", "//Whether recoil recovery should kick in\n" },
+		{ "ModuleRelativePath", "fpscharacter.h" },
+		{ "ToolTip", "Whether recoil recovery should kick in" },
+	};
+#endif
+	void Z_Construct_UClass_Afpscharacter_Statics::NewProp_bDoRecoilRecovery_SetBit(void* Obj)
+	{
+		((Afpscharacter*)Obj)->bDoRecoilRecovery = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_bDoRecoilRecovery = { "bDoRecoilRecovery", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Afpscharacter), &Z_Construct_UClass_Afpscharacter_Statics::NewProp_bDoRecoilRecovery_SetBit, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_bDoRecoilRecovery_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_bDoRecoilRecovery_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractInputIntervalTimerHandle_MetaData[] = {
 		{ "Comment", "//used to limit number of interactions user can make per second\n" },
@@ -4423,12 +4712,18 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_SpeedForLosingAccuracy,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MaxMovementSpreadModifier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecovery,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_HeadMaterial,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_TorsoMaterial,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_LegMaterial,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilTimerLength,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilDeltaRotation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilRecoveryTimerHandle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_RecoilStartRotation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_bIsRecoiling,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_bDoRecoilRecovery,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractInputIntervalTimerHandle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_InteractTimerHandle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_CurrentInteractionName,
@@ -4501,7 +4796,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 2745136733);
+	IMPLEMENT_CLASS(Afpscharacter, 525624063);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();
@@ -4511,7 +4806,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	void Afpscharacter::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 	{
 		static const FName Name_ReplicatedSpreadAngles(TEXT("ReplicatedSpreadAngles"));
-		static const FName Name_RecoilRecovery(TEXT("RecoilRecovery"));
 		static const FName Name_MuzzleCounter(TEXT("MuzzleCounter"));
 		static const FName Name_EndPoint(TEXT("EndPoint"));
 		static const FName Name_SynchronisedControlRotation(TEXT("SynchronisedControlRotation"));
@@ -4525,7 +4819,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 
 		const bool bIsValid = true
 			&& Name_ReplicatedSpreadAngles == ClassReps[(int32)ENetFields_Private::ReplicatedSpreadAngles].Property->GetFName()
-			&& Name_RecoilRecovery == ClassReps[(int32)ENetFields_Private::RecoilRecovery].Property->GetFName()
 			&& Name_MuzzleCounter == ClassReps[(int32)ENetFields_Private::MuzzleCounter].Property->GetFName()
 			&& Name_EndPoint == ClassReps[(int32)ENetFields_Private::EndPoint].Property->GetFName()
 			&& Name_SynchronisedControlRotation == ClassReps[(int32)ENetFields_Private::SynchronisedControlRotation].Property->GetFName()

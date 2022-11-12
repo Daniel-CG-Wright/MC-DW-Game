@@ -7,6 +7,7 @@
 #include "Engine\Classes\GameFramework\CharacterMovementComponent.h"
 #include "TimerManager.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "DrawDebugHelpers.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 
@@ -119,6 +120,10 @@ Afpscharacter::Afpscharacter()
 	bCanFire = true;
 	//Interact range in centimetres
 	MaxInteractRange = 250.0f;
+
+	//"I have set it to 10s but dependeding how long it takes to empty the gun mag, you can increase the time."
+	RecoilTimerLength = 10.0f;
+
 }
 
 
@@ -186,6 +191,11 @@ void Afpscharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//Recoil ticking
+	if (HasAuthority())
+	{
+		RecoilApply(DeltaTime);
+	}
 	/*
 	if (GetLocalRole() < ROLE_Authority)
 	{
@@ -263,7 +273,8 @@ void Afpscharacter::OnPressFire()
 void Afpscharacter::ReleaseFire()
 {
 	bIsFiring = false;
-	
+	RecoilStop();
+
 }
 
 void Afpscharacter::InteractPressed()
@@ -287,6 +298,7 @@ void Afpscharacter::StopFiring()
 	GetWorld()->GetTimerManager().ClearTimer(BurstFireTimer);
 	//Also stops firing auto
 	bIsFiring = false;
+	RecoilStop();
 
 }
 
@@ -1172,6 +1184,7 @@ void Afpscharacter::ClientValidateFire()
 	//Checking if we have ammo for firing
 	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0 && ((BurstRoundsToFire > 0 && GetCurrentlyEquippedWeaponData().Stats.BurstFireRate > 0.0f) || GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f))
 	{
+		
 		//Activate firing functions based on firing type
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
@@ -1190,6 +1203,8 @@ void Afpscharacter::ClientValidateFire()
 			//UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
 			return;
 		}
+		RecoilStart();
+
 		//Always need to check on server, as if player misses we still want to show this.
 		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
 		//Run RPC on server to ensure shot hit
@@ -1284,73 +1299,145 @@ float Afpscharacter::CalculateSpreadModifier()
 
 }
 
-FRotator Afpscharacter::CalculateRecoil()
+void Afpscharacter::SetClientControlRotationFromServer_Implementation(FRotator Rotation)
 {
-	FWeaponRecoil RecoilStats = GetCurrentlyEquippedWeaponData().Recoil;
-
-	FRotator RecoilRotator; //pitch, yaw, roll. Only need pitch and yaw
-
-	FVector ForwardVector = FPSCameraComponent->GetForwardVector();
-
-	//The vertical recoil calculations can be completely predicted for client and server so can be used separately on server for calculation whilst looking the same on client, 
-	//preventing potential no-vertical-recoil hacks.
-
-	//Sorting vertical recoil
-
-	if (RecoilRecovery == 1.0f || !RecoilStats.bHasRecoil)
+	GetController()->SetControlRotation(Rotation);
+}
+void Afpscharacter::RecoilApply(float DeltaTime)
+{
+	UE_LOG(LogTemp, Warning, TEXT("h3wif3"));
+	//Used to apply the recoil or recovery as needed.
+	//Should be run regularly (like every tick or something)
+	if (bIsRecoiling)
 	{
-		//First shot, no recoil.
-		//This is very strict, TODO maybe change this to be rounded so that you can fire with full accuiracy a bit sooner during recovery.
-		//i.e. if you do (1-recoilrecovery) * length of spread array and you get something like 0.4, round to 0 and use full accuracy.
+		//recoil application
+	//Gets currently elapsed time from when recoil application started
+		float RecoilTime = GetWorldTimerManager().GetTimerElapsed(RecoilTimer);
 
-		//No visual recoil needed
-		return FRotator().ZeroRotator;
+		if (GetCurrentlyEquippedWeaponData().Recoil.RecoilVectorCurve)
+		{
+			//Gets the recoil values for this time, from the recoil curve.
+			FVector RecoilVector = GetCurrentlyEquippedWeaponData().Recoil.RecoilVectorCurve->GetVectorValue(RecoilTime);
+
+			//Translates the curve data to a rotator, with Y beign the pitch and Z being the yaw.
+			FRotator Delta = FRotator(RecoilVector.Y, RecoilVector.Z, 0);
+
+			FRotator PlayerDeltaRotator = GetControlRotation() - RecoilStartRotation - RecoilDeltaRotation;
+
+			SetControlRotation(RecoilStartRotation + PlayerDeltaRotator + Delta);
+
+			RecoilDeltaRotation = Delta;
+
+			//Start resetting the recoil
+			if (!bIsFiring)
+			{
+				if (RecoilTime > GetCurrentlyEquippedWeaponData().Stats.FireRate)
+				{
+					//To make sure that the first shot has the correct amount of recoil
+					//(otherwise recovery starts too early).
+					GetWorldTimerManager().ClearTimer(RecoilTimer);
+					RecoilStop();
+					bIsRecoiling = false;
+					RecoveryStart();
+
+				}
+			}
+		}
+		
+	}
+	
+	else if (bDoRecoilRecovery)
+	{
+		RecoveryApply(DeltaTime);
 	}
 
-	else if (RecoilRecovery > 0.0f)
-	{
-		//still using spread patterns.
-		//Ceil for the length multiplied by 1-the recoil recovery
-		RecoilRotator = FRotator(RecoilStats.InitialSpreadDegrees[FMath::CeilToInt((RecoilStats.InitialSpreadDegrees.Num()-1) * (1 - RecoilRecovery))], 0.0f, 0.0f);
+}
 
+void Afpscharacter::SetControlRotation(FRotator Rotation)
+{
+	if (IsLocallyControlled())
+	{
+		//Client rotation
+		if (GetController())
+		{
+			GetController()->SetControlRotation(Rotation);
+		}
+	}
+
+	else if (HasAuthority())
+	{
+		//Server rotation
+		SetClientControlRotationFromServer(Rotation);
+	}
+}
+
+void Afpscharacter::RecoveryApply(float DeltaTime)
+{
+	//Resetting recoil
+	//TODO MAKE THIS AN OPTION
+	FRotator tmprot = GetControlRotation();
+
+	if (tmprot.Pitch >= RecoilStartRotation.Pitch)
+	{
+		//if user aim is not moved down already
+		SetControlRotation(UKismetMathLibrary::RInterpTo(GetControlRotation(), GetControlRotation() - RecoilDeltaRotation, DeltaTime, RecoilTimerLength));
+		RecoilDeltaRotation = RecoilDeltaRotation + (GetControlRotation() - tmprot);
 	}
 
 	else
 	{
-		//Using the greatest vertical recoil
-		RecoilRotator = FRotator(RecoilStats.InitialSpreadDegrees.Last());
-
+		RecoilRecoveryTimerHandle.Invalidate();
 	}
-
-	//Cosmetic functions that aren't actually cosmetic
-	if (!RecoilStats.bUsesControlRotationForHipfireRecoil && bIsADS)
-	{
-		PerformRecoilWithGunMovement(RecoilRotator);
-
-	}
-	else
-	{
-		PerformRecoilWithControlRotation(RecoilRotator);
-
-	}
-	
-	return RecoilRotator;
-
 }
-void Afpscharacter::PerformRecoilWithControlRotation(FRotator RecoilRotation)
+void Afpscharacter::RecoilStart()
 {
-	//Moves the control rotation for recoil. Best for vertical recoil and ADS recoil.
-	AddControllerPitchInput(RecoilRotation.Pitch);
-	
+	//This should only be called at the start of firing
+	bIsRecoiling = true;
+	bDoRecoilRecovery = false;
+	RecoilDeltaRotation = FRotator().ZeroRotator;
+
+	//setting up for recoil
+	//This ensures the recovery can work correctly
+	RecoilStartRotation = GetControlRotation().GetNormalized();
+	//Used to get values for recoil curve
+	GetWorldTimerManager().SetTimer(RecoilTimer, this, &Afpscharacter::RecoilTimerFunction, RecoilTimerLength, false);
 }
 
-void Afpscharacter::PerformRecoilWithGunMovement(FRotator RecoilRotation)
+void Afpscharacter::RecoilTimerFunction()
 {
-	//Moves the gun to perform recoil.
-	//This may need to be changed NOTE
-	FPSGunComponent->AddRelativeRotation(RecoilRotation);
+	bIsRecoiling = false;
+	//For when 10 seconds has elapsed after recoil
+	GetWorldTimerManager().PauseTimer(RecoilTimer);
+
+}
+void Afpscharacter::RecoilStop()
+{
+	//DEVIATION
+	//Normally calls firing = false
+	bIsRecoiling = false;
+	bDoRecoilRecovery = true;
+
 }
 
+void Afpscharacter::RecoveryStart()
+{
+	//If the control rotation is lower than the current rotation, this is stopping recovery.
+	if (GetControlRotation().Pitch < RecoilStartRotation.Pitch)
+	{
+		return;
+	}
+
+	bDoRecoilRecovery = true;
+	//Set recovery timer
+	GetWorldTimerManager().SetTimer(RecoilRecoveryTimerHandle, this, &Afpscharacter::RecoilRecoveryTimerFunction, GetCurrentlyEquippedWeaponData().Recoil.RecoveryTime, false);
+
+}
+
+void Afpscharacter::RecoilRecoveryTimerFunction()
+{
+	bDoRecoilRecovery = false;
+
+}
 void Afpscharacter::ClientProjectileCheckFire()
 {
 	//For firing projectiles
@@ -1525,7 +1612,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 			UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
 			return;
 		}
-
+		RecoilStart();
 	}
 	else
 	{

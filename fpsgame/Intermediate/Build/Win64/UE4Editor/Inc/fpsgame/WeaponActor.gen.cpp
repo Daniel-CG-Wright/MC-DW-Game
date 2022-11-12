@@ -25,6 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponMetaData();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponStats();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponRecoil();
+	ENGINE_API UClass* Z_Construct_UClass_UCurveVector_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	FPSGAME_API UClass* Z_Construct_UClass_AFPSProjectile_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMesh_NoRegister();
@@ -550,19 +551,14 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponRecoil
 #endif
 		static void NewProp_bUsesControlRotationForHipfireRecoil_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUsesControlRotationForHipfireRecoil;
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InitialSpreadDegrees_Inner;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitialSpreadDegrees_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoilVectorCurve_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_InitialSpreadDegrees;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RecoilVectorCurve;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoilRecoveryTime_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RecoveryTime_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RecoilRecoveryTime;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PercentageRecoilRecoveryGainedPerSecond_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_PercentageRecoilRecoveryGainedPerSecond;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RecoveryTime;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -602,41 +598,29 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponRecoil
 		((FWeaponRecoil*)Obj)->bUsesControlRotationForHipfireRecoil = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_bUsesControlRotationForHipfireRecoil = { "bUsesControlRotationForHipfireRecoil", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FWeaponRecoil), &Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_bUsesControlRotationForHipfireRecoil_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_bUsesControlRotationForHipfireRecoil_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_bUsesControlRotationForHipfireRecoil_MetaData)) };
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_InitialSpreadDegrees_Inner = { "InitialSpreadDegrees", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_InitialSpreadDegrees_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilVectorCurve_MetaData[] = {
 		{ "Category", "Weapon Recoil" },
-		{ "Comment", "//Recoil initial vertical patterns\n" },
+		{ "Comment", "//Recoil curve patterns\n//Pitch is Y\n//Yaw is Z\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
-		{ "ToolTip", "Recoil initial vertical patterns" },
+		{ "ToolTip", "Recoil curve patterns\nPitch is Y\nYaw is Z" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_InitialSpreadDegrees = { "InitialSpreadDegrees", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponRecoil, InitialSpreadDegrees), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_InitialSpreadDegrees_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_InitialSpreadDegrees_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilVectorCurve = { "RecoilVectorCurve", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponRecoil, RecoilVectorCurve), Z_Construct_UClass_UCurveVector_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilVectorCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilVectorCurve_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilRecoveryTime_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime_MetaData[] = {
 		{ "Category", "Weapon Recoil" },
-		{ "Comment", "//The time before recoil recovery kicks in\n" },
+		{ "Comment", "//Time taken for weapon to recover\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
-		{ "ToolTip", "The time before recoil recovery kicks in" },
+		{ "ToolTip", "Time taken for weapon to recover" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilRecoveryTime = { "RecoilRecoveryTime", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponRecoil, RecoilRecoveryTime), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilRecoveryTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilRecoveryTime_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_PercentageRecoilRecoveryGainedPerSecond_MetaData[] = {
-		{ "Category", "Weapon Recoil" },
-		{ "Comment", "//The percentage of recoil recovery per second\n" },
-		{ "ModuleRelativePath", "WeaponActor.h" },
-		{ "ToolTip", "The percentage of recoil recovery per second" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_PercentageRecoilRecoveryGainedPerSecond = { "PercentageRecoilRecoveryGainedPerSecond", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponRecoil, PercentageRecoilRecoveryGainedPerSecond), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_PercentageRecoilRecoveryGainedPerSecond_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_PercentageRecoilRecoveryGainedPerSecond_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime = { "RecoveryTime", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponRecoil, RecoveryTime), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FWeaponRecoil_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_bHasRecoil,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_bUsesControlRotationForHipfireRecoil,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_InitialSpreadDegrees_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_InitialSpreadDegrees,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilRecoveryTime,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_PercentageRecoilRecoveryGainedPerSecond,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoilVectorCurve,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
@@ -666,7 +650,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponRecoil
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponRecoil_Hash() { return 2206395930U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponRecoil_Hash() { return 1449230534U; }
 class UScriptStruct* FWeaponStats::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
