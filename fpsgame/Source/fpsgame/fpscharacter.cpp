@@ -191,11 +191,12 @@ void Afpscharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	RecoilApply(DeltaTime);
 	//Recoil ticking
-	if (HasAuthority())
+	/*if (HasAuthority())
 	{
 		RecoilApply(DeltaTime);
-	}
+	}*/
 	/*
 	if (GetLocalRole() < ROLE_Authority)
 	{
@@ -255,7 +256,6 @@ void Afpscharacter::OnPressFire()
 	{
 		if (GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Start"));
 			ClientValidateFire();
 		}
 		else
@@ -1305,11 +1305,13 @@ void Afpscharacter::SetClientControlRotationFromServer_Implementation(FRotator R
 }
 void Afpscharacter::RecoilApply(float DeltaTime)
 {
-	UE_LOG(LogTemp, Warning, TEXT("h3wif3"));
+
+	
 	//Used to apply the recoil or recovery as needed.
 	//Should be run regularly (like every tick or something)
 	if (bIsRecoiling)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("bIsFiring = %s"), (bIsFiring ? TEXT("true") : TEXT("false")));
 		//recoil application
 	//Gets currently elapsed time from when recoil application started
 		float RecoilTime = GetWorldTimerManager().GetTimerElapsed(RecoilTimer);
@@ -1329,8 +1331,10 @@ void Afpscharacter::RecoilApply(float DeltaTime)
 			RecoilDeltaRotation = Delta;
 
 			//Start resetting the recoil
+			//bIsFiring doesn't seem to activate on server, so investigating
 			if (!bIsFiring)
 			{
+				UE_LOG(LogTemp, Warning, TEXT("bIsFiring not true"));
 				if (RecoilTime > GetCurrentlyEquippedWeaponData().Stats.FireRate)
 				{
 					//To make sure that the first shot has the correct amount of recoil
@@ -1366,6 +1370,8 @@ void Afpscharacter::SetControlRotation(FRotator Rotation)
 
 	else if (HasAuthority())
 	{
+		FPSCameraComponent->SetWorldRotation(Rotation);
+		SynchronisedControlRotation = Rotation;
 		//Server rotation
 		SetClientControlRotationFromServer(Rotation);
 	}
@@ -1391,11 +1397,16 @@ void Afpscharacter::RecoveryApply(float DeltaTime)
 }
 void Afpscharacter::RecoilStart()
 {
+	if (bIsRecoiling)
+	{
+		return;
+	}
+	UE_LOG(LogTemp, Warning, TEXT("start"));
 	//This should only be called at the start of firing
 	bIsRecoiling = true;
 	bDoRecoilRecovery = false;
 	RecoilDeltaRotation = FRotator().ZeroRotator;
-
+	
 	//setting up for recoil
 	//This ensures the recovery can work correctly
 	RecoilStartRotation = GetControlRotation().GetNormalized();
@@ -1405,6 +1416,8 @@ void Afpscharacter::RecoilStart()
 
 void Afpscharacter::RecoilTimerFunction()
 {
+	UE_LOG(LogTemp, Warning, TEXT("RecoilTimer"));
+
 	bIsRecoiling = false;
 	//For when 10 seconds has elapsed after recoil
 	GetWorldTimerManager().PauseTimer(RecoilTimer);
@@ -1414,6 +1427,7 @@ void Afpscharacter::RecoilStop()
 {
 	//DEVIATION
 	//Normally calls firing = false
+	UE_LOG(LogTemp, Warning, TEXT("Recoilstop"));
 	bIsRecoiling = false;
 	bDoRecoilRecovery = true;
 
@@ -1587,6 +1601,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 
 	//Currently we don't care about bursts, but this may have to change if exploits are available.
 	//this is because bursts work on client-side, keeping track of how much burst has been used, which may be modifiable causing infinite bursts or something.
+	bIsFiring = false;
 
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
@@ -1601,9 +1616,11 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
 		case FireType::HITSCAN:
+			bIsFiring = true;
 			ServerHitscanCheckFire(ClientFireTime);
 			break;
 		case FireType::PROJECTILE:
+			bIsFiring = true;
 			//add projectile logic
 			ServerProjectileCheckFire();
 			break;
@@ -1612,7 +1629,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 			UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
 			return;
 		}
-		RecoilStart();
+		//RecoilStart();
 	}
 	else
 	{
@@ -1691,6 +1708,8 @@ void Afpscharacter::ServerProjectileCheckFire()
 	}
 	CalculateNewBatchOfSpreadAngles();
 	MuzzleCounter += 1;
+	bIsFiring = false;
+
 }
 void Afpscharacter::OnRep_EndPoint()
 {
@@ -1895,7 +1914,7 @@ void Afpscharacter::ServerPerformHitscan()
 	CalculateNewBatchOfSpreadAngles();
 
 	//Raycast done
-
+	bIsFiring = false;
 	if (HitResults.Num() > 0)
 	{
 		//If we score a hit we must look at all the hit results and create hit markers and sound fx and stuff and deal dmg
