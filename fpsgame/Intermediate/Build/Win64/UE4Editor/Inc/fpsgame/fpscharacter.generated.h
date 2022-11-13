@@ -31,6 +31,8 @@ class UNiagaraSystem;
 	virtual void ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
+	virtual void ServerStopFiring_Implementation(); \
+	virtual void ServerReleaseFire_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual void SetClientControlRotationFromServer_Implementation(FRotator Rotation); \
 	virtual void ServerInteract_Implementation(); \
@@ -75,6 +77,8 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
 	DECLARE_FUNCTION(execStartJump); \
+	DECLARE_FUNCTION(execServerStopFiring); \
+	DECLARE_FUNCTION(execServerReleaseFire); \
 	DECLARE_FUNCTION(execOnRep_ControlRotation); \
 	DECLARE_FUNCTION(execServerSyncControlRotation); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputY); \
@@ -130,6 +134,8 @@ class UNiagaraSystem;
 	virtual void ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup); \
 	virtual void ServerSetSprinting_Implementation(bool NewSprinting); \
 	virtual void ServerStartJump_Implementation(); \
+	virtual void ServerStopFiring_Implementation(); \
+	virtual void ServerReleaseFire_Implementation(); \
 	virtual void ServerSyncControlRotation_Implementation(FRotator NewSynchronisedControlRotation); \
 	virtual void SetClientControlRotationFromServer_Implementation(FRotator Rotation); \
 	virtual void ServerInteract_Implementation(); \
@@ -174,6 +180,8 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
 	DECLARE_FUNCTION(execStartJump); \
+	DECLARE_FUNCTION(execServerStopFiring); \
+	DECLARE_FUNCTION(execServerReleaseFire); \
 	DECLARE_FUNCTION(execOnRep_ControlRotation); \
 	DECLARE_FUNCTION(execServerSyncControlRotation); \
 	DECLARE_FUNCTION(execApplySensitivityAndInversionToMouseInputY); \

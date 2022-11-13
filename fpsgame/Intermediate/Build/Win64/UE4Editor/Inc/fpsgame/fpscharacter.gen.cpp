@@ -305,6 +305,20 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_THIS->StartJump();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execServerStopFiring)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ServerStopFiring_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(Afpscharacter::execServerReleaseFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ServerReleaseFire_Implementation();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(Afpscharacter::execOnRep_ControlRotation)
 	{
 		P_FINISH;
@@ -706,6 +720,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		Parms.WeaponPickup=WeaponPickup;
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerPickupWeapon),&Parms);
 	}
+	static FName NAME_Afpscharacter_ServerReleaseFire = FName(TEXT("ServerReleaseFire"));
+	void Afpscharacter::ServerReleaseFire()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerReleaseFire),NULL);
+	}
 	static FName NAME_Afpscharacter_ServerReload = FName(TEXT("ServerReload"));
 	void Afpscharacter::ServerReload()
 	{
@@ -722,6 +741,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	void Afpscharacter::ServerStartJump()
 	{
 		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerStartJump),NULL);
+	}
+	static FName NAME_Afpscharacter_ServerStopFiring = FName(TEXT("ServerStopFiring"));
+	void Afpscharacter::ServerStopFiring()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_Afpscharacter_ServerStopFiring),NULL);
 	}
 	static FName NAME_Afpscharacter_ServerSwitchPrimary = FName(TEXT("ServerSwitchPrimary"));
 	void Afpscharacter::ServerSwitchPrimary()
@@ -854,10 +878,12 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 			{ "ServerPerformHitscan", &Afpscharacter::execServerPerformHitscan },
 			{ "ServerPickupWeapon", &Afpscharacter::execServerPickupWeapon },
 			{ "ServerProjectileCheckFire", &Afpscharacter::execServerProjectileCheckFire },
+			{ "ServerReleaseFire", &Afpscharacter::execServerReleaseFire },
 			{ "ServerReload", &Afpscharacter::execServerReload },
 			{ "ServerRewindAndPerformHitscan", &Afpscharacter::execServerRewindAndPerformHitscan },
 			{ "ServerSetSprinting", &Afpscharacter::execServerSetSprinting },
 			{ "ServerStartJump", &Afpscharacter::execServerStartJump },
+			{ "ServerStopFiring", &Afpscharacter::execServerStopFiring },
 			{ "ServerSwitchPrimary", &Afpscharacter::execServerSwitchPrimary },
 			{ "ServerSwitchSecondary", &Afpscharacter::execServerSwitchSecondary },
 			{ "ServerSyncControlRotation", &Afpscharacter::execServerSyncControlRotation },
@@ -2692,6 +2718,28 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerReleaseFire_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerReleaseFire_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerReleaseFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerReleaseFire", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerReleaseFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerReleaseFire_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerReleaseFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerReleaseFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_Afpscharacter_ServerReload_Statics
 	{
 #if WITH_METADATA
@@ -2820,6 +2868,28 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerStartJump_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_Afpscharacter_ServerStopFiring_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_Afpscharacter_ServerStopFiring_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "fpscharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_ServerStopFiring_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "ServerStopFiring", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_ServerStopFiring_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_ServerStopFiring_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_Afpscharacter_ServerStopFiring()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_Afpscharacter_ServerStopFiring_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -4095,10 +4165,12 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_ServerPerformHitscan, "ServerPerformHitscan" }, // 1576683055
 		{ &Z_Construct_UFunction_Afpscharacter_ServerPickupWeapon, "ServerPickupWeapon" }, // 633494461
 		{ &Z_Construct_UFunction_Afpscharacter_ServerProjectileCheckFire, "ServerProjectileCheckFire" }, // 3514871269
+		{ &Z_Construct_UFunction_Afpscharacter_ServerReleaseFire, "ServerReleaseFire" }, // 980119265
 		{ &Z_Construct_UFunction_Afpscharacter_ServerReload, "ServerReload" }, // 2258726239
 		{ &Z_Construct_UFunction_Afpscharacter_ServerRewindAndPerformHitscan, "ServerRewindAndPerformHitscan" }, // 4167897062
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSetSprinting, "ServerSetSprinting" }, // 3999721245
 		{ &Z_Construct_UFunction_Afpscharacter_ServerStartJump, "ServerStartJump" }, // 164328876
+		{ &Z_Construct_UFunction_Afpscharacter_ServerStopFiring, "ServerStopFiring" }, // 1400064495
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSwitchPrimary, "ServerSwitchPrimary" }, // 1283072070
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSwitchSecondary, "ServerSwitchSecondary" }, // 3818391139
 		{ &Z_Construct_UFunction_Afpscharacter_ServerSyncControlRotation, "ServerSyncControlRotation" }, // 3548193946
@@ -4796,7 +4868,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 525624063);
+	IMPLEMENT_CLASS(Afpscharacter, 1128730701);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

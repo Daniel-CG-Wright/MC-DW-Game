@@ -389,6 +389,12 @@ protected:
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_ControlRotation)
 		FRotator SynchronisedControlRotation;
 
+
+	UFUNCTION(Server, Reliable)
+		void ServerReleaseFire();
+
+	UFUNCTION(Server, Reliable)
+		void ServerStopFiring();
 	//Used to handle jumping
 	//Sets jump flag when key is pressed to jump
 	UFUNCTION()

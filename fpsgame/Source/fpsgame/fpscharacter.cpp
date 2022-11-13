@@ -272,11 +272,20 @@ void Afpscharacter::OnPressFire()
 }
 void Afpscharacter::ReleaseFire()
 {
+	/*bIsFiring = false;
+	SetIsFiringOnServer(bIsFiring);
+
+	RecoilStop();*/
 	bIsFiring = false;
-	RecoilStop();
+	ServerReleaseFire();
 
 }
 
+void Afpscharacter::ServerReleaseFire_Implementation()
+{
+	bIsFiring = false;
+	RecoilStop();
+}
 void Afpscharacter::InteractPressed()
 {
 	//Logic for pressing interact goes here
@@ -293,13 +302,28 @@ void Afpscharacter::InteractPressed()
 
 void Afpscharacter::StopFiring()
 {
-	UE_LOG(LogTemp, Warning, TEXT("No longer bursting"));
-	//Stops firing burst
-	GetWorld()->GetTimerManager().ClearTimer(BurstFireTimer);
-	//Also stops firing auto
+	
+	bIsFiring = false;
+
+	if (IsLocallyControlled())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No longer bursting"));
+		//Stops firing burst
+		GetWorld()->GetTimerManager().ClearTimer(BurstFireTimer);
+		//Also stops firing auto
+		ServerStopFiring();
+	}
+	else
+	{
+		RecoilStop();
+	}
+
+}
+
+void Afpscharacter::ServerStopFiring_Implementation()
+{
 	bIsFiring = false;
 	RecoilStop();
-
 }
 
 void Afpscharacter::EnableCanInteract()
@@ -1008,6 +1032,7 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 
 	//Interrupt automatic fire
 	bIsFiring = false;
+
 	StopFiring();
 	//Logic for switching primary.
 	if (IsLocallyControlled())
@@ -1072,6 +1097,7 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 
 	//Interrupt automatic fire.
 	bIsFiring = false;
+
 	StopFiring();
 	check(FPSMuzzleComponent != nullptr);
 
@@ -1203,7 +1229,7 @@ void Afpscharacter::ClientValidateFire()
 			//UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
 			return;
 		}
-		RecoilStart();
+		//RecoilStart();
 
 		//Always need to check on server, as if player misses we still want to show this.
 		float clienttime = Cast<AFPSGameState>(GetWorld()->GetGameState())->GetServerWorldTimeSeconds();
@@ -1379,6 +1405,7 @@ void Afpscharacter::SetControlRotation(FRotator Rotation)
 
 void Afpscharacter::RecoveryApply(float DeltaTime)
 {
+	
 	//Resetting recoil
 	//TODO MAKE THIS AN OPTION
 	FRotator tmprot = GetControlRotation();
@@ -1605,6 +1632,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 
 	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
 	{
+		StopFiring();
 		return;
 	}
 
@@ -1629,10 +1657,11 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 			UE_LOG(LogTemp, Error, TEXT("Invalid weapon type!"));
 			return;
 		}
-		//RecoilStart();
+		RecoilStart();
 	}
 	else
 	{
+		StopFiring();
 		//UE_LOG(LogTemp, Warning, TEXT("Out of ammo!"));
 	}
 	
@@ -1708,7 +1737,6 @@ void Afpscharacter::ServerProjectileCheckFire()
 	}
 	CalculateNewBatchOfSpreadAngles();
 	MuzzleCounter += 1;
-	bIsFiring = false;
 
 }
 void Afpscharacter::OnRep_EndPoint()
@@ -1914,7 +1942,6 @@ void Afpscharacter::ServerPerformHitscan()
 	CalculateNewBatchOfSpreadAngles();
 
 	//Raycast done
-	bIsFiring = false;
 	if (HitResults.Num() > 0)
 	{
 		//If we score a hit we must look at all the hit results and create hit markers and sound fx and stuff and deal dmg
