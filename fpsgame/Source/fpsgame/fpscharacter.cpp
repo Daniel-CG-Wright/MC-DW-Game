@@ -1431,14 +1431,21 @@ void Afpscharacter::RecoveryApply(float DeltaTime)
 		}
 		else
 		{
+			
 			//if user aim is not moved down already
-			SetControlRotation(UKismetMathLibrary::RInterpTo(GetControlRotation(), RecoilStartRotation, DeltaTime, RecoilTimerLength));
+			FRotator RotationNew = UKismetMathLibrary::RInterpTo(GetControlRotation().GetNormalized(), GetControlRotation().GetNormalized() - RecoilDeltaRotation, DeltaTime, RecoilTimerLength);
+			SetControlRotation(RotationNew);
+			//Decrease delta
+			RecoilDeltaRotation = RecoilDeltaRotation + (RotationNew - tmprot);
+			RecoilDeltaRotation.Normalize();
+			UE_LOG(LogTemp, Warning, TEXT("Delta %f"), RecoilDeltaRotation.Pitch);
 		}
 		
 
 		//Prevents function from calling if delta becomes 0 or negative
 		if (RecoilDeltaRotation.Pitch <= 0.0f && RecoilDeltaRotation.Yaw <= 0.0f)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("Cancelled"));
 			bDoRecoilRecovery = false;
 			RecoilRecoveryTimerHandle.Invalidate();
 		}

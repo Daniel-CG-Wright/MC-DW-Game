@@ -1,0 +1,1976 @@
+﻿Log file open, 12/03/22 17:17:30
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: fpsgame
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 17 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.217543
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogInit: Display: Loading text-based GConfig....
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin GameplayCameras
+LogPluginManager: Mounting plugin OodleData
+LogPluginManager: Mounting plugin OodleNetwork
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PixWinPlugin
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin TextureFormatOodle
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin OpenImageDenoise
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OpenXR
+LogPluginManager: Mounting plugin OpenXREyeTracker
+LogPluginManager: Mounting plugin OpenXRHandTracking
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+PixWinPlugin: PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.27-CL-18319896
+LogInit: Engine Version: 4.27.2-18319896+++UE4+Release-4.27
+LogInit: Compatible Engine Version: 4.27.0-17155196+++UE4+Release-4.27
+LogInit: Net CL: 17155196
+LogInit: OS: Windows 10 (Release 2009) (), CPU: AMD Ryzen 5 3600X 6-Core Processor             , GPU: AMD Radeon RX 5700 XT
+LogInit: Compiled (64-bit): Nov 30 2021 07:12:08
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.27
+LogInit: Command Line:  /Game/Maps/TestMap -game -PIEVIACONSOLE -Multiprocess -server -log "GameUserSettingsINI=C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/PIEGameUserSettings0.ini" -MultiprocessSaveConfig -forcepassthrough -messaging -SessionName="Play in Standalone Game" -port=17777 -PktLagMin=0 -PktLagMax=0 -PktLoss=0 -PktIncomingLagMin=0 -PktIncomingLagMax=0 -PktIncomingLoss=0 -windowed
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 14
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 45
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 47
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.12.03-17.17.31:457][  0]LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+[2022.12.03-17.17.31:457][  0]LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.12.03-17.17.31:457][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.03-17.17.31:457][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2022.12.03-17.17.31:457][  0]LogConfig: Setting CVar [[r.Mobile.DisableVertexFog:1]]
+[2022.12.03-17.17.31:458][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxMobileCascades:2]]
+[2022.12.03-17.17.31:458][  0]LogConfig: Setting CVar [[r.MobileMSAA:1]]
+[2022.12.03-17.17.31:458][  0]LogConfig: Setting CVar [[r.Mobile.AllowDitheredLODTransition:0]]
+[2022.12.03-17.17.31:459][  0]LogConfig: Setting CVar [[r.Mobile.AllowSoftwareOcclusion:0]]
+[2022.12.03-17.17.31:459][  0]LogConfig: Setting CVar [[r.Mobile.VirtualTextures:0]]
+[2022.12.03-17.17.31:459][  0]LogConfig: Setting CVar [[r.DiscardUnusedQuality:0]]
+[2022.12.03-17.17.31:459][  0]LogConfig: Setting CVar [[r.AllowOcclusionQueries:1]]
+[2022.12.03-17.17.31:460][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForLights:0.030000]]
+[2022.12.03-17.17.31:460][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForDepthPrepass:0.030000]]
+[2022.12.03-17.17.31:460][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForCSMDepth:0.010000]]
+[2022.12.03-17.17.31:460][  0]LogConfig: Setting CVar [[r.PrecomputedVisibilityWarning:0]]
+[2022.12.03-17.17.31:461][  0]LogConfig: Setting CVar [[r.TextureStreaming:1]]
+[2022.12.03-17.17.31:461][  0]LogConfig: Setting CVar [[Compat.UseDXT5NormalMaps:0]]
+[2022.12.03-17.17.31:461][  0]LogConfig: Setting CVar [[r.VirtualTextures:0]]
+[2022.12.03-17.17.31:461][  0]LogConfig: Setting CVar [[r.VT.EnableAutoImport:1]]
+[2022.12.03-17.17.31:462][  0]LogConfig: Setting CVar [[r.VirtualTexturedLightmaps:0]]
+[2022.12.03-17.17.31:462][  0]LogConfig: Setting CVar [[r.VT.TileSize:128]]
+[2022.12.03-17.17.31:462][  0]LogConfig: Setting CVar [[r.VT.TileBorderSize:4]]
+[2022.12.03-17.17.31:462][  0]LogConfig: Setting CVar [[r.vt.FeedbackFactor:16]]
+[2022.12.03-17.17.31:463][  0]LogConfig: Setting CVar [[r.VT.EnableCompressZlib:1]]
+[2022.12.03-17.17.31:463][  0]LogConfig: Setting CVar [[r.VT.EnableCompressCrunch:0]]
+[2022.12.03-17.17.31:463][  0]LogConfig: Setting CVar [[r.ClearCoatNormal:0]]
+[2022.12.03-17.17.31:463][  0]LogConfig: Setting CVar [[r.ReflectionCaptureResolution:128]]
+[2022.12.03-17.17.31:464][  0]LogConfig: Setting CVar [[r.Mobile.ReflectionCaptureCompression:0]]
+[2022.12.03-17.17.31:464][  0]LogConfig: Setting CVar [[r.ReflectionEnvironmentLightmapMixBasedOnRoughness:1]]
+[2022.12.03-17.17.31:464][  0]LogConfig: Setting CVar [[r.ForwardShading:0]]
+[2022.12.03-17.17.31:464][  0]LogConfig: Setting CVar [[r.VertexFoggingForOpaque:1]]
+[2022.12.03-17.17.31:465][  0]LogConfig: Setting CVar [[r.AllowStaticLighting:1]]
+[2022.12.03-17.17.31:465][  0]LogConfig: Setting CVar [[r.NormalMapsForStaticLighting:0]]
+[2022.12.03-17.17.31:465][  0]LogConfig: Setting CVar [[r.GenerateMeshDistanceFields:0]]
+[2022.12.03-17.17.31:466][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.EightBit:0]]
+[2022.12.03-17.17.31:466][  0]LogConfig: Setting CVar [[r.GenerateLandscapeGIData:0]]
+[2022.12.03-17.17.31:466][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.Compress:0]]
+[2022.12.03-17.17.31:466][  0]LogConfig: Setting CVar [[r.TessellationAdaptivePixelsPerTriangle:48.000000]]
+[2022.12.03-17.17.31:467][  0]LogConfig: Setting CVar [[r.SeparateTranslucency:1]]
+[2022.12.03-17.17.31:467][  0]LogConfig: Setting CVar [[r.TranslucentSortPolicy:0]]
+[2022.12.03-17.17.31:467][  0]LogConfig: Setting CVar [[vr.VRS.HMDFixedFoveationLevel:0]]
+[2022.12.03-17.17.31:467][  0]LogConfig: Setting CVar [[r.CustomDepth:1]]
+[2022.12.03-17.17.31:468][  0]LogConfig: Setting CVar [[r.CustomDepthTemporalAAJitter:1]]
+[2022.12.03-17.17.31:468][  0]LogConfig: Setting CVar [[r.PostProcessing.PropagateAlpha:0]]
+[2022.12.03-17.17.31:468][  0]LogConfig: Setting CVar [[r.DefaultFeature.Bloom:1]]
+[2022.12.03-17.17.31:468][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusion:1]]
+[2022.12.03-17.17.31:469][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusionStaticFraction:1]]
+[2022.12.03-17.17.31:469][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2022.12.03-17.17.31:469][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Method:0]]
+[2022.12.03-17.17.31:469][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Bias:1.000000]]
+[2022.12.03-17.17.31:469][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:0]]
+[2022.12.03-17.17.31:470][  0]LogConfig: Setting CVar [[r.UsePreExposure:1]]
+[2022.12.03-17.17.31:472][  0]LogConfig: Setting CVar [[r.EyeAdaptation.EditorOnly:0]]
+[2022.12.03-17.17.31:472][  0]LogConfig: Setting CVar [[r.DefaultFeature.MotionBlur:0]]
+[2022.12.03-17.17.31:473][  0]LogConfig: Setting CVar [[r.DefaultFeature.LensFlare:0]]
+[2022.12.03-17.17.31:473][  0]LogConfig: Setting CVar [[r.TemporalAA.Upsampling:0]]
+[2022.12.03-17.17.31:473][  0]LogConfig: Setting CVar [[r.SSGI.Enable:0]]
+[2022.12.03-17.17.31:473][  0]LogConfig: Setting CVar [[r.DefaultFeature.AntiAliasing:0]]
+[2022.12.03-17.17.31:474][  0]LogConfig: Setting CVar [[r.DefaultFeature.LightUnits:1]]
+[2022.12.03-17.17.31:474][  0]LogConfig: Setting CVar [[r.DefaultBackBufferPixelFormat:4]]
+[2022.12.03-17.17.31:474][  0]LogConfig: Setting CVar [[r.Shadow.UnbuiltPreviewInGame:1]]
+[2022.12.03-17.17.31:474][  0]LogConfig: Setting CVar [[r.StencilForLODDither:0]]
+[2022.12.03-17.17.31:475][  0]LogConfig: Setting CVar [[r.EarlyZPass:3]]
+[2022.12.03-17.17.31:475][  0]LogConfig: Setting CVar [[r.EarlyZPassOnlyMaterialMasking:0]]
+[2022.12.03-17.17.31:475][  0]LogConfig: Setting CVar [[r.DBuffer:1]]
+[2022.12.03-17.17.31:475][  0]LogConfig: Setting CVar [[r.ClearSceneMethod:1]]
+[2022.12.03-17.17.31:476][  0]LogConfig: Setting CVar [[r.BasePassOutputsVelocity:0]]
+[2022.12.03-17.17.31:476][  0]LogConfig: Setting CVar [[r.VertexDeformationOutputsVelocity:0]]
+[2022.12.03-17.17.31:476][  0]LogConfig: Setting CVar [[r.SelectiveBasePassOutputs:0]]
+[2022.12.03-17.17.31:476][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeX:1024]]
+[2022.12.03-17.17.31:477][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeY:1024]]
+[2022.12.03-17.17.31:477][  0]LogConfig: Setting CVar [[r.AllowGlobalClipPlane:0]]
+[2022.12.03-17.17.31:477][  0]LogConfig: Setting CVar [[r.GBufferFormat:1]]
+[2022.12.03-17.17.31:477][  0]LogConfig: Setting CVar [[r.MorphTarget.Mode:1]]
+[2022.12.03-17.17.31:478][  0]LogConfig: Setting CVar [[vr.InstancedStereo:0]]
+[2022.12.03-17.17.31:478][  0]LogConfig: Setting CVar [[r.MobileHDR:1]]
+[2022.12.03-17.17.31:478][  0]LogConfig: Setting CVar [[vr.MobileMultiView:0]]
+[2022.12.03-17.17.31:478][  0]LogConfig: Setting CVar [[r.Mobile.UseHWsRGBEncoding:0]]
+[2022.12.03-17.17.31:479][  0]LogConfig: Setting CVar [[vr.RoundRobinOcclusion:0]]
+[2022.12.03-17.17.31:479][  0]LogConfig: Setting CVar [[vr.ODSCapture:0]]
+[2022.12.03-17.17.31:479][  0]LogConfig: Setting CVar [[r.MeshStreaming:0]]
+[2022.12.03-17.17.31:479][  0]LogConfig: Setting CVar [[r.WireframeCullThreshold:5.000000]]
+[2022.12.03-17.17.31:480][  0]LogConfig: Setting CVar [[r.RayTracing:0]]
+[2022.12.03-17.17.31:480][  0]LogConfig: Setting CVar [[r.RayTracing.UseTextureLod:0]]
+[2022.12.03-17.17.31:480][  0]LogConfig: Setting CVar [[r.SupportStationarySkylight:1]]
+[2022.12.03-17.17.31:480][  0]LogConfig: Setting CVar [[r.SupportLowQualityLightmaps:1]]
+[2022.12.03-17.17.31:481][  0]LogConfig: Setting CVar [[r.SupportPointLightWholeSceneShadows:1]]
+[2022.12.03-17.17.31:481][  0]LogConfig: Setting CVar [[r.SupportAtmosphericFog:1]]
+[2022.12.03-17.17.31:481][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphere:1]]
+[2022.12.03-17.17.31:481][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphereAffectsHeightFog:0]]
+[2022.12.03-17.17.31:481][  0]LogConfig: Setting CVar [[r.SkinCache.CompileShaders:0]]
+[2022.12.03-17.17.31:482][  0]LogConfig: Setting CVar [[r.SkinCache.DefaultBehavior:1]]
+[2022.12.03-17.17.31:482][  0]LogConfig: Setting CVar [[r.SkinCache.SceneMemoryLimitInMB:128.000000]]
+[2022.12.03-17.17.31:482][  0]LogConfig: Setting CVar [[r.Mobile.EnableStaticAndCSMShadowReceivers:1]]
+[2022.12.03-17.17.31:483][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableLightCSMShaderCulling:1]]
+[2022.12.03-17.17.31:483][  0]LogConfig: Setting CVar [[r.Mobile.AllowDistanceFieldShadows:1]]
+[2022.12.03-17.17.31:483][  0]LogConfig: Setting CVar [[r.Mobile.AllowMovableDirectionalLights:1]]
+[2022.12.03-17.17.31:483][  0]LogConfig: Setting CVar [[r.MobileNumDynamicPointLights:4]]
+[2022.12.03-17.17.31:484][  0]LogConfig: Setting CVar [[r.MobileDynamicPointLightsUseStaticBranch:1]]
+[2022.12.03-17.17.31:484][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlights:0]]
+[2022.12.03-17.17.31:484][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlightsShadow:0]]
+[2022.12.03-17.17.31:485][  0]LogConfig: Setting CVar [[r.GPUSkin.Support16BitBoneIndex:0]]
+[2022.12.03-17.17.31:485][  0]LogConfig: Setting CVar [[r.GPUSkin.Limit2BoneInfluences:0]]
+[2022.12.03-17.17.31:485][  0]LogConfig: Setting CVar [[r.SupportDepthOnlyIndexBuffers:1]]
+[2022.12.03-17.17.31:485][  0]LogConfig: Setting CVar [[r.SupportReversedIndexBuffers:1]]
+[2022.12.03-17.17.31:486][  0]LogConfig: Setting CVar [[r.LightPropagationVolume:0]]
+[2022.12.03-17.17.31:488][  0]LogConfig: Setting CVar [[r.Mobile.AmbientOcclusion:0]]
+[2022.12.03-17.17.31:490][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluences:0]]
+[2022.12.03-17.17.31:490][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluencesThreshold:8]]
+[2022.12.03-17.17.31:490][  0]LogConfig: Setting CVar [[r.Mobile.PlanarReflectionMode:0]]
+[2022.12.03-17.17.31:490][  0]LogConfig: Setting CVar [[r.Mobile.SupportsGen4TAA:0]]
+[2022.12.03-17.17.31:491][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.03-17.17.31:491][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.03-17.17.31:491][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2022.12.03-17.17.31:491][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2022.12.03-17.17.31:491][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2022.12.03-17.17.31:492][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2022.12.03-17.17.31:492][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2022.12.03-17.17.31:492][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2022.12.03-17.17.31:492][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2022.12.03-17.17.31:493][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2022.12.03-17.17.31:493][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2022.12.03-17.17.31:493][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2022.12.03-17.17.31:493][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2022.12.03-17.17.31:494][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2022.12.03-17.17.31:494][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2022.12.03-17.17.31:494][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2022.12.03-17.17.31:494][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.03-17.17.31:495][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2022.12.03-17.17.31:495][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2022.12.03-17.17.31:495][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2022.12.03-17.17.31:495][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2022.12.03-17.17.31:496][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2022.12.03-17.17.31:496][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2022.12.03-17.17.31:496][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2022.12.03-17.17.31:496][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2022.12.03-17.17.31:497][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2022.12.03-17.17.31:497][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2022.12.03-17.17.31:497][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2022.12.03-17.17.31:497][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2022.12.03-17.17.31:498][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2022.12.03-17.17.31:498][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2022.12.03-17.17.31:498][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.03-17.17.31:499][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.03-17.17.31:499][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:499][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.12.03-17.17.31:499][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.12.03-17.17.31:500][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:500][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.12.03-17.17.31:500][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:500][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.12.03-17.17.31:501][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.12.03-17.17.31:501][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.12.03-17.17.31:501][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.12.03-17.17.31:501][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.12.03-17.17.31:502][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.12.03-17.17.31:504][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.12.03-17.17.31:504][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.12.03-17.17.31:504][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.12.03-17.17.31:505][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.12.03-17.17.31:505][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.12.03-17.17.31:505][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.12.03-17.17.31:505][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.12.03-17.17.31:506][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.12.03-17.17.31:506][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.12.03-17.17.31:506][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.12.03-17.17.31:506][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.12.03-17.17.31:507][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.12.03-17.17.31:507][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:507][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.12.03-17.17.31:507][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.12.03-17.17.31:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.12.03-17.17.31:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.12.03-17.17.31:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.12.03-17.17.31:508][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.12.03-17.17.31:509][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.12.03-17.17.31:509][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.12.03-17.17.31:509][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.12.03-17.17.31:509][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.12.03-17.17.31:510][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.12.03-17.17.31:510][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.12.03-17.17.31:510][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.12.03-17.17.31:510][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.12.03-17.17.31:511][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.12.03-17.17.31:511][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.12.03-17.17.31:511][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.12.03-17.17.31:511][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.12.03-17.17.31:512][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.12.03-17.17.31:512][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.12.03-17.17.31:512][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.12.03-17.17.31:512][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.12.03-17.17.31:513][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.12.03-17.17.31:513][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.12.03-17.17.31:513][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.12.03-17.17.31:513][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.12.03-17.17.31:514][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.12.03-17.17.31:514][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.12.03-17.17.31:514][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.12.03-17.17.31:514][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.12.03-17.17.31:515][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:515][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.12.03-17.17.31:515][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.12.03-17.17.31:515][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.12.03-17.17.31:516][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.12.03-17.17.31:516][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.12.03-17.17.31:516][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.12.03-17.17.31:517][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.12.03-17.17.31:517][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.12.03-17.17.31:517][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.12.03-17.17.31:517][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:518][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.12.03-17.17.31:521][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.12.03-17.17.31:521][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.12.03-17.17.31:522][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.12.03-17.17.31:522][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.12.03-17.17.31:523][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.12.03-17.17.31:523][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.12.03-17.17.31:523][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.12.03-17.17.31:524][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.12.03-17.17.31:524][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.12.03-17.17.31:524][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.12.03-17.17.31:525][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.12.03-17.17.31:525][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.12.03-17.17.31:525][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.12.03-17.17.31:525][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.12.03-17.17.31:526][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.12.03-17.17.31:526][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.12.03-17.17.31:526][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.12.03-17.17.31:527][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.12.03-17.17.31:527][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.12.03-17.17.31:527][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.12.03-17.17.31:527][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.12.03-17.17.31:528][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.12.03-17.17.31:528][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.12.03-17.17.31:528][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.12.03-17.17.31:528][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.12.03-17.17.31:529][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.12.03-17.17.31:529][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.12.03-17.17.31:529][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:529][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.12.03-17.17.31:530][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.12.03-17.17.31:530][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:530][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.12.03-17.17.31:530][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.12.03-17.17.31:531][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.12.03-17.17.31:531][  0]LogInit: Selected Device Profile: [Windows]
+[2022.12.03-17.17.31:531][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2022.12.03-17.17.31:532][  0]LogHAL: Display: Platform has ~ 16 GB [17128247296 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2022.12.03-17.17.31:532][  0]LogInit: Going up to parent DeviceProfile []
+[2022.12.03-17.17.31:533][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:533][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.12.03-17.17.31:533][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.12.03-17.17.31:533][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:534][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.12.03-17.17.31:536][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:536][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.12.03-17.17.31:536][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.12.03-17.17.31:537][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.12.03-17.17.31:537][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.12.03-17.17.31:537][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.12.03-17.17.31:537][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.12.03-17.17.31:537][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.12.03-17.17.31:538][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.12.03-17.17.31:538][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.12.03-17.17.31:538][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.12.03-17.17.31:539][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.12.03-17.17.31:539][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.12.03-17.17.31:539][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.12.03-17.17.31:539][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.12.03-17.17.31:540][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.12.03-17.17.31:540][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.12.03-17.17.31:540][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.12.03-17.17.31:540][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.12.03-17.17.31:541][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:541][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.12.03-17.17.31:541][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.12.03-17.17.31:541][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.12.03-17.17.31:542][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.12.03-17.17.31:542][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.12.03-17.17.31:542][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.12.03-17.17.31:542][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.12.03-17.17.31:543][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.12.03-17.17.31:543][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.12.03-17.17.31:543][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.12.03-17.17.31:543][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.12.03-17.17.31:544][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.12.03-17.17.31:544][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.12.03-17.17.31:544][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.12.03-17.17.31:544][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.12.03-17.17.31:545][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.12.03-17.17.31:545][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.12.03-17.17.31:545][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.12.03-17.17.31:545][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.12.03-17.17.31:545][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.12.03-17.17.31:546][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.12.03-17.17.31:546][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.12.03-17.17.31:546][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.12.03-17.17.31:546][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.12.03-17.17.31:547][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.12.03-17.17.31:547][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.12.03-17.17.31:547][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.12.03-17.17.31:547][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.12.03-17.17.31:548][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.12.03-17.17.31:548][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.12.03-17.17.31:548][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:549][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.12.03-17.17.31:551][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.12.03-17.17.31:551][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.12.03-17.17.31:552][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.12.03-17.17.31:552][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.12.03-17.17.31:552][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.12.03-17.17.31:552][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.12.03-17.17.31:553][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.12.03-17.17.31:553][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.12.03-17.17.31:553][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:554][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.12.03-17.17.31:554][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.12.03-17.17.31:554][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.12.03-17.17.31:554][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.12.03-17.17.31:554][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.12.03-17.17.31:555][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.12.03-17.17.31:555][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.12.03-17.17.31:555][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.12.03-17.17.31:555][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.12.03-17.17.31:556][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.12.03-17.17.31:556][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.12.03-17.17.31:556][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.12.03-17.17.31:556][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.12.03-17.17.31:557][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.12.03-17.17.31:557][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.12.03-17.17.31:557][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.12.03-17.17.31:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.12.03-17.17.31:558][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.12.03-17.17.31:558][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.12.03-17.17.31:558][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.12.03-17.17.31:558][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.12.03-17.17.31:559][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.12.03-17.17.31:559][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.12.03-17.17.31:559][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.12.03-17.17.31:559][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.12.03-17.17.31:560][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.12.03-17.17.31:560][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.12.03-17.17.31:560][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.12.03-17.17.31:560][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:561][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.12.03-17.17.31:561][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.12.03-17.17.31:561][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.03-17.17.31:561][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.12.03-17.17.31:562][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.12.03-17.17.31:562][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.12.03-17.17.31:562][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2022.12.03-17.17.31:563][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2022.12.03-17.17.31:563][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2022.12.03-17.17.31:563][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2022.12.03-17.17.31:564][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.03-17.17.31:566][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Editor.ini]
+[2022.12.03-17.17.31:566][  0]LogInit: Computer: DESKTOP-QG36584
+[2022.12.03-17.17.31:567][  0]LogInit: User: danie
+[2022.12.03-17.17.31:567][  0]LogInit: CPU Page size=4096, Cores=6
+[2022.12.03-17.17.31:567][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2022.12.03-17.17.31:568][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2022.12.03-17.17.31:568][  0]LogMemory: Platform Memory Stats for Windows
+[2022.12.03-17.17.31:568][  0]LogMemory: Process Physical Memory: 137.12 MB used, 137.12 MB peak
+[2022.12.03-17.17.31:568][  0]LogMemory: Process Virtual Memory: 119.44 MB used, 119.44 MB peak
+[2022.12.03-17.17.31:569][  0]LogMemory: Physical Memory: 10252.50 MB used,  6082.27 MB free, 16334.77 MB total
+[2022.12.03-17.17.31:569][  0]LogMemory: Virtual Memory: 134210248.00 MB used,  7476.20 MB free, 134217728.00 MB total
+[2022.12.03-17.17.31:571][  0]LogWindows: WindowsPlatformFeatures disabled or dedicated server build
+[2022.12.03-17.17.31:580][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2022.12.03-17.17.31:581][  0]LogInit: Using OS detected language (en-US).
+[2022.12.03-17.17.31:581][  0]LogInit: Using OS detected locale (en-GB).
+[2022.12.03-17.17.31:584][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2022.12.03-17.17.31:962][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2022.12.03-17.17.31:967][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2022.12.03-17.17.31:971][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2022.12.03-17.17.31:975][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2022.12.03-17.17.31:975][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2022.12.03-17.17.31:978][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2022.12.03-17.17.31:993][  0]LogTextureFormatOodle: Display: Oodle Texture 2.9.0 init RDO Off
+[2022.12.03-17.17.32:004][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2022.12.03-17.17.32:004][  0]LogShaderCompilers: Guid format shader working directory is -27 characters bigger than the processId version (../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Intermediate/Shaders/WorkingDirectory/22464/).
+[2022.12.03-17.17.32:004][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/danie/AppData/Local/Temp/UnrealShaderWorkingDir/F9B518494C4C4B5C68277A8B5F974461/'.
+[2022.12.03-17.17.32:005][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2022.12.03-17.17.32:005][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2022.12.03-17.17.32:005][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2022.12.03-17.17.32:423][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2022.12.03-17.17.32:469][  0]LogDerivedDataCache: Loaded boot cache 0.05s 94MB C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2022.12.03-17.17.32:469][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc
+[2022.12.03-17.17.32:470][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2022.12.03-17.17.32:471][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2022.12.03-17.17.32:471][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.12.03-17.17.32:471][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2022.12.03-17.17.32:489][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2022.12.03-17.17.32:489][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.12.03-17.17.32:489][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2022.12.03-17.17.32:497][  0]LogDerivedDataCache: Speed tests for C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2022.12.03-17.17.32:498][  0]LogDerivedDataCache: Display: Performance to C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.03ms. RandomReadSpeed=405.29MBs, RandomWriteSpeed=171.16MBs. Assigned SpeedClass 'Local'
+[2022.12.03-17.17.32:499][  0]LogDerivedDataCache: Using Local data cache path C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2022.12.03-17.17.32:499][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2022.12.03-17.17.32:499][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2022.12.03-17.17.32:501][  0]LogInit: Using OS detected language (en-US).
+[2022.12.03-17.17.32:501][  0]LogInit: Using OS detected locale (en-GB).
+[2022.12.03-17.17.32:501][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the language.
+[2022.12.03-17.17.32:502][  0]LogTextLocalizationManager: No localization for 'en-GB' exists, so 'en' will be used for the locale.
+[2022.12.03-17.17.32:505][  0]LogTextLocalizationManager: Compacting localization data took   0.00ms
+[2022.12.03-17.17.32:505][  0]LogAssetRegistry: FAssetRegistry took 0.0020 seconds to start up
+[2022.12.03-17.17.32:652][  0]LogPackageLocalizationCache: Processed 27 localized package path(s) for 1 prioritized culture(s) in 0.001017 seconds
+[2022.12.03-17.17.32:726][  0]LogInit: Selected Device Profile: [Windows]
+[2022.12.03-17.17.32:726][  0]LogInit: Active device profile: [0000023D56930500][0000023D55F57880 49] Windows
+[2022.12.03-17.17.32:727][  0]LogInit: Profiles: [0000023D56930500][0000023D55F57880 49] Windows, [0000023D5691F600][0000023D55F65B40 49] WindowsNoEditor, [0000023D5691C100][0000023D55F5A240 49] WindowsServer, [0000023D56933000][0000023D55F684C0 49] WindowsClient, [0000023D56930200][0000023D55F70780 49] IOS, [0000023D56963D00][0000023D55F74A40 49] iPadAir, [0000023D56933A00][0000023D55F78D00 49] iPadAir2, [0000023D568CC200][0000023D55F93240 49] IPadPro, [0000023D568C7F00][0000023D55F7D280 49] iPadAir3, [0000023D5691D000][0000023D55F8B540 49] iPadAir4, [0000023D568C4500][0000023D55F87800 49] iPadMini2, [0000023D5691C200][0000023D55F8FAC0 49] iPadMini3, [0000023D568C5200][0000023D55F9C200 49] iPadMini4, [0000023D5691F800][0000023D55F6C480 49] iPadMini5, [0000023D56961600][0000023D55FB4980 49] iPhone6, [0000023D56961700][0000023D55FA09C0 49] iPodTouch6, [0000023D568C6100][0000023D55FBCF00 49] iPhone7, [0000023D568C6200][0000023D55FACF40 49] iPodTouch7, [0000023D56962600][0000023D55FB1200 49] iPhone5S, [0000023D568C7100][0000023D55FA94C0 49] iPhone6Plus, [0000023D56963B00][0000023D55FB9780 49] iPhone6S, [0000023D568C6B00][0000023D55FC1A40 49] iPhone6SPlus, [0000023D56960A00][0000023D55FC4180 49] iPhone7Plus, [0000023D568C6F00][0000023D55FC8440 49] iPhoneSE, [0000023D56961000][0000023D55FA46C0 49] iPhone8, [0000023D568C7C00][0000023D55FCC940 49] iPhone8Plus, [0000023D56963200][0000023D55FD4C00 49] iPhoneX, [0000023D568C6C00][0000023D55FD8EC0 49] iPhoneXS, [0000023D56962B00][0000023D55FDD180 49] iPhoneXSMax, [0000023D568C6900][0000023D55FE1440 49] iPhoneXR, [0000023D56962F00][0000023D55FE5700 49] iPhone11, [0000023D568C4A00][0000023D55FE99C0 49] iPhone11Pro, [0000023D56963E00][0000023D55FEC100 49] iPhone11ProMax, [0000023D568C5400][0000023D55FF03C0 49] iPhoneSE2, [0000023D56963F00][0000023D55FF4680 49] iPhone12Mini, [0000023D568C7D00][0000023D55FD0900 49] iPhone12, [0000023D56961200][0000023D55FF8B80 49] iPhone12Pro, [0000023D568C7500][0000023D56000E40 49] iPhone12ProMax, [0000023D56960200][0000023D56005100 49] iPadPro105, [0000023D568C5A00][0000023D560093C0 49] iPadPro129, [0000023D56960D00][0000023D5600D680 49] iPadPro97, [0000023D568C4900][0000023D56011940 49] iPadPro2_129, [0000023D56961A00][0000023D56015C00 49] iPad5, [0000023D568C5C00][0000023D56018340 49] iPad6, [0000023D56963900][0000023D5601C600 49] iPad7, [0000023D568C6600][0000023D559128C0 49] iPad8, [0000023D56963000][0000023D55FFCB40 49] iPadPro11, [0000023D568C5500][0000023D55916DC0 49] iPadPro2_11, [0000023D56962100][0000023D5591F080 49] iPadPro3_129, [0000023D568C5D00][0000023D55923340 49] iPadPro4_129, [0000023D56962400][0000023D55927600 49] AppleTV, [0000023D568C6E00][0000023D5592B8C0 49] AppleTV4K, [0000023D56960500][0000023D5592FB80 49] TVOS, [0000023D568C7A00][0000023D559322C0 49] Mac, [0000023D56962900][0000023D55936580 49] MacClient, [0000023D568C5700][0000023D5593A840 49] MacNoEditor, [0000023D56961100][0000023D5593EB00 49] MacServer, [0000023D568C7B00][0000023D5591AD80 49] Linux, [0000023D56960600][0000023D55943000 49] LinuxAArch64, [0000023D568C4400][0000023D5594B2C0 49] LinuxNoEditor, [0000023D56962200][0000023D5594F580 49] LinuxAArch64NoEditor, [0000023D56930100][0000023D55953840 49] LinuxClient, [0000023D568CC700][0000023D55957B00 49] LinuxAArch64Client, [0000023D56931900][0000023D5595A240 49] LinuxServer, [0000023D568CCA00][0000023D5595E500 49] LinuxAArch64Server, [0000023D56932D00][0000023D559627C0 49] Android, [0000023D568CD400][0000023D55966A80 49] Android_Low, [0000023D56931100][0000023D5596AD40 49] Android_Mid, [0000023D568CCE00][0000023D55946FC0 49] Android_High, [0000023D56930800][0000023D5596F240 49] Android_Default, [0000023D568CE600][0000023D55977500 49] Android_Adreno4xx, [0000023D56931400][0000023D5597B7C0 49] Android_Adreno5xx_Low, [0000023D568CE400][0000023D5597FA80 49] Android_Adreno5xx, [0000023D56930700][0000023D559821C0 49] Android_Adreno6xx, [0000023D568CEC00][0000023D55986480 49] Android_Adreno6xx_Vulkan, [0000023D56933B00][0000023D5598A740 49] Android_Mali_T6xx, [0000023D568CC500][0000023D5598EA00 49] Android_Mali_T7xx, [0000023D56930300][0000023D55992CC0 49] Android_Mali_T8xx, [0000023D568CF000][0000023D55996F80 49] Android_Mali_G71, [0000023D56932900][0000023D55973200 49] Android_Mali_G72, [0000023D568CE500][0000023D5599F4C0 49] Android_Mali_G72_Vulkan, [0000023D56931B00][0000023D559A3780 49] Android_Mali_G76, [0000023D568CF100][0000023D559A7A40 49] Android_Mali_G76_Vulkan, [0000023D56931E00][0000023D559AA180 49] Android_Mali_G77, [0000023D568CFB00][0000023D559AE440 49] Android_Mali_G77_Vulkan, [0000023D56933C00][0000023D559B2700 49] Android_Mali_G78, [0000023D568CFF00][0000023D559B69C0 49] Android_Mali_G78_Vulkan, [0000023D56932400][0000023D559BAC80 49] Android_Mali_G710, [0000023D568CD300][0000023D559BEF40 49] Android_Mali_G710_Vulkan, [0000023D56933100][0000023D5599B1C0 49] Android_Vulkan_SM5, [0000023D568C6400][0000023D559C3440 49] Android_PowerVR_G6xxx, [0000023D56931D00][0000023D559CB700 49] Android_PowerVR_GT7xxx, [0000023D568C4100][0000023D559CF9C0 49] Android_PowerVR_GE8xxx, [0000023D56933200][0000023D559D2100 49] Android_PowerVR_GM9xxx, [0000023D568C4300][0000023D559D63C0 49] Android_PowerVR_GM9xxx_Vulkan, [0000023D56933300][0000023D559DA680 49] Android_TegraK1, [0000023D568C5600][0000023D559DE940 49] Android_Unknown_Vulkan, [0000023D56932000][0000023D559E2C00 49] Lumin, [0000023D568C4B00][0000023D559E6EC0 49] Lumin_Desktop, [0000023D56930D00][0000023D559EB180 49] HoloLens, 
+[2022.12.03-17.17.32:746][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2022.12.03-17.17.32:746][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2022.12.03-17.17.32:746][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2022.12.03-17.17.32:746][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2022.12.03-17.17.32:746][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2022.12.03-17.17.32:756][  0]LogNetVersion: fpsgame 1.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 3215450660)
+[2022.12.03-17.17.32:844][  0]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/DaylightAmbientCubemap.DaylightAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2022.12.03-17.17.32:858][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2022.12.03-17.17.32:918][  0]LogPython: Using Python 3.7.7
+[2022.12.03-17.17.33:306][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: 00E80B1A49CCC1E3E40AD69F725424BE | Instance: C62DBF504E8E42F54A6758919F814530 (DESKTOP-QG36584-22464).
+[2022.12.03-17.17.33:318][  0]LogCollectionManager: Loaded 0 collections in 0.001794 seconds
+[2022.12.03-17.17.33:320][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Collections/' took 0.00s
+[2022.12.03-17.17.33:320][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Developers/danie/Collections/' took 0.00s
+[2022.12.03-17.17.33:321][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Collections/' took 0.00s
+[2022.12.03-17.17.33:321][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000001 seconds (updated 0 objects)
+[2022.12.03-17.17.33:388][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2022.12.03-17.17.33:390][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2022.12.03-17.17.33:439][  0]SourceControl: Source control is disabled
+[2022.12.03-17.17.33:440][  0]SourceControl: Source control is disabled
+[2022.12.03-17.17.33:441][  0]SourceControl: Source control is disabled
+[2022.12.03-17.17.33:443][  0]LogUProjectInfo: Found projects:
+[2022.12.03-17.17.33:476][  0]LogOpenImageDenoise: OIDN starting up
+[2022.12.03-17.17.33:493][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2022.12.03-17.17.33:501][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.12.03-17.17.33:501][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.12.03-17.17.33:543][  0]LogOcInput: OculusInput pre-init called
+[2022.12.03-17.17.33:552][  0]LogUObjectArray: 22050 objects as part of root set at end of initial load.
+[2022.12.03-17.17.33:552][  0]LogUObjectAllocator: 5966448 out of 0 bytes used by permanent object pool.
+[2022.12.03-17.17.33:552][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2022.12.03-17.17.33:584][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotPosition is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.03-17.17.33:584][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotRotation is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.03-17.17.33:585][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotScale is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.03-17.17.33:585][  0]LogClass: Display: BoolProperty FWeaponRecoil::bHasRecoil is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:585][  0]LogClass: Display: BoolProperty FWeaponRecoil::bUsesControlRotationForHipfireRecoil is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:585][  0]LogClass: Warning: ObjectProperty FWeaponRecoil::RecoilVectorCurve is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:586][  0]LogClass: Display: FloatProperty FWeaponRecoil::RecoveryTime is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:586][  0]LogClass: Display: FloatProperty FWeaponStats::MaxRange is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:586][  0]LogClass: Display: FloatProperty FWeaponStats::FireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:586][  0]LogClass: Display: IntProperty FWeaponStats::CartridgeBullets is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:587][  0]LogClass: Display: IntProperty FWeaponStats::BurstNumber is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:587][  0]LogClass: Display: FloatProperty FWeaponStats::BurstFireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:587][  0]LogClass: Display: IntProperty FWeaponStats::MaxMagSize is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:588][  0]LogClass: Display: IntProperty FWeaponStats::MagAmmo is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:588][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageTorso is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:588][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageHead is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:588][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageLegs is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:589][  0]LogClass: Display: FloatProperty FWeaponStats::BaseHipfireSpreadAngleInDegrees is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:589][  0]LogClass: Display: FloatProperty FWeaponStats::BaseMovementSpreadMultiplier is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:589][  0]LogClass: Display: EnumProperty FWeaponMetaData::GunModel is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:589][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:590][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponFireType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:590][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponHitDetectionType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:590][  0]LogClass: Display: EnumProperty FWeaponMetaData::TypeOfEquip is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:590][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:591][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::TracerEffect is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:591][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::MuzzleFlash is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:592][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:592][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:592][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:592][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:592][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:593][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:593][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::MuzzlePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:593][  0]LogClass: Display: 34 Uninitialized script struct members found including 4 object properties
+[2022.12.03-17.17.33:594][  0]LogAutomationTest: Warning: ObjectProperty FWeaponRecoil::RecoilVectorCurve is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:594][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:595][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::TracerEffect is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:595][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::MuzzleFlash is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.03-17.17.33:595][  0]LogEngine: Initializing Engine...
+[2022.12.03-17.17.33:596][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2022.12.03-17.17.33:609][  0]LogInit: Initializing FReadOnlyCVARCache
+[2022.12.03-17.17.33:609][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2022.12.03-17.17.33:612][  0]LogInit: Texture streaming: Disabled
+[2022.12.03-17.17.33:642][  0]LogInit: Display: Game Engine Initialized.
+[2022.12.03-17.17.33:642][  0]LogNiagaraEditor: GEditor isn't valid! Particle reset commands will not work for Niagara components!
+[2022.12.03-17.17.33:688][  0]LogInit: Display: Starting Game.
+[2022.12.03-17.17.33:688][  0]LogNet: Browse: /Game/Maps/TestMap?Name=Player
+[2022.12.03-17.17.33:689][  0]LogLoad: LoadMap: /Game/Maps/TestMap?Name=Player
+[2022.12.03-17.17.33:689][  0]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2022.12.03-17.17.33:691][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2022.12.03-17.17.33:699][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2022.12.03-17.17.33:811][  0]LogAIModule: Creating AISystem for world TestMap
+[2022.12.03-17.17.33:996][  0]LogLoad: Game class is 'BP_FPSGameModeDefault_C'
+[2022.12.03-17.17.33:996][  0]LogNet: PktLoss set to 0
+[2022.12.03-17.17.33:997][  0]LogNet: PktLagMin set to 0
+[2022.12.03-17.17.33:997][  0]LogNet: PktLagMax set to 0
+[2022.12.03-17.17.33:998][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.03-17.17.33:998][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.03-17.17.33:998][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.03-17.17.33:999][  0]LogNet: PktLoss set to 0
+[2022.12.03-17.17.33:999][  0]LogNet: PktLagMin set to 0
+[2022.12.03-17.17.33:999][  0]LogNet: PktLagMax set to 0
+[2022.12.03-17.17.34:000][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.03-17.17.34:000][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.03-17.17.34:000][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.03-17.17.34:001][  0]LogNet: PktLoss set to 0
+[2022.12.03-17.17.34:001][  0]LogNet: PktLagMin set to 0
+[2022.12.03-17.17.34:001][  0]LogNet: PktLagMax set to 0
+[2022.12.03-17.17.34:002][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.03-17.17.34:002][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.03-17.17.34:002][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.03-17.17.34:003][  0]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2022.12.03-17.17.34:003][  0]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2022.12.03-17.17.34:003][  0]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2022.12.03-17.17.34:003][  0]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2022.12.03-17.17.34:004][  0]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.03-17.17.34:004][  0]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
+[2022.12.03-17.17.34:006][  0]LogWorld: Bringing World /Game/Maps/TestMap.TestMap up for play (max tick rate 30) at 2022.12.03-17.17.34
+[2022.12.03-17.17.34:006][  0]LogWorld: Bringing up level for play took: 0.001476
+[2022.12.03-17.17.34:007][  0]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2022.12.03-17.17.34:007][  0]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2022.12.03-17.17.34:007][  0]LogLoad: Took 0.317717 seconds to LoadMap(/Game/Maps/TestMap)
+[2022.12.03-17.17.34:012][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2022.12.03-17.17.34:012][  0]LogLoad: (Engine Initialization) Total time: 4.69 seconds
+[2022.12.03-17.17.34:012][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2022.12.03-17.17.34:245][  6]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:49392
+[2022.12.03-17.17.34:245][  6]LogHandshake: SendConnectChallenge. Timestamp: 0.232242, Cookie: 104193235243217149185066057178228132058143144147012216224058
+[2022.12.03-17.17.34:278][  7]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:49392
+[2022.12.03-17.17.34:278][  7]LogHandshake: SendChallengeAck. InCookie: 104193235243217149185066057178228132058143144147012216224058
+[2022.12.03-17.17.34:278][  7]LogNet: Server accepting post-challenge connection from: 127.0.0.1:49392
+[2022.12.03-17.17.34:279][  7]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.03-17.17.34:279][  7]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 12/03/22 17:17:34, [UNetConnection] RemoteAddr: 127.0.0.1:49392, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.03-17.17.34:279][  7]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:49392, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.03-17.17.34:312][  8]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/TestMap.TestMap: Accepted
+[2022.12.03-17.17.34:312][  8]LogNet: Remote platform little endian=1
+[2022.12.03-17.17.34:313][  8]LogNet: This platform little endian=1
+[2022.12.03-17.17.34:313][  8]LogNetVersion: fpsgame 1.0.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 1484303137)
+[2022.12.03-17.17.34:346][  9]LogNet: Login request: ?PktLagMin=0?PktLagMax=0?PktLoss=0?PktIncomingLagMin=0?PktIncomingLagMax=0?PktIncomingLoss=0?Name=DESKTOP-QG36584-321B960D4712B6A70BEE9A97416CA1E7 userId: NULL:DESKTOP-QG36584-321B960D4712B6A70BEE9A97416CA1E7 platform: NULL
+[2022.12.03-17.17.34:379][ 10]LogNet: Client netspeed is 100000
+[2022.12.03-17.17.34:412][ 11]LogNet: Join request: /Engine/Maps/Entry?PktLagMin=0?PktLagMax=0?PktLoss=0?PktIncomingLagMin=0?PktIncomingLagMax=0?PktIncomingLoss=0?Name=DESKTOP-QG36584-321B960D4712B6A70BEE9A97416CA1E7?SplitscreenCount=1
+[2022.12.03-17.17.34:412][ 11]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.12.03-17.17.34:413][ 11]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2022.12.03-17.17.34:415][ 11]LogTemp: Warning: Numebr of rewind components = 1
+[2022.12.03-17.17.34:415][ 11]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2022.12.03-17.17.34:415][ 11]LogNet: Join succeeded: DESKTOP-QG36584-321B
+[2022.12.03-17.17.34:843][ 24]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57789
+[2022.12.03-17.17.34:843][ 24]LogHandshake: SendConnectChallenge. Timestamp: 0.830794, Cookie: 205024253206127118139152181017144070216164069255078239204164
+[2022.12.03-17.17.34:844][ 24]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57789
+[2022.12.03-17.17.34:844][ 24]LogHandshake: SendChallengeAck. InCookie: 205024253206127118139152181017144070216164069255078239204164
+[2022.12.03-17.17.34:844][ 24]LogNet: Server accepting post-challenge connection from: 127.0.0.1:57789
+[2022.12.03-17.17.34:845][ 24]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.03-17.17.34:845][ 24]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 12/03/22 17:17:34, [UNetConnection] RemoteAddr: 127.0.0.1:57789, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.03-17.17.34:845][ 24]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:57789, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.03-17.17.34:845][ 24]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/TestMap.TestMap: Accepted
+[2022.12.03-17.17.34:846][ 24]LogNet: Remote platform little endian=1
+[2022.12.03-17.17.34:846][ 24]LogNet: This platform little endian=1
+[2022.12.03-17.17.34:876][ 25]LogNet: Login request: ?Name=DESKTOP-QG36584-6710704F4B2D9F2261420FA08BDB145C userId: NULL:DESKTOP-QG36584-6710704F4B2D9F2261420FA08BDB145C platform: NULL
+[2022.12.03-17.17.35:207][ 35]LogNet: Client netspeed is 100000
+[2022.12.03-17.17.35:207][ 35]LogNet: Join request: /Engine/Maps/Entry?Name=DESKTOP-QG36584-6710704F4B2D9F2261420FA08BDB145C?SplitscreenCount=1
+[2022.12.03-17.17.35:208][ 35]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.12.03-17.17.35:209][ 35]LogTemp: Warning: Numebr of rewind components = 2
+[2022.12.03-17.17.35:209][ 35]LogNet: Join succeeded: DESKTOP-QG36584-6710
+[2022.12.03-17.18.30:082][694]LogTemp: Warning: RELIABLE SPRINT RPC CALL
+[2022.12.03-17.18.30:482][706]LogTemp: Warning: RELIABLE SPRINT RPC CALL
+[2022.12.03-17.18.30:713][713]LogTemp: Warning: Reliable pickup call
+[2022.12.03-17.18.30:713][713]LogTemp: Warning: diarrhea
+[2022.12.03-17.18.30:714][713]LogTemp: Warning: prime
+[2022.12.03-17.18.30:714][713]LogTemp: Warning: SERVER: Log no. 0
+[2022.12.03-17.18.30:715][713]LogTemp: Warning: TP attach
+[2022.12.03-17.18.30:715][713]LogTemp: Warning: Switch primary rpc call
+[2022.12.03-17.18.30:716][713]LogTemp: Warning: prime
+[2022.12.03-17.18.30:716][713]LogTemp: Warning: SERVER: Log no. 1
+[2022.12.03-17.18.30:716][713]LogTemp: Warning: TP attach
+[2022.12.03-17.18.31:209][728]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.31:210][728]LogTemp: Warning: Blocking
+[2022.12.03-17.18.31:210][728]LogTemp: Warning: start, -27.328491
+[2022.12.03-17.18.31:211][728]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:211][728]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.31:211][728]LogTemp: Warning: ControlPitch = 332.671509
+[2022.12.03-17.18.31:212][728]LogTemp: Warning: Current rotation b4 = 332.671509
+[2022.12.03-17.18.31:213][728]LogTemp: Warning: New rotation b4 = 332.671509
+[2022.12.03-17.18.31:244][729]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:245][729]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.31:245][729]LogTemp: Warning: ControlPitch = 332.671509
+[2022.12.03-17.18.31:245][729]LogTemp: Warning: Current rotation b4 = 332.671509
+[2022.12.03-17.18.31:245][729]LogTemp: Warning: New rotation b4 = 332.671509
+[2022.12.03-17.18.31:277][730]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:277][730]LogTemp: Warning: recoilpitch = 1.472050
+[2022.12.03-17.18.31:278][730]LogTemp: Warning: ControlPitch = 332.671509
+[2022.12.03-17.18.31:278][730]LogTemp: Warning: Current rotation b4 = 332.671509
+[2022.12.03-17.18.31:279][730]LogTemp: Warning: New rotation b4 = 334.143555
+[2022.12.03-17.18.31:310][731]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.31:311][731]LogTemp: Warning: Blocking
+[2022.12.03-17.18.31:311][731]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:312][731]LogTemp: Warning: recoilpitch = 2.922675
+[2022.12.03-17.18.31:312][731]LogTemp: Warning: ControlPitch = 334.143677
+[2022.12.03-17.18.31:313][731]LogTemp: Warning: Current rotation b4 = 334.143677
+[2022.12.03-17.18.31:313][731]LogTemp: Warning: New rotation b4 = 335.594299
+[2022.12.03-17.18.31:343][732]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:344][732]LogTemp: Warning: recoilpitch = 3.500127
+[2022.12.03-17.18.31:344][732]LogTemp: Warning: ControlPitch = 335.593872
+[2022.12.03-17.18.31:345][732]LogTemp: Warning: Current rotation b4 = 335.593872
+[2022.12.03-17.18.31:345][732]LogTemp: Warning: New rotation b4 = 336.171326
+[2022.12.03-17.18.31:377][733]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:378][733]LogTemp: Warning: recoilpitch = 3.611943
+[2022.12.03-17.18.31:378][733]LogTemp: Warning: ControlPitch = 336.170654
+[2022.12.03-17.18.31:378][733]LogTemp: Warning: Current rotation b4 = 336.170654
+[2022.12.03-17.18.31:379][733]LogTemp: Warning: New rotation b4 = 336.282471
+[2022.12.03-17.18.31:410][734]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.31:410][734]LogTemp: Warning: Blocking
+[2022.12.03-17.18.31:411][734]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:411][734]LogTemp: Warning: recoilpitch = 3.962556
+[2022.12.03-17.18.31:411][734]LogTemp: Warning: ControlPitch = 336.280518
+[2022.12.03-17.18.31:412][734]LogTemp: Warning: Current rotation b4 = 336.280518
+[2022.12.03-17.18.31:412][734]LogTemp: Warning: New rotation b4 = 336.631134
+[2022.12.03-17.18.31:443][735]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:444][735]LogTemp: Warning: recoilpitch = 4.302852
+[2022.12.03-17.18.31:444][735]LogTemp: Warning: ControlPitch = 336.632080
+[2022.12.03-17.18.31:445][735]LogTemp: Warning: Current rotation b4 = 336.632080
+[2022.12.03-17.18.31:445][735]LogTemp: Warning: New rotation b4 = 336.972382
+[2022.12.03-17.18.31:477][736]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:478][736]LogTemp: Warning: recoilpitch = 4.643177
+[2022.12.03-17.18.31:478][736]LogTemp: Warning: ControlPitch = 336.972656
+[2022.12.03-17.18.31:478][736]LogTemp: Warning: Current rotation b4 = 336.972656
+[2022.12.03-17.18.31:479][736]LogTemp: Warning: New rotation b4 = 337.312988
+[2022.12.03-17.18.31:511][737]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.31:512][737]LogTemp: Warning: Blocking
+[2022.12.03-17.18.31:512][737]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:513][737]LogTemp: Warning: recoilpitch = 4.993781
+[2022.12.03-17.18.31:513][737]LogTemp: Warning: ControlPitch = 337.313232
+[2022.12.03-17.18.31:514][737]LogTemp: Warning: Current rotation b4 = 337.313232
+[2022.12.03-17.18.31:514][737]LogTemp: Warning: New rotation b4 = 337.663818
+[2022.12.03-17.18.31:545][738]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:546][738]LogTemp: Warning: recoilpitch = 5.344429
+[2022.12.03-17.18.31:546][738]LogTemp: Warning: ControlPitch = 337.664795
+[2022.12.03-17.18.31:547][738]LogTemp: Warning: Current rotation b4 = 337.664795
+[2022.12.03-17.18.31:547][738]LogTemp: Warning: New rotation b4 = 338.015442
+[2022.12.03-17.18.31:578][739]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:578][739]LogTemp: Warning: recoilpitch = 5.694997
+[2022.12.03-17.18.31:579][739]LogTemp: Warning: ControlPitch = 338.016357
+[2022.12.03-17.18.31:579][739]LogTemp: Warning: Current rotation b4 = 338.016357
+[2022.12.03-17.18.31:579][739]LogTemp: Warning: New rotation b4 = 338.366943
+[2022.12.03-17.18.31:611][740]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.31:612][740]LogTemp: Warning: Blocking
+[2022.12.03-17.18.31:612][740]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:613][740]LogTemp: Warning: recoilpitch = 6.035297
+[2022.12.03-17.18.31:613][740]LogTemp: Warning: ControlPitch = 338.367920
+[2022.12.03-17.18.31:613][740]LogTemp: Warning: Current rotation b4 = 338.367920
+[2022.12.03-17.18.31:614][740]LogTemp: Warning: New rotation b4 = 338.708221
+[2022.12.03-17.18.31:644][741]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:644][741]LogTemp: Warning: recoilpitch = 6.375587
+[2022.12.03-17.18.31:645][741]LogTemp: Warning: ControlPitch = 338.708496
+[2022.12.03-17.18.31:645][741]LogTemp: Warning: Current rotation b4 = 338.708496
+[2022.12.03-17.18.31:646][741]LogTemp: Warning: New rotation b4 = 339.048767
+[2022.12.03-17.18.31:677][742]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.31:677][742]LogTemp: Warning: recoilpitch = 6.715926
+[2022.12.03-17.18.31:678][742]LogTemp: Warning: ControlPitch = 339.049072
+[2022.12.03-17.18.31:679][742]LogTemp: Warning: Current rotation b4 = 339.049072
+[2022.12.03-17.18.31:679][742]LogTemp: Warning: New rotation b4 = 339.389404
+[2022.12.03-17.18.31:710][743]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.31:711][743]LogTemp: Warning: Blocking
+[2022.12.03-17.18.31:711][743]LogTemp: Warning: bIsFiring = false
+[2022.12.03-17.18.31:712][743]LogTemp: Warning: recoilpitch = 7.056313
+[2022.12.03-17.18.31:712][743]LogTemp: Warning: ControlPitch = 339.389648
+[2022.12.03-17.18.31:713][743]LogTemp: Warning: Current rotation b4 = 339.389648
+[2022.12.03-17.18.31:713][743]LogTemp: Warning: New rotation b4 = 339.730042
+[2022.12.03-17.18.31:713][743]LogTemp: Warning: bIsFiring not true
+[2022.12.03-17.18.31:714][743]LogTemp: Warning: Recoilstop
+[2022.12.03-17.18.31:714][743]LogTemp: Warning: RecoStart
+[2022.12.03-17.18.31:744][744]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.31:745][744]LogTemp: Warning: Control -20.269775
+[2022.12.03-17.18.31:745][744]LogTemp: Warning: Start -27.328491
+[2022.12.03-17.18.31:746][744]LogTemp: Warning: Current rotation b4 = 339.730225
+[2022.12.03-17.18.31:746][744]LogTemp: Warning: New rotation b4 = -22.671143
+[2022.12.03-17.18.31:747][744]LogTemp: Warning: Delta -355.345062
+[2022.12.03-17.18.32:108][755]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.32:109][755]LogTemp: Warning: Blocking
+[2022.12.03-17.18.32:109][755]LogTemp: Warning: start, -22.670288
+[2022.12.03-17.18.32:110][755]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:110][755]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.32:110][755]LogTemp: Warning: ControlPitch = 337.329712
+[2022.12.03-17.18.32:111][755]LogTemp: Warning: Current rotation b4 = 337.329712
+[2022.12.03-17.18.32:111][755]LogTemp: Warning: New rotation b4 = 337.329712
+[2022.12.03-17.18.32:141][756]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:142][756]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.32:142][756]LogTemp: Warning: ControlPitch = 337.329712
+[2022.12.03-17.18.32:143][756]LogTemp: Warning: Current rotation b4 = 337.329712
+[2022.12.03-17.18.32:143][756]LogTemp: Warning: New rotation b4 = 337.329712
+[2022.12.03-17.18.32:174][757]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:174][757]LogTemp: Warning: recoilpitch = 1.450841
+[2022.12.03-17.18.32:175][757]LogTemp: Warning: ControlPitch = 337.329712
+[2022.12.03-17.18.32:175][757]LogTemp: Warning: Current rotation b4 = 337.329712
+[2022.12.03-17.18.32:176][757]LogTemp: Warning: New rotation b4 = 338.780548
+[2022.12.03-17.18.32:208][758]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.32:209][758]LogTemp: Warning: Blocking
+[2022.12.03-17.18.32:209][758]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:210][758]LogTemp: Warning: recoilpitch = 2.879384
+[2022.12.03-17.18.32:210][758]LogTemp: Warning: ControlPitch = 338.779907
+[2022.12.03-17.18.32:210][758]LogTemp: Warning: Current rotation b4 = 338.779907
+[2022.12.03-17.18.32:211][758]LogTemp: Warning: New rotation b4 = 340.208466
+[2022.12.03-17.18.32:241][759]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:242][759]LogTemp: Warning: recoilpitch = 3.500022
+[2022.12.03-17.18.32:242][759]LogTemp: Warning: ControlPitch = 340.208130
+[2022.12.03-17.18.32:243][759]LogTemp: Warning: Current rotation b4 = 340.208130
+[2022.12.03-17.18.32:243][759]LogTemp: Warning: New rotation b4 = 340.828766
+[2022.12.03-17.18.32:275][760]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:275][760]LogTemp: Warning: recoilpitch = 3.606848
+[2022.12.03-17.18.32:276][760]LogTemp: Warning: ControlPitch = 340.828857
+[2022.12.03-17.18.32:276][760]LogTemp: Warning: Current rotation b4 = 340.828857
+[2022.12.03-17.18.32:277][760]LogTemp: Warning: New rotation b4 = 340.935669
+[2022.12.03-17.18.32:308][761]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.32:308][761]LogTemp: Warning: Blocking
+[2022.12.03-17.18.32:310][761]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:310][761]LogTemp: Warning: recoilpitch = 3.957499
+[2022.12.03-17.18.32:310][761]LogTemp: Warning: ControlPitch = 340.933228
+[2022.12.03-17.18.32:310][761]LogTemp: Warning: Current rotation b4 = 340.933228
+[2022.12.03-17.18.32:310][761]LogTemp: Warning: New rotation b4 = 341.283875
+[2022.12.03-17.18.32:342][762]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:342][762]LogTemp: Warning: recoilpitch = 4.297772
+[2022.12.03-17.18.32:343][762]LogTemp: Warning: ControlPitch = 341.284790
+[2022.12.03-17.18.32:343][762]LogTemp: Warning: Current rotation b4 = 341.284790
+[2022.12.03-17.18.32:343][762]LogTemp: Warning: New rotation b4 = 341.625061
+[2022.12.03-17.18.32:375][763]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:376][763]LogTemp: Warning: recoilpitch = 4.643310
+[2022.12.03-17.18.32:376][763]LogTemp: Warning: ControlPitch = 341.625366
+[2022.12.03-17.18.32:377][763]LogTemp: Warning: Current rotation b4 = 341.625366
+[2022.12.03-17.18.32:377][763]LogTemp: Warning: New rotation b4 = 341.970917
+[2022.12.03-17.18.32:408][764]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.32:408][764]LogTemp: Warning: Blocking
+[2022.12.03-17.18.32:409][764]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:409][764]LogTemp: Warning: recoilpitch = 4.983795
+[2022.12.03-17.18.32:409][764]LogTemp: Warning: ControlPitch = 341.971436
+[2022.12.03-17.18.32:410][764]LogTemp: Warning: Current rotation b4 = 341.971436
+[2022.12.03-17.18.32:410][764]LogTemp: Warning: New rotation b4 = 342.311920
+[2022.12.03-17.18.32:441][765]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:442][765]LogTemp: Warning: recoilpitch = 5.324066
+[2022.12.03-17.18.32:442][765]LogTemp: Warning: ControlPitch = 342.312012
+[2022.12.03-17.18.32:443][765]LogTemp: Warning: Current rotation b4 = 342.312012
+[2022.12.03-17.18.32:444][765]LogTemp: Warning: New rotation b4 = 342.652283
+[2022.12.03-17.18.32:475][766]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:476][766]LogTemp: Warning: recoilpitch = 5.664391
+[2022.12.03-17.18.32:477][766]LogTemp: Warning: ControlPitch = 342.652588
+[2022.12.03-17.18.32:477][766]LogTemp: Warning: Current rotation b4 = 342.652588
+[2022.12.03-17.18.32:478][766]LogTemp: Warning: New rotation b4 = 342.992920
+[2022.12.03-17.18.32:509][767]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.32:510][767]LogTemp: Warning: Blocking
+[2022.12.03-17.18.32:511][767]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:511][767]LogTemp: Warning: recoilpitch = 6.015051
+[2022.12.03-17.18.32:511][767]LogTemp: Warning: ControlPitch = 342.993164
+[2022.12.03-17.18.32:512][767]LogTemp: Warning: Current rotation b4 = 342.993164
+[2022.12.03-17.18.32:512][767]LogTemp: Warning: New rotation b4 = 343.343811
+[2022.12.03-17.18.32:542][768]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:543][768]LogTemp: Warning: recoilpitch = 6.365706
+[2022.12.03-17.18.32:544][768]LogTemp: Warning: ControlPitch = 343.344727
+[2022.12.03-17.18.32:544][768]LogTemp: Warning: Current rotation b4 = 343.344727
+[2022.12.03-17.18.32:544][768]LogTemp: Warning: New rotation b4 = 343.695374
+[2022.12.03-17.18.32:575][769]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:575][769]LogTemp: Warning: recoilpitch = 6.705960
+[2022.12.03-17.18.32:576][769]LogTemp: Warning: ControlPitch = 343.696289
+[2022.12.03-17.18.32:576][769]LogTemp: Warning: Current rotation b4 = 343.696289
+[2022.12.03-17.18.32:577][769]LogTemp: Warning: New rotation b4 = 344.036560
+[2022.12.03-17.18.32:609][770]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.32:610][770]LogTemp: Warning: Blocking
+[2022.12.03-17.18.32:610][770]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.32:611][770]LogTemp: Warning: recoilpitch = 7.046284
+[2022.12.03-17.18.32:611][770]LogTemp: Warning: ControlPitch = 344.036865
+[2022.12.03-17.18.32:611][770]LogTemp: Warning: Current rotation b4 = 344.036865
+[2022.12.03-17.18.32:612][770]LogTemp: Warning: New rotation b4 = 344.377197
+[2022.12.03-17.18.32:642][771]LogTemp: Warning: bIsFiring = false
+[2022.12.03-17.18.32:642][771]LogTemp: Warning: recoilpitch = 7.396872
+[2022.12.03-17.18.32:643][771]LogTemp: Warning: ControlPitch = 344.377441
+[2022.12.03-17.18.32:644][771]LogTemp: Warning: Current rotation b4 = 344.377441
+[2022.12.03-17.18.32:644][771]LogTemp: Warning: New rotation b4 = 344.728027
+[2022.12.03-17.18.32:644][771]LogTemp: Warning: bIsFiring not true
+[2022.12.03-17.18.32:645][771]LogTemp: Warning: Recoilstop
+[2022.12.03-17.18.32:645][771]LogTemp: Warning: RecoStart
+[2022.12.03-17.18.32:676][772]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.32:677][772]LogTemp: Warning: Control -15.270996
+[2022.12.03-17.18.32:677][772]LogTemp: Warning: Start -22.670288
+[2022.12.03-17.18.32:677][772]LogTemp: Warning: Current rotation b4 = 344.729004
+[2022.12.03-17.18.32:678][772]LogTemp: Warning: New rotation b4 = -17.788239
+[2022.12.03-17.18.32:678][772]LogTemp: Warning: Delta -355.120361
+[2022.12.03-17.18.33:074][784]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.33:074][784]LogTemp: Warning: Blocking
+[2022.12.03-17.18.33:075][784]LogTemp: Warning: start, -17.786865
+[2022.12.03-17.18.33:076][784]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:076][784]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.33:076][784]LogTemp: Warning: ControlPitch = 342.213135
+[2022.12.03-17.18.33:077][784]LogTemp: Warning: Current rotation b4 = 342.213135
+[2022.12.03-17.18.33:077][784]LogTemp: Warning: New rotation b4 = 342.213135
+[2022.12.03-17.18.33:108][785]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:109][785]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.33:109][785]LogTemp: Warning: ControlPitch = 342.213135
+[2022.12.03-17.18.33:109][785]LogTemp: Warning: Current rotation b4 = 342.213135
+[2022.12.03-17.18.33:110][785]LogTemp: Warning: New rotation b4 = 342.213135
+[2022.12.03-17.18.33:142][786]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:142][786]LogTemp: Warning: recoilpitch = 1.472119
+[2022.12.03-17.18.33:142][786]LogTemp: Warning: ControlPitch = 342.213135
+[2022.12.03-17.18.33:143][786]LogTemp: Warning: Current rotation b4 = 342.213135
+[2022.12.03-17.18.33:143][786]LogTemp: Warning: New rotation b4 = 343.685242
+[2022.12.03-17.18.33:175][787]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.33:176][787]LogTemp: Warning: Blocking
+[2022.12.03-17.18.33:176][787]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:177][787]LogTemp: Warning: recoilpitch = 2.944256
+[2022.12.03-17.18.33:177][787]LogTemp: Warning: ControlPitch = 343.685303
+[2022.12.03-17.18.33:177][787]LogTemp: Warning: Current rotation b4 = 343.685303
+[2022.12.03-17.18.33:178][787]LogTemp: Warning: New rotation b4 = 345.157440
+[2022.12.03-17.18.33:208][788]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:208][788]LogTemp: Warning: recoilpitch = 3.500236
+[2022.12.03-17.18.33:209][788]LogTemp: Warning: ControlPitch = 345.157471
+[2022.12.03-17.18.33:209][788]LogTemp: Warning: Current rotation b4 = 345.157471
+[2022.12.03-17.18.33:210][788]LogTemp: Warning: New rotation b4 = 345.713470
+[2022.12.03-17.18.33:241][789]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:242][789]LogTemp: Warning: recoilpitch = 3.617188
+[2022.12.03-17.18.33:242][789]LogTemp: Warning: ControlPitch = 345.712280
+[2022.12.03-17.18.33:242][789]LogTemp: Warning: Current rotation b4 = 345.712280
+[2022.12.03-17.18.33:243][789]LogTemp: Warning: New rotation b4 = 345.829224
+[2022.12.03-17.18.33:275][790]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.33:275][790]LogTemp: Warning: Blocking
+[2022.12.03-17.18.33:276][790]LogTemp: Warning: Continuing
+[2022.12.03-17.18.33:277][790]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:277][790]LogTemp: Warning: recoilpitch = 3.957523
+[2022.12.03-17.18.33:277][790]LogTemp: Warning: ControlPitch = 345.827637
+[2022.12.03-17.18.33:278][790]LogTemp: Warning: Current rotation b4 = 345.827637
+[2022.12.03-17.18.33:278][790]LogTemp: Warning: New rotation b4 = 346.167969
+[2022.12.03-17.18.33:309][791]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:310][791]LogTemp: Warning: recoilpitch = 4.308113
+[2022.12.03-17.18.33:310][791]LogTemp: Warning: ControlPitch = 346.168213
+[2022.12.03-17.18.33:311][791]LogTemp: Warning: Current rotation b4 = 346.168213
+[2022.12.03-17.18.33:311][791]LogTemp: Warning: New rotation b4 = 346.518799
+[2022.12.03-17.18.33:343][792]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:344][792]LogTemp: Warning: recoilpitch = 4.658755
+[2022.12.03-17.18.33:344][792]LogTemp: Warning: ControlPitch = 346.519775
+[2022.12.03-17.18.33:345][792]LogTemp: Warning: Current rotation b4 = 346.519775
+[2022.12.03-17.18.33:345][792]LogTemp: Warning: New rotation b4 = 346.870422
+[2022.12.03-17.18.33:378][793]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.33:378][793]LogTemp: Warning: Blocking
+[2022.12.03-17.18.33:379][793]LogTemp: Warning: Continuing
+[2022.12.03-17.18.33:379][793]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:380][793]LogTemp: Warning: recoilpitch = 5.009318
+[2022.12.03-17.18.33:380][793]LogTemp: Warning: ControlPitch = 346.871338
+[2022.12.03-17.18.33:380][793]LogTemp: Warning: Current rotation b4 = 346.871338
+[2022.12.03-17.18.33:381][793]LogTemp: Warning: New rotation b4 = 347.221893
+[2022.12.03-17.18.33:411][794]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:412][794]LogTemp: Warning: recoilpitch = 5.359957
+[2022.12.03-17.18.33:412][794]LogTemp: Warning: ControlPitch = 347.222900
+[2022.12.03-17.18.33:412][794]LogTemp: Warning: Current rotation b4 = 347.222900
+[2022.12.03-17.18.33:413][794]LogTemp: Warning: New rotation b4 = 347.573547
+[2022.12.03-17.18.33:445][795]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:446][795]LogTemp: Warning: recoilpitch = 5.700233
+[2022.12.03-17.18.33:447][795]LogTemp: Warning: ControlPitch = 347.574463
+[2022.12.03-17.18.33:447][795]LogTemp: Warning: Current rotation b4 = 347.574463
+[2022.12.03-17.18.33:447][795]LogTemp: Warning: New rotation b4 = 347.914734
+[2022.12.03-17.18.33:478][796]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.33:479][796]LogTemp: Warning: Blocking
+[2022.12.03-17.18.33:479][796]LogTemp: Warning: Continuing
+[2022.12.03-17.18.33:480][796]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:480][796]LogTemp: Warning: recoilpitch = 6.050882
+[2022.12.03-17.18.33:480][796]LogTemp: Warning: ControlPitch = 347.915039
+[2022.12.03-17.18.33:481][796]LogTemp: Warning: Current rotation b4 = 347.915039
+[2022.12.03-17.18.33:481][796]LogTemp: Warning: New rotation b4 = 348.265686
+[2022.12.03-17.18.33:510][797]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:511][797]LogTemp: Warning: recoilpitch = 6.391151
+[2022.12.03-17.18.33:511][797]LogTemp: Warning: ControlPitch = 348.266602
+[2022.12.03-17.18.33:511][797]LogTemp: Warning: Current rotation b4 = 348.266602
+[2022.12.03-17.18.33:512][797]LogTemp: Warning: New rotation b4 = 348.606873
+[2022.12.03-17.18.33:544][798]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:544][798]LogTemp: Warning: recoilpitch = 6.726361
+[2022.12.03-17.18.33:545][798]LogTemp: Warning: ControlPitch = 348.607178
+[2022.12.03-17.18.33:545][798]LogTemp: Warning: Current rotation b4 = 348.607178
+[2022.12.03-17.18.33:546][798]LogTemp: Warning: New rotation b4 = 348.942383
+[2022.12.03-17.18.33:577][799]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.33:578][799]LogTemp: Warning: Blocking
+[2022.12.03-17.18.33:578][799]LogTemp: Warning: Continuing
+[2022.12.03-17.18.33:578][799]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.33:579][799]LogTemp: Warning: recoilpitch = 7.076963
+[2022.12.03-17.18.33:579][799]LogTemp: Warning: ControlPitch = 348.942261
+[2022.12.03-17.18.33:580][799]LogTemp: Warning: Current rotation b4 = 348.942261
+[2022.12.03-17.18.33:580][799]LogTemp: Warning: New rotation b4 = 349.292877
+[2022.12.03-17.18.33:610][800]LogTemp: Warning: bIsFiring = false
+[2022.12.03-17.18.33:611][800]LogTemp: Warning: recoilpitch = 7.417266
+[2022.12.03-17.18.33:611][800]LogTemp: Warning: ControlPitch = 349.293823
+[2022.12.03-17.18.33:612][800]LogTemp: Warning: Current rotation b4 = 349.293823
+[2022.12.03-17.18.33:612][800]LogTemp: Warning: New rotation b4 = 349.634125
+[2022.12.03-17.18.33:612][800]LogTemp: Warning: bIsFiring not true
+[2022.12.03-17.18.33:613][800]LogTemp: Warning: Recoilstop
+[2022.12.03-17.18.33:613][800]LogTemp: Warning: RecoStart
+[2022.12.03-17.18.33:644][801]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.33:644][801]LogTemp: Warning: Control -10.365601
+[2022.12.03-17.18.33:645][801]LogTemp: Warning: Start -17.786865
+[2022.12.03-17.18.33:645][801]LogTemp: Warning: Current rotation b4 = 349.634399
+[2022.12.03-17.18.33:645][801]LogTemp: Warning: New rotation b4 = -12.852692
+[2022.12.03-17.18.33:646][801]LogTemp: Warning: Delta -355.069824
+[2022.12.03-17.18.34:539][828]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.34:540][828]LogTemp: Warning: miss
+[2022.12.03-17.18.34:540][828]LogTemp: Warning: start, 3.411255
+[2022.12.03-17.18.34:541][828]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:541][828]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.34:541][828]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.34:541][828]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.34:542][828]LogTemp: Warning: New rotation b4 = 3.411255
+[2022.12.03-17.18.34:572][829]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:572][829]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.34:573][829]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.34:573][829]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.34:573][829]LogTemp: Warning: New rotation b4 = 3.411255
+[2022.12.03-17.18.34:605][830]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.34:606][830]LogTemp: Warning: miss
+[2022.12.03-17.18.34:606][830]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:607][830]LogTemp: Warning: recoilpitch = 1.428780
+[2022.12.03-17.18.34:607][830]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.34:607][830]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.34:608][830]LogTemp: Warning: New rotation b4 = 4.840035
+[2022.12.03-17.18.34:638][831]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:639][831]LogTemp: Warning: recoilpitch = 2.857591
+[2022.12.03-17.18.34:639][831]LogTemp: Warning: ControlPitch = 4.839478
+[2022.12.03-17.18.34:639][831]LogTemp: Warning: Current rotation b4 = 4.839478
+[2022.12.03-17.18.34:640][831]LogTemp: Warning: New rotation b4 = 6.268288
+[2022.12.03-17.18.34:671][832]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:672][832]LogTemp: Warning: recoilpitch = 3.499066
+[2022.12.03-17.18.34:672][832]LogTemp: Warning: ControlPitch = 6.267700
+[2022.12.03-17.18.34:673][832]LogTemp: Warning: Current rotation b4 = 6.267700
+[2022.12.03-17.18.34:673][832]LogTemp: Warning: New rotation b4 = 6.909176
+[2022.12.03-17.18.34:705][833]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:706][833]LogTemp: Warning: recoilpitch = 3.596387
+[2022.12.03-17.18.34:706][833]LogTemp: Warning: ControlPitch = 6.910400
+[2022.12.03-17.18.34:707][833]LogTemp: Warning: Current rotation b4 = 6.910400
+[2022.12.03-17.18.34:707][833]LogTemp: Warning: New rotation b4 = 7.007722
+[2022.12.03-17.18.34:738][834]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.34:739][834]LogTemp: Warning: miss
+[2022.12.03-17.18.34:740][834]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:740][834]LogTemp: Warning: recoilpitch = 3.947024
+[2022.12.03-17.18.34:741][834]LogTemp: Warning: ControlPitch = 7.009277
+[2022.12.03-17.18.34:741][834]LogTemp: Warning: Current rotation b4 = 7.009277
+[2022.12.03-17.18.34:741][834]LogTemp: Warning: New rotation b4 = 7.359914
+[2022.12.03-17.18.34:772][835]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:773][835]LogTemp: Warning: recoilpitch = 4.287281
+[2022.12.03-17.18.34:773][835]LogTemp: Warning: ControlPitch = 7.360840
+[2022.12.03-17.18.34:774][835]LogTemp: Warning: Current rotation b4 = 7.360840
+[2022.12.03-17.18.34:774][835]LogTemp: Warning: New rotation b4 = 7.701097
+[2022.12.03-17.18.34:805][836]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.34:805][836]LogTemp: Warning: miss
+[2022.12.03-17.18.34:806][836]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:806][836]LogTemp: Warning: recoilpitch = 4.637877
+[2022.12.03-17.18.34:806][836]LogTemp: Warning: ControlPitch = 7.701416
+[2022.12.03-17.18.34:807][836]LogTemp: Warning: Current rotation b4 = 7.701416
+[2022.12.03-17.18.34:807][836]LogTemp: Warning: New rotation b4 = 8.052011
+[2022.12.03-17.18.34:839][837]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:839][837]LogTemp: Warning: recoilpitch = 4.978199
+[2022.12.03-17.18.34:840][837]LogTemp: Warning: ControlPitch = 8.052979
+[2022.12.03-17.18.34:840][837]LogTemp: Warning: Current rotation b4 = 8.052979
+[2022.12.03-17.18.34:841][837]LogTemp: Warning: New rotation b4 = 8.393301
+[2022.12.03-17.18.34:871][838]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:871][838]LogTemp: Warning: recoilpitch = 5.323698
+[2022.12.03-17.18.34:872][838]LogTemp: Warning: ControlPitch = 8.393555
+[2022.12.03-17.18.34:872][838]LogTemp: Warning: Current rotation b4 = 8.393555
+[2022.12.03-17.18.34:872][838]LogTemp: Warning: New rotation b4 = 8.739054
+[2022.12.03-17.18.34:904][839]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:904][839]LogTemp: Warning: recoilpitch = 5.658902
+[2022.12.03-17.18.34:905][839]LogTemp: Warning: ControlPitch = 8.739624
+[2022.12.03-17.18.34:905][839]LogTemp: Warning: Current rotation b4 = 8.739624
+[2022.12.03-17.18.34:906][839]LogTemp: Warning: New rotation b4 = 9.074827
+[2022.12.03-17.18.34:937][840]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.34:937][840]LogTemp: Warning: miss
+[2022.12.03-17.18.34:938][840]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:939][840]LogTemp: Warning: recoilpitch = 5.999194
+[2022.12.03-17.18.34:939][840]LogTemp: Warning: ControlPitch = 9.074707
+[2022.12.03-17.18.34:939][840]LogTemp: Warning: Current rotation b4 = 9.074707
+[2022.12.03-17.18.34:940][840]LogTemp: Warning: New rotation b4 = 9.414999
+[2022.12.03-17.18.34:972][841]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.34:973][841]LogTemp: Warning: recoilpitch = 6.339499
+[2022.12.03-17.18.34:973][841]LogTemp: Warning: ControlPitch = 9.415283
+[2022.12.03-17.18.34:973][841]LogTemp: Warning: Current rotation b4 = 9.415283
+[2022.12.03-17.18.34:974][841]LogTemp: Warning: New rotation b4 = 9.755589
+[2022.12.03-17.18.35:005][842]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:006][842]LogTemp: Warning: recoilpitch = 6.690105
+[2022.12.03-17.18.35:006][842]LogTemp: Warning: ControlPitch = 9.755859
+[2022.12.03-17.18.35:007][842]LogTemp: Warning: Current rotation b4 = 9.755859
+[2022.12.03-17.18.35:007][842]LogTemp: Warning: New rotation b4 = 10.106465
+[2022.12.03-17.18.35:039][843]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.35:040][843]LogTemp: Warning: miss
+[2022.12.03-17.18.35:041][843]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:041][843]LogTemp: Warning: recoilpitch = 7.035635
+[2022.12.03-17.18.35:041][843]LogTemp: Warning: ControlPitch = 10.107422
+[2022.12.03-17.18.35:042][843]LogTemp: Warning: Current rotation b4 = 10.107422
+[2022.12.03-17.18.35:042][843]LogTemp: Warning: New rotation b4 = 10.452951
+[2022.12.03-17.18.35:073][844]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:073][844]LogTemp: Warning: recoilpitch = 7.386302
+[2022.12.03-17.18.35:074][844]LogTemp: Warning: ControlPitch = 10.453491
+[2022.12.03-17.18.35:074][844]LogTemp: Warning: Current rotation b4 = 10.453491
+[2022.12.03-17.18.35:075][844]LogTemp: Warning: New rotation b4 = 10.804159
+[2022.12.03-17.18.35:106][845]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:107][845]LogTemp: Warning: recoilpitch = 7.736877
+[2022.12.03-17.18.35:107][845]LogTemp: Warning: ControlPitch = 10.805054
+[2022.12.03-17.18.35:108][845]LogTemp: Warning: Current rotation b4 = 10.805054
+[2022.12.03-17.18.35:108][845]LogTemp: Warning: New rotation b4 = 11.155629
+[2022.12.03-17.18.35:139][846]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.35:140][846]LogTemp: Warning: miss
+[2022.12.03-17.18.35:140][846]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:141][846]LogTemp: Warning: recoilpitch = 8.077185
+[2022.12.03-17.18.35:141][846]LogTemp: Warning: ControlPitch = 11.156616
+[2022.12.03-17.18.35:141][846]LogTemp: Warning: Current rotation b4 = 11.156616
+[2022.12.03-17.18.35:142][846]LogTemp: Warning: New rotation b4 = 11.496923
+[2022.12.03-17.18.35:172][847]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:173][847]LogTemp: Warning: recoilpitch = 8.417585
+[2022.12.03-17.18.35:174][847]LogTemp: Warning: ControlPitch = 11.497192
+[2022.12.03-17.18.35:174][847]LogTemp: Warning: Current rotation b4 = 11.497192
+[2022.12.03-17.18.35:174][847]LogTemp: Warning: New rotation b4 = 11.837593
+[2022.12.03-17.18.35:205][848]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:206][848]LogTemp: Warning: recoilpitch = 8.757774
+[2022.12.03-17.18.35:206][848]LogTemp: Warning: ControlPitch = 11.837769
+[2022.12.03-17.18.35:207][848]LogTemp: Warning: Current rotation b4 = 11.837769
+[2022.12.03-17.18.35:207][848]LogTemp: Warning: New rotation b4 = 12.177958
+[2022.12.03-17.18.35:239][849]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.35:239][849]LogTemp: Warning: miss
+[2022.12.03-17.18.35:240][849]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:241][849]LogTemp: Warning: recoilpitch = 9.098076
+[2022.12.03-17.18.35:241][849]LogTemp: Warning: ControlPitch = 12.178345
+[2022.12.03-17.18.35:241][849]LogTemp: Warning: Current rotation b4 = 12.178345
+[2022.12.03-17.18.35:242][849]LogTemp: Warning: New rotation b4 = 12.518646
+[2022.12.03-17.18.35:272][850]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:272][850]LogTemp: Warning: recoilpitch = 9.448748
+[2022.12.03-17.18.35:273][850]LogTemp: Warning: ControlPitch = 12.518921
+[2022.12.03-17.18.35:273][850]LogTemp: Warning: Current rotation b4 = 12.518921
+[2022.12.03-17.18.35:274][850]LogTemp: Warning: New rotation b4 = 12.869593
+[2022.12.03-17.18.35:305][851]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:306][851]LogTemp: Warning: recoilpitch = 9.789017
+[2022.12.03-17.18.35:306][851]LogTemp: Warning: ControlPitch = 12.870483
+[2022.12.03-17.18.35:306][851]LogTemp: Warning: Current rotation b4 = 12.870483
+[2022.12.03-17.18.35:307][851]LogTemp: Warning: New rotation b4 = 13.210752
+[2022.12.03-17.18.35:339][852]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.35:339][852]LogTemp: Warning: miss
+[2022.12.03-17.18.35:340][852]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:340][852]LogTemp: Warning: recoilpitch = 10.129276
+[2022.12.03-17.18.35:341][852]LogTemp: Warning: ControlPitch = 13.211060
+[2022.12.03-17.18.35:341][852]LogTemp: Warning: Current rotation b4 = 13.211060
+[2022.12.03-17.18.35:341][852]LogTemp: Warning: New rotation b4 = 13.551319
+[2022.12.03-17.18.35:372][853]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.35:373][853]LogTemp: Warning: recoilpitch = 10.480095
+[2022.12.03-17.18.35:373][853]LogTemp: Warning: ControlPitch = 13.551636
+[2022.12.03-17.18.35:374][853]LogTemp: Warning: Current rotation b4 = 13.551636
+[2022.12.03-17.18.35:374][853]LogTemp: Warning: New rotation b4 = 13.902454
+[2022.12.03-17.18.35:406][854]LogTemp: Warning: bIsFiring = false
+[2022.12.03-17.18.35:407][854]LogTemp: Warning: recoilpitch = 10.820180
+[2022.12.03-17.18.35:408][854]LogTemp: Warning: ControlPitch = 13.903198
+[2022.12.03-17.18.35:408][854]LogTemp: Warning: Current rotation b4 = 13.903198
+[2022.12.03-17.18.35:408][854]LogTemp: Warning: New rotation b4 = 14.243283
+[2022.12.03-17.18.35:409][854]LogTemp: Warning: bIsFiring not true
+[2022.12.03-17.18.35:409][854]LogTemp: Warning: Recoilstop
+[2022.12.03-17.18.35:409][854]LogTemp: Warning: RecoStart
+[2022.12.03-17.18.35:440][855]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:441][855]LogTemp: Warning: Control 14.243774
+[2022.12.03-17.18.35:441][855]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:442][855]LogTemp: Warning: Current rotation b4 = 14.243774
+[2022.12.03-17.18.35:442][855]LogTemp: Warning: New rotation b4 = 10.560874
+[2022.12.03-17.18.35:442][855]LogTemp: Warning: Delta 7.137280
+[2022.12.03-17.18.35:473][856]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:474][856]LogTemp: Warning: Control 10.563354
+[2022.12.03-17.18.35:474][856]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:474][856]LogTemp: Warning: Current rotation b4 = 10.563354
+[2022.12.03-17.18.35:475][856]LogTemp: Warning: New rotation b4 = 8.206272
+[2022.12.03-17.18.35:475][856]LogTemp: Warning: Delta 4.780197
+[2022.12.03-17.18.35:508][857]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:509][857]LogTemp: Warning: Control 8.206787
+[2022.12.03-17.18.35:509][857]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:510][857]LogTemp: Warning: Current rotation b4 = 8.206787
+[2022.12.03-17.18.35:510][857]LogTemp: Warning: New rotation b4 = 6.579761
+[2022.12.03-17.18.35:510][857]LogTemp: Warning: Delta 3.153171
+[2022.12.03-17.18.35:541][858]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:541][858]LogTemp: Warning: Control 6.580811
+[2022.12.03-17.18.35:542][858]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:542][858]LogTemp: Warning: Current rotation b4 = 6.580811
+[2022.12.03-17.18.35:542][858]LogTemp: Warning: New rotation b4 = 5.539701
+[2022.12.03-17.18.35:543][858]LogTemp: Warning: Delta 2.112061
+[2022.12.03-17.18.35:574][859]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:575][859]LogTemp: Warning: Control 5.537109
+[2022.12.03-17.18.35:575][859]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:576][859]LogTemp: Warning: Current rotation b4 = 5.537109
+[2022.12.03-17.18.35:576][859]LogTemp: Warning: New rotation b4 = 4.839489
+[2022.12.03-17.18.35:577][859]LogTemp: Warning: Delta 1.414441
+[2022.12.03-17.18.35:607][860]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:608][860]LogTemp: Warning: Control 4.839478
+[2022.12.03-17.18.35:608][860]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:608][860]LogTemp: Warning: Current rotation b4 = 4.839478
+[2022.12.03-17.18.35:609][860]LogTemp: Warning: New rotation b4 = 4.365102
+[2022.12.03-17.18.35:609][860]LogTemp: Warning: Delta 0.940065
+[2022.12.03-17.18.35:641][861]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:642][861]LogTemp: Warning: Control 4.367065
+[2022.12.03-17.18.35:642][861]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:642][861]LogTemp: Warning: Current rotation b4 = 4.367065
+[2022.12.03-17.18.35:643][861]LogTemp: Warning: New rotation b4 = 4.047163
+[2022.12.03-17.18.35:643][861]LogTemp: Warning: Delta 0.620163
+[2022.12.03-17.18.35:675][862]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:676][862]LogTemp: Warning: Control 4.048462
+[2022.12.03-17.18.35:676][862]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:676][862]LogTemp: Warning: Current rotation b4 = 4.048462
+[2022.12.03-17.18.35:677][862]LogTemp: Warning: New rotation b4 = 3.837409
+[2022.12.03-17.18.35:677][862]LogTemp: Warning: Delta 0.409110
+[2022.12.03-17.18.35:709][863]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.35:710][863]LogTemp: Warning: Control 3.839722
+[2022.12.03-17.18.35:710][863]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.35:710][863]LogTemp: Warning: Snap
+[2022.12.03-17.18.35:711][863]LogTemp: Warning: Current rotation b4 = 3.839722
+[2022.12.03-17.18.35:711][863]LogTemp: Warning: New rotation b4 = 3.411255
+[2022.12.03-17.18.40:701][ 14]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.40:702][ 14]LogTemp: Warning: miss
+[2022.12.03-17.18.40:702][ 14]LogTemp: Warning: start, 3.411255
+[2022.12.03-17.18.40:703][ 14]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:703][ 14]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.40:703][ 14]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.40:704][ 14]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.40:704][ 14]LogTemp: Warning: New rotation b4 = 3.411255
+[2022.12.03-17.18.40:734][ 15]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:735][ 15]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.40:735][ 15]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.40:735][ 15]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.40:736][ 15]LogTemp: Warning: New rotation b4 = 3.411255
+[2022.12.03-17.18.40:767][ 16]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:768][ 16]LogTemp: Warning: recoilpitch = 1.428876
+[2022.12.03-17.18.40:768][ 16]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.40:768][ 16]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.40:769][ 16]LogTemp: Warning: New rotation b4 = 4.840131
+[2022.12.03-17.18.40:801][ 17]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.40:801][ 17]LogTemp: Warning: miss
+[2022.12.03-17.18.40:802][ 17]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:802][ 17]LogTemp: Warning: recoilpitch = 2.857695
+[2022.12.03-17.18.40:802][ 17]LogTemp: Warning: ControlPitch = 4.839478
+[2022.12.03-17.18.40:803][ 17]LogTemp: Warning: Current rotation b4 = 4.839478
+[2022.12.03-17.18.40:803][ 17]LogTemp: Warning: New rotation b4 = 6.268297
+[2022.12.03-17.18.40:834][ 18]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:835][ 18]LogTemp: Warning: recoilpitch = 3.500019
+[2022.12.03-17.18.40:835][ 18]LogTemp: Warning: ControlPitch = 6.267700
+[2022.12.03-17.18.40:835][ 18]LogTemp: Warning: Current rotation b4 = 6.267700
+[2022.12.03-17.18.40:836][ 18]LogTemp: Warning: New rotation b4 = 6.910025
+[2022.12.03-17.18.40:867][ 19]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:867][ 19]LogTemp: Warning: recoilpitch = 3.606759
+[2022.12.03-17.18.40:868][ 19]LogTemp: Warning: ControlPitch = 6.910400
+[2022.12.03-17.18.40:868][ 19]LogTemp: Warning: Current rotation b4 = 6.910400
+[2022.12.03-17.18.40:868][ 19]LogTemp: Warning: New rotation b4 = 7.017140
+[2022.12.03-17.18.40:901][ 20]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.40:902][ 20]LogTemp: Warning: miss
+[2022.12.03-17.18.40:902][ 20]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:902][ 20]LogTemp: Warning: recoilpitch = 3.947088
+[2022.12.03-17.18.40:903][ 20]LogTemp: Warning: ControlPitch = 7.014771
+[2022.12.03-17.18.40:903][ 20]LogTemp: Warning: Current rotation b4 = 7.014771
+[2022.12.03-17.18.40:903][ 20]LogTemp: Warning: New rotation b4 = 7.355099
+[2022.12.03-17.18.40:934][ 21]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:934][ 21]LogTemp: Warning: recoilpitch = 4.297697
+[2022.12.03-17.18.40:934][ 21]LogTemp: Warning: ControlPitch = 7.355347
+[2022.12.03-17.18.40:935][ 21]LogTemp: Warning: Current rotation b4 = 7.355347
+[2022.12.03-17.18.40:935][ 21]LogTemp: Warning: New rotation b4 = 7.705956
+[2022.12.03-17.18.40:967][ 22]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.40:968][ 22]LogTemp: Warning: recoilpitch = 4.638005
+[2022.12.03-17.18.40:968][ 22]LogTemp: Warning: ControlPitch = 7.706909
+[2022.12.03-17.18.40:969][ 22]LogTemp: Warning: Current rotation b4 = 7.706909
+[2022.12.03-17.18.40:969][ 22]LogTemp: Warning: New rotation b4 = 8.047216
+[2022.12.03-17.18.41:001][ 23]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.41:001][ 23]LogTemp: Warning: miss
+[2022.12.03-17.18.41:002][ 23]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:002][ 23]LogTemp: Warning: recoilpitch = 4.978278
+[2022.12.03-17.18.41:003][ 23]LogTemp: Warning: ControlPitch = 8.047485
+[2022.12.03-17.18.41:003][ 23]LogTemp: Warning: Current rotation b4 = 8.047485
+[2022.12.03-17.18.41:004][ 23]LogTemp: Warning: New rotation b4 = 8.387758
+[2022.12.03-17.18.41:035][ 24]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:036][ 24]LogTemp: Warning: recoilpitch = 5.328872
+[2022.12.03-17.18.41:036][ 24]LogTemp: Warning: ControlPitch = 8.388062
+[2022.12.03-17.18.41:036][ 24]LogTemp: Warning: Current rotation b4 = 8.388062
+[2022.12.03-17.18.41:037][ 24]LogTemp: Warning: New rotation b4 = 8.738655
+[2022.12.03-17.18.41:068][ 25]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:069][ 25]LogTemp: Warning: recoilpitch = 5.679487
+[2022.12.03-17.18.41:069][ 25]LogTemp: Warning: ControlPitch = 8.739624
+[2022.12.03-17.18.41:070][ 25]LogTemp: Warning: Current rotation b4 = 8.739624
+[2022.12.03-17.18.41:070][ 25]LogTemp: Warning: New rotation b4 = 9.090239
+[2022.12.03-17.18.41:102][ 26]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.41:103][ 26]LogTemp: Warning: miss
+[2022.12.03-17.18.41:103][ 26]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:104][ 26]LogTemp: Warning: recoilpitch = 6.019776
+[2022.12.03-17.18.41:104][ 26]LogTemp: Warning: ControlPitch = 9.091187
+[2022.12.03-17.18.41:104][ 26]LogTemp: Warning: Current rotation b4 = 9.091187
+[2022.12.03-17.18.41:105][ 26]LogTemp: Warning: New rotation b4 = 9.431476
+[2022.12.03-17.18.41:135][ 27]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:136][ 27]LogTemp: Warning: recoilpitch = 6.370470
+[2022.12.03-17.18.41:136][ 27]LogTemp: Warning: ControlPitch = 9.431763
+[2022.12.03-17.18.41:136][ 27]LogTemp: Warning: Current rotation b4 = 9.431763
+[2022.12.03-17.18.41:137][ 27]LogTemp: Warning: New rotation b4 = 9.782457
+[2022.12.03-17.18.41:169][ 28]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:170][ 28]LogTemp: Warning: recoilpitch = 6.710723
+[2022.12.03-17.18.41:170][ 28]LogTemp: Warning: ControlPitch = 9.783325
+[2022.12.03-17.18.41:171][ 28]LogTemp: Warning: Current rotation b4 = 9.783325
+[2022.12.03-17.18.41:171][ 28]LogTemp: Warning: New rotation b4 = 10.123579
+[2022.12.03-17.18.41:202][ 29]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.41:202][ 29]LogTemp: Warning: miss
+[2022.12.03-17.18.41:203][ 29]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:203][ 29]LogTemp: Warning: recoilpitch = 7.061461
+[2022.12.03-17.18.41:204][ 29]LogTemp: Warning: ControlPitch = 10.123901
+[2022.12.03-17.18.41:204][ 29]LogTemp: Warning: Current rotation b4 = 10.123901
+[2022.12.03-17.18.41:204][ 29]LogTemp: Warning: New rotation b4 = 10.474640
+[2022.12.03-17.18.41:235][ 30]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:236][ 30]LogTemp: Warning: recoilpitch = 7.401737
+[2022.12.03-17.18.41:236][ 30]LogTemp: Warning: ControlPitch = 10.475464
+[2022.12.03-17.18.41:237][ 30]LogTemp: Warning: Current rotation b4 = 10.475464
+[2022.12.03-17.18.41:237][ 30]LogTemp: Warning: New rotation b4 = 10.815739
+[2022.12.03-17.18.41:269][ 31]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:269][ 31]LogTemp: Warning: recoilpitch = 7.742090
+[2022.12.03-17.18.41:270][ 31]LogTemp: Warning: ControlPitch = 10.816040
+[2022.12.03-17.18.41:270][ 31]LogTemp: Warning: Current rotation b4 = 10.816040
+[2022.12.03-17.18.41:271][ 31]LogTemp: Warning: New rotation b4 = 11.156393
+[2022.12.03-17.18.41:302][ 32]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.41:303][ 32]LogTemp: Warning: miss
+[2022.12.03-17.18.41:303][ 32]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:303][ 32]LogTemp: Warning: recoilpitch = 8.092730
+[2022.12.03-17.18.41:304][ 32]LogTemp: Warning: ControlPitch = 11.156616
+[2022.12.03-17.18.41:304][ 32]LogTemp: Warning: Current rotation b4 = 11.156616
+[2022.12.03-17.18.41:305][ 32]LogTemp: Warning: New rotation b4 = 11.507256
+[2022.12.03-17.18.41:335][ 33]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:335][ 33]LogTemp: Warning: recoilpitch = 8.432951
+[2022.12.03-17.18.41:336][ 33]LogTemp: Warning: ControlPitch = 11.508179
+[2022.12.03-17.18.41:336][ 33]LogTemp: Warning: Current rotation b4 = 11.508179
+[2022.12.03-17.18.41:336][ 33]LogTemp: Warning: New rotation b4 = 11.848400
+[2022.12.03-17.18.41:368][ 34]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.41:369][ 34]LogTemp: Warning: recoilpitch = 8.773277
+[2022.12.03-17.18.41:370][ 34]LogTemp: Warning: ControlPitch = 11.848755
+[2022.12.03-17.18.41:370][ 34]LogTemp: Warning: Current rotation b4 = 11.848755
+[2022.12.03-17.18.41:370][ 34]LogTemp: Warning: New rotation b4 = 12.189081
+[2022.12.03-17.18.41:401][ 35]LogTemp: Warning: bIsFiring = false
+[2022.12.03-17.18.41:402][ 35]LogTemp: Warning: recoilpitch = 9.113560
+[2022.12.03-17.18.41:402][ 35]LogTemp: Warning: ControlPitch = 12.189331
+[2022.12.03-17.18.41:403][ 35]LogTemp: Warning: Current rotation b4 = 12.189331
+[2022.12.03-17.18.41:403][ 35]LogTemp: Warning: New rotation b4 = 12.529613
+[2022.12.03-17.18.41:403][ 35]LogTemp: Warning: bIsFiring not true
+[2022.12.03-17.18.41:404][ 35]LogTemp: Warning: Recoilstop
+[2022.12.03-17.18.41:405][ 35]LogTemp: Warning: RecoStart
+[2022.12.03-17.18.41:434][ 36]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:434][ 36]LogTemp: Warning: Control 12.529907
+[2022.12.03-17.18.41:436][ 36]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:436][ 36]LogTemp: Warning: Current rotation b4 = 12.529907
+[2022.12.03-17.18.41:437][ 36]LogTemp: Warning: New rotation b4 = 9.519664
+[2022.12.03-17.18.41:437][ 36]LogTemp: Warning: Delta 6.103316
+[2022.12.03-17.18.41:468][ 37]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:469][ 37]LogTemp: Warning: Control 9.519653
+[2022.12.03-17.18.41:469][ 37]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:470][ 37]LogTemp: Warning: Current rotation b4 = 9.519653
+[2022.12.03-17.18.41:470][ 37]LogTemp: Warning: New rotation b4 = 7.442626
+[2022.12.03-17.18.41:470][ 37]LogTemp: Warning: Delta 4.026289
+[2022.12.03-17.18.41:502][ 38]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:503][ 38]LogTemp: Warning: Control 7.443237
+[2022.12.03-17.18.41:503][ 38]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:503][ 38]LogTemp: Warning: Current rotation b4 = 7.443237
+[2022.12.03-17.18.41:504][ 38]LogTemp: Warning: New rotation b4 = 6.093110
+[2022.12.03-17.18.41:504][ 38]LogTemp: Warning: Delta 2.676162
+[2022.12.03-17.18.41:536][ 39]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:537][ 39]LogTemp: Warning: Control 6.091919
+[2022.12.03-17.18.41:537][ 39]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:538][ 39]LogTemp: Warning: Current rotation b4 = 6.091919
+[2022.12.03-17.18.41:538][ 39]LogTemp: Warning: New rotation b4 = 5.181301
+[2022.12.03-17.18.41:538][ 39]LogTemp: Warning: Delta 1.765544
+[2022.12.03-17.18.41:569][ 40]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:569][ 40]LogTemp: Warning: Control 5.180054
+[2022.12.03-17.18.41:570][ 40]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:570][ 40]LogTemp: Warning: Current rotation b4 = 5.180054
+[2022.12.03-17.18.41:570][ 40]LogTemp: Warning: New rotation b4 = 4.605581
+[2022.12.03-17.18.41:571][ 40]LogTemp: Warning: Delta 1.191072
+[2022.12.03-17.18.41:603][ 41]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:604][ 41]LogTemp: Warning: Control 4.603271
+[2022.12.03-17.18.41:604][ 41]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:605][ 41]LogTemp: Warning: Current rotation b4 = 4.603271
+[2022.12.03-17.18.41:605][ 41]LogTemp: Warning: New rotation b4 = 4.197936
+[2022.12.03-17.18.41:605][ 41]LogTemp: Warning: Delta 0.785736
+[2022.12.03-17.18.41:636][ 42]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:636][ 42]LogTemp: Warning: Control 4.196777
+[2022.12.03-17.18.41:637][ 42]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:637][ 42]LogTemp: Warning: Current rotation b4 = 4.196777
+[2022.12.03-17.18.41:637][ 42]LogTemp: Warning: New rotation b4 = 3.937159
+[2022.12.03-17.18.41:638][ 42]LogTemp: Warning: Delta 0.526118
+[2022.12.03-17.18.41:669][ 43]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:670][ 43]LogTemp: Warning: Control 3.938599
+[2022.12.03-17.18.41:670][ 43]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:671][ 43]LogTemp: Warning: Current rotation b4 = 3.938599
+[2022.12.03-17.18.41:671][ 43]LogTemp: Warning: New rotation b4 = 3.764815
+[2022.12.03-17.18.41:672][ 43]LogTemp: Warning: Delta 0.352334
+[2022.12.03-17.18.41:702][ 44]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.41:703][ 44]LogTemp: Warning: Control 3.762817
+[2022.12.03-17.18.41:703][ 44]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.41:703][ 44]LogTemp: Warning: Snap
+[2022.12.03-17.18.41:704][ 44]LogTemp: Warning: Current rotation b4 = 3.762817
+[2022.12.03-17.18.41:704][ 44]LogTemp: Warning: New rotation b4 = 3.411255
+[2022.12.03-17.18.42:765][ 76]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.42:766][ 76]LogTemp: Warning: miss
+[2022.12.03-17.18.42:766][ 76]LogTemp: Warning: start, 3.411255
+[2022.12.03-17.18.42:766][ 76]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.42:767][ 76]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.42:767][ 76]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.42:767][ 76]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.42:768][ 76]LogTemp: Warning: New rotation b4 = 3.411255
+[2022.12.03-17.18.42:798][ 77]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.42:799][ 77]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.42:799][ 77]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.42:800][ 77]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.42:800][ 77]LogTemp: Warning: New rotation b4 = 3.411255
+[2022.12.03-17.18.42:832][ 78]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.42:833][ 78]LogTemp: Warning: recoilpitch = 1.436675
+[2022.12.03-17.18.42:833][ 78]LogTemp: Warning: ControlPitch = 3.411255
+[2022.12.03-17.18.42:834][ 78]LogTemp: Warning: Current rotation b4 = 3.411255
+[2022.12.03-17.18.42:834][ 78]LogTemp: Warning: New rotation b4 = 4.847929
+[2022.12.03-17.18.42:866][ 79]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.42:866][ 79]LogTemp: Warning: miss
+[2022.12.03-17.18.42:867][ 79]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.42:868][ 79]LogTemp: Warning: recoilpitch = 2.908755
+[2022.12.03-17.18.42:868][ 79]LogTemp: Warning: ControlPitch = 4.850464
+[2022.12.03-17.18.42:868][ 79]LogTemp: Warning: Current rotation b4 = 4.850464
+[2022.12.03-17.18.42:869][ 79]LogTemp: Warning: New rotation b4 = 6.322545
+[2022.12.03-17.18.42:899][ 80]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.42:900][ 80]LogTemp: Warning: recoilpitch = 3.500166
+[2022.12.03-17.18.42:900][ 80]LogTemp: Warning: ControlPitch = 6.322632
+[2022.12.03-17.18.42:900][ 80]LogTemp: Warning: Current rotation b4 = 6.322632
+[2022.12.03-17.18.42:901][ 80]LogTemp: Warning: New rotation b4 = 6.914042
+[2022.12.03-17.18.42:932][ 81]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.42:933][ 81]LogTemp: Warning: recoilpitch = 3.619097
+[2022.12.03-17.18.42:933][ 81]LogTemp: Warning: ControlPitch = 6.915894
+[2022.12.03-17.18.42:933][ 81]LogTemp: Warning: Current rotation b4 = 6.915894
+[2022.12.03-17.18.42:934][ 81]LogTemp: Warning: New rotation b4 = 7.034824
+[2022.12.03-17.18.42:966][ 82]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.42:966][ 82]LogTemp: Warning: miss
+[2022.12.03-17.18.42:967][ 82]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.42:967][ 82]LogTemp: Warning: recoilpitch = 3.959357
+[2022.12.03-17.18.42:967][ 82]LogTemp: Warning: ControlPitch = 7.036743
+[2022.12.03-17.18.42:968][ 82]LogTemp: Warning: Current rotation b4 = 7.036743
+[2022.12.03-17.18.42:968][ 82]LogTemp: Warning: New rotation b4 = 7.377004
+[2022.12.03-17.18.42:999][ 83]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:000][ 83]LogTemp: Warning: recoilpitch = 4.304892
+[2022.12.03-17.18.43:000][ 83]LogTemp: Warning: ControlPitch = 7.377319
+[2022.12.03-17.18.43:001][ 83]LogTemp: Warning: Current rotation b4 = 7.377319
+[2022.12.03-17.18.43:001][ 83]LogTemp: Warning: New rotation b4 = 7.722854
+[2022.12.03-17.18.43:033][ 84]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:034][ 84]LogTemp: Warning: recoilpitch = 4.650416
+[2022.12.03-17.18.43:034][ 84]LogTemp: Warning: ControlPitch = 7.723389
+[2022.12.03-17.18.43:034][ 84]LogTemp: Warning: Current rotation b4 = 7.723389
+[2022.12.03-17.18.43:035][ 84]LogTemp: Warning: New rotation b4 = 8.068913
+[2022.12.03-17.18.43:067][ 85]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.43:068][ 85]LogTemp: Warning: miss
+[2022.12.03-17.18.43:069][ 85]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:069][ 85]LogTemp: Warning: recoilpitch = 5.000999
+[2022.12.03-17.18.43:069][ 85]LogTemp: Warning: ControlPitch = 8.069458
+[2022.12.03-17.18.43:070][ 85]LogTemp: Warning: Current rotation b4 = 8.069458
+[2022.12.03-17.18.43:070][ 85]LogTemp: Warning: New rotation b4 = 8.420042
+[2022.12.03-17.18.43:100][ 86]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:101][ 86]LogTemp: Warning: recoilpitch = 5.341372
+[2022.12.03-17.18.43:101][ 86]LogTemp: Warning: ControlPitch = 8.421021
+[2022.12.03-17.18.43:102][ 86]LogTemp: Warning: Current rotation b4 = 8.421021
+[2022.12.03-17.18.43:102][ 86]LogTemp: Warning: New rotation b4 = 8.761394
+[2022.12.03-17.18.43:134][ 87]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:135][ 87]LogTemp: Warning: recoilpitch = 5.681741
+[2022.12.03-17.18.43:135][ 87]LogTemp: Warning: ControlPitch = 8.761597
+[2022.12.03-17.18.43:136][ 87]LogTemp: Warning: Current rotation b4 = 8.761597
+[2022.12.03-17.18.43:136][ 87]LogTemp: Warning: New rotation b4 = 9.101965
+[2022.12.03-17.18.43:168][ 88]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.43:168][ 88]LogTemp: Warning: miss
+[2022.12.03-17.18.43:169][ 88]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:170][ 88]LogTemp: Warning: recoilpitch = 6.032218
+[2022.12.03-17.18.43:170][ 88]LogTemp: Warning: ControlPitch = 9.102173
+[2022.12.03-17.18.43:170][ 88]LogTemp: Warning: Current rotation b4 = 9.102173
+[2022.12.03-17.18.43:171][ 88]LogTemp: Warning: New rotation b4 = 9.452650
+[2022.12.03-17.18.43:202][ 89]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:202][ 89]LogTemp: Warning: recoilpitch = 6.382819
+[2022.12.03-17.18.43:203][ 89]LogTemp: Warning: ControlPitch = 9.453735
+[2022.12.03-17.18.43:203][ 89]LogTemp: Warning: Current rotation b4 = 9.453735
+[2022.12.03-17.18.43:203][ 89]LogTemp: Warning: New rotation b4 = 9.804337
+[2022.12.03-17.18.43:235][ 90]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:235][ 90]LogTemp: Warning: recoilpitch = 6.733428
+[2022.12.03-17.18.43:237][ 90]LogTemp: Warning: ControlPitch = 9.805298
+[2022.12.03-17.18.43:237][ 90]LogTemp: Warning: Current rotation b4 = 9.805298
+[2022.12.03-17.18.43:237][ 90]LogTemp: Warning: New rotation b4 = 10.155907
+[2022.12.03-17.18.43:268][ 91]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.43:268][ 91]LogTemp: Warning: miss
+[2022.12.03-17.18.43:269][ 91]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:269][ 91]LogTemp: Warning: recoilpitch = 7.078952
+[2022.12.03-17.18.43:270][ 91]LogTemp: Warning: ControlPitch = 10.156860
+[2022.12.03-17.18.43:271][ 91]LogTemp: Warning: Current rotation b4 = 10.156860
+[2022.12.03-17.18.43:271][ 91]LogTemp: Warning: New rotation b4 = 10.502384
+[2022.12.03-17.18.43:302][ 92]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:303][ 92]LogTemp: Warning: recoilpitch = 7.419233
+[2022.12.03-17.18.43:303][ 92]LogTemp: Warning: ControlPitch = 10.502930
+[2022.12.03-17.18.43:304][ 92]LogTemp: Warning: Current rotation b4 = 10.502930
+[2022.12.03-17.18.43:304][ 92]LogTemp: Warning: New rotation b4 = 10.843210
+[2022.12.03-17.18.43:335][ 93]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:336][ 93]LogTemp: Warning: recoilpitch = 7.769875
+[2022.12.03-17.18.43:336][ 93]LogTemp: Warning: ControlPitch = 12.469482
+[2022.12.03-17.18.43:337][ 93]LogTemp: Warning: Current rotation b4 = 12.469482
+[2022.12.03-17.18.43:337][ 93]LogTemp: Warning: New rotation b4 = 12.820124
+[2022.12.03-17.18.43:368][ 94]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.43:368][ 94]LogTemp: Warning: miss
+[2022.12.03-17.18.43:369][ 94]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:369][ 94]LogTemp: Warning: recoilpitch = 8.110177
+[2022.12.03-17.18.43:370][ 94]LogTemp: Warning: ControlPitch = 12.996826
+[2022.12.03-17.18.43:370][ 94]LogTemp: Warning: Current rotation b4 = 12.996826
+[2022.12.03-17.18.43:370][ 94]LogTemp: Warning: New rotation b4 = 13.337129
+[2022.12.03-17.18.43:401][ 95]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:402][ 95]LogTemp: Warning: recoilpitch = 8.445353
+[2022.12.03-17.18.43:402][ 95]LogTemp: Warning: ControlPitch = 13.337402
+[2022.12.03-17.18.43:402][ 95]LogTemp: Warning: Current rotation b4 = 13.337402
+[2022.12.03-17.18.43:403][ 95]LogTemp: Warning: New rotation b4 = 13.672578
+[2022.12.03-17.18.43:435][ 96]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:435][ 96]LogTemp: Warning: recoilpitch = 8.790905
+[2022.12.03-17.18.43:438][ 96]LogTemp: Warning: ControlPitch = 13.672485
+[2022.12.03-17.18.43:438][ 96]LogTemp: Warning: Current rotation b4 = 13.672485
+[2022.12.03-17.18.43:438][ 96]LogTemp: Warning: New rotation b4 = 14.018038
+[2022.12.03-17.18.43:468][ 97]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.43:468][ 97]LogTemp: Warning: miss
+[2022.12.03-17.18.43:469][ 97]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:469][ 97]LogTemp: Warning: recoilpitch = 9.136400
+[2022.12.03-17.18.43:469][ 97]LogTemp: Warning: ControlPitch = 14.018555
+[2022.12.03-17.18.43:470][ 97]LogTemp: Warning: Current rotation b4 = 14.018555
+[2022.12.03-17.18.43:470][ 97]LogTemp: Warning: New rotation b4 = 14.364050
+[2022.12.03-17.18.43:502][ 98]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:503][ 98]LogTemp: Warning: recoilpitch = 9.481919
+[2022.12.03-17.18.43:503][ 98]LogTemp: Warning: ControlPitch = 14.364624
+[2022.12.03-17.18.43:503][ 98]LogTemp: Warning: Current rotation b4 = 14.364624
+[2022.12.03-17.18.43:504][ 98]LogTemp: Warning: New rotation b4 = 14.710143
+[2022.12.03-17.18.43:535][ 99]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.43:535][ 99]LogTemp: Warning: recoilpitch = 9.832527
+[2022.12.03-17.18.43:535][ 99]LogTemp: Warning: ControlPitch = 14.710693
+[2022.12.03-17.18.43:536][ 99]LogTemp: Warning: Current rotation b4 = 14.710693
+[2022.12.03-17.18.43:537][ 99]LogTemp: Warning: New rotation b4 = 15.061301
+[2022.12.03-17.18.43:569][100]LogTemp: Warning: bIsFiring = false
+[2022.12.03-17.18.43:570][100]LogTemp: Warning: recoilpitch = 10.172836
+[2022.12.03-17.18.43:571][100]LogTemp: Warning: ControlPitch = 15.062256
+[2022.12.03-17.18.43:572][100]LogTemp: Warning: Current rotation b4 = 15.062256
+[2022.12.03-17.18.43:572][100]LogTemp: Warning: New rotation b4 = 15.402565
+[2022.12.03-17.18.43:572][100]LogTemp: Warning: bIsFiring not true
+[2022.12.03-17.18.43:573][100]LogTemp: Warning: Recoilstop
+[2022.12.03-17.18.43:573][100]LogTemp: Warning: RecoStart
+[2022.12.03-17.18.43:603][101]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:604][101]LogTemp: Warning: Control 15.402832
+[2022.12.03-17.18.43:604][101]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:604][101]LogTemp: Warning: Current rotation b4 = 15.402832
+[2022.12.03-17.18.43:605][101]LogTemp: Warning: New rotation b4 = 11.940908
+[2022.12.03-17.18.43:605][101]LogTemp: Warning: Delta 6.710913
+[2022.12.03-17.18.43:637][102]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:638][102]LogTemp: Warning: Control 11.942139
+[2022.12.03-17.18.43:638][102]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:638][102]LogTemp: Warning: Current rotation b4 = 11.942139
+[2022.12.03-17.18.43:639][102]LogTemp: Warning: New rotation b4 = 9.658249
+[2022.12.03-17.18.43:639][102]LogTemp: Warning: Delta 4.427023
+[2022.12.03-17.18.43:670][103]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:671][103]LogTemp: Warning: Control 9.656982
+[2022.12.03-17.18.43:671][103]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:672][103]LogTemp: Warning: Current rotation b4 = 9.656982
+[2022.12.03-17.18.43:672][103]LogTemp: Warning: New rotation b4 = 8.194623
+[2022.12.03-17.18.43:673][103]LogTemp: Warning: Delta 2.964664
+[2022.12.03-17.18.43:703][104]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:704][104]LogTemp: Warning: Control 8.195801
+[2022.12.03-17.18.43:704][104]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:705][104]LogTemp: Warning: Current rotation b4 = 8.195801
+[2022.12.03-17.18.43:705][104]LogTemp: Warning: New rotation b4 = 7.216633
+[2022.12.03-17.18.43:706][104]LogTemp: Warning: Delta 1.985496
+[2022.12.03-17.18.43:736][105]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:736][105]LogTemp: Warning: Control 7.218018
+[2022.12.03-17.18.43:737][105]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:737][105]LogTemp: Warning: Current rotation b4 = 7.218018
+[2022.12.03-17.18.43:738][105]LogTemp: Warning: New rotation b4 = 6.562180
+[2022.12.03-17.18.43:738][105]LogTemp: Warning: Delta 1.329658
+[2022.12.03-17.18.43:770][106]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:771][106]LogTemp: Warning: Control 6.564331
+[2022.12.03-17.18.43:771][106]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:771][106]LogTemp: Warning: Current rotation b4 = 6.564331
+[2022.12.03-17.18.43:772][106]LogTemp: Warning: New rotation b4 = 6.111823
+[2022.12.03-17.18.43:772][106]LogTemp: Warning: Delta 0.877150
+[2022.12.03-17.18.43:803][107]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:804][107]LogTemp: Warning: Control 6.113892
+[2022.12.03-17.18.43:804][107]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:804][107]LogTemp: Warning: Current rotation b4 = 6.113892
+[2022.12.03-17.18.43:804][107]LogTemp: Warning: New rotation b4 = 5.824180
+[2022.12.03-17.18.43:805][107]LogTemp: Warning: Delta 0.587438
+[2022.12.03-17.18.43:836][108]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:837][108]LogTemp: Warning: Control 5.822754
+[2022.12.03-17.18.43:837][108]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:837][108]LogTemp: Warning: Current rotation b4 = 5.822754
+[2022.12.03-17.18.43:838][108]LogTemp: Warning: New rotation b4 = 5.625554
+[2022.12.03-17.18.43:838][108]LogTemp: Warning: Delta 0.390238
+[2022.12.03-17.18.43:869][109]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:869][109]LogTemp: Warning: Control 5.625000
+[2022.12.03-17.18.43:870][109]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:871][109]LogTemp: Warning: Current rotation b4 = 5.625000
+[2022.12.03-17.18.43:871][109]LogTemp: Warning: New rotation b4 = 5.496244
+[2022.12.03-17.18.43:872][109]LogTemp: Warning: Delta 0.261482
+[2022.12.03-17.18.43:902][110]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:903][110]LogTemp: Warning: Control 5.498657
+[2022.12.03-17.18.43:903][110]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:904][110]LogTemp: Warning: Current rotation b4 = 5.498657
+[2022.12.03-17.18.43:904][110]LogTemp: Warning: New rotation b4 = 5.412296
+[2022.12.03-17.18.43:904][110]LogTemp: Warning: Delta 0.175120
+[2022.12.03-17.18.43:935][111]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:936][111]LogTemp: Warning: Control 5.410767
+[2022.12.03-17.18.43:936][111]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:936][111]LogTemp: Warning: Current rotation b4 = 5.410767
+[2022.12.03-17.18.43:936][111]LogTemp: Warning: New rotation b4 = 5.352931
+[2022.12.03-17.18.43:937][111]LogTemp: Warning: Delta 0.117284
+[2022.12.03-17.18.43:968][112]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.43:969][112]LogTemp: Warning: Control 5.350342
+[2022.12.03-17.18.43:969][112]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.43:971][112]LogTemp: Warning: Current rotation b4 = 5.350342
+[2022.12.03-17.18.43:971][112]LogTemp: Warning: New rotation b4 = 5.311602
+[2022.12.03-17.18.43:972][112]LogTemp: Warning: Delta 0.078544
+[2022.12.03-17.18.44:001][113]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:002][113]LogTemp: Warning: Control 5.311890
+[2022.12.03-17.18.44:002][113]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.44:002][113]LogTemp: Warning: Current rotation b4 = 5.311890
+[2022.12.03-17.18.44:003][113]LogTemp: Warning: New rotation b4 = 5.285932
+[2022.12.03-17.18.44:003][113]LogTemp: Warning: Delta 0.052587
+[2022.12.03-17.18.44:034][114]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:035][114]LogTemp: Warning: Control 5.284424
+[2022.12.03-17.18.44:035][114]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.44:035][114]LogTemp: Warning: Current rotation b4 = 5.284424
+[2022.12.03-17.18.44:036][114]LogTemp: Warning: New rotation b4 = 5.267061
+[2022.12.03-17.18.44:036][114]LogTemp: Warning: Delta 0.035224
+[2022.12.03-17.18.44:067][115]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:068][115]LogTemp: Warning: Control 5.267944
+[2022.12.03-17.18.44:068][115]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.44:069][115]LogTemp: Warning: Current rotation b4 = 5.267944
+[2022.12.03-17.18.44:069][115]LogTemp: Warning: New rotation b4 = 5.256489
+[2022.12.03-17.18.44:069][115]LogTemp: Warning: Delta 0.023768
+[2022.12.03-17.18.44:100][116]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:101][116]LogTemp: Warning: Control 5.256958
+[2022.12.03-17.18.44:101][116]LogTemp: Warning: Start 3.411255
+[2022.12.03-17.18.44:101][116]LogTemp: Warning: Current rotation b4 = 5.256958
+[2022.12.03-17.18.44:102][116]LogTemp: Warning: New rotation b4 = 5.249223
+[2022.12.03-17.18.44:102][116]LogTemp: Warning: Delta 0.016034
+[2022.12.03-17.18.44:466][127]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.44:466][127]LogTemp: Warning: miss
+[2022.12.03-17.18.44:467][127]LogTemp: Warning: start, 5.251465
+[2022.12.03-17.18.44:467][127]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:467][127]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.44:468][127]LogTemp: Warning: ControlPitch = 5.251465
+[2022.12.03-17.18.44:468][127]LogTemp: Warning: Current rotation b4 = 5.251465
+[2022.12.03-17.18.44:469][127]LogTemp: Warning: New rotation b4 = 5.251465
+[2022.12.03-17.18.44:499][128]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:499][128]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.44:500][128]LogTemp: Warning: ControlPitch = 5.251465
+[2022.12.03-17.18.44:500][128]LogTemp: Warning: Current rotation b4 = 5.251465
+[2022.12.03-17.18.44:500][128]LogTemp: Warning: New rotation b4 = 5.251465
+[2022.12.03-17.18.44:533][129]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:534][129]LogTemp: Warning: recoilpitch = 1.450841
+[2022.12.03-17.18.44:534][129]LogTemp: Warning: ControlPitch = 5.251465
+[2022.12.03-17.18.44:534][129]LogTemp: Warning: Current rotation b4 = 5.251465
+[2022.12.03-17.18.44:535][129]LogTemp: Warning: New rotation b4 = 6.702306
+[2022.12.03-17.18.44:567][130]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.44:568][130]LogTemp: Warning: miss
+[2022.12.03-17.18.44:568][130]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:569][130]LogTemp: Warning: recoilpitch = 2.922740
+[2022.12.03-17.18.44:569][130]LogTemp: Warning: ControlPitch = 6.020508
+[2022.12.03-17.18.44:569][130]LogTemp: Warning: Current rotation b4 = 6.020508
+[2022.12.03-17.18.44:570][130]LogTemp: Warning: New rotation b4 = 7.492406
+[2022.12.03-17.18.44:600][131]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:601][131]LogTemp: Warning: recoilpitch = 3.500341
+[2022.12.03-17.18.44:601][131]LogTemp: Warning: ControlPitch = 7.316895
+[2022.12.03-17.18.44:602][131]LogTemp: Warning: Current rotation b4 = 7.316895
+[2022.12.03-17.18.44:602][131]LogTemp: Warning: New rotation b4 = 7.894496
+[2022.12.03-17.18.44:635][132]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:635][132]LogTemp: Warning: recoilpitch = 3.622281
+[2022.12.03-17.18.44:636][132]LogTemp: Warning: ControlPitch = 7.717896
+[2022.12.03-17.18.44:636][132]LogTemp: Warning: Current rotation b4 = 7.717896
+[2022.12.03-17.18.44:637][132]LogTemp: Warning: New rotation b4 = 7.839835
+[2022.12.03-17.18.44:669][133]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.44:670][133]LogTemp: Warning: miss
+[2022.12.03-17.18.44:671][133]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:671][133]LogTemp: Warning: recoilpitch = 3.972897
+[2022.12.03-17.18.44:671][133]LogTemp: Warning: ControlPitch = 7.838745
+[2022.12.03-17.18.44:672][133]LogTemp: Warning: Current rotation b4 = 7.838745
+[2022.12.03-17.18.44:672][133]LogTemp: Warning: New rotation b4 = 8.189362
+[2022.12.03-17.18.44:703][134]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:703][134]LogTemp: Warning: recoilpitch = 4.323528
+[2022.12.03-17.18.44:704][134]LogTemp: Warning: ControlPitch = 8.190308
+[2022.12.03-17.18.44:704][134]LogTemp: Warning: Current rotation b4 = 8.190308
+[2022.12.03-17.18.44:704][134]LogTemp: Warning: New rotation b4 = 8.540939
+[2022.12.03-17.18.44:736][135]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:737][135]LogTemp: Warning: recoilpitch = 4.674157
+[2022.12.03-17.18.44:737][135]LogTemp: Warning: ControlPitch = 8.541870
+[2022.12.03-17.18.44:738][135]LogTemp: Warning: Current rotation b4 = 8.541870
+[2022.12.03-17.18.44:738][135]LogTemp: Warning: New rotation b4 = 8.892499
+[2022.12.03-17.18.44:769][136]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.44:769][136]LogTemp: Warning: miss
+[2022.12.03-17.18.44:770][136]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.44:770][136]LogTemp: Warning: recoilpitch = 5.014482
+[2022.12.03-17.18.44:771][136]LogTemp: Warning: ControlPitch = 8.893433
+[2022.12.03-17.18.44:772][136]LogTemp: Warning: Current rotation b4 = 8.893433
+[2022.12.03-17.18.44:772][136]LogTemp: Warning: New rotation b4 = 9.233757
+[2022.12.03-17.18.44:803][137]LogTemp: Warning: bIsFiring = false
+[2022.12.03-17.18.44:804][137]LogTemp: Warning: recoilpitch = 5.354761
+[2022.12.03-17.18.44:804][137]LogTemp: Warning: ControlPitch = 9.234009
+[2022.12.03-17.18.44:805][137]LogTemp: Warning: Current rotation b4 = 9.234009
+[2022.12.03-17.18.44:805][137]LogTemp: Warning: New rotation b4 = 9.574287
+[2022.12.03-17.18.44:805][137]LogTemp: Warning: bIsFiring not true
+[2022.12.03-17.18.44:805][137]LogTemp: Warning: Recoilstop
+[2022.12.03-17.18.44:806][137]LogTemp: Warning: RecoStart
+[2022.12.03-17.18.44:836][138]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:837][138]LogTemp: Warning: Control 9.574585
+[2022.12.03-17.18.44:838][138]LogTemp: Warning: Start 5.251465
+[2022.12.03-17.18.44:838][138]LogTemp: Warning: Current rotation b4 = 9.574585
+[2022.12.03-17.18.44:838][138]LogTemp: Warning: New rotation b4 = 7.805830
+[2022.12.03-17.18.44:839][138]LogTemp: Warning: Delta 3.586006
+[2022.12.03-17.18.44:869][139]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:870][139]LogTemp: Warning: Control 7.805786
+[2022.12.03-17.18.44:870][139]LogTemp: Warning: Start 5.251465
+[2022.12.03-17.18.44:871][139]LogTemp: Warning: Current rotation b4 = 7.805786
+[2022.12.03-17.18.44:871][139]LogTemp: Warning: New rotation b4 = 6.621367
+[2022.12.03-17.18.44:871][139]LogTemp: Warning: Delta 2.401587
+[2022.12.03-17.18.44:902][140]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:903][140]LogTemp: Warning: Control 6.619263
+[2022.12.03-17.18.44:905][140]LogTemp: Warning: Start 5.251465
+[2022.12.03-17.18.44:905][140]LogTemp: Warning: Current rotation b4 = 6.619263
+[2022.12.03-17.18.44:905][140]LogTemp: Warning: New rotation b4 = 5.826083
+[2022.12.03-17.18.44:906][140]LogTemp: Warning: Delta 1.608407
+[2022.12.03-17.18.44:935][141]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:935][141]LogTemp: Warning: Control 5.828247
+[2022.12.03-17.18.44:936][141]LogTemp: Warning: Start 5.251465
+[2022.12.03-17.18.44:936][141]LogTemp: Warning: Current rotation b4 = 5.828247
+[2022.12.03-17.18.44:937][141]LogTemp: Warning: New rotation b4 = 5.296968
+[2022.12.03-17.18.44:937][141]LogTemp: Warning: Delta 1.077128
+[2022.12.03-17.18.44:968][142]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.44:968][142]LogTemp: Warning: Control 5.295410
+[2022.12.03-17.18.44:969][142]LogTemp: Warning: Start 5.251465
+[2022.12.03-17.18.44:969][142]LogTemp: Warning: Snap
+[2022.12.03-17.18.44:969][142]LogTemp: Warning: Current rotation b4 = 5.295410
+[2022.12.03-17.18.44:970][142]LogTemp: Warning: New rotation b4 = 5.251465
+[2022.12.03-17.18.45:266][151]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.45:267][151]LogTemp: Warning: miss
+[2022.12.03-17.18.45:267][151]LogTemp: Warning: start, 5.251465
+[2022.12.03-17.18.45:268][151]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:268][151]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.45:268][151]LogTemp: Warning: ControlPitch = 5.251465
+[2022.12.03-17.18.45:268][151]LogTemp: Warning: Current rotation b4 = 5.251465
+[2022.12.03-17.18.45:269][151]LogTemp: Warning: New rotation b4 = 5.251465
+[2022.12.03-17.18.45:300][152]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:301][152]LogTemp: Warning: recoilpitch = 0.000000
+[2022.12.03-17.18.45:301][152]LogTemp: Warning: ControlPitch = 5.251465
+[2022.12.03-17.18.45:302][152]LogTemp: Warning: Current rotation b4 = 5.251465
+[2022.12.03-17.18.45:302][152]LogTemp: Warning: New rotation b4 = 5.251465
+[2022.12.03-17.18.45:334][153]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:334][153]LogTemp: Warning: recoilpitch = 1.472595
+[2022.12.03-17.18.45:335][153]LogTemp: Warning: ControlPitch = 5.251465
+[2022.12.03-17.18.45:335][153]LogTemp: Warning: Current rotation b4 = 5.251465
+[2022.12.03-17.18.45:335][153]LogTemp: Warning: New rotation b4 = 6.724060
+[2022.12.03-17.18.45:367][154]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:368][154]LogTemp: Warning: recoilpitch = 2.943979
+[2022.12.03-17.18.45:368][154]LogTemp: Warning: ControlPitch = 6.723633
+[2022.12.03-17.18.45:368][154]LogTemp: Warning: Current rotation b4 = 6.723633
+[2022.12.03-17.18.45:369][154]LogTemp: Warning: New rotation b4 = 8.195017
+[2022.12.03-17.18.45:400][155]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.45:400][155]LogTemp: Warning: miss
+[2022.12.03-17.18.45:401][155]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:402][155]LogTemp: Warning: recoilpitch = 3.500233
+[2022.12.03-17.18.45:402][155]LogTemp: Warning: ControlPitch = 8.195801
+[2022.12.03-17.18.45:402][155]LogTemp: Warning: Current rotation b4 = 8.195801
+[2022.12.03-17.18.45:402][155]LogTemp: Warning: New rotation b4 = 8.752055
+[2022.12.03-17.18.45:433][156]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:434][156]LogTemp: Warning: recoilpitch = 3.617059
+[2022.12.03-17.18.45:435][156]LogTemp: Warning: ControlPitch = 8.052979
+[2022.12.03-17.18.45:435][156]LogTemp: Warning: Current rotation b4 = 8.052979
+[2022.12.03-17.18.45:435][156]LogTemp: Warning: New rotation b4 = 8.169804
+[2022.12.03-17.18.45:466][157]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.45:467][157]LogTemp: Warning: miss
+[2022.12.03-17.18.45:467][157]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:468][157]LogTemp: Warning: recoilpitch = 3.957355
+[2022.12.03-17.18.45:468][157]LogTemp: Warning: ControlPitch = 7.816772
+[2022.12.03-17.18.45:468][157]LogTemp: Warning: Current rotation b4 = 7.816772
+[2022.12.03-17.18.45:469][157]LogTemp: Warning: New rotation b4 = 8.157069
+[2022.12.03-17.18.45:499][158]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:500][158]LogTemp: Warning: recoilpitch = 4.297647
+[2022.12.03-17.18.45:500][158]LogTemp: Warning: ControlPitch = 7.805786
+[2022.12.03-17.18.45:501][158]LogTemp: Warning: Current rotation b4 = 7.805786
+[2022.12.03-17.18.45:501][158]LogTemp: Warning: New rotation b4 = 8.146077
+[2022.12.03-17.18.45:533][159]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:534][159]LogTemp: Warning: recoilpitch = 4.637939
+[2022.12.03-17.18.45:534][159]LogTemp: Warning: ControlPitch = 8.146362
+[2022.12.03-17.18.45:535][159]LogTemp: Warning: Current rotation b4 = 8.146362
+[2022.12.03-17.18.45:535][159]LogTemp: Warning: New rotation b4 = 8.486654
+[2022.12.03-17.18.45:567][160]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:567][160]LogTemp: Warning: recoilpitch = 4.988568
+[2022.12.03-17.18.45:568][160]LogTemp: Warning: ControlPitch = 8.486938
+[2022.12.03-17.18.45:568][160]LogTemp: Warning: Current rotation b4 = 8.486938
+[2022.12.03-17.18.45:568][160]LogTemp: Warning: New rotation b4 = 8.837568
+[2022.12.03-17.18.45:600][161]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.45:601][161]LogTemp: Warning: miss
+[2022.12.03-17.18.45:601][161]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:602][161]LogTemp: Warning: recoilpitch = 5.339170
+[2022.12.03-17.18.45:602][161]LogTemp: Warning: ControlPitch = 8.662720
+[2022.12.03-17.18.45:602][161]LogTemp: Warning: Current rotation b4 = 8.662720
+[2022.12.03-17.18.45:603][161]LogTemp: Warning: New rotation b4 = 9.013321
+[2022.12.03-17.18.45:633][162]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:633][162]LogTemp: Warning: recoilpitch = 5.679475
+[2022.12.03-17.18.45:633][162]LogTemp: Warning: ControlPitch = 8.486938
+[2022.12.03-17.18.45:634][162]LogTemp: Warning: Current rotation b4 = 8.486938
+[2022.12.03-17.18.45:634][162]LogTemp: Warning: New rotation b4 = 8.827244
+[2022.12.03-17.18.45:666][163]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:667][163]LogTemp: Warning: recoilpitch = 6.016319
+[2022.12.03-17.18.45:667][163]LogTemp: Warning: ControlPitch = 7.322388
+[2022.12.03-17.18.45:668][163]LogTemp: Warning: Current rotation b4 = 7.322388
+[2022.12.03-17.18.45:668][163]LogTemp: Warning: New rotation b4 = 7.659232
+[2022.12.03-17.18.45:700][164]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.45:700][164]LogTemp: Warning: miss
+[2022.12.03-17.18.45:700][164]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:701][164]LogTemp: Warning: recoilpitch = 6.360054
+[2022.12.03-17.18.45:702][164]LogTemp: Warning: ControlPitch = 6.289673
+[2022.12.03-17.18.45:702][164]LogTemp: Warning: Current rotation b4 = 6.289673
+[2022.12.03-17.18.45:702][164]LogTemp: Warning: New rotation b4 = 6.633408
+[2022.12.03-17.18.45:733][165]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:734][165]LogTemp: Warning: recoilpitch = 6.706344
+[2022.12.03-17.18.45:734][165]LogTemp: Warning: ControlPitch = 5.938110
+[2022.12.03-17.18.45:735][165]LogTemp: Warning: Current rotation b4 = 5.938110
+[2022.12.03-17.18.45:735][165]LogTemp: Warning: New rotation b4 = 6.284400
+[2022.12.03-17.18.45:767][166]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:768][166]LogTemp: Warning: recoilpitch = 7.050993
+[2022.12.03-17.18.45:768][166]LogTemp: Warning: ControlPitch = 5.932617
+[2022.12.03-17.18.45:769][166]LogTemp: Warning: Current rotation b4 = 5.932617
+[2022.12.03-17.18.45:769][166]LogTemp: Warning: New rotation b4 = 6.277267
+[2022.12.03-17.18.45:800][167]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.45:801][167]LogTemp: Warning: miss
+[2022.12.03-17.18.45:801][167]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:802][167]LogTemp: Warning: recoilpitch = 7.401610
+[2022.12.03-17.18.45:802][167]LogTemp: Warning: ControlPitch = 5.927124
+[2022.12.03-17.18.45:802][167]LogTemp: Warning: Current rotation b4 = 5.927124
+[2022.12.03-17.18.45:802][167]LogTemp: Warning: New rotation b4 = 6.277741
+[2022.12.03-17.18.45:833][168]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:833][168]LogTemp: Warning: recoilpitch = 7.741915
+[2022.12.03-17.18.45:834][168]LogTemp: Warning: ControlPitch = 6.278687
+[2022.12.03-17.18.45:834][168]LogTemp: Warning: Current rotation b4 = 6.278687
+[2022.12.03-17.18.45:835][168]LogTemp: Warning: New rotation b4 = 6.618991
+[2022.12.03-17.18.45:866][169]LogTemp: Warning: bIsFiring = true
+[2022.12.03-17.18.45:866][169]LogTemp: Warning: recoilpitch = 8.082216
+[2022.12.03-17.18.45:867][169]LogTemp: Warning: ControlPitch = 6.619263
+[2022.12.03-17.18.45:867][169]LogTemp: Warning: Current rotation b4 = 6.619263
+[2022.12.03-17.18.45:868][169]LogTemp: Warning: New rotation b4 = 6.959564
+[2022.12.03-17.18.45:899][170]LogTemp: Warning: Weapon name: None
+[2022.12.03-17.18.45:900][170]LogTemp: Warning: miss
+[2022.12.03-17.18.45:901][170]LogTemp: Warning: bIsFiring = false
+[2022.12.03-17.18.45:901][170]LogTemp: Warning: recoilpitch = 8.422497
+[2022.12.03-17.18.45:902][170]LogTemp: Warning: ControlPitch = 6.959839
+[2022.12.03-17.18.45:902][170]LogTemp: Warning: Current rotation b4 = 6.959839
+[2022.12.03-17.18.45:902][170]LogTemp: Warning: New rotation b4 = 7.300119
+[2022.12.03-17.18.45:903][170]LogTemp: Warning: bIsFiring not true
+[2022.12.03-17.18.45:903][170]LogTemp: Warning: Recoilstop
+[2022.12.03-17.18.45:904][170]LogTemp: Warning: RecoStart
+[2022.12.03-17.18.45:932][171]LogTemp: Warning: SEIZURES
+[2022.12.03-17.18.45:932][171]LogTemp: Warning: Control 7.300415
+[2022.12.03-17.18.45:933][171]LogTemp: Warning: Start 5.251465
+[2022.12.03-17.18.45:933][171]LogTemp: Warning: Current rotation b4 = 7.300415
+[2022.12.03-17.18.45:934][171]LogTemp: Warning: New rotation b4 = 4.518687
+[2022.12.03-17.18.45:934][171]LogTemp: Warning: Delta 5.640769
