@@ -123,7 +123,7 @@ Afpscharacter::Afpscharacter()
 
 	//"I have set it to 10s but dependeding how long it takes to empty the gun mag, you can increase the time."
 	RecoilTimerLength = 10.0f;
-
+	SnapRecoveryDegrees = 0.5f;
 }
 
 
@@ -284,7 +284,7 @@ void Afpscharacter::ReleaseFire()
 void Afpscharacter::ServerReleaseFire_Implementation()
 {
 	bIsFiring = false;
-	RecoilStop();
+	//RecoilStop();
 }
 void Afpscharacter::InteractPressed()
 {
@@ -315,7 +315,7 @@ void Afpscharacter::StopFiring()
 	}
 	else
 	{
-		RecoilStop();
+		//RecoilStop();
 	}
 
 }
@@ -323,7 +323,7 @@ void Afpscharacter::StopFiring()
 void Afpscharacter::ServerStopFiring_Implementation()
 {
 	bIsFiring = false;
-	RecoilStop();
+	//RecoilStop();
 }
 
 void Afpscharacter::EnableCanInteract()
@@ -1352,6 +1352,8 @@ void Afpscharacter::RecoilApply(float DeltaTime)
 
 			FRotator PlayerDeltaRotator = GetControlRotation() - RecoilStartRotation - RecoilDeltaRotation;
 
+			UE_LOG(LogTemp, Warning, TEXT("recoilpitch = %f"), RecoilVector.Y);
+			UE_LOG(LogTemp, Warning, TEXT("ControlPitch = %f"), GetControlRotation().Pitch);
 			SetControlRotation(RecoilStartRotation + PlayerDeltaRotator + Delta);
 
 			RecoilDeltaRotation = Delta;
@@ -1385,6 +1387,9 @@ void Afpscharacter::RecoilApply(float DeltaTime)
 
 void Afpscharacter::SetControlRotation(FRotator Rotation)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Current rotation b4 = %f"), GetControlRotation().Pitch);
+	UE_LOG(LogTemp, Warning, TEXT("New rotation b4 = %f"), Rotation.Pitch);
+
 	if (IsLocallyControlled())
 	{
 		//Client rotation
@@ -1407,18 +1412,41 @@ void Afpscharacter::RecoveryApply(float DeltaTime)
 {
 	
 	//Resetting recoil
-	//TODO MAKE THIS AN OPTION
 	FRotator tmprot = GetControlRotation();
 
-	if (tmprot.Pitch >= RecoilStartRotation.Pitch)
+	if (tmprot.Pitch > RecoilStartRotation.Pitch && ApplyRecoilRecoverySetting)
 	{
-		//if user aim is not moved down already
-		SetControlRotation(UKismetMathLibrary::RInterpTo(GetControlRotation(), GetControlRotation() - RecoilDeltaRotation, DeltaTime, RecoilTimerLength));
-		RecoilDeltaRotation = RecoilDeltaRotation + (GetControlRotation() - tmprot);
+		
+		UE_LOG(LogTemp, Warning, TEXT("SEIZURES"));
+		UE_LOG(LogTemp, Warning, TEXT("Control %f"), GetControlRotation().GetNormalized().Pitch);
+		UE_LOG(LogTemp, Warning, TEXT("Start %f"), RecoilStartRotation.Pitch);
+
+		//Snap to the recoilStartRotation pitch if closer than snapdegrees degree, to prevent convergence from taking forever.
+		if (abs(GetControlRotation().GetNormalized().Pitch - RecoilStartRotation.Pitch) <= SnapRecoveryDegrees)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Snap"));
+			SetControlRotation(RecoilStartRotation);
+			bDoRecoilRecovery = false;
+			RecoilRecoveryTimerHandle.Invalidate();
+		}
+		else
+		{
+			//if user aim is not moved down already
+			SetControlRotation(UKismetMathLibrary::RInterpTo(GetControlRotation(), RecoilStartRotation, DeltaTime, RecoilTimerLength));
+		}
+		
+
+		//Prevents function from calling if delta becomes 0 or negative
+		if (RecoilDeltaRotation.Pitch <= 0.0f && RecoilDeltaRotation.Yaw <= 0.0f)
+		{
+			bDoRecoilRecovery = false;
+			RecoilRecoveryTimerHandle.Invalidate();
+		}
 	}
 
 	else
 	{
+		bDoRecoilRecovery = false;
 		RecoilRecoveryTimerHandle.Invalidate();
 	}
 }
@@ -1428,7 +1456,6 @@ void Afpscharacter::RecoilStart()
 	{
 		return;
 	}
-	UE_LOG(LogTemp, Warning, TEXT("start"));
 	//This should only be called at the start of firing
 	bIsRecoiling = true;
 	bDoRecoilRecovery = false;
@@ -1437,6 +1464,8 @@ void Afpscharacter::RecoilStart()
 	//setting up for recoil
 	//This ensures the recovery can work correctly
 	RecoilStartRotation = GetControlRotation().GetNormalized();
+	UE_LOG(LogTemp, Warning, TEXT("start, %f"), RecoilStartRotation.Pitch);
+
 	//Used to get values for recoil curve
 	GetWorldTimerManager().SetTimer(RecoilTimer, this, &Afpscharacter::RecoilTimerFunction, RecoilTimerLength, false);
 }
@@ -1463,11 +1492,11 @@ void Afpscharacter::RecoilStop()
 void Afpscharacter::RecoveryStart()
 {
 	//If the control rotation is lower than the current rotation, this is stopping recovery.
-	if (GetControlRotation().Pitch < RecoilStartRotation.Pitch)
+	if (GetControlRotation().Pitch < RecoilStartRotation.Pitch || !ApplyRecoilRecoverySetting)
 	{
 		return;
 	}
-
+	UE_LOG(LogTemp, Warning, TEXT("RecoStart"));
 	bDoRecoilRecovery = true;
 	//Set recovery timer
 	GetWorldTimerManager().SetTimer(RecoilRecoveryTimerHandle, this, &Afpscharacter::RecoilRecoveryTimerFunction, GetCurrentlyEquippedWeaponData().Recoil.RecoveryTime, false);

@@ -369,9 +369,7 @@ public: \
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_28_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__IsLeftHanded() { return STRUCT_OFFSET(Afpscharacter, IsLeftHanded); } \
 	FORCEINLINE static uint32 __PPO__DistanceToPlaceProjectileFromCamera() { return STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera); } \
-	FORCEINLINE static uint32 __PPO__SwitchWeaponAfterPickup() { return STRUCT_OFFSET(Afpscharacter, SwitchWeaponAfterPickup); } \
 	FORCEINLINE static uint32 __PPO__ReplicatedSpreadAngles() { return STRUCT_OFFSET(Afpscharacter, ReplicatedSpreadAngles); } \
 	FORCEINLINE static uint32 __PPO__SpeedForLosingAccuracy() { return STRUCT_OFFSET(Afpscharacter, SpeedForLosingAccuracy); } \
 	FORCEINLINE static uint32 __PPO__MaxMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MaxMovementSpreadModifier); } \
@@ -388,6 +386,7 @@ public: \
 	FORCEINLINE static uint32 __PPO__RecoilStartRotation() { return STRUCT_OFFSET(Afpscharacter, RecoilStartRotation); } \
 	FORCEINLINE static uint32 __PPO__bIsRecoiling() { return STRUCT_OFFSET(Afpscharacter, bIsRecoiling); } \
 	FORCEINLINE static uint32 __PPO__bDoRecoilRecovery() { return STRUCT_OFFSET(Afpscharacter, bDoRecoilRecovery); } \
+	FORCEINLINE static uint32 __PPO__SnapRecoveryDegrees() { return STRUCT_OFFSET(Afpscharacter, SnapRecoveryDegrees); } \
 	FORCEINLINE static uint32 __PPO__InteractInputIntervalTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractInputIntervalTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__InteractTimerHandle() { return STRUCT_OFFSET(Afpscharacter, InteractTimerHandle); } \
 	FORCEINLINE static uint32 __PPO__CurrentInteractionName() { return STRUCT_OFFSET(Afpscharacter, CurrentInteractionName); } \

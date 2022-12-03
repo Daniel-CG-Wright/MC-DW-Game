@@ -34,22 +34,58 @@ public:
 	//Property replication
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+	//Player settings
+		//Stores X sensitivity for mouse
+	UPROPERTY(EditAnywhere, Category = "Mouse Input")
+		float XSensitivity;
+
+	//Stores Y sensitivty for mouse
+	UPROPERTY(EditAnywhere, Category = "Mouse Input")
+		float YSensitivity;
+
+	//Stores whether X is inverted
+	UPROPERTY(EditAnywhere, Category = "Mouse Input")
+		bool InvertX;
+
+	//Stores whether Y is inverted
+	UPROPERTY(EditAnywhere, Category = "Mouse Input")
+		bool InvertY;
+
+	//Stores whether crouch is toggle or hold
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Button Input")
+		bool ToggleCrouch;
+
+	//Stores whether sprint is toggle or hold
+	UPROPERTY(EditAnywhere, Category = "Button Input")
+		bool ToggleSprint;
+
+	//Records whether player is left handed - if so, mirrors gun transform and rotation on equip to be positioned on left side.
+	UPROPERTY(EditAnywhere)
+		bool IsLeftHanded;
+
+	//Records if the player should switch weapon to the pick up weapon after picking a weapon up
+	UPROPERTY(EditAnywhere)
+		bool SwitchWeaponAfterPickup;
+
+	//Records if the player wishes for recoil recovery to be applied automatically
+	UPROPERTY(EditAnywhere, Category = "Recoil Settings")
+		bool ApplyRecoilRecoverySetting;
+
+
 private:
 	//Whether or not to perform rewind component rewinding
 	bool doRewind = false;
 
 protected:
-	//Records whether player is left handed - if so, mirrors gun transform and rotation on equip to be positioned on left side.
-	UPROPERTY(EditAnywhere)
-		bool IsLeftHanded;
+	
 
 	UPROPERTY(EditAnywhere)
 		//The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)
 		FVector DistanceToPlaceProjectileFromCamera;
 
-	//Records if the player should switch weapon to the pick up weapon after picking a weapon up
-	UPROPERTY(EditAnywhere)
-		bool SwitchWeaponAfterPickup;
+	
+
+	//Records if the player wishes to have the
 
 	//Stores whether or not the player is currently holding down the fire button.
 	bool bIsFiring;
@@ -315,6 +351,9 @@ protected:
 	UPROPERTY()
 		bool bDoRecoilRecovery;
 
+	//Degrees from which to snap aim in recoil recovery (see @RecoveryApply)(
+	UPROPERTY()
+		float SnapRecoveryDegrees;
 
 	//Overload for if we are just looking, and want the interaction name instead
 	UFUNCTION()
@@ -605,29 +644,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	//Stores X sensitivity for mouse
-	UPROPERTY(EditAnywhere, Category = "Mouse Input")
-		float XSensitivity;
 
-	//Stores Y sensitivty for mouse
-	UPROPERTY(EditAnywhere, Category = "Mouse Input")
-		float YSensitivity;
-
-	//Stores whether X is inverted
-	UPROPERTY(EditAnywhere, Category = "Mouse Input")
-		bool InvertX;
-
-	//Stores whether Y is inverted
-	UPROPERTY(EditAnywhere, Category = "Mouse Input")
-		bool InvertY;
-
-	//Stores whether crouch is toggle or hold
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Button Input")
-		bool ToggleCrouch;
-
-	//Stores whether sprint is toggle or hold
-	UPROPERTY(EditAnywhere, Category = "Button Input")
-		bool ToggleSprint;
 
 	//First person gun scene component
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
