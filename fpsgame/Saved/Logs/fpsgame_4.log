@@ -1,0 +1,1711 @@
+﻿Log file open, 12/23/22 14:29:31
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: fpsgame
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 17 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.285401
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogInit: Display: Loading text-based GConfig....
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin GameplayCameras
+LogPluginManager: Mounting plugin OodleData
+LogPluginManager: Mounting plugin OodleNetwork
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PixWinPlugin
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin TextureFormatOodle
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin OpenImageDenoise
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OpenXR
+LogPluginManager: Mounting plugin OpenXREyeTracker
+LogPluginManager: Mounting plugin OpenXRHandTracking
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+PixWinPlugin: PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.27-CL-18319896
+LogInit: Engine Version: 4.27.2-18319896+++UE4+Release-4.27
+LogInit: Compatible Engine Version: 4.27.0-17155196+++UE4+Release-4.27
+LogInit: Net CL: 17155196
+LogInit: OS: Windows 10 (Release 2009) (), CPU: AMD Ryzen 5 3600X 6-Core Processor             , GPU: AMD Radeon RX 5700 XT
+LogInit: Compiled (64-bit): Nov 30 2021 07:12:08
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.27
+LogInit: Command Line:  /Game/Maps/TestMap -game -PIEVIACONSOLE -Multiprocess -server -log "GameUserSettingsINI=C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/PIEGameUserSettings0.ini" -MultiprocessSaveConfig -forcepassthrough -messaging -SessionName="Play in Standalone Game" -port=17777 -PktLagMin=0 -PktLagMax=0 -PktLoss=0 -PktIncomingLagMin=0 -PktIncomingLagMax=0 -PktIncomingLoss=0 -windowed
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 14
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 45
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 47
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.12.23-14.29.32:025][  0]LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+[2022.12.23-14.29.32:026][  0]LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.12.23-14.29.32:026][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-14.29.32:026][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2022.12.23-14.29.32:027][  0]LogConfig: Setting CVar [[r.Mobile.DisableVertexFog:1]]
+[2022.12.23-14.29.32:027][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxMobileCascades:2]]
+[2022.12.23-14.29.32:027][  0]LogConfig: Setting CVar [[r.MobileMSAA:1]]
+[2022.12.23-14.29.32:027][  0]LogConfig: Setting CVar [[r.Mobile.AllowDitheredLODTransition:0]]
+[2022.12.23-14.29.32:028][  0]LogConfig: Setting CVar [[r.Mobile.AllowSoftwareOcclusion:0]]
+[2022.12.23-14.29.32:028][  0]LogConfig: Setting CVar [[r.Mobile.VirtualTextures:0]]
+[2022.12.23-14.29.32:028][  0]LogConfig: Setting CVar [[r.DiscardUnusedQuality:0]]
+[2022.12.23-14.29.32:028][  0]LogConfig: Setting CVar [[r.AllowOcclusionQueries:1]]
+[2022.12.23-14.29.32:029][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForLights:0.030000]]
+[2022.12.23-14.29.32:030][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForDepthPrepass:0.030000]]
+[2022.12.23-14.29.32:030][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForCSMDepth:0.010000]]
+[2022.12.23-14.29.32:030][  0]LogConfig: Setting CVar [[r.PrecomputedVisibilityWarning:0]]
+[2022.12.23-14.29.32:031][  0]LogConfig: Setting CVar [[r.TextureStreaming:1]]
+[2022.12.23-14.29.32:031][  0]LogConfig: Setting CVar [[Compat.UseDXT5NormalMaps:0]]
+[2022.12.23-14.29.32:031][  0]LogConfig: Setting CVar [[r.VirtualTextures:0]]
+[2022.12.23-14.29.32:032][  0]LogConfig: Setting CVar [[r.VT.EnableAutoImport:1]]
+[2022.12.23-14.29.32:032][  0]LogConfig: Setting CVar [[r.VirtualTexturedLightmaps:0]]
+[2022.12.23-14.29.32:032][  0]LogConfig: Setting CVar [[r.VT.TileSize:128]]
+[2022.12.23-14.29.32:032][  0]LogConfig: Setting CVar [[r.VT.TileBorderSize:4]]
+[2022.12.23-14.29.32:033][  0]LogConfig: Setting CVar [[r.vt.FeedbackFactor:16]]
+[2022.12.23-14.29.32:035][  0]LogConfig: Setting CVar [[r.VT.EnableCompressZlib:1]]
+[2022.12.23-14.29.32:035][  0]LogConfig: Setting CVar [[r.VT.EnableCompressCrunch:0]]
+[2022.12.23-14.29.32:035][  0]LogConfig: Setting CVar [[r.ClearCoatNormal:0]]
+[2022.12.23-14.29.32:035][  0]LogConfig: Setting CVar [[r.ReflectionCaptureResolution:128]]
+[2022.12.23-14.29.32:036][  0]LogConfig: Setting CVar [[r.Mobile.ReflectionCaptureCompression:0]]
+[2022.12.23-14.29.32:036][  0]LogConfig: Setting CVar [[r.ReflectionEnvironmentLightmapMixBasedOnRoughness:1]]
+[2022.12.23-14.29.32:036][  0]LogConfig: Setting CVar [[r.ForwardShading:0]]
+[2022.12.23-14.29.32:036][  0]LogConfig: Setting CVar [[r.VertexFoggingForOpaque:1]]
+[2022.12.23-14.29.32:037][  0]LogConfig: Setting CVar [[r.AllowStaticLighting:1]]
+[2022.12.23-14.29.32:037][  0]LogConfig: Setting CVar [[r.NormalMapsForStaticLighting:0]]
+[2022.12.23-14.29.32:037][  0]LogConfig: Setting CVar [[r.GenerateMeshDistanceFields:0]]
+[2022.12.23-14.29.32:037][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.EightBit:0]]
+[2022.12.23-14.29.32:038][  0]LogConfig: Setting CVar [[r.GenerateLandscapeGIData:0]]
+[2022.12.23-14.29.32:038][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.Compress:0]]
+[2022.12.23-14.29.32:038][  0]LogConfig: Setting CVar [[r.TessellationAdaptivePixelsPerTriangle:48.000000]]
+[2022.12.23-14.29.32:039][  0]LogConfig: Setting CVar [[r.SeparateTranslucency:1]]
+[2022.12.23-14.29.32:039][  0]LogConfig: Setting CVar [[r.TranslucentSortPolicy:0]]
+[2022.12.23-14.29.32:039][  0]LogConfig: Setting CVar [[vr.VRS.HMDFixedFoveationLevel:0]]
+[2022.12.23-14.29.32:039][  0]LogConfig: Setting CVar [[r.CustomDepth:1]]
+[2022.12.23-14.29.32:040][  0]LogConfig: Setting CVar [[r.CustomDepthTemporalAAJitter:1]]
+[2022.12.23-14.29.32:040][  0]LogConfig: Setting CVar [[r.PostProcessing.PropagateAlpha:0]]
+[2022.12.23-14.29.32:040][  0]LogConfig: Setting CVar [[r.DefaultFeature.Bloom:1]]
+[2022.12.23-14.29.32:041][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusion:1]]
+[2022.12.23-14.29.32:041][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusionStaticFraction:1]]
+[2022.12.23-14.29.32:041][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2022.12.23-14.29.32:041][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Method:0]]
+[2022.12.23-14.29.32:042][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Bias:1.000000]]
+[2022.12.23-14.29.32:042][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:0]]
+[2022.12.23-14.29.32:042][  0]LogConfig: Setting CVar [[r.UsePreExposure:1]]
+[2022.12.23-14.29.32:043][  0]LogConfig: Setting CVar [[r.EyeAdaptation.EditorOnly:0]]
+[2022.12.23-14.29.32:043][  0]LogConfig: Setting CVar [[r.DefaultFeature.MotionBlur:0]]
+[2022.12.23-14.29.32:043][  0]LogConfig: Setting CVar [[r.DefaultFeature.LensFlare:0]]
+[2022.12.23-14.29.32:044][  0]LogConfig: Setting CVar [[r.TemporalAA.Upsampling:0]]
+[2022.12.23-14.29.32:044][  0]LogConfig: Setting CVar [[r.SSGI.Enable:0]]
+[2022.12.23-14.29.32:044][  0]LogConfig: Setting CVar [[r.DefaultFeature.AntiAliasing:0]]
+[2022.12.23-14.29.32:044][  0]LogConfig: Setting CVar [[r.DefaultFeature.LightUnits:1]]
+[2022.12.23-14.29.32:045][  0]LogConfig: Setting CVar [[r.DefaultBackBufferPixelFormat:4]]
+[2022.12.23-14.29.32:045][  0]LogConfig: Setting CVar [[r.Shadow.UnbuiltPreviewInGame:1]]
+[2022.12.23-14.29.32:046][  0]LogConfig: Setting CVar [[r.StencilForLODDither:0]]
+[2022.12.23-14.29.32:046][  0]LogConfig: Setting CVar [[r.EarlyZPass:3]]
+[2022.12.23-14.29.32:047][  0]LogConfig: Setting CVar [[r.EarlyZPassOnlyMaterialMasking:0]]
+[2022.12.23-14.29.32:047][  0]LogConfig: Setting CVar [[r.DBuffer:1]]
+[2022.12.23-14.29.32:047][  0]LogConfig: Setting CVar [[r.ClearSceneMethod:1]]
+[2022.12.23-14.29.32:047][  0]LogConfig: Setting CVar [[r.BasePassOutputsVelocity:0]]
+[2022.12.23-14.29.32:048][  0]LogConfig: Setting CVar [[r.VertexDeformationOutputsVelocity:0]]
+[2022.12.23-14.29.32:050][  0]LogConfig: Setting CVar [[r.SelectiveBasePassOutputs:0]]
+[2022.12.23-14.29.32:050][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeX:1024]]
+[2022.12.23-14.29.32:051][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeY:1024]]
+[2022.12.23-14.29.32:051][  0]LogConfig: Setting CVar [[r.AllowGlobalClipPlane:0]]
+[2022.12.23-14.29.32:051][  0]LogConfig: Setting CVar [[r.GBufferFormat:1]]
+[2022.12.23-14.29.32:052][  0]LogConfig: Setting CVar [[r.MorphTarget.Mode:1]]
+[2022.12.23-14.29.32:052][  0]LogConfig: Setting CVar [[vr.InstancedStereo:0]]
+[2022.12.23-14.29.32:052][  0]LogConfig: Setting CVar [[r.MobileHDR:1]]
+[2022.12.23-14.29.32:053][  0]LogConfig: Setting CVar [[vr.MobileMultiView:0]]
+[2022.12.23-14.29.32:053][  0]LogConfig: Setting CVar [[r.Mobile.UseHWsRGBEncoding:0]]
+[2022.12.23-14.29.32:053][  0]LogConfig: Setting CVar [[vr.RoundRobinOcclusion:0]]
+[2022.12.23-14.29.32:053][  0]LogConfig: Setting CVar [[vr.ODSCapture:0]]
+[2022.12.23-14.29.32:054][  0]LogConfig: Setting CVar [[r.MeshStreaming:0]]
+[2022.12.23-14.29.32:054][  0]LogConfig: Setting CVar [[r.WireframeCullThreshold:5.000000]]
+[2022.12.23-14.29.32:054][  0]LogConfig: Setting CVar [[r.RayTracing:0]]
+[2022.12.23-14.29.32:055][  0]LogConfig: Setting CVar [[r.RayTracing.UseTextureLod:0]]
+[2022.12.23-14.29.32:055][  0]LogConfig: Setting CVar [[r.SupportStationarySkylight:1]]
+[2022.12.23-14.29.32:055][  0]LogConfig: Setting CVar [[r.SupportLowQualityLightmaps:1]]
+[2022.12.23-14.29.32:055][  0]LogConfig: Setting CVar [[r.SupportPointLightWholeSceneShadows:1]]
+[2022.12.23-14.29.32:056][  0]LogConfig: Setting CVar [[r.SupportAtmosphericFog:1]]
+[2022.12.23-14.29.32:056][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphere:1]]
+[2022.12.23-14.29.32:056][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphereAffectsHeightFog:0]]
+[2022.12.23-14.29.32:057][  0]LogConfig: Setting CVar [[r.SkinCache.CompileShaders:0]]
+[2022.12.23-14.29.32:057][  0]LogConfig: Setting CVar [[r.SkinCache.DefaultBehavior:1]]
+[2022.12.23-14.29.32:057][  0]LogConfig: Setting CVar [[r.SkinCache.SceneMemoryLimitInMB:128.000000]]
+[2022.12.23-14.29.32:057][  0]LogConfig: Setting CVar [[r.Mobile.EnableStaticAndCSMShadowReceivers:1]]
+[2022.12.23-14.29.32:058][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableLightCSMShaderCulling:1]]
+[2022.12.23-14.29.32:058][  0]LogConfig: Setting CVar [[r.Mobile.AllowDistanceFieldShadows:1]]
+[2022.12.23-14.29.32:058][  0]LogConfig: Setting CVar [[r.Mobile.AllowMovableDirectionalLights:1]]
+[2022.12.23-14.29.32:058][  0]LogConfig: Setting CVar [[r.MobileNumDynamicPointLights:4]]
+[2022.12.23-14.29.32:059][  0]LogConfig: Setting CVar [[r.MobileDynamicPointLightsUseStaticBranch:1]]
+[2022.12.23-14.29.32:059][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlights:0]]
+[2022.12.23-14.29.32:059][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlightsShadow:0]]
+[2022.12.23-14.29.32:059][  0]LogConfig: Setting CVar [[r.GPUSkin.Support16BitBoneIndex:0]]
+[2022.12.23-14.29.32:060][  0]LogConfig: Setting CVar [[r.GPUSkin.Limit2BoneInfluences:0]]
+[2022.12.23-14.29.32:060][  0]LogConfig: Setting CVar [[r.SupportDepthOnlyIndexBuffers:1]]
+[2022.12.23-14.29.32:060][  0]LogConfig: Setting CVar [[r.SupportReversedIndexBuffers:1]]
+[2022.12.23-14.29.32:061][  0]LogConfig: Setting CVar [[r.LightPropagationVolume:0]]
+[2022.12.23-14.29.32:061][  0]LogConfig: Setting CVar [[r.Mobile.AmbientOcclusion:0]]
+[2022.12.23-14.29.32:061][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluences:0]]
+[2022.12.23-14.29.32:061][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluencesThreshold:8]]
+[2022.12.23-14.29.32:062][  0]LogConfig: Setting CVar [[r.Mobile.PlanarReflectionMode:0]]
+[2022.12.23-14.29.32:062][  0]LogConfig: Setting CVar [[r.Mobile.SupportsGen4TAA:0]]
+[2022.12.23-14.29.32:062][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-14.29.32:063][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-14.29.32:063][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2022.12.23-14.29.32:063][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2022.12.23-14.29.32:063][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2022.12.23-14.29.32:064][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2022.12.23-14.29.32:069][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2022.12.23-14.29.32:069][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2022.12.23-14.29.32:070][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2022.12.23-14.29.32:070][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2022.12.23-14.29.32:070][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2022.12.23-14.29.32:070][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2022.12.23-14.29.32:071][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2022.12.23-14.29.32:071][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2022.12.23-14.29.32:071][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2022.12.23-14.29.32:071][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2022.12.23-14.29.32:072][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-14.29.32:072][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2022.12.23-14.29.32:072][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2022.12.23-14.29.32:073][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2022.12.23-14.29.32:073][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2022.12.23-14.29.32:073][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2022.12.23-14.29.32:074][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2022.12.23-14.29.32:074][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2022.12.23-14.29.32:074][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2022.12.23-14.29.32:074][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2022.12.23-14.29.32:075][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2022.12.23-14.29.32:075][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2022.12.23-14.29.32:075][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2022.12.23-14.29.32:075][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2022.12.23-14.29.32:076][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2022.12.23-14.29.32:076][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-14.29.32:076][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-14.29.32:077][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:077][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.12.23-14.29.32:077][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.12.23-14.29.32:077][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:078][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.12.23-14.29.32:078][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:079][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.12.23-14.29.32:082][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.12.23-14.29.32:082][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.12.23-14.29.32:083][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.12.23-14.29.32:083][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.12.23-14.29.32:083][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.12.23-14.29.32:083][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.12.23-14.29.32:084][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.12.23-14.29.32:084][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.12.23-14.29.32:084][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.12.23-14.29.32:085][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.12.23-14.29.32:085][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.12.23-14.29.32:085][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.12.23-14.29.32:085][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.12.23-14.29.32:086][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.12.23-14.29.32:086][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.12.23-14.29.32:086][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.12.23-14.29.32:087][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.12.23-14.29.32:087][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:087][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.12.23-14.29.32:088][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.12.23-14.29.32:088][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.12.23-14.29.32:088][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.12.23-14.29.32:088][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.12.23-14.29.32:089][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.12.23-14.29.32:089][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.12.23-14.29.32:089][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.12.23-14.29.32:089][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.12.23-14.29.32:090][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.12.23-14.29.32:090][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.12.23-14.29.32:090][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.12.23-14.29.32:090][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.12.23-14.29.32:091][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.12.23-14.29.32:091][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.12.23-14.29.32:091][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.12.23-14.29.32:091][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.12.23-14.29.32:092][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.12.23-14.29.32:092][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.12.23-14.29.32:092][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.12.23-14.29.32:092][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.12.23-14.29.32:093][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.12.23-14.29.32:093][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.12.23-14.29.32:093][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.12.23-14.29.32:094][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.12.23-14.29.32:094][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.12.23-14.29.32:094][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.12.23-14.29.32:094][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.12.23-14.29.32:095][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.12.23-14.29.32:097][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.12.23-14.29.32:098][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:098][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.12.23-14.29.32:099][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.12.23-14.29.32:099][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.12.23-14.29.32:099][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.12.23-14.29.32:100][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.12.23-14.29.32:100][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.12.23-14.29.32:101][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.12.23-14.29.32:101][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.12.23-14.29.32:101][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.12.23-14.29.32:101][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:102][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.12.23-14.29.32:102][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.12.23-14.29.32:102][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.12.23-14.29.32:103][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.12.23-14.29.32:103][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.12.23-14.29.32:103][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.12.23-14.29.32:103][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.12.23-14.29.32:104][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.12.23-14.29.32:104][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.12.23-14.29.32:104][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.12.23-14.29.32:104][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.12.23-14.29.32:105][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.12.23-14.29.32:105][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.12.23-14.29.32:105][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.12.23-14.29.32:105][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.12.23-14.29.32:106][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.12.23-14.29.32:106][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.12.23-14.29.32:106][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.12.23-14.29.32:107][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.12.23-14.29.32:107][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.12.23-14.29.32:107][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.12.23-14.29.32:108][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.12.23-14.29.32:108][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.12.23-14.29.32:108][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.12.23-14.29.32:108][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.12.23-14.29.32:109][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.12.23-14.29.32:109][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.12.23-14.29.32:109][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.12.23-14.29.32:109][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:109][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.12.23-14.29.32:110][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.12.23-14.29.32:110][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:110][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.12.23-14.29.32:113][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.12.23-14.29.32:114][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.12.23-14.29.32:114][  0]LogInit: Selected Device Profile: [Windows]
+[2022.12.23-14.29.32:114][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2022.12.23-14.29.32:114][  0]LogHAL: Display: Platform has ~ 16 GB [17128247296 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2022.12.23-14.29.32:115][  0]LogInit: Going up to parent DeviceProfile []
+[2022.12.23-14.29.32:115][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:115][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.12.23-14.29.32:115][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.12.23-14.29.32:116][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:116][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.12.23-14.29.32:116][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:116][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.12.23-14.29.32:117][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.12.23-14.29.32:117][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.12.23-14.29.32:117][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.12.23-14.29.32:118][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.12.23-14.29.32:118][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.12.23-14.29.32:118][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.12.23-14.29.32:119][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.12.23-14.29.32:119][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.12.23-14.29.32:119][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.12.23-14.29.32:119][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.12.23-14.29.32:120][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.12.23-14.29.32:120][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.12.23-14.29.32:120][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.12.23-14.29.32:120][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.12.23-14.29.32:121][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.12.23-14.29.32:121][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.12.23-14.29.32:121][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.12.23-14.29.32:121][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:122][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.12.23-14.29.32:122][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.12.23-14.29.32:122][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.12.23-14.29.32:122][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.12.23-14.29.32:123][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.12.23-14.29.32:123][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.12.23-14.29.32:123][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.12.23-14.29.32:124][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.12.23-14.29.32:124][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.12.23-14.29.32:124][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.12.23-14.29.32:124][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.12.23-14.29.32:125][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.12.23-14.29.32:125][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.12.23-14.29.32:125][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.12.23-14.29.32:125][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.12.23-14.29.32:126][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.12.23-14.29.32:126][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.12.23-14.29.32:126][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.12.23-14.29.32:127][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.12.23-14.29.32:129][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.12.23-14.29.32:130][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.12.23-14.29.32:130][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.12.23-14.29.32:130][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.12.23-14.29.32:130][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.12.23-14.29.32:131][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.12.23-14.29.32:131][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.12.23-14.29.32:131][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.12.23-14.29.32:131][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.12.23-14.29.32:132][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.12.23-14.29.32:132][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.12.23-14.29.32:132][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:132][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.12.23-14.29.32:133][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.12.23-14.29.32:133][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.12.23-14.29.32:133][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.12.23-14.29.32:133][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.12.23-14.29.32:134][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.12.23-14.29.32:134][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.12.23-14.29.32:134][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.12.23-14.29.32:134][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.12.23-14.29.32:135][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:135][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.12.23-14.29.32:135][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.12.23-14.29.32:135][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.12.23-14.29.32:136][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.12.23-14.29.32:136][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.12.23-14.29.32:136][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.12.23-14.29.32:136][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.12.23-14.29.32:137][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.12.23-14.29.32:137][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.12.23-14.29.32:137][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.12.23-14.29.32:138][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.12.23-14.29.32:138][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.12.23-14.29.32:138][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.12.23-14.29.32:138][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.12.23-14.29.32:139][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.12.23-14.29.32:139][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.12.23-14.29.32:139][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.12.23-14.29.32:139][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.12.23-14.29.32:140][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.12.23-14.29.32:140][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.12.23-14.29.32:140][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.12.23-14.29.32:140][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.12.23-14.29.32:141][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.12.23-14.29.32:141][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.12.23-14.29.32:141][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.12.23-14.29.32:141][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.12.23-14.29.32:142][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.12.23-14.29.32:144][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.12.23-14.29.32:144][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:144][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.12.23-14.29.32:145][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.12.23-14.29.32:145][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-14.29.32:145][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.12.23-14.29.32:146][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.12.23-14.29.32:146][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.12.23-14.29.32:146][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2022.12.23-14.29.32:147][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2022.12.23-14.29.32:147][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2022.12.23-14.29.32:147][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2022.12.23-14.29.32:148][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-14.29.32:148][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Editor.ini]
+[2022.12.23-14.29.32:148][  0]LogInit: Computer: DESKTOP-QG36584
+[2022.12.23-14.29.32:148][  0]LogInit: User: danie
+[2022.12.23-14.29.32:149][  0]LogInit: CPU Page size=4096, Cores=6
+[2022.12.23-14.29.32:149][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2022.12.23-14.29.32:149][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2022.12.23-14.29.32:150][  0]LogMemory: Platform Memory Stats for Windows
+[2022.12.23-14.29.32:150][  0]LogMemory: Process Physical Memory: 141.83 MB used, 141.84 MB peak
+[2022.12.23-14.29.32:150][  0]LogMemory: Process Virtual Memory: 119.38 MB used, 119.38 MB peak
+[2022.12.23-14.29.32:150][  0]LogMemory: Physical Memory: 12069.23 MB used,  4265.54 MB free, 16334.77 MB total
+[2022.12.23-14.29.32:151][  0]LogMemory: Virtual Memory: 134208608.00 MB used,  9119.61 MB free, 134217728.00 MB total
+[2022.12.23-14.29.32:153][  0]LogWindows: WindowsPlatformFeatures disabled or dedicated server build
+[2022.12.23-14.29.32:164][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2022.12.23-14.29.32:164][  0]LogInit: Using OS detected language (en-US).
+[2022.12.23-14.29.32:164][  0]LogInit: Using OS detected locale (en-GB).
+[2022.12.23-14.29.32:168][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2022.12.23-14.29.32:648][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2022.12.23-14.29.32:652][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2022.12.23-14.29.32:655][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2022.12.23-14.29.32:658][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2022.12.23-14.29.32:658][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2022.12.23-14.29.32:662][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2022.12.23-14.29.32:677][  0]LogTextureFormatOodle: Display: Oodle Texture 2.9.0 init RDO Off
+[2022.12.23-14.29.32:693][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2022.12.23-14.29.32:693][  0]LogShaderCompilers: Guid format shader working directory is -27 characters bigger than the processId version (../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Intermediate/Shaders/WorkingDirectory/16316/).
+[2022.12.23-14.29.32:694][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/danie/AppData/Local/Temp/UnrealShaderWorkingDir/D6D2681E47D1CDC9718152ADADA86CB6/'.
+[2022.12.23-14.29.32:694][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2022.12.23-14.29.32:694][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2022.12.23-14.29.32:694][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2022.12.23-14.29.33:178][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2022.12.23-14.29.33:247][  0]LogDerivedDataCache: Loaded boot cache 0.07s 94MB C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2022.12.23-14.29.33:248][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc
+[2022.12.23-14.29.33:249][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2022.12.23-14.29.33:249][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2022.12.23-14.29.33:249][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.12.23-14.29.33:249][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2022.12.23-14.29.33:269][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2022.12.23-14.29.33:270][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.12.23-14.29.33:270][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2022.12.23-14.29.33:282][  0]LogDerivedDataCache: Speed tests for C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2022.12.23-14.29.33:282][  0]LogDerivedDataCache: Display: Performance to C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.04ms. RandomReadSpeed=273.08MBs, RandomWriteSpeed=120.17MBs. Assigned SpeedClass 'Local'
+[2022.12.23-14.29.33:283][  0]LogDerivedDataCache: Using Local data cache path C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2022.12.23-14.29.33:284][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2022.12.23-14.29.33:284][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2022.12.23-14.29.33:286][  0]LogInit: Using OS detected language (en-US).
+[2022.12.23-14.29.33:286][  0]LogInit: Using OS detected locale (en-GB).
+[2022.12.23-14.29.33:286][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the language.
+[2022.12.23-14.29.33:287][  0]LogTextLocalizationManager: No localization for 'en-GB' exists, so 'en' will be used for the locale.
+[2022.12.23-14.29.33:290][  0]LogTextLocalizationManager: Compacting localization data took   0.00ms
+[2022.12.23-14.29.33:290][  0]LogAssetRegistry: FAssetRegistry took 0.0023 seconds to start up
+[2022.12.23-14.29.33:455][  0]LogPackageLocalizationCache: Processed 27 localized package path(s) for 1 prioritized culture(s) in 0.001083 seconds
+[2022.12.23-14.29.33:549][  0]LogInit: Selected Device Profile: [Windows]
+[2022.12.23-14.29.33:549][  0]LogInit: Active device profile: [000001EB01520500][000001EB7E4F78C0 49] Windows
+[2022.12.23-14.29.33:550][  0]LogInit: Profiles: [000001EB01520500][000001EB7E4F78C0 49] Windows, [000001EB014F7600][000001EB7E505B80 49] WindowsNoEditor, [000001EB014F4100][000001EB7E4FA280 49] WindowsServer, [000001EB01523000][000001EB7E508500 49] WindowsClient, [000001EB01520200][000001EB7E5107C0 49] IOS, [000001EB0150BD00][000001EB7E514A80 49] iPadAir, [000001EB01523A00][000001EB7E518D40 49] iPadAir2, [000001EB014A4200][000001EB7E533280 49] IPadPro, [000001EB0149FF00][000001EB7E51D2C0 49] iPadAir3, [000001EB014F5000][000001EB7E52B580 49] iPadAir4, [000001EB0149C500][000001EB7E527840 49] iPadMini2, [000001EB014F4200][000001EB7E52FB00 49] iPadMini3, [000001EB0149D200][000001EB7E53C240 49] iPadMini4, [000001EB014F7800][000001EB7E50C4C0 49] iPadMini5, [000001EB01509600][000001EB7E5549C0 49] iPhone6, [000001EB01509700][000001EB7E540A00 49] iPodTouch6, [000001EB0149E100][000001EB7E55CF40 49] iPhone7, [000001EB0149E200][000001EB7E54CF80 49] iPodTouch7, [000001EB0150A600][000001EB7E551240 49] iPhone5S, [000001EB0149F100][000001EB7E549500 49] iPhone6Plus, [000001EB0150BB00][000001EB7E5597C0 49] iPhone6S, [000001EB0149EB00][000001EB7E561A80 49] iPhone6SPlus, [000001EB01508A00][000001EB7E5641C0 49] iPhone7Plus, [000001EB0149EF00][000001EB7E568480 49] iPhoneSE, [000001EB01509000][000001EB7E544700 49] iPhone8, [000001EB0149FC00][000001EB7E56C980 49] iPhone8Plus, [000001EB0150B200][000001EB7E574C40 49] iPhoneX, [000001EB0149EC00][000001EB7E578F00 49] iPhoneXS, [000001EB0150AB00][000001EB7E57D1C0 49] iPhoneXSMax, [000001EB0149E900][000001EB7E581480 49] iPhoneXR, [000001EB0150AF00][000001EB7E585740 49] iPhone11, [000001EB0149CA00][000001EB7E589A00 49] iPhone11Pro, [000001EB0150BE00][000001EB7E58C140 49] iPhone11ProMax, [000001EB0149D400][000001EB7E590400 49] iPhoneSE2, [000001EB0150BF00][000001EB7E5946C0 49] iPhone12Mini, [000001EB0149FD00][000001EB7E570940 49] iPhone12, [000001EB01509200][000001EB7E598BC0 49] iPhone12Pro, [000001EB0149F500][000001EB7E5A0E80 49] iPhone12ProMax, [000001EB01508200][000001EB7E5A5140 49] iPadPro105, [000001EB0149DA00][000001EB7E5A9400 49] iPadPro129, [000001EB01508D00][000001EB7E5AD6C0 49] iPadPro97, [000001EB0149C900][000001EB7E5B1980 49] iPadPro2_129, [000001EB01509A00][000001EB7E5B40C0 49] iPad5, [000001EB0149DC00][000001EB7E5B8380 49] iPad6, [000001EB0150B900][000001EB7E5BC640 49] iPad7, [000001EB0149E600][000001EB7DEB2900 49] iPad8, [000001EB0150B000][000001EB7E59CB80 49] iPadPro11, [000001EB0149D500][000001EB7DEB6E00 49] iPadPro2_11, [000001EB0150A100][000001EB7DEBF0C0 49] iPadPro3_129, [000001EB0149DD00][000001EB7DEC3380 49] iPadPro4_129, [000001EB0150A400][000001EB7DEC7640 49] AppleTV, [000001EB0149EE00][000001EB7DECB900 49] AppleTV4K, [000001EB01508500][000001EB7DECFBC0 49] TVOS, [000001EB0149FA00][000001EB7DED2300 49] Mac, [000001EB0150A900][000001EB7DED65C0 49] MacClient, [000001EB0149D700][000001EB7DEDA880 49] MacNoEditor, [000001EB01509100][000001EB7DEDEB40 49] MacServer, [000001EB0149FB00][000001EB7DEBADC0 49] Linux, [000001EB01508600][000001EB7DEE3040 49] LinuxAArch64, [000001EB0149C400][000001EB7DEEB300 49] LinuxNoEditor, [000001EB0150A200][000001EB7DEEF5C0 49] LinuxAArch64NoEditor, [000001EB01520100][000001EB7DEF3880 49] LinuxClient, [000001EB014A4700][000001EB7DEF7B40 49] LinuxAArch64Client, [000001EB01521900][000001EB7DEFA280 49] LinuxServer, [000001EB014A4A00][000001EB7DEFE540 49] LinuxAArch64Server, [000001EB01522D00][000001EB7DF02800 49] Android, [000001EB014A5400][000001EB7DF06AC0 49] Android_Low, [000001EB01521100][000001EB7DF0AD80 49] Android_Mid, [000001EB014A4E00][000001EB7DEE7000 49] Android_High, [000001EB01520800][000001EB7DF132C0 49] Android_Default, [000001EB014A6600][000001EB7DF17580 49] Android_Adreno4xx, [000001EB01521400][000001EB7DF1B840 49] Android_Adreno5xx_Low, [000001EB014A6400][000001EB7DF1FB00 49] Android_Adreno5xx, [000001EB01520700][000001EB7DF22240 49] Android_Adreno6xx, [000001EB014A6C00][000001EB7DF26500 49] Android_Adreno6xx_Vulkan, [000001EB01523B00][000001EB7DF2A7C0 49] Android_Mali_T6xx, [000001EB014A4500][000001EB7DF2EA80 49] Android_Mali_T7xx, [000001EB01520300][000001EB7DF32D40 49] Android_Mali_T8xx, [000001EB014A7000][000001EB7DF0EFC0 49] Android_Mali_G71, [000001EB01522900][000001EB7DF37240 49] Android_Mali_G72, [000001EB014A6500][000001EB7DF3F500 49] Android_Mali_G72_Vulkan, [000001EB01521B00][000001EB7DF437C0 49] Android_Mali_G76, [000001EB014A7100][000001EB7DF47A80 49] Android_Mali_G76_Vulkan, [000001EB01521E00][000001EB7DF4A1C0 49] Android_Mali_G77, [000001EB014A7B00][000001EB7DF4E480 49] Android_Mali_G77_Vulkan, [000001EB01523C00][000001EB7DF52740 49] Android_Mali_G78, [000001EB014A7F00][000001EB7DF56A00 49] Android_Mali_G78_Vulkan, [000001EB01522400][000001EB7DF5ACC0 49] Android_Mali_G710, [000001EB014A5300][000001EB7DF5EF80 49] Android_Mali_G710_Vulkan, [000001EB01523100][000001EB7DF3B200 49] Android_Vulkan_SM5, [000001EB0149E400][000001EB7DF63480 49] Android_PowerVR_G6xxx, [000001EB01521D00][000001EB7DF6B740 49] Android_PowerVR_GT7xxx, [000001EB0149C100][000001EB7DF6FA00 49] Android_PowerVR_GE8xxx, [000001EB01523200][000001EB7DF72140 49] Android_PowerVR_GM9xxx, [000001EB0149C300][000001EB7DF76400 49] Android_PowerVR_GM9xxx_Vulkan, [000001EB01523300][000001EB7DF7A6C0 49] Android_TegraK1, [000001EB0149D600][000001EB7DF7E980 49] Android_Unknown_Vulkan, [000001EB01522000][000001EB7DF82C40 49] Lumin, [000001EB0149CB00][000001EB7DF86F00 49] Lumin_Desktop, [000001EB01520D00][000001EB7DF8B1C0 49] HoloLens, 
+[2022.12.23-14.29.33:572][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2022.12.23-14.29.33:572][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2022.12.23-14.29.33:573][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2022.12.23-14.29.33:573][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2022.12.23-14.29.33:573][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2022.12.23-14.29.33:584][  0]LogNetVersion: fpsgame 1.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 3215450660)
+[2022.12.23-14.29.33:683][  0]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/DaylightAmbientCubemap.DaylightAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2022.12.23-14.29.33:698][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2022.12.23-14.29.33:771][  0]LogPython: Using Python 3.7.7
+[2022.12.23-14.29.34:226][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: A6691E034BFEBD32B30CC59640A6D8A6 | Instance: B2EAA52A48A1301F7CA78D81414BF0CB (DESKTOP-QG36584-16316).
+[2022.12.23-14.29.34:244][  0]LogCollectionManager: Loaded 0 collections in 0.002501 seconds
+[2022.12.23-14.29.34:247][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Collections/' took 0.00s
+[2022.12.23-14.29.34:247][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Developers/danie/Collections/' took 0.00s
+[2022.12.23-14.29.34:248][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Collections/' took 0.00s
+[2022.12.23-14.29.34:248][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000002 seconds (updated 0 objects)
+[2022.12.23-14.29.34:342][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2022.12.23-14.29.34:345][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2022.12.23-14.29.34:424][  0]SourceControl: Source control is disabled
+[2022.12.23-14.29.34:425][  0]SourceControl: Source control is disabled
+[2022.12.23-14.29.34:426][  0]SourceControl: Source control is disabled
+[2022.12.23-14.29.34:430][  0]LogUProjectInfo: Found projects:
+[2022.12.23-14.29.34:478][  0]LogOpenImageDenoise: OIDN starting up
+[2022.12.23-14.29.34:497][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2022.12.23-14.29.34:506][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.12.23-14.29.34:506][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.12.23-14.29.34:555][  0]LogOcInput: OculusInput pre-init called
+[2022.12.23-14.29.34:564][  0]LogUObjectArray: 22050 objects as part of root set at end of initial load.
+[2022.12.23-14.29.34:565][  0]LogUObjectAllocator: 5966448 out of 0 bytes used by permanent object pool.
+[2022.12.23-14.29.34:565][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2022.12.23-14.29.34:597][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotPosition is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-14.29.34:598][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotRotation is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-14.29.34:598][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotScale is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-14.29.34:599][  0]LogClass: Display: BoolProperty FWeaponRecoil::bHasRecoil is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:599][  0]LogClass: Display: BoolProperty FWeaponRecoil::bUsesControlRotationForHipfireRecoil is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:599][  0]LogClass: Warning: ObjectProperty FWeaponRecoil::RecoilVectorCurve is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:600][  0]LogClass: Display: FloatProperty FWeaponRecoil::RecoveryTime is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:600][  0]LogClass: Display: FloatProperty FWeaponStats::MaxRange is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:600][  0]LogClass: Display: FloatProperty FWeaponStats::FireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:600][  0]LogClass: Display: IntProperty FWeaponStats::CartridgeBullets is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:601][  0]LogClass: Display: IntProperty FWeaponStats::BurstNumber is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:601][  0]LogClass: Display: FloatProperty FWeaponStats::BurstFireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:601][  0]LogClass: Display: IntProperty FWeaponStats::MaxMagSize is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:601][  0]LogClass: Display: IntProperty FWeaponStats::MagAmmo is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:602][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageTorso is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:602][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageHead is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:602][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageLegs is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:603][  0]LogClass: Display: FloatProperty FWeaponStats::BaseHipfireSpreadAngleInDegrees is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:603][  0]LogClass: Display: FloatProperty FWeaponStats::BaseMovementSpreadMultiplier is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:603][  0]LogClass: Display: EnumProperty FWeaponMetaData::GunModel is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:603][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:603][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponFireType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:603][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponHitDetectionType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:603][  0]LogClass: Display: EnumProperty FWeaponMetaData::TypeOfEquip is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:603][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:604][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::TracerEffect is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:604][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::MuzzleFlash is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:604][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:605][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:605][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:605][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:605][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:606][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:606][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::MuzzlePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:607][  0]LogClass: Display: 34 Uninitialized script struct members found including 4 object properties
+[2022.12.23-14.29.34:607][  0]LogAutomationTest: Warning: ObjectProperty FWeaponRecoil::RecoilVectorCurve is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:607][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:607][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::TracerEffect is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:608][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::MuzzleFlash is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-14.29.34:608][  0]LogEngine: Initializing Engine...
+[2022.12.23-14.29.34:609][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2022.12.23-14.29.34:624][  0]LogInit: Initializing FReadOnlyCVARCache
+[2022.12.23-14.29.34:625][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2022.12.23-14.29.34:628][  0]LogInit: Texture streaming: Disabled
+[2022.12.23-14.29.34:667][  0]LogInit: Display: Game Engine Initialized.
+[2022.12.23-14.29.34:667][  0]LogNiagaraEditor: GEditor isn't valid! Particle reset commands will not work for Niagara components!
+[2022.12.23-14.29.34:734][  0]LogInit: Display: Starting Game.
+[2022.12.23-14.29.34:734][  0]LogNet: Browse: /Game/Maps/TestMap?Name=Player
+[2022.12.23-14.29.34:735][  0]LogLoad: LoadMap: /Game/Maps/TestMap?Name=Player
+[2022.12.23-14.29.34:735][  0]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2022.12.23-14.29.34:738][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2022.12.23-14.29.34:746][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2022.12.23-14.29.35:084][  0]LogAIModule: Creating AISystem for world TestMap
+[2022.12.23-14.29.35:085][  0]LogLoad: Game class is 'BP_FPSGameModeDefault_C'
+[2022.12.23-14.29.35:086][  0]LogNet: PktLoss set to 0
+[2022.12.23-14.29.35:086][  0]LogNet: PktLagMin set to 0
+[2022.12.23-14.29.35:086][  0]LogNet: PktLagMax set to 0
+[2022.12.23-14.29.35:087][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-14.29.35:087][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-14.29.35:087][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-14.29.35:087][  0]LogNet: PktLoss set to 0
+[2022.12.23-14.29.35:088][  0]LogNet: PktLagMin set to 0
+[2022.12.23-14.29.35:088][  0]LogNet: PktLagMax set to 0
+[2022.12.23-14.29.35:088][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-14.29.35:089][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-14.29.35:089][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-14.29.35:089][  0]LogNet: PktLoss set to 0
+[2022.12.23-14.29.35:090][  0]LogNet: PktLagMin set to 0
+[2022.12.23-14.29.35:090][  0]LogNet: PktLagMax set to 0
+[2022.12.23-14.29.35:090][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-14.29.35:091][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-14.29.35:091][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-14.29.35:091][  0]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2022.12.23-14.29.35:092][  0]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2022.12.23-14.29.35:092][  0]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2022.12.23-14.29.35:092][  0]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2022.12.23-14.29.35:093][  0]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.23-14.29.35:093][  0]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
+[2022.12.23-14.29.35:094][  0]LogWorld: Bringing World /Game/Maps/TestMap.TestMap up for play (max tick rate 30) at 2022.12.23-14.29.35
+[2022.12.23-14.29.35:095][  0]LogWorld: Bringing up level for play took: 0.001333
+[2022.12.23-14.29.35:095][  0]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2022.12.23-14.29.35:096][  0]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2022.12.23-14.29.35:096][  0]LogLoad: Took 0.360801 seconds to LoadMap(/Game/Maps/TestMap)
+[2022.12.23-14.29.35:101][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2022.12.23-14.29.35:102][  0]LogLoad: (Engine Initialization) Total time: 5.61 seconds
+[2022.12.23-14.29.35:102][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2022.12.23-14.29.35:139][  0]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:140][  0]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:140][  0]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:140][  0]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:141][  0]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:141][  0]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:141][  0]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:142][  0]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:142][  0]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:142][  0]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:143][  0]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:143][  0]LogHandshake: SendConnectChallenge. Timestamp: 0.034117, Cookie: 246037127186211213101121214031124206124189227021200198195229
+[2022.12.23-14.29.35:171][  1]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:171][  1]LogHandshake: SendChallengeAck. InCookie: 028168191136028087054126037193050209033109162207040212104022
+[2022.12.23-14.29.35:172][  1]LogNet: Finding connection to update to new address: 127.0.0.1:57191
+[2022.12.23-14.29.35:172][  1]LogNet: Failed to find an existing connection with a matching cookie. Restarted Handshake failed.
+[2022.12.23-14.29.35:172][  1]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:173][  1]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:173][  1]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:173][  1]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:174][  1]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:174][  1]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:204][  2]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:204][  2]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:205][  2]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:205][  2]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:205][  2]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:206][  2]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:237][  3]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:237][  3]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:238][  3]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:238][  3]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:239][  3]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:239][  3]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:239][  3]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:240][  3]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:270][  4]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:270][  4]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:271][  4]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:271][  4]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:272][  4]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:272][  4]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:304][  5]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:304][  5]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:304][  5]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:305][  5]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:305][  5]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:305][  5]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:306][  5]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:307][  5]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:338][  6]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:338][  6]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:339][  6]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:339][  6]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:339][  6]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:340][  6]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:371][  7]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:371][  7]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:372][  7]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:372][  7]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:372][  7]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:373][  7]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:373][  7]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:373][  7]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:404][  8]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:404][  8]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:405][  8]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:405][  8]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:405][  8]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:50705
+[2022.12.23-14.29.35:406][  8]LogHandshake: SendConnectChallenge. Timestamp: 0.301353, Cookie: 094079083194122238034049236238014026250231120087114128206034
+[2022.12.23-14.29.35:406][  8]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:406][  8]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:437][  9]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:437][  9]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:437][  9]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:50705
+[2022.12.23-14.29.35:438][  9]LogHandshake: SendChallengeAck. InCookie: 094079083194122238034049236238014026250231120087114128206034
+[2022.12.23-14.29.35:439][  9]LogNet: Server accepting post-challenge connection from: 127.0.0.1:50705
+[2022.12.23-14.29.35:439][  9]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.23-14.29.35:440][  9]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 12/23/22 14:29:35, [UNetConnection] RemoteAddr: 127.0.0.1:50705, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-14.29.35:440][  9]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:50705, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-14.29.35:441][  9]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:441][  9]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:441][  9]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:441][  9]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:442][  9]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:442][  9]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:442][  9]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/TestMap.TestMap: Accepted
+[2022.12.23-14.29.35:443][  9]LogNet: Remote platform little endian=1
+[2022.12.23-14.29.35:443][  9]LogNet: This platform little endian=1
+[2022.12.23-14.29.35:443][  9]LogNetVersion: fpsgame 1.0.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 1484303137)
+[2022.12.23-14.29.35:471][ 10]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:471][ 10]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:471][ 10]LogNet: Login request: ?PktLagMin=0?PktLagMax=0?PktLoss=0?PktIncomingLagMin=0?PktIncomingLagMax=0?PktIncomingLoss=0?Name=DESKTOP-QG36584-1803268F402C0CD73730F6BC93BE7FD6 userId: NULL:DESKTOP-QG36584-1803268F402C0CD73730F6BC93BE7FD6 platform: NULL
+[2022.12.23-14.29.35:472][ 10]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:472][ 10]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:472][ 10]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:472][ 10]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:505][ 11]LogNet: Client netspeed is 100000
+[2022.12.23-14.29.35:505][ 11]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:506][ 11]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:506][ 11]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:507][ 11]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:507][ 11]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:507][ 11]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:508][ 11]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:508][ 11]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:538][ 12]LogNet: Join request: /Engine/Maps/Entry?PktLagMin=0?PktLagMax=0?PktLoss=0?PktIncomingLagMin=0?PktIncomingLagMax=0?PktIncomingLoss=0?Name=DESKTOP-QG36584-1803268F402C0CD73730F6BC93BE7FD6?SplitscreenCount=1
+[2022.12.23-14.29.35:538][ 12]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.12.23-14.29.35:540][ 12]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2022.12.23-14.29.35:541][ 12]LogTemp: Warning: Numebr of rewind components = 1
+[2022.12.23-14.29.35:542][ 12]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2022.12.23-14.29.35:542][ 12]LogNet: Join succeeded: DESKTOP-QG36584-1803
+[2022.12.23-14.29.35:543][ 12]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:543][ 12]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:544][ 12]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:544][ 12]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:544][ 12]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:545][ 12]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:572][ 13]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:572][ 13]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:573][ 13]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:573][ 13]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:574][ 13]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:574][ 13]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:605][ 14]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:605][ 14]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:606][ 14]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:606][ 14]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:607][ 14]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:607][ 14]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:607][ 14]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:608][ 14]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:638][ 15]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:638][ 15]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:639][ 15]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:639][ 15]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:639][ 15]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:640][ 15]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:671][ 16]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:671][ 16]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:672][ 16]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:672][ 16]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:672][ 16]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:672][ 16]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:673][ 16]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:673][ 16]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:704][ 17]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:704][ 17]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:705][ 17]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:705][ 17]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:705][ 17]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:706][ 17]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:737][ 18]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:737][ 18]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:738][ 18]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:738][ 18]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:739][ 18]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:740][ 18]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:771][ 19]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:771][ 19]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:772][ 19]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:772][ 19]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:772][ 19]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:773][ 19]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:773][ 19]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:773][ 19]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:805][ 20]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:805][ 20]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:805][ 20]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:806][ 20]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:806][ 20]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:806][ 20]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:838][ 21]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:838][ 21]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:839][ 21]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:839][ 21]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:839][ 21]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:840][ 21]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:840][ 21]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:840][ 21]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:871][ 22]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:871][ 22]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:871][ 22]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:872][ 22]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:872][ 22]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:872][ 22]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:873][ 22]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:50708
+[2022.12.23-14.29.35:874][ 22]LogHandshake: SendConnectChallenge. Timestamp: 0.767799, Cookie: 099131064090199057042175223064163060066063114202029255134010
+[2022.12.23-14.29.35:904][ 23]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:50708
+[2022.12.23-14.29.35:904][ 23]LogHandshake: SendChallengeAck. InCookie: 099131064090199057042175223064163060066063114202029255134010
+[2022.12.23-14.29.35:904][ 23]LogNet: Server accepting post-challenge connection from: 127.0.0.1:50708
+[2022.12.23-14.29.35:905][ 23]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.23-14.29.35:905][ 23]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 12/23/22 14:29:35, [UNetConnection] RemoteAddr: 127.0.0.1:50708, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-14.29.35:906][ 23]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:50708, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-14.29.35:906][ 23]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:906][ 23]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:907][ 23]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:907][ 23]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:907][ 23]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:908][ 23]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:908][ 23]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:908][ 23]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:909][ 23]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/TestMap.TestMap: Accepted
+[2022.12.23-14.29.35:909][ 23]LogNet: Remote platform little endian=1
+[2022.12.23-14.29.35:910][ 23]LogNet: This platform little endian=1
+[2022.12.23-14.29.35:937][ 24]LogNet: Login request: ?Name=DESKTOP-QG36584-2929AAEA4CA66BB4B14B18A0D1AE9D29 userId: NULL:DESKTOP-QG36584-2929AAEA4CA66BB4B14B18A0D1AE9D29 platform: NULL
+[2022.12.23-14.29.35:937][ 24]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:938][ 24]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:938][ 24]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:939][ 24]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:939][ 24]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:939][ 24]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:970][ 25]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:970][ 25]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:971][ 25]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:971][ 25]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:971][ 25]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:971][ 25]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.35:972][ 25]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.35:972][ 25]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:004][ 26]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:004][ 26]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:004][ 26]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:005][ 26]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:005][ 26]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:005][ 26]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:037][ 27]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:037][ 27]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:037][ 27]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:038][ 27]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:038][ 27]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:038][ 27]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:039][ 27]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:039][ 27]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:071][ 28]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:071][ 28]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:072][ 28]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:072][ 28]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:072][ 28]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:072][ 28]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:104][ 29]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:104][ 29]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:104][ 29]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:104][ 29]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:105][ 29]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:105][ 29]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:105][ 29]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:105][ 29]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:137][ 30]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:137][ 30]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:138][ 30]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:138][ 30]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:138][ 30]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:138][ 30]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:170][ 31]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:170][ 31]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:170][ 31]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:171][ 31]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:171][ 31]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:171][ 31]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:172][ 31]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:172][ 31]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:204][ 32]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:204][ 32]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:205][ 32]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:205][ 32]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:205][ 32]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:206][ 32]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:206][ 32]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:206][ 32]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:238][ 33]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:238][ 33]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:238][ 33]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:239][ 33]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:239][ 33]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:239][ 33]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:239][ 33]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:240][ 33]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:271][ 34]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:271][ 34]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:272][ 34]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:272][ 34]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:272][ 34]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:273][ 34]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:304][ 35]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:304][ 35]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:305][ 35]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:305][ 35]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:305][ 35]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:305][ 35]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:337][ 36]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:337][ 36]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:338][ 36]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:338][ 36]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:338][ 36]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:338][ 36]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:339][ 36]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:339][ 36]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:370][ 37]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:370][ 37]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:371][ 37]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:371][ 37]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:371][ 37]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:372][ 37]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:372][ 37]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:372][ 37]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:404][ 38]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:404][ 38]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:405][ 38]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:405][ 38]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:405][ 38]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:405][ 38]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:437][ 39]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:437][ 39]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:437][ 39]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:438][ 39]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:438][ 39]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:438][ 39]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:439][ 39]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:439][ 39]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:471][ 40]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:471][ 40]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:472][ 40]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:472][ 40]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:472][ 40]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:472][ 40]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:504][ 41]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:504][ 41]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:504][ 41]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:504][ 41]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:505][ 41]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:506][ 41]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:506][ 41]LogNet: Client netspeed is 100000
+[2022.12.23-14.29.36:506][ 41]LogNet: Join request: /Engine/Maps/Entry?Name=DESKTOP-QG36584-2929AAEA4CA66BB4B14B18A0D1AE9D29?SplitscreenCount=1
+[2022.12.23-14.29.36:507][ 41]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.12.23-14.29.36:508][ 41]LogTemp: Warning: Numebr of rewind components = 2
+[2022.12.23-14.29.36:509][ 41]LogNet: Join succeeded: DESKTOP-QG36584-2929
+[2022.12.23-14.29.36:509][ 41]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:509][ 41]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:537][ 42]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:537][ 42]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:538][ 42]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:538][ 42]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:538][ 42]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:539][ 42]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:571][ 43]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:571][ 43]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:572][ 43]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:572][ 43]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:572][ 43]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:572][ 43]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:604][ 44]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:604][ 44]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:605][ 44]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:605][ 44]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:606][ 44]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:606][ 44]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:606][ 44]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:606][ 44]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:637][ 45]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:637][ 45]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:638][ 45]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:638][ 45]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:639][ 45]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:639][ 45]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:670][ 46]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:670][ 46]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:671][ 46]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:671][ 46]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:672][ 46]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:672][ 46]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:672][ 46]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:672][ 46]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:703][ 47]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:703][ 47]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:704][ 47]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:704][ 47]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:704][ 47]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:705][ 47]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:705][ 47]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:705][ 47]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:736][ 48]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:736][ 48]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:736][ 48]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:737][ 48]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:737][ 48]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:738][ 48]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:769][ 49]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:769][ 49]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:770][ 49]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:770][ 49]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:771][ 49]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:771][ 49]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:771][ 49]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:771][ 49]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:802][ 50]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:802][ 50]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:803][ 50]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:804][ 50]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:804][ 50]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:805][ 50]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:836][ 51]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:836][ 51]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:837][ 51]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:837][ 51]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:837][ 51]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:837][ 51]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:869][ 52]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:869][ 52]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:870][ 52]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:870][ 52]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:871][ 52]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:871][ 52]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:871][ 52]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:871][ 52]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:903][ 53]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:903][ 53]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:904][ 53]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:904][ 53]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:905][ 53]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:905][ 53]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:937][ 54]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:937][ 54]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:938][ 54]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:938][ 54]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:939][ 54]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:939][ 54]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:939][ 54]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:939][ 54]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:970][ 55]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:970][ 55]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:971][ 55]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:971][ 55]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:971][ 55]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:972][ 55]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.36:972][ 55]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.36:972][ 55]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:004][ 56]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:004][ 56]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:004][ 56]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:005][ 56]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:005][ 56]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:005][ 56]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:037][ 57]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:037][ 57]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:038][ 57]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:038][ 57]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:039][ 57]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:039][ 57]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:039][ 57]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:039][ 57]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:070][ 58]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:070][ 58]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:070][ 58]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:071][ 58]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:071][ 58]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:071][ 58]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:104][ 59]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:104][ 59]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:105][ 59]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:105][ 59]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:106][ 59]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:106][ 59]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:106][ 59]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:107][ 59]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:137][ 60]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:137][ 60]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:137][ 60]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:138][ 60]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:139][ 60]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:139][ 60]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:170][ 61]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:170][ 61]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:171][ 61]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:171][ 61]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:171][ 61]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:172][ 61]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:172][ 61]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:172][ 61]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:203][ 62]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:203][ 62]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:204][ 62]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:204][ 62]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:205][ 62]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:205][ 62]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:236][ 63]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:236][ 63]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:237][ 63]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:237][ 63]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:237][ 63]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:238][ 63]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:269][ 64]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:269][ 64]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:270][ 64]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:270][ 64]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:271][ 64]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:271][ 64]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:272][ 64]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:272][ 64]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:302][ 65]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:302][ 65]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:303][ 65]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:303][ 65]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:303][ 65]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:303][ 65]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:335][ 66]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:335][ 66]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:336][ 66]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:336][ 66]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:337][ 66]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:337][ 66]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:337][ 66]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:337][ 66]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:368][ 67]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:368][ 67]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:369][ 67]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:369][ 67]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:369][ 67]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:369][ 67]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:401][ 68]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:401][ 68]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:401][ 68]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:402][ 68]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:402][ 68]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:402][ 68]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:403][ 68]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:403][ 68]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:435][ 69]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:435][ 69]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:436][ 69]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:436][ 69]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:436][ 69]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:437][ 69]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:469][ 70]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:469][ 70]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:470][ 70]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:470][ 70]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:471][ 70]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:472][ 70]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:472][ 70]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:473][ 70]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:503][ 71]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:503][ 71]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:504][ 71]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:504][ 71]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:505][ 71]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:505][ 71]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:536][ 72]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:536][ 72]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:537][ 72]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:537][ 72]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:538][ 72]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:538][ 72]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:538][ 72]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:538][ 72]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:570][ 73]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:570][ 73]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:571][ 73]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:571][ 73]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:572][ 73]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:572][ 73]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:572][ 73]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:573][ 73]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:603][ 74]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:603][ 74]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:604][ 74]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:604][ 74]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:604][ 74]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:605][ 74]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:637][ 75]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:637][ 75]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:637][ 75]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:637][ 75]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:638][ 75]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:638][ 75]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:638][ 75]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:639][ 75]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:670][ 76]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:670][ 76]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:671][ 76]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:671][ 76]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:671][ 76]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:672][ 76]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:703][ 77]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:703][ 77]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:704][ 77]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:704][ 77]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:704][ 77]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:704][ 77]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:705][ 77]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:706][ 77]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:736][ 78]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:736][ 78]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:737][ 78]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:737][ 78]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:738][ 78]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:738][ 78]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:769][ 79]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:769][ 79]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:770][ 79]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:770][ 79]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:771][ 79]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:771][ 79]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:771][ 79]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:771][ 79]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:802][ 80]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:802][ 80]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:803][ 80]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:803][ 80]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:804][ 80]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:804][ 80]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:835][ 81]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:835][ 81]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:836][ 81]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:836][ 81]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:836][ 81]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:836][ 81]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:837][ 81]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:837][ 81]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:869][ 82]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:869][ 82]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:870][ 82]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:870][ 82]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:871][ 82]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:871][ 82]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:903][ 83]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:903][ 83]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:904][ 83]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:904][ 83]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:905][ 83]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:905][ 83]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:905][ 83]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:905][ 83]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:936][ 84]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:936][ 84]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:937][ 84]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:937][ 84]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:938][ 84]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:938][ 84]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:970][ 85]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:970][ 85]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:970][ 85]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:970][ 85]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.37:971][ 85]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.37:971][ 85]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:005][ 86]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:005][ 86]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:006][ 86]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:006][ 86]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:006][ 86]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:006][ 86]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:007][ 86]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:007][ 86]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:038][ 87]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:038][ 87]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:038][ 87]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:038][ 87]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:039][ 87]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:039][ 87]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:072][ 88]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:072][ 88]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:073][ 88]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:073][ 88]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:074][ 88]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:074][ 88]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:074][ 88]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:075][ 88]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:105][ 89]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:105][ 89]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:106][ 89]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:106][ 89]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:106][ 89]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:106][ 89]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:107][ 89]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:107][ 89]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:139][ 90]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:139][ 90]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:140][ 90]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:140][ 90]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:141][ 90]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:141][ 90]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:173][ 91]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:173][ 91]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:174][ 91]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:174][ 91]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:175][ 91]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:175][ 91]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:175][ 91]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:175][ 91]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:206][ 92]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:206][ 92]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:207][ 92]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:207][ 92]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:208][ 92]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:208][ 92]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:208][ 92]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:208][ 92]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:239][ 93]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:239][ 93]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:240][ 93]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:240][ 93]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:240][ 93]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:241][ 93]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:272][ 94]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:272][ 94]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:273][ 94]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:273][ 94]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:273][ 94]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:273][ 94]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:305][ 95]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:305][ 95]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:306][ 95]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:306][ 95]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:307][ 95]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:307][ 95]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:307][ 95]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:307][ 95]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:338][ 96]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:338][ 96]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:338][ 96]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:339][ 96]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:339][ 96]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:339][ 96]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:340][ 96]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:340][ 96]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:372][ 97]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:372][ 97]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:373][ 97]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:373][ 97]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:374][ 97]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:374][ 97]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:405][ 98]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:405][ 98]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:406][ 98]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:406][ 98]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:407][ 98]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:407][ 98]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:407][ 98]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:407][ 98]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:438][ 99]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:438][ 99]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:439][ 99]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:439][ 99]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:440][ 99]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:440][ 99]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:472][100]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:472][100]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:473][100]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:473][100]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:474][100]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:474][100]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:474][100]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:475][100]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:505][101]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:505][101]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:506][101]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:506][101]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:507][101]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:507][101]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:539][102]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:539][102]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:540][102]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:540][102]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:540][102]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:541][102]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:541][102]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:541][102]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:572][103]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:572][103]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:573][103]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:573][103]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:574][103]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:574][103]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:574][103]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:574][103]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:605][104]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:605][104]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:605][104]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:605][104]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:606][104]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:606][104]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:638][105]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:638][105]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:639][105]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:639][105]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:640][105]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:640][105]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:641][105]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:641][105]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:671][106]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:671][106]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:672][106]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:672][106]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:673][106]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:673][106]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:705][107]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:705][107]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:706][107]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:706][107]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:706][107]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:707][107]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:707][107]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:707][107]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:738][108]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:738][108]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:739][108]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:739][108]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:739][108]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:740][108]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:771][109]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:771][109]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:773][109]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:773][109]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:773][109]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:774][109]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:774][109]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:775][109]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:805][110]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:805][110]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:806][110]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:806][110]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:806][110]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:806][110]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:838][111]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:838][111]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:839][111]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:839][111]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:840][111]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:840][111]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:840][111]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:840][111]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:871][112]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:871][112]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:872][112]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:872][112]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:873][112]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:873][112]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:905][113]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:905][113]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:905][113]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:905][113]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:906][113]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:906][113]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:906][113]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:907][113]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:938][114]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:938][114]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:939][114]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:939][114]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:940][114]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:940][114]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:940][114]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:941][114]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:971][115]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:971][115]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:972][115]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:972][115]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.38:972][115]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.38:973][115]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:005][116]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:005][116]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:006][116]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:006][116]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:006][116]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:007][116]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:007][116]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:007][116]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:039][117]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:039][117]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:040][117]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:040][117]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:041][117]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:041][117]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:041][117]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:042][117]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:072][118]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:072][118]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:073][118]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:073][118]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:074][118]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:074][118]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:107][119]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:107][119]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:108][119]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:109][119]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:109][119]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:109][119]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:140][120]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:140][120]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:141][120]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:141][120]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:142][120]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:142][120]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:143][120]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:143][120]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:173][121]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:173][121]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:174][121]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:174][121]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:174][121]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:175][121]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:206][122]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:206][122]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:208][122]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:208][122]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:209][122]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:209][122]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:210][122]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:211][122]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:239][123]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:239][123]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:240][123]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:240][123]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:241][123]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:241][123]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:273][124]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:273][124]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:275][124]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:275][124]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:275][124]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:276][124]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:276][124]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:277][124]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:306][125]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:306][125]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:307][125]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:308][125]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:308][125]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:308][125]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:339][126]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:339][126]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:340][126]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:340][126]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:341][126]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:341][126]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:342][126]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:342][126]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:373][127]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:373][127]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:374][127]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:374][127]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:374][127]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:375][127]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:406][128]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:406][128]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:407][128]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:407][128]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:408][128]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:408][128]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:408][128]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:409][128]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:439][129]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:439][129]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:440][129]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:440][129]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:441][129]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191
+[2022.12.23-14.29.39:441][129]LogHandshake: SendRestartHandshakeRequest.
+[2022.12.23-14.29.39:473][130]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:57191

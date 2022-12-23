@@ -3901,10 +3901,11 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MuzzleCounter_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MuzzleCounter;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndPoints_Inner;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndPoint_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndPoints_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndPoint;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_EndPoints;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeadMaterial_MetaData[];
 #endif
@@ -4378,14 +4379,15 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter = { "MuzzleCounter", "OnRep_MuzzleCounter", (EPropertyFlags)0x0020080100000020, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, MuzzleCounter), METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoints_Inner = { "EndPoints", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint_MetaData[] = {
-		{ "Comment", "//Here is our replicated endpoint\n//This endpoint will be duff for projectiles, and will not matter, as we will only use it for the hitscan tracer effect.\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoints_MetaData[] = {
+		{ "Comment", "//Here is our replicated endpoint\n//This endpoint will be duff for projectiles, and will not matter, as we will only use it for the hitscan tracer effect.\n//USE ARRAYS\n" },
 		{ "ModuleRelativePath", "fpscharacter.h" },
-		{ "ToolTip", "Here is our replicated endpoint\nThis endpoint will be duff for projectiles, and will not matter, as we will only use it for the hitscan tracer effect." },
+		{ "ToolTip", "Here is our replicated endpoint\nThis endpoint will be duff for projectiles, and will not matter, as we will only use it for the hitscan tracer effect.\nUSE ARRAYS" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint = { "EndPoint", "OnRep_EndPoint", (EPropertyFlags)0x0020080100000020, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, EndPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoints = { "EndPoints", "OnRep_EndPoint", (EPropertyFlags)0x0020080100000020, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Afpscharacter, EndPoints), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoints_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoints_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_Afpscharacter_Statics::NewProp_HeadMaterial_MetaData[] = {
 		{ "Category", "fpscharacter" },
@@ -4822,7 +4824,8 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MaxMovementSpreadModifier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MinMovementSpreadModifier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_MuzzleCounter,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoints_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_EndPoints,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_HeadMaterial,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_TorsoMaterial,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_Afpscharacter_Statics::NewProp_LegMaterial,
@@ -4900,7 +4903,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 2828776974);
+	IMPLEMENT_CLASS(Afpscharacter, 3800248345);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();
@@ -4911,7 +4914,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 	{
 		static const FName Name_ReplicatedSpreadAngles(TEXT("ReplicatedSpreadAngles"));
 		static const FName Name_MuzzleCounter(TEXT("MuzzleCounter"));
-		static const FName Name_EndPoint(TEXT("EndPoint"));
+		static const FName Name_EndPoints(TEXT("EndPoints"));
 		static const FName Name_SynchronisedControlRotation(TEXT("SynchronisedControlRotation"));
 		static const FName Name_PrimaryData(TEXT("PrimaryData"));
 		static const FName Name_SecondaryData(TEXT("SecondaryData"));
@@ -4924,7 +4927,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		const bool bIsValid = true
 			&& Name_ReplicatedSpreadAngles == ClassReps[(int32)ENetFields_Private::ReplicatedSpreadAngles].Property->GetFName()
 			&& Name_MuzzleCounter == ClassReps[(int32)ENetFields_Private::MuzzleCounter].Property->GetFName()
-			&& Name_EndPoint == ClassReps[(int32)ENetFields_Private::EndPoint].Property->GetFName()
+			&& Name_EndPoints == ClassReps[(int32)ENetFields_Private::EndPoints].Property->GetFName()
 			&& Name_SynchronisedControlRotation == ClassReps[(int32)ENetFields_Private::SynchronisedControlRotation].Property->GetFName()
 			&& Name_PrimaryData == ClassReps[(int32)ENetFields_Private::PrimaryData].Property->GetFName()
 			&& Name_SecondaryData == ClassReps[(int32)ENetFields_Private::SecondaryData].Property->GetFName()

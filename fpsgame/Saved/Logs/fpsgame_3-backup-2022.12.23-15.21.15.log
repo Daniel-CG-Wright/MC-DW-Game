@@ -1,0 +1,2499 @@
+﻿Log file open, 12/23/22 15:19:59
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: fpsgame
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 17 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.233528
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogInit: Display: Loading text-based GConfig....
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin GameplayCameras
+LogPluginManager: Mounting plugin OodleData
+LogPluginManager: Mounting plugin OodleNetwork
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PixWinPlugin
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin TextureFormatOodle
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin OpenImageDenoise
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OpenXR
+LogPluginManager: Mounting plugin OpenXREyeTracker
+LogPluginManager: Mounting plugin OpenXRHandTracking
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+PixWinPlugin: PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.27-CL-18319896
+LogInit: Engine Version: 4.27.2-18319896+++UE4+Release-4.27
+LogInit: Compatible Engine Version: 4.27.0-17155196+++UE4+Release-4.27
+LogInit: Net CL: 17155196
+LogInit: OS: Windows 10 (Release 2009) (), CPU: AMD Ryzen 5 3600X 6-Core Processor             , GPU: AMD Radeon RX 5700 XT
+LogInit: Compiled (64-bit): Nov 30 2021 07:12:08
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.27
+LogInit: Command Line:  /Game/Maps/TestMap -game -PIEVIACONSOLE -Multiprocess -server -log "GameUserSettingsINI=C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/PIEGameUserSettings0.ini" -MultiprocessSaveConfig -forcepassthrough -messaging -SessionName="Play in Standalone Game" -port=17777 -PktLagMin=0 -PktLagMax=0 -PktLoss=0 -PktIncomingLagMin=0 -PktIncomingLagMax=0 -PktIncomingLoss=0 -windowed
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 14
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 45
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 47
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.12.23-15.20.00:208][  0]LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+[2022.12.23-15.20.00:208][  0]LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.12.23-15.20.00:209][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-15.20.00:209][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2022.12.23-15.20.00:209][  0]LogConfig: Setting CVar [[r.Mobile.DisableVertexFog:1]]
+[2022.12.23-15.20.00:210][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxMobileCascades:2]]
+[2022.12.23-15.20.00:210][  0]LogConfig: Setting CVar [[r.MobileMSAA:1]]
+[2022.12.23-15.20.00:210][  0]LogConfig: Setting CVar [[r.Mobile.AllowDitheredLODTransition:0]]
+[2022.12.23-15.20.00:210][  0]LogConfig: Setting CVar [[r.Mobile.AllowSoftwareOcclusion:0]]
+[2022.12.23-15.20.00:211][  0]LogConfig: Setting CVar [[r.Mobile.VirtualTextures:0]]
+[2022.12.23-15.20.00:211][  0]LogConfig: Setting CVar [[r.DiscardUnusedQuality:0]]
+[2022.12.23-15.20.00:211][  0]LogConfig: Setting CVar [[r.AllowOcclusionQueries:1]]
+[2022.12.23-15.20.00:211][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForLights:0.030000]]
+[2022.12.23-15.20.00:212][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForDepthPrepass:0.030000]]
+[2022.12.23-15.20.00:212][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForCSMDepth:0.010000]]
+[2022.12.23-15.20.00:212][  0]LogConfig: Setting CVar [[r.PrecomputedVisibilityWarning:0]]
+[2022.12.23-15.20.00:212][  0]LogConfig: Setting CVar [[r.TextureStreaming:1]]
+[2022.12.23-15.20.00:213][  0]LogConfig: Setting CVar [[Compat.UseDXT5NormalMaps:0]]
+[2022.12.23-15.20.00:213][  0]LogConfig: Setting CVar [[r.VirtualTextures:0]]
+[2022.12.23-15.20.00:213][  0]LogConfig: Setting CVar [[r.VT.EnableAutoImport:1]]
+[2022.12.23-15.20.00:213][  0]LogConfig: Setting CVar [[r.VirtualTexturedLightmaps:0]]
+[2022.12.23-15.20.00:213][  0]LogConfig: Setting CVar [[r.VT.TileSize:128]]
+[2022.12.23-15.20.00:214][  0]LogConfig: Setting CVar [[r.VT.TileBorderSize:4]]
+[2022.12.23-15.20.00:214][  0]LogConfig: Setting CVar [[r.vt.FeedbackFactor:16]]
+[2022.12.23-15.20.00:214][  0]LogConfig: Setting CVar [[r.VT.EnableCompressZlib:1]]
+[2022.12.23-15.20.00:215][  0]LogConfig: Setting CVar [[r.VT.EnableCompressCrunch:0]]
+[2022.12.23-15.20.00:215][  0]LogConfig: Setting CVar [[r.ClearCoatNormal:0]]
+[2022.12.23-15.20.00:215][  0]LogConfig: Setting CVar [[r.ReflectionCaptureResolution:128]]
+[2022.12.23-15.20.00:215][  0]LogConfig: Setting CVar [[r.Mobile.ReflectionCaptureCompression:0]]
+[2022.12.23-15.20.00:216][  0]LogConfig: Setting CVar [[r.ReflectionEnvironmentLightmapMixBasedOnRoughness:1]]
+[2022.12.23-15.20.00:216][  0]LogConfig: Setting CVar [[r.ForwardShading:0]]
+[2022.12.23-15.20.00:216][  0]LogConfig: Setting CVar [[r.VertexFoggingForOpaque:1]]
+[2022.12.23-15.20.00:217][  0]LogConfig: Setting CVar [[r.AllowStaticLighting:1]]
+[2022.12.23-15.20.00:217][  0]LogConfig: Setting CVar [[r.NormalMapsForStaticLighting:0]]
+[2022.12.23-15.20.00:217][  0]LogConfig: Setting CVar [[r.GenerateMeshDistanceFields:0]]
+[2022.12.23-15.20.00:218][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.EightBit:0]]
+[2022.12.23-15.20.00:218][  0]LogConfig: Setting CVar [[r.GenerateLandscapeGIData:0]]
+[2022.12.23-15.20.00:218][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.Compress:0]]
+[2022.12.23-15.20.00:219][  0]LogConfig: Setting CVar [[r.TessellationAdaptivePixelsPerTriangle:48.000000]]
+[2022.12.23-15.20.00:219][  0]LogConfig: Setting CVar [[r.SeparateTranslucency:1]]
+[2022.12.23-15.20.00:219][  0]LogConfig: Setting CVar [[r.TranslucentSortPolicy:0]]
+[2022.12.23-15.20.00:219][  0]LogConfig: Setting CVar [[vr.VRS.HMDFixedFoveationLevel:0]]
+[2022.12.23-15.20.00:220][  0]LogConfig: Setting CVar [[r.CustomDepth:1]]
+[2022.12.23-15.20.00:222][  0]LogConfig: Setting CVar [[r.CustomDepthTemporalAAJitter:1]]
+[2022.12.23-15.20.00:222][  0]LogConfig: Setting CVar [[r.PostProcessing.PropagateAlpha:0]]
+[2022.12.23-15.20.00:222][  0]LogConfig: Setting CVar [[r.DefaultFeature.Bloom:1]]
+[2022.12.23-15.20.00:223][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusion:1]]
+[2022.12.23-15.20.00:223][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusionStaticFraction:1]]
+[2022.12.23-15.20.00:224][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2022.12.23-15.20.00:224][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Method:0]]
+[2022.12.23-15.20.00:224][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Bias:1.000000]]
+[2022.12.23-15.20.00:224][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:0]]
+[2022.12.23-15.20.00:225][  0]LogConfig: Setting CVar [[r.UsePreExposure:1]]
+[2022.12.23-15.20.00:225][  0]LogConfig: Setting CVar [[r.EyeAdaptation.EditorOnly:0]]
+[2022.12.23-15.20.00:225][  0]LogConfig: Setting CVar [[r.DefaultFeature.MotionBlur:0]]
+[2022.12.23-15.20.00:226][  0]LogConfig: Setting CVar [[r.DefaultFeature.LensFlare:0]]
+[2022.12.23-15.20.00:226][  0]LogConfig: Setting CVar [[r.TemporalAA.Upsampling:0]]
+[2022.12.23-15.20.00:226][  0]LogConfig: Setting CVar [[r.SSGI.Enable:0]]
+[2022.12.23-15.20.00:226][  0]LogConfig: Setting CVar [[r.DefaultFeature.AntiAliasing:0]]
+[2022.12.23-15.20.00:227][  0]LogConfig: Setting CVar [[r.DefaultFeature.LightUnits:1]]
+[2022.12.23-15.20.00:227][  0]LogConfig: Setting CVar [[r.DefaultBackBufferPixelFormat:4]]
+[2022.12.23-15.20.00:227][  0]LogConfig: Setting CVar [[r.Shadow.UnbuiltPreviewInGame:1]]
+[2022.12.23-15.20.00:227][  0]LogConfig: Setting CVar [[r.StencilForLODDither:0]]
+[2022.12.23-15.20.00:227][  0]LogConfig: Setting CVar [[r.EarlyZPass:3]]
+[2022.12.23-15.20.00:228][  0]LogConfig: Setting CVar [[r.EarlyZPassOnlyMaterialMasking:0]]
+[2022.12.23-15.20.00:228][  0]LogConfig: Setting CVar [[r.DBuffer:1]]
+[2022.12.23-15.20.00:228][  0]LogConfig: Setting CVar [[r.ClearSceneMethod:1]]
+[2022.12.23-15.20.00:229][  0]LogConfig: Setting CVar [[r.BasePassOutputsVelocity:0]]
+[2022.12.23-15.20.00:229][  0]LogConfig: Setting CVar [[r.VertexDeformationOutputsVelocity:0]]
+[2022.12.23-15.20.00:229][  0]LogConfig: Setting CVar [[r.SelectiveBasePassOutputs:0]]
+[2022.12.23-15.20.00:229][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeX:1024]]
+[2022.12.23-15.20.00:230][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeY:1024]]
+[2022.12.23-15.20.00:231][  0]LogConfig: Setting CVar [[r.AllowGlobalClipPlane:0]]
+[2022.12.23-15.20.00:231][  0]LogConfig: Setting CVar [[r.GBufferFormat:1]]
+[2022.12.23-15.20.00:231][  0]LogConfig: Setting CVar [[r.MorphTarget.Mode:1]]
+[2022.12.23-15.20.00:231][  0]LogConfig: Setting CVar [[vr.InstancedStereo:0]]
+[2022.12.23-15.20.00:231][  0]LogConfig: Setting CVar [[r.MobileHDR:1]]
+[2022.12.23-15.20.00:232][  0]LogConfig: Setting CVar [[vr.MobileMultiView:0]]
+[2022.12.23-15.20.00:232][  0]LogConfig: Setting CVar [[r.Mobile.UseHWsRGBEncoding:0]]
+[2022.12.23-15.20.00:232][  0]LogConfig: Setting CVar [[vr.RoundRobinOcclusion:0]]
+[2022.12.23-15.20.00:232][  0]LogConfig: Setting CVar [[vr.ODSCapture:0]]
+[2022.12.23-15.20.00:233][  0]LogConfig: Setting CVar [[r.MeshStreaming:0]]
+[2022.12.23-15.20.00:233][  0]LogConfig: Setting CVar [[r.WireframeCullThreshold:5.000000]]
+[2022.12.23-15.20.00:233][  0]LogConfig: Setting CVar [[r.RayTracing:0]]
+[2022.12.23-15.20.00:233][  0]LogConfig: Setting CVar [[r.RayTracing.UseTextureLod:0]]
+[2022.12.23-15.20.00:234][  0]LogConfig: Setting CVar [[r.SupportStationarySkylight:1]]
+[2022.12.23-15.20.00:234][  0]LogConfig: Setting CVar [[r.SupportLowQualityLightmaps:1]]
+[2022.12.23-15.20.00:234][  0]LogConfig: Setting CVar [[r.SupportPointLightWholeSceneShadows:1]]
+[2022.12.23-15.20.00:235][  0]LogConfig: Setting CVar [[r.SupportAtmosphericFog:1]]
+[2022.12.23-15.20.00:235][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphere:1]]
+[2022.12.23-15.20.00:235][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphereAffectsHeightFog:0]]
+[2022.12.23-15.20.00:235][  0]LogConfig: Setting CVar [[r.SkinCache.CompileShaders:0]]
+[2022.12.23-15.20.00:236][  0]LogConfig: Setting CVar [[r.SkinCache.DefaultBehavior:1]]
+[2022.12.23-15.20.00:238][  0]LogConfig: Setting CVar [[r.SkinCache.SceneMemoryLimitInMB:128.000000]]
+[2022.12.23-15.20.00:239][  0]LogConfig: Setting CVar [[r.Mobile.EnableStaticAndCSMShadowReceivers:1]]
+[2022.12.23-15.20.00:239][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableLightCSMShaderCulling:1]]
+[2022.12.23-15.20.00:239][  0]LogConfig: Setting CVar [[r.Mobile.AllowDistanceFieldShadows:1]]
+[2022.12.23-15.20.00:240][  0]LogConfig: Setting CVar [[r.Mobile.AllowMovableDirectionalLights:1]]
+[2022.12.23-15.20.00:240][  0]LogConfig: Setting CVar [[r.MobileNumDynamicPointLights:4]]
+[2022.12.23-15.20.00:240][  0]LogConfig: Setting CVar [[r.MobileDynamicPointLightsUseStaticBranch:1]]
+[2022.12.23-15.20.00:240][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlights:0]]
+[2022.12.23-15.20.00:241][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlightsShadow:0]]
+[2022.12.23-15.20.00:241][  0]LogConfig: Setting CVar [[r.GPUSkin.Support16BitBoneIndex:0]]
+[2022.12.23-15.20.00:241][  0]LogConfig: Setting CVar [[r.GPUSkin.Limit2BoneInfluences:0]]
+[2022.12.23-15.20.00:242][  0]LogConfig: Setting CVar [[r.SupportDepthOnlyIndexBuffers:1]]
+[2022.12.23-15.20.00:242][  0]LogConfig: Setting CVar [[r.SupportReversedIndexBuffers:1]]
+[2022.12.23-15.20.00:242][  0]LogConfig: Setting CVar [[r.LightPropagationVolume:0]]
+[2022.12.23-15.20.00:242][  0]LogConfig: Setting CVar [[r.Mobile.AmbientOcclusion:0]]
+[2022.12.23-15.20.00:243][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluences:0]]
+[2022.12.23-15.20.00:243][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluencesThreshold:8]]
+[2022.12.23-15.20.00:243][  0]LogConfig: Setting CVar [[r.Mobile.PlanarReflectionMode:0]]
+[2022.12.23-15.20.00:243][  0]LogConfig: Setting CVar [[r.Mobile.SupportsGen4TAA:0]]
+[2022.12.23-15.20.00:244][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-15.20.00:244][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-15.20.00:244][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2022.12.23-15.20.00:245][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2022.12.23-15.20.00:245][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2022.12.23-15.20.00:245][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2022.12.23-15.20.00:245][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2022.12.23-15.20.00:246][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2022.12.23-15.20.00:246][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2022.12.23-15.20.00:246][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2022.12.23-15.20.00:246][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2022.12.23-15.20.00:247][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2022.12.23-15.20.00:247][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2022.12.23-15.20.00:247][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2022.12.23-15.20.00:248][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2022.12.23-15.20.00:248][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2022.12.23-15.20.00:248][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-15.20.00:248][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2022.12.23-15.20.00:249][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2022.12.23-15.20.00:249][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2022.12.23-15.20.00:249][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2022.12.23-15.20.00:249][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2022.12.23-15.20.00:250][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2022.12.23-15.20.00:250][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2022.12.23-15.20.00:250][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2022.12.23-15.20.00:250][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2022.12.23-15.20.00:251][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2022.12.23-15.20.00:251][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2022.12.23-15.20.00:251][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2022.12.23-15.20.00:251][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2022.12.23-15.20.00:252][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2022.12.23-15.20.00:252][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-15.20.00:252][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-15.20.00:252][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:252][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.12.23-15.20.00:253][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.12.23-15.20.00:255][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:255][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.12.23-15.20.00:255][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:256][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.12.23-15.20.00:256][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.12.23-15.20.00:256][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.12.23-15.20.00:256][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.12.23-15.20.00:257][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.12.23-15.20.00:257][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.12.23-15.20.00:257][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.12.23-15.20.00:258][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.12.23-15.20.00:258][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.12.23-15.20.00:258][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.12.23-15.20.00:258][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.12.23-15.20.00:259][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.12.23-15.20.00:259][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.12.23-15.20.00:259][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.12.23-15.20.00:259][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.12.23-15.20.00:260][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.12.23-15.20.00:260][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.12.23-15.20.00:260][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.12.23-15.20.00:260][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:260][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.12.23-15.20.00:261][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.12.23-15.20.00:261][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.12.23-15.20.00:261][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.12.23-15.20.00:261][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.12.23-15.20.00:262][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.12.23-15.20.00:262][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.12.23-15.20.00:262][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.12.23-15.20.00:262][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.12.23-15.20.00:263][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.12.23-15.20.00:263][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.12.23-15.20.00:263][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.12.23-15.20.00:263][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.12.23-15.20.00:264][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.12.23-15.20.00:264][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.12.23-15.20.00:264][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.12.23-15.20.00:264][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.12.23-15.20.00:265][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.12.23-15.20.00:265][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.12.23-15.20.00:265][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.12.23-15.20.00:266][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.12.23-15.20.00:266][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.12.23-15.20.00:266][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.12.23-15.20.00:266][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.12.23-15.20.00:266][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.12.23-15.20.00:267][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.12.23-15.20.00:267][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.12.23-15.20.00:267][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.12.23-15.20.00:267][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.12.23-15.20.00:268][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.12.23-15.20.00:268][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:268][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.12.23-15.20.00:268][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.12.23-15.20.00:269][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.12.23-15.20.00:271][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.12.23-15.20.00:272][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.12.23-15.20.00:272][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.12.23-15.20.00:272][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.12.23-15.20.00:272][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.12.23-15.20.00:273][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.12.23-15.20.00:273][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:273][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.12.23-15.20.00:273][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.12.23-15.20.00:273][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.12.23-15.20.00:274][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.12.23-15.20.00:274][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.12.23-15.20.00:274][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.12.23-15.20.00:275][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.12.23-15.20.00:275][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.12.23-15.20.00:275][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.12.23-15.20.00:276][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.12.23-15.20.00:276][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.12.23-15.20.00:276][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.12.23-15.20.00:276][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.12.23-15.20.00:277][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.12.23-15.20.00:277][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.12.23-15.20.00:277][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.12.23-15.20.00:277][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.12.23-15.20.00:278][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.12.23-15.20.00:278][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.12.23-15.20.00:278][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.12.23-15.20.00:279][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.12.23-15.20.00:279][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.12.23-15.20.00:279][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.12.23-15.20.00:280][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.12.23-15.20.00:280][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.12.23-15.20.00:280][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.12.23-15.20.00:280][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.12.23-15.20.00:281][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.12.23-15.20.00:281][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:281][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.12.23-15.20.00:281][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.12.23-15.20.00:282][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:282][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.12.23-15.20.00:282][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.12.23-15.20.00:282][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.12.23-15.20.00:283][  0]LogInit: Selected Device Profile: [Windows]
+[2022.12.23-15.20.00:283][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2022.12.23-15.20.00:283][  0]LogHAL: Display: Platform has ~ 16 GB [17128247296 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2022.12.23-15.20.00:283][  0]LogInit: Going up to parent DeviceProfile []
+[2022.12.23-15.20.00:283][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:284][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.12.23-15.20.00:284][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.12.23-15.20.00:284][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:284][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.12.23-15.20.00:285][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:288][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.12.23-15.20.00:288][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.12.23-15.20.00:289][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.12.23-15.20.00:289][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.12.23-15.20.00:290][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.12.23-15.20.00:290][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.12.23-15.20.00:291][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.12.23-15.20.00:292][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.12.23-15.20.00:292][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.12.23-15.20.00:292][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.12.23-15.20.00:293][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.12.23-15.20.00:293][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.12.23-15.20.00:293][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.12.23-15.20.00:293][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.12.23-15.20.00:293][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.12.23-15.20.00:294][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.12.23-15.20.00:294][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.12.23-15.20.00:294][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.12.23-15.20.00:294][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:295][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.12.23-15.20.00:295][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.12.23-15.20.00:295][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.12.23-15.20.00:295][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.12.23-15.20.00:296][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.12.23-15.20.00:296][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.12.23-15.20.00:296][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.12.23-15.20.00:296][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.12.23-15.20.00:297][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.12.23-15.20.00:297][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.12.23-15.20.00:297][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.12.23-15.20.00:297][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.12.23-15.20.00:298][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.12.23-15.20.00:298][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.12.23-15.20.00:298][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.12.23-15.20.00:298][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.12.23-15.20.00:299][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.12.23-15.20.00:299][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.12.23-15.20.00:299][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.12.23-15.20.00:299][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.12.23-15.20.00:300][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.12.23-15.20.00:300][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.12.23-15.20.00:300][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.12.23-15.20.00:300][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.12.23-15.20.00:301][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.12.23-15.20.00:303][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.12.23-15.20.00:303][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.12.23-15.20.00:303][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.12.23-15.20.00:304][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.12.23-15.20.00:304][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.12.23-15.20.00:304][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:304][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.12.23-15.20.00:305][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.12.23-15.20.00:305][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.12.23-15.20.00:305][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.12.23-15.20.00:305][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.12.23-15.20.00:305][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.12.23-15.20.00:306][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.12.23-15.20.00:306][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.12.23-15.20.00:306][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.12.23-15.20.00:306][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:307][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.12.23-15.20.00:307][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.12.23-15.20.00:307][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.12.23-15.20.00:308][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.12.23-15.20.00:308][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.12.23-15.20.00:308][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.12.23-15.20.00:308][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.12.23-15.20.00:309][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.12.23-15.20.00:309][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.12.23-15.20.00:309][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.12.23-15.20.00:309][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.12.23-15.20.00:310][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.12.23-15.20.00:310][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.12.23-15.20.00:310][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.12.23-15.20.00:311][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.12.23-15.20.00:311][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.12.23-15.20.00:311][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.12.23-15.20.00:311][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.12.23-15.20.00:312][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.12.23-15.20.00:312][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.12.23-15.20.00:312][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.12.23-15.20.00:312][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.12.23-15.20.00:312][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.12.23-15.20.00:313][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.12.23-15.20.00:313][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.12.23-15.20.00:313][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.12.23-15.20.00:313][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.12.23-15.20.00:314][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.12.23-15.20.00:314][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:314][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.12.23-15.20.00:314][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.12.23-15.20.00:314][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-15.20.00:315][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.12.23-15.20.00:315][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.12.23-15.20.00:315][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.12.23-15.20.00:316][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2022.12.23-15.20.00:317][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2022.12.23-15.20.00:319][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2022.12.23-15.20.00:319][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2022.12.23-15.20.00:319][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-15.20.00:319][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Editor.ini]
+[2022.12.23-15.20.00:320][  0]LogInit: Computer: DESKTOP-QG36584
+[2022.12.23-15.20.00:320][  0]LogInit: User: danie
+[2022.12.23-15.20.00:320][  0]LogInit: CPU Page size=4096, Cores=6
+[2022.12.23-15.20.00:320][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2022.12.23-15.20.00:321][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2022.12.23-15.20.00:321][  0]LogMemory: Platform Memory Stats for Windows
+[2022.12.23-15.20.00:321][  0]LogMemory: Process Physical Memory: 142.04 MB used, 142.04 MB peak
+[2022.12.23-15.20.00:321][  0]LogMemory: Process Virtual Memory: 119.53 MB used, 119.53 MB peak
+[2022.12.23-15.20.00:321][  0]LogMemory: Physical Memory: 10013.67 MB used,  6321.10 MB free, 16334.77 MB total
+[2022.12.23-15.20.00:322][  0]LogMemory: Virtual Memory: 134208456.00 MB used,  9271.76 MB free, 134217728.00 MB total
+[2022.12.23-15.20.00:324][  0]LogWindows: WindowsPlatformFeatures disabled or dedicated server build
+[2022.12.23-15.20.00:335][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2022.12.23-15.20.00:335][  0]LogInit: Using OS detected language (en-US).
+[2022.12.23-15.20.00:335][  0]LogInit: Using OS detected locale (en-GB).
+[2022.12.23-15.20.00:338][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2022.12.23-15.20.01:203][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2022.12.23-15.20.01:206][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2022.12.23-15.20.01:209][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2022.12.23-15.20.01:212][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2022.12.23-15.20.01:212][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2022.12.23-15.20.01:215][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2022.12.23-15.20.01:230][  0]LogTextureFormatOodle: Display: Oodle Texture 2.9.0 init RDO Off
+[2022.12.23-15.20.01:243][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2022.12.23-15.20.01:243][  0]LogShaderCompilers: Guid format shader working directory is -27 characters bigger than the processId version (../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Intermediate/Shaders/WorkingDirectory/20156/).
+[2022.12.23-15.20.01:244][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/danie/AppData/Local/Temp/UnrealShaderWorkingDir/44C22263418CB0E53E2A5FB248630B7C/'.
+[2022.12.23-15.20.01:244][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2022.12.23-15.20.01:244][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2022.12.23-15.20.01:244][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2022.12.23-15.20.01:659][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2022.12.23-15.20.01:702][  0]LogDerivedDataCache: Loaded boot cache 0.04s 94MB C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2022.12.23-15.20.01:703][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc
+[2022.12.23-15.20.01:703][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2022.12.23-15.20.01:703][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2022.12.23-15.20.01:704][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.12.23-15.20.01:704][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2022.12.23-15.20.01:721][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2022.12.23-15.20.01:721][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.12.23-15.20.01:722][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2022.12.23-15.20.01:731][  0]LogDerivedDataCache: Speed tests for C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2022.12.23-15.20.01:731][  0]LogDerivedDataCache: Display: Performance to C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.03ms. RandomReadSpeed=330.88MBs, RandomWriteSpeed=173.34MBs. Assigned SpeedClass 'Local'
+[2022.12.23-15.20.01:731][  0]LogDerivedDataCache: Using Local data cache path C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2022.12.23-15.20.01:732][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2022.12.23-15.20.01:732][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2022.12.23-15.20.01:733][  0]LogInit: Using OS detected language (en-US).
+[2022.12.23-15.20.01:733][  0]LogInit: Using OS detected locale (en-GB).
+[2022.12.23-15.20.01:734][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the language.
+[2022.12.23-15.20.01:735][  0]LogTextLocalizationManager: No localization for 'en-GB' exists, so 'en' will be used for the locale.
+[2022.12.23-15.20.01:738][  0]LogTextLocalizationManager: Compacting localization data took   0.01ms
+[2022.12.23-15.20.01:738][  0]LogAssetRegistry: FAssetRegistry took 0.0022 seconds to start up
+[2022.12.23-15.20.01:875][  0]LogPackageLocalizationCache: Processed 27 localized package path(s) for 1 prioritized culture(s) in 0.001021 seconds
+[2022.12.23-15.20.01:950][  0]LogInit: Selected Device Profile: [Windows]
+[2022.12.23-15.20.01:950][  0]LogInit: Active device profile: [000001638B780500][000001638AD8F880 49] Windows
+[2022.12.23-15.20.01:950][  0]LogInit: Profiles: [000001638B780500][000001638AD8F880 49] Windows, [000001638B757600][000001638AD9DB40 49] WindowsNoEditor, [000001638B754100][000001638AD92240 49] WindowsServer, [000001638B783000][000001638ADA04C0 49] WindowsClient, [000001638B780200][000001638ADA8780 49] IOS, [000001638B76BD00][000001638ADACA40 49] iPadAir, [000001638B783A00][000001638ADB0D00 49] iPadAir2, [000001638B704200][000001638ADCB240 49] IPadPro, [000001638B6FFF00][000001638ADB5280 49] iPadAir3, [000001638B755000][000001638ADC3540 49] iPadAir4, [000001638B6FC500][000001638ADBF800 49] iPadMini2, [000001638B754200][000001638ADC7AC0 49] iPadMini3, [000001638B6FD200][000001638ADD4200 49] iPadMini4, [000001638B757800][000001638ADA4480 49] iPadMini5, [000001638B769600][000001638ADEC980 49] iPhone6, [000001638B769700][000001638ADD89C0 49] iPodTouch6, [000001638B6FE100][000001638ADF4F00 49] iPhone7, [000001638B6FE200][000001638ADE4F40 49] iPodTouch7, [000001638B76A600][000001638ADE9200 49] iPhone5S, [000001638B6FF100][000001638ADE14C0 49] iPhone6Plus, [000001638B76BB00][000001638ADF1780 49] iPhone6S, [000001638B6FEB00][000001638ADF9A40 49] iPhone6SPlus, [000001638B768A00][000001638ADFC180 49] iPhone7Plus, [000001638B6FEF00][000001638AE00440 49] iPhoneSE, [000001638B769000][000001638ADDC6C0 49] iPhone8, [000001638B6FFC00][000001638AE04940 49] iPhone8Plus, [000001638B76B200][000001638AE0CC00 49] iPhoneX, [000001638B6FEC00][000001638AE10EC0 49] iPhoneXS, [000001638B76AB00][000001638AE15180 49] iPhoneXSMax, [000001638B6FE900][000001638AE19440 49] iPhoneXR, [000001638B76AF00][000001638AE1D700 49] iPhone11, [000001638B6FCA00][000001638AE219C0 49] iPhone11Pro, [000001638B76BE00][000001638AE24100 49] iPhone11ProMax, [000001638B6FD400][000001638AE283C0 49] iPhoneSE2, [000001638B76BF00][000001638AE2C680 49] iPhone12Mini, [000001638B6FFD00][000001638AE08900 49] iPhone12, [000001638B769200][000001638AE30B80 49] iPhone12Pro, [000001638B6FF500][000001638AE38E40 49] iPhone12ProMax, [000001638B768200][000001638AE3D100 49] iPadPro105, [000001638B6FDA00][000001638AE413C0 49] iPadPro129, [000001638B768D00][000001638AE45680 49] iPadPro97, [000001638B6FC900][000001638AE49940 49] iPadPro2_129, [000001638B769A00][000001638AE4DC00 49] iPad5, [000001638B6FDC00][000001638A742340 49] iPad6, [000001638B76B900][000001638A746600 49] iPad7, [000001638B6FE600][000001638A74A8C0 49] iPad8, [000001638B76B000][000001638AE34B40 49] iPadPro11, [000001638B6FD500][000001638A74EDC0 49] iPadPro2_11, [000001638B76A100][000001638A757080 49] iPadPro3_129, [000001638B6FDD00][000001638A75B340 49] iPadPro4_129, [000001638B76A400][000001638A75F600 49] AppleTV, [000001638B6FEE00][000001638A7638C0 49] AppleTV4K, [000001638B768500][000001638A767B80 49] TVOS, [000001638B6FFA00][000001638A76A2C0 49] Mac, [000001638B76A900][000001638A76E580 49] MacClient, [000001638B6FD700][000001638A772840 49] MacNoEditor, [000001638B769100][000001638A776B00 49] MacServer, [000001638B6FFB00][000001638A752D80 49] Linux, [000001638B768600][000001638A77B000 49] LinuxAArch64, [000001638B6FC400][000001638A7832C0 49] LinuxNoEditor, [000001638B76A200][000001638A787580 49] LinuxAArch64NoEditor, [000001638B780100][000001638A78B840 49] LinuxClient, [000001638B704700][000001638A78FB00 49] LinuxAArch64Client, [000001638B781900][000001638A792240 49] LinuxServer, [000001638B704A00][000001638A796500 49] LinuxAArch64Server, [000001638B782D00][000001638A79A7C0 49] Android, [000001638B705400][000001638A79EA80 49] Android_Low, [000001638B781100][000001638A7A2D40 49] Android_Mid, [000001638B704E00][000001638A77EFC0 49] Android_High, [000001638B780800][000001638A7A7240 49] Android_Default, [000001638B706600][000001638A7AF500 49] Android_Adreno4xx, [000001638B781400][000001638A7B37C0 49] Android_Adreno5xx_Low, [000001638B706400][000001638A7B7A80 49] Android_Adreno5xx, [000001638B780700][000001638A7BA1C0 49] Android_Adreno6xx, [000001638B706C00][000001638A7BE480 49] Android_Adreno6xx_Vulkan, [000001638B783B00][000001638A7C2740 49] Android_Mali_T6xx, [000001638B704500][000001638A7C6A00 49] Android_Mali_T7xx, [000001638B780300][000001638A7CACC0 49] Android_Mali_T8xx, [000001638B707000][000001638A7CEF80 49] Android_Mali_G71, [000001638B782900][000001638A7AB200 49] Android_Mali_G72, [000001638B706500][000001638A7D74C0 49] Android_Mali_G72_Vulkan, [000001638B781B00][000001638A7DB780 49] Android_Mali_G76, [000001638B707100][000001638A7DFA40 49] Android_Mali_G76_Vulkan, [000001638B781E00][000001638A7E2180 49] Android_Mali_G77, [000001638B707B00][000001638A7E6440 49] Android_Mali_G77_Vulkan, [000001638B783C00][000001638A7EA700 49] Android_Mali_G78, [000001638B707F00][000001638A7EE9C0 49] Android_Mali_G78_Vulkan, [000001638B782400][000001638A7F2C80 49] Android_Mali_G710, [000001638B705300][000001638A7F6F40 49] Android_Mali_G710_Vulkan, [000001638B783100][000001638A7D31C0 49] Android_Vulkan_SM5, [000001638B6FE400][000001638A7FB440 49] Android_PowerVR_G6xxx, [000001638B781D00][000001638A803700 49] Android_PowerVR_GT7xxx, [000001638B6FC100][000001638A8079C0 49] Android_PowerVR_GE8xxx, [000001638B783200][000001638A80A100 49] Android_PowerVR_GM9xxx, [000001638B6FC300][000001638A80E3C0 49] Android_PowerVR_GM9xxx_Vulkan, [000001638B783300][000001638A812680 49] Android_TegraK1, [000001638B6FD600][000001638A816940 49] Android_Unknown_Vulkan, [000001638B782000][000001638A81AC00 49] Lumin, [000001638B6FCB00][000001638A81EEC0 49] Lumin_Desktop, [000001638B780D00][000001638A823180 49] HoloLens, 
+[2022.12.23-15.20.01:970][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2022.12.23-15.20.01:970][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2022.12.23-15.20.01:970][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2022.12.23-15.20.01:970][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2022.12.23-15.20.01:971][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2022.12.23-15.20.01:981][  0]LogNetVersion: fpsgame 1.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 3215450660)
+[2022.12.23-15.20.02:069][  0]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/DaylightAmbientCubemap.DaylightAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2022.12.23-15.20.02:084][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2022.12.23-15.20.02:165][  0]LogPython: Using Python 3.7.7
+[2022.12.23-15.20.02:561][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: 27E52EF74BDBB8BAA3628ABA46EA5FAE | Instance: E41164884550104F4F72BA909132D526 (DESKTOP-QG36584-20156).
+[2022.12.23-15.20.02:576][  0]LogCollectionManager: Loaded 0 collections in 0.002128 seconds
+[2022.12.23-15.20.02:578][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Collections/' took 0.00s
+[2022.12.23-15.20.02:578][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Developers/danie/Collections/' took 0.00s
+[2022.12.23-15.20.02:580][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Collections/' took 0.00s
+[2022.12.23-15.20.02:580][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000001 seconds (updated 0 objects)
+[2022.12.23-15.20.02:653][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2022.12.23-15.20.02:654][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2022.12.23-15.20.02:713][  0]SourceControl: Source control is disabled
+[2022.12.23-15.20.02:714][  0]SourceControl: Source control is disabled
+[2022.12.23-15.20.02:715][  0]SourceControl: Source control is disabled
+[2022.12.23-15.20.02:718][  0]LogUProjectInfo: Found projects:
+[2022.12.23-15.20.02:758][  0]LogOpenImageDenoise: OIDN starting up
+[2022.12.23-15.20.02:779][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2022.12.23-15.20.02:788][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.12.23-15.20.02:788][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.12.23-15.20.02:834][  0]LogOcInput: OculusInput pre-init called
+[2022.12.23-15.20.02:843][  0]LogUObjectArray: 22050 objects as part of root set at end of initial load.
+[2022.12.23-15.20.02:844][  0]LogUObjectAllocator: 5966448 out of 0 bytes used by permanent object pool.
+[2022.12.23-15.20.02:844][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2022.12.23-15.20.02:877][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotPosition is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-15.20.02:877][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotRotation is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-15.20.02:878][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotScale is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-15.20.02:878][  0]LogClass: Display: BoolProperty FWeaponRecoil::bHasRecoil is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:878][  0]LogClass: Display: BoolProperty FWeaponRecoil::bUsesControlRotationForHipfireRecoil is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:878][  0]LogClass: Warning: ObjectProperty FWeaponRecoil::RecoilVectorCurve is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:878][  0]LogClass: Display: FloatProperty FWeaponRecoil::RecoveryTime is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:878][  0]LogClass: Display: FloatProperty FWeaponStats::MaxRange is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:878][  0]LogClass: Display: FloatProperty FWeaponStats::FireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:878][  0]LogClass: Display: IntProperty FWeaponStats::CartridgeBullets is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:879][  0]LogClass: Display: IntProperty FWeaponStats::BurstNumber is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:879][  0]LogClass: Display: FloatProperty FWeaponStats::BurstFireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:879][  0]LogClass: Display: IntProperty FWeaponStats::MaxMagSize is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:879][  0]LogClass: Display: IntProperty FWeaponStats::MagAmmo is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:879][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageTorso is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:879][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageHead is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:879][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageLegs is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Display: FloatProperty FWeaponStats::BaseHipfireSpreadAngleInDegrees is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Display: FloatProperty FWeaponStats::BaseMovementSpreadMultiplier is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Display: EnumProperty FWeaponMetaData::GunModel is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponFireType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponHitDetectionType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Display: EnumProperty FWeaponMetaData::TypeOfEquip is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::TracerEffect is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:880][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::MuzzleFlash is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:881][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:881][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:881][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:881][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:881][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:881][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:881][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::MuzzlePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:882][  0]LogClass: Display: 34 Uninitialized script struct members found including 4 object properties
+[2022.12.23-15.20.02:883][  0]LogAutomationTest: Warning: ObjectProperty FWeaponRecoil::RecoilVectorCurve is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:883][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:884][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::TracerEffect is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:884][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::MuzzleFlash is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-15.20.02:884][  0]LogEngine: Initializing Engine...
+[2022.12.23-15.20.02:886][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2022.12.23-15.20.02:900][  0]LogInit: Initializing FReadOnlyCVARCache
+[2022.12.23-15.20.02:900][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2022.12.23-15.20.02:903][  0]LogInit: Texture streaming: Disabled
+[2022.12.23-15.20.02:931][  0]LogInit: Display: Game Engine Initialized.
+[2022.12.23-15.20.02:932][  0]LogNiagaraEditor: GEditor isn't valid! Particle reset commands will not work for Niagara components!
+[2022.12.23-15.20.02:962][  0]LogInit: Display: Starting Game.
+[2022.12.23-15.20.02:963][  0]LogNet: Browse: /Game/Maps/TestMap?Name=Player
+[2022.12.23-15.20.02:963][  0]LogLoad: LoadMap: /Game/Maps/TestMap?Name=Player
+[2022.12.23-15.20.02:964][  0]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2022.12.23-15.20.02:966][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2022.12.23-15.20.02:975][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2022.12.23-15.20.03:297][  0]LogAIModule: Creating AISystem for world TestMap
+[2022.12.23-15.20.03:298][  0]LogLoad: Game class is 'BP_FPSGameModeDefault_C'
+[2022.12.23-15.20.03:298][  0]LogNet: PktLoss set to 0
+[2022.12.23-15.20.03:299][  0]LogNet: PktLagMin set to 0
+[2022.12.23-15.20.03:299][  0]LogNet: PktLagMax set to 0
+[2022.12.23-15.20.03:299][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-15.20.03:300][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-15.20.03:300][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-15.20.03:300][  0]LogNet: PktLoss set to 0
+[2022.12.23-15.20.03:300][  0]LogNet: PktLagMin set to 0
+[2022.12.23-15.20.03:301][  0]LogNet: PktLagMax set to 0
+[2022.12.23-15.20.03:301][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-15.20.03:301][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-15.20.03:301][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-15.20.03:302][  0]LogNet: PktLoss set to 0
+[2022.12.23-15.20.03:302][  0]LogNet: PktLagMin set to 0
+[2022.12.23-15.20.03:302][  0]LogNet: PktLagMax set to 0
+[2022.12.23-15.20.03:303][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-15.20.03:303][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-15.20.03:303][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-15.20.03:303][  0]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2022.12.23-15.20.03:303][  0]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2022.12.23-15.20.03:304][  0]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2022.12.23-15.20.03:304][  0]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2022.12.23-15.20.03:305][  0]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.23-15.20.03:305][  0]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
+[2022.12.23-15.20.03:307][  0]LogWorld: Bringing World /Game/Maps/TestMap.TestMap up for play (max tick rate 30) at 2022.12.23-15.20.03
+[2022.12.23-15.20.03:308][  0]LogWorld: Bringing up level for play took: 0.001699
+[2022.12.23-15.20.03:308][  0]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2022.12.23-15.20.03:308][  0]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2022.12.23-15.20.03:309][  0]LogLoad: Took 0.345755 seconds to LoadMap(/Game/Maps/TestMap)
+[2022.12.23-15.20.03:314][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2022.12.23-15.20.03:314][  0]LogLoad: (Engine Initialization) Total time: 5.28 seconds
+[2022.12.23-15.20.03:314][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2022.12.23-15.20.03:581][  7]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:56270
+[2022.12.23-15.20.03:581][  7]LogHandshake: SendConnectChallenge. Timestamp: 0.265029, Cookie: 060002028156199065145125206131137018179132011025066193127200
+[2022.12.23-15.20.03:614][  8]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:56270
+[2022.12.23-15.20.03:614][  8]LogHandshake: SendChallengeAck. InCookie: 060002028156199065145125206131137018179132011025066193127200
+[2022.12.23-15.20.03:614][  8]LogNet: Server accepting post-challenge connection from: 127.0.0.1:56270
+[2022.12.23-15.20.03:615][  8]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.23-15.20.03:615][  8]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 12/23/22 15:20:03, [UNetConnection] RemoteAddr: 127.0.0.1:56270, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-15.20.03:616][  8]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:56270, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-15.20.03:616][  8]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/TestMap.TestMap: Accepted
+[2022.12.23-15.20.03:616][  8]LogNet: Remote platform little endian=1
+[2022.12.23-15.20.03:617][  8]LogNet: This platform little endian=1
+[2022.12.23-15.20.03:617][  8]LogNetVersion: fpsgame 1.0.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 1484303137)
+[2022.12.23-15.20.03:648][  9]LogNet: Login request: ?Name=DESKTOP-QG36584-732A60F04FB95C9F8A7249845B052615 userId: NULL:DESKTOP-QG36584-732A60F04FB95C9F8A7249845B052615 platform: NULL
+[2022.12.23-15.20.03:978][ 19]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:56268
+[2022.12.23-15.20.03:978][ 19]LogHandshake: SendConnectChallenge. Timestamp: 0.662390, Cookie: 030194035085169044052186167155125231197182002043001040021173
+[2022.12.23-15.20.04:012][ 20]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:56268
+[2022.12.23-15.20.04:012][ 20]LogHandshake: SendChallengeAck. InCookie: 030194035085169044052186167155125231197182002043001040021173
+[2022.12.23-15.20.04:012][ 20]LogNet: Server accepting post-challenge connection from: 127.0.0.1:56268
+[2022.12.23-15.20.04:013][ 20]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.23-15.20.04:013][ 20]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 12/23/22 15:20:04, [UNetConnection] RemoteAddr: 127.0.0.1:56268, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-15.20.04:013][ 20]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:56268, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-15.20.04:045][ 21]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/TestMap.TestMap: Accepted
+[2022.12.23-15.20.04:045][ 21]LogNet: Remote platform little endian=1
+[2022.12.23-15.20.04:046][ 21]LogNet: This platform little endian=1
+[2022.12.23-15.20.04:078][ 22]LogNet: Login request: ?PktLagMin=0?PktLagMax=0?PktLoss=0?PktIncomingLagMin=0?PktIncomingLagMax=0?PktIncomingLoss=0?Name=DESKTOP-QG36584-80F355CC4EE77C9DAEA83E9B0FCF2BD9 userId: NULL:DESKTOP-QG36584-80F355CC4EE77C9DAEA83E9B0FCF2BD9 platform: NULL
+[2022.12.23-15.20.04:111][ 23]LogNet: Client netspeed is 100000
+[2022.12.23-15.20.04:144][ 24]LogNet: Join request: /Engine/Maps/Entry?PktLagMin=0?PktLagMax=0?PktLoss=0?PktIncomingLagMin=0?PktIncomingLagMax=0?PktIncomingLoss=0?Name=DESKTOP-QG36584-80F355CC4EE77C9DAEA83E9B0FCF2BD9?SplitscreenCount=1
+[2022.12.23-15.20.04:144][ 24]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.12.23-15.20.04:146][ 24]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2022.12.23-15.20.04:147][ 24]LogTemp: Warning: Numebr of rewind components = 1
+[2022.12.23-15.20.04:148][ 24]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2022.12.23-15.20.04:148][ 24]LogNet: Join succeeded: DESKTOP-QG36584-80F3
+[2022.12.23-15.20.04:178][ 25]LogNet: Client netspeed is 100000
+[2022.12.23-15.20.04:178][ 25]LogNet: Join request: /Engine/Maps/Entry?Name=DESKTOP-QG36584-732A60F04FB95C9F8A7249845B052615?SplitscreenCount=1
+[2022.12.23-15.20.04:179][ 25]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.12.23-15.20.04:180][ 25]LogTemp: Warning: Numebr of rewind components = 2
+[2022.12.23-15.20.04:181][ 25]LogNet: Join succeeded: DESKTOP-QG36584-732A
+[2022.12.23-15.20.05:373][ 61]LogTemp: Warning: RELIABLE SPRINT RPC CALL
+[2022.12.23-15.20.05:969][ 79]LogTemp: Warning: RELIABLE SPRINT RPC CALL
+[2022.12.23-15.20.06:729][102]LogTemp: Warning: Reliable pickup call
+[2022.12.23-15.20.06:730][102]LogTemp: Warning: diarrhea
+[2022.12.23-15.20.06:730][102]LogTemp: Warning: prime
+[2022.12.23-15.20.06:730][102]LogTemp: Warning: SERVER: Log no. 0
+[2022.12.23-15.20.06:731][102]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.06:731][102]LogTemp: Warning: spreading
+[2022.12.23-15.20.06:731][102]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.06:732][102]LogTemp: Warning: TP attach
+[2022.12.23-15.20.06:732][102]LogTemp: Warning: Switch primary rpc call
+[2022.12.23-15.20.06:733][102]LogTemp: Warning: prime
+[2022.12.23-15.20.06:733][102]LogTemp: Warning: SERVER: Log no. 1
+[2022.12.23-15.20.06:733][102]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.06:733][102]LogTemp: Warning: spreading
+[2022.12.23-15.20.06:734][102]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.06:734][102]LogTemp: Warning: TP attach
+[2022.12.23-15.20.07:291][119]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.07:292][119]LogTemp: Warning: Blocking
+[2022.12.23-15.20.07:292][119]LogTemp: Warning: miss
+[2022.12.23-15.20.07:292][119]LogTemp: Warning: Blocking
+[2022.12.23-15.20.07:293][119]LogTemp: Warning: Blocking
+[2022.12.23-15.20.07:293][119]LogTemp: Warning: miss
+[2022.12.23-15.20.07:293][119]LogTemp: Warning: miss
+[2022.12.23-15.20.07:294][119]LogTemp: Warning: miss
+[2022.12.23-15.20.07:294][119]LogTemp: Warning: Blocking
+[2022.12.23-15.20.07:295][119]LogTemp: Warning: miss
+[2022.12.23-15.20.07:295][119]LogTemp: Warning: miss
+[2022.12.23-15.20.07:295][119]LogTemp: Warning: miss
+[2022.12.23-15.20.07:296][119]LogTemp: Warning: Blocking
+[2022.12.23-15.20.07:296][119]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.07:296][119]LogTemp: Warning: spreading
+[2022.12.23-15.20.07:297][119]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.07:297][119]LogTemp: Warning: Continuing
+[2022.12.23-15.20.07:297][119]LogTemp: Warning: Continuing
+[2022.12.23-15.20.07:298][119]LogTemp: Warning: Continuing
+[2022.12.23-15.20.07:298][119]LogTemp: Warning: Continuing
+[2022.12.23-15.20.07:298][119]LogTemp: Warning: start, -14.809570
+[2022.12.23-15.20.07:299][119]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.07:325][120]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.07:358][121]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.07:391][122]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:425][123]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:458][124]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:491][125]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:524][126]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:557][127]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:590][128]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:623][129]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:656][130]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:689][131]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:722][132]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:756][133]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:789][134]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:822][135]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:855][136]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:889][137]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:922][138]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:955][139]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.07:988][140]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:022][141]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:055][142]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:088][143]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:121][144]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:154][145]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:187][146]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:221][147]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:254][148]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:287][149]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:320][150]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:353][151]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:386][152]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:419][153]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:452][154]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:485][155]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:518][156]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:551][157]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:584][158]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:617][159]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:650][160]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:683][161]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:716][162]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:749][163]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:782][164]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:816][165]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:849][166]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:882][167]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:916][168]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:949][169]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.08:982][170]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:016][171]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:049][172]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:082][173]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:116][174]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:149][175]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:182][176]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:215][177]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:249][178]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:282][179]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:315][180]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:348][181]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:382][182]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:415][183]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:449][184]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:482][185]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:515][186]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:548][187]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:581][188]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:614][189]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:647][190]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:680][191]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:713][192]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:746][193]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:780][194]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:813][195]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:847][196]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.09:847][196]LogTemp: Warning: Blocking
+[2022.12.23-15.20.09:848][196]LogTemp: Warning: miss
+[2022.12.23-15.20.09:849][196]LogTemp: Warning: Blocking
+[2022.12.23-15.20.09:849][196]LogTemp: Warning: miss
+[2022.12.23-15.20.09:849][196]LogTemp: Warning: miss
+[2022.12.23-15.20.09:849][196]LogTemp: Warning: miss
+[2022.12.23-15.20.09:850][196]LogTemp: Warning: Blocking
+[2022.12.23-15.20.09:850][196]LogTemp: Warning: Blocking
+[2022.12.23-15.20.09:850][196]LogTemp: Warning: miss
+[2022.12.23-15.20.09:851][196]LogTemp: Warning: miss
+[2022.12.23-15.20.09:851][196]LogTemp: Warning: Blocking
+[2022.12.23-15.20.09:851][196]LogTemp: Warning: miss
+[2022.12.23-15.20.09:852][196]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.09:852][196]LogTemp: Warning: spreading
+[2022.12.23-15.20.09:852][196]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.09:852][196]LogTemp: Warning: Continuing
+[2022.12.23-15.20.09:853][196]LogTemp: Warning: Continuing
+[2022.12.23-15.20.09:853][196]LogTemp: Warning: Continuing
+[2022.12.23-15.20.09:854][196]LogTemp: Warning: Continuing
+[2022.12.23-15.20.09:854][196]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.09:880][197]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.09:913][198]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.09:946][199]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.09:979][200]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:012][201]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:045][202]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:078][203]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:112][204]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:145][205]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:178][206]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:211][207]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:244][208]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:277][209]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:311][210]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:344][211]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:378][212]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:412][213]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:446][214]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:479][215]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:512][216]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:546][217]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:579][218]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:612][219]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:645][220]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:679][221]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:712][222]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:745][223]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:778][224]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:812][225]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:845][226]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:879][227]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:913][228]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:946][229]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.10:980][230]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:013][231]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:046][232]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:079][233]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:112][234]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:145][235]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:179][236]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:212][237]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.11:212][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:213][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:213][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:213][237]LogTemp: Warning: Blocking
+[2022.12.23-15.20.11:213][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:214][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:214][237]LogTemp: Warning: Blocking
+[2022.12.23-15.20.11:214][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:214][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:215][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:215][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:216][237]LogTemp: Warning: miss
+[2022.12.23-15.20.11:217][237]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.11:218][237]LogTemp: Warning: spreading
+[2022.12.23-15.20.11:218][237]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.11:218][237]LogTemp: Warning: Continuing
+[2022.12.23-15.20.11:219][237]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.11:246][238]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.11:279][239]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.11:312][240]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:345][241]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:379][242]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:412][243]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:445][244]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:478][245]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:511][246]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:544][247]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:577][248]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:610][249]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:643][250]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:676][251]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:709][252]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:742][253]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:776][254]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:809][255]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:842][256]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:875][257]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:908][258]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:941][259]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.11:974][260]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:007][261]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:041][262]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:074][263]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:107][264]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:140][265]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:173][266]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:206][267]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:239][268]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:272][269]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:305][270]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:338][271]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:371][272]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:404][273]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:437][274]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:470][275]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:503][276]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:536][277]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:569][278]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:603][279]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:637][280]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:670][281]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:703][282]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:737][283]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:770][284]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:803][285]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:837][286]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:870][287]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:904][288]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:937][289]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.12:970][290]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:003][291]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:036][292]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:070][293]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:103][294]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:136][295]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:169][296]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:202][297]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:235][298]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:268][299]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:301][300]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:334][301]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:367][302]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:400][303]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:433][304]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:466][305]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:499][306]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:532][307]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:566][308]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:599][309]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:632][310]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:665][311]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:698][312]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:732][313]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:766][314]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:799][315]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:832][316]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:865][317]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:898][318]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:933][319]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:966][320]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.13:999][321]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:033][322]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:066][323]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:099][324]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:132][325]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:165][326]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:198][327]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.14:199][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:199][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:200][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:200][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:200][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:200][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:201][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:201][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:201][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:202][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:202][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:202][327]LogTemp: Warning: Blocking
+[2022.12.23-15.20.14:203][327]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.14:203][327]LogTemp: Warning: spreading
+[2022.12.23-15.20.14:203][327]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.14:204][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:204][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:204][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:204][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:205][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:205][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:206][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:206][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:206][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:206][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:207][327]LogTemp: Warning: Continuing
+[2022.12.23-15.20.14:208][327]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.14:231][328]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.14:264][329]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.14:298][330]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.14:331][331]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:365][332]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:398][333]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:431][334]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:464][335]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:497][336]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:530][337]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:564][338]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:597][339]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:630][340]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:663][341]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:696][342]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:730][343]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:764][344]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:797][345]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:830][346]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:864][347]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:897][348]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:930][349]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:963][350]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.14:996][351]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:030][352]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:063][353]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:097][354]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:130][355]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:164][356]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:197][357]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:230][358]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:263][359]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:296][360]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.15:297][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:297][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:298][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:298][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:298][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:299][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:299][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:299][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:300][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:300][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:300][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:301][360]LogTemp: Warning: Blocking
+[2022.12.23-15.20.15:301][360]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.15:301][360]LogTemp: Warning: spreading
+[2022.12.23-15.20.15:302][360]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.15:302][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:302][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:303][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:303][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:303][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:304][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:304][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:304][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:305][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:305][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:305][360]LogTemp: Warning: Continuing
+[2022.12.23-15.20.15:306][360]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.15:330][361]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.15:363][362]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.15:396][363]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.15:429][364]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:462][365]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:495][366]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:528][367]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:561][368]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:595][369]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:628][370]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:661][371]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:694][372]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:727][373]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:760][374]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:793][375]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:826][376]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:859][377]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:893][378]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:927][379]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:960][380]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.15:993][381]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:026][382]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:059][383]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:093][384]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:127][385]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:161][386]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:194][387]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:227][388]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:260][389]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:293][390]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:326][391]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:360][392]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:393][393]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:426][394]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:459][395]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:492][396]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:525][397]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:558][398]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:591][399]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:624][400]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:657][401]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:691][402]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:724][403]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.16:724][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:725][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:725][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:726][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:727][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:727][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:727][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:728][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:728][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:728][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:729][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:729][403]LogTemp: Warning: Blocking
+[2022.12.23-15.20.16:729][403]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.16:730][403]LogTemp: Warning: spreading
+[2022.12.23-15.20.16:730][403]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.16:730][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:731][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:731][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:731][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:731][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:732][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:732][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:733][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:733][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:733][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:733][403]LogTemp: Warning: Continuing
+[2022.12.23-15.20.16:734][403]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.16:758][404]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.16:791][405]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.16:824][406]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:857][407]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:890][408]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:923][409]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:956][410]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.16:989][411]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:023][412]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:056][413]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:089][414]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:122][415]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:155][416]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:188][417]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:222][418]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:256][419]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:290][420]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:323][421]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.17:324][421]LogTemp: Warning: RecoilTimer
+[2022.12.23-15.20.19:354][482]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.19:354][482]LogTemp: Warning: Blocking
+[2022.12.23-15.20.19:355][482]LogTemp: Warning: miss
+[2022.12.23-15.20.19:355][482]LogTemp: Warning: miss
+[2022.12.23-15.20.19:356][482]LogTemp: Warning: Blocking
+[2022.12.23-15.20.19:356][482]LogTemp: Warning: Blocking
+[2022.12.23-15.20.19:357][482]LogTemp: Warning: miss
+[2022.12.23-15.20.19:357][482]LogTemp: Warning: Blocking
+[2022.12.23-15.20.19:358][482]LogTemp: Warning: miss
+[2022.12.23-15.20.19:358][482]LogTemp: Warning: miss
+[2022.12.23-15.20.19:358][482]LogTemp: Warning: Blocking
+[2022.12.23-15.20.19:359][482]LogTemp: Warning: Blocking
+[2022.12.23-15.20.19:359][482]LogTemp: Warning: Blocking
+[2022.12.23-15.20.19:359][482]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.19:360][482]LogTemp: Warning: spreading
+[2022.12.23-15.20.19:360][482]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.19:360][482]LogTemp: Warning: Continuing
+[2022.12.23-15.20.19:361][482]LogTemp: Warning: Continuing
+[2022.12.23-15.20.19:361][482]LogTemp: Warning: Continuing
+[2022.12.23-15.20.19:361][482]LogTemp: Warning: Continuing
+[2022.12.23-15.20.19:362][482]LogTemp: Warning: Continuing
+[2022.12.23-15.20.19:362][482]LogTemp: Warning: Continuing
+[2022.12.23-15.20.19:362][482]LogTemp: Warning: start, -29.761963
+[2022.12.23-15.20.19:363][482]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.19:388][483]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.19:422][484]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.19:455][485]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:488][486]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:521][487]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:554][488]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:587][489]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:620][490]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:654][491]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:687][492]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:720][493]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:753][494]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:786][495]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:819][496]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:852][497]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:885][498]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:918][499]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:951][500]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.19:984][501]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:017][502]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:051][503]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:084][504]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:117][505]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:150][506]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:183][507]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:216][508]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:250][509]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:283][510]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:316][511]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:349][512]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:382][513]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:415][514]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:449][515]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:483][516]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:518][517]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:551][518]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:584][519]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:617][520]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:650][521]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:683][522]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:716][523]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:750][524]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:783][525]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:817][526]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:850][527]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:883][528]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:916][529]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:949][530]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.20:982][531]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:015][532]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:049][533]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:082][534]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:116][535]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:149][536]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:182][537]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:216][538]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:249][539]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:282][540]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:316][541]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.21:317][541]LogTemp: Warning: Blocking
+[2022.12.23-15.20.21:317][541]LogTemp: Warning: Blocking
+[2022.12.23-15.20.21:318][541]LogTemp: Warning: Blocking
+[2022.12.23-15.20.21:318][541]LogTemp: Warning: Blocking
+[2022.12.23-15.20.21:318][541]LogTemp: Warning: miss
+[2022.12.23-15.20.21:319][541]LogTemp: Warning: Blocking
+[2022.12.23-15.20.21:319][541]LogTemp: Warning: Blocking
+[2022.12.23-15.20.21:319][541]LogTemp: Warning: miss
+[2022.12.23-15.20.21:320][541]LogTemp: Warning: miss
+[2022.12.23-15.20.21:320][541]LogTemp: Warning: miss
+[2022.12.23-15.20.21:320][541]LogTemp: Warning: miss
+[2022.12.23-15.20.21:321][541]LogTemp: Warning: miss
+[2022.12.23-15.20.21:321][541]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.21:321][541]LogTemp: Warning: spreading
+[2022.12.23-15.20.21:321][541]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.21:322][541]LogTemp: Warning: Continuing
+[2022.12.23-15.20.21:322][541]LogTemp: Warning: Continuing
+[2022.12.23-15.20.21:323][541]LogTemp: Warning: Continuing
+[2022.12.23-15.20.21:323][541]LogTemp: Warning: Continuing
+[2022.12.23-15.20.21:323][541]LogTemp: Warning: Continuing
+[2022.12.23-15.20.21:324][541]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.21:349][542]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.21:383][543]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.21:416][544]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:449][545]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:482][546]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:515][547]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:548][548]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:581][549]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:615][550]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:649][551]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:682][552]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:715][553]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:748][554]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:781][555]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:814][556]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:847][557]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:880][558]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:913][559]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:946][560]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.21:979][561]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:012][562]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:045][563]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:078][564]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:111][565]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:145][566]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:179][567]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:212][568]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:245][569]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:279][570]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:312][571]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:345][572]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:378][573]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:411][574]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:446][575]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:477][576]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:510][577]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:543][578]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:576][579]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:609][580]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:642][581]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:675][582]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:708][583]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:741][584]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:774][585]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:808][586]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:841][587]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:874][588]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:907][589]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:940][590]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.22:973][591]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:006][592]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:039][593]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:072][594]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:105][595]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:138][596]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:171][597]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:204][598]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:238][599]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:271][600]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:304][601]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:337][602]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:370][603]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:403][604]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:436][605]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:469][606]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:502][607]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:535][608]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:568][609]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:602][610]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:635][611]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:669][612]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:702][613]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:735][614]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:768][615]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:801][616]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:834][617]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:867][618]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:900][619]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:933][620]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.23:967][621]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:001][622]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:034][623]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:068][624]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:101][625]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:135][626]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:168][627]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:201][628]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:235][629]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:268][630]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:302][631]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:336][632]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:369][633]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:402][634]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:435][635]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:468][636]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:501][637]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:535][638]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:569][639]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:602][640]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:635][641]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:669][642]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:702][643]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:736][644]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:769][645]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:802][646]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:835][647]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:868][648]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:901][649]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:934][650]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.24:967][651]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:001][652]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:034][653]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:067][654]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:101][655]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:134][656]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:167][657]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:200][658]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:233][659]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:266][660]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:299][661]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:332][662]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:365][663]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:398][664]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:432][665]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:465][666]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:498][667]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.25:499][667]LogTemp: Warning: miss
+[2022.12.23-15.20.25:499][667]LogTemp: Warning: Blocking
+[2022.12.23-15.20.25:500][667]LogTemp: Warning: miss
+[2022.12.23-15.20.25:500][667]LogTemp: Warning: Blocking
+[2022.12.23-15.20.25:500][667]LogTemp: Warning: Blocking
+[2022.12.23-15.20.25:501][667]LogTemp: Warning: miss
+[2022.12.23-15.20.25:501][667]LogTemp: Warning: miss
+[2022.12.23-15.20.25:501][667]LogTemp: Warning: Blocking
+[2022.12.23-15.20.25:502][667]LogTemp: Warning: Blocking
+[2022.12.23-15.20.25:502][667]LogTemp: Warning: miss
+[2022.12.23-15.20.25:502][667]LogTemp: Warning: miss
+[2022.12.23-15.20.25:502][667]LogTemp: Warning: Blocking
+[2022.12.23-15.20.25:503][667]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.25:503][667]LogTemp: Warning: spreading
+[2022.12.23-15.20.25:503][667]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.25:504][667]LogTemp: Warning: Continuing
+[2022.12.23-15.20.25:504][667]LogTemp: Warning: Continuing
+[2022.12.23-15.20.25:505][667]LogTemp: Warning: Continuing
+[2022.12.23-15.20.25:505][667]LogTemp: Warning: Continuing
+[2022.12.23-15.20.25:505][667]LogTemp: Warning: Continuing
+[2022.12.23-15.20.25:506][667]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.25:531][668]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.25:565][669]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:598][670]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:632][671]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:665][672]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:698][673]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:731][674]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:764][675]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:798][676]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:831][677]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:864][678]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:897][679]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:930][680]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:963][681]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.25:996][682]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:029][683]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:062][684]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:096][685]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:129][686]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:162][687]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:195][688]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:228][689]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:261][690]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:294][691]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:327][692]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:360][693]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:393][694]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:426][695]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:459][696]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:492][697]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:527][698]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:561][699]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:594][700]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:627][701]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:661][702]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.26:661][702]LogTemp: Warning: miss
+[2022.12.23-15.20.26:662][702]LogTemp: Warning: Blocking
+[2022.12.23-15.20.26:663][702]LogTemp: Warning: miss
+[2022.12.23-15.20.26:663][702]LogTemp: Warning: Blocking
+[2022.12.23-15.20.26:663][702]LogTemp: Warning: miss
+[2022.12.23-15.20.26:663][702]LogTemp: Warning: Blocking
+[2022.12.23-15.20.26:664][702]LogTemp: Warning: Blocking
+[2022.12.23-15.20.26:664][702]LogTemp: Warning: miss
+[2022.12.23-15.20.26:665][702]LogTemp: Warning: miss
+[2022.12.23-15.20.26:665][702]LogTemp: Warning: Blocking
+[2022.12.23-15.20.26:665][702]LogTemp: Warning: miss
+[2022.12.23-15.20.26:666][702]LogTemp: Warning: miss
+[2022.12.23-15.20.26:666][702]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.26:666][702]LogTemp: Warning: spreading
+[2022.12.23-15.20.26:667][702]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.26:667][702]LogTemp: Warning: Continuing
+[2022.12.23-15.20.26:667][702]LogTemp: Warning: Continuing
+[2022.12.23-15.20.26:668][702]LogTemp: Warning: Continuing
+[2022.12.23-15.20.26:668][702]LogTemp: Warning: Continuing
+[2022.12.23-15.20.26:669][702]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.26:694][703]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.26:727][704]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:760][705]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:793][706]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:826][707]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:859][708]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:892][709]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:925][710]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:958][711]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.26:991][712]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:024][713]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:057][714]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:090][715]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:123][716]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:157][717]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:190][718]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:223][719]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:256][720]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:289][721]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:322][722]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:355][723]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:388][724]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:422][725]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:455][726]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:488][727]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:521][728]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:554][729]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:588][730]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:622][731]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:655][732]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:688][733]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:721][734]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:754][735]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:787][736]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:820][737]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:853][738]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.27:853][738]LogTemp: Warning: miss
+[2022.12.23-15.20.27:853][738]LogTemp: Warning: Blocking
+[2022.12.23-15.20.27:854][738]LogTemp: Warning: miss
+[2022.12.23-15.20.27:854][738]LogTemp: Warning: miss
+[2022.12.23-15.20.27:855][738]LogTemp: Warning: Blocking
+[2022.12.23-15.20.27:855][738]LogTemp: Warning: Blocking
+[2022.12.23-15.20.27:855][738]LogTemp: Warning: Blocking
+[2022.12.23-15.20.27:856][738]LogTemp: Warning: Blocking
+[2022.12.23-15.20.27:856][738]LogTemp: Warning: miss
+[2022.12.23-15.20.27:856][738]LogTemp: Warning: Blocking
+[2022.12.23-15.20.27:857][738]LogTemp: Warning: miss
+[2022.12.23-15.20.27:857][738]LogTemp: Warning: miss
+[2022.12.23-15.20.27:857][738]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.27:857][738]LogTemp: Warning: spreading
+[2022.12.23-15.20.27:858][738]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.27:858][738]LogTemp: Warning: Continuing
+[2022.12.23-15.20.27:859][738]LogTemp: Warning: Continuing
+[2022.12.23-15.20.27:861][738]LogTemp: Warning: Continuing
+[2022.12.23-15.20.27:861][738]LogTemp: Warning: Continuing
+[2022.12.23-15.20.27:861][738]LogTemp: Warning: Continuing
+[2022.12.23-15.20.27:862][738]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.27:887][739]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.27:921][740]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.27:954][741]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.27:987][742]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:020][743]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:053][744]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:087][745]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:120][746]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:153][747]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:186][748]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:219][749]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:252][750]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:285][751]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:318][752]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:352][753]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:385][754]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:418][755]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:451][756]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:485][757]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:519][758]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:552][759]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:585][760]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:618][761]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:651][762]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:684][763]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:719][764]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:752][765]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:785][766]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:818][767]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:852][768]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:885][769]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:918][770]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:951][771]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.28:985][772]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:018][773]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:051][774]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:085][775]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:118][776]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:151][777]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:184][778]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:217][779]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:250][780]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:283][781]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:316][782]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:350][783]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:383][784]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.29:384][784]LogTemp: Warning: RecoilTimer
+[2022.12.23-15.20.32:030][864]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.32:031][864]LogTemp: Warning: miss
+[2022.12.23-15.20.32:031][864]LogTemp: Warning: Blocking
+[2022.12.23-15.20.32:031][864]LogTemp: Warning: miss
+[2022.12.23-15.20.32:032][864]LogTemp: Warning: miss
+[2022.12.23-15.20.32:032][864]LogTemp: Warning: miss
+[2022.12.23-15.20.32:033][864]LogTemp: Warning: Blocking
+[2022.12.23-15.20.32:033][864]LogTemp: Warning: Blocking
+[2022.12.23-15.20.32:033][864]LogTemp: Warning: miss
+[2022.12.23-15.20.32:034][864]LogTemp: Warning: miss
+[2022.12.23-15.20.32:034][864]LogTemp: Warning: miss
+[2022.12.23-15.20.32:034][864]LogTemp: Warning: Blocking
+[2022.12.23-15.20.32:035][864]LogTemp: Warning: miss
+[2022.12.23-15.20.32:035][864]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.32:035][864]LogTemp: Warning: spreading
+[2022.12.23-15.20.32:036][864]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.32:036][864]LogTemp: Warning: Continuing
+[2022.12.23-15.20.32:037][864]LogTemp: Warning: Continuing
+[2022.12.23-15.20.32:037][864]LogTemp: Warning: Continuing
+[2022.12.23-15.20.32:037][864]LogTemp: Warning: start, -6.509399
+[2022.12.23-15.20.32:038][864]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.32:063][865]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.32:096][866]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:129][867]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:162][868]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:196][869]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:230][870]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:263][871]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:296][872]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:329][873]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:362][874]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:396][875]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:429][876]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:462][877]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:495][878]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:528][879]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:562][880]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:595][881]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:628][882]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:662][883]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:696][884]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:730][885]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:763][886]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:797][887]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:830][888]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:863][889]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:896][890]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:930][891]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:967][892]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.32:996][893]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:029][894]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:062][895]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:096][896]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:129][897]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:162][898]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:195][899]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:228][900]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:261][901]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:295][902]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:328][903]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:361][904]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:394][905]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:428][906]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:461][907]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:494][908]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.33:495][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:495][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:495][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:496][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:496][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:496][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:497][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:497][908]LogTemp: Warning: Blocking
+[2022.12.23-15.20.33:498][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:498][908]LogTemp: Warning: Blocking
+[2022.12.23-15.20.33:498][908]LogTemp: Warning: Blocking
+[2022.12.23-15.20.33:499][908]LogTemp: Warning: miss
+[2022.12.23-15.20.33:499][908]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.33:499][908]LogTemp: Warning: spreading
+[2022.12.23-15.20.33:500][908]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.33:500][908]LogTemp: Warning: Continuing
+[2022.12.23-15.20.33:500][908]LogTemp: Warning: Continuing
+[2022.12.23-15.20.33:501][908]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.33:528][909]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.33:561][910]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.33:594][911]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:628][912]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:662][913]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:695][914]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:728][915]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:761][916]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:795][917]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:828][918]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:861][919]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:894][920]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:927][921]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:960][922]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.33:993][923]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:026][924]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:059][925]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:092][926]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:125][927]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:158][928]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:192][929]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:225][930]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:258][931]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:291][932]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:324][933]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:357][934]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:390][935]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:423][936]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:456][937]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:489][938]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:522][939]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:555][940]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:589][941]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:623][942]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:656][943]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:689][944]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:722][945]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:756][946]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:789][947]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:822][948]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:856][949]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:890][950]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:924][951]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:958][952]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.34:991][953]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:024][954]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:057][955]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:090][956]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:123][957]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:157][958]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:191][959]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:224][960]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:258][961]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:291][962]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:324][963]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:357][964]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:390][965]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:423][966]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:456][967]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:489][968]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:522][969]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:555][970]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:588][971]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:621][972]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:654][973]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:687][974]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:720][975]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:753][976]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:786][977]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:819][978]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:853][979]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:886][980]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:920][981]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:953][982]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.35:987][983]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:020][984]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:053][985]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:086][986]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:119][987]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:152][988]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:185][989]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:218][990]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.36:219][990]LogTemp: Warning: Blocking
+[2022.12.23-15.20.36:219][990]LogTemp: Warning: Blocking
+[2022.12.23-15.20.36:219][990]LogTemp: Warning: Blocking
+[2022.12.23-15.20.36:220][990]LogTemp: Warning: Blocking
+[2022.12.23-15.20.36:220][990]LogTemp: Warning: miss
+[2022.12.23-15.20.36:220][990]LogTemp: Warning: Blocking
+[2022.12.23-15.20.36:221][990]LogTemp: Warning: Blocking
+[2022.12.23-15.20.36:221][990]LogTemp: Warning: Blocking
+[2022.12.23-15.20.36:221][990]LogTemp: Warning: miss
+[2022.12.23-15.20.36:222][990]LogTemp: Warning: miss
+[2022.12.23-15.20.36:222][990]LogTemp: Warning: miss
+[2022.12.23-15.20.36:222][990]LogTemp: Warning: miss
+[2022.12.23-15.20.36:223][990]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.36:223][990]LogTemp: Warning: spreading
+[2022.12.23-15.20.36:223][990]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.36:224][990]LogTemp: Warning: Continuing
+[2022.12.23-15.20.36:224][990]LogTemp: Warning: Continuing
+[2022.12.23-15.20.36:224][990]LogTemp: Warning: Continuing
+[2022.12.23-15.20.36:225][990]LogTemp: Warning: Continuing
+[2022.12.23-15.20.36:225][990]LogTemp: Warning: Continuing
+[2022.12.23-15.20.36:225][990]LogTemp: Warning: Continuing
+[2022.12.23-15.20.36:226][990]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.36:252][991]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.36:285][992]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:318][993]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:351][994]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:384][995]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:417][996]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:450][997]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:483][998]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:516][999]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:550][  0]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:584][  1]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:617][  2]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:650][  3]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:683][  4]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:716][  5]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:749][  6]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:783][  7]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:816][  8]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:849][  9]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:882][ 10]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:915][ 11]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:949][ 12]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.36:983][ 13]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:016][ 14]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:049][ 15]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:083][ 16]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:116][ 17]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:149][ 18]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:182][ 19]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:215][ 20]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:248][ 21]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:281][ 22]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:315][ 23]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:349][ 24]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:382][ 25]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:415][ 26]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:449][ 27]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:483][ 28]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:517][ 29]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:550][ 30]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:583][ 31]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:617][ 32]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:651][ 33]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:684][ 34]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:717][ 35]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:750][ 36]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:783][ 37]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:816][ 38]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:849][ 39]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:883][ 40]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:916][ 41]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:949][ 42]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.37:982][ 43]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:015][ 44]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:049][ 45]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:082][ 46]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:115][ 47]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:148][ 48]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:181][ 49]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:214][ 50]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:247][ 51]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:280][ 52]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:313][ 53]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:346][ 54]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:379][ 55]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:412][ 56]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:445][ 57]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:478][ 58]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:512][ 59]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:545][ 60]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:578][ 61]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:611][ 62]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:644][ 63]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:677][ 64]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:710][ 65]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:743][ 66]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:776][ 67]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:810][ 68]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:843][ 69]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:876][ 70]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:909][ 71]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:942][ 72]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.38:975][ 73]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:008][ 74]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:041][ 75]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:074][ 76]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:108][ 77]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:142][ 78]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:175][ 79]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:208][ 80]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:241][ 81]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:274][ 82]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:307][ 83]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:340][ 84]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:373][ 85]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:406][ 86]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.39:407][ 86]LogTemp: Warning: Blocking
+[2022.12.23-15.20.39:407][ 86]LogTemp: Warning: miss
+[2022.12.23-15.20.39:408][ 86]LogTemp: Warning: Blocking
+[2022.12.23-15.20.39:408][ 86]LogTemp: Warning: Blocking
+[2022.12.23-15.20.39:408][ 86]LogTemp: Warning: Blocking
+[2022.12.23-15.20.39:409][ 86]LogTemp: Warning: miss
+[2022.12.23-15.20.39:409][ 86]LogTemp: Warning: Hit
+[2022.12.23-15.20.39:409][ 86]LogTemp: Warning: miss
+[2022.12.23-15.20.39:409][ 86]LogTemp: Warning: Blocking
+[2022.12.23-15.20.39:410][ 86]LogTemp: Warning: miss
+[2022.12.23-15.20.39:410][ 86]LogTemp: Warning: miss
+[2022.12.23-15.20.39:410][ 86]LogTemp: Warning: miss
+[2022.12.23-15.20.39:411][ 86]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.39:411][ 86]LogTemp: Warning: spreading
+[2022.12.23-15.20.39:411][ 86]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.39:412][ 86]LogTemp: Warning: Continuing
+[2022.12.23-15.20.39:412][ 86]LogTemp: Warning: Continuing
+[2022.12.23-15.20.39:412][ 86]LogTemp: Warning: Continuing
+[2022.12.23-15.20.39:413][ 86]LogTemp: Warning: Yes
+[2022.12.23-15.20.39:413][ 86]LogTemp: Warning: Damaging
+[2022.12.23-15.20.39:413][ 86]LogTemp: Warning: Torsoshot
+[2022.12.23-15.20.39:414][ 86]LogTemp: Warning: Continuing
+[2022.12.23-15.20.39:414][ 86]LogTemp: Warning: Continuing
+[2022.12.23-15.20.39:415][ 86]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.39:439][ 87]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.39:472][ 88]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:505][ 89]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:539][ 90]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:572][ 91]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:605][ 92]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:639][ 93]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:672][ 94]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:705][ 95]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:738][ 96]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:771][ 97]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:804][ 98]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:837][ 99]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:870][100]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:903][101]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:937][102]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.39:970][103]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:003][104]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:036][105]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:069][106]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:103][107]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:136][108]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:170][109]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:203][110]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:237][111]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:270][112]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:303][113]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:336][114]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:370][115]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:403][116]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:436][117]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:470][118]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:503][119]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:536][120]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:569][121]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:602][122]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:635][123]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:668][124]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:701][125]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:734][126]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:767][127]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:800][128]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:834][129]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:867][130]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:900][131]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:933][132]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:966][133]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.40:999][134]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:032][135]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:066][136]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:099][137]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:132][138]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:165][139]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:198][140]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:231][141]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:264][142]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:297][143]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:332][144]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:365][145]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:398][146]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:431][147]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:465][148]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:498][149]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:531][150]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:564][151]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:597][152]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:630][153]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:663][154]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:696][155]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:730][156]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:763][157]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:796][158]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:829][159]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:862][160]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:895][161]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.41:896][161]LogTemp: Warning: miss
+[2022.12.23-15.20.41:896][161]LogTemp: Warning: Blocking
+[2022.12.23-15.20.41:896][161]LogTemp: Warning: Blocking
+[2022.12.23-15.20.41:897][161]LogTemp: Warning: miss
+[2022.12.23-15.20.41:897][161]LogTemp: Warning: Blocking
+[2022.12.23-15.20.41:897][161]LogTemp: Warning: miss
+[2022.12.23-15.20.41:898][161]LogTemp: Warning: miss
+[2022.12.23-15.20.41:898][161]LogTemp: Warning: Blocking
+[2022.12.23-15.20.41:898][161]LogTemp: Warning: Blocking
+[2022.12.23-15.20.41:899][161]LogTemp: Warning: miss
+[2022.12.23-15.20.41:899][161]LogTemp: Warning: miss
+[2022.12.23-15.20.41:899][161]LogTemp: Warning: Blocking
+[2022.12.23-15.20.41:900][161]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.41:900][161]LogTemp: Warning: spreading
+[2022.12.23-15.20.41:900][161]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.41:901][161]LogTemp: Warning: Continuing
+[2022.12.23-15.20.41:901][161]LogTemp: Warning: Continuing
+[2022.12.23-15.20.41:901][161]LogTemp: Warning: Continuing
+[2022.12.23-15.20.41:901][161]LogTemp: Warning: Continuing
+[2022.12.23-15.20.41:902][161]LogTemp: Warning: Continuing
+[2022.12.23-15.20.41:902][161]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.41:928][162]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.41:961][163]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.41:994][164]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.42:027][165]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.42:060][166]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.42:061][166]LogTemp: Warning: RecoilTimer
+[2022.12.23-15.20.46:529][301]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.46:530][301]LogTemp: Warning: miss
+[2022.12.23-15.20.46:530][301]LogTemp: Warning: miss
+[2022.12.23-15.20.46:530][301]LogTemp: Warning: Blocking
+[2022.12.23-15.20.46:530][301]LogTemp: Warning: miss
+[2022.12.23-15.20.46:531][301]LogTemp: Warning: Blocking
+[2022.12.23-15.20.46:531][301]LogTemp: Warning: Blocking
+[2022.12.23-15.20.46:532][301]LogTemp: Warning: Blocking
+[2022.12.23-15.20.46:532][301]LogTemp: Warning: Blocking
+[2022.12.23-15.20.46:532][301]LogTemp: Warning: miss
+[2022.12.23-15.20.46:533][301]LogTemp: Warning: Blocking
+[2022.12.23-15.20.46:533][301]LogTemp: Warning: Blocking
+[2022.12.23-15.20.46:534][301]LogTemp: Warning: Blocking
+[2022.12.23-15.20.46:534][301]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.46:534][301]LogTemp: Warning: spreading
+[2022.12.23-15.20.46:535][301]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.46:535][301]LogTemp: Warning: Continuing
+[2022.12.23-15.20.46:535][301]LogTemp: Warning: Continuing
+[2022.12.23-15.20.46:535][301]LogTemp: Warning: Continuing
+[2022.12.23-15.20.46:536][301]LogTemp: Warning: Continuing
+[2022.12.23-15.20.46:536][301]LogTemp: Warning: Continuing
+[2022.12.23-15.20.46:536][301]LogTemp: Warning: Continuing
+[2022.12.23-15.20.46:537][301]LogTemp: Warning: Continuing
+[2022.12.23-15.20.46:537][301]LogTemp: Warning: start, -9.876709
+[2022.12.23-15.20.46:538][301]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.46:563][302]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:596][303]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:629][304]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:662][305]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:695][306]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:728][307]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:761][308]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:794][309]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:827][310]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:860][311]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:893][312]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:926][313]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:959][314]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.46:993][315]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:027][316]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:060][317]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:093][318]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:126][319]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:159][320]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:192][321]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:225][322]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:258][323]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:291][324]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:324][325]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:358][326]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:391][327]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:425][328]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:458][329]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:491][330]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:524][331]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:557][332]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:590][333]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:623][334]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:656][335]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:689][336]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:723][337]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:756][338]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:789][339]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:822][340]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:856][341]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:889][342]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:922][343]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:956][344]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.47:989][345]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:022][346]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:055][347]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:088][348]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:121][349]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:154][350]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:187][351]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:220][352]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:253][353]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:286][354]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:319][355]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:352][356]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:385][357]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:418][358]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:452][359]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:485][360]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:518][361]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:551][362]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:584][363]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:617][364]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:650][365]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:683][366]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:716][367]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:749][368]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:782][369]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:815][370]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:848][371]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:881][372]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:914][373]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:948][374]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.48:981][375]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:014][376]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:047][377]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:080][378]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:113][379]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:147][380]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:180][381]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:213][382]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:247][383]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:280][384]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:313][385]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:347][386]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:380][387]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:413][388]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:447][389]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:480][390]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:513][391]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:546][392]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:580][393]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:613][394]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:646][395]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:679][396]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:712][397]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:746][398]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:779][399]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:813][400]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:846][401]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:879][402]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:912][403]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:945][404]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.49:978][405]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:011][406]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:044][407]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:077][408]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:110][409]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:143][410]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:176][411]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:210][412]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:243][413]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:276][414]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:309][415]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:342][416]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:375][417]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:408][418]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:441][419]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:474][420]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:507][421]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:540][422]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:573][423]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:607][424]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:640][425]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:674][426]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:707][427]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:740][428]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:774][429]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:807][430]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:841][431]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:874][432]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:907][433]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:940][434]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.50:973][435]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:006][436]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:039][437]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:072][438]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:105][439]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:138][440]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:171][441]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:204][442]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:238][443]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:271][444]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:304][445]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:337][446]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:371][447]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:404][448]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:438][449]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:471][450]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:505][451]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:538][452]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:571][453]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:605][454]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:638][455]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:671][456]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:704][457]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:737][458]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:772][459]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:805][460]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:838][461]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:872][462]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:906][463]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:939][464]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.51:972][465]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:005][466]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:038][467]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:071][468]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:105][469]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:139][470]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:172][471]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:205][472]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:238][473]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:271][474]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:305][475]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:339][476]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:373][477]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:406][478]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:439][479]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:472][480]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:506][481]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:539][482]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:572][483]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:605][484]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:639][485]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:672][486]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:705][487]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:739][488]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:772][489]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:806][490]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:840][491]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:873][492]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:906][493]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:939][494]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.52:972][495]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:005][496]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:038][497]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:071][498]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:104][499]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:137][500]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:170][501]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:204][502]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:238][503]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:271][504]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:304][505]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:337][506]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:370][507]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:403][508]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:436][509]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:469][510]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:502][511]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:535][512]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:568][513]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:601][514]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:634][515]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:667][516]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:700][517]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:733][518]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:766][519]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:799][520]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:833][521]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:866][522]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:899][523]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:932][524]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.20.53:932][524]LogTemp: Warning: Hit
+[2022.12.23-15.20.53:933][524]LogTemp: Warning: Blocking
+[2022.12.23-15.20.53:933][524]LogTemp: Warning: Blocking
+[2022.12.23-15.20.53:933][524]LogTemp: Warning: Blocking
+[2022.12.23-15.20.53:933][524]LogTemp: Warning: Hit
+[2022.12.23-15.20.53:934][524]LogTemp: Warning: miss
+[2022.12.23-15.20.53:935][524]LogTemp: Warning: Blocking
+[2022.12.23-15.20.53:935][524]LogTemp: Warning: miss
+[2022.12.23-15.20.53:936][524]LogTemp: Warning: Hit
+[2022.12.23-15.20.53:936][524]LogTemp: Warning: miss
+[2022.12.23-15.20.53:936][524]LogTemp: Warning: miss
+[2022.12.23-15.20.53:937][524]LogTemp: Warning: miss
+[2022.12.23-15.20.53:937][524]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.20.53:937][524]LogTemp: Warning: spreading
+[2022.12.23-15.20.53:937][524]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.20.53:938][524]LogTemp: Warning: Yes
+[2022.12.23-15.20.53:938][524]LogTemp: Warning: Damaging
+[2022.12.23-15.20.53:938][524]LogTemp: Warning: Torsoshot
+[2022.12.23-15.20.53:939][524]LogTemp: Warning: Continuing
+[2022.12.23-15.20.53:939][524]LogTemp: Warning: Continuing
+[2022.12.23-15.20.53:939][524]LogTemp: Warning: Continuing
+[2022.12.23-15.20.53:940][524]LogTemp: Warning: Continuing
+[2022.12.23-15.20.53:940][524]LogTemp: Warning: Continuing
+[2022.12.23-15.20.53:940][524]LogTemp: Warning: Continuing
+[2022.12.23-15.20.53:941][524]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.20.53:966][525]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.53:999][526]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:032][527]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:065][528]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:099][529]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:132][530]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:165][531]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:198][532]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:231][533]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:264][534]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:297][535]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:331][536]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:364][537]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:398][538]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:431][539]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:464][540]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:498][541]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:532][542]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:565][543]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:599][544]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:632][545]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:665][546]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:698][547]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:731][548]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:764][549]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:798][550]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:831][551]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:864][552]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:897][553]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:930][554]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:964][555]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.54:997][556]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:030][557]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:063][558]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:096][559]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:129][560]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:163][561]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:196][562]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:229][563]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:262][564]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:295][565]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:328][566]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:361][567]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:395][568]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:428][569]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:461][570]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:495][571]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:529][572]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:562][573]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:595][574]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:629][575]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:662][576]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:696][577]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:729][578]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:763][579]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:796][580]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:829][581]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:863][582]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:896][583]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:930][584]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:964][585]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.55:997][586]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:030][587]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:063][588]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:096][589]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:130][590]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:164][591]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:197][592]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:231][593]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:264][594]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:298][595]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:331][596]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:364][597]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:397][598]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:430][599]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:463][600]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:496][601]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:530][602]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.20.56:531][602]LogTemp: Warning: RecoilTimer
+[2022.12.23-15.21.14:084][133]LogTemp: Warning: Weapon name: None
+[2022.12.23-15.21.14:084][133]LogTemp: Warning: Hit
+[2022.12.23-15.21.14:084][133]LogTemp: Warning: Blocking
+[2022.12.23-15.21.14:084][133]LogTemp: Warning: Blocking
+[2022.12.23-15.21.14:084][133]LogTemp: Warning: Blocking
+[2022.12.23-15.21.14:084][133]LogTemp: Warning: Blocking
+[2022.12.23-15.21.14:084][133]LogTemp: Warning: Hit
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: Hit
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: Blocking
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: miss
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: Blocking
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: Hit
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: miss
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: Carttridge 12
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: spreading
+[2022.12.23-15.21.14:085][133]LogTemp: Warning: SpreadLength = 12
+[2022.12.23-15.21.14:086][133]LogTemp: Warning: Yes
+[2022.12.23-15.21.14:086][133]LogTemp: Warning: Damaging
+[2022.12.23-15.21.14:086][133]LogTemp: Warning: Torsoshot
+[2022.12.23-15.21.14:087][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:087][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:088][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:088][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:089][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:089][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:089][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:089][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:090][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:090][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:091][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:091][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:091][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:092][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:092][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:092][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:093][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:095][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:095][133]LogTemp: Warning: Continuing
+[2022.12.23-15.21.14:095][133]LogTemp: Warning: start, -11.557617
+[2022.12.23-15.21.14:096][133]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.21.14:118][134]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.21.14:151][135]LogTemp: Warning: bIsFiring = true
+[2022.12.23-15.21.14:185][136]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:219][137]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:253][138]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:286][139]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:319][140]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:352][141]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:385][142]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:418][143]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:451][144]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:485][145]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:519][146]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:552][147]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:586][148]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:620][149]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:653][150]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:687][151]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:721][152]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:756][153]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:790][154]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:823][155]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:856][156]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:889][157]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:923][158]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:956][159]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.14:989][160]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:022][161]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:055][162]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:088][163]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:121][164]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:154][165]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:187][166]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:220][167]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:253][168]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:286][169]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:319][170]LogTemp: Warning: bIsFiring = false
+[2022.12.23-15.21.15:353][171]LogTemp: Warning: bIsFiring = false

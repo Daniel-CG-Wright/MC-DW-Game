@@ -220,8 +220,9 @@ protected:
 
 	//Here is our replicated endpoint
 	//This endpoint will be duff for projectiles, and will not matter, as we will only use it for the hitscan tracer effect.
+	//USE ARRAYS
 	UPROPERTY(ReplicatedUsing = OnRep_EndPoint)
-		FVector EndPoint;
+		TArray<FVector> EndPoints;
 
 	//Here is the repNotify function
 	UFUNCTION()

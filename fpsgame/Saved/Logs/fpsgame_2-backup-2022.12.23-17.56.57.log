@@ -1,0 +1,2250 @@
+﻿Log file open, 12/23/22 17:56:12
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: fpsgame
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.225560
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogInit: Display: Loading text-based GConfig....
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin GameplayCameras
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin PixWinPlugin
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin TextureFormatOodle
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin OpenImageDenoise
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin OpenXREyeTracker
+LogPluginManager: Mounting plugin OpenXR
+LogPluginManager: Mounting plugin OpenXRHandTracking
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin OodleData
+LogPluginManager: Mounting plugin OodleNetwork
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+PixWinPlugin: PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogOculusPluginWrapper: OculusPlugin initialized successfully
+LogHMD: Failed initializing OVRPlugin 1.59.0
+LogInit: Build: ++UE4+Release-4.27-CL-18319896
+LogInit: Engine Version: 4.27.2-18319896+++UE4+Release-4.27
+LogInit: Compatible Engine Version: 4.27.0-17155196+++UE4+Release-4.27
+LogInit: Net CL: 17155196
+LogInit: OS: Windows 10 (Release 2009) (), CPU: AMD Ryzen 5 3600X 6-Core Processor             , GPU: AMD Radeon RX 5700 XT
+LogInit: Compiled (64-bit): Nov 30 2021 07:12:08
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.27
+LogInit: Command Line:  127.0.0.1:17777 -game -PIEVIACONSOLE -Multiprocess "GameUserSettingsINI=C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/PIEGameUserSettings1.ini" -MultiprocessSaveConfig -forcepassthrough -messaging -SessionName="Play in Standalone Game" -PktLagMin=0 -PktLagMax=0 -PktLoss=0 -PktIncomingLagMin=0 -PktIncomingLagMax=0 -PktIncomingLoss=0 -windowed -WinX=0 -WinY=24 SAVEWINPOS=1 -ResX=640 -ResY=480
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 14
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 45
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 47
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.Mobile.DisableVertexFog:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxMobileCascades:2]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.MobileMSAA:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.Mobile.AllowDitheredLODTransition:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.Mobile.AllowSoftwareOcclusion:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.Mobile.VirtualTextures:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DiscardUnusedQuality:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.AllowOcclusionQueries:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForLights:0.030000]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForDepthPrepass:0.030000]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.MinScreenRadiusForCSMDepth:0.010000]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.PrecomputedVisibilityWarning:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.TextureStreaming:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[Compat.UseDXT5NormalMaps:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VirtualTextures:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VT.EnableAutoImport:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VirtualTexturedLightmaps:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VT.TileSize:128]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VT.TileBorderSize:4]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.vt.FeedbackFactor:16]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VT.EnableCompressZlib:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VT.EnableCompressCrunch:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.ClearCoatNormal:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.ReflectionCaptureResolution:128]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.Mobile.ReflectionCaptureCompression:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.ReflectionEnvironmentLightmapMixBasedOnRoughness:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.ForwardShading:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VertexFoggingForOpaque:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.AllowStaticLighting:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.NormalMapsForStaticLighting:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.GenerateMeshDistanceFields:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.EightBit:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.GenerateLandscapeGIData:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DistanceFieldBuild.Compress:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.TessellationAdaptivePixelsPerTriangle:48.000000]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.SeparateTranslucency:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.TranslucentSortPolicy:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[vr.VRS.HMDFixedFoveationLevel:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.CustomDepth:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.CustomDepthTemporalAAJitter:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.PostProcessing.PropagateAlpha:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.Bloom:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusion:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.AmbientOcclusionStaticFraction:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Method:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.Bias:1.000000]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.UsePreExposure:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.EyeAdaptation.EditorOnly:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.MotionBlur:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.LensFlare:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.TemporalAA.Upsampling:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.SSGI.Enable:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.AntiAliasing:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.LightUnits:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DefaultBackBufferPixelFormat:4]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.Shadow.UnbuiltPreviewInGame:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.StencilForLODDither:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.EarlyZPass:3]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.EarlyZPassOnlyMaterialMasking:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.DBuffer:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.ClearSceneMethod:1]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.BasePassOutputsVelocity:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.VertexDeformationOutputsVelocity:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.SelectiveBasePassOutputs:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeX:1024]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[fx.GPUSimulationTextureSizeY:1024]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.AllowGlobalClipPlane:0]]
+[2022.12.23-17.56.12:808][  0]LogConfig: Setting CVar [[r.GBufferFormat:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.MorphTarget.Mode:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[vr.InstancedStereo:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.MobileHDR:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[vr.MobileMultiView:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.UseHWsRGBEncoding:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[vr.RoundRobinOcclusion:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[vr.ODSCapture:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.MeshStreaming:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.WireframeCullThreshold:5.000000]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.RayTracing:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.RayTracing.UseTextureLod:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SupportStationarySkylight:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SupportLowQualityLightmaps:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SupportPointLightWholeSceneShadows:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SupportAtmosphericFog:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphere:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SupportSkyAtmosphereAffectsHeightFog:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SkinCache.CompileShaders:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SkinCache.DefaultBehavior:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SkinCache.SceneMemoryLimitInMB:128.000000]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.EnableStaticAndCSMShadowReceivers:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableLightCSMShaderCulling:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.AllowDistanceFieldShadows:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.AllowMovableDirectionalLights:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.MobileNumDynamicPointLights:4]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.MobileDynamicPointLightsUseStaticBranch:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlights:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.EnableMovableSpotlightsShadow:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.GPUSkin.Support16BitBoneIndex:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.GPUSkin.Limit2BoneInfluences:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SupportDepthOnlyIndexBuffers:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.SupportReversedIndexBuffers:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.LightPropagationVolume:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.AmbientOcclusion:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluences:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.GPUSkin.UnlimitedBoneInfluencesThreshold:8]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.PlanarReflectionMode:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[r.Mobile.SupportsGen4TAA:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-17.56.12:809][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2022.12.23-17.56.12:809][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-17.56.12:809][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-17.56.12:821][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.12.23-17.56.12:821][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.12.23-17.56.12:822][  0]LogInit: Selected Device Profile: [Windows]
+[2022.12.23-17.56.12:822][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2022.12.23-17.56.12:822][  0]LogHAL: Display: Platform has ~ 16 GB [17128247296 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2022.12.23-17.56.12:822][  0]LogInit: Going up to parent DeviceProfile []
+[2022.12.23-17.56.12:822][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.12.23-17.56.12:822][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Scalability.ini]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.12.23-17.56.12:823][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2022.12.23-17.56.12:824][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2022.12.23-17.56.12:824][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2022.12.23-17.56.12:824][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2022.12.23-17.56.12:824][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Engine.ini]
+[2022.12.23-17.56.12:824][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Config/Windows/Editor.ini]
+[2022.12.23-17.56.12:824][  0]LogInit: Computer: DESKTOP-QG36584
+[2022.12.23-17.56.12:824][  0]LogInit: User: danie
+[2022.12.23-17.56.12:824][  0]LogInit: CPU Page size=4096, Cores=6
+[2022.12.23-17.56.12:824][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2022.12.23-17.56.12:824][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2022.12.23-17.56.12:824][  0]LogMemory: Platform Memory Stats for Windows
+[2022.12.23-17.56.12:824][  0]LogMemory: Process Physical Memory: 144.59 MB used, 144.59 MB peak
+[2022.12.23-17.56.12:824][  0]LogMemory: Process Virtual Memory: 122.25 MB used, 122.25 MB peak
+[2022.12.23-17.56.12:824][  0]LogMemory: Physical Memory: 10420.35 MB used,  5914.42 MB free, 16334.77 MB total
+[2022.12.23-17.56.12:824][  0]LogMemory: Virtual Memory: 134211392.00 MB used,  6339.36 MB free, 134217728.00 MB total
+[2022.12.23-17.56.12:828][  0]LogWindows: WindowsPlatformFeatures enabled
+[2022.12.23-17.56.12:848][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2022.12.23-17.56.12:848][  0]LogInit: Using OS detected language (en-US).
+[2022.12.23-17.56.12:848][  0]LogInit: Using OS detected locale (en-GB).
+[2022.12.23-17.56.12:852][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2022.12.23-17.56.13:010][  0]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2022.12.23-17.56.13:036][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2022.12.23-17.56.13:036][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2022.12.23-17.56.13:055][  0]LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+[2022.12.23-17.56.13:058][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2022.12.23-17.56.13:058][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2022.12.23-17.56.13:058][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2022.12.23-17.56.13:058][  0]LogD3D11RHI: D3D11 adapters:
+[2022.12.23-17.56.13:094][  0]LogD3D11RHI:    0. 'AMD Radeon RX 5700 XT' (Feature Level 11_0)
+[2022.12.23-17.56.13:094][  0]LogD3D11RHI:       8151/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x1002
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:       0/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI: Chosen D3D11 Adapter:
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     Description : AMD Radeon RX 5700 XT
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     VendorId    : 1002
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     DeviceId    : 731f
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     SubSysId    : 23131458
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     Revision    : 00c1
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     DedicatedVideoMemory : 8547471360 bytes
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     DedicatedSystemMemory : 0 bytes
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     SharedSystemMemory : 8564123648 bytes
+[2022.12.23-17.56.13:096][  0]LogD3D11RHI:     AdapterLuid : 0 56556
+[2022.12.23-17.56.13:103][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2022.12.23-17.56.13:103][  0]LogD3D11RHI:     GPU DeviceId: 0x731f (for the marketing name, search the web for "GPU Device Id")
+[2022.12.23-17.56.13:103][  0]LogWindows: EnumDisplayDevices:
+[2022.12.23-17.56.13:103][  0]LogWindows:    0. 'AMD Radeon RX 5700 XT' (P:1 D:1)
+[2022.12.23-17.56.13:103][  0]LogWindows:    1. 'AMD Radeon RX 5700 XT' (P:0 D:1)
+[2022.12.23-17.56.13:103][  0]LogWindows:    2. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.12.23-17.56.13:104][  0]LogWindows:    3. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.12.23-17.56.13:104][  0]LogWindows:    4. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.12.23-17.56.13:104][  0]LogWindows:    5. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.12.23-17.56.13:104][  0]LogWindows:    6. 'AMD Radeon RX 5700 XT' (P:0 D:0)
+[2022.12.23-17.56.13:104][  0]LogWindows: DebugString: FoundDriverCount:7 
+[2022.12.23-17.56.13:104][  0]LogD3D11RHI:     Adapter Name: AMD Radeon RX 5700 XT
+[2022.12.23-17.56.13:104][  0]LogD3D11RHI:   Driver Version: AMD Software: Adrenalin Edition 22.11.2 (internal:31.0.12029.10015, unified:31.0.12029.10015)
+[2022.12.23-17.56.13:104][  0]LogD3D11RHI:      Driver Date: 11-30-2022
+[2022.12.23-17.56.13:105][  0]LogRHI: Texture pool is 5168 MB (70% of 7383 MB)
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI: Creating D3DDevice with AMD AGS, using adapter:
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     Description : AMD Radeon RX 5700 XT
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     VendorId    : 1002
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     DeviceId    : 731f
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     SubSysId    : 23131458
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     Revision    : 00c1
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     DedicatedVideoMemory : 8547471360 bytes
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     DedicatedSystemMemory : 0 bytes
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     SharedSystemMemory : 8564123648 bytes
+[2022.12.23-17.56.13:141][  0]LogD3D11RHI:     AdapterLuid : 0 56556
+[2022.12.23-17.56.13:175][  0]LogD3D11RHI: Created device via AGS, feature level 11_0, supported extensions 1fffffbf.
+[2022.12.23-17.56.13:175][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2022.12.23-17.56.13:175][  0]LogD3D11RHI: Async texture creation enabled
+[2022.12.23-17.56.13:175][  0]LogD3D11RHI: Array index from any shader is supported
+[2022.12.23-17.56.13:188][  0]LogD3D11RHI: GPU Timing Frequency: 100.000000 (Debug: 2 1)
+[2022.12.23-17.56.13:418][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2022.12.23-17.56.13:421][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2022.12.23-17.56.13:425][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2022.12.23-17.56.13:429][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2022.12.23-17.56.13:429][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2022.12.23-17.56.13:436][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2022.12.23-17.56.13:464][  0]LogTextureFormatOodle: Display: Oodle Texture 2.9.0 init RDO Off
+[2022.12.23-17.56.13:488][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2022.12.23-17.56.13:488][  0]LogShaderCompilers: Guid format shader working directory is -26 characters bigger than the processId version (../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Intermediate/Shaders/WorkingDirectory/2864/).
+[2022.12.23-17.56.13:488][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/danie/AppData/Local/Temp/UnrealShaderWorkingDir/B0DCFCFF4A91FC46C10FA79EBA35E3A5/'.
+[2022.12.23-17.56.13:488][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2022.12.23-17.56.13:488][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2022.12.23-17.56.13:488][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2022.12.23-17.56.14:091][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2022.12.23-17.56.14:137][  0]LogDerivedDataCache: Loaded boot cache 0.04s 94MB C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2022.12.23-17.56.14:137][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/danie/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc
+[2022.12.23-17.56.14:137][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2022.12.23-17.56.14:137][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2022.12.23-17.56.14:137][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.12.23-17.56.14:137][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2022.12.23-17.56.14:153][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2022.12.23-17.56.14:153][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.12.23-17.56.14:153][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2022.12.23-17.56.14:162][  0]LogDerivedDataCache: Speed tests for C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2022.12.23-17.56.14:162][  0]LogDerivedDataCache: Display: Performance to C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.03ms. RandomReadSpeed=321.78MBs, RandomWriteSpeed=173.74MBs. Assigned SpeedClass 'Local'
+[2022.12.23-17.56.14:162][  0]LogDerivedDataCache: Using Local data cache path C:/Users/danie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2022.12.23-17.56.14:162][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2022.12.23-17.56.14:163][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2022.12.23-17.56.14:195][  0]LogSlate: Using FreeType 2.10.0
+[2022.12.23-17.56.14:195][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2022.12.23-17.56.14:263][  0]LogInit: Using OS detected language (en-US).
+[2022.12.23-17.56.14:263][  0]LogInit: Using OS detected locale (en-GB).
+[2022.12.23-17.56.14:263][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the language.
+[2022.12.23-17.56.14:264][  0]LogTextLocalizationManager: No localization for 'en-GB' exists, so 'en' will be used for the locale.
+[2022.12.23-17.56.14:264][  0]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2022.12.23-17.56.14:264][  0]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2022.12.23-17.56.14:266][  0]LogTextLocalizationManager: Compacting localization data took   0.01ms
+[2022.12.23-17.56.14:266][  0]LogAssetRegistry: FAssetRegistry took 0.0019 seconds to start up
+[2022.12.23-17.56.14:415][  0]LogPackageLocalizationCache: Processed 27 localized package path(s) for 1 prioritized culture(s) in 0.001056 seconds
+[2022.12.23-17.56.14:478][  0]LogInit: Selected Device Profile: [Windows]
+[2022.12.23-17.56.14:478][  0]LogInit: Active device profile: [0000021A05B8BF00][0000021A00C42100 49] Windows
+[2022.12.23-17.56.14:478][  0]LogInit: Profiles: [0000021A05B8BF00][0000021A00C42100 49] Windows, [0000021A05B9FF00][0000021A00C46280 49] WindowsNoEditor, [0000021A05B88200][0000021A00E0E400 49] WindowsServer, [0000021A05B9E300][0000021A00E12580 49] WindowsClient, [0000021A05B89C00][0000021A00E16700 49] IOS, [0000021A05B9F300][0000021A00E1A880 49] iPadAir, [0000021A05B8A000][0000021A00E1EA00 49] iPadAir2, [0000021A05B4C500][0000021A00E26CC0 49] IPadPro, [0000021A05B4C600][0000021A00E22D00 49] iPadAir3, [0000021A05B8B900][0000021A00E2AE80 49] iPadAir4, [0000021A05B4FC00][0000021A00E2F000 49] iPadMini2, [0000021A05B88600][0000021A00E33180 49] iPadMini3, [0000021A05B4D400][0000021A00E37300 49] iPadMini4, [0000021A05B8B100][0000021A00E3B480 49] iPadMini5, [0000021A05B3FD00][0000021A00E43740 49] iPhone6, [0000021A05B3FE00][0000021A00E3F780 49] iPodTouch6, [0000021A05B4F400][0000021A00E479C0 49] iPhone7, [0000021A05B4F500][0000021A00C3FA00 49] iPodTouch7, [0000021A05B3C700][0000021A00E4BB40 49] iPhone5S, [0000021A05B4E300][0000021A00E4E100 49] iPhone6Plus, [0000021A05B3F100][0000021A00E56280 49] iPhone6S, [0000021A05B4C200][0000021A01380400 49] iPhone6SPlus, [0000021A05B3D000][0000021A01384580 49] iPhone7Plus, [0000021A05B4CC00][0000021A01388700 49] iPhoneSE, [0000021A05B3E800][0000021A0138C880 49] iPhone8, [0000021A05B4DD00][0000021A01390A00 49] iPhone8Plus, [0000021A05B3D900][0000021A01394B80 49] iPhoneX, [0000021A05B4D300][0000021A01398D00 49] iPhoneXS, [0000021A05B3C800][0000021A0139CE80 49] iPhoneXSMax, [0000021A05B4EB00][0000021A013A1000 49] iPhoneXR, [0000021A05B3EF00][0000021A013A5180 49] iPhone11, [0000021A05B4D900][0000021A013A9300 49] iPhone11Pro, [0000021A05B3D200][0000021A013AD480 49] iPhone11ProMax, [0000021A05B4EA00][0000021A013B1600 49] iPhoneSE2, [0000021A05B3FF00][0000021A013B5780 49] iPhone12Mini, [0000021A05B4F800][0000021A013B9900 49] iPhone12, [0000021A05B3DF00][0000021A013BDA80 49] iPhone12Pro, [0000021A05B4DA00][0000021A00E53BC0 49] iPhone12ProMax, [0000021A05B3DB00][0000021A013C0180 49] iPadPro105, [0000021A05B4E700][0000021A013C42C0 49] iPadPro129, [0000021A05B3D700][0000021A013CC440 49] iPadPro97, [0000021A05B4D600][0000021A013D05C0 49] iPadPro2_129, [0000021A05B3E400][0000021A013D4740 49] iPad5, [0000021A05B4CD00][0000021A013D88C0 49] iPad6, [0000021A05B3ED00][0000021A013DCA40 49] iPad7, [0000021A05B4F000][0000021A013E0BC0 49] iPad8, [0000021A05B3F500][0000021A013E4D40 49] iPadPro11, [0000021A05B4FE00][0000021A013E8EC0 49] iPadPro2_11, [0000021A05B3C500][0000021A013ED040 49] iPadPro3_129, [0000021A05B4F900][0000021A013F11C0 49] iPadPro4_129, [0000021A05B3D100][0000021A013F5340 49] AppleTV, [0000021A05B4FA00][0000021A013F94C0 49] AppleTV4K, [0000021A05B3CF00][0000021A013FD640 49] TVOS, [0000021A05B4EC00][0000021A014017C0 49] Mac, [0000021A05B3C900][0000021A01405940 49] MacClient, [0000021A05B4F300][0000021A01409AC0 49] MacNoEditor, [0000021A05B3E500][0000021A0140C0C0 49] MacServer, [0000021A05B4C700][0000021A013C8200 49] Linux, [0000021A05B3C200][0000021A01410340 49] LinuxAArch64, [0000021A05B4E600][0000021A01414480 49] LinuxNoEditor, [0000021A05B3EB00][0000021A014185C0 49] LinuxAArch64NoEditor, [0000021A05B4CF00][0000021A06440740 49] LinuxClient, [0000021A05B3E900][0000021A064448C0 49] LinuxAArch64Client, [0000021A05B4C400][0000021A06448A40 49] LinuxServer, [0000021A05B3E300][0000021A0644CBC0 49] LinuxAArch64Server, [0000021A05C14100][0000021A06450D40 49] Android, [0000021A05B9D200][0000021A06454EC0 49] Android_Low, [0000021A05C14D00][0000021A06459040 49] Android_Mid, [0000021A05B9E200][0000021A0645D1C0 49] Android_High, [0000021A05C14A00][0000021A06461340 49] Android_Default, [0000021A05B9D400][0000021A064654C0 49] Android_Adreno4xx, [0000021A05C16C00][0000021A06469640 49] Android_Adreno5xx_Low, [0000021A05B9E500][0000021A0646D7C0 49] Android_Adreno5xx, [0000021A05C15600][0000021A06471940 49] Android_Adreno6xx, [0000021A05B9FB00][0000021A06475AC0 49] Android_Adreno6xx_Vulkan, [0000021A05C15F00][0000021A064780C0 49] Android_Mali_T6xx, [0000021A05B9CC00][0000021A0647C240 49] Android_Mali_T7xx, [0000021A05C15800][0000021A0141C380 49] Android_Mali_T8xx, [0000021A05B9E800][0000021A064804C0 49] Android_Mali_G71, [0000021A05C15000][0000021A06484600 49] Android_Mali_G72, [0000021A05B9F000][0000021A06488740 49] Android_Mali_G72_Vulkan, [0000021A05C14200][0000021A064908C0 49] Android_Mali_G76, [0000021A05B9CA00][0000021A06494A40 49] Android_Mali_G76_Vulkan, [0000021A05C16600][0000021A06498BC0 49] Android_Mali_G77, [0000021A05B9D900][0000021A0649CD40 49] Android_Mali_G77_Vulkan, [0000021A05C16400][0000021A064A0EC0 49] Android_Mali_G78, [0000021A05B9E100][0000021A064A5040 49] Android_Mali_G78_Vulkan, [0000021A05C15500][0000021A064A91C0 49] Android_Mali_G710, [0000021A05B9C900][0000021A064AD340 49] Android_Mali_G710_Vulkan, [0000021A05C16F00][0000021A064B14C0 49] Android_Vulkan_SM5, [0000021A05B9D600][0000021A064B5640 49] Android_PowerVR_G6xxx, [0000021A05C16A00][0000021A064B97C0 49] Android_PowerVR_GT7xxx, [0000021A05B9C400][0000021A064BD940 49] Android_PowerVR_GE8xxx, [0000021A05C17100][0000021A064C1AC0 49] Android_PowerVR_GM9xxx, [0000021A05B4FF00][0000021A064C40C0 49] Android_PowerVR_GM9xxx_Vulkan, [0000021A05C14800][0000021A064C8240 49] Android_TegraK1, [0000021A05B4EE00][0000021A064CC3C0 49] Android_Unknown_Vulkan, [0000021A05C14500][0000021A064D0540 49] Lumin, [0000021A05B4E900][0000021A0648C680 49] Lumin_Desktop, [0000021A05C14E00][0000021A064D47C0 49] HoloLens, 
+[2022.12.23-17.56.14:514][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2022.12.23-17.56.14:514][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2022.12.23-17.56.14:514][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2022.12.23-17.56.14:514][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2022.12.23-17.56.14:514][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2022.12.23-17.56.14:603][  0]LogNetVersion: fpsgame 1.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 3215450660)
+[2022.12.23-17.56.14:805][  0]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/DaylightAmbientCubemap.DaylightAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2022.12.23-17.56.14:854][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2022.12.23-17.56.14:951][  0]LogMoviePlayer: Initializing movie player
+[2022.12.23-17.56.15:040][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: FF239F844202DD8C0B87B7A9567D6544 | Instance: 9050860E4AD07FC9034597B5EE19B3E8 (DESKTOP-QG36584-2864).
+[2022.12.23-17.56.15:057][  0]LogCollectionManager: Loaded 0 collections in 0.001550 seconds
+[2022.12.23-17.56.15:059][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Saved/Collections/' took 0.00s
+[2022.12.23-17.56.15:059][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Developers/danie/Collections/' took 0.00s
+[2022.12.23-17.56.15:059][  0]LogFileCache: Scanning file cache for directory 'C:/Users/danie/Documents/Gamedev VR/game/UE4 game/fpsgame/Content/Collections/' took 0.00s
+[2022.12.23-17.56.15:059][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000002 seconds (updated 0 objects)
+[2022.12.23-17.56.15:148][  0]LogPython: Using Python 3.7.7
+[2022.12.23-17.56.15:616][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2022.12.23-17.56.15:621][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2022.12.23-17.56.15:703][  0]SourceControl: Source control is disabled
+[2022.12.23-17.56.15:703][  0]SourceControl: Source control is disabled
+[2022.12.23-17.56.15:708][  0]SourceControl: Source control is disabled
+[2022.12.23-17.56.15:710][  0]LogUProjectInfo: Found projects:
+[2022.12.23-17.56.15:785][  0]LogOpenImageDenoise: OIDN starting up
+[2022.12.23-17.56.15:803][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2022.12.23-17.56.15:823][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.12.23-17.56.15:823][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.12.23-17.56.15:880][  0]LogOcInput: OculusInput pre-init called
+[2022.12.23-17.56.15:888][  0]LogUObjectArray: 22285 objects as part of root set at end of initial load.
+[2022.12.23-17.56.15:888][  0]LogUObjectAllocator: 6048176 out of 0 bytes used by permanent object pool.
+[2022.12.23-17.56.15:888][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotPosition is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotRotation is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FRewindDataStruct::SnapshotScale is not initialized properly. Module:fpsgame File:RewindComponent.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: BoolProperty FWeaponRecoil::bHasRecoil is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: BoolProperty FWeaponRecoil::bUsesControlRotationForHipfireRecoil is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Warning: ObjectProperty FWeaponRecoil::RecoilVectorCurve is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponRecoil::RecoveryTime is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponStats::MaxRange is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponStats::FireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: IntProperty FWeaponStats::CartridgeBullets is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: IntProperty FWeaponStats::BurstNumber is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponStats::BurstFireRate is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: IntProperty FWeaponStats::MaxMagSize is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: IntProperty FWeaponStats::MagAmmo is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageTorso is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageHead is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponStats::BaseDamageLegs is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponStats::BaseHipfireSpreadAngleInDegrees is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: FloatProperty FWeaponStats::BaseMovementSpreadMultiplier is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: EnumProperty FWeaponMetaData::GunModel is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponFireType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: EnumProperty FWeaponMetaData::WAWeaponHitDetectionType is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: EnumProperty FWeaponMetaData::TypeOfEquip is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::TracerEffect is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Warning: ObjectProperty FWeaponVisualAssets::MuzzleFlash is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::BaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBaseScale is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBaseRotation is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::TPBasePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:932][  0]LogClass: Display: StructProperty FWeaponPositionalDetails::MuzzlePosition is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:933][  0]LogClass: Display: 34 Uninitialized script struct members found including 4 object properties
+[2022.12.23-17.56.15:933][  0]LogAutomationTest: Warning: ObjectProperty FWeaponRecoil::RecoilVectorCurve is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:933][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::GunMesh is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:933][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::TracerEffect is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:933][  0]LogAutomationTest: Warning: ObjectProperty FWeaponVisualAssets::MuzzleFlash is not initialized properly. Module:fpsgame File:WeaponActor.h
+[2022.12.23-17.56.15:933][  0]LogEngine: Initializing Engine...
+[2022.12.23-17.56.15:936][  0]LogHMD: Failed to enumerate extensions. Please check that you have a valid OpenXR runtime installed.
+[2022.12.23-17.56.15:936][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2022.12.23-17.56.15:936][  0]LogMagicLeap: Warning: VR disabled because ZI is not enabled.  To enable, in the editor, Edit -> Project Settings -> Plugins -> Magic Leap Plugin -> Enable Zero Iteration
+[2022.12.23-17.56.15:937][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2022.12.23-17.56.16:019][  0]LogInit: Initializing FReadOnlyCVARCache
+[2022.12.23-17.56.16:019][  0]LogAudio: Display: Initializing Audio Device Manager...
+[2022.12.23-17.56.16:022][  0]LogAudio: Display: Loading Default Audio Settings Objects...
+[2022.12.23-17.56.16:023][  0]LogAudio: Display: No default SoundConcurrencyObject specified (or failed to load).
+[2022.12.23-17.56.16:023][  0]LogAudio: Display: Audio Device Manager Initialized
+[2022.12.23-17.56.16:023][  0]LogAudio: Display: Creating Audio Device:                 Id: 1, Scope: Shared, Realtime: True
+[2022.12.23-17.56.16:023][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.12.23-17.56.16:023][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.12.23-17.56.16:023][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.12.23-17.56.16:023][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.12.23-17.56.16:023][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.12.23-17.56.16:023][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.12.23-17.56.16:023][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.12.23-17.56.16:023][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.12.23-17.56.16:024][  0]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.12.23-17.56.16:024][  0]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.12.23-17.56.16:024][  0]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.12.23-17.56.16:024][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2022.12.23-17.56.16:038][  0]LogAudioMixer: Display: 0: FrontLeft
+[2022.12.23-17.56.16:038][  0]LogAudioMixer: Display: 1: FrontRight
+[2022.12.23-17.56.16:038][  0]LogAudioMixer: Display: 2: FrontCenter
+[2022.12.23-17.56.16:038][  0]LogAudioMixer: Display: 3: LowFrequency
+[2022.12.23-17.56.16:038][  0]LogAudioMixer: Display: 4: BackLeft
+[2022.12.23-17.56.16:038][  0]LogAudioMixer: Display: 5: BackRight
+[2022.12.23-17.56.16:038][  0]LogAudioMixer: Display: 6: SideLeft
+[2022.12.23-17.56.16:038][  0]LogAudioMixer: Display: 7: SideRight
+[2022.12.23-17.56.16:057][  0]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2022.12.23-17.56.16:058][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.12.23-17.56.16:059][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.12.23-17.56.16:059][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.12.23-17.56.16:060][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.12.23-17.56.16:060][  0]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.12.23-17.56.16:060][  0]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192
+[2022.12.23-17.56.16:061][  0]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.12.23-17.56.16:061][  0]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.12.23-17.56.16:061][  0]LogInit: FAudioDevice initialized.
+[2022.12.23-17.56.16:062][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2022.12.23-17.56.16:063][  0]LogInit: Texture streaming: Enabled
+[2022.12.23-17.56.16:114][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+[2022.12.23-17.56.16:114][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.12.23-17.56.16:115][  0]LogInit: Display: Game Engine Initialized.
+[2022.12.23-17.56.16:115][  0]LogNiagaraEditor: GEditor isn't valid! Particle reset commands will not work for Niagara components!
+[2022.12.23-17.56.16:214][  0]LogInit: Display: Starting Game.
+[2022.12.23-17.56.16:214][  0]LogNet: Browse: 127.0.0.1:17777/Engine/Maps/Templates/Template_Default?Name=Player
+[2022.12.23-17.56.16:214][  0]LogNet: PktLoss set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktLagMin set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktLagMax set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktLoss set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktLagMin set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktLagMax set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktLoss set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktLagMin set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktLagMax set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-17.56.16:214][  0]LogNet: PktIncomingLoss set to 0
+[2022.12.23-17.56.16:214][  0]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2022.12.23-17.56.16:214][  0]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2022.12.23-17.56.16:215][  0]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2022.12.23-17.56.16:215][  0]LogNet: Game client on port 17777, rate 100000
+[2022.12.23-17.56.16:326][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2022.12.23-17.56.16:326][  0]LogLoad: (Engine Initialization) Total time: 4.60 seconds
+[2022.12.23-17.56.16:326][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2022.12.23-17.56.16:328][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2022.12.23-17.56.16:329][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.12.23-17.56.17:238][ 70]LogHandshake: SendChallengeResponse. Timestamp: 0.629263, Cookie: 030034048226013028212021056124201060111222198000009118196206
+[2022.12.23-17.56.17:270][212]LogNetVersion: fpsgame 1.0.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 1484303137)
+[2022.12.23-17.56.17:270][212]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: PendingNetDriver IpNetDriver_0, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2022.12.23-17.56.17:303][353]LogNet: Welcomed by server (Level: /Game/Maps/TestMap, Game: /Game/Blueprints/GameMode/BP_FPSGameModeDefault.BP_FPSGameModeDefault_C)
+[2022.12.23-17.56.17:303][353]LogLoad: LoadMap: 127.0.0.1:17777/Game/Maps/TestMap?Name=Player?game=/Game/Blueprints/GameMode/BP_FPSGameModeDefault.BP_FPSGameModeDefault_C
+[2022.12.23-17.56.17:303][353]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2022.12.23-17.56.17:303][353]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2022.12.23-17.56.17:303][353]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.12.23-17.56.17:306][353]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.12.23-17.56.17:308][353]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2022.12.23-17.56.17:800][353]LogAudio: Display: Audio Device (ID: 1) registered with world 'TestMap'.
+[2022.12.23-17.56.17:801][353]LogNet: PktLoss set to 0
+[2022.12.23-17.56.17:801][353]LogNet: PktLagMin set to 0
+[2022.12.23-17.56.17:801][353]LogNet: PktLagMax set to 0
+[2022.12.23-17.56.17:801][353]LogNet: PktIncomingLagMin set to 0
+[2022.12.23-17.56.17:801][353]LogNet: PktIncomingLagMax set to 0
+[2022.12.23-17.56.17:801][353]LogNet: PktIncomingLoss set to 0
+[2022.12.23-17.56.17:803][353]LogWorld: Bringing World /Game/Maps/TestMap.TestMap up for play (max tick rate 0) at 2022.12.23-17.56.17
+[2022.12.23-17.56.17:803][353]LogWorld: Bringing up level for play took: 0.001661
+[2022.12.23-17.56.17:804][353]LogSlate: Took 0.000178 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2022.12.23-17.56.17:804][353]LogLoad: Took 0.499998 seconds to LoadMap(/Game/Maps/TestMap)
+[2022.12.23-17.56.17:804][353]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2022.12.23-17.56.17:860][355]LogRenderer: Reallocating scene render targets to support 640x480 Format 10 NumSamples 1 (Frame:1).
+[2022.12.23-17.56.17:950][355]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.12.23-17.56.17:951][355]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CapturePermanently
+[2022.12.23-17.56.17:952][355]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: Interacting
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: OWNING CLIENT: Log no. 0
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: IsHit =  TRUE
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: We got a hit bois
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: interactable component found
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: We got a pickup bois
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: Disgusting client
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: diarrhea
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: prime
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: OWNING CLIENT: Log no. 1
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: No longer bursting
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: Primary FP
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: OWNING CLIENT: Log no. 2
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: name = Gun Muzzle
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: name2 = BP_Myfpscharacter_C_0
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: Carttridge 1
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: spreading
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: SpreadLength = 1
+[2022.12.23-17.56.23:445][852]LogTemp: Warning: TP attach
+[2022.12.23-17.56.24:885][530]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.24:885][530]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.24:885][530]LogTemp: Warning: spread -0.011979
+[2022.12.23-17.56.24:885][530]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=477.891 Y=428.511 Z=20.000
+[2022.12.23-17.56.24:888][530]LogTemp: Warning: Getting time
+[2022.12.23-17.56.24:888][530]LogTemp: Warning: client time = 8.525153
+[2022.12.23-17.56.24:985][569]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.24:985][569]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.24:985][569]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.24:986][569]LogTemp: Warning: spread 0.225516
+[2022.12.23-17.56.24:986][569]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=617.218 Y=510.936 Z=20.000
+[2022.12.23-17.56.24:986][569]LogTemp: Warning: Getting time
+[2022.12.23-17.56.24:986][569]LogTemp: Warning: client time = 8.627515
+[2022.12.23-17.56.25:621][855]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.25:621][855]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.25:621][855]LogTemp: Warning: spread 0.261528
+[2022.12.23-17.56.25:621][855]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=495.315 Y=443.091 Z=20.000
+[2022.12.23-17.56.25:621][855]LogTemp: Warning: Getting time
+[2022.12.23-17.56.25:621][855]LogTemp: Warning: client time = 9.260338
+[2022.12.23-17.56.25:721][899]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.25:721][899]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.25:721][899]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.25:721][899]LogTemp: Warning: spread 0.181173
+[2022.12.23-17.56.25:721][899]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=611.044 Y=506.522 Z=20.000
+[2022.12.23-17.56.25:721][899]LogTemp: Warning: Getting time
+[2022.12.23-17.56.25:721][899]LogTemp: Warning: client time = 9.362723
+[2022.12.23-17.56.25:821][940]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.25:821][940]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.25:821][940]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.25:821][940]LogTemp: Warning: spread 0.020280
+[2022.12.23-17.56.25:821][940]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=863.105 Y=666.958 Z=20.000
+[2022.12.23-17.56.25:822][940]LogTemp: Warning: Getting time
+[2022.12.23-17.56.25:822][940]LogTemp: Warning: client time = 9.463110
+[2022.12.23-17.56.25:922][983]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.25:922][983]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.25:922][983]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.25:922][983]LogTemp: Warning: spread 0.165426
+[2022.12.23-17.56.25:922][983]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16888.547 Y=10207.994 Z=-1723.506
+[2022.12.23-17.56.25:922][983]LogTemp: Warning: Getting time
+[2022.12.23-17.56.25:922][983]LogTemp: Warning: client time = 9.564045
+[2022.12.23-17.56.26:579][266]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.26:579][266]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.26:579][266]LogTemp: Warning: spread -0.127125
+[2022.12.23-17.56.26:580][266]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=992.018 Y=714.821 Z=20.000
+[2022.12.23-17.56.26:580][266]LogTemp: Warning: Getting time
+[2022.12.23-17.56.26:580][266]LogTemp: Warning: client time = 10.219481
+[2022.12.23-17.56.26:680][308]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.26:680][308]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.26:680][308]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.26:680][308]LogTemp: Warning: spread 0.430692
+[2022.12.23-17.56.26:680][308]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=17009.246 Y=10002.803 Z=-1721.047
+[2022.12.23-17.56.26:680][308]LogTemp: Warning: Getting time
+[2022.12.23-17.56.26:680][308]LogTemp: Warning: client time = 10.322307
+[2022.12.23-17.56.26:781][351]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.26:781][351]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.26:781][351]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.26:781][351]LogTemp: Warning: spread -0.109882
+[2022.12.23-17.56.26:781][351]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=17092.037 Y=10001.128 Z=-690.862
+[2022.12.23-17.56.26:781][351]LogTemp: Warning: Getting time
+[2022.12.23-17.56.26:781][351]LogTemp: Warning: client time = 10.422757
+[2022.12.23-17.56.26:883][395]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.26:883][395]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.26:883][395]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.26:883][395]LogTemp: Warning: spread 0.093249
+[2022.12.23-17.56.26:883][395]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16935.172 Y=10288.953 Z=-397.432
+[2022.12.23-17.56.26:883][395]LogTemp: Warning: Getting time
+[2022.12.23-17.56.26:883][395]LogTemp: Warning: client time = 10.524993
+[2022.12.23-17.56.27:392][628]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.27:392][628]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.27:392][628]LogTemp: Warning: spread 0.299524
+[2022.12.23-17.56.27:392][628]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16478.850 Y=10861.569 Z=-1138.710
+[2022.12.23-17.56.27:393][628]LogTemp: Warning: Getting time
+[2022.12.23-17.56.27:393][628]LogTemp: Warning: client time = 11.032124
+[2022.12.23-17.56.27:494][672]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.27:494][672]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.27:494][672]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.27:494][672]LogTemp: Warning: spread 0.053728
+[2022.12.23-17.56.27:494][672]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16602.174 Y=10573.523 Z=-1037.629
+[2022.12.23-17.56.27:494][672]LogTemp: Warning: Getting time
+[2022.12.23-17.56.27:494][672]LogTemp: Warning: client time = 11.136314
+[2022.12.23-17.56.27:594][714]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.27:594][714]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.27:594][714]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.27:594][714]LogTemp: Warning: spread -0.287530
+[2022.12.23-17.56.27:594][714]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16729.270 Y=10270.312 Z=-856.074
+[2022.12.23-17.56.27:594][714]LogTemp: Warning: Getting time
+[2022.12.23-17.56.27:594][714]LogTemp: Warning: client time = 11.236409
+[2022.12.23-17.56.28:277][ 27]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.28:277][ 27]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.28:277][ 27]LogTemp: Warning: spread 0.350429
+[2022.12.23-17.56.28:277][ 27]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=524.961 Y=519.691 Z=20.000
+[2022.12.23-17.56.28:278][ 27]LogTemp: Warning: Getting time
+[2022.12.23-17.56.28:278][ 27]LogTemp: Warning: client time = 11.917127
+[2022.12.23-17.56.28:378][ 69]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.28:379][ 69]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.28:379][ 69]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.28:379][ 69]LogTemp: Warning: spread -0.041093
+[2022.12.23-17.56.28:379][ 69]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=467.080 Y=468.643 Z=20.000
+[2022.12.23-17.56.28:379][ 69]LogTemp: Warning: Getting time
+[2022.12.23-17.56.28:379][ 69]LogTemp: Warning: client time = 12.020709
+[2022.12.23-17.56.28:480][110]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.28:480][110]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.28:480][110]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.28:480][110]LogTemp: Warning: spread -0.027879
+[2022.12.23-17.56.28:480][110]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15805.047 Y=11226.874 Z=-966.628
+[2022.12.23-17.56.28:480][110]LogTemp: Warning: Getting time
+[2022.12.23-17.56.28:480][110]LogTemp: Warning: client time = 12.121989
+[2022.12.23-17.56.28:581][153]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.28:581][153]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.28:581][153]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.28:581][153]LogTemp: Warning: spread -0.300928
+[2022.12.23-17.56.28:581][153]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15762.722 Y=11312.532 Z=-667.301
+[2022.12.23-17.56.28:581][153]LogTemp: Warning: Getting time
+[2022.12.23-17.56.28:581][153]LogTemp: Warning: client time = 12.223285
+[2022.12.23-17.56.28:901][300]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.28:901][300]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.28:901][300]LogTemp: Warning: spread -0.129597
+[2022.12.23-17.56.28:901][300]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=454.939 Y=457.924 Z=20.000
+[2022.12.23-17.56.28:901][300]LogTemp: Warning: Getting time
+[2022.12.23-17.56.28:901][300]LogTemp: Warning: client time = 12.541286
+[2022.12.23-17.56.29:002][343]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.29:002][343]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.29:002][343]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.29:002][343]LogTemp: Warning: spread -0.155843
+[2022.12.23-17.56.29:003][343]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=716.770 Y=634.881 Z=20.000
+[2022.12.23-17.56.29:003][343]LogTemp: Warning: Getting time
+[2022.12.23-17.56.29:003][343]LogTemp: Warning: client time = 12.644094
+[2022.12.23-17.56.29:104][386]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.29:104][386]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.29:104][386]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.29:104][386]LogTemp: Warning: spread 0.326350
+[2022.12.23-17.56.29:104][386]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15653.939 Y=11454.201 Z=-802.928
+[2022.12.23-17.56.29:104][386]LogTemp: Warning: Getting time
+[2022.12.23-17.56.29:104][386]LogTemp: Warning: client time = 12.745986
+[2022.12.23-17.56.29:205][429]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.29:205][429]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.29:205][429]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.29:205][429]LogTemp: Warning: spread -0.430570
+[2022.12.23-17.56.29:205][429]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15787.429 Y=11274.630 Z=-706.766
+[2022.12.23-17.56.29:205][429]LogTemp: Warning: Getting time
+[2022.12.23-17.56.29:205][429]LogTemp: Warning: client time = 12.846927
+[2022.12.23-17.56.29:306][471]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.29:306][471]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.29:306][471]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.29:306][471]LogTemp: Warning: spread -0.428556
+[2022.12.23-17.56.29:306][471]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15925.324 Y=11098.308 Z=-349.626
+[2022.12.23-17.56.29:306][471]LogTemp: Warning: Getting time
+[2022.12.23-17.56.29:306][471]LogTemp: Warning: client time = 12.948069
+[2022.12.23-17.56.29:407][514]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.29:407][514]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.29:407][514]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.29:407][514]LogTemp: Warning: spread 0.470672
+[2022.12.23-17.56.29:407][514]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15868.445 Y=11191.135 Z=320.857
+[2022.12.23-17.56.29:408][514]LogTemp: Warning: Getting time
+[2022.12.23-17.56.29:408][514]LogTemp: Warning: client time = 13.049668
+[2022.12.23-17.56.29:510][557]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.29:510][557]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.29:510][557]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.29:510][557]LogTemp: Warning: spread 0.260063
+[2022.12.23-17.56.29:510][557]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15881.646 Y=11164.494 Z=611.625
+[2022.12.23-17.56.29:510][557]LogTemp: Warning: Getting time
+[2022.12.23-17.56.29:510][557]LogTemp: Warning: client time = 13.151922
+[2022.12.23-17.56.29:610][600]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.29:610][600]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.29:610][600]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.29:610][600]LogTemp: Warning: spread 0.322871
+[2022.12.23-17.56.29:610][600]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15701.177 Y=11399.377 Z=993.835
+[2022.12.23-17.56.29:610][600]LogTemp: Warning: Getting time
+[2022.12.23-17.56.29:610][600]LogTemp: Warning: client time = 13.252172
+[2022.12.23-17.56.29:711][643]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.29:712][643]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.29:712][643]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.29:712][643]LogTemp: Warning: spread -0.334864
+[2022.12.23-17.56.29:712][643]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15737.438 Y=11338.801 Z=1120.766
+[2022.12.23-17.56.29:712][643]LogTemp: Warning: Getting time
+[2022.12.23-17.56.29:712][643]LogTemp: Warning: client time = 13.353947
+[2022.12.23-17.56.30:182][857]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.30:182][857]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.30:182][857]LogTemp: Warning: spread 0.075091
+[2022.12.23-17.56.30:182][857]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=483.511 Y=483.151 Z=20.000
+[2022.12.23-17.56.30:182][857]LogTemp: Warning: Getting time
+[2022.12.23-17.56.30:182][857]LogTemp: Warning: client time = 13.821725
+[2022.12.23-17.56.30:283][899]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.30:283][899]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.30:283][899]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.30:283][899]LogTemp: Warning: spread -0.051592
+[2022.12.23-17.56.30:283][899]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=739.945 Y=654.295 Z=20.000
+[2022.12.23-17.56.30:284][899]LogTemp: Warning: Getting time
+[2022.12.23-17.56.30:284][899]LogTemp: Warning: client time = 13.925394
+[2022.12.23-17.56.30:385][942]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.30:385][942]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.30:385][942]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.30:385][942]LogTemp: Warning: spread 0.278069
+[2022.12.23-17.56.30:386][942]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15669.334 Y=11444.392 Z=-819.759
+[2022.12.23-17.56.30:386][942]LogTemp: Warning: Getting time
+[2022.12.23-17.56.30:386][942]LogTemp: Warning: client time = 14.027328
+[2022.12.23-17.56.30:486][983]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.30:486][983]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.30:486][983]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.30:486][983]LogTemp: Warning: spread 0.162526
+[2022.12.23-17.56.30:487][983]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15628.525 Y=11578.465 Z=-366.986
+[2022.12.23-17.56.30:487][983]LogTemp: Warning: Getting time
+[2022.12.23-17.56.30:487][983]LogTemp: Warning: client time = 14.128498
+[2022.12.23-17.56.30:587][ 26]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.30:587][ 26]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.30:587][ 26]LogTemp: Warning: No longer bursting
+[2022.12.23-17.56.30:970][205]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.30:970][205]LogTemp: Warning: No longer bursting
+[2022.12.23-17.56.31:558][489]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.31:558][489]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.31:558][489]LogTemp: Warning: spread 0.222526
+[2022.12.23-17.56.31:558][489]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16110.964 Y=11820.904 Z=-1787.422
+[2022.12.23-17.56.31:559][489]LogTemp: Warning: Getting time
+[2022.12.23-17.56.31:559][489]LogTemp: Warning: client time = 15.198792
+[2022.12.23-17.56.31:660][534]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.31:660][534]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.31:660][534]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.31:660][534]LogTemp: Warning: spread 0.401975
+[2022.12.23-17.56.31:660][534]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16302.604 Y=11609.478 Z=-1538.000
+[2022.12.23-17.56.31:660][534]LogTemp: Warning: Getting time
+[2022.12.23-17.56.31:660][534]LogTemp: Warning: client time = 15.302496
+[2022.12.23-17.56.31:762][578]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.31:762][578]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.31:762][578]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.31:762][578]LogTemp: Warning: spread -0.213248
+[2022.12.23-17.56.31:762][578]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16306.849 Y=11670.969 Z=-996.762
+[2022.12.23-17.56.31:762][578]LogTemp: Warning: Getting time
+[2022.12.23-17.56.31:762][578]LogTemp: Warning: client time = 15.404330
+[2022.12.23-17.56.31:863][623]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.31:863][623]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.31:863][623]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.31:863][623]LogTemp: Warning: spread 0.358547
+[2022.12.23-17.56.31:863][623]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16176.957 Y=11882.079 Z=-437.244
+[2022.12.23-17.56.31:863][623]LogTemp: Warning: Getting time
+[2022.12.23-17.56.31:863][623]LogTemp: Warning: client time = 15.505592
+[2022.12.23-17.56.31:965][667]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.31:965][667]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.31:965][667]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.31:965][667]LogTemp: Warning: spread 0.477752
+[2022.12.23-17.56.31:965][667]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16034.971 Y=12041.195 Z=353.676
+[2022.12.23-17.56.31:965][667]LogTemp: Warning: Getting time
+[2022.12.23-17.56.31:965][667]LogTemp: Warning: client time = 15.607227
+[2022.12.23-17.56.32:066][712]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.32:066][712]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.32:066][712]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.32:066][712]LogTemp: Warning: spread 0.077044
+[2022.12.23-17.56.32:066][712]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16363.257 Y=11499.604 Z=296.782
+[2022.12.23-17.56.32:066][712]LogTemp: Warning: Getting time
+[2022.12.23-17.56.32:066][712]LogTemp: Warning: client time = 15.708536
+[2022.12.23-17.56.32:168][756]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.32:168][756]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.32:168][756]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.32:168][756]LogTemp: Warning: spread -0.472777
+[2022.12.23-17.56.32:168][756]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16811.078 Y=10701.640 Z=-298.475
+[2022.12.23-17.56.32:168][756]LogTemp: Warning: Getting time
+[2022.12.23-17.56.32:168][756]LogTemp: Warning: client time = 15.810446
+[2022.12.23-17.56.32:511][915]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.32:511][915]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.32:511][915]LogTemp: Warning: spread -0.423643
+[2022.12.23-17.56.32:511][915]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=646.139 Y=419.670 Z=20.000
+[2022.12.23-17.56.32:512][915]LogTemp: Warning: Getting time
+[2022.12.23-17.56.32:512][915]LogTemp: Warning: client time = 16.151110
+[2022.12.23-17.56.32:612][956]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.32:612][956]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.32:612][956]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.32:612][956]LogTemp: Warning: spread 0.297632
+[2022.12.23-17.56.32:612][956]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15854.263 Y=11622.985 Z=-1534.684
+[2022.12.23-17.56.32:613][956]LogTemp: Warning: Getting time
+[2022.12.23-17.56.32:613][956]LogTemp: Warning: client time = 16.254299
+[2022.12.23-17.56.32:713][999]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.32:713][999]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.32:713][999]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.32:713][999]LogTemp: Warning: spread -0.175771
+[2022.12.23-17.56.32:713][999]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15918.087 Y=11600.385 Z=-1106.174
+[2022.12.23-17.56.32:713][999]LogTemp: Warning: Getting time
+[2022.12.23-17.56.32:713][999]LogTemp: Warning: client time = 16.354874
+[2022.12.23-17.56.32:814][ 41]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.32:814][ 41]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.32:814][ 41]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.32:814][ 41]LogTemp: Warning: spread -0.215842
+[2022.12.23-17.56.32:814][ 41]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15783.339 Y=11868.081 Z=-755.088
+[2022.12.23-17.56.32:814][ 41]LogTemp: Warning: Getting time
+[2022.12.23-17.56.32:814][ 41]LogTemp: Warning: client time = 16.455961
+[2022.12.23-17.56.32:915][ 84]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.32:915][ 84]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.32:915][ 84]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.32:915][ 84]LogTemp: Warning: spread -0.047441
+[2022.12.23-17.56.32:915][ 84]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15242.033 Y=12638.160 Z=-104.561
+[2022.12.23-17.56.32:916][ 84]LogTemp: Warning: Getting time
+[2022.12.23-17.56.32:916][ 84]LogTemp: Warning: client time = 16.557699
+[2022.12.23-17.56.33:016][128]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.33:016][128]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.33:016][128]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.33:016][128]LogTemp: Warning: spread -0.199728
+[2022.12.23-17.56.33:016][128]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15151.849 Y=12809.827 Z=-9.867
+[2022.12.23-17.56.33:016][128]LogTemp: Warning: Getting time
+[2022.12.23-17.56.33:016][128]LogTemp: Warning: client time = 16.658331
+[2022.12.23-17.56.33:118][172]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.33:118][172]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.33:118][172]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.33:118][172]LogTemp: Warning: spread 0.205832
+[2022.12.23-17.56.33:118][172]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=447.514 Y=90.000 Z=188.075
+[2022.12.23-17.56.33:118][172]LogTemp: Warning: Getting time
+[2022.12.23-17.56.33:118][172]LogTemp: Warning: client time = 16.760767
+[2022.12.23-17.56.33:221][216]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.33:221][216]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.33:221][216]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.33:221][216]LogTemp: Warning: spread -0.378780
+[2022.12.23-17.56.33:221][216]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=14392.487 Y=13688.188 Z=207.128
+[2022.12.23-17.56.33:221][216]LogTemp: Warning: Getting time
+[2022.12.23-17.56.33:221][216]LogTemp: Warning: client time = 16.862722
+[2022.12.23-17.56.33:720][430]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.33:720][430]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.33:720][430]LogTemp: Warning: spread -0.455290
+[2022.12.23-17.56.33:720][430]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16679.428 Y=10881.914 Z=-2152.386
+[2022.12.23-17.56.33:720][430]LogTemp: Warning: Getting time
+[2022.12.23-17.56.33:720][430]LogTemp: Warning: client time = 17.359953
+[2022.12.23-17.56.33:821][468]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.33:821][468]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.33:821][468]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.33:821][468]LogTemp: Warning: spread -0.432707
+[2022.12.23-17.56.33:821][468]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16998.186 Y=10384.257 Z=-2249.451
+[2022.12.23-17.56.33:821][468]LogTemp: Warning: Getting time
+[2022.12.23-17.56.33:821][468]LogTemp: Warning: client time = 17.462517
+[2022.12.23-17.56.33:921][507]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.33:921][507]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.33:921][507]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.33:921][507]LogTemp: Warning: spread -0.286340
+[2022.12.23-17.56.33:921][507]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16763.084 Y=10918.495 Z=-1237.505
+[2022.12.23-17.56.33:921][507]LogTemp: Warning: Getting time
+[2022.12.23-17.56.33:921][507]LogTemp: Warning: client time = 17.562906
+[2022.12.23-17.56.34:022][545]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.34:022][545]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.34:022][545]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.34:022][545]LogTemp: Warning: spread 0.352351
+[2022.12.23-17.56.34:022][545]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16092.446 Y=11936.353 Z=236.553
+[2022.12.23-17.56.34:022][545]LogTemp: Warning: Getting time
+[2022.12.23-17.56.34:022][545]LogTemp: Warning: client time = 17.664032
+[2022.12.23-17.56.34:123][585]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.34:123][585]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.34:123][585]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.34:123][585]LogTemp: Warning: spread -0.457549
+[2022.12.23-17.56.34:123][585]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16976.379 Y=10633.837 Z=-819.940
+[2022.12.23-17.56.34:123][585]LogTemp: Warning: Getting time
+[2022.12.23-17.56.34:123][585]LogTemp: Warning: client time = 17.764990
+[2022.12.23-17.56.34:224][626]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.34:224][626]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.34:224][626]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.34:224][626]LogTemp: Warning: spread 0.135792
+[2022.12.23-17.56.34:224][626]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=419.203 Y=90.000 Z=173.300
+[2022.12.23-17.56.34:224][626]LogTemp: Warning: Getting time
+[2022.12.23-17.56.34:224][626]LogTemp: Warning: client time = 17.866508
+[2022.12.23-17.56.34:622][797]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.34:622][797]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.34:622][797]LogTemp: Warning: spread -0.081164
+[2022.12.23-17.56.34:622][797]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=836.830 Y=979.612 Z=20.000
+[2022.12.23-17.56.34:622][797]LogTemp: Warning: Getting time
+[2022.12.23-17.56.34:622][797]LogTemp: Warning: client time = 18.260990
+[2022.12.23-17.56.34:722][834]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.34:722][834]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.34:722][834]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.34:722][834]LogTemp: Warning: spread 0.218009
+[2022.12.23-17.56.34:722][834]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=11842.375 Y=16166.823 Z=-996.543
+[2022.12.23-17.56.34:723][834]LogTemp: Warning: Getting time
+[2022.12.23-17.56.34:723][834]LogTemp: Warning: client time = 18.363985
+[2022.12.23-17.56.34:822][875]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.34:823][875]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.34:823][875]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.34:823][875]LogTemp: Warning: spread -0.136677
+[2022.12.23-17.56.34:823][875]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=10288.626 Y=17223.750 Z=-915.285
+[2022.12.23-17.56.34:823][875]LogTemp: Warning: Getting time
+[2022.12.23-17.56.34:823][875]LogTemp: Warning: client time = 18.464422
+[2022.12.23-17.56.34:923][913]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.34:923][913]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.34:923][913]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.34:923][913]LogTemp: Warning: spread 0.335658
+[2022.12.23-17.56.34:923][913]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=7531.535 Y=18664.723 Z=146.056
+[2022.12.23-17.56.34:923][913]LogTemp: Warning: Getting time
+[2022.12.23-17.56.34:923][913]LogTemp: Warning: client time = 18.564863
+[2022.12.23-17.56.35:025][954]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.35:025][954]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.35:025][954]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.35:025][954]LogTemp: Warning: spread 0.083911
+[2022.12.23-17.56.35:025][954]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=4965.968 Y=19568.191 Z=-241.661
+[2022.12.23-17.56.35:025][954]LogTemp: Warning: Getting time
+[2022.12.23-17.56.35:025][954]LogTemp: Warning: client time = 18.666748
+[2022.12.23-17.56.35:126][993]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.35:126][993]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.35:126][993]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.35:126][993]LogTemp: Warning: spread -0.326868
+[2022.12.23-17.56.35:126][993]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=2035.357 Y=20091.281 Z=-1465.792
+[2022.12.23-17.56.35:126][993]LogTemp: Warning: Getting time
+[2022.12.23-17.56.35:126][993]LogTemp: Warning: client time = 18.767910
+[2022.12.23-17.56.36:091][443]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:091][443]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:091][443]LogTemp: Warning: spread -0.085437
+[2022.12.23-17.56.36:091][443]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16292.959 Y=11698.443 Z=-2527.475
+[2022.12.23-17.56.36:092][443]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:092][443]LogTemp: Warning: client time = 19.730618
+[2022.12.23-17.56.36:192][484]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.36:192][484]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:192][484]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:192][484]LogTemp: Warning: spread -0.072497
+[2022.12.23-17.56.36:192][484]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16106.107 Y=11996.074 Z=-2314.125
+[2022.12.23-17.56.36:192][484]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:192][484]LogTemp: Warning: client time = 19.833838
+[2022.12.23-17.56.36:294][526]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.36:294][526]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:294][526]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:294][526]LogTemp: Warning: spread 0.362545
+[2022.12.23-17.56.36:294][526]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15632.875 Y=12772.785 Z=-801.814
+[2022.12.23-17.56.36:294][526]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:294][526]LogTemp: Warning: client time = 19.935865
+[2022.12.23-17.56.36:394][567]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.36:394][567]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:394][567]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:394][567]LogTemp: Warning: spread -0.109363
+[2022.12.23-17.56.36:394][567]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16065.850 Y=12138.081 Z=-1267.936
+[2022.12.23-17.56.36:395][567]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:395][567]LogTemp: Warning: client time = 20.036333
+[2022.12.23-17.56.36:494][612]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.36:495][612]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:495][612]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:495][612]LogTemp: Warning: spread -0.047136
+[2022.12.23-17.56.36:495][612]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16115.282 Y=12050.781 Z=-856.887
+[2022.12.23-17.56.36:495][612]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:495][612]LogTemp: Warning: client time = 20.136641
+[2022.12.23-17.56.36:596][656]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.36:596][656]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:596][656]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:596][656]LogTemp: Warning: spread -0.111347
+[2022.12.23-17.56.36:596][656]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16157.873 Y=11936.828 Z=-731.052
+[2022.12.23-17.56.36:596][656]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:596][656]LogTemp: Warning: client time = 20.238068
+[2022.12.23-17.56.36:697][700]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.36:697][700]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:697][700]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:697][700]LogTemp: Warning: spread 0.027848
+[2022.12.23-17.56.36:697][700]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15947.515 Y=12163.104 Z=-189.542
+[2022.12.23-17.56.36:697][700]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:697][700]LogTemp: Warning: client time = 20.339016
+[2022.12.23-17.56.36:798][745]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.36:798][745]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:798][745]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:798][745]LogTemp: Warning: spread 0.328516
+[2022.12.23-17.56.36:798][745]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15421.455 Y=12715.984 Z=695.354
+[2022.12.23-17.56.36:798][745]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:798][745]LogTemp: Warning: client time = 20.440573
+[2022.12.23-17.56.36:900][790]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.36:900][790]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.36:900][790]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.36:900][790]LogTemp: Warning: spread 0.097583
+[2022.12.23-17.56.36:900][790]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15546.132 Y=12481.767 Z=652.800
+[2022.12.23-17.56.36:900][790]LogTemp: Warning: Getting time
+[2022.12.23-17.56.36:900][790]LogTemp: Warning: client time = 20.542206
+[2022.12.23-17.56.37:000][834]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.37:000][834]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.37:000][834]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.37:000][834]LogTemp: Warning: spread -0.199728
+[2022.12.23-17.56.37:000][834]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15829.489 Y=12048.838 Z=494.412
+[2022.12.23-17.56.37:001][834]LogTemp: Warning: Getting time
+[2022.12.23-17.56.37:001][834]LogTemp: Warning: client time = 20.642874
+[2022.12.23-17.56.37:103][879]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.37:103][879]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.37:103][879]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.37:103][879]LogTemp: Warning: spread 0.093646
+[2022.12.23-17.56.37:103][879]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15702.378 Y=12129.980 Z=1231.853
+[2022.12.23-17.56.37:103][879]LogTemp: Warning: Getting time
+[2022.12.23-17.56.37:103][879]LogTemp: Warning: client time = 20.745211
+[2022.12.23-17.56.37:556][ 85]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.37:556][ 85]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.37:556][ 85]LogTemp: Warning: spread 0.215659
+[2022.12.23-17.56.37:556][ 85]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15847.152 Y=11799.252 Z=-2005.321
+[2022.12.23-17.56.37:556][ 85]LogTemp: Warning: Getting time
+[2022.12.23-17.56.37:556][ 85]LogTemp: Warning: client time = 21.195509
+[2022.12.23-17.56.37:657][130]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.37:657][130]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.37:657][130]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.37:657][130]LogTemp: Warning: spread -0.276330
+[2022.12.23-17.56.37:657][130]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16302.857 Y=11107.899 Z=-2362.966
+[2022.12.23-17.56.37:657][130]LogTemp: Warning: Getting time
+[2022.12.23-17.56.37:657][130]LogTemp: Warning: client time = 21.298626
+[2022.12.23-17.56.37:758][175]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.37:758][175]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.37:758][175]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.37:758][175]LogTemp: Warning: spread 0.436216
+[2022.12.23-17.56.37:758][175]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15476.642 Y=12450.015 Z=-362.906
+[2022.12.23-17.56.37:759][175]LogTemp: Warning: Getting time
+[2022.12.23-17.56.37:759][175]LogTemp: Warning: client time = 21.400629
+[2022.12.23-17.56.37:860][218]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.37:860][218]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.37:860][218]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.37:860][218]LogTemp: Warning: spread -0.487762
+[2022.12.23-17.56.37:860][218]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16331.932 Y=11201.880 Z=-1608.960
+[2022.12.23-17.56.37:860][218]LogTemp: Warning: Getting time
+[2022.12.23-17.56.37:860][218]LogTemp: Warning: client time = 21.502398
+[2022.12.23-17.56.37:961][261]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.37:961][261]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.37:961][261]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.37:961][261]LogTemp: Warning: spread 0.373226
+[2022.12.23-17.56.37:961][261]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15925.483 Y=11886.909 Z=-269.197
+[2022.12.23-17.56.37:961][261]LogTemp: Warning: Getting time
+[2022.12.23-17.56.37:961][261]LogTemp: Warning: client time = 21.603561
+[2022.12.23-17.56.38:744][642]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.38:744][642]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.38:744][642]LogTemp: Warning: spread -0.166799
+[2022.12.23-17.56.38:744][642]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=694.792 Y=489.128 Z=20.000
+[2022.12.23-17.56.38:744][642]LogTemp: Warning: Getting time
+[2022.12.23-17.56.38:744][642]LogTemp: Warning: client time = 22.384085
+[2022.12.23-17.56.38:846][688]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.38:846][688]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.38:846][688]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.38:846][688]LogTemp: Warning: spread -0.105670
+[2022.12.23-17.56.38:846][688]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=858.730 Y=630.802 Z=20.000
+[2022.12.23-17.56.38:846][688]LogTemp: Warning: Getting time
+[2022.12.23-17.56.38:846][688]LogTemp: Warning: client time = 22.487774
+[2022.12.23-17.56.39:280][901]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.39:280][901]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.39:280][901]LogTemp: Warning: spread 0.178091
+[2022.12.23-17.56.39:280][901]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=722.237 Y=521.181 Z=20.000
+[2022.12.23-17.56.39:280][901]LogTemp: Warning: Getting time
+[2022.12.23-17.56.39:280][901]LogTemp: Warning: client time = 22.920433
+[2022.12.23-17.56.39:382][946]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.39:382][946]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.39:382][946]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.39:382][946]LogTemp: Warning: spread 0.053972
+[2022.12.23-17.56.39:382][946]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=877.689 Y=651.820 Z=20.000
+[2022.12.23-17.56.39:382][946]LogTemp: Warning: Getting time
+[2022.12.23-17.56.39:382][946]LogTemp: Warning: client time = 23.023376
+[2022.12.23-17.56.41:066][773]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:067][773]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:067][773]LogTemp: Warning: spread 0.359584
+[2022.12.23-17.56.41:067][773]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=4142.103 Y=19132.850 Z=-1793.325
+[2022.12.23-17.56.41:067][773]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:067][773]LogTemp: Warning: client time = 24.706396
+[2022.12.23-17.56.41:167][815]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:167][815]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:167][815]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:167][815]LogTemp: Warning: spread -0.201254
+[2022.12.23-17.56.41:167][815]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=285.334 Y=773.198 Z=20.000
+[2022.12.23-17.56.41:167][815]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:167][815]LogTemp: Warning: client time = 24.809238
+[2022.12.23-17.56.41:268][857]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:268][857]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:268][857]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:268][857]LogTemp: Warning: spread 0.445799
+[2022.12.23-17.56.41:268][857]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=3685.796 Y=19253.064 Z=-384.527
+[2022.12.23-17.56.41:268][857]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:268][857]LogTemp: Warning: client time = 24.910549
+[2022.12.23-17.56.41:370][899]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:370][899]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:370][899]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:370][899]LogTemp: Warning: spread 0.012925
+[2022.12.23-17.56.41:370][899]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=4385.286 Y=19085.434 Z=-775.436
+[2022.12.23-17.56.41:370][899]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:370][899]LogTemp: Warning: client time = 25.012110
+[2022.12.23-17.56.41:471][941]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:471][941]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:471][941]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:471][941]LogTemp: Warning: spread 0.081225
+[2022.12.23-17.56.41:471][941]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=4441.301 Y=19087.795 Z=-296.055
+[2022.12.23-17.56.41:471][941]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:471][941]LogTemp: Warning: client time = 25.113258
+[2022.12.23-17.56.41:574][983]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:574][983]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:574][983]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:574][983]LogTemp: Warning: spread 0.183859
+[2022.12.23-17.56.41:574][983]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=4462.378 Y=19087.891 Z=243.520
+[2022.12.23-17.56.41:574][983]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:574][983]LogTemp: Warning: client time = 25.215208
+[2022.12.23-17.56.41:674][ 24]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:674][ 24]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:675][ 24]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:675][ 24]LogTemp: Warning: spread -0.396603
+[2022.12.23-17.56.41:675][ 24]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=5335.153 Y=18844.064 Z=-409.008
+[2022.12.23-17.56.41:675][ 24]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:675][ 24]LogTemp: Warning: client time = 25.316271
+[2022.12.23-17.56.41:776][ 66]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:776][ 66]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:776][ 66]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:776][ 66]LogTemp: Warning: spread -0.287469
+[2022.12.23-17.56.41:776][ 66]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=3968.802 Y=19205.861 Z=-37.808
+[2022.12.23-17.56.41:776][ 66]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:776][ 66]LogTemp: Warning: client time = 25.417467
+[2022.12.23-17.56.41:877][108]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:877][108]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:877][108]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:877][108]LogTemp: Warning: spread 0.130970
+[2022.12.23-17.56.41:877][108]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=652.545 Y=19681.102 Z=801.413
+[2022.12.23-17.56.41:877][108]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:877][108]LogTemp: Warning: client time = 25.518373
+[2022.12.23-17.56.41:977][152]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.41:977][152]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.41:977][152]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.41:977][152]LogTemp: Warning: spread -0.409055
+[2022.12.23-17.56.41:977][152]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=342.770 Y=19748.176 Z=31.293
+[2022.12.23-17.56.41:977][152]LogTemp: Warning: Getting time
+[2022.12.23-17.56.41:977][152]LogTemp: Warning: client time = 25.618998
+[2022.12.23-17.56.42:078][195]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:079][195]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:079][195]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:079][195]LogTemp: Warning: spread -0.292840
+[2022.12.23-17.56.42:079][195]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-2638.041 Y=19702.879 Z=-206.315
+[2022.12.23-17.56.42:079][195]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:079][195]LogTemp: Warning: client time = 25.720518
+[2022.12.23-17.56.42:180][241]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:180][241]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:180][241]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:180][241]LogTemp: Warning: spread 0.443724
+[2022.12.23-17.56.42:180][241]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-6596.559 Y=18904.287 Z=1105.709
+[2022.12.23-17.56.42:180][241]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:180][241]LogTemp: Warning: client time = 25.821783
+[2022.12.23-17.56.42:281][287]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:282][287]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:282][287]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:282][287]LogTemp: Warning: spread -0.242515
+[2022.12.23-17.56.42:282][287]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-8911.514 Y=18048.979 Z=-562.522
+[2022.12.23-17.56.42:282][287]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:282][287]LogTemp: Warning: client time = 25.923670
+[2022.12.23-17.56.42:382][330]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:382][330]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:382][330]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:382][330]LogTemp: Warning: spread 0.409360
+[2022.12.23-17.56.42:382][330]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-13342.466 Y=15233.970 Z=-79.347
+[2022.12.23-17.56.42:382][330]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:382][330]LogTemp: Warning: client time = 26.023861
+[2022.12.23-17.56.42:483][374]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:483][374]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:483][374]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:483][374]LogTemp: Warning: spread -0.316584
+[2022.12.23-17.56.42:483][374]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-15775.652 Y=12577.222 Z=-1940.898
+[2022.12.23-17.56.42:483][374]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:483][374]LogTemp: Warning: client time = 26.125259
+[2022.12.23-17.56.42:584][418]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:584][418]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:584][418]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:584][418]LogTemp: Warning: spread -0.355495
+[2022.12.23-17.56.42:584][418]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-17672.416 Y=9554.551 Z=-2631.556
+[2022.12.23-17.56.42:584][418]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:584][418]LogTemp: Warning: client time = 26.226124
+[2022.12.23-17.56.42:685][462]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:685][462]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:685][462]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:685][462]LogTemp: Warning: spread 0.494842
+[2022.12.23-17.56.42:685][462]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-19596.254 Y=4915.018 Z=-1223.749
+[2022.12.23-17.56.42:685][462]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:685][462]LogTemp: Warning: client time = 26.326353
+[2022.12.23-17.56.42:787][506]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:787][506]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:787][506]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:787][506]LogTemp: Warning: spread -0.007431
+[2022.12.23-17.56.42:787][506]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-20028.443 Y=42.379 Z=-2372.672
+[2022.12.23-17.56.42:787][506]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:787][506]LogTemp: Warning: client time = 26.428560
+[2022.12.23-17.56.42:887][549]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:887][549]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:887][549]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:887][549]LogTemp: Warning: spread 0.104846
+[2022.12.23-17.56.42:887][549]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-19777.057 Y=-2935.188 Z=-2214.618
+[2022.12.23-17.56.42:887][549]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:887][549]LogTemp: Warning: client time = 26.528742
+[2022.12.23-17.56.42:987][591]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.42:987][591]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.42:987][591]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.42:987][591]LogTemp: Warning: spread 0.197073
+[2022.12.23-17.56.42:987][591]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-18804.896 Y=-6719.679 Z=-2208.738
+[2022.12.23-17.56.42:988][591]LogTemp: Warning: Getting time
+[2022.12.23-17.56.42:988][591]LogTemp: Warning: client time = 26.629128
+[2022.12.23-17.56.43:087][636]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:087][636]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:087][636]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:087][636]LogTemp: Warning: spread 0.396329
+[2022.12.23-17.56.43:088][636]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-15740.187 Y=-12341.954 Z=-2015.361
+[2022.12.23-17.56.43:088][636]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:088][636]LogTemp: Warning: client time = 26.729538
+[2022.12.23-17.56.43:188][681]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:188][681]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:188][681]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:188][681]LogTemp: Warning: spread -0.418638
+[2022.12.23-17.56.43:188][681]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-527.937 Y=-683.093 Z=20.000
+[2022.12.23-17.56.43:188][681]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:188][681]LogTemp: Warning: client time = 26.830025
+[2022.12.23-17.56.43:288][726]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:288][726]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:288][726]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:288][726]LogTemp: Warning: spread -0.453551
+[2022.12.23-17.56.43:288][726]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-432.771 Y=-807.231 Z=20.000
+[2022.12.23-17.56.43:289][726]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:289][726]LogTemp: Warning: client time = 26.930464
+[2022.12.23-17.56.43:389][770]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:389][770]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:389][770]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:389][770]LogTemp: Warning: spread -0.015671
+[2022.12.23-17.56.43:389][770]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-8251.660 Y=-18237.045 Z=-2990.692
+[2022.12.23-17.56.43:389][770]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:389][770]LogTemp: Warning: client time = 27.031370
+[2022.12.23-17.56.43:490][820]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:490][820]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:490][820]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:490][820]LogTemp: Warning: spread 0.489380
+[2022.12.23-17.56.43:490][820]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-7408.392 Y=-18796.838 Z=-2083.186
+[2022.12.23-17.56.43:491][820]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:491][820]LogTemp: Warning: client time = 27.132744
+[2022.12.23-17.56.43:591][867]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:591][867]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:591][867]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:591][867]LogTemp: Warning: spread -0.435270
+[2022.12.23-17.56.43:591][867]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-10001.392 Y=-17363.418 Z=-3523.831
+[2022.12.23-17.56.43:592][867]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:592][867]LogTemp: Warning: client time = 27.233347
+[2022.12.23-17.56.43:693][912]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:693][912]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:693][912]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:693][912]LogTemp: Warning: spread -0.072039
+[2022.12.23-17.56.43:693][912]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-14711.888 Y=-13941.004 Z=-2087.147
+[2022.12.23-17.56.43:694][912]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:694][912]LogTemp: Warning: client time = 27.335157
+[2022.12.23-17.56.43:794][957]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:794][957]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:794][957]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:794][957]LogTemp: Warning: spread 0.487823
+[2022.12.23-17.56.43:794][957]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-15817.637 Y=-12844.632 Z=-1384.568
+[2022.12.23-17.56.43:794][957]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:794][957]LogTemp: Warning: client time = 27.435598
+[2022.12.23-17.56.43:896][  2]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:896][  2]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:896][  2]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:896][  2]LogTemp: Warning: spread 0.107196
+[2022.12.23-17.56.43:896][  2]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-18403.451 Y=-8458.804 Z=-2372.029
+[2022.12.23-17.56.43:896][  2]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:896][  2]LogTemp: Warning: client time = 27.537731
+[2022.12.23-17.56.43:997][ 46]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.43:997][ 46]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.43:997][ 46]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.43:997][ 46]LogTemp: Warning: spread 0.109607
+[2022.12.23-17.56.43:997][ 46]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-19962.992 Y=1026.684 Z=-3030.661
+[2022.12.23-17.56.43:997][ 46]LogTemp: Warning: Getting time
+[2022.12.23-17.56.43:997][ 46]LogTemp: Warning: client time = 27.638567
+[2022.12.23-17.56.44:098][ 90]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.44:098][ 90]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.44:098][ 90]LogTemp: Warning: No longer bursting
+[2022.12.23-17.56.45:652][832]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.45:652][832]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.45:652][832]LogTemp: Warning: spread -0.251213
+[2022.12.23-17.56.45:652][832]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=14927.704 Y=-13422.426 Z=-2681.482
+[2022.12.23-17.56.45:653][832]LogTemp: Warning: Getting time
+[2022.12.23-17.56.45:653][832]LogTemp: Warning: client time = 29.292419
+[2022.12.23-17.56.45:752][875]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.45:752][875]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.45:752][875]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.45:752][875]LogTemp: Warning: spread -0.292230
+[2022.12.23-17.56.45:752][875]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=16514.496 Y=-11703.025 Z=-1492.747
+[2022.12.23-17.56.45:752][875]LogTemp: Warning: Getting time
+[2022.12.23-17.56.45:752][875]LogTemp: Warning: client time = 29.394356
+[2022.12.23-17.56.45:853][920]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.45:853][920]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.45:853][920]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.45:853][920]LogTemp: Warning: spread 0.253502
+[2022.12.23-17.56.45:854][920]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=20088.082 Y=1071.649 Z=646.898
+[2022.12.23-17.56.45:854][920]LogTemp: Warning: Getting time
+[2022.12.23-17.56.45:854][920]LogTemp: Warning: client time = 29.495077
+[2022.12.23-17.56.45:954][963]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.45:954][963]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.45:954][963]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.45:954][963]LogTemp: Warning: spread -0.308466
+[2022.12.23-17.56.45:954][963]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=18759.662 Y=7034.428 Z=-282.066
+[2022.12.23-17.56.45:955][963]LogTemp: Warning: Getting time
+[2022.12.23-17.56.45:955][963]LogTemp: Warning: client time = 29.596098
+[2022.12.23-17.56.46:057][  6]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:057][  6]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:057][  6]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:057][  6]LogTemp: Warning: spread -0.378079
+[2022.12.23-17.56.46:057][  6]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15127.985 Y=12966.896 Z=-346.020
+[2022.12.23-17.56.46:057][  6]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:057][  6]LogTemp: Warning: client time = 29.698895
+[2022.12.23-17.56.46:157][ 49]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:157][ 49]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:157][ 49]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:157][ 49]LogTemp: Warning: spread 0.186605
+[2022.12.23-17.56.46:157][ 49]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=8880.188 Y=17695.158 Z=693.112
+[2022.12.23-17.56.46:157][ 49]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:157][ 49]LogTemp: Warning: client time = 29.799311
+[2022.12.23-17.56.46:259][ 91]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:259][ 91]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:259][ 91]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:259][ 91]LogTemp: Warning: spread -0.342982
+[2022.12.23-17.56.46:259][ 91]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=4920.164 Y=19149.682 Z=-179.343
+[2022.12.23-17.56.46:259][ 91]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:259][ 91]LogTemp: Warning: client time = 29.901327
+[2022.12.23-17.56.46:359][133]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:359][133]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:359][133]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:359][133]LogTemp: Warning: spread -0.443388
+[2022.12.23-17.56.46:359][133]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-4033.844 Y=19243.775 Z=-484.596
+[2022.12.23-17.56.46:359][133]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:359][133]LogTemp: Warning: client time = 30.001579
+[2022.12.23-17.56.46:461][175]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:461][175]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:461][175]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:461][175]LogTemp: Warning: spread 0.012772
+[2022.12.23-17.56.46:461][175]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-9069.123 Y=17445.688 Z=-53.067
+[2022.12.23-17.56.46:461][175]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:461][175]LogTemp: Warning: client time = 30.102308
+[2022.12.23-17.56.46:562][216]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:562][216]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:562][216]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:562][216]LogTemp: Warning: spread 0.417295
+[2022.12.23-17.56.46:562][216]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-13533.154 Y=14272.122 Z=706.493
+[2022.12.23-17.56.46:562][216]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:562][216]LogTemp: Warning: client time = 30.203390
+[2022.12.23-17.56.46:662][257]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:662][257]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:662][257]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:662][257]LogTemp: Warning: spread -0.328639
+[2022.12.23-17.56.46:662][257]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-17337.936 Y=9358.125 Z=-299.733
+[2022.12.23-17.56.46:663][257]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:663][257]LogTemp: Warning: client time = 30.304089
+[2022.12.23-17.56.46:764][299]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:764][299]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:764][299]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:764][299]LogTemp: Warning: spread -0.353664
+[2022.12.23-17.56.46:764][299]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-19756.598 Y=43.603 Z=-674.381
+[2022.12.23-17.56.46:764][299]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:764][299]LogTemp: Warning: client time = 30.405537
+[2022.12.23-17.56.46:864][341]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:865][341]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:865][341]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:865][341]LogTemp: Warning: spread -0.410642
+[2022.12.23-17.56.46:865][341]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-19528.168 Y=-3371.548 Z=-932.949
+[2022.12.23-17.56.46:865][341]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:865][341]LogTemp: Warning: client time = 30.506268
+[2022.12.23-17.56.46:965][384]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.46:965][384]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.46:965][384]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.46:965][384]LogTemp: Warning: spread 0.417661
+[2022.12.23-17.56.46:965][384]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-16089.857 Y=-11805.068 Z=-39.792
+[2022.12.23-17.56.46:965][384]LogTemp: Warning: Getting time
+[2022.12.23-17.56.46:965][384]LogTemp: Warning: client time = 30.606602
+[2022.12.23-17.56.47:066][429]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:066][429]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:066][429]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:066][429]LogTemp: Warning: spread -0.322901
+[2022.12.23-17.56.47:066][429]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-13699.246 Y=-14558.483 Z=-1203.607
+[2022.12.23-17.56.47:066][429]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:066][429]LogTemp: Warning: client time = 30.707758
+[2022.12.23-17.56.47:167][473]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:167][473]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:167][473]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:167][473]LogTemp: Warning: spread 0.016861
+[2022.12.23-17.56.47:167][473]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-10595.683 Y=-17084.131 Z=-584.378
+[2022.12.23-17.56.47:167][473]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:167][473]LogTemp: Warning: client time = 30.809174
+[2022.12.23-17.56.47:268][520]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:268][520]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:268][520]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:268][520]LogTemp: Warning: spread 0.090197
+[2022.12.23-17.56.47:268][520]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-10811.145 Y=-17026.523 Z=-403.079
+[2022.12.23-17.56.47:268][520]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:268][520]LogTemp: Warning: client time = 30.910536
+[2022.12.23-17.56.47:369][570]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:369][570]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:369][570]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:369][570]LogTemp: Warning: spread -0.247978
+[2022.12.23-17.56.47:369][570]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-12530.837 Y=-15829.321 Z=-1082.142
+[2022.12.23-17.56.47:369][570]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:369][570]LogTemp: Warning: client time = 31.011253
+[2022.12.23-17.56.47:470][617]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:470][617]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:470][617]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:470][617]LogTemp: Warning: spread 0.141865
+[2022.12.23-17.56.47:470][617]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-14075.349 Y=-14577.306 Z=-561.534
+[2022.12.23-17.56.47:470][617]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:470][617]LogTemp: Warning: client time = 31.112450
+[2022.12.23-17.56.47:572][662]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:572][662]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:572][662]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:572][662]LogTemp: Warning: spread 0.283197
+[2022.12.23-17.56.47:572][662]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-18446.271 Y=-8390.998 Z=305.187
+[2022.12.23-17.56.47:573][662]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:573][662]LogTemp: Warning: client time = 31.213831
+[2022.12.23-17.56.47:673][708]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:673][708]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:673][708]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:673][708]LogTemp: Warning: spread 0.115802
+[2022.12.23-17.56.47:673][708]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-20139.107 Y=-1863.807 Z=226.646
+[2022.12.23-17.56.47:673][708]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:673][708]LogTemp: Warning: client time = 31.314121
+[2022.12.23-17.56.47:774][754]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:774][754]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:774][754]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:774][754]LogTemp: Warning: spread -0.218619
+[2022.12.23-17.56.47:774][754]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-18494.643 Y=7831.248 Z=-199.774
+[2022.12.23-17.56.47:774][754]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:774][754]LogTemp: Warning: client time = 31.415140
+[2022.12.23-17.56.47:874][800]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:874][800]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:874][800]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:874][800]LogTemp: Warning: spread -0.004898
+[2022.12.23-17.56.47:874][800]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-14885.101 Y=13347.688 Z=84.449
+[2022.12.23-17.56.47:874][800]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:874][800]LogTemp: Warning: client time = 31.515320
+[2022.12.23-17.56.47:974][846]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.47:974][846]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.47:974][846]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.47:974][846]LogTemp: Warning: spread 0.120563
+[2022.12.23-17.56.47:974][846]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-10280.954 Y=17050.303 Z=399.300
+[2022.12.23-17.56.47:975][846]LogTemp: Warning: Getting time
+[2022.12.23-17.56.47:975][846]LogTemp: Warning: client time = 31.616226
+[2022.12.23-17.56.48:074][890]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:074][890]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:074][890]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:074][890]LogTemp: Warning: spread -0.249474
+[2022.12.23-17.56.48:074][890]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-2815.229 Y=19585.629 Z=-150.646
+[2022.12.23-17.56.48:075][890]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:075][890]LogTemp: Warning: client time = 31.716412
+[2022.12.23-17.56.48:175][934]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:176][934]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:176][934]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:176][934]LogTemp: Warning: spread 0.423093
+[2022.12.23-17.56.48:176][934]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=4098.001 Y=19271.381 Z=751.940
+[2022.12.23-17.56.48:176][934]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:176][934]LogTemp: Warning: client time = 31.817532
+[2022.12.23-17.56.48:277][975]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:277][975]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:277][975]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:277][975]LogTemp: Warning: spread 0.473266
+[2022.12.23-17.56.48:277][975]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=330.000 Y=172.615 Z=217.908
+[2022.12.23-17.56.48:278][975]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:278][975]LogTemp: Warning: client time = 31.919405
+[2022.12.23-17.56.48:378][ 16]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:378][ 16]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:378][ 16]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:378][ 16]LogTemp: Warning: spread 0.353206
+[2022.12.23-17.56.48:378][ 16]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19563.871 Y=876.683 Z=1796.782
+[2022.12.23-17.56.48:378][ 16]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:378][ 16]LogTemp: Warning: client time = 32.019859
+[2022.12.23-17.56.48:480][ 57]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:480][ 57]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:480][ 57]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:480][ 57]LogTemp: Warning: spread 0.420530
+[2022.12.23-17.56.48:480][ 57]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=18062.324 Y=-7726.820 Z=2465.430
+[2022.12.23-17.56.48:480][ 57]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:480][ 57]LogTemp: Warning: client time = 32.122040
+[2022.12.23-17.56.48:581][ 99]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:581][ 99]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:581][ 99]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:581][ 99]LogTemp: Warning: spread 0.202017
+[2022.12.23-17.56.48:581][ 99]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15335.222 Y=-12569.109 Z=1870.405
+[2022.12.23-17.56.48:581][ 99]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:581][ 99]LogTemp: Warning: client time = 32.223518
+[2022.12.23-17.56.48:683][141]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:683][141]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:683][141]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:683][141]LogTemp: Warning: spread 0.092151
+[2022.12.23-17.56.48:683][141]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=10425.109 Y=-17099.678 Z=908.366
+[2022.12.23-17.56.48:683][141]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:683][141]LogTemp: Warning: client time = 32.324158
+[2022.12.23-17.56.48:785][185]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:785][185]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:785][185]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:785][185]LogTemp: Warning: spread -0.337397
+[2022.12.23-17.56.48:785][185]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=5637.125 Y=-19345.613 Z=-417.216
+[2022.12.23-17.56.48:785][185]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:785][185]LogTemp: Warning: client time = 32.426437
+[2022.12.23-17.56.48:886][230]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:886][230]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:886][230]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:886][230]LogTemp: Warning: spread -0.105731
+[2022.12.23-17.56.48:886][230]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=5894.558 Y=-19333.930 Z=-244.349
+[2022.12.23-17.56.48:886][230]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:886][230]LogTemp: Warning: client time = 32.527870
+[2022.12.23-17.56.48:988][273]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.48:988][273]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.48:988][273]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.48:988][273]LogTemp: Warning: spread -0.126453
+[2022.12.23-17.56.48:988][273]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=17368.643 Y=-10065.157 Z=-283.174
+[2022.12.23-17.56.48:988][273]LogTemp: Warning: Getting time
+[2022.12.23-17.56.48:988][273]LogTemp: Warning: client time = 32.629471
+[2022.12.23-17.56.49:088][319]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:088][319]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:089][319]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:089][319]LogTemp: Warning: spread -0.097491
+[2022.12.23-17.56.49:089][319]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19956.461 Y=-374.004 Z=-297.342
+[2022.12.23-17.56.49:089][319]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:089][319]LogTemp: Warning: client time = 32.730412
+[2022.12.23-17.56.49:190][362]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:190][362]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:190][362]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:190][362]LogTemp: Warning: spread 0.446013
+[2022.12.23-17.56.49:190][362]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=18876.480 Y=6288.906 Z=771.927
+[2022.12.23-17.56.49:190][362]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:190][362]LogTemp: Warning: client time = 32.831703
+[2022.12.23-17.56.49:291][404]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:291][404]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:291][404]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:291][404]LogTemp: Warning: spread -0.167776
+[2022.12.23-17.56.49:291][404]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=15640.989 Y=12204.724 Z=-550.288
+[2022.12.23-17.56.49:291][404]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:291][404]LogTemp: Warning: client time = 32.932968
+[2022.12.23-17.56.49:392][446]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:392][446]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:392][446]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:392][446]LogTemp: Warning: spread 0.400357
+[2022.12.23-17.56.49:392][446]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=10756.099 Y=16638.789 Z=144.483
+[2022.12.23-17.56.49:392][446]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:392][446]LogTemp: Warning: client time = 33.033497
+[2022.12.23-17.56.49:492][488]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:492][488]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:492][488]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:492][488]LogTemp: Warning: spread -0.315149
+[2022.12.23-17.56.49:492][488]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=5450.624 Y=18946.631 Z=-1658.112
+[2022.12.23-17.56.49:492][488]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:492][488]LogTemp: Warning: client time = 33.134010
+[2022.12.23-17.56.49:593][531]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:593][531]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:593][531]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:593][531]LogTemp: Warning: spread -0.143513
+[2022.12.23-17.56.49:593][531]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-1828.192 Y=19579.012 Z=-2032.954
+[2022.12.23-17.56.49:593][531]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:593][531]LogTemp: Warning: client time = 33.235092
+[2022.12.23-17.56.49:694][574]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:694][574]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:694][574]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:694][574]LogTemp: Warning: spread -0.208853
+[2022.12.23-17.56.49:694][574]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-130.181 Y=956.807 Z=20.000
+[2022.12.23-17.56.49:694][574]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:694][574]LogTemp: Warning: client time = 33.336384
+[2022.12.23-17.56.49:796][611]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:796][611]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:796][611]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:796][611]LogTemp: Warning: spread -0.436247
+[2022.12.23-17.56.49:796][611]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-265.370 Y=769.369 Z=20.000
+[2022.12.23-17.56.49:796][611]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:796][611]LogTemp: Warning: client time = 33.437168
+[2022.12.23-17.56.49:898][650]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:898][650]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:898][650]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:898][650]LogTemp: Warning: spread 0.240135
+[2022.12.23-17.56.49:898][650]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-11790.122 Y=15916.158 Z=-1730.116
+[2022.12.23-17.56.49:898][650]LogTemp: Warning: Getting time
+[2022.12.23-17.56.49:898][650]LogTemp: Warning: client time = 33.539669
+[2022.12.23-17.56.49:999][693]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.49:999][693]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.49:999][693]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.49:999][693]LogTemp: Warning: spread -0.443876
+[2022.12.23-17.56.49:999][693]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-414.461 Y=817.442 Z=20.000
+[2022.12.23-17.56.50:000][693]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:000][693]LogTemp: Warning: client time = 33.641174
+[2022.12.23-17.56.50:101][737]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:101][737]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:101][737]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:101][737]LogTemp: Warning: spread 0.090014
+[2022.12.23-17.56.50:101][737]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-11791.972 Y=16040.915 Z=-1933.579
+[2022.12.23-17.56.50:101][737]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:101][737]LogTemp: Warning: client time = 33.742561
+[2022.12.23-17.56.50:201][776]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:201][776]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:202][776]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:202][776]LogTemp: Warning: spread -0.008683
+[2022.12.23-17.56.50:202][776]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-11810.705 Y=16082.824 Z=-2076.230
+[2022.12.23-17.56.50:202][776]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:202][776]LogTemp: Warning: client time = 33.843224
+[2022.12.23-17.56.50:303][816]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:303][816]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:303][816]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:303][816]LogTemp: Warning: spread 0.432340
+[2022.12.23-17.56.50:303][816]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-12624.671 Y=15619.208 Z=-1281.186
+[2022.12.23-17.56.50:303][816]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:303][816]LogTemp: Warning: client time = 33.944996
+[2022.12.23-17.56.50:404][860]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:404][860]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:404][860]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:404][860]LogTemp: Warning: spread 0.213157
+[2022.12.23-17.56.50:404][860]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-12471.415 Y=15783.912 Z=-1633.798
+[2022.12.23-17.56.50:404][860]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:404][860]LogTemp: Warning: client time = 34.045826
+[2022.12.23-17.56.50:505][906]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:505][906]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:505][906]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:505][906]LogTemp: Warning: spread 0.443449
+[2022.12.23-17.56.50:505][906]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-13006.321 Y=15466.610 Z=-1194.902
+[2022.12.23-17.56.50:505][906]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:505][906]LogTemp: Warning: client time = 34.147259
+[2022.12.23-17.56.50:605][949]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:605][949]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:606][949]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:606][949]LogTemp: Warning: spread -0.118580
+[2022.12.23-17.56.50:606][949]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-12356.075 Y=15962.602 Z=-2142.961
+[2022.12.23-17.56.50:606][949]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:606][949]LogTemp: Warning: client time = 34.247791
+[2022.12.23-17.56.50:707][994]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:707][994]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:707][994]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:707][994]LogTemp: Warning: spread 0.139363
+[2022.12.23-17.56.50:707][994]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-12898.042 Y=15666.849 Z=-1666.593
+[2022.12.23-17.56.50:707][994]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:707][994]LogTemp: Warning: client time = 34.349335
+[2022.12.23-17.56.50:808][ 39]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:809][ 39]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:809][ 39]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:809][ 39]LogTemp: Warning: spread 0.274468
+[2022.12.23-17.56.50:809][ 39]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-13039.974 Y=15619.879 Z=-1660.325
+[2022.12.23-17.56.50:809][ 39]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:809][ 39]LogTemp: Warning: client time = 34.451115
+[2022.12.23-17.56.50:911][ 83]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.50:911][ 83]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.50:911][ 83]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.50:911][ 83]LogTemp: Warning: spread -0.231071
+[2022.12.23-17.56.50:911][ 83]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=-12920.377 Y=15691.816 Z=-1931.672
+[2022.12.23-17.56.50:911][ 83]LogTemp: Warning: Getting time
+[2022.12.23-17.56.50:911][ 83]LogTemp: Warning: client time = 34.552727
+[2022.12.23-17.56.52:453][808]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.52:453][808]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.52:453][808]LogTemp: Warning: spread 0.206656
+[2022.12.23-17.56.52:453][808]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19630.285 Y=2788.417 Z=-1143.404
+[2022.12.23-17.56.52:453][808]LogTemp: Warning: Getting time
+[2022.12.23-17.56.52:453][808]LogTemp: Warning: client time = 36.092731
+[2022.12.23-17.56.52:554][854]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.52:554][854]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.52:554][854]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.52:554][854]LogTemp: Warning: spread -0.231803
+[2022.12.23-17.56.52:554][854]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19672.418 Y=2600.392 Z=-783.029
+[2022.12.23-17.56.52:555][854]LogTemp: Warning: Getting time
+[2022.12.23-17.56.52:555][854]LogTemp: Warning: client time = 36.196564
+[2022.12.23-17.56.52:655][899]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.52:655][899]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.52:655][899]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.52:655][899]LogTemp: Warning: spread 0.044969
+[2022.12.23-17.56.52:655][899]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19650.793 Y=2969.108 Z=61.046
+[2022.12.23-17.56.52:655][899]LogTemp: Warning: Getting time
+[2022.12.23-17.56.52:655][899]LogTemp: Warning: client time = 36.296982
+[2022.12.23-17.56.52:755][943]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.52:755][943]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.52:755][943]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.52:755][943]LogTemp: Warning: spread 0.074236
+[2022.12.23-17.56.52:755][943]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19642.809 Y=3018.974 Z=431.740
+[2022.12.23-17.56.52:756][943]LogTemp: Warning: Getting time
+[2022.12.23-17.56.52:756][943]LogTemp: Warning: client time = 36.397713
+[2022.12.23-17.56.52:857][986]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.52:857][986]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.52:857][986]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.52:857][986]LogTemp: Warning: spread -0.323267
+[2022.12.23-17.56.52:857][986]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19560.168 Y=3432.807 Z=-840.571
+[2022.12.23-17.56.52:857][986]LogTemp: Warning: Getting time
+[2022.12.23-17.56.52:857][986]LogTemp: Warning: client time = 36.498798
+[2022.12.23-17.56.52:958][ 30]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.52:958][ 30]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.52:958][ 30]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.52:958][ 30]LogTemp: Warning: spread 0.490966
+[2022.12.23-17.56.52:958][ 30]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19542.541 Y=3635.554 Z=-500.288
+[2022.12.23-17.56.52:958][ 30]LogTemp: Warning: Getting time
+[2022.12.23-17.56.52:958][ 30]LogTemp: Warning: client time = 36.600212
+[2022.12.23-17.56.53:059][ 71]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:059][ 71]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:059][ 71]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:059][ 71]LogTemp: Warning: spread -0.395444
+[2022.12.23-17.56.53:059][ 71]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19602.479 Y=3254.890 Z=-453.077
+[2022.12.23-17.56.53:060][ 71]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:060][ 71]LogTemp: Warning: client time = 36.700699
+[2022.12.23-17.56.53:161][110]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:161][110]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:162][110]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:162][110]LogTemp: Warning: spread -0.169057
+[2022.12.23-17.56.53:162][110]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19567.674 Y=3544.163 Z=-13.672
+[2022.12.23-17.56.53:162][110]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:162][110]LogTemp: Warning: client time = 36.803215
+[2022.12.23-17.56.53:262][151]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:262][151]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:262][151]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:262][151]LogTemp: Warning: spread 0.242637
+[2022.12.23-17.56.53:262][151]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19515.889 Y=3844.484 Z=490.517
+[2022.12.23-17.56.53:263][151]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:263][151]LogTemp: Warning: client time = 36.903927
+[2022.12.23-17.56.53:364][191]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:364][191]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:365][191]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:365][191]LogTemp: Warning: spread -0.142323
+[2022.12.23-17.56.53:365][191]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19532.033 Y=3720.677 Z=716.570
+[2022.12.23-17.56.53:365][191]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:365][191]LogTemp: Warning: client time = 37.006134
+[2022.12.23-17.56.53:466][230]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:466][230]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:466][230]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:466][230]LogTemp: Warning: spread -0.405454
+[2022.12.23-17.56.53:466][230]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19587.771 Y=3269.975 Z=1103.815
+[2022.12.23-17.56.53:466][230]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:466][230]LogTemp: Warning: client time = 37.107803
+[2022.12.23-17.56.53:568][275]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:568][275]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:568][275]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:568][275]LogTemp: Warning: spread -0.259239
+[2022.12.23-17.56.53:568][275]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19636.168 Y=2893.115 Z=1152.879
+[2022.12.23-17.56.53:568][275]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:569][275]LogTemp: Warning: client time = 37.210186
+[2022.12.23-17.56.53:669][321]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:669][321]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:669][321]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:669][321]LogTemp: Warning: spread 0.422666
+[2022.12.23-17.56.53:669][321]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19579.084 Y=3115.593 Z=1608.649
+[2022.12.23-17.56.53:669][321]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:669][321]LogTemp: Warning: client time = 37.311371
+[2022.12.23-17.56.53:770][362]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:770][362]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:770][362]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:770][362]LogTemp: Warning: spread -0.057390
+[2022.12.23-17.56.53:770][362]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19495.633 Y=3788.949 Z=1297.915
+[2022.12.23-17.56.53:771][362]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:771][362]LogTemp: Warning: client time = 37.412540
+[2022.12.23-17.56.53:872][403]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:872][403]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:872][403]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:872][403]LogTemp: Warning: spread 0.404141
+[2022.12.23-17.56.53:872][403]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19384.658 Y=4335.126 Z=1451.348
+[2022.12.23-17.56.53:873][403]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:873][403]LogTemp: Warning: client time = 37.514378
+[2022.12.23-17.56.53:974][443]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.53:974][443]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.53:974][443]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.53:974][443]LogTemp: Warning: spread 0.300592
+[2022.12.23-17.56.53:974][443]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19464.111 Y=3984.242 Z=1245.188
+[2022.12.23-17.56.53:974][443]LogTemp: Warning: Getting time
+[2022.12.23-17.56.53:974][443]LogTemp: Warning: client time = 37.616100
+[2022.12.23-17.56.54:075][486]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.54:075][486]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.54:075][486]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.54:075][486]LogTemp: Warning: spread 0.035722
+[2022.12.23-17.56.54:075][486]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19558.225 Y=3593.960 Z=468.425
+[2022.12.23-17.56.54:075][486]LogTemp: Warning: Getting time
+[2022.12.23-17.56.54:075][486]LogTemp: Warning: client time = 37.717525
+[2022.12.23-17.56.54:177][531]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.54:178][531]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.54:178][531]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.54:178][531]LogTemp: Warning: spread 0.153279
+[2022.12.23-17.56.54:178][531]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19541.979 Y=3692.821 Z=472.749
+[2022.12.23-17.56.54:178][531]LogTemp: Warning: Getting time
+[2022.12.23-17.56.54:178][531]LogTemp: Warning: client time = 37.819172
+[2022.12.23-17.56.54:278][575]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.54:278][575]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.54:278][575]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.54:278][575]LogTemp: Warning: spread 0.337123
+[2022.12.23-17.56.54:278][575]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19443.293 Y=4231.126 Z=563.753
+[2022.12.23-17.56.54:278][575]LogTemp: Warning: Getting time
+[2022.12.23-17.56.54:278][575]LogTemp: Warning: client time = 37.919804
+[2022.12.23-17.56.54:380][617]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.54:380][617]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.54:380][617]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.54:380][617]LogTemp: Warning: spread 0.163808
+[2022.12.23-17.56.54:380][617]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19474.887 Y=4068.232 Z=532.023
+[2022.12.23-17.56.54:381][617]LogTemp: Warning: Getting time
+[2022.12.23-17.56.54:381][617]LogTemp: Warning: client time = 38.022003
+[2022.12.23-17.56.54:481][659]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.54:481][659]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.54:481][659]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.54:481][659]LogTemp: Warning: spread 0.085742
+[2022.12.23-17.56.54:481][659]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19603.469 Y=3314.302 Z=110.074
+[2022.12.23-17.56.54:481][659]LogTemp: Warning: Getting time
+[2022.12.23-17.56.54:481][659]LogTemp: Warning: client time = 38.122925
+[2022.12.23-17.56.54:582][702]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.54:582][702]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.54:582][702]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.54:582][702]LogTemp: Warning: spread 0.004135
+[2022.12.23-17.56.54:582][702]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19638.355 Y=3063.613 Z=54.466
+[2022.12.23-17.56.54:583][702]LogTemp: Warning: Getting time
+[2022.12.23-17.56.54:583][702]LogTemp: Warning: client time = 38.224251
+[2022.12.23-17.56.54:683][741]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.54:683][741]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.54:683][741]LogTemp: Warning: No longer bursting
+[2022.12.23-17.56.55:548][155]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.55:548][155]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.55:548][155]LogTemp: Warning: spread 0.025864
+[2022.12.23-17.56.55:548][155]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19549.682 Y=2772.962 Z=2396.843
+[2022.12.23-17.56.55:548][155]LogTemp: Warning: Getting time
+[2022.12.23-17.56.55:548][155]LogTemp: Warning: client time = 39.187450
+[2022.12.23-17.56.55:650][200]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.55:650][200]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.55:650][200]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.55:650][200]LogTemp: Warning: spread -0.358882
+[2022.12.23-17.56.55:650][200]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19534.322 Y=2844.437 Z=2455.180
+[2022.12.23-17.56.55:650][200]LogTemp: Warning: Getting time
+[2022.12.23-17.56.55:650][200]LogTemp: Warning: client time = 39.291500
+[2022.12.23-17.56.55:751][243]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.55:751][243]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.55:751][243]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.55:751][243]LogTemp: Warning: spread 0.220145
+[2022.12.23-17.56.55:751][243]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19375.402 Y=3661.613 Z=2781.888
+[2022.12.23-17.56.55:752][243]LogTemp: Warning: Getting time
+[2022.12.23-17.56.55:752][243]LogTemp: Warning: client time = 39.393421
+[2022.12.23-17.56.55:852][287]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.55:852][287]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.55:852][287]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.55:852][287]LogTemp: Warning: spread 0.309961
+[2022.12.23-17.56.55:852][287]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19325.988 Y=3975.689 Z=2741.833
+[2022.12.23-17.56.55:852][287]LogTemp: Warning: Getting time
+[2022.12.23-17.56.55:852][287]LogTemp: Warning: client time = 39.493877
+[2022.12.23-17.56.55:953][331]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.55:953][331]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.55:953][331]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.55:953][331]LogTemp: Warning: spread -0.243156
+[2022.12.23-17.56.55:953][331]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19512.887 Y=3656.333 Z=1382.252
+[2022.12.23-17.56.55:953][331]LogTemp: Warning: Getting time
+[2022.12.23-17.56.55:953][331]LogTemp: Warning: client time = 39.595055
+[2022.12.23-17.56.56:055][376]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:055][376]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:055][376]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:055][376]LogTemp: Warning: spread 0.176626
+[2022.12.23-17.56.56:055][376]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19516.479 Y=3712.082 Z=1152.464
+[2022.12.23-17.56.56:055][376]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:055][376]LogTemp: Warning: client time = 39.697414
+[2022.12.23-17.56.56:157][422]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:157][422]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:157][422]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:157][422]LogTemp: Warning: spread 0.406796
+[2022.12.23-17.56.56:157][422]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19480.961 Y=3832.349 Z=1416.470
+[2022.12.23-17.56.56:157][422]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:157][422]LogTemp: Warning: client time = 39.799313
+[2022.12.23-17.56.56:257][466]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:257][466]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:257][466]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:257][466]LogTemp: Warning: spread 0.435087
+[2022.12.23-17.56.56:257][466]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19468.463 Y=4052.195 Z=875.616
+[2022.12.23-17.56.56:257][466]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:257][466]LogTemp: Warning: client time = 39.899433
+[2022.12.23-17.56.56:358][510]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:358][510]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:358][510]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:358][510]LogTemp: Warning: spread 0.132832
+[2022.12.23-17.56.56:358][510]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19478.133 Y=4051.989 Z=519.329
+[2022.12.23-17.56.56:358][510]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:358][510]LogTemp: Warning: client time = 40.000248
+[2022.12.23-17.56.56:460][555]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:460][555]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:460][555]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:460][555]LogTemp: Warning: spread 0.374630
+[2022.12.23-17.56.56:460][555]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19467.006 Y=4042.171 Z=962.074
+[2022.12.23-17.56.56:460][555]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:460][555]LogTemp: Warning: client time = 40.101978
+[2022.12.23-17.56.56:560][598]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:560][598]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:560][598]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:560][598]LogTemp: Warning: spread 0.094867
+[2022.12.23-17.56.56:560][598]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19666.264 Y=2847.531 Z=226.109
+[2022.12.23-17.56.56:560][598]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:560][598]LogTemp: Warning: client time = 40.202518
+[2022.12.23-17.56.56:661][642]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:661][642]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:661][642]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:661][642]LogTemp: Warning: spread -0.254631
+[2022.12.23-17.56.56:661][642]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19700.594 Y=2535.682 Z=410.902
+[2022.12.23-17.56.56:661][642]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:661][642]LogTemp: Warning: client time = 40.303150
+[2022.12.23-17.56.56:762][686]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:762][686]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:762][686]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:762][686]LogTemp: Warning: spread 0.416105
+[2022.12.23-17.56.56:762][686]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19664.867 Y=2757.545 Z=865.406
+[2022.12.23-17.56.56:762][686]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:762][686]LogTemp: Warning: client time = 40.404526
+[2022.12.23-17.56.56:864][729]LogTemp: Warning: AutoFire
+[2022.12.23-17.56.56:865][729]LogTemp: Warning: Burst client validate
+[2022.12.23-17.56.56:865][729]LogTemp: Warning: Cartridges = 1
+[2022.12.23-17.56.56:865][729]LogTemp: Warning: spread -0.131428
+[2022.12.23-17.56.56:865][729]LogBlueprintUserMessages: [BP_Myfpscharacter_C_0] X=19667.926 Y=2785.556 Z=651.366
+[2022.12.23-17.56.56:865][729]LogTemp: Warning: Getting time
+[2022.12.23-17.56.56:865][729]LogTemp: Warning: client time = 40.506016

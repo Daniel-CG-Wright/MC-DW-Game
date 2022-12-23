@@ -162,7 +162,7 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 
 	//Replicating gun cosmetics
 	DOREPLIFETIME_CONDITION(Afpscharacter, MuzzleCounter, COND_SkipOwner);
-	DOREPLIFETIME_CONDITION(Afpscharacter, EndPoint, COND_SkipOwner);
+	DOREPLIFETIME_CONDITION(Afpscharacter, EndPoints, COND_SkipOwner);
 
 	//Replicating spread
 	DOREPLIFETIME_CONDITION(Afpscharacter, ReplicatedSpreadAngles, COND_OwnerOnly);
@@ -1085,10 +1085,8 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	//Stop crashes if no secondary exists
 	if (SecondaryData.MetaData.GunModel == Guns::NONE)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("ahh no"));
 		return;
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Equipping secondary"));
 	
 	if (GetLocalRole() < ROLE_Authority && !bIsRep)
 	{
@@ -1099,7 +1097,6 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	bIsFiring = false;
 
 	StopFiring();
-	check(FPSMuzzleComponent != nullptr);
 
 	//Only owner needs this
 	if (IsLocallyControlled())
@@ -1111,9 +1108,10 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 	
 	}
 	CalculateNewBatchOfSpreadAngles();
+	EquippedGun = Equips::SECONDARY;
+
 	PositionAndAttachGunInTP(SecondaryData);
 
-	EquippedGun = Equips::SECONDARY;
 	UpdateAmmoDisplay();
 }
 
@@ -1288,10 +1286,17 @@ bool Afpscharacter::MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FV
 	//taking a predetermined end point.
 
 	FCollisionQueryParams CollisionParams;
-
+	
 	CollisionParams.AddIgnoredActor(this);
 	CollisionParams.bReturnPhysicalMaterial = true;
-
+	/*DrawDebugLine(
+		GetWorld(),
+		StartPoint,
+		EndLocation,
+		FColor(255, 0, 0),
+		false, 1.0f, 0,
+		12.333
+	);*/
 	bool result = GetWorld()->LineTraceMultiByChannel(ResultOutHit, StartPoint, EndLocation, CollisionChannel, CollisionParams);
 	return result;
 	
@@ -1583,18 +1588,22 @@ void Afpscharacter::ClientHitscanCheckFire()
 	
 	float SpreadModifier = CalculateSpreadModifier();
 
+
+	UE_LOG(LogTemp, Warning, TEXT("Cartridges = %d"), GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets);
 	
 	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
 	{
 		//Stores temporary details for this cartridge
 		TArray<FHitResult> TempHitResults;
+		UE_LOG(LogTemp, Warning, TEXT("spread %f"), ReplicatedSpreadAngles[i]);
 		//WE NEED TO REPEAT FROM HERE
 		//UE_LOG(LogTemp, Warning, TEXT("Client hitscan check fire"));
 	//TODO add spread and recoil here (do the multiraycasts at angles)
 	//Preferably replacing this function as it can still serve the purpose of getting data from straight ahead.
 
+		FVector EndDestination = CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, ReplicatedSpreadAngles[i]);
 		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
-			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, ReplicatedSpreadAngles[i]), ECC_GameTraceChannel2);
+			EndDestination, ECC_GameTraceChannel2);
 
 		//MultiRaycastInCameraDirection(HitResults, GetCurrentlyEquippedWeaponData().Stats.MaxRange);
 
@@ -1618,7 +1627,7 @@ void Afpscharacter::ClientHitscanCheckFire()
 
 				ShowHitscanFireEffectFP(
 					EmitterStartPoint,
-					(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
+					EndDestination,
 					GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
 				);
 
@@ -1629,7 +1638,7 @@ void Afpscharacter::ClientHitscanCheckFire()
 			//Still need to show visual effects, use the max range as the end point.
 			ShowHitscanFireEffectFP(
 				EmitterStartPoint,
-				(EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange)),
+				EndDestination,
 				GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect
 			);
 
@@ -1736,6 +1745,7 @@ void Afpscharacter::CalculateNewBatchOfSpreadAngles()
 {
 	//Store them temporarily in this variable so as to avoid a lot of replication through the loop. May work, may not, but it's a small price.
 	TArray<float> tempSpreadAngles;
+	UE_LOG(LogTemp, Warning, TEXT("Carttridge %d"), GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets);
 	tempSpreadAngles.SetNum(GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets);
 
 	for (int i = 0; i < GetCurrentlyEquippedWeaponData().Stats.CartridgeBullets; i++)
@@ -1743,8 +1753,10 @@ void Afpscharacter::CalculateNewBatchOfSpreadAngles()
 		//Calculating the spread angles in advance and replicating to client so that they can see the same spread as the server.
 		tempSpreadAngles[i] = FMath::RandRange(-1 * GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees, GetCurrentlyEquippedWeaponData().Stats.BaseHipfireSpreadAngleInDegrees);
 	}
-
+	UE_LOG(LogTemp, Warning, TEXT("spreading"));
 	ReplicatedSpreadAngles = tempSpreadAngles;
+	UE_LOG(LogTemp, Warning, TEXT("SpreadLength = %d"), ReplicatedSpreadAngles.Num());
+
 }
 void Afpscharacter::ServerProjectileCheckFire()
 {
@@ -1777,7 +1789,12 @@ void Afpscharacter::ServerProjectileCheckFire()
 }
 void Afpscharacter::OnRep_EndPoint()
 {
-	ShowHitscanFireEffectTP(TPMuzzleComponent->GetComponentLocation(), EndPoint, GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
+	UE_LOG(LogTemp, Warning, TEXT("Endpint"));
+	for (int i = 0; i < EndPoints.Num(); i++)
+	{
+		ShowHitscanFireEffectTP(TPMuzzleComponent->GetComponentLocation(), EndPoints[i], GetCurrentlyEquippedWeaponData().VisualAssets.TracerEffect);
+
+	}
 }
 void Afpscharacter::OnRep_MuzzleCounter()
 {
@@ -1934,6 +1951,8 @@ void Afpscharacter::ServerPerformHitscan()
 
 	TArray<FHitResult> HitResults;
 
+	EndPoints.Empty();
+
 	float SpreadModifier = CalculateSpreadModifier();
 
 	UE_LOG(LogTemp, Warning, TEXT("Weapon name: %s"), *GetCurrentlyEquippedWeaponData().WeaponName.ToString());
@@ -1942,10 +1961,10 @@ void Afpscharacter::ServerPerformHitscan()
 	{
 		//Iter for all spreadangles as shots
 		TArray<FHitResult> TempHitResults;
-
+		FVector EndLocation = CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetController()->GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, Angle);
 		//Actual raycast
 		MultiRaycastDirectional(TempHitResults, FPSCameraComponent->GetComponentLocation(),
-			CalculateSpreadDestination(FPSCameraComponent->GetComponentLocation(), GetController()->GetControlRotation(), GetCurrentlyEquippedWeaponData().Stats.MaxRange, SpreadModifier, Angle), ECC_GameTraceChannel2);
+			EndLocation, ECC_GameTraceChannel2);
 
 		HitResults += TempHitResults;
 
@@ -1955,20 +1974,19 @@ void Afpscharacter::ServerPerformHitscan()
 			if (TempHitResults.Last().bBlockingHit)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Blocking"));
-				EndPoint = TempHitResults.Last().Location;
+				EndPoints.Add(TempHitResults.Last().Location);
 			}
 			else
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Hit"));
-				EndPoint = EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange);
+				EndPoints.Add(EndLocation);
 			}
 		
 		}
 		else
 		{
 			UE_LOG(LogTemp, Warning, TEXT("miss"));
-			EndPoint = EmitterStartPoint + (FPSCameraComponent->GetForwardVector() * GetCurrentlyEquippedWeaponData().Stats.MaxRange);
-
+			EndPoints.Add(EndLocation);
 		}
 
 	}
