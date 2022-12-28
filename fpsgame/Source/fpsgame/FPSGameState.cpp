@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-#include "FPSPlayerController.h"
 #include "FPSGameState.h"
+#include "FPSPlayerController.h"
+
 
 float AFPSGameState::GetServerWorldTimeSeconds() const
 {

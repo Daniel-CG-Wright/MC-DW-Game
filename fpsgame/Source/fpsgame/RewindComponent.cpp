@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+#include "RewindComponent.h"
+
 #include "FPSGameModeDefault.h"
 #include "FPSGameState.h"
-#include "RewindComponent.h"
 
 // Sets default values for this component's properties
 URewindComponent::URewindComponent()

@@ -125,7 +125,11 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execSpawnProjectileBullet); \
 	DECLARE_FUNCTION(execCalculateNewBatchOfSpreadAngles); \
 	DECLARE_FUNCTION(execServerProjectileCheckFire); \
-	DECLARE_FUNCTION(execClientProjectileCheckFire);
+	DECLARE_FUNCTION(execClientProjectileCheckFire); \
+	DECLARE_FUNCTION(execStopAimingDownSights); \
+	DECLARE_FUNCTION(execAimDownSights); \
+	DECLARE_FUNCTION(execReleaseADSKey); \
+	DECLARE_FUNCTION(execPressADSKey);
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -228,7 +232,11 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execSpawnProjectileBullet); \
 	DECLARE_FUNCTION(execCalculateNewBatchOfSpreadAngles); \
 	DECLARE_FUNCTION(execServerProjectileCheckFire); \
-	DECLARE_FUNCTION(execClientProjectileCheckFire);
+	DECLARE_FUNCTION(execClientProjectileCheckFire); \
+	DECLARE_FUNCTION(execStopAimingDownSights); \
+	DECLARE_FUNCTION(execAimDownSights); \
+	DECLARE_FUNCTION(execReleaseADSKey); \
+	DECLARE_FUNCTION(execPressADSKey);
 
 
 #if WITH_EDITOR

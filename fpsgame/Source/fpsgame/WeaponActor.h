@@ -11,6 +11,7 @@
 #include "NiagaraSystem.h"
 #include "FPSProjectile.h"
 #include "Curves/CurveVector.h"
+#include "SightData.h"
 #include "WeaponActor.generated.h"
 
 UENUM(BlueprintType)
@@ -227,7 +228,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		float BaseMovementSpreadMultiplier;
 
-
 };
 
 USTRUCT(BlueprintType)
@@ -260,6 +260,32 @@ public:
 };
 
 USTRUCT(BlueprintType)
+struct FWeaponAttachmentSocketStruct
+{
+	GENERATED_BODY()
+
+public:
+	//Stores where the actual attachment points are (relative to gun center)
+
+
+	//Sight attachment point
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FVector SightAttachmentPoint;
+
+};
+USTRUCT(BlueprintType)
+struct FWeaponAttachmentsStruct
+{
+	//Some data we are pulling directly from the attachments. Others will apply their changes to the weapon directly as a gun's attachments cannot change.
+	GENERATED_BODY()
+
+public:
+	//Sight attachment
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USightData* SightAttachment;
+
+};
+USTRUCT(BlueprintType)
 struct FWeaponDataStruct
 {
 	GENERATED_BODY()
@@ -288,6 +314,15 @@ public:
 	//The recoil properties of the weapon
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FWeaponRecoil Recoil;
+
+	//Attachment ports
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponAttachmentSocketStruct AttachmentSockets;
+
+	//Attachments
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponAttachmentsStruct Attachments;
+
 
 };
 

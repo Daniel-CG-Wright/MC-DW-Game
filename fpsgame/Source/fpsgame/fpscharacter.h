@@ -125,6 +125,27 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon spread")
 		float MinMovementSpreadModifier;
 
+
+//Aiming etc functions
+protected:
+	UFUNCTION()
+		void PressADSKey();
+
+	UFUNCTION()
+		void ReleaseADSKey();
+
+	UFUNCTION()
+		void AimDownSights();
+
+	UFUNCTION()
+		void StopAimingDownSights();
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void BPImplementation_AimDownSights();
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void BPImplementation_StopAimingDownSights();
+
 //Firing functions
 protected:
 

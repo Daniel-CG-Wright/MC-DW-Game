@@ -246,6 +246,28 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 	//Binding for interaction
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &Afpscharacter::InteractPressed);
+
+	//Binding for aiming
+	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &Afpscharacter::PressADSKey);
+	PlayerInputComponent->BindAction("Aim", IE_Released, this, &Afpscharacter::ReleaseADSKey);
+
+}
+
+void Afpscharacter::PressADSKey()
+{
+
+}
+void Afpscharacter::ReleaseADSKey()
+{
+
+}
+void Afpscharacter::AimDownSights()
+{
+
+}
+void Afpscharacter::StopAimingDownSights()
+{
+
 }
 
 void Afpscharacter::OnPressFire()
