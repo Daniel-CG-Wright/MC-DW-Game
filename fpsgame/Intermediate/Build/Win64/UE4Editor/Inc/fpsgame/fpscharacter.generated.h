@@ -127,6 +127,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerProjectileCheckFire); \
 	DECLARE_FUNCTION(execClientProjectileCheckFire); \
 	DECLARE_FUNCTION(execStopAimingDownSights); \
+	DECLARE_FUNCTION(execBringWeaponUpForADS); \
 	DECLARE_FUNCTION(execAimDownSights); \
 	DECLARE_FUNCTION(execReleaseADSKey); \
 	DECLARE_FUNCTION(execPressADSKey);
@@ -234,6 +235,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execServerProjectileCheckFire); \
 	DECLARE_FUNCTION(execClientProjectileCheckFire); \
 	DECLARE_FUNCTION(execStopAimingDownSights); \
+	DECLARE_FUNCTION(execBringWeaponUpForADS); \
 	DECLARE_FUNCTION(execAimDownSights); \
 	DECLARE_FUNCTION(execReleaseADSKey); \
 	DECLARE_FUNCTION(execPressADSKey);
@@ -255,6 +257,10 @@ class UNiagaraSystem;
 #define fpsgame_Source_fpsgame_fpscharacter_h_28_EDITOR_ONLY_RPC_WRAPPERS_NO_PURE_DECLS
 #endif //WITH_EDITOR
 #define fpsgame_Source_fpsgame_fpscharacter_h_28_EVENT_PARMS \
+	struct fpscharacter_eventBP_BringUpWeaponForADS_Parms \
+	{ \
+		FVector SightPoint; \
+	}; \
 	struct fpscharacter_eventServerPickupWeapon_Parms \
 	{ \
 		AWeaponActor* WeaponPickup; \
@@ -377,11 +383,16 @@ public: \
 
 
 #define fpsgame_Source_fpsgame_fpscharacter_h_28_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__BASE_FOV() { return STRUCT_OFFSET(Afpscharacter, BASE_FOV); } \
 	FORCEINLINE static uint32 __PPO__DistanceToPlaceProjectileFromCamera() { return STRUCT_OFFSET(Afpscharacter, DistanceToPlaceProjectileFromCamera); } \
 	FORCEINLINE static uint32 __PPO__ReplicatedSpreadAngles() { return STRUCT_OFFSET(Afpscharacter, ReplicatedSpreadAngles); } \
 	FORCEINLINE static uint32 __PPO__SpeedForLosingAccuracy() { return STRUCT_OFFSET(Afpscharacter, SpeedForLosingAccuracy); } \
 	FORCEINLINE static uint32 __PPO__MaxMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MaxMovementSpreadModifier); } \
 	FORCEINLINE static uint32 __PPO__MinMovementSpreadModifier() { return STRUCT_OFFSET(Afpscharacter, MinMovementSpreadModifier); } \
+	FORCEINLINE static uint32 __PPO__SightSceneComponent() { return STRUCT_OFFSET(Afpscharacter, SightSceneComponent); } \
+	FORCEINLINE static uint32 __PPO__BarrelSceneComponent() { return STRUCT_OFFSET(Afpscharacter, BarrelSceneComponent); } \
+	FORCEINLINE static uint32 __PPO__SightMesh() { return STRUCT_OFFSET(Afpscharacter, SightMesh); } \
+	FORCEINLINE static uint32 __PPO__BarrelMesh() { return STRUCT_OFFSET(Afpscharacter, BarrelMesh); } \
 	FORCEINLINE static uint32 __PPO__MuzzleCounter() { return STRUCT_OFFSET(Afpscharacter, MuzzleCounter); } \
 	FORCEINLINE static uint32 __PPO__EndPoints() { return STRUCT_OFFSET(Afpscharacter, EndPoints); } \
 	FORCEINLINE static uint32 __PPO__HeadMaterial() { return STRUCT_OFFSET(Afpscharacter, HeadMaterial); } \

@@ -6,12 +6,11 @@
 #include "GameFramework/Actor.h"
 #include "Components/SphereComponent.h"
 #include "Components/BoxComponent.h"
-#include "FPSProjectile.h"
 #include "InteractableObjectComponent.h"
 #include "NiagaraSystem.h"
 #include "FPSProjectile.h"
 #include "Curves/CurveVector.h"
-#include "SightData.h"
+#include "SightAttachment.h"
 #include "WeaponActor.generated.h"
 
 UENUM(BlueprintType)
@@ -273,6 +272,7 @@ public:
 		FVector SightAttachmentPoint;
 
 };
+
 USTRUCT(BlueprintType)
 struct FWeaponAttachmentsStruct
 {
@@ -281,10 +281,11 @@ struct FWeaponAttachmentsStruct
 
 public:
 	//Sight attachment
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		USightData* SightAttachment;
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon Attachments")
+		TSubclassOf<class USightAttachment> SightAttachment;
 
 };
+
 USTRUCT(BlueprintType)
 struct FWeaponDataStruct
 {
@@ -330,7 +331,7 @@ public:
 
 
 
-UCLASS()
+UCLASS(Blueprintable)
 class FPSGAME_API AWeaponActor : public AActor
 {
 	GENERATED_BODY()

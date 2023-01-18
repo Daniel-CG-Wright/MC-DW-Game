@@ -71,6 +71,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Recoil Settings")
 		bool ApplyRecoilRecoverySetting;
 
+	//Records if the player wishes to toggle or hold ADS
+	UPROPERTY(EditAnywhere)
+		bool bToggleADS;
 
 private:
 	//Whether or not to perform rewind component rewinding
@@ -78,6 +81,8 @@ private:
 
 protected:
 	
+	UPROPERTY(BlueprintReadOnly)
+		float BASE_FOV;
 
 	UPROPERTY(EditAnywhere)
 		//The distance in front the camera to spawn the projectile when shooting (to prevent clipping into own collision)
@@ -131,20 +136,46 @@ protected:
 	UFUNCTION()
 		void PressADSKey();
 
+	float CalculateFOVFromZoom(float Zoom);
+
 	UFUNCTION()
 		void ReleaseADSKey();
 
 	UFUNCTION()
 		void AimDownSights();
 
+	//Correctly position weapon
+	UFUNCTION()
+		void BringWeaponUpForADS();
+
 	UFUNCTION()
 		void StopAimingDownSights();
-
+	
 	UFUNCTION(BlueprintImplementableEvent)
+		void BP_BringUpWeaponForADS(FVector const SightPoint);
+
+
+/*	UFUNCTION(BlueprintImplementableEvent)
 		void BPImplementation_AimDownSights();
 
 	UFUNCTION(BlueprintImplementableEvent)
 		void BPImplementation_StopAimingDownSights();
+*/
+	//Sight attachment point
+	UPROPERTY(VisibleDefaultsOnly)
+		USceneComponent* SightSceneComponent;
+
+	//Barrel attachment point
+	UPROPERTY(VisibleDefaultsOnly)
+		USceneComponent* BarrelSceneComponent;
+
+	//Sight mesh
+	UPROPERTY(VisibleDefaultsOnly)
+		UStaticMeshComponent* SightMesh;
+
+	//BarrelMesh
+	UPROPERTY(VisibleDefaultsoNly)
+		UStaticMeshComponent* BarrelMesh;
 
 //Firing functions
 protected:

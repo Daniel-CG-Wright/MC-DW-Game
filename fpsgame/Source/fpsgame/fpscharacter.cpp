@@ -8,6 +8,7 @@
 #include "TimerManager.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "SightData.h"
 #include "DrawDebugHelpers.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 
@@ -70,6 +71,17 @@ Afpscharacter::Afpscharacter()
 
 	/*The above scene component is where the weapon object will actually attach to when equipped.*/
 
+	//Attachment setup
+	SightSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Sight attachment point"));
+	SightSceneComponent->SetupAttachment(FPSGunComponent);
+	SightMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Sight mesh"));
+	SightMesh->SetupAttachment(SightSceneComponent);
+
+	BarrelSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Barrel attachment point"));
+	BarrelSceneComponent->SetupAttachment(FPSGunComponent);
+	BarrelMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Barrel mesh"));
+	BarrelMesh->SetupAttachment(BarrelSceneComponent);
+
 	//Attaches the FPS mesh to the FPS camera
 	//Enables the pawn base of the character to control camera rotation
 	FPSCameraComponent->bUsePawnControlRotation = true;
@@ -81,6 +93,8 @@ Afpscharacter::Afpscharacter()
 	InvertY = false;
 	ToggleCrouch = true;
 	ToggleSprint = false;
+
+	BASE_FOV = 90.0f;
 
 
 	//Initialize stamina
@@ -255,19 +269,88 @@ void Afpscharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 void Afpscharacter::PressADSKey()
 {
+	/// <summary>
+	/// Functionality for pressing ADS key
+	/// </summary>
+	if (bToggleADS)
+	{
+		if (bIsADS)
+		{
+			//Toggle is enabled and is already aiming down sights
+			StopAimingDownSights();
 
+		}
+		else
+		{
+			//Toggle is enabled, not yhet aiming down sights
+			AimDownSights();
+		}
+	}
+	else
+	{
+		//No toggle, so aim down sights
+		AimDownSights();
+	}
 }
+
 void Afpscharacter::ReleaseADSKey()
 {
+	///Functionality for releasing ADS key
+	//If not toggling, release ADS
+	if (!bToggleADS)
+	{
+		StopAimingDownSights();
+	}
+}
+
+float Afpscharacter::CalculateFOVFromZoom(float Zoom)
+{
+
+	//Needed because zoom is given, but FOV is the required output.
+	float basefovinrads = FMath::DegreesToRadians(BASE_FOV);
+
+	float newfovinrads = FMath::Atan(FMath::Tan(basefovinrads) / Zoom);
+
+	return FMath::RadiansToDegrees(newfovinrads);
 
 }
+
 void Afpscharacter::AimDownSights()
 {
+	///Aim down sights logic.
+	bIsADS = true;
+
+	TSubclassOf<USightAttachment> SightData = GetCurrentlyEquippedWeaponData().Attachments.SightAttachment;
+
+	UE_LOG(LogTemp, Warning, TEXT("Name : %s"), *SightData->StaticClass()->GetName());
+	/*//Get sight data
+	TSubclassOf<class USightData> Sightdata = GetCurrentlyEquippedWeaponData().Attachments.SightAttachment;
+
+	if (!Sightdata)
+	{
+		return;
+	}
+	
+	//Brings the weapon to the correct position for ADS
+	BringWeaponUpForADS();
+
+	//Set zoom
+	FPSCameraComponent->SetFieldOfView(Sightdata->ZoomFactor);*/
+
+}
+void Afpscharacter::BringWeaponUpForADS()
+{
+	//Bring the weapon tot he correct ADS position
+	//FVector WeaponSightPoint = GetCurrentlyEquippedWeaponData().AttachmentSockets.SightAttachmentPoint + GetCurrentlyEquippedWeaponData().Attachments.SightAttachment->OffsetFromAttachmentPoint;
+
+	//BP_BringUpWeaponForADS(WeaponSightPoint);
+
 
 }
 void Afpscharacter::StopAimingDownSights()
 {
-
+	bIsADS = false;
+	FPSCameraComponent->SetFieldOfView(BASE_FOV);
 }
 
 void Afpscharacter::OnPressFire()
