@@ -37,12 +37,7 @@ AWeaponActor::AWeaponActor()
 	BarrelSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("BarrelSceneComponent"));
 	MagSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("MagSceneComponent"));
 	StockSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("StockSceneComponent"));
-	if (WeaponData.Attachments.SightAttachment)
-	{
-		SightMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SightMeshComponent"));
-		SightMeshComponent->SetupAttachment(SightSceneComponent);
-		SightMeshComponent->SetRelativeLocation(WeaponData.Attachments.SightAttachment->OffsetFromAttachmentPoint);
-	}
+
 }
 
 // Called when the game starts or when spawned
@@ -50,8 +45,16 @@ void AWeaponActor::BeginPlay()
 {
 	Super::BeginPlay();
 	//placeholder to set mag ammo to max ammo, will need changing later.
-	WeaponData.Stats.MagAmmo = WeaponData.Stats.MaxMagSize;
+	MagAmmo = WeaponData.Stats.MaxMagSize;
 	
+}
+
+// Replicated properties tracking
+void AWeaponActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	// Replicate to everyone
+	DOREPLIFETIME(AWeaponActor, MagAmmo);
 }
 
 // Called every frame
@@ -95,3 +98,8 @@ void AWeaponActor::OnUnequipWeapon()
 	// e.g. change weapon's mesh to the one that is on the ground
 }
 
+// Called to set the weapon ammo, should only be called on server
+void AWeaponActor::SetAmmo(int NewAmmo)
+{
+	MagAmmo = NewAmmo;
+}

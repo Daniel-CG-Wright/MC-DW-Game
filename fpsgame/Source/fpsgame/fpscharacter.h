@@ -12,6 +12,7 @@
 #include "FPSGameState.h"
 #include "FPSGameModeDefault.h"
 #include "NiagaraSystem.h"
+#include "PlayerWeaponSystem.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 
 //Should always be the last include
@@ -515,19 +516,16 @@ protected:
 		int lognum = 0;
 #endif
 
-	//Stores data for primary weapon
-	UPROPERTY(Replicated)
-		FWeaponDataStruct PrimaryData;
-
-	UPROPERTY(Replicated)
-		FWeaponDataStruct SecondaryData;
-
-	UFUNCTION(BlueprintCallable)
-		FWeaponDataStruct GetCurrentlyEquippedWeaponData();
+	// Stores the weapon system
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Weapon System", meta = (AllowPrivateAccess = "true"))
+		class UPlayerWeaponSystem* WeaponSystem;
 
 	UFUNCTION()
 		void UpdateAmmoDisplay();
 
+	// Get the currently equipped weapon data
+	UFUNCTION(BlueprintCallable, Category = "Weapon System")
+		FWeaponDataStruct GetCurrentlyEquippedWeaponData() { return WeaponSystem->GetCurrentWeapon()->GetWeaponDataStruct(); }
 	//Used to display the ammo of the player, updated whenever ammo is changed.
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		FString AmmoDisplay;
@@ -649,10 +647,6 @@ protected:
 		//Guns EquippedGun;
 
 
-	UFUNCTION()
-		//Replicates gun equip on clients - when someone switches gun on server, all cleints must replicate this visually.
-		void OnRep_ChangeWeapon();
-
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		//Localfunction for picking up weapon from floor
 		void PickupWeapon(AWeaponActor* WeaponPickup);
@@ -674,9 +668,9 @@ protected:
 		//Initial local function call for switching weapon
 		void SwitchSecondary(bool bIsRep = false);
 	
-	UFUNCTION()
-		//Does the actual positioning of gun in first person
-		void PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip);
+	//UFUNCTION()
+	//	//Does the actual positioning of gun in first person
+	//	void PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip);
 
 	UFUNCTION()
 		void PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip);
@@ -696,20 +690,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-
-
-	//First person gun scene component
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		USceneComponent* FPSGunComponent;
-
-	//UFUNCTION(BlueprintPure, Category = "Weapon")
-		//Gets current weapon equipped
-		//FORCEINLINE AWeaponActor* GetEquippedWeapon() { return ; }
-
-	//UFUNCTION(BlueprintCallable, Category = "Weapon")
-		//Sets current equipped weapon
-		//void SetEquippedWeapon(AWeaponActor* WeaponClass);
 
 	//FPS camera component
 	UPROPERTY(VisibleAnywhere)
@@ -774,15 +754,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Stamina")
 		float LoseStamina(float LostStamina);
 
-	//Stores the currently equipped item (e.g. gun, knife) using enum
-	UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_ChangeWeapon)
-		Equips EquippedGun;
-
 	//SHOULD BE USED WHEN NEEDING TO CHANGE CURRENT AMMO, AS IT CHANGES DISPLAY AMMO TOO
 	UFUNCTION()
 		void SetCurrentAmmo(int NewAmmo);
 
 	UFUNCTION()
-		int GetCurrentAmmo() { return GetCurrentlyEquippedWeaponData().Stats.MagAmmo; }
+		int GetCurrentAmmo() { return WeaponSystem->GetCurrentWeapon()->MagAmmo; }
 
 };

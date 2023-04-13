@@ -14,96 +14,109 @@ struct FWeaponDataStruct;
 #endif
 #define FPSGAME_WeaponActor_generated_h
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_292_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_277_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWeaponDataStruct_Statics; \
 	FPSGAME_API static class UScriptStruct* StaticStruct();
 
 
 template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponDataStruct>();
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_280_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FWeaponAttachmentsStruct_Statics; \
-	FPSGAME_API static class UScriptStruct* StaticStruct();
-
-
-template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponAttachmentsStruct>();
-
-#define fpsgame_Source_fpsgame_WeaponActor_h_264_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_262_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWeaponAttachmentSocketStruct_Statics; \
 	FPSGAME_API static class UScriptStruct* StaticStruct();
 
 
 template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponAttachmentSocketStruct>();
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_235_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_233_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWeaponRecoil_Statics; \
 	FPSGAME_API static class UScriptStruct* StaticStruct();
 
 
 template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponRecoil>();
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_174_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_176_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWeaponStats_Statics; \
 	FPSGAME_API static class UScriptStruct* StaticStruct();
 
 
 template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponStats>();
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_135_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_137_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWeaponMetaData_Statics; \
 	FPSGAME_API static class UScriptStruct* StaticStruct();
 
 
 template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponMetaData>();
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_113_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_115_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWeaponVisualAssets_Statics; \
 	FPSGAME_API static class UScriptStruct* StaticStruct();
 
 
 template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponVisualAssets>();
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_78_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_80_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWeaponPositionalDetails_Statics; \
 	FPSGAME_API static class UScriptStruct* StaticStruct();
 
 
 template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponPositionalDetails>();
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_SPARSE_DATA
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_SPARSE_DATA
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execRenderAttachments); \
+	DECLARE_FUNCTION(execSetAmmo); \
+	DECLARE_FUNCTION(execOnUnequipWeapon); \
+	DECLARE_FUNCTION(execOnEquipWeapon); \
+	DECLARE_FUNCTION(execOnDropWeapon); \
+	DECLARE_FUNCTION(execOnPickupWeapon); \
 	DECLARE_FUNCTION(execSetWeaponDataStruct); \
 	DECLARE_FUNCTION(execGetWeaponDataStruct);
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execRenderAttachments); \
+	DECLARE_FUNCTION(execSetAmmo); \
+	DECLARE_FUNCTION(execOnUnequipWeapon); \
+	DECLARE_FUNCTION(execOnEquipWeapon); \
+	DECLARE_FUNCTION(execOnDropWeapon); \
+	DECLARE_FUNCTION(execOnPickupWeapon); \
 	DECLARE_FUNCTION(execSetWeaponDataStruct); \
 	DECLARE_FUNCTION(execGetWeaponDataStruct);
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWeaponActor(); \
 	friend struct Z_Construct_UClass_AWeaponActor_Statics; \
 public: \
 	DECLARE_CLASS(AWeaponActor, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/fpsgame"), NO_API) \
-	DECLARE_SERIALIZER(AWeaponActor)
+	DECLARE_SERIALIZER(AWeaponActor) \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		MagAmmo=NETFIELD_REP_START, \
+		NETFIELD_REP_END=MagAmmo	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_INCLASS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_INCLASS \
 private: \
 	static void StaticRegisterNativesAWeaponActor(); \
 	friend struct Z_Construct_UClass_AWeaponActor_Statics; \
 public: \
 	DECLARE_CLASS(AWeaponActor, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/fpsgame"), NO_API) \
-	DECLARE_SERIALIZER(AWeaponActor)
+	DECLARE_SERIALIZER(AWeaponActor) \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		MagAmmo=NETFIELD_REP_START, \
+		NETFIELD_REP_END=MagAmmo	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AWeaponActor(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AWeaponActor) \
@@ -116,7 +129,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AWeaponActor(AWeaponActor&&); \
@@ -127,36 +140,36 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AWeaponActor)
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_PRIVATE_PROPERTY_OFFSET \
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__WeaponData() { return STRUCT_OFFSET(AWeaponActor, WeaponData); } \
 	FORCEINLINE static uint32 __PPO__SightSceneComponent() { return STRUCT_OFFSET(AWeaponActor, SightSceneComponent); } \
 	FORCEINLINE static uint32 __PPO__BarrelSceneComponent() { return STRUCT_OFFSET(AWeaponActor, BarrelSceneComponent); } \
 	FORCEINLINE static uint32 __PPO__MagSceneComponent() { return STRUCT_OFFSET(AWeaponActor, MagSceneComponent); } \
 	FORCEINLINE static uint32 __PPO__StockSceneComponent() { return STRUCT_OFFSET(AWeaponActor, StockSceneComponent); } \
-	FORCEINLINE static uint32 __PPO__SightMeshComponent() { return STRUCT_OFFSET(AWeaponActor, SightMeshComponent); }
+	FORCEINLINE static uint32 __PPO__AttachmentSystem() { return STRUCT_OFFSET(AWeaponActor, AttachmentSystem); }
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_334_PROLOG
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_314_PROLOG
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_SPARSE_DATA \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_INCLASS \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_SPARSE_DATA \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_INCLASS \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_WeaponActor_h_337_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_WeaponActor_h_317_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_SPARSE_DATA \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_WeaponActor_h_337_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_SPARSE_DATA \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_WeaponActor_h_317_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

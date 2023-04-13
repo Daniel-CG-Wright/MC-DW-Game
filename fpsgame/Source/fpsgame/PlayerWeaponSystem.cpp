@@ -12,9 +12,16 @@ UPlayerWeaponSystem::UPlayerWeaponSystem()
 
 	// initialize array of weapons
 	Weapons.Init(nullptr, 3);
-
 }
 
+// Replicated properties tracking
+void UPlayerWeaponSystem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	// Replicate to everyone
+	DOREPLIFETIME(UPlayerWeaponSystem, Weapons);
+	DOREPLIFETIME(UPlayerWeaponSystem, CurrentWeaponSlot);
+}
 
 // Called when the game starts
 void UPlayerWeaponSystem::BeginPlay()
@@ -35,8 +42,9 @@ void UPlayerWeaponSystem::TickComponent(float DeltaTime, ELevelTick TickType, FA
 }
 
 // Called when a new weapon is picked up
-void UPlayerWeaponSystem::AddWeapon(AWeaponActor* Weapon)
+void UPlayerWeaponSystem::AddWeapon(AWeaponActor* Weapon, bool SwitchAfterPickup)
 {
+
 	// check if weapon is valid
 	if (Weapon)
 	{
@@ -47,22 +55,32 @@ void UPlayerWeaponSystem::AddWeapon(AWeaponActor* Weapon)
 		}
 		// add weapon to array
 		Weapon->OnPickupWeapon();
+		int equipslot = -1;
 		switch (Weapon->GetWeaponDataStruct().MetaData.TypeOfEquip)
 		{
 			case Equips::PRIMARY:
 				Weapons[0] = Weapon;
+				equipslot = 0;
 				break;
 			case Equips::SECONDARY:
 				Weapons[1] = Weapon;
+				equipslot = 1;
 				break;
 			case Equips::MELEE:
 				Weapons[2] = Weapon;
+				equipslot = 2;
 				break;
 			case Equips::BOTH:
 				Weapons[CurrentWeaponSlot] = Weapon;
+				equipslot = CurrentWeaponSlot;
 				break;
 			default:
 				break;
+		}
+		// if the user wants to switch, and there is a valid equip slot, then switch to the new weapon
+		if (SwitchAfterPickup && equipslot >= 0 && equipslot <= 2)
+		{
+			EquipWeapon(equipslot);
 		}
 		// NOTE this uses pointer comparison, so it will only work if the weapon is the same instance
 		// if you want to check if the weapon is the same type, you will need to implement a custom function
@@ -80,13 +98,63 @@ void UPlayerWeaponSystem::RemoveWeapon(AWeaponActor* Weapon)
 		// check if weapon is in the array
 		if (Weapons.Contains(Weapon))
 		{
+			// unequip if it is the current weapon
+			if (Weapons.Find(Weapon) == CurrentWeaponSlot)
+			{
+				// Call weapon unequipped function
+				Weapon->OnUnequipWeapon();
+			}
 			// Call weapon unequipped function
 			Weapon->OnDropWeapon();
 			// remove weapon from array
-			Weapons.Remove(Weapon);
+			Weapons[Weapons.Find(Weapon)] = nullptr;
+			SwitchToNextAvailableWeapon();
 		}
 	}
 }
+
+// Remove a weapon by slot
+void UPlayerWeaponSystem::RemoveWeapon(int SlotNumber)
+{
+	// check if slot number is valid
+	if (SlotNumber >= 0 && SlotNumber < Weapons.Num())
+	{
+		// check if weapon is valid
+		if (Weapons[SlotNumber])
+		{
+			// unequip if it is the current weapon
+			if (SlotNumber == CurrentWeaponSlot)
+			{
+				// Call weapon unequipped function
+				Weapons[SlotNumber]->OnUnequipWeapon();
+			}
+			// Call weapon unequipped function
+			Weapons[SlotNumber]->OnDropWeapon();
+			// remove weapon from array
+			Weapons[SlotNumber] = nullptr;
+			// Switch to next available weapon
+			SwitchToNextAvailableWeapon();
+		}
+	}
+}
+
+// Get the next available weapon slot and equip that weapon
+void UPlayerWeaponSystem::SwitchToNextAvailableWeapon()
+{
+	
+	// loop through all the weapons
+	for (int i = 0; i < Weapons.Num(); i++)
+	{
+		// check if weapon is valid
+		if (Weapons[i])
+		{
+			EquipWeapon(i);
+			// break out of loop
+			break;
+		}
+	}
+}
+
 
 // Called when a weapon is equipped, slot number is as follows:
 // 0 - Primary
@@ -142,4 +210,47 @@ void UPlayerWeaponSystem::OnRep_WeaponChanged()
 {
 	// run equip weapon function
 	EquipWeapon(CurrentWeaponSlot);
+}
+
+// Setting the ammo of the weapon in the given slot
+void UPlayerWeaponSystem::SetAmmo(int SlotNumber, int Ammo)
+{
+	// If not server, call server function
+	// else run the code below
+	if (GetOwnerRole() != ROLE_Authority)
+	{
+		ServerSetAmmo(SlotNumber, Ammo);
+		return;
+	}
+	// check if slot number is valid
+	if (SlotNumber >= 0 && SlotNumber < Weapons.Num())
+	{
+		// check if weapon is valid
+		if (Weapons[SlotNumber])
+		{
+			// set ammo
+			Weapons[SlotNumber]->SetAmmo(Ammo);
+		}
+	}
+}
+
+// Set ammo of the current weapon
+void UPlayerWeaponSystem::SetAmmo(int Ammo)
+{
+	if (GetOwnerRole() != ROLE_Authority)
+	{
+		ServerSetAmmo(CurrentWeaponSlot, Ammo);
+		return;
+	}
+}
+
+// Server implementation for setting ammo
+bool UPlayerWeaponSystem::ServerSetAmmo_Validate(int SlotNumber, int Ammo)
+{
+	return true;
+}
+
+void UPlayerWeaponSystem::ServerSetAmmo_Implementation(int SlotNumber, int Ammo)
+{
+	SetAmmo(SlotNumber, Ammo);
 }

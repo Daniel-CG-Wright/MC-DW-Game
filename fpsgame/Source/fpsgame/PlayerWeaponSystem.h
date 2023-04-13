@@ -9,6 +9,7 @@ This class is used to manage the weapons of the player.
 #include "Components/ActorComponent.h"
 #include "WeaponActor.h"
 #include "WeaponAttachmentSystem.h"
+#include "Net/UnrealNetwork.h"
 #include "PlayerWeaponSystem.generated.h"
 
 
@@ -33,13 +34,21 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	// Replicated properties tracking
+	//Property replication
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 	// Called when a new weapon is picked up
 	UFUNCTION(BlueprintCallable, Category = "PlayerWeaponSystem")
-		void AddWeapon(AWeaponActor* Weapon);
+		void AddWeapon(AWeaponActor* Weapon, bool SwitchAfterPickup);
 
-	// Called when a weapon is dropped
+	void RemoveWeapon(AWeaponActor* Weapon);
+
+	void RemoveWeapon(int SlotNumber);
+
+	// Switch to the next available weapon if the current weappon is dropped
 	UFUNCTION(BlueprintCallable, Category = "PlayerWeaponSystem")
-		void RemoveWeapon(AWeaponActor* Weapon);
+		void SwitchToNextAvailableWeapon();
 
 	/* Called when a weapon is equipped, slot number is as follows:
 	* 0 - Primary
@@ -50,7 +59,8 @@ public:
 		void EquipWeapon(int SlotNumber);
 	
 	// Array storing all weapons equipped, length of 3 for 3 slots
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerWeaponSystem")
+	// Should be replicated from server to client.
+	UPROPERTY(Replicated)
 		TArray<AWeaponActor*> Weapons;
 
 	// Current weapon slot equipped
@@ -60,11 +70,19 @@ public:
 		int CurrentWeaponSlot;
 
 	// Called when the current weapon slot is changed (on clients)
-	UPROPERTY()
+	UFUNCTION()
 		void OnRep_WeaponChanged();
 
 	// Get the current weapon equipped
 	UFUNCTION(BlueprintCallable, Category = "PlayerWeaponSystem")
 		AWeaponActor* GetCurrentWeapon();
+
+	void SetAmmo(int SlotNumber, int Ammo);
+
+	// Server RPC call for setting the ammo of the weapon in the given slot
+	UFUNCTION(Server, Reliable, WithValidation)
+		void ServerSetAmmo(int SlotNumber, int Ammo);
+
+	void SetAmmo(int Ammo);
 
 };

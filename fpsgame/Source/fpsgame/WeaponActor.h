@@ -11,6 +11,8 @@
 #include "FPSProjectile.h"
 #include "Curves/CurveVector.h"
 #include "SightAttachment.h"
+#include "WeaponAttachmentSystem.h"
+#include "Net/UnrealNetwork.h"
 #include "WeaponActor.generated.h"
 
 UENUM(BlueprintType)
@@ -198,10 +200,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 		int MaxMagSize;
 
-	//Ammo in the mag currently
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-		int MagAmmo;
-
 	//Speed of projectile rounds fired
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
 	//	float ProjectileSpeed;
@@ -274,19 +272,6 @@ public:
 };
 
 USTRUCT(BlueprintType)
-struct FWeaponAttachmentsStruct
-{
-	//Some data we are pulling directly from the attachments. Others will apply their changes to the weapon directly as a gun's attachments cannot change.
-	GENERATED_BODY()
-
-public:
-	//Sight attachment
-	UPROPERTY(EditDefaultsOnly, Category = "Weapon Attachments")
-		USightAttachment* SightAttachment;
-
-};
-
-USTRUCT(BlueprintType)
 struct FWeaponDataStruct
 {
 	GENERATED_BODY()
@@ -319,11 +304,6 @@ public:
 	//Attachment ports
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FWeaponAttachmentSocketStruct AttachmentSockets;
-
-	//Attachments
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FWeaponAttachmentsStruct Attachments;
-
 
 };
 
@@ -364,15 +344,18 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		USceneComponent* StockSceneComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		UMeshComponent* SightMeshComponent;
-
 	// do the same for the other attachments
 
+	// Attachment system object ref
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UWeaponAttachmentSystem* AttachmentSystem;
 	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	// Replicated property tracking
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		USceneComponent* RootSceneComponent;
@@ -380,6 +363,10 @@ public:
 	//Used to detect whether gun is near player for pickups
 	//UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")
 	//	UBoxComponent* CollisionComponent;
+
+	//Ammo in the mag currently
+	UPROPERTY(Replicated)
+		int MagAmmo;
 
 	UPROPERTY(EditAnywhere, Category = "Weapon Collision")
 		FVector BoxCollisionSize;
@@ -414,5 +401,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void OnUnequipWeapon();
 
+	// Called to set the weapon ammo
+	UFUNCTION(BlueprintCallable)
+		void SetAmmo(int NewAmmo);
 
 };

@@ -19,6 +19,7 @@ Afpscharacter::Afpscharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	RootComponent = GetCapsuleComponent();
+	WeaponSystem = NewObject<UPlayerWeaponSystem>(this, UPlayerWeaponSystem::StaticClass(), TEXT("WeaponSystem"));
 
 	//Creates a first person camera component instance
 	FPSCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
@@ -54,33 +55,15 @@ Afpscharacter::Afpscharacter()
 	//Created on client but doens't do anything unless on server
 	//FPSRewindComponent = CreateDefaultSubobject<URewindComponent>(TEXT("RewindComponent"));
 	
-	//Creating the FPS weapon scene component, which is separate from the 3rd person gun mesh.
-	FPSGunComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Scene Component"));
-	FPSGunComponent->SetupAttachment(FPSCameraComponent);
-
-	
 	FPSMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Gun Muzzle"));
 	FPSMuzzleComponent->SetupAttachment(FPSMesh);
 	check(FPSMuzzleComponent != nullptr);
-
-	FPSMesh->SetupAttachment(FPSGunComponent);
 
 	TPMuzzleComponent = CreateDefaultSubobject<USceneComponent>(TEXT("TP Muzzle"));
 	TPMuzzleComponent->SetupAttachment(ThirdPersonGunMesh);
 	check(TPMuzzleComponent != nullptr);
 
 	/*The above scene component is where the weapon object will actually attach to when equipped.*/
-
-	//Attachment setup
-	SightSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Sight attachment point"));
-	SightSceneComponent->SetupAttachment(FPSGunComponent);
-	SightMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Sight mesh"));
-	SightMesh->SetupAttachment(SightSceneComponent);
-
-	BarrelSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Barrel attachment point"));
-	BarrelSceneComponent->SetupAttachment(FPSGunComponent);
-	BarrelMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Barrel mesh"));
-	BarrelMesh->SetupAttachment(BarrelSceneComponent);
 
 	//Attaches the FPS mesh to the FPS camera
 	//Enables the pawn base of the character to control camera rotation
@@ -162,14 +145,6 @@ void Afpscharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	DOREPLIFETIME_CONDITION(Afpscharacter, IsSprinting, COND_SimulatedOnly);
 
 	DOREPLIFETIME_CONDITION(Afpscharacter, CurrentlyCrouching, COND_SimulatedOnly);
-
-	//Replicate gun
-	DOREPLIFETIME(Afpscharacter, EquippedGun);
-
-	//Replicate weapon data so that players know what gun you have equipped
-	DOREPLIFETIME(Afpscharacter, PrimaryData);
-
-	DOREPLIFETIME(Afpscharacter, SecondaryData);
 
 	//For replicating pitch
 	DOREPLIFETIME_CONDITION(Afpscharacter, SynchronisedControlRotation, COND_SimulatedOnly);
@@ -357,7 +332,7 @@ void Afpscharacter::OnPressFire()
 {
 
 	
-	if (((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel != Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel != Guns::NONE)) && !GetWorld()->GetTimerManager().TimerExists(BurstFireTimer))
+	if (!WeaponSystem->GetCurrentWeapon() && !GetWorld()->GetTimerManager().TimerExists(BurstFireTimer))
 	{
 		if (GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f)
 		{
@@ -795,37 +770,6 @@ float Afpscharacter::LoseStamina(float LostStamina)
 	return staminaRemains;
 }
 
-void Afpscharacter::OnRep_ChangeWeapon()
-{
-	switch (EquippedGun)
-	{
-	case Equips::PRIMARY:
-		SwitchPrimary(true);
-		break;
-	case Equips::SECONDARY:
-		SwitchSecondary(true);
-		break;
-	default:
-		break;
-	}
-}
-
-FWeaponDataStruct Afpscharacter::GetCurrentlyEquippedWeaponData()
-{
-	//Replaced the use of a third vairable, CurrentlyEquippedWeaponData, to avoid copying data redundantly.
-
-	switch (EquippedGun)
-	{
-	case Equips::PRIMARY:
-		return PrimaryData;
-	
-	case Equips::SECONDARY:
-		return SecondaryData;
-
-	default:
-		return PrimaryData;
-	}
-}
 bool Afpscharacter::CollisionInteractCheck(AActor* CollidingActor)
 {
 	//Currently, there does not seem to be a need to implement collision-based picking up of guns.
@@ -1039,75 +983,7 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 
 
 	//Logic for picking up weapon goes here
-
-	//Get weapon data, and weapon equip type
-	FWeaponDataStruct WeaponData = WeaponPickup->GetWeaponDataStruct();
-	Equips WeaponEquipType = WeaponData.MetaData.TypeOfEquip;
-	
-	//First we must decide whether to switch our primary or secondary depending on which weapon type the gun is.
-	switch (WeaponEquipType)
-	{
-	case Equips::PRIMARY:
-		PrimaryData = WeaponData;
-
-		break;
-
-	case Equips::SECONDARY:
-		SecondaryData = WeaponData;
-		break;
-
-	case Equips::BOTH:
-		if (EquippedGun == Equips::PRIMARY)
-		{
-			PrimaryData = WeaponData;
-		}
-		else
-		{
-			SecondaryData = WeaponData;
-		}
-		break;
-
-	default:
-		UE_LOG(LogTemp, Warning, TEXT("WEAPON EQUIP TYPE NOT PRIMARY, SECONDARY OR BOTH - WARNING!!!"));
-		return;
-	}
-
-	
-	//Switch weapon if this is a player preference
-	if (SwitchWeaponAfterPickup)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("vomitingin"));
-		switch (WeaponEquipType)
-		{
-		case Equips::PRIMARY:
-			SwitchPrimary();
-			break;
-		case Equips::SECONDARY:
-			SwitchSecondary();
-			break;
-		default:
-			break;
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("diarrhea"));
-		if (EquippedGun == WeaponEquipType)
-		{
-			if (EquippedGun == Equips::PRIMARY)
-			{
-				SwitchPrimary();
-
-			}
-			else if (EquippedGun == Equips::SECONDARY)
-			{
-				SwitchSecondary();
-			}
-		}
-	}
-	
-	//At the end of it all we destroy the weapon actor prop
-	WeaponPickup->Destroy();
+	WeaponSystem->AddWeapon(WeaponPickup, SwitchWeaponAfterPickup);
 
 }
 
@@ -1122,14 +998,9 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 {
 	UE_LOG(LogTemp, Warning, TEXT("prime"));
 	DebugFunction();
-	//Switch to primary gun
-	//Stop crashes if no primary exists
-	if (PrimaryData.MetaData.GunModel == Guns::NONE)
-	{
-		return;
-	}
+
 	//Need to run RPC on server
-	if (GetLocalRole() < ROLE_Authority && !bIsRep)
+	if (GetLocalRole() < ROLE_Authority && !bIsRep && WeaponSystem->Weapons[0])
 	{
 		ServerSwitchPrimary();
 	}
@@ -1139,16 +1010,9 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 
 	StopFiring();
 	//Logic for switching primary.
-	if (IsLocallyControlled())
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Primary FP"));
-		PositionAndAttachGunInFP(PrimaryData);
-
-	}
+	WeaponSystem->EquipWeapon(0);
 	//Still need a lot fo equip logic here TODO animatios, sounds etc
 	CalculateNewBatchOfSpreadAngles();
-	EquippedGun = Equips::PRIMARY;
-	PositionAndAttachGunInTP(PrimaryData);
 
 	UpdateAmmoDisplay();
 }
@@ -1185,14 +1049,9 @@ void Afpscharacter::DebugFunction()
 
 void Afpscharacter::SwitchSecondary(bool bIsRep)
 {
+
 	
-	//Stop crashes if no secondary exists
-	if (SecondaryData.MetaData.GunModel == Guns::NONE)
-	{
-		return;
-	}
-	
-	if (GetLocalRole() < ROLE_Authority && !bIsRep)
+	if (GetLocalRole() < ROLE_Authority && !bIsRep && WeaponSystem->Weapons[1])
 	{
 		ServerSwitchSecondary();
 	}
@@ -1202,19 +1061,9 @@ void Afpscharacter::SwitchSecondary(bool bIsRep)
 
 	StopFiring();
 
-	//Only owner needs this
-	if (IsLocallyControlled())
-	{
+	WeaponSystem->EquipWeapon(1);
 
-		//TODO REPLACE THIS AND PRIMARY WITH A SWITCHING ANIMATION PLS
-		PositionAndAttachGunInFP(SecondaryData);
-
-	
-	}
 	CalculateNewBatchOfSpreadAngles();
-	EquippedGun = Equips::SECONDARY;
-
-	PositionAndAttachGunInTP(SecondaryData);
 
 	UpdateAmmoDisplay();
 }
@@ -1223,40 +1072,6 @@ void Afpscharacter::ServerSwitchSecondary_Implementation()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Secondary pickup reliable switch call"));
 	SwitchSecondary(false);
-}
-
-void Afpscharacter::PositionAndAttachGunInFP(FWeaponDataStruct GunToEquip)
-{
-	DebugFunction();
-	//Correctly positioning gun
-	//Takes into account left-handedness
-	FVector PositionVector = (IsLeftHanded) ? FVector(GunToEquip.PositionalDetails.BasePosition.X, -1.0f * GunToEquip.PositionalDetails.BasePosition.Y, GunToEquip.PositionalDetails.BasePosition.Z) : GunToEquip.PositionalDetails.BasePosition;
-	FRotator PositionRotator = (IsLeftHanded) ? FRotator(GunToEquip.PositionalDetails.BaseRotation.Pitch, GunToEquip.PositionalDetails.BaseRotation.Yaw, -1.0f * GunToEquip.PositionalDetails.BaseRotation.Roll) : GunToEquip.PositionalDetails.BaseRotation;
-
-	FPSGunComponent->SetRelativeLocation(PositionVector);
-	FPSGunComponent->SetRelativeRotation(PositionRotator);
-	FPSGunComponent->SetRelativeScale3D(GunToEquip.PositionalDetails.BaseScale);
-
-
-
-	if (FPSMuzzleComponent == nullptr)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("NULL ERROR ALERT"));
-	}
-	UE_LOG(LogTemp, Warning, TEXT("name = %s"), *FPSMuzzleComponent->GetFName().ToString());
-	UE_LOG(LogTemp, Warning, TEXT("name2 = %s"), *FPSMuzzleComponent->GetAttachmentRootActor()->GetFName().ToString());
-	
-	FPSMuzzleComponent->SetRelativeLocation(GunToEquip.PositionalDetails.MuzzlePosition);
-	//Attach gun to scene component
-	//FPSMesh->AttachToComponent(FPSGunComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, true));
-
-	//Set gun mesh to be fps mesh
-	FPSMesh->SetSkeletalMesh(GunToEquip.VisualAssets.GunMesh);
-
-	//The above way is easier than showing gun object as it allows us to avoid having to reset eveyrthing when gun object is dropped again.
-
-	
-
 }
 
 void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
@@ -1301,7 +1116,7 @@ void Afpscharacter::ClientValidateFire()
 		return;
 	}
 	//If we dont have a gun equipped, return
-	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
+	if (!WeaponSystem->GetCurrentWeapon())
 	{
 		
 		StopFiring();
@@ -1309,8 +1124,8 @@ void Afpscharacter::ClientValidateFire()
 	}
 	
 	//UE_LOG(LogTemp, Warning, TEXT("ClientValidateFire"));
-	//Checking if we have ammo for firing
-	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0 && ((BurstRoundsToFire > 0 && GetCurrentlyEquippedWeaponData().Stats.BurstFireRate > 0.0f) || GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f))
+	//Checking if we have ammo for firing, and that we are not in burst mode or have burst rounds to fire
+	if (WeaponSystem->GetCurrentWeapon()->MagAmmo > 0 && ((BurstRoundsToFire > 0 && GetCurrentlyEquippedWeaponData().Stats.BurstFireRate > 0.0f) || GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f))
 	{
 		
 		//Activate firing functions based on firing type
@@ -1354,24 +1169,7 @@ void Afpscharacter::SetCurrentAmmo(int NewAmmo)
 {
 
 	//Should only be called on server, no effect if called on client.
-	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
-	{
-		return;
-	}
-	else
-	{
-		switch (EquippedGun)
-		{
-		case Equips::PRIMARY:
-			PrimaryData.Stats.MagAmmo = FMath::Clamp(NewAmmo, 0, PrimaryData.Stats.MaxMagSize);
-			break;
-		case Equips::SECONDARY:
-			SecondaryData.Stats.MagAmmo = FMath::Clamp(NewAmmo, 0, SecondaryData.Stats.MaxMagSize);
-			break;
-		default:
-			break;
-		}
-	}
+	WeaponSystem->SetAmmo(NewAmmo);
 
 	UpdateAmmoDisplay();
 }
@@ -1379,9 +1177,17 @@ void Afpscharacter::SetCurrentAmmo(int NewAmmo)
 void Afpscharacter::UpdateAmmoDisplay()
 {
 	AmmoDisplay = FString();
-	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().Stats.MagAmmo);
-	AmmoDisplay.Append(TEXT("/"));
-	AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().Stats.MaxMagSize);
+	// Check if the current weapon is valid
+	if (!WeaponSystem->GetCurrentWeapon())
+	{
+		return;
+	}
+	else
+	{
+		AmmoDisplay.AppendInt(WeaponSystem->GetCurrentWeapon()->MagAmmo);
+		AmmoDisplay.Append(TEXT("/"));
+		AmmoDisplay.AppendInt(GetCurrentlyEquippedWeaponData().Stats.MaxMagSize);
+	}
 }
 
 bool Afpscharacter::MultiRaycastDirectional(TArray<FHitResult>& ResultOutHit, FVector const StartPoint, FVector const EndLocation, ECollisionChannel CollisionChannel)
@@ -1636,7 +1442,7 @@ void Afpscharacter::ClientProjectileCheckFire()
 	
 
 	BurstRoundsToFire -= 1;
-	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
+	SetCurrentAmmo(WeaponSystem->GetCurrentWeapon()->MagAmmo - 1);
 
 
 	float SpreadModifier = CalculateSpreadModifier();
@@ -1680,7 +1486,7 @@ void Afpscharacter::ClientHitscanCheckFire()
 
 	
 	BurstRoundsToFire -= 1;
-	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
+	SetCurrentAmmo(WeaponSystem->GetCurrentWeapon()->MagAmmo - 1);
 
 	//UKismetSystemLibrary::DrawDebugSphere(GetWorld(), EmitterStartPoint, 10.0f, 10, FLinearColor::Green, 5.0f, 1.0f);
 
@@ -1779,7 +1585,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 	//this is because bursts work on client-side, keeping track of how much burst has been used, which may be modifiable causing infinite bursts or something.
 	bIsFiring = false;
 
-	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel == Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel == Guns::NONE))
+	if (!WeaponSystem->GetCurrentWeapon())
 	{
 		StopFiring();
 		return;
@@ -1787,7 +1593,7 @@ void Afpscharacter::ServerValidateFire_Implementation(float ClientFireTime)
 
 	//UE_LOG(LogTemp, Warning, TEXT("Server validate fire"));
 	//Checking if we have ammo for firing
-	if (GetCurrentlyEquippedWeaponData().Stats.MagAmmo > 0)
+	if (WeaponSystem->GetCurrentWeapon()->MagAmmo > 0)
 	{
 		//Activate firing functions based on firing type
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
@@ -1870,7 +1676,7 @@ void Afpscharacter::ServerProjectileCheckFire()
 
 	FVector EmitterStartPoint = TPMuzzleComponent->GetComponentLocation();
 
-	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
+	SetCurrentAmmo(WeaponSystem->GetCurrentWeapon()->MagAmmo - 1);
 
 	float SpreadModifier = CalculateSpreadModifier();
 
@@ -2051,7 +1857,7 @@ void Afpscharacter::ServerPerformHitscan()
 
 	//Muzzle start point for third person
 	FVector EmitterStartPoint = TPMuzzleComponent->GetComponentLocation();
-	SetCurrentAmmo(GetCurrentlyEquippedWeaponData().Stats.MagAmmo - 1);
+	SetCurrentAmmo(WeaponSystem->GetCurrentWeapon()->MagAmmo - 1);
 
 	TArray<FHitResult> HitResults;
 
@@ -2194,7 +2000,7 @@ void Afpscharacter::OnReload()
 	//template class for now
 	//TODO refurbish with animations and stuff, maybe switch to blueprint
 	
-	if ((EquippedGun == Equips::PRIMARY && PrimaryData.MetaData.GunModel != Guns::NONE) || (EquippedGun == Equips::SECONDARY && SecondaryData.MetaData.GunModel != Guns::NONE))
+	if (!WeaponSystem->GetCurrentWeapon())
 	{
 		if (GetLocalRole() < ROLE_Authority)
 		{
