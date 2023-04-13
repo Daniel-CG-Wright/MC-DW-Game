@@ -84,7 +84,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachment() {}
 		{ "ToolTip", "Zoom factor of sight, consider changing to a graph for multiple zoom values. 1.0x is same as normal" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_ZoomFactor = { "ZoomFactor", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, ZoomFactor), METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_ZoomFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_ZoomFactor_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_ZoomFactor = { "ZoomFactor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, ZoomFactor), METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_ZoomFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_ZoomFactor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USightAttachment_Statics::NewProp_WalkingSpeedFactor_MetaData[] = {
 		{ "Category", "SightAttachment" },
@@ -93,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachment() {}
 		{ "ToolTip", "Factor of normal walking speed caused by zooming in (1.0 is normal)" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_WalkingSpeedFactor = { "WalkingSpeedFactor", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, WalkingSpeedFactor), METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_WalkingSpeedFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_WalkingSpeedFactor_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_WalkingSpeedFactor = { "WalkingSpeedFactor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, WalkingSpeedFactor), METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_WalkingSpeedFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_WalkingSpeedFactor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USightAttachment_Statics::NewProp_SpreadAngleFactor_MetaData[] = {
 		{ "Category", "SightAttachment" },
@@ -102,7 +102,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachment() {}
 		{ "ToolTip", "Spread angle factor when aiming in (1.0 is normal)" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_SpreadAngleFactor = { "SpreadAngleFactor", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, SpreadAngleFactor), METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_SpreadAngleFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_SpreadAngleFactor_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_SpreadAngleFactor = { "SpreadAngleFactor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, SpreadAngleFactor), METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_SpreadAngleFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_SpreadAngleFactor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USightAttachment_Statics::NewProp_RecoilFactor_MetaData[] = {
 		{ "Category", "SightAttachment" },
@@ -111,7 +111,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachment() {}
 		{ "ToolTip", "Recoil factor when aiming in (1.0 is normal)" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_RecoilFactor = { "RecoilFactor", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, RecoilFactor), METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_RecoilFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_RecoilFactor_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_RecoilFactor = { "RecoilFactor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, RecoilFactor), METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_RecoilFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_RecoilFactor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USightAttachment_Statics::NewProp_OffsetFromAttachmentPoint_MetaData[] = {
 		{ "Category", "SightAttachment" },
@@ -120,7 +120,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachment() {}
 		{ "ToolTip", "The centre of the attachment's lens is this vector from the base attachment point (as centering is done by centering on the attachment point then adding this offset)." },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_OffsetFromAttachmentPoint = { "OffsetFromAttachmentPoint", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, OffsetFromAttachmentPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_OffsetFromAttachmentPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_OffsetFromAttachmentPoint_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_OffsetFromAttachmentPoint = { "OffsetFromAttachmentPoint", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, OffsetFromAttachmentPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_OffsetFromAttachmentPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_OffsetFromAttachmentPoint_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USightAttachment_Statics::NewProp_ScreenTexture_MetaData[] = {
 		{ "Category", "SightAttachment" },
@@ -129,7 +129,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachment() {}
 		{ "ToolTip", "Texture to apply across the screen when ADSing" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_ScreenTexture = { "ScreenTexture", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, ScreenTexture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_ScreenTexture_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_ScreenTexture_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USightAttachment_Statics::NewProp_ScreenTexture = { "ScreenTexture", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USightAttachment, ScreenTexture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_USightAttachment_Statics::NewProp_ScreenTexture_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachment_Statics::NewProp_ScreenTexture_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USightAttachment_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USightAttachment_Statics::NewProp_ZoomFactor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USightAttachment_Statics::NewProp_WalkingSpeedFactor,
@@ -165,7 +165,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachment() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USightAttachment, 2368353515);
+	IMPLEMENT_CLASS(USightAttachment, 2897067131);
 	template<> FPSGAME_API UClass* StaticClass<USightAttachment>()
 	{
 		return USightAttachment::StaticClass();

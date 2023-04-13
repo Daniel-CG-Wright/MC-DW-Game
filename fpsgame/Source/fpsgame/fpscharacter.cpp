@@ -320,9 +320,9 @@ void Afpscharacter::AimDownSights()
 	///Aim down sights logic.
 	bIsADS = true;
 
-	TSubclassOf<USightAttachment> SightData = GetCurrentlyEquippedWeaponData().Attachments.SightAttachment;
+	//TSubclassOf<USightAttachment> SightData = GetCurrentlyEquippedWeaponData().Attachments.SightAttachment;
 
-	UE_LOG(LogTemp, Warning, TEXT("Name : %s"), *SightData->StaticClass()->GetName());
+	//UE_LOG(LogTemp, Warning, TEXT("Name : %s"), *SightData->StaticClass()->GetName());
 	/*//Get sight data
 	TSubclassOf<class USightData> Sightdata = GetCurrentlyEquippedWeaponData().Attachments.SightAttachment;
 
@@ -762,7 +762,6 @@ void Afpscharacter::OnStaminaUpdate()
 	{
 		if (CurrentStamina <= 0)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("OUT OF STAMINA CALL"));
 			//Out of stamina
 			SetSprinting(false);
 		}

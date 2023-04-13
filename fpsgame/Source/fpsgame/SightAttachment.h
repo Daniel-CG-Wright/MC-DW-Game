@@ -14,7 +14,7 @@ class FPSGAME_API USightAttachment : public UAttachmentBase
 {
 	GENERATED_BODY()
 	
-protected:
+public:
 	//Zoom factor of sight, consider changing to a graph for multiple zoom values. 1.0x is same as normal
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float ZoomFactor;

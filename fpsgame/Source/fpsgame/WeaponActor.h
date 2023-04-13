@@ -282,7 +282,7 @@ struct FWeaponAttachmentsStruct
 public:
 	//Sight attachment
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon Attachments")
-		TSubclassOf<class USightAttachment> SightAttachment;
+		USightAttachment* SightAttachment;
 
 };
 
@@ -351,6 +351,23 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FWeaponDataStruct WeaponData;
 	
+	//Stores attachment scene componnts
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USceneComponent* SightSceneComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USceneComponent* BarrelSceneComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USceneComponent* MagSceneComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USceneComponent* StockSceneComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UMeshComponent* SightMeshComponent;
+
+	// do the same for the other attachments
 
 	
 public:	
@@ -381,6 +398,21 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void SetWeaponDataStruct(FWeaponDataStruct NewWeaponDataStruct);
 
+	// Called when the gun is picked up
+	UFUNCTION(BlueprintCallable)
+		void OnPickupWeapon();
+
+	// Called when the gun is dropped
+	UFUNCTION(BlueprintCallable)
+		void OnDropWeapon();
+
+	// Called when the gun is equipped
+	UFUNCTION(BlueprintCallable)
+		void OnEquipWeapon();
+
+	// Called when the gun is unequipped
+	UFUNCTION(BlueprintCallable)
+		void OnUnequipWeapon();
 
 
 };

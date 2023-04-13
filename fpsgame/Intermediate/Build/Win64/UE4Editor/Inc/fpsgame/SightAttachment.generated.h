@@ -60,15 +60,7 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USightAttachment)
 
 
-#define fpsgame_Source_fpsgame_SightAttachment_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ZoomFactor() { return STRUCT_OFFSET(USightAttachment, ZoomFactor); } \
-	FORCEINLINE static uint32 __PPO__WalkingSpeedFactor() { return STRUCT_OFFSET(USightAttachment, WalkingSpeedFactor); } \
-	FORCEINLINE static uint32 __PPO__SpreadAngleFactor() { return STRUCT_OFFSET(USightAttachment, SpreadAngleFactor); } \
-	FORCEINLINE static uint32 __PPO__RecoilFactor() { return STRUCT_OFFSET(USightAttachment, RecoilFactor); } \
-	FORCEINLINE static uint32 __PPO__OffsetFromAttachmentPoint() { return STRUCT_OFFSET(USightAttachment, OffsetFromAttachmentPoint); } \
-	FORCEINLINE static uint32 __PPO__ScreenTexture() { return STRUCT_OFFSET(USightAttachment, ScreenTexture); }
-
-
+#define fpsgame_Source_fpsgame_SightAttachment_h_15_PRIVATE_PROPERTY_OFFSET
 #define fpsgame_Source_fpsgame_SightAttachment_h_12_PROLOG
 #define fpsgame_Source_fpsgame_SightAttachment_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

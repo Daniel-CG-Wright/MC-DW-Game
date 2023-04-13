@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\fpsgame.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A1CDE8F7-A22D-49F2-B5E4-794B1EE0B0D6}</UniqueIdentifier>
+      <UniqueIdentifier>{CE20296F-A22C-4C52-B604-66D517F94CF4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\fpsgame.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{DF145E2B-D479-4AC6-BBC9-5BED665B2B42}</UniqueIdentifier>
+      <UniqueIdentifier>{8B42CE06-8CDF-4187-93B7-F79DF42342AB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,12 +27,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\fpsgame">
-      <UniqueIdentifier>{2F771D9F-6D05-4B5F-8BCE-8416282C401B}</UniqueIdentifier>
+      <UniqueIdentifier>{24F64C2E-18F3-420D-8476-65BD8083CCEF}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\fpsgame\AttachmentBase.cpp">
       <Filter>Source\fpsgame</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\fpsgame\AttachmentBase.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\BaseAttachmentComponent.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\BaseAttachmentComponent.h">
       <Filter>Source\fpsgame</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\fpsgame\fpscharacter.cpp">
@@ -86,6 +92,12 @@
     <ClInclude Include="..\..\Source\fpsgame\InteractableObjectComponent.h">
       <Filter>Source\fpsgame</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\PlayerWeaponSystem.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\PlayerWeaponSystem.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\fpsgame\RewindComponent.cpp">
       <Filter>Source\fpsgame</Filter>
     </ClCompile>
@@ -98,6 +110,12 @@
     <ClInclude Include="..\..\Source\fpsgame\SightAttachment.h">
       <Filter>Source\fpsgame</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\SightAttachmentComponent.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\SightAttachmentComponent.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\fpsgame\SightData.cpp">
       <Filter>Source\fpsgame</Filter>
     </ClCompile>
@@ -108,6 +126,12 @@
       <Filter>Source\fpsgame</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\fpsgame\WeaponActor.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\WeaponAttachmentSystem.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\WeaponAttachmentSystem.h">
       <Filter>Source\fpsgame</Filter>
     </ClInclude>
   </ItemGroup>

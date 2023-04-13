@@ -73,12 +73,14 @@ template<> FPSGAME_API UScriptStruct* StaticStruct<struct FWeaponPositionalDetai
 #define fpsgame_Source_fpsgame_WeaponActor_h_337_SPARSE_DATA
 #define fpsgame_Source_fpsgame_WeaponActor_h_337_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execRenderAttachments); \
 	DECLARE_FUNCTION(execSetWeaponDataStruct); \
 	DECLARE_FUNCTION(execGetWeaponDataStruct);
 
 
 #define fpsgame_Source_fpsgame_WeaponActor_h_337_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execRenderAttachments); \
 	DECLARE_FUNCTION(execSetWeaponDataStruct); \
 	DECLARE_FUNCTION(execGetWeaponDataStruct);
 
@@ -126,7 +128,12 @@ public: \
 
 
 #define fpsgame_Source_fpsgame_WeaponActor_h_337_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__WeaponData() { return STRUCT_OFFSET(AWeaponActor, WeaponData); }
+	FORCEINLINE static uint32 __PPO__WeaponData() { return STRUCT_OFFSET(AWeaponActor, WeaponData); } \
+	FORCEINLINE static uint32 __PPO__SightSceneComponent() { return STRUCT_OFFSET(AWeaponActor, SightSceneComponent); } \
+	FORCEINLINE static uint32 __PPO__BarrelSceneComponent() { return STRUCT_OFFSET(AWeaponActor, BarrelSceneComponent); } \
+	FORCEINLINE static uint32 __PPO__MagSceneComponent() { return STRUCT_OFFSET(AWeaponActor, MagSceneComponent); } \
+	FORCEINLINE static uint32 __PPO__StockSceneComponent() { return STRUCT_OFFSET(AWeaponActor, StockSceneComponent); } \
+	FORCEINLINE static uint32 __PPO__SightMeshComponent() { return STRUCT_OFFSET(AWeaponActor, SightMeshComponent); }
 
 
 #define fpsgame_Source_fpsgame_WeaponActor_h_334_PROLOG

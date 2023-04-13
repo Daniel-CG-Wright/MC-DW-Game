@@ -30,8 +30,19 @@ AWeaponActor::AWeaponActor()
 	//Creating interaction component
 	InteractionComponent = CreateDefaultSubobject<UInteractableObjectComponent>(TEXT("InteractionComponent"));
 	
-
-	
+	// Creating scene components for attachments
+	SightSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SightSceneComponent"));
+	SightSceneComponent->SetupAttachment(RootSceneComponent);
+	SightSceneComponent->SetRelativeLocation(WeaponData.AttachmentSockets.SightAttachmentPoint);
+	BarrelSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("BarrelSceneComponent"));
+	MagSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("MagSceneComponent"));
+	StockSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("StockSceneComponent"));
+	if (WeaponData.Attachments.SightAttachment)
+	{
+		SightMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SightMeshComponent"));
+		SightMeshComponent->SetupAttachment(SightSceneComponent);
+		SightMeshComponent->SetRelativeLocation(WeaponData.Attachments.SightAttachment->OffsetFromAttachmentPoint);
+	}
 }
 
 // Called when the game starts or when spawned
@@ -54,3 +65,33 @@ void AWeaponActor::SetWeaponDataStruct(FWeaponDataStruct NewWeaponDataStruct)
 {
 	WeaponData = NewWeaponDataStruct;
 }
+
+// Called when this weapon is picked up
+void AWeaponActor::OnPickupWeapon()
+{
+	// TODO implement changes to be made when picking up the weapon
+	// e.g. change weapon's mesh to the one that is held
+
+}
+
+// Called when this weapon is dropped
+void AWeaponActor::OnDropWeapon()
+{
+	// TODO implement changes to be made when dropping the weapon
+	// e.g. change weapon's mesh to the one that is on the ground
+}
+
+// Called when this weapon is equipped
+void AWeaponActor::OnEquipWeapon()
+{
+	// TODO implement changes to be made when equipping the weapon
+	// e.g. change weapon's mesh to the one that is held
+}
+
+// Called when this weapon is unequipped
+void AWeaponActor::OnUnequipWeapon()
+{
+	// TODO implement changes to be made when unequipping the weapon
+	// e.g. change weapon's mesh to the one that is on the ground
+}
+
