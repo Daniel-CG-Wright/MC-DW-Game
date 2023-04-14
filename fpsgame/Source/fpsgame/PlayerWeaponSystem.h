@@ -26,10 +26,6 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	// The weapon attachment system of this gun
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerWeaponSystem")
-		class UWeaponAttachmentSystem* WeaponAttachmentSystem;
-
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

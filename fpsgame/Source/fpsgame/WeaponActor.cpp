@@ -13,6 +13,9 @@ AWeaponActor::AWeaponActor()
 	SetRootComponent(RootSceneComponent);
 	SetActorScale3D(WeaponData.PositionalDetails.BaseScale);
 
+	// initialise attachment system
+	AttachmentSystem = CreateDefaultSubobject<UWeaponAttachmentSystem>(TEXT("AttachmentSystem"));
+
 	//Setting up weapon's mesh
 	StaticGunMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GunMesh"));
 	StaticGunMesh->SetupAttachment(RootSceneComponent);
@@ -33,7 +36,6 @@ AWeaponActor::AWeaponActor()
 	// Creating scene components for attachments
 	SightSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SightSceneComponent"));
 	SightSceneComponent->SetupAttachment(RootSceneComponent);
-	SightSceneComponent->SetRelativeLocation(WeaponData.AttachmentSockets.SightAttachmentPoint);
 	BarrelSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("BarrelSceneComponent"));
 	MagSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("MagSceneComponent"));
 	StockSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("StockSceneComponent"));

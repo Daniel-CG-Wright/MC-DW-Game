@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable, BlueprintType, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class FPSGAME_API USightAttachmentComponent : public UBaseAttachmentComponent
 {
 	GENERATED_BODY()

@@ -46,19 +46,19 @@ public:
 
 	// Called when an attachment is added.
 	UFUNCTION(BlueprintCallable, Category = "WeaponAttachmentSystem")
-		void AddAttachment(UBaseAttachmentComponent* Attachment);
+		void AddAttachment(TSubclassOf<class UBaseAttachmentComponent> Attachment);
 
 	// Called when an attachment is removed.
 	UFUNCTION(BlueprintCallable, Category = "WeaponAttachmentSystem")
-		void RemoveAttachment(UBaseAttachmentComponent* Attachment);
+		void RemoveAttachment(TSubclassOf<class UBaseAttachmentComponent> Attachment);
 
 	// Array storing all attachments.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WeaponAttachmentSystem")
-		TArray<UBaseAttachmentComponent*> Attachments;
+		TArray<TSubclassOf<class UBaseAttachmentComponent>> Attachments;
 
 	// check if this attachment is already attached to the weapon.
 	UFUNCTION(BlueprintCallable, Category = "WeaponAttachmentSystem")
-		bool IsAttachmentAttached(UBaseAttachmentComponent* Attachment);
+		bool IsAttachmentAttached(TSubclassOf<class UBaseAttachmentComponent> Attachment);
 
 	// TODO add checks to see if the type of attachment is already attached.
 	// if it is, remove it and add the new one.

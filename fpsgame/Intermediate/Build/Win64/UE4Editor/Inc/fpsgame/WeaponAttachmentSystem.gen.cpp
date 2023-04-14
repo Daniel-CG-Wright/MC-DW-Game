@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 	FPSGAME_API UClass* Z_Construct_UClass_UWeaponAttachmentSystem_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_UWeaponAttachmentSystem();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	FPSGAME_API UClass* Z_Construct_UClass_UBaseAttachmentComponent_NoRegister();
 // End Cross Module References
 	static UEnum* EAttachmentType_StaticEnum()
@@ -89,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 	}
 	DEFINE_FUNCTION(UWeaponAttachmentSystem::execIsAttachmentAttached)
 	{
-		P_GET_OBJECT(UBaseAttachmentComponent,Z_Param_Attachment);
+		P_GET_OBJECT(UClass,Z_Param_Attachment);
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(bool*)Z_Param__Result=P_THIS->IsAttachmentAttached(Z_Param_Attachment);
@@ -97,7 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 	}
 	DEFINE_FUNCTION(UWeaponAttachmentSystem::execRemoveAttachment)
 	{
-		P_GET_OBJECT(UBaseAttachmentComponent,Z_Param_Attachment);
+		P_GET_OBJECT(UClass,Z_Param_Attachment);
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->RemoveAttachment(Z_Param_Attachment);
@@ -105,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 	}
 	DEFINE_FUNCTION(UWeaponAttachmentSystem::execAddAttachment)
 	{
-		P_GET_OBJECT(UBaseAttachmentComponent,Z_Param_Attachment);
+		P_GET_OBJECT(UClass,Z_Param_Attachment);
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->AddAttachment(Z_Param_Attachment);
@@ -125,24 +126,16 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 	{
 		struct WeaponAttachmentSystem_eventAddAttachment_Parms
 		{
-			UBaseAttachmentComponent* Attachment;
+			TSubclassOf<UBaseAttachmentComponent>  Attachment;
 		};
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Attachment_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Attachment;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Attachment;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment_Statics::NewProp_Attachment_MetaData[] = {
-		{ "EditInline", "true" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventAddAttachment_Parms, Attachment), Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment_Statics::NewProp_Attachment_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment_Statics::NewProp_Attachment_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventAddAttachment_Parms, Attachment), Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment_Statics::NewProp_Attachment,
 	};
@@ -168,13 +161,10 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 	{
 		struct WeaponAttachmentSystem_eventIsAttachmentAttached_Parms
 		{
-			UBaseAttachmentComponent* Attachment;
+			TSubclassOf<UBaseAttachmentComponent>  Attachment;
 			bool ReturnValue;
 		};
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Attachment_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Attachment;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Attachment;
 		static void NewProp_ReturnValue_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -183,12 +173,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment_MetaData[] = {
-		{ "EditInline", "true" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventIsAttachmentAttached_Parms, Attachment), Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventIsAttachmentAttached_Parms, Attachment), Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 	{
 		((WeaponAttachmentSystem_eventIsAttachmentAttached_Parms*)Obj)->ReturnValue = 1;
@@ -220,24 +205,16 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 	{
 		struct WeaponAttachmentSystem_eventRemoveAttachment_Parms
 		{
-			UBaseAttachmentComponent* Attachment;
+			TSubclassOf<UBaseAttachmentComponent>  Attachment;
 		};
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Attachment_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Attachment;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Attachment;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment_Statics::NewProp_Attachment_MetaData[] = {
-		{ "EditInline", "true" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventRemoveAttachment_Parms, Attachment), Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment_Statics::NewProp_Attachment_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment_Statics::NewProp_Attachment_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventRemoveAttachment_Parms, Attachment), Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment_Statics::NewProp_Attachment,
 	};
@@ -270,7 +247,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Attachments_Inner;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Attachments_Inner;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Attachments_MetaData[];
 #endif
@@ -284,9 +261,9 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWeaponAttachmentSystem_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment, "AddAttachment" }, // 1073841605
-		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached, "IsAttachmentAttached" }, // 272846090
-		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment, "RemoveAttachment" }, // 3000207022
+		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment, "AddAttachment" }, // 3670262698
+		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached, "IsAttachmentAttached" }, // 392675384
+		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment, "RemoveAttachment" }, // 3460741095
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponAttachmentSystem_Statics::Class_MetaDataParams[] = {
@@ -296,17 +273,16 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 		{ "ModuleRelativePath", "WeaponAttachmentSystem.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Inner = { "Attachments", nullptr, (EPropertyFlags)0x0000000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Inner = { "Attachments", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData[] = {
 		{ "Category", "WeaponAttachmentSystem" },
 		{ "Comment", "// Array storing all attachments.\n" },
-		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "WeaponAttachmentSystem.h" },
 		{ "ToolTip", "Array storing all attachments." },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments = { "Attachments", nullptr, (EPropertyFlags)0x001000800000000d, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponAttachmentSystem, Attachments), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments = { "Attachments", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponAttachmentSystem, Attachments), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWeaponAttachmentSystem_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments,
@@ -338,7 +314,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWeaponAttachmentSystem, 3789976106);
+	IMPLEMENT_CLASS(UWeaponAttachmentSystem, 1839684489);
 	template<> FPSGAME_API UClass* StaticClass<UWeaponAttachmentSystem>()
 	{
 		return UWeaponAttachmentSystem::StaticClass();

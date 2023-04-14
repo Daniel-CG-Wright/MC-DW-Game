@@ -18,7 +18,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor_NoRegister();
-	FPSGAME_API UClass* Z_Construct_UClass_UWeaponAttachmentSystem_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UPlayerWeaponSystem::execServerSetAmmo)
 	{
@@ -300,10 +299,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponAttachmentSystem_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WeaponAttachmentSystem;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapons_Inner;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Weapons_MetaData[];
@@ -337,16 +332,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 		{ "ModuleRelativePath", "PlayerWeaponSystem.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_WeaponAttachmentSystem_MetaData[] = {
-		{ "Category", "PlayerWeaponSystem" },
-		{ "Comment", "// The weapon attachment system of this gun\n" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "PlayerWeaponSystem.h" },
-		{ "ToolTip", "The weapon attachment system of this gun" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_WeaponAttachmentSystem = { "WeaponAttachmentSystem", nullptr, (EPropertyFlags)0x002008000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UPlayerWeaponSystem, WeaponAttachmentSystem), Z_Construct_UClass_UWeaponAttachmentSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_WeaponAttachmentSystem_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_WeaponAttachmentSystem_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_Weapons_Inner = { "Weapons", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AWeaponActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_Weapons_MetaData[] = {
@@ -365,7 +350,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_CurrentWeaponSlot = { "CurrentWeaponSlot", "OnRep_WeaponChanged", (EPropertyFlags)0x0010000100000020, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UPlayerWeaponSystem, CurrentWeaponSlot), METADATA_PARAMS(Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_CurrentWeaponSlot_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_CurrentWeaponSlot_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerWeaponSystem_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_WeaponAttachmentSystem,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_Weapons_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_Weapons,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerWeaponSystem_Statics::NewProp_CurrentWeaponSlot,
@@ -397,7 +381,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UPlayerWeaponSystem, 3626685236);
+	IMPLEMENT_CLASS(UPlayerWeaponSystem, 358198566);
 	template<> FPSGAME_API UClass* StaticClass<UPlayerWeaponSystem>()
 	{
 		return UPlayerWeaponSystem::StaticClass();

@@ -19,7 +19,7 @@ Afpscharacter::Afpscharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	RootComponent = GetCapsuleComponent();
-	WeaponSystem = NewObject<UPlayerWeaponSystem>(this, UPlayerWeaponSystem::StaticClass(), TEXT("WeaponSystem"));
+	WeaponSystem = CreateDefaultSubobject<UPlayerWeaponSystem>(TEXT("WeaponSystem"));
 
 	//Creates a first person camera component instance
 	FPSCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
@@ -1086,7 +1086,7 @@ void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 	ThirdPersonGunMesh->SetSkeletalMesh(GunToEquip.VisualAssets.GunMesh);
 
 	//Sets muzzle component
-	TPMuzzleComponent->SetRelativeLocation(GunToEquip.PositionalDetails.MuzzlePosition);
+	TPMuzzleComponent->AttachToComponent(WeaponSystem->GetCurrentWeapon()->MuzzleSceneComponent, FAttachmentTransformRules::SnapToTargetIncludingScale);
 
 	
 }

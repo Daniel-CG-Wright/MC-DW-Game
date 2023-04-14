@@ -104,10 +104,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UPlayerWeaponSystem)
 
 
-#define fpsgame_Source_fpsgame_PlayerWeaponSystem_h_19_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__WeaponAttachmentSystem() { return STRUCT_OFFSET(UPlayerWeaponSystem, WeaponAttachmentSystem); }
-
-
+#define fpsgame_Source_fpsgame_PlayerWeaponSystem_h_19_PRIVATE_PROPERTY_OFFSET
 #define fpsgame_Source_fpsgame_PlayerWeaponSystem_h_16_PROLOG \
 	fpsgame_Source_fpsgame_PlayerWeaponSystem_h_19_EVENT_PARMS
 

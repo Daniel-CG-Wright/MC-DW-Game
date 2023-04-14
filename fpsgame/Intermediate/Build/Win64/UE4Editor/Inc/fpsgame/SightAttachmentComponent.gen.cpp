@@ -59,8 +59,12 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachmentComponent() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USightAttachmentComponent_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintSpawnableComponent", "" },
+		{ "BlueprintType", "true" },
+		{ "ClassGroupNames", "Custom" },
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "SightAttachmentComponent.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "SightAttachmentComponent.h" },
 	};
 #endif
@@ -137,7 +141,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachmentComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USightAttachmentComponent, 1747553722);
+	IMPLEMENT_CLASS(USightAttachmentComponent, 1128392647);
 	template<> FPSGAME_API UClass* StaticClass<USightAttachmentComponent>()
 	{
 		return USightAttachmentComponent::StaticClass();

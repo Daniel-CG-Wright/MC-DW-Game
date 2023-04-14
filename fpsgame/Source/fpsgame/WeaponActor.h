@@ -104,9 +104,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
 		FVector TPBasePosition;
 
-	//Muzzle position relative to base position, will be scaled for you
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon visuals")
-		FVector MuzzlePosition;
 };
 
 USTRUCT(BlueprintType)
@@ -257,21 +254,6 @@ public:
 };
 
 USTRUCT(BlueprintType)
-struct FWeaponAttachmentSocketStruct
-{
-	GENERATED_BODY()
-
-public:
-	//Stores where the actual attachment points are (relative to gun center)
-
-
-	//Sight attachment point
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FVector SightAttachmentPoint;
-
-};
-
-USTRUCT(BlueprintType)
 struct FWeaponDataStruct
 {
 	GENERATED_BODY()
@@ -300,10 +282,6 @@ public:
 	//The recoil properties of the weapon
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FWeaponRecoil Recoil;
-
-	//Attachment ports
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FWeaponAttachmentSocketStruct AttachmentSockets;
 
 };
 
@@ -359,6 +337,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		USceneComponent* RootSceneComponent;
+
+	// Muzzle scene component
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USceneComponent* MuzzleSceneComponent;
 
 	//Used to detect whether gun is near player for pickups
 	//UPROPERTY(VisibleDefaultsOnly, Category = "Weapon Collision")

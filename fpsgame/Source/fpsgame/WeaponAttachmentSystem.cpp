@@ -33,33 +33,37 @@ void UWeaponAttachmentSystem::TickComponent(float DeltaTime, ELevelTick TickType
 }
 
 // When an attachment is to be added to the weapon, this function is called.
-void UWeaponAttachmentSystem::AddAttachment(UBaseAttachmentComponent* AttachmentToAdd)
+void UWeaponAttachmentSystem::AddAttachment(TSubclassOf<class UBaseAttachmentComponent> AttachmentToAdd)
 {
+	// Cast from the class to the component
+	UBaseAttachmentComponent* AttachmentToAddComponent = Cast<UBaseAttachmentComponent>(AttachmentToAdd->GetDefaultObject());
 	// If the attachment is not already attached to the weapon, add it.
 	if (IsAttachmentAttached(AttachmentToAdd))
 	{
 		// Call the function of the attachment when it is added
-		AttachmentToAdd->OnAttachToWeapon();
+		AttachmentToAddComponent->OnAttachToWeapon();
 		// add to the array of attachments
 		Attachments.Add(AttachmentToAdd);
 	}
 }
 
 // When an attachment is to be removed from the weapon, this function is called.
-void UWeaponAttachmentSystem::RemoveAttachment(UBaseAttachmentComponent* AttachmentToRemove)
+void UWeaponAttachmentSystem::RemoveAttachment(TSubclassOf<class UBaseAttachmentComponent> AttachmentToRemove)
 {
+	// Cast from the class to the component
+	UBaseAttachmentComponent* AttachmentToRemoveComponent = Cast<UBaseAttachmentComponent>(AttachmentToRemove->GetDefaultObject());
 	// If the attachment is attached to the weapon, remove it.
 	if (IsAttachmentAttached(AttachmentToRemove))
 	{
 		// Call the function of the attachment when it is removed
-		AttachmentToRemove->OnDetachFromWeapon();
+		AttachmentToRemoveComponent->OnDetachFromWeapon();
 		// remove from the array of attachments
 		Attachments.Remove(AttachmentToRemove);
 	}
 }
 
 // Check if an attachment is attached to the weapon.
-bool UWeaponAttachmentSystem::IsAttachmentAttached(UBaseAttachmentComponent* AttachmentToCheck)
+bool UWeaponAttachmentSystem::IsAttachmentAttached(TSubclassOf<class UBaseAttachmentComponent> AttachmentToCheck)
 {
 	// If the attachment is already attached to the weapon, return true.
 	if (Attachments.Contains(AttachmentToCheck))
