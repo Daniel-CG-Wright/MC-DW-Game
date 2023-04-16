@@ -94,9 +94,6 @@ void AWeaponActor::OnPickupWeapon()
 	SetActorEnableCollision(false);
 	SetActorHiddenInGame(true);
 	StaticGunMesh->SetSimulatePhysics(false);
-	
-	
-
 
 }
 
@@ -128,8 +125,10 @@ void AWeaponActor::OnEquipWeapon(USceneComponent* AttachComponent)
 	// and bind the weapon to the player's weapon scene component
 
 	UE_LOG(LogTemp, Warning, TEXT("Equipping weapon"));
+	UE_LOG(LogTemp, Warning, TEXT("Scene component name: %s"), *AttachComponent->GetName());
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	// bind to player's weapon scene component
-	AttachToComponent(AttachComponent, FAttachmentTransformRules::SnapToTargetIncludingScale);
+	AttachToComponent(AttachComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, false));
 	
 	// show weapon
 	SetActorHiddenInGame(false);

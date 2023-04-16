@@ -521,8 +521,7 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Weapon System", meta = (AllowPrivateAccess = "true"))
 		class UPlayerWeaponSystem* WeaponSystem;
 
-	UFUNCTION()
-		void UpdateAmmoDisplay();
+
 
 	// Get the currently equipped weapon data
 	UFUNCTION(BlueprintCallable, Category = "Weapon System")
@@ -717,7 +716,8 @@ public:
 	UPROPERTY()
 		FTimerHandle StaminaTimerHandle;
 
-	
+	UFUNCTION()
+		void UpdateAmmoDisplay();
 
 	//Getter for max health
 	UFUNCTION(BlueprintPure, Category = "Health")

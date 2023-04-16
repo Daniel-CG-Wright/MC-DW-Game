@@ -35,9 +35,9 @@ public:
 	//Property replication
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-	// Called when a new weapon is picked up
+	// Called when a new weapon is picked up. Returns the slot number the weapon was added to (or -1 if failed)
 	UFUNCTION(BlueprintCallable, Category = "PlayerWeaponSystem")
-		void AddWeapon(AWeaponActor* Weapon, bool SwitchAfterPickup);
+		int AddWeapon(AWeaponActor* Weapon);
 
 	void RemoveWeapon(AWeaponActor* Weapon);
 

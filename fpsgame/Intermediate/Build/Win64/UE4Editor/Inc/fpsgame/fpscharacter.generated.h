@@ -50,6 +50,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
+	DECLARE_FUNCTION(execUpdateAmmoDisplay); \
 	DECLARE_FUNCTION(execServerSwitchGun); \
 	DECLARE_FUNCTION(execPositionAndAttachGunInTP); \
 	DECLARE_FUNCTION(execSwitchSecondaryInputImplementation); \
@@ -67,7 +68,6 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execCanUncrouch); \
 	DECLARE_FUNCTION(execServerStartJump); \
 	DECLARE_FUNCTION(execGetCurrentlyEquippedWeaponData); \
-	DECLARE_FUNCTION(execUpdateAmmoDisplay); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \
@@ -153,6 +153,7 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execSetCurrentHealth); \
 	DECLARE_FUNCTION(execGetCurrentHealth); \
 	DECLARE_FUNCTION(execGetMaxHealth); \
+	DECLARE_FUNCTION(execUpdateAmmoDisplay); \
 	DECLARE_FUNCTION(execServerSwitchGun); \
 	DECLARE_FUNCTION(execPositionAndAttachGunInTP); \
 	DECLARE_FUNCTION(execSwitchSecondaryInputImplementation); \
@@ -170,7 +171,6 @@ class UNiagaraSystem;
 	DECLARE_FUNCTION(execCanUncrouch); \
 	DECLARE_FUNCTION(execServerStartJump); \
 	DECLARE_FUNCTION(execGetCurrentlyEquippedWeaponData); \
-	DECLARE_FUNCTION(execUpdateAmmoDisplay); \
 	DECLARE_FUNCTION(execReleaseSprint); \
 	DECLARE_FUNCTION(execPressSprint); \
 	DECLARE_FUNCTION(execStopJump); \

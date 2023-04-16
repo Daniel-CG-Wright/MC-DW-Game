@@ -116,6 +116,13 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		*(float*)Z_Param__Result=P_THIS->GetMaxHealth();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(Afpscharacter::execUpdateAmmoDisplay)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->UpdateAmmoDisplay();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(Afpscharacter::execServerSwitchGun)
 	{
 		P_GET_PROPERTY(FIntProperty,Z_Param_Slot);
@@ -240,13 +247,6 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(FWeaponDataStruct*)Z_Param__Result=P_THIS->GetCurrentlyEquippedWeaponData();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(Afpscharacter::execUpdateAmmoDisplay)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->UpdateAmmoDisplay();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(Afpscharacter::execReleaseSprint)
@@ -3829,7 +3829,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ "ModuleRelativePath", "fpscharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "UpdateAmmoDisplay", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_Afpscharacter, nullptr, "UpdateAmmoDisplay", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -4264,7 +4264,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		{ &Z_Construct_UFunction_Afpscharacter_SwitchPrimaryInputImplementation, "SwitchPrimaryInputImplementation" }, // 967562103
 		{ &Z_Construct_UFunction_Afpscharacter_SwitchSecondaryInputImplementation, "SwitchSecondaryInputImplementation" }, // 2362339234
 		{ &Z_Construct_UFunction_Afpscharacter_TakeDamage, "TakeDamage" }, // 811223175
-		{ &Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay, "UpdateAmmoDisplay" }, // 4894759
+		{ &Z_Construct_UFunction_Afpscharacter_UpdateAmmoDisplay, "UpdateAmmoDisplay" }, // 3794606110
 		{ &Z_Construct_UFunction_Afpscharacter_UpdateStamina, "UpdateStamina" }, // 1610481266
 	};
 #if WITH_METADATA
@@ -5014,7 +5014,7 @@ void EmptyLinkFunctionForGeneratedCodefpscharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Afpscharacter, 4009455375);
+	IMPLEMENT_CLASS(Afpscharacter, 3939385967);
 	template<> FPSGAME_API UClass* StaticClass<Afpscharacter>()
 	{
 		return Afpscharacter::StaticClass();

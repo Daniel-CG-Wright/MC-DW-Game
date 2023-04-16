@@ -65,10 +65,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 	DEFINE_FUNCTION(UPlayerWeaponSystem::execAddWeapon)
 	{
 		P_GET_OBJECT(AWeaponActor,Z_Param_Weapon);
-		P_GET_UBOOL(Z_Param_SwitchAfterPickup);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->AddWeapon(Z_Param_Weapon,Z_Param_SwitchAfterPickup);
+		*(int32*)Z_Param__Result=P_THIS->AddWeapon(Z_Param_Weapon);
 		P_NATIVE_END;
 	}
 	static FName NAME_UPlayerWeaponSystem_ServerSetAmmo = FName(TEXT("ServerSetAmmo"));
@@ -97,11 +96,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 		struct PlayerWeaponSystem_eventAddWeapon_Parms
 		{
 			AWeaponActor* Weapon;
-			bool SwitchAfterPickup;
+			int32 ReturnValue;
 		};
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon;
-		static void NewProp_SwitchAfterPickup_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_SwitchAfterPickup;
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -109,21 +107,17 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(PlayerWeaponSystem_eventAddWeapon_Parms, Weapon), Z_Construct_UClass_AWeaponActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
-	void Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::NewProp_SwitchAfterPickup_SetBit(void* Obj)
-	{
-		((PlayerWeaponSystem_eventAddWeapon_Parms*)Obj)->SwitchAfterPickup = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::NewProp_SwitchAfterPickup = { "SwitchAfterPickup", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(PlayerWeaponSystem_eventAddWeapon_Parms), &Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::NewProp_SwitchAfterPickup_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(PlayerWeaponSystem_eventAddWeapon_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::NewProp_Weapon,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::NewProp_SwitchAfterPickup,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::Function_MetaDataParams[] = {
 		{ "Category", "PlayerWeaponSystem" },
-		{ "Comment", "// Called when a new weapon is picked up\n" },
+		{ "Comment", "// Called when a new weapon is picked up. Returns the slot number the weapon was added to (or -1 if failed)\n" },
 		{ "ModuleRelativePath", "PlayerWeaponSystem.h" },
-		{ "ToolTip", "Called when a new weapon is picked up" },
+		{ "ToolTip", "Called when a new weapon is picked up. Returns the slot number the weapon was added to (or -1 if failed)" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerWeaponSystem, nullptr, "AddWeapon", nullptr, nullptr, sizeof(PlayerWeaponSystem_eventAddWeapon_Parms), Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon_Statics::Function_MetaDataParams)) };
@@ -317,7 +311,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UPlayerWeaponSystem_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon, "AddWeapon" }, // 1698735718
+		{ &Z_Construct_UFunction_UPlayerWeaponSystem_AddWeapon, "AddWeapon" }, // 1600416300
 		{ &Z_Construct_UFunction_UPlayerWeaponSystem_EquipWeapon, "EquipWeapon" }, // 2664250644
 		{ &Z_Construct_UFunction_UPlayerWeaponSystem_GetCurrentWeapon, "GetCurrentWeapon" }, // 1322105337
 		{ &Z_Construct_UFunction_UPlayerWeaponSystem_OnRep_WeaponChanged, "OnRep_WeaponChanged" }, // 1858010985
@@ -381,7 +375,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerWeaponSystem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UPlayerWeaponSystem, 358198566);
+	IMPLEMENT_CLASS(UPlayerWeaponSystem, 2004256253);
 	template<> FPSGAME_API UClass* StaticClass<UPlayerWeaponSystem>()
 	{
 		return UPlayerWeaponSystem::StaticClass();

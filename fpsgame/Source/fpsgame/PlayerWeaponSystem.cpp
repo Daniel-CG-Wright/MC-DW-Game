@@ -39,7 +39,7 @@ void UPlayerWeaponSystem::TickComponent(float DeltaTime, ELevelTick TickType, FA
 }
 
 // Called when a new weapon is picked up
-void UPlayerWeaponSystem::AddWeapon(AWeaponActor* Weapon, bool SwitchAfterPickup)
+int UPlayerWeaponSystem::AddWeapon(AWeaponActor* Weapon)
 {
 
 	// check if weapon is valid
@@ -86,16 +86,10 @@ void UPlayerWeaponSystem::AddWeapon(AWeaponActor* Weapon, bool SwitchAfterPickup
 			default:
 				break;
 		}
-		// if the user wants to switch, and there is a valid equip slot, then switch to the new weapon
-		if ((SwitchAfterPickup && equipslot >= 0 && equipslot <= 2) || equipslot == CurrentWeaponSlot)
-		{
-			EquipWeapon(equipslot);
-		}
-		// NOTE this uses pointer comparison, so it will only work if the weapon is the same instance
-		// if you want to check if the weapon is the same type, you will need to implement a custom function
-		// to check if the weapon is the same type
+		return equipslot;
 		
 	}
+	return -1;
 }
 
 // Called when a weapon is dropped
@@ -194,6 +188,7 @@ void UPlayerWeaponSystem::EquipWeapon(int SlotNumber)
 			Weapons[SlotNumber]->OnEquipWeapon(Cast<Afpscharacter>(GetOwner())->FPSGunComponent);
 			// set current weapon slot
 			CurrentWeaponSlot = SlotNumber;
+			
 		}
 	}
 }
@@ -242,6 +237,8 @@ void UPlayerWeaponSystem::SetAmmo(int SlotNumber, int Ammo)
 		{
 			// set ammo
 			Weapons[SlotNumber]->SetAmmo(Ammo);
+			// update ammo UI
+			Cast<Afpscharacter>(GetOwner())->UpdateAmmoDisplay();
 		}
 	}
 }
@@ -266,3 +263,5 @@ void UPlayerWeaponSystem::ServerSetAmmo_Implementation(int SlotNumber, int Ammo)
 {
 	SetAmmo(SlotNumber, Ammo);
 }
+
+

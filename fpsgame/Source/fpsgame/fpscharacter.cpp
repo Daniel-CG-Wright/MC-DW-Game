@@ -472,7 +472,6 @@ void Afpscharacter::MoveY(float Value)
 	if (IsSprinting && (Value != 1.0f || (dotProduct < 30.0f && dotProduct > -30.0f)))
 	{
 		//Ensures player only sprints if they are holding forward and moving forward.
-		UE_LOG(LogTemp, Warning, TEXT("LookCall"));
 		SetSprinting(false);
 	}
 	AddMovementInput(Direction, Value);
@@ -883,13 +882,11 @@ void Afpscharacter::Interact()
 	//Logic for if a hit was detected in collision or raycast
 	if (IsHit && HitActor)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("We got a hit bois"));
 		UInteractableObjectComponent* HitInteractableComponent = HitActor->FindComponentByClass<UInteractableObjectComponent>();
 
 		//If the item is interactable, we continue
 		if (HitInteractableComponent != nullptr && HitInteractableComponent->IsEnabled())
 		{
-			UE_LOG(LogTemp, Warning, TEXT("interactable component found"));
 			//Seems valid on client, let's run on the server if needed
 			//Should only be used for stationary objects, as guns and stuff can desync and we need to fix this NOTE
 			/*if (GetLocalRole() < ROLE_Authority)
@@ -913,7 +910,6 @@ void Afpscharacter::Interact()
 			{
 			case InteractionTypes::WEAPON_PICKUP:
 				//Logic for weapon pickup
-				UE_LOG(LogTemp, Warning, TEXT("We got a pickup bois"));
 
 				PickupWeapon(Cast<AWeaponActor>(HitActor));
 			}
@@ -928,7 +924,6 @@ void Afpscharacter::Interact()
 
 void Afpscharacter::ServerInteract_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Interact RPC call"));
 	Interact();
 }
 
@@ -987,20 +982,28 @@ void Afpscharacter::PickupWeapon(AWeaponActor* WeaponPickup)
 	if (GetLocalRole() < ROLE_Authority)
 	{
 		//ServerPickupWeapon(WeaponPickup);
-		UE_LOG(LogTemp, Warning, TEXT("Disgusting client"));
 		ServerPickupWeapon(WeaponPickup);
 	}
 
 
 	//Logic for picking up weapon goes here
-	WeaponSystem->AddWeapon(WeaponPickup, SwitchWeaponAfterPickup);
+	int slot = WeaponSystem->AddWeapon(WeaponPickup);
+	if (slot != -1 && (slot == WeaponSystem->CurrentWeaponSlot || SwitchWeaponAfterPickup))
+	{
+		//We have a valid slot
+		//Equip the weapon
+		SwitchGun(slot);
 
+	}
+	else
+	{
+		//No valid slot
+	}
 }
 
 void Afpscharacter::ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup)
 {
 	//Server impleemntation of pickup weapon
-	UE_LOG(LogTemp, Warning, TEXT("Reliable pickup call"));
 	PickupWeapon(WeaponPickup);
 }
 
@@ -1011,7 +1014,6 @@ void Afpscharacter::SwitchGun(int Slot)
 	{
 		return;
 	}
-	UE_LOG(LogTemp, Warning, TEXT("prime"));
 	DebugFunction();
 
 	//Need to run RPC on server
@@ -1034,7 +1036,6 @@ void Afpscharacter::SwitchGun(int Slot)
 
 void Afpscharacter::ServerSwitchGun_Implementation(int Slot)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Switch primary rpc call"));
 	SwitchGun(Slot);
 }
 
@@ -1168,6 +1169,11 @@ void Afpscharacter::UpdateAmmoDisplay()
 {
 	AmmoDisplay = FString();
 	// Check if the current weapon is valid
+	// ensure that we are client first
+	if (!IsLocallyControlled())
+	{
+		return;
+	}
 	if (!WeaponSystem->GetCurrentWeapon())
 	{
 		return;
