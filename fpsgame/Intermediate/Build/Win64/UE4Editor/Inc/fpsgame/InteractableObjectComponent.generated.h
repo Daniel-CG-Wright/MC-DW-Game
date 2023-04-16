@@ -17,6 +17,8 @@ enum class InteractionTypes : uint8;
 #define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_SPARSE_DATA
 #define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execIsEnabled); \
+	DECLARE_FUNCTION(execSetEnabled); \
 	DECLARE_FUNCTION(execSetInteractionTime); \
 	DECLARE_FUNCTION(execGetInteractionTime); \
 	DECLARE_FUNCTION(execSetInteractionType); \
@@ -25,6 +27,8 @@ enum class InteractionTypes : uint8;
 
 #define fpsgame_Source_fpsgame_InteractableObjectComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execIsEnabled); \
+	DECLARE_FUNCTION(execSetEnabled); \
 	DECLARE_FUNCTION(execSetInteractionTime); \
 	DECLARE_FUNCTION(execGetInteractionTime); \
 	DECLARE_FUNCTION(execSetInteractionType); \

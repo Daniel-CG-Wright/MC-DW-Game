@@ -38,12 +38,18 @@ void UWeaponAttachmentSystem::AddAttachment(TSubclassOf<class UBaseAttachmentCom
 	// Cast from the class to the component
 	UBaseAttachmentComponent* AttachmentToAddComponent = Cast<UBaseAttachmentComponent>(AttachmentToAdd->GetDefaultObject());
 	// If the attachment is not already attached to the weapon, add it.
-	if (IsAttachmentAttached(AttachmentToAdd))
+	if (!IsAttachmentAttached(AttachmentToAddComponent->TypeOfAttachment))
 	{
 		// Call the function of the attachment when it is added
 		AttachmentToAddComponent->OnAttachToWeapon();
 		// add to the array of attachments
-		Attachments.Add(AttachmentToAdd);
+		Attachments.Add(AttachmentToAddComponent->TypeOfAttachment, AttachmentToAdd);
+	}
+	// If the attachment type is already attached to the weapon, remove it and add it again.
+	else
+	{
+		Attachments.Remove(AttachmentToAddComponent->TypeOfAttachment);
+		AddAttachment(AttachmentToAdd);
 	}
 }
 
@@ -53,17 +59,17 @@ void UWeaponAttachmentSystem::RemoveAttachment(TSubclassOf<class UBaseAttachment
 	// Cast from the class to the component
 	UBaseAttachmentComponent* AttachmentToRemoveComponent = Cast<UBaseAttachmentComponent>(AttachmentToRemove->GetDefaultObject());
 	// If the attachment is attached to the weapon, remove it.
-	if (IsAttachmentAttached(AttachmentToRemove))
+	if (IsAttachmentAttached(AttachmentToRemoveComponent->TypeOfAttachment))
 	{
 		// Call the function of the attachment when it is removed
 		AttachmentToRemoveComponent->OnDetachFromWeapon();
 		// remove from the array of attachments
-		Attachments.Remove(AttachmentToRemove);
+		Attachments.Remove(AttachmentToRemoveComponent->TypeOfAttachment);
 	}
 }
 
 // Check if an attachment is attached to the weapon.
-bool UWeaponAttachmentSystem::IsAttachmentAttached(TSubclassOf<class UBaseAttachmentComponent> AttachmentToCheck)
+bool UWeaponAttachmentSystem::IsAttachmentAttached(EAttachmentType AttachmentToCheck)
 {
 	// If the attachment is already attached to the weapon, return true.
 	if (Attachments.Contains(AttachmentToCheck))

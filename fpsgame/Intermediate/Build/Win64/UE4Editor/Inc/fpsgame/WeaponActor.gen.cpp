@@ -13,19 +13,19 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 // Cross Module References
-	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_WeaponType();
-	UPackage* Z_Construct_UPackage__Script_fpsgame();
-	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_FireMode();
-	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_FireType();
-	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_Guns();
-	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_Equips();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponDataStruct();
+	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponPositionalDetails();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponVisualAssets();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponMetaData();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponStats();
 	FPSGAME_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponRecoil();
 	ENGINE_API UClass* Z_Construct_UClass_UCurveVector_NoRegister();
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_Guns();
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_WeaponType();
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_FireMode();
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_FireType();
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_Equips();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	FPSGAME_API UClass* Z_Construct_UClass_AFPSProjectile_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMesh_NoRegister();
@@ -35,329 +35,11 @@ void EmptyLinkFunctionForGeneratedCodeWeaponActor() {}
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_AWeaponActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_UWeaponAttachmentSystem_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_UInteractableObjectComponent_NoRegister();
 // End Cross Module References
-	static UEnum* WeaponType_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_fpsgame_WeaponType, Z_Construct_UPackage__Script_fpsgame(), TEXT("WeaponType"));
-		}
-		return Singleton;
-	}
-	template<> FPSGAME_API UEnum* StaticEnum<WeaponType>()
-	{
-		return WeaponType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_WeaponType(WeaponType_StaticEnum, TEXT("/Script/fpsgame"), TEXT("WeaponType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_WeaponType_Hash() { return 202308427U; }
-	UEnum* Z_Construct_UEnum_fpsgame_WeaponType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_fpsgame();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("WeaponType"), 0, Get_Z_Construct_UEnum_fpsgame_WeaponType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "WeaponType::AR", (int64)WeaponType::AR },
-				{ "WeaponType::SMG", (int64)WeaponType::SMG },
-				{ "WeaponType::PISTOL", (int64)WeaponType::PISTOL },
-				{ "WeaponType::SHOTGUN", (int64)WeaponType::SHOTGUN },
-				{ "WeaponType::SNIPER_RIFLE", (int64)WeaponType::SNIPER_RIFLE },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "AR.Name", "WeaponType::AR" },
-				{ "BlueprintType", "true" },
-				{ "ModuleRelativePath", "WeaponActor.h" },
-				{ "PISTOL.Name", "WeaponType::PISTOL" },
-				{ "SHOTGUN.Name", "WeaponType::SHOTGUN" },
-				{ "SMG.Name", "WeaponType::SMG" },
-				{ "SNIPER_RIFLE.Name", "WeaponType::SNIPER_RIFLE" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_fpsgame,
-				nullptr,
-				"WeaponType",
-				"WeaponType",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* FireMode_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_fpsgame_FireMode, Z_Construct_UPackage__Script_fpsgame(), TEXT("FireMode"));
-		}
-		return Singleton;
-	}
-	template<> FPSGAME_API UEnum* StaticEnum<FireMode>()
-	{
-		return FireMode_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_FireMode(FireMode_StaticEnum, TEXT("/Script/fpsgame"), TEXT("FireMode"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_FireMode_Hash() { return 1958068602U; }
-	UEnum* Z_Construct_UEnum_fpsgame_FireMode()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_fpsgame();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("FireMode"), 0, Get_Z_Construct_UEnum_fpsgame_FireMode_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "FireMode::AUTO", (int64)FireMode::AUTO },
-				{ "FireMode::BURST", (int64)FireMode::BURST },
-				{ "FireMode::SEMI", (int64)FireMode::SEMI },
-				{ "FireMode::BOLT", (int64)FireMode::BOLT },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "AUTO.Comment", "//Automatic firing (hold down mouse)\n" },
-				{ "AUTO.Name", "FireMode::AUTO" },
-				{ "AUTO.ToolTip", "Automatic firing (hold down mouse)" },
-				{ "BlueprintType", "true" },
-				{ "BOLT.Comment", "//Bolt, requires animation between shots\n" },
-				{ "BOLT.Name", "FireMode::BOLT" },
-				{ "BOLT.ToolTip", "Bolt, requires animation between shots" },
-				{ "BURST.Comment", "//Burst, should set burst amount if in use. Auto firing in bursts\n" },
-				{ "BURST.Name", "FireMode::BURST" },
-				{ "BURST.ToolTip", "Burst, should set burst amount if in use. Auto firing in bursts" },
-				{ "ModuleRelativePath", "WeaponActor.h" },
-				{ "SEMI.Comment", "//Semi - tap fire\n" },
-				{ "SEMI.Name", "FireMode::SEMI" },
-				{ "SEMI.ToolTip", "Semi - tap fire" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_fpsgame,
-				nullptr,
-				"FireMode",
-				"FireMode",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* FireType_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_fpsgame_FireType, Z_Construct_UPackage__Script_fpsgame(), TEXT("FireType"));
-		}
-		return Singleton;
-	}
-	template<> FPSGAME_API UEnum* StaticEnum<FireType>()
-	{
-		return FireType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_FireType(FireType_StaticEnum, TEXT("/Script/fpsgame"), TEXT("FireType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_FireType_Hash() { return 3132557637U; }
-	UEnum* Z_Construct_UEnum_fpsgame_FireType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_fpsgame();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("FireType"), 0, Get_Z_Construct_UEnum_fpsgame_FireType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "FireType::HITSCAN", (int64)FireType::HITSCAN },
-				{ "FireType::PROJECTILE", (int64)FireType::PROJECTILE },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "HITSCAN.Comment", "//Hitscan weapon\n" },
-				{ "HITSCAN.Name", "FireType::HITSCAN" },
-				{ "HITSCAN.ToolTip", "Hitscan weapon" },
-				{ "ModuleRelativePath", "WeaponActor.h" },
-				{ "PROJECTILE.Comment", "//Projectile weapon\n" },
-				{ "PROJECTILE.Name", "FireType::PROJECTILE" },
-				{ "PROJECTILE.ToolTip", "Projectile weapon" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_fpsgame,
-				nullptr,
-				"FireType",
-				"FireType",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* Guns_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_fpsgame_Guns, Z_Construct_UPackage__Script_fpsgame(), TEXT("Guns"));
-		}
-		return Singleton;
-	}
-	template<> FPSGAME_API UEnum* StaticEnum<Guns>()
-	{
-		return Guns_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_Guns(Guns_StaticEnum, TEXT("/Script/fpsgame"), TEXT("Guns"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_Guns_Hash() { return 2979419140U; }
-	UEnum* Z_Construct_UEnum_fpsgame_Guns()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_fpsgame();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("Guns"), 0, Get_Z_Construct_UEnum_fpsgame_Guns_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "Guns::NONE", (int64)Guns::NONE },
-				{ "Guns::PROTOTYPE_PISTOL", (int64)Guns::PROTOTYPE_PISTOL },
-				{ "Guns::PROTOTYPE_AR", (int64)Guns::PROTOTYPE_AR },
-				{ "Guns::PROTOTYPE_BURST", (int64)Guns::PROTOTYPE_BURST },
-				{ "Guns::PROTOTYPE_SHOTGUN", (int64)Guns::PROTOTYPE_SHOTGUN },
-				{ "Guns::LAST", (int64)Guns::LAST },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "LAST.Name", "Guns::LAST" },
-				{ "ModuleRelativePath", "WeaponActor.h" },
-				{ "NONE.Name", "Guns::NONE" },
-				{ "PROTOTYPE_AR.Comment", "//testing AR\n" },
-				{ "PROTOTYPE_AR.Displayname", "Prototype AR" },
-				{ "PROTOTYPE_AR.Name", "Guns::PROTOTYPE_AR" },
-				{ "PROTOTYPE_AR.ToolTip", "testing AR" },
-				{ "PROTOTYPE_BURST.Comment", "//testing burst\n" },
-				{ "PROTOTYPE_BURST.Displayname", "Prototype Burst" },
-				{ "PROTOTYPE_BURST.Name", "Guns::PROTOTYPE_BURST" },
-				{ "PROTOTYPE_BURST.ToolTip", "testing burst" },
-				{ "PROTOTYPE_PISTOL.Comment", "//Default testing pistol\n" },
-				{ "PROTOTYPE_PISTOL.DisplayName", "Prototype Pistol" },
-				{ "PROTOTYPE_PISTOL.Name", "Guns::PROTOTYPE_PISTOL" },
-				{ "PROTOTYPE_PISTOL.ToolTip", "Default testing pistol" },
-				{ "PROTOTYPE_SHOTGUN.Comment", "//Testing shotgun\n" },
-				{ "PROTOTYPE_SHOTGUN.Displayname", "Prototype Shotgun" },
-				{ "PROTOTYPE_SHOTGUN.Name", "Guns::PROTOTYPE_SHOTGUN" },
-				{ "PROTOTYPE_SHOTGUN.ToolTip", "Testing shotgun" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_fpsgame,
-				nullptr,
-				"Guns",
-				"Guns",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* Equips_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_fpsgame_Equips, Z_Construct_UPackage__Script_fpsgame(), TEXT("Equips"));
-		}
-		return Singleton;
-	}
-	template<> FPSGAME_API UEnum* StaticEnum<Equips>()
-	{
-		return Equips_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_Equips(Equips_StaticEnum, TEXT("/Script/fpsgame"), TEXT("Equips"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_Equips_Hash() { return 1864724453U; }
-	UEnum* Z_Construct_UEnum_fpsgame_Equips()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_fpsgame();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("Equips"), 0, Get_Z_Construct_UEnum_fpsgame_Equips_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "Equips::PRIMARY", (int64)Equips::PRIMARY },
-				{ "Equips::SECONDARY", (int64)Equips::SECONDARY },
-				{ "Equips::BOTH", (int64)Equips::BOTH },
-				{ "Equips::MELEE", (int64)Equips::MELEE },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "BOTH.Name", "Equips::BOTH" },
-				{ "MELEE.Name", "Equips::MELEE" },
-				{ "ModuleRelativePath", "WeaponActor.h" },
-				{ "PRIMARY.Comment", "//Default testing pistol\n" },
-				{ "PRIMARY.Name", "Equips::PRIMARY" },
-				{ "PRIMARY.ToolTip", "Default testing pistol" },
-				{ "SECONDARY.Name", "Equips::SECONDARY" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_fpsgame,
-				nullptr,
-				"Equips",
-				"Equips",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
 class UScriptStruct* FWeaponDataStruct::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1338,9 +1020,10 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponPositionalDetail
 	}
 	DEFINE_FUNCTION(AWeaponActor::execOnEquipWeapon)
 	{
+		P_GET_OBJECT(USceneComponent,Z_Param_AttachComponent);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->OnEquipWeapon();
+		P_THIS->OnEquipWeapon(Z_Param_AttachComponent);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AWeaponActor::execOnDropWeapon)
@@ -1365,6 +1048,13 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponPositionalDetail
 		P_THIS->SetWeaponDataStruct(Z_Param_NewWeaponDataStruct);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AWeaponActor::execGetAttachmentSystem)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UWeaponAttachmentSystem**)Z_Param__Result=P_THIS->GetAttachmentSystem();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AWeaponActor::execGetWeaponDataStruct)
 	{
 		P_FINISH;
@@ -1376,6 +1066,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponPositionalDetail
 	{
 		UClass* Class = AWeaponActor::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetAttachmentSystem", &AWeaponActor::execGetAttachmentSystem },
 			{ "GetWeaponDataStruct", &AWeaponActor::execGetWeaponDataStruct },
 			{ "OnDropWeapon", &AWeaponActor::execOnDropWeapon },
 			{ "OnEquipWeapon", &AWeaponActor::execOnEquipWeapon },
@@ -1385,6 +1076,48 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponPositionalDetail
 			{ "SetWeaponDataStruct", &AWeaponActor::execSetWeaponDataStruct },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics
+	{
+		struct WeaponActor_eventGetAttachmentSystem_Parms
+		{
+			UWeaponAttachmentSystem* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponActor_eventGetAttachmentSystem_Parms, ReturnValue), Z_Construct_UClass_UWeaponAttachmentSystem_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::NewProp_ReturnValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::NewProp_ReturnValue_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// get the weapon attachment system\n" },
+		{ "ModuleRelativePath", "WeaponActor.h" },
+		{ "ToolTip", "get the weapon attachment system" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWeaponActor, nullptr, "GetAttachmentSystem", nullptr, nullptr, sizeof(WeaponActor_eventGetAttachmentSystem_Parms), Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AWeaponActor_GetWeaponDataStruct_Statics
 	{
@@ -1444,10 +1177,28 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponPositionalDetail
 	}
 	struct Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics
 	{
+		struct WeaponActor_eventOnEquipWeapon_Parms
+		{
+			USceneComponent* AttachComponent;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttachComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AttachComponent;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::NewProp_AttachComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::NewProp_AttachComponent = { "AttachComponent", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponActor_eventOnEquipWeapon_Parms, AttachComponent), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::NewProp_AttachComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::NewProp_AttachComponent_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::NewProp_AttachComponent,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::Function_MetaDataParams[] = {
@@ -1456,7 +1207,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponPositionalDetail
 		{ "ToolTip", "Called when the gun is equipped" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWeaponActor, nullptr, "OnEquipWeapon", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWeaponActor, nullptr, "OnEquipWeapon", nullptr, nullptr, sizeof(WeaponActor_eventOnEquipWeapon_Parms), Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AWeaponActor_OnEquipWeapon_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AWeaponActor_OnEquipWeapon()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -1648,9 +1399,10 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponPositionalDetail
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AWeaponActor_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AWeaponActor_GetAttachmentSystem, "GetAttachmentSystem" }, // 1517442139
 		{ &Z_Construct_UFunction_AWeaponActor_GetWeaponDataStruct, "GetWeaponDataStruct" }, // 3993678136
 		{ &Z_Construct_UFunction_AWeaponActor_OnDropWeapon, "OnDropWeapon" }, // 2865605157
-		{ &Z_Construct_UFunction_AWeaponActor_OnEquipWeapon, "OnEquipWeapon" }, // 164775354
+		{ &Z_Construct_UFunction_AWeaponActor_OnEquipWeapon, "OnEquipWeapon" }, // 1192083165
 		{ &Z_Construct_UFunction_AWeaponActor_OnPickupWeapon, "OnPickupWeapon" }, // 4255992814
 		{ &Z_Construct_UFunction_AWeaponActor_OnUnequipWeapon, "OnUnequipWeapon" }, // 3355722316
 		{ &Z_Construct_UFunction_AWeaponActor_SetAmmo, "SetAmmo" }, // 1216203504
@@ -1811,7 +1563,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponPositionalDetail
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeaponActor, 366615682);
+	IMPLEMENT_CLASS(AWeaponActor, 3655356791);
 	template<> FPSGAME_API UClass* StaticClass<AWeaponActor>()
 	{
 		return AWeaponActor::StaticClass();

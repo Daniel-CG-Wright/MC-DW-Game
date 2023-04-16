@@ -13,87 +13,28 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 // Cross Module References
-	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_EAttachmentType();
-	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	FPSGAME_API UClass* Z_Construct_UClass_UWeaponAttachmentSystem_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_UWeaponAttachmentSystem();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	FPSGAME_API UClass* Z_Construct_UClass_UBaseAttachmentComponent_NoRegister();
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_EAttachmentType();
 // End Cross Module References
-	static UEnum* EAttachmentType_StaticEnum()
+	DEFINE_FUNCTION(UWeaponAttachmentSystem::execGetAttachment)
 	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_fpsgame_EAttachmentType, Z_Construct_UPackage__Script_fpsgame(), TEXT("EAttachmentType"));
-		}
-		return Singleton;
-	}
-	template<> FPSGAME_API UEnum* StaticEnum<EAttachmentType>()
-	{
-		return EAttachmentType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EAttachmentType(EAttachmentType_StaticEnum, TEXT("/Script/fpsgame"), TEXT("EAttachmentType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_fpsgame_EAttachmentType_Hash() { return 2407315568U; }
-	UEnum* Z_Construct_UEnum_fpsgame_EAttachmentType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_fpsgame();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EAttachmentType"), 0, Get_Z_Construct_UEnum_fpsgame_EAttachmentType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EAttachmentType::SIGHT", (int64)EAttachmentType::SIGHT },
-				{ "EAttachmentType::MAG", (int64)EAttachmentType::MAG },
-				{ "EAttachmentType::STOCK", (int64)EAttachmentType::STOCK },
-				{ "EAttachmentType::UNDERBARREL", (int64)EAttachmentType::UNDERBARREL },
-				{ "EAttachmentType::BARREL", (int64)EAttachmentType::BARREL },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BARREL.DisplayName", "Barrel" },
-				{ "BARREL.Name", "EAttachmentType::BARREL" },
-				{ "BlueprintType", "true" },
-				{ "Comment", "/*\n1. SIGHT\n2. MAG\n3. STOCK\n4. UNDERBARREL\n5. BARREL\n*/" },
-				{ "MAG.DisplayName", "Mag" },
-				{ "MAG.Name", "EAttachmentType::MAG" },
-				{ "ModuleRelativePath", "WeaponAttachmentSystem.h" },
-				{ "SIGHT.DisplayName", "Sight" },
-				{ "SIGHT.Name", "EAttachmentType::SIGHT" },
-				{ "STOCK.DisplayName", "Stock" },
-				{ "STOCK.Name", "EAttachmentType::STOCK" },
-				{ "ToolTip", "1. SIGHT\n2. MAG\n3. STOCK\n4. UNDERBARREL\n5. BARREL" },
-				{ "UNDERBARREL.DisplayName", "Underbarrel" },
-				{ "UNDERBARREL.Name", "EAttachmentType::UNDERBARREL" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_fpsgame,
-				nullptr,
-				"EAttachmentType",
-				"EAttachmentType",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
+		P_GET_ENUM(EAttachmentType,Z_Param_Attachment);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TSubclassOf<UBaseAttachmentComponent> *)Z_Param__Result=P_THIS->GetAttachment(EAttachmentType(Z_Param_Attachment));
+		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UWeaponAttachmentSystem::execIsAttachmentAttached)
 	{
-		P_GET_OBJECT(UClass,Z_Param_Attachment);
+		P_GET_ENUM(EAttachmentType,Z_Param_Attachment);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(bool*)Z_Param__Result=P_THIS->IsAttachmentAttached(Z_Param_Attachment);
+		*(bool*)Z_Param__Result=P_THIS->IsAttachmentAttached(EAttachmentType(Z_Param_Attachment));
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UWeaponAttachmentSystem::execRemoveAttachment)
@@ -117,6 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 		UClass* Class = UWeaponAttachmentSystem::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AddAttachment", &UWeaponAttachmentSystem::execAddAttachment },
+			{ "GetAttachment", &UWeaponAttachmentSystem::execGetAttachment },
 			{ "IsAttachmentAttached", &UWeaponAttachmentSystem::execIsAttachmentAttached },
 			{ "RemoveAttachment", &UWeaponAttachmentSystem::execRemoveAttachment },
 		};
@@ -157,14 +99,57 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics
+	{
+		struct WeaponAttachmentSystem_eventGetAttachment_Parms
+		{
+			EAttachmentType Attachment;
+			TSubclassOf<UBaseAttachmentComponent>  ReturnValue;
+		};
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_Attachment_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_Attachment;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::NewProp_Attachment_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventGetAttachment_Parms, Attachment), Z_Construct_UEnum_fpsgame_EAttachmentType, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0014000000000580, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventGetAttachment_Parms, ReturnValue), Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::NewProp_Attachment_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::NewProp_Attachment,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::Function_MetaDataParams[] = {
+		{ "Category", "WeaponAttachmentSystem" },
+		{ "Comment", "// Get the attachment of this type fromn the map (or nullptr if it doesn't exist)\n" },
+		{ "ModuleRelativePath", "WeaponAttachmentSystem.h" },
+		{ "ToolTip", "Get the attachment of this type fromn the map (or nullptr if it doesn't exist)" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWeaponAttachmentSystem, nullptr, "GetAttachment", nullptr, nullptr, sizeof(WeaponAttachmentSystem_eventGetAttachment_Parms), Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics
 	{
 		struct WeaponAttachmentSystem_eventIsAttachmentAttached_Parms
 		{
-			TSubclassOf<UBaseAttachmentComponent>  Attachment;
+			EAttachmentType Attachment;
 			bool ReturnValue;
 		};
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Attachment;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_Attachment_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_Attachment;
 		static void NewProp_ReturnValue_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -173,22 +158,24 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventIsAttachmentAttached_Parms, Attachment), Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WeaponAttachmentSystem_eventIsAttachmentAttached_Parms, Attachment), Z_Construct_UEnum_fpsgame_EAttachmentType, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 	{
 		((WeaponAttachmentSystem_eventIsAttachmentAttached_Parms*)Obj)->ReturnValue = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(WeaponAttachmentSystem_eventIsAttachmentAttached_Parms), &Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_Attachment,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::Function_MetaDataParams[] = {
 		{ "Category", "WeaponAttachmentSystem" },
-		{ "Comment", "// check if this attachment is already attached to the weapon.\n" },
+		{ "Comment", "// check if an attachment of this type is already attached to the weapon.\n" },
 		{ "ModuleRelativePath", "WeaponAttachmentSystem.h" },
-		{ "ToolTip", "check if this attachment is already attached to the weapon." },
+		{ "ToolTip", "check if an attachment of this type is already attached to the weapon." },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWeaponAttachmentSystem, nullptr, "IsAttachmentAttached", nullptr, nullptr, sizeof(WeaponAttachmentSystem_eventIsAttachmentAttached_Parms), Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached_Statics::Function_MetaDataParams)) };
@@ -247,11 +234,13 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Attachments_Inner;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Attachments_ValueProp;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_Attachments_Key_KeyProp_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_Attachments_Key_KeyProp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Attachments_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Attachments;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_Attachments;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -262,7 +251,8 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWeaponAttachmentSystem_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_AddAttachment, "AddAttachment" }, // 3670262698
-		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached, "IsAttachmentAttached" }, // 392675384
+		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_GetAttachment, "GetAttachment" }, // 3568974464
+		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_IsAttachmentAttached, "IsAttachmentAttached" }, // 3682857929
 		{ &Z_Construct_UFunction_UWeaponAttachmentSystem_RemoveAttachment, "RemoveAttachment" }, // 3460741095
 	};
 #if WITH_METADATA
@@ -273,18 +263,22 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 		{ "ModuleRelativePath", "WeaponAttachmentSystem.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Inner = { "Attachments", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_ValueProp = { "Attachments", nullptr, (EPropertyFlags)0x0004000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UBaseAttachmentComponent_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Key_KeyProp = { "Attachments_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_fpsgame_EAttachmentType, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData[] = {
 		{ "Category", "WeaponAttachmentSystem" },
-		{ "Comment", "// Array storing all attachments.\n" },
+		{ "Comment", "// Map storing each type of attachment and the attachment itself.\n" },
 		{ "ModuleRelativePath", "WeaponAttachmentSystem.h" },
-		{ "ToolTip", "Array storing all attachments." },
+		{ "ToolTip", "Map storing each type of attachment and the attachment itself." },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments = { "Attachments", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponAttachmentSystem, Attachments), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments = { "Attachments", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponAttachmentSystem, Attachments), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWeaponAttachmentSystem_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Key_KeyProp_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments_Key_KeyProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponAttachmentSystem_Statics::NewProp_Attachments,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UWeaponAttachmentSystem_Statics::StaticCppClassTypeInfo = {
@@ -314,7 +308,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponAttachmentSystem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWeaponAttachmentSystem, 1839684489);
+	IMPLEMENT_CLASS(UWeaponAttachmentSystem, 2976124108);
 	template<> FPSGAME_API UClass* StaticClass<UWeaponAttachmentSystem>()
 	{
 		return UWeaponAttachmentSystem::StaticClass();

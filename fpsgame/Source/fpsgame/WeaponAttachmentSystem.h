@@ -5,26 +5,10 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "BaseAttachmentComponent.h"
+#include "Enums.h"
 #include "WeaponAttachmentSystem.generated.h"
 
 
-// Enum storing all types of attachments possible
-/*
-1. SIGHT
-2. MAG
-3. STOCK
-4. UNDERBARREL
-5. BARREL
-*/
-UENUM(BlueprintType)
-enum class EAttachmentType : uint8
-{
-	SIGHT		UMETA(DisplayName = "Sight"),
-	MAG			UMETA(DisplayName = "Mag"),
-	STOCK		UMETA(DisplayName = "Stock"),
-	UNDERBARREL	UMETA(DisplayName = "Underbarrel"),
-	BARREL		UMETA(DisplayName = "Barrel")
-};
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -52,16 +36,15 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "WeaponAttachmentSystem")
 		void RemoveAttachment(TSubclassOf<class UBaseAttachmentComponent> Attachment);
 
-	// Array storing all attachments.
+	// Map storing each type of attachment and the attachment itself.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WeaponAttachmentSystem")
-		TArray<TSubclassOf<class UBaseAttachmentComponent>> Attachments;
+		TMap<EAttachmentType, TSubclassOf<class UBaseAttachmentComponent>> Attachments;
 
-	// check if this attachment is already attached to the weapon.
+	// check if an attachment of this type is already attached to the weapon.
 	UFUNCTION(BlueprintCallable, Category = "WeaponAttachmentSystem")
-		bool IsAttachmentAttached(TSubclassOf<class UBaseAttachmentComponent> Attachment);
+		bool IsAttachmentAttached(EAttachmentType Attachment);
 
-	// TODO add checks to see if the type of attachment is already attached.
-	// if it is, remove it and add the new one.
-	// if it isn't, add the new one.
-
+	// Get the attachment of this type fromn the map (or nullptr if it doesn't exist)
+	UFUNCTION(BlueprintCallable, Category = "WeaponAttachmentSystem")
+		TSubclassOf<class UBaseAttachmentComponent> GetAttachment(EAttachmentType Attachment) { return Attachments.Contains(Attachment) ? Attachments[Attachment] : nullptr; }
 };

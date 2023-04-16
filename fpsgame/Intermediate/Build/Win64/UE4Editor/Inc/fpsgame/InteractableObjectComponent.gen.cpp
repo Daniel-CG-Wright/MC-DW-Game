@@ -71,6 +71,21 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		}
 		return ReturnEnum;
 	}
+	DEFINE_FUNCTION(UInteractableObjectComponent::execIsEnabled)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsEnabled();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UInteractableObjectComponent::execSetEnabled)
+	{
+		P_GET_UBOOL(Z_Param_bNewEnabled);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetEnabled(Z_Param_bNewEnabled);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UInteractableObjectComponent::execSetInteractionTime)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_NewInteractionTime);
@@ -107,6 +122,8 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetInteractionTime", &UInteractableObjectComponent::execGetInteractionTime },
 			{ "GetInteractionType", &UInteractableObjectComponent::execGetInteractionType },
+			{ "IsEnabled", &UInteractableObjectComponent::execIsEnabled },
+			{ "SetEnabled", &UInteractableObjectComponent::execSetEnabled },
 			{ "SetInteractionTime", &UInteractableObjectComponent::execSetInteractionTime },
 			{ "SetInteractionType", &UInteractableObjectComponent::execSetInteractionType },
 		};
@@ -176,6 +193,84 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UInteractableObjectComponent_GetInteractionType_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics
+	{
+		struct InteractableObjectComponent_eventIsEnabled_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((InteractableObjectComponent_eventIsEnabled_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(InteractableObjectComponent_eventIsEnabled_Parms), &Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// Get whether the interactable component is enabled\n" },
+		{ "ModuleRelativePath", "InteractableObjectComponent.h" },
+		{ "ToolTip", "Get whether the interactable component is enabled" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInteractableObjectComponent, nullptr, "IsEnabled", nullptr, nullptr, sizeof(InteractableObjectComponent_eventIsEnabled_Parms), Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics
+	{
+		struct InteractableObjectComponent_eventSetEnabled_Parms
+		{
+			bool bNewEnabled;
+		};
+		static void NewProp_bNewEnabled_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bNewEnabled;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::NewProp_bNewEnabled_SetBit(void* Obj)
+	{
+		((InteractableObjectComponent_eventSetEnabled_Parms*)Obj)->bNewEnabled = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::NewProp_bNewEnabled = { "bNewEnabled", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(InteractableObjectComponent_eventSetEnabled_Parms), &Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::NewProp_bNewEnabled_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::NewProp_bNewEnabled,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// Set whether the interactable component is enabled\n" },
+		{ "ModuleRelativePath", "InteractableObjectComponent.h" },
+		{ "ToolTip", "Set whether the interactable component is enabled" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInteractableObjectComponent, nullptr, "SetEnabled", nullptr, nullptr, sizeof(InteractableObjectComponent_eventSetEnabled_Parms), Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -267,6 +362,11 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InteractionTime;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsEnabled_MetaData[];
+#endif
+		static void NewProp_bIsEnabled_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsEnabled;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractionName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_InteractionName;
@@ -281,6 +381,8 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UInteractableObjectComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UInteractableObjectComponent_GetInteractionTime, "GetInteractionTime" }, // 4049208569
 		{ &Z_Construct_UFunction_UInteractableObjectComponent_GetInteractionType, "GetInteractionType" }, // 3207718441
+		{ &Z_Construct_UFunction_UInteractableObjectComponent_IsEnabled, "IsEnabled" }, // 2018017111
+		{ &Z_Construct_UFunction_UInteractableObjectComponent_SetEnabled, "SetEnabled" }, // 2152030455
 		{ &Z_Construct_UFunction_UInteractableObjectComponent_SetInteractionTime, "SetInteractionTime" }, // 957620518
 		{ &Z_Construct_UFunction_UInteractableObjectComponent_SetInteractionType, "SetInteractionType" }, // 1109369031
 	};
@@ -310,6 +412,19 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionTime = { "InteractionTime", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UInteractableObjectComponent, InteractionTime), METADATA_PARAMS(Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionTime_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_bIsEnabled_MetaData[] = {
+		{ "Category", "Interaction enabled" },
+		{ "Comment", "// Whether the interactable component is enabled (if not it cannot be interacted with)\n" },
+		{ "ModuleRelativePath", "InteractableObjectComponent.h" },
+		{ "ToolTip", "Whether the interactable component is enabled (if not it cannot be interacted with)" },
+	};
+#endif
+	void Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_bIsEnabled_SetBit(void* Obj)
+	{
+		((UInteractableObjectComponent*)Obj)->bIsEnabled = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_bIsEnabled = { "bIsEnabled", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UInteractableObjectComponent), &Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_bIsEnabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_bIsEnabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_bIsEnabled_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionName_MetaData[] = {
 		{ "Category", "InteractableObjectComponent" },
 		{ "Comment", "//Name of interaction which will be shown in the HUD\n" },
@@ -322,6 +437,7 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_ThisInteractionType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_ThisInteractionType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionTime,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_bIsEnabled,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractableObjectComponent_Statics::NewProp_InteractionName,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UInteractableObjectComponent_Statics::StaticCppClassTypeInfo = {
@@ -351,7 +467,7 @@ void EmptyLinkFunctionForGeneratedCodeInteractableObjectComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UInteractableObjectComponent, 1507607332);
+	IMPLEMENT_CLASS(UInteractableObjectComponent, 4230617845);
 	template<> FPSGAME_API UClass* StaticClass<UInteractableObjectComponent>()
 	{
 		return UInteractableObjectComponent::StaticClass();

@@ -11,6 +11,7 @@
 #include "RewindComponent.h"
 #include "FPSGameState.h"
 #include "FPSGameModeDefault.h"
+#include "Enums.h"
 #include "NiagaraSystem.h"
 #include "PlayerWeaponSystem.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
@@ -656,17 +657,13 @@ protected:
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		//Initial local function call for switching weapon
-		void SwitchPrimary(bool bIsRep = false);
+		void SwitchGun(int Slot);
 	
 	UFUNCTION()
 		void SwitchPrimaryInputImplementation();
 
 	UFUNCTION()
 		void SwitchSecondaryInputImplementation();
-
-	UFUNCTION(BlueprintCallable, Category = "Weapon")
-		//Initial local function call for switching weapon
-		void SwitchSecondary(bool bIsRep = false);
 	
 	//UFUNCTION()
 	//	//Does the actual positioning of gun in first person
@@ -677,11 +674,7 @@ protected:
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon", Server, Reliable)
 		//Logic for causing visual swap to primary weapon on server goes here, along with setting equipped weapon variables
-		void ServerSwitchPrimary();
-
-	UFUNCTION(BlueprintCallable, Category = "Weapon", Server, Reliable)
-		//Like above but for secondary weapon
-		void ServerSwitchSecondary();
+		void ServerSwitchGun(int Slot);
 
 
 public:
@@ -706,6 +699,11 @@ public:
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 		USkeletalMeshComponent* ThirdPersonGunMesh;
 
+	//First person gun scene component
+	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+		USceneComponent* FPSGunComponent;
+
+	//First person muzzle location for calculating muzzle flash and tracers.
 	UPROPERTY(VisibleDefaultsOnly)
 		USceneComponent* FPSMuzzleComponent;
 

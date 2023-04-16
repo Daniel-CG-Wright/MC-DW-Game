@@ -19,8 +19,68 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachmentComponent() {}
 	UPackage* Z_Construct_UPackage__Script_fpsgame();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 // End Cross Module References
+	static FName NAME_USightAttachmentComponent_OnAimDownSights = FName(TEXT("OnAimDownSights"));
+	void USightAttachmentComponent::OnAimDownSights()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_USightAttachmentComponent_OnAimDownSights),NULL);
+	}
+	static FName NAME_USightAttachmentComponent_StopAimDownSights = FName(TEXT("StopAimDownSights"));
+	void USightAttachmentComponent::StopAimDownSights()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_USightAttachmentComponent_StopAimDownSights),NULL);
+	}
 	void USightAttachmentComponent::StaticRegisterNativesUSightAttachmentComponent()
 	{
+	}
+	struct Z_Construct_UFunction_USightAttachmentComponent_OnAimDownSights_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USightAttachmentComponent_OnAimDownSights_Statics::Function_MetaDataParams[] = {
+		{ "Category", "SightAttachmentComponent" },
+		{ "Comment", "// Called when the attachment is aimed down sights, implemented in blueprint\n" },
+		{ "ModuleRelativePath", "SightAttachmentComponent.h" },
+		{ "ToolTip", "Called when the attachment is aimed down sights, implemented in blueprint" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USightAttachmentComponent_OnAimDownSights_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USightAttachmentComponent, nullptr, "OnAimDownSights", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USightAttachmentComponent_OnAimDownSights_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USightAttachmentComponent_OnAimDownSights_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_USightAttachmentComponent_OnAimDownSights()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USightAttachmentComponent_OnAimDownSights_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_USightAttachmentComponent_StopAimDownSights_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USightAttachmentComponent_StopAimDownSights_Statics::Function_MetaDataParams[] = {
+		{ "Category", "SightAttachmentComponent" },
+		{ "Comment", "// called when the attachment is stopped aiming down sights, implemented in blueprint\n" },
+		{ "ModuleRelativePath", "SightAttachmentComponent.h" },
+		{ "ToolTip", "called when the attachment is stopped aiming down sights, implemented in blueprint" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USightAttachmentComponent_StopAimDownSights_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USightAttachmentComponent, nullptr, "StopAimDownSights", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USightAttachmentComponent_StopAimDownSights_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USightAttachmentComponent_StopAimDownSights_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_USightAttachmentComponent_StopAimDownSights()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USightAttachmentComponent_StopAimDownSights_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_USightAttachmentComponent_NoRegister()
 	{
@@ -29,6 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachmentComponent() {}
 	struct Z_Construct_UClass_USightAttachmentComponent_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -56,6 +117,10 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachmentComponent() {}
 	UObject* (*const Z_Construct_UClass_USightAttachmentComponent_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UBaseAttachmentComponent,
 		(UObject* (*)())Z_Construct_UPackage__Script_fpsgame,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_USightAttachmentComponent_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_USightAttachmentComponent_OnAimDownSights, "OnAimDownSights" }, // 1359473861
+		{ &Z_Construct_UFunction_USightAttachmentComponent_StopAimDownSights, "StopAimDownSights" }, // 3743282070
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USightAttachmentComponent_Statics::Class_MetaDataParams[] = {
@@ -122,11 +187,11 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachmentComponent() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_USightAttachmentComponent_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_USightAttachmentComponent_Statics::PropPointers),
 		0,
 		0x00B000A4u,
@@ -141,7 +206,7 @@ void EmptyLinkFunctionForGeneratedCodeSightAttachmentComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USightAttachmentComponent, 1128392647);
+	IMPLEMENT_CLASS(USightAttachmentComponent, 1049658308);
 	template<> FPSGAME_API UClass* StaticClass<USightAttachmentComponent>()
 	{
 		return USightAttachmentComponent::StaticClass();

@@ -42,5 +42,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SightAttachmentComponent")
 		float WalkSpeedMultiplier;
 
+	// Called when the attachment is aimed down sights, implemented in blueprint
+	UFUNCTION(BlueprintImplementableEvent, Category = "SightAttachmentComponent")
+		void OnAimDownSights();
+
+	// called when the attachment is stopped aiming down sights, implemented in blueprint
+	UFUNCTION(BlueprintImplementableEvent, Category = "SightAttachmentComponent")
+		void StopAimDownSights();
 
 };

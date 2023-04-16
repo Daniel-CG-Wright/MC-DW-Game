@@ -38,6 +38,10 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	// Whether the interactable component is enabled (if not it cannot be interacted with)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction enabled")
+		bool bIsEnabled;
+
 	//Name of interaction which will be shown in the HUD
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FName InteractionName;
@@ -53,4 +57,13 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 		void SetInteractionTime(float NewInteractionTime);
+
+	// Set whether the interactable component is enabled
+	UFUNCTION(BlueprintCallable)
+		void SetEnabled(bool bNewEnabled) { bIsEnabled = bNewEnabled; }
+
+	// Get whether the interactable component is enabled
+	UFUNCTION(BlueprintCallable)
+		bool IsEnabled() { return bIsEnabled; }
+
 };

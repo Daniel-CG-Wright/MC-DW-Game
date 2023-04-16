@@ -10,8 +10,9 @@ UInteractableObjectComponent::UInteractableObjectComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = false;
 
-	
-	// ...
+	// set interactable to true
+	bIsEnabled = true;
+
 }
 
 

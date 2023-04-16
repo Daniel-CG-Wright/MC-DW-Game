@@ -10,6 +10,7 @@ This class is used to manage the weapons of the player.
 #include "WeaponActor.h"
 #include "WeaponAttachmentSystem.h"
 #include "Net/UnrealNetwork.h"
+#include "Enums.h"
 #include "PlayerWeaponSystem.generated.h"
 
 

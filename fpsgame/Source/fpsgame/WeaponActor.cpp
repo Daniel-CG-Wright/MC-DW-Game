@@ -76,6 +76,27 @@ void AWeaponActor::OnPickupWeapon()
 {
 	// TODO implement changes to be made when picking up the weapon
 	// e.g. change weapon's mesh to the one that is held
+	// and disable physics on the weapon
+
+	// to prevent race conditions where 2 players pick up the same weapon at the same time
+	// we check if the weapon interact component is still enabled
+	// if it is, we disable it and continue with the pickup
+	// if it isn't, we return and do nothing
+	if (!InteractionComponent->IsEnabled())
+	{
+		return;
+	}
+	// Disable weapon interaction component
+	InteractionComponent->SetEnabled(false);
+	// disable collision
+	// disable physics
+	// hide weapon
+	SetActorEnableCollision(false);
+	SetActorHiddenInGame(true);
+	StaticGunMesh->SetSimulatePhysics(false);
+	
+	
+
 
 }
 
@@ -84,13 +105,36 @@ void AWeaponActor::OnDropWeapon()
 {
 	// TODO implement changes to be made when dropping the weapon
 	// e.g. change weapon's mesh to the one that is on the ground
+
+
+	// unbind from player's weapon scene component
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+
+	// enable weapon actor
+	SetActorHiddenInGame(false);
+	SetActorEnableCollision(true);
+	StaticGunMesh->SetSimulatePhysics(true);
+	// Enable weapon interaction component
+	InteractionComponent->SetEnabled(true);
+
+
 }
 
 // Called when this weapon is equipped
-void AWeaponActor::OnEquipWeapon()
+void AWeaponActor::OnEquipWeapon(USceneComponent* AttachComponent)
 {
 	// TODO implement changes to be made when equipping the weapon
 	// e.g. change weapon's mesh to the one that is held
+	// and bind the weapon to the player's weapon scene component
+
+	UE_LOG(LogTemp, Warning, TEXT("Equipping weapon"));
+	// bind to player's weapon scene component
+	AttachToComponent(AttachComponent, FAttachmentTransformRules::SnapToTargetIncludingScale);
+	
+	// show weapon
+	SetActorHiddenInGame(false);
+
+
 }
 
 // Called when this weapon is unequipped
@@ -98,6 +142,14 @@ void AWeaponActor::OnUnequipWeapon()
 {
 	// TODO implement changes to be made when unequipping the weapon
 	// e.g. change weapon's mesh to the one that is on the ground
+	// and unbind the weapon from the player's weapon scene component
+
+	// unbind from player's weapon scene component
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	// hide weapon
+	SetActorHiddenInGame(true);
+
+
 }
 
 // Called to set the weapon ammo, should only be called on server

@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "WeaponAttachmentSystem.h"
+#include "Enums.h"
 #include "BaseAttachmentComponent.generated.h"
 
 
@@ -32,4 +34,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "BaseAttachmentComponent")
 		void OnDetachFromWeapon();
 
+	// Stores the type of attachment this is.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BaseAttachmentComponent")
+		EAttachmentType TypeOfAttachment;
 };

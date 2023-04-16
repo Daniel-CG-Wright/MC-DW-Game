@@ -8,7 +8,7 @@
 #include "TimerManager.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "SightData.h"
+#include "SightAttachmentComponent.h"
 #include "DrawDebugHelpers.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 
@@ -51,6 +51,15 @@ Afpscharacter::Afpscharacter()
 
 	//Hides third person mesh from owner
 	GetMesh()->SetOwnerNoSee(true);
+
+	// Create FPS Gun Component
+	
+	FPSGunComponent = CreateDefaultSubobject<USceneComponent>(TEXT("FirstPersonGun"));
+	check(FPSGunComponent != nullptr);
+	FPSGunComponent->SetupAttachment(FPSMesh);
+	FPSGunComponent->SetRelativeLocation(FVector(0.0f, 0.0f, -10.0f));
+	FPSGunComponent->SetRelativeRotation(FRotator(0.0f, 0.0f, 0.0f));
+
 
 	//Created on client but doens't do anything unless on server
 	//FPSRewindComponent = CreateDefaultSubobject<URewindComponent>(TEXT("RewindComponent"));
@@ -295,22 +304,23 @@ void Afpscharacter::AimDownSights()
 	///Aim down sights logic.
 	bIsADS = true;
 
-	//TSubclassOf<USightAttachment> SightData = GetCurrentlyEquippedWeaponData().Attachments.SightAttachment;
+	// check if there is sight data for the current weapon
+	USightAttachmentComponent* SightAttachment = Cast<USightAttachmentComponent>(WeaponSystem->GetCurrentWeapon()->GetAttachmentSystem()->GetAttachment(EAttachmentType::SIGHT));
 
-	//UE_LOG(LogTemp, Warning, TEXT("Name : %s"), *SightData->StaticClass()->GetName());
-	/*//Get sight data
-	TSubclassOf<class USightData> Sightdata = GetCurrentlyEquippedWeaponData().Attachments.SightAttachment;
-
-	if (!Sightdata)
+	// if there is no sight data, we return
+	if (!SightAttachment)
 	{
 		return;
 	}
-	
-	//Brings the weapon to the correct position for ADS
-	BringWeaponUpForADS();
 
-	//Set zoom
-	FPSCameraComponent->SetFieldOfView(Sightdata->ZoomFactor);*/
+	// calculate the new FOV
+	float NewFOV = CalculateFOVFromZoom(SightAttachment->ZoomLevel);
+
+	// Call the sight attachment's ads function
+	SightAttachment->OnAimDownSights();
+
+	// set the new FOV
+	FPSCameraComponent->SetFieldOfView(NewFOV);
 
 }
 void Afpscharacter::BringWeaponUpForADS()
@@ -442,12 +452,12 @@ bool Afpscharacter::GetCurrentlyAvailableInteractable()
 
 void Afpscharacter::SwitchPrimaryInputImplementation()
 {
-	SwitchPrimary(false);
+	SwitchGun(0);
 }
 
 void Afpscharacter::SwitchSecondaryInputImplementation()
 {
-	SwitchSecondary(false);
+	SwitchGun(1);
 }
 
 void Afpscharacter::MoveY(float Value)
@@ -877,7 +887,7 @@ void Afpscharacter::Interact()
 		UInteractableObjectComponent* HitInteractableComponent = HitActor->FindComponentByClass<UInteractableObjectComponent>();
 
 		//If the item is interactable, we continue
-		if (HitInteractableComponent != nullptr)
+		if (HitInteractableComponent != nullptr && HitInteractableComponent->IsEnabled())
 		{
 			UE_LOG(LogTemp, Warning, TEXT("interactable component found"));
 			//Seems valid on client, let's run on the server if needed
@@ -953,7 +963,7 @@ void Afpscharacter::InteractWithNameOnly(FName& OutName)
 		UInteractableObjectComponent* HitInteractableComponent = HitActor->FindComponentByClass<UInteractableObjectComponent>();
 
 		//If the item is interactable, we continue
-		if (HitInteractableComponent != nullptr)
+		if (HitInteractableComponent != nullptr && HitInteractableComponent->IsEnabled())
 		{
 			OutName = HitInteractableComponent->InteractionName;
 
@@ -994,15 +1004,20 @@ void Afpscharacter::ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup
 	PickupWeapon(WeaponPickup);
 }
 
-void Afpscharacter::SwitchPrimary(bool bIsRep)
+void Afpscharacter::SwitchGun(int Slot)
 {
+	// if the current slot is already the slot , do nothing
+	if (WeaponSystem->CurrentWeaponSlot == Slot)
+	{
+		return;
+	}
 	UE_LOG(LogTemp, Warning, TEXT("prime"));
 	DebugFunction();
 
 	//Need to run RPC on server
-	if (GetLocalRole() < ROLE_Authority && !bIsRep && WeaponSystem->Weapons[0])
+	if (GetLocalRole() < ROLE_Authority && WeaponSystem->Weapons[Slot])
 	{
-		ServerSwitchPrimary();
+		ServerSwitchGun(Slot);
 	}
 
 	//Interrupt automatic fire
@@ -1010,17 +1025,17 @@ void Afpscharacter::SwitchPrimary(bool bIsRep)
 
 	StopFiring();
 	//Logic for switching primary.
-	WeaponSystem->EquipWeapon(0);
+	WeaponSystem->EquipWeapon(Slot);
 	//Still need a lot fo equip logic here TODO animatios, sounds etc
 	CalculateNewBatchOfSpreadAngles();
 
 	UpdateAmmoDisplay();
 }
 
-void Afpscharacter::ServerSwitchPrimary_Implementation()
+void Afpscharacter::ServerSwitchGun_Implementation(int Slot)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Switch primary rpc call"));
-	SwitchPrimary(false);
+	SwitchGun(Slot);
 }
 
 #if WITH_EDITOR
@@ -1047,32 +1062,7 @@ void Afpscharacter::DebugFunction()
 }
 #endif
 
-void Afpscharacter::SwitchSecondary(bool bIsRep)
-{
 
-	
-	if (GetLocalRole() < ROLE_Authority && !bIsRep && WeaponSystem->Weapons[1])
-	{
-		ServerSwitchSecondary();
-	}
-
-	//Interrupt automatic fire.
-	bIsFiring = false;
-
-	StopFiring();
-
-	WeaponSystem->EquipWeapon(1);
-
-	CalculateNewBatchOfSpreadAngles();
-
-	UpdateAmmoDisplay();
-}
-
-void Afpscharacter::ServerSwitchSecondary_Implementation()
-{
-	UE_LOG(LogTemp, Warning, TEXT("Secondary pickup reliable switch call"));
-	SwitchSecondary(false);
-}
 
 void Afpscharacter::PositionAndAttachGunInTP(FWeaponDataStruct GunToEquip)
 {

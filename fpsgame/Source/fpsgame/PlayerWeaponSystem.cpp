@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "fpscharacter.h"
 #include "PlayerWeaponSystem.h"
 
 // Sets default values for this component's properties
@@ -9,7 +9,6 @@ UPlayerWeaponSystem::UPlayerWeaponSystem()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = false;
-
 	// initialize array of weapons
 	Weapons.Init(nullptr, 3);
 }
@@ -28,8 +27,6 @@ void UPlayerWeaponSystem::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
-	
 }
 
 
@@ -48,29 +45,41 @@ void UPlayerWeaponSystem::AddWeapon(AWeaponActor* Weapon, bool SwitchAfterPickup
 	// check if weapon is valid
 	if (Weapon)
 	{
-		// if the weapon is already in the array, drop it first
-		if (Weapons.Contains(Weapon))
-		{
-			RemoveWeapon(Weapon);
-		}
+
 		// add weapon to array
 		Weapon->OnPickupWeapon();
 		int equipslot = -1;
 		switch (Weapon->GetWeaponDataStruct().MetaData.TypeOfEquip)
 		{
 			case Equips::PRIMARY:
+				if (Weapons[0] != nullptr)
+				{
+					RemoveWeapon(0);
+				}
 				Weapons[0] = Weapon;
 				equipslot = 0;
 				break;
 			case Equips::SECONDARY:
+				if (Weapons[1] != nullptr)
+				{
+					RemoveWeapon(1);
+				}
 				Weapons[1] = Weapon;
 				equipslot = 1;
 				break;
 			case Equips::MELEE:
+				if (Weapons[2] != nullptr)
+				{
+					RemoveWeapon(2);
+				}
 				Weapons[2] = Weapon;
 				equipslot = 2;
 				break;
 			case Equips::BOTH:
+				if (Weapons[CurrentWeaponSlot] != nullptr)
+				{
+					RemoveWeapon(CurrentWeaponSlot);
+				}
 				Weapons[CurrentWeaponSlot] = Weapon;
 				equipslot = CurrentWeaponSlot;
 				break;
@@ -78,7 +87,7 @@ void UPlayerWeaponSystem::AddWeapon(AWeaponActor* Weapon, bool SwitchAfterPickup
 				break;
 		}
 		// if the user wants to switch, and there is a valid equip slot, then switch to the new weapon
-		if (SwitchAfterPickup && equipslot >= 0 && equipslot <= 2)
+		if ((SwitchAfterPickup && equipslot >= 0 && equipslot <= 2) || equipslot == CurrentWeaponSlot)
 		{
 			EquipWeapon(equipslot);
 		}
@@ -162,24 +171,27 @@ void UPlayerWeaponSystem::SwitchToNextAvailableWeapon()
 // 2 - Melee
 void UPlayerWeaponSystem::EquipWeapon(int SlotNumber)
 {
-	// if it is the current slot, do nothing
-	if (SlotNumber == CurrentWeaponSlot)
-	{
-		return;
-	}
+
+	// Make sure that when calling this you check to make sure there has
+	// actually been a change in the weapon slot, otherwise you will
+	// unequip and re-equip the same weapon, which will cause issues
+	// with the weapon's animation blueprint
+	
 	// check if slot number is valid
 	if (SlotNumber >= 0 && SlotNumber < Weapons.Num())
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Slot"));
 		// check if weapon is valid
 		if (Weapons[SlotNumber])
 		{
+			UE_LOG(LogTemp, Warning, TEXT("Slit"));
 			// first unequip the current weapon
 			if (GetCurrentWeapon())
 			{
 				GetCurrentWeapon()->OnUnequipWeapon();
 			}
 			// Call weapon equipped function
-			Weapons[SlotNumber]->OnEquipWeapon();
+			Weapons[SlotNumber]->OnEquipWeapon(Cast<Afpscharacter>(GetOwner())->FPSGunComponent);
 			// set current weapon slot
 			CurrentWeaponSlot = SlotNumber;
 		}

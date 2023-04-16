@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseAttachmentComponent() {}
 	FPSGAME_API UClass* Z_Construct_UClass_UBaseAttachmentComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_fpsgame();
+	FPSGAME_API UEnum* Z_Construct_UEnum_fpsgame_EAttachmentType();
 // End Cross Module References
 	DEFINE_FUNCTION(UBaseAttachmentComponent::execOnDetachFromWeapon)
 	{
@@ -102,6 +103,12 @@ void EmptyLinkFunctionForGeneratedCodeBaseAttachmentComponent() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_TypeOfAttachment_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TypeOfAttachment_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_TypeOfAttachment;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -123,6 +130,20 @@ void EmptyLinkFunctionForGeneratedCodeBaseAttachmentComponent() {}
 		{ "ModuleRelativePath", "BaseAttachmentComponent.h" },
 	};
 #endif
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UBaseAttachmentComponent_Statics::NewProp_TypeOfAttachment_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBaseAttachmentComponent_Statics::NewProp_TypeOfAttachment_MetaData[] = {
+		{ "Category", "BaseAttachmentComponent" },
+		{ "Comment", "// Stores the type of attachment this is.\n" },
+		{ "ModuleRelativePath", "BaseAttachmentComponent.h" },
+		{ "ToolTip", "Stores the type of attachment this is." },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UBaseAttachmentComponent_Statics::NewProp_TypeOfAttachment = { "TypeOfAttachment", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UBaseAttachmentComponent, TypeOfAttachment), Z_Construct_UEnum_fpsgame_EAttachmentType, METADATA_PARAMS(Z_Construct_UClass_UBaseAttachmentComponent_Statics::NewProp_TypeOfAttachment_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UBaseAttachmentComponent_Statics::NewProp_TypeOfAttachment_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBaseAttachmentComponent_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBaseAttachmentComponent_Statics::NewProp_TypeOfAttachment_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBaseAttachmentComponent_Statics::NewProp_TypeOfAttachment,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBaseAttachmentComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UBaseAttachmentComponent>::IsAbstract,
 	};
@@ -132,11 +153,11 @@ void EmptyLinkFunctionForGeneratedCodeBaseAttachmentComponent() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		FuncInfo,
-		nullptr,
+		Z_Construct_UClass_UBaseAttachmentComponent_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UBaseAttachmentComponent_Statics::PropPointers),
 		0,
 		0x00B000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UBaseAttachmentComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UBaseAttachmentComponent_Statics::Class_MetaDataParams))
@@ -150,7 +171,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseAttachmentComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBaseAttachmentComponent, 1906331041);
+	IMPLEMENT_CLASS(UBaseAttachmentComponent, 3207527625);
 	template<> FPSGAME_API UClass* StaticClass<UBaseAttachmentComponent>()
 	{
 		return UBaseAttachmentComponent::StaticClass();

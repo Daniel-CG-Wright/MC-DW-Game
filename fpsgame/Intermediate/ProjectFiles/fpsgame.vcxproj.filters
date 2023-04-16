@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\fpsgame.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CE20296F-A22C-4C52-B604-66D517F94CF4}</UniqueIdentifier>
+      <UniqueIdentifier>{A89602D4-EE64-4749-9548-8D1D8549783E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\fpsgame.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{8B42CE06-8CDF-4187-93B7-F79DF42342AB}</UniqueIdentifier>
+      <UniqueIdentifier>{DECCBBBD-37A3-4622-A8A8-03AD3B270EFD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\fpsgame">
-      <UniqueIdentifier>{24F64C2E-18F3-420D-8476-65BD8083CCEF}</UniqueIdentifier>
+      <UniqueIdentifier>{79CA4FB2-B752-4C7F-A320-4BD4317CBE8B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\fpsgame\AttachmentBase.cpp">
       <Filter>Source\fpsgame</Filter>
@@ -39,6 +39,12 @@
       <Filter>Source\fpsgame</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\fpsgame\BaseAttachmentComponent.h">
+      <Filter>Source\fpsgame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\fpsgame\Enums.cpp">
+      <Filter>Source\fpsgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\fpsgame\Enums.h">
       <Filter>Source\fpsgame</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\fpsgame\fpscharacter.cpp">

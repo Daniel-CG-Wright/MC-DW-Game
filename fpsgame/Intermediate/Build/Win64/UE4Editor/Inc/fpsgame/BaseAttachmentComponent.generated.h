@@ -13,20 +13,20 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPSGAME_BaseAttachmentComponent_generated_h
 
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_SPARSE_DATA
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_RPC_WRAPPERS \
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_SPARSE_DATA
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnDetachFromWeapon); \
 	DECLARE_FUNCTION(execOnAttachToWeapon);
 
 
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnDetachFromWeapon); \
 	DECLARE_FUNCTION(execOnAttachToWeapon);
 
 
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_INCLASS_NO_PURE_DECLS \
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBaseAttachmentComponent(); \
 	friend struct Z_Construct_UClass_UBaseAttachmentComponent_Statics; \
@@ -35,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(UBaseAttachmentComponent)
 
 
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_INCLASS \
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesUBaseAttachmentComponent(); \
 	friend struct Z_Construct_UClass_UBaseAttachmentComponent_Statics; \
@@ -44,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(UBaseAttachmentComponent)
 
 
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_STANDARD_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UBaseAttachmentComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UBaseAttachmentComponent) \
@@ -57,7 +57,7 @@ private: \
 public:
 
 
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_ENHANCED_CONSTRUCTORS \
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UBaseAttachmentComponent(UBaseAttachmentComponent&&); \
@@ -68,28 +68,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UBaseAttachmentComponent)
 
 
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_PRIVATE_PROPERTY_OFFSET
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_10_PROLOG
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_GENERATED_BODY_LEGACY \
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_PRIVATE_PROPERTY_OFFSET
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_12_PROLOG
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_SPARSE_DATA \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_RPC_WRAPPERS \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_INCLASS \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_STANDARD_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_SPARSE_DATA \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_RPC_WRAPPERS \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_INCLASS \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_GENERATED_BODY \
+#define fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_PRIVATE_PROPERTY_OFFSET \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_SPARSE_DATA \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_INCLASS_NO_PURE_DECLS \
-	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_13_ENHANCED_CONSTRUCTORS \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_PRIVATE_PROPERTY_OFFSET \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_SPARSE_DATA \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_INCLASS_NO_PURE_DECLS \
+	fpsgame_Source_fpsgame_BaseAttachmentComponent_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
