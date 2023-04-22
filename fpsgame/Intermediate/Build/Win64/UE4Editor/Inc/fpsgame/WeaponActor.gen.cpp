@@ -293,9 +293,12 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponRecoil
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime_MetaData[] = {
 		{ "Category", "Weapon Recoil" },
+		{ "ClampMin", "0" },
 		{ "Comment", "//Time taken for weapon to recover\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Time taken for weapon to recover" },
+		{ "UIMin", "0" },
+		{ "Unit", "Seconds" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime = { "RecoveryTime", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponRecoil, RecoveryTime), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponRecoil_Statics::NewProp_RecoveryTime_MetaData)) };
@@ -333,7 +336,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponRecoil
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponRecoil_Hash() { return 1449230534U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponRecoil_Hash() { return 2069619607U; }
 class UScriptStruct* FWeaponStats::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -424,99 +427,132 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxRange_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "0" },
 		{ "Comment", "//Max range of hitscan weapons in cm\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Max range of hitscan weapons in cm" },
+		{ "UIMin", "0" },
+		{ "Unit", "cm" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxRange = { "MaxRange", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, MaxRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxRange_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_FireRate_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "0" },
 		{ "Comment", "//Minimum time between shots in seconds\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Minimum time between shots in seconds" },
+		{ "UIMin", "0" },
+		{ "Unit", "shots/second" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_FireRate = { "FireRate", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, FireRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_FireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_FireRate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_CartridgeBullets_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "1" },
 		{ "Comment", "//Number of rounds fired per shot (usually 1, may be more for shotguns)\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Number of rounds fired per shot (usually 1, may be more for shotguns)" },
+		{ "UIMin", "1" },
+		{ "Unit", "Rounds/shot" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_CartridgeBullets = { "CartridgeBullets", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, CartridgeBullets), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_CartridgeBullets_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_CartridgeBullets_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstNumber_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "1" },
 		{ "Comment", "//Number of rounds fired per burst (usually 1, may be more for burst weapons)\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Number of rounds fired per burst (usually 1, may be more for burst weapons)" },
+		{ "UIMin", "1" },
+		{ "Unit", "Rounds/burst" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstNumber = { "BurstNumber", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BurstNumber), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstNumber_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstNumber_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate_MetaData[] = {
 		{ "Category", "Weapon stats" },
-		{ "Comment", "//Fire rate of bursts\n" },
+		{ "ClampMin", "0" },
+		{ "Comment", "//Fire rate of bursts, leave 0 for no burst\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
-		{ "ToolTip", "Fire rate of bursts" },
+		{ "ToolTip", "Fire rate of bursts, leave 0 for no burst" },
+		{ "UIMin", "0" },
+		{ "Unit", "shots/second during burst" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate = { "BurstFireRate", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BurstFireRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BurstFireRate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxMagSize_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "1" },
 		{ "Comment", "//Maximum ammo the mag can store\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Maximum ammo the mag can store" },
+		{ "UIMin", "1" },
+		{ "Unit", "Rounds" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxMagSize = { "MaxMagSize", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, MaxMagSize), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxMagSize_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_MaxMagSize_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "0" },
 		{ "Comment", "//Base damage of projectile in torso, TODO implement damage falloff\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Base damage of projectile in torso, TODO implement damage falloff" },
+		{ "UIMin", "0" },
+		{ "Unit", "Damage" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso = { "BaseDamageTorso", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseDamageTorso), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageTorso_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "0" },
 		{ "Comment", "//Base damage of projectile in head\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Base damage of projectile in head" },
+		{ "UIMin", "0" },
+		{ "Unit", "Damage" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead = { "BaseDamageHead", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseDamageHead), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageHead_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "0" },
 		{ "Comment", "//Base damage of projectile in legs\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Base damage of projectile in legs" },
+		{ "UIMin", "0" },
+		{ "Unit", "Damage" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs = { "BaseDamageLegs", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseDamageLegs), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseDamageLegs_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseHipfireSpreadAngleInDegrees_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "0" },
 		{ "Comment", "//Base spread when firing in hipfire - probably just use multiples for ADS and crouchwalk (e.g. 0.1x for ads, 0.2x for crouchwalk)\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Base spread when firing in hipfire - probably just use multiples for ADS and crouchwalk (e.g. 0.1x for ads, 0.2x for crouchwalk)" },
+		{ "UIMin", "0" },
+		{ "Unit", "Degrees" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseHipfireSpreadAngleInDegrees = { "BaseHipfireSpreadAngleInDegrees", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseHipfireSpreadAngleInDegrees), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseHipfireSpreadAngleInDegrees_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseHipfireSpreadAngleInDegrees_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseMovementSpreadMultiplier_MetaData[] = {
 		{ "Category", "Weapon stats" },
+		{ "ClampMin", "0" },
 		{ "Comment", "//Movement multiplier for spread - 1 = 100%\n" },
 		{ "ModuleRelativePath", "WeaponActor.h" },
 		{ "ToolTip", "Movement multiplier for spread - 1 = 100%" },
+		{ "UIMin", "0" },
+		{ "Unit", "Multiplier" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseMovementSpreadMultiplier = { "BaseMovementSpreadMultiplier", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponStats, BaseMovementSpreadMultiplier), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseMovementSpreadMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponStats_Statics::NewProp_BaseMovementSpreadMultiplier_MetaData)) };
@@ -561,7 +597,7 @@ static struct FScriptStruct_fpsgame_StaticRegisterNativesFWeaponStats
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FWeaponStats_Hash() { return 4006362429U; }
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponStats_Hash() { return 1612863344U; }
 class UScriptStruct* FWeaponMetaData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

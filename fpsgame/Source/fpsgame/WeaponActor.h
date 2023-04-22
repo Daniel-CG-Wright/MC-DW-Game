@@ -119,28 +119,28 @@ struct FWeaponStats
 
 public:
 	//Max range of hitscan weapons in cm
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float MaxRange;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "0", UIMin = "0", Unit = "cm"))
+		float MaxRange = 2000.0f;
 
 	//Minimum time between shots in seconds
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float FireRate;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "0", UIMin = "0", Unit = "shots/second"))
+		float FireRate = 1.0f;
 
 	//Number of rounds fired per shot (usually 1, may be more for shotguns)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		int CartridgeBullets;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "1", UIMin = "1", Unit = "Rounds/shot"))
+		int CartridgeBullets = 1;
 
 	//Number of rounds fired per burst (usually 1, may be more for burst weapons)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		int BurstNumber;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "1", UIMin = "1", Unit = "Rounds/burst"))
+		int BurstNumber = 1;
 
-	//Fire rate of bursts
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float BurstFireRate;
+	//Fire rate of bursts, leave 0 for no burst
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "0", UIMin = "0", Unit = "shots/second during burst"))
+		float BurstFireRate = 0.0f;
 
 	//Maximum ammo the mag can store
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		int MaxMagSize;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "1", UIMin = "1", Unit = "Rounds"))
+		int MaxMagSize = 1;
 
 	//Speed of projectile rounds fired
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
@@ -148,24 +148,24 @@ public:
 	//Bullet speed is handled in bullet blueprint itself now.
 
 	//Base damage of projectile in torso, TODO implement damage falloff
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "0", UIMin = "0", Unit = "Damage"))
 		float BaseDamageTorso;
 
 	//Base damage of projectile in head
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "0", UIMin = "0", Unit = "Damage"))
 		float BaseDamageHead;
 
 	//Base damage of projectile in legs
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "0", UIMin = "0", Unit = "Damage"))
 		float BaseDamageLegs;
 
 	//Base spread when firing in hipfire - probably just use multiples for ADS and crouchwalk (e.g. 0.1x for ads, 0.2x for crouchwalk)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float BaseHipfireSpreadAngleInDegrees;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "0", UIMin = "0", Unit = "Degrees"))
+		float BaseHipfireSpreadAngleInDegrees = 0.0f;
 
 	//Movement multiplier for spread - 1 = 100%
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats")
-		float BaseMovementSpreadMultiplier;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon stats", meta = (ClampMin = "0", UIMin = "0", Unit = "Multiplier"))
+		float BaseMovementSpreadMultiplier = 1.0f;
 
 };
 
@@ -191,7 +191,7 @@ public:
 		UCurveVector* RecoilVectorCurve;
 
 	//Time taken for weapon to recover
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon Recoil", meta = (ClampMin = "0", UIMin = "0", Unit = "Seconds"))
 		float RecoveryTime;
 
 

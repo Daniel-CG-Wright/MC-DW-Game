@@ -341,7 +341,7 @@ void Afpscharacter::StopAimingDownSights()
 void Afpscharacter::OnPressFire()
 {
 
-	
+	UE_LOG(LogTemp, Warning, TEXT("Fire pressed"));
 	if (!WeaponSystem->GetCurrentWeapon() && !GetWorld()->GetTimerManager().TimerExists(BurstFireTimer))
 	{
 		if (GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f)
@@ -1010,10 +1010,9 @@ void Afpscharacter::ServerPickupWeapon_Implementation(AWeaponActor* WeaponPickup
 void Afpscharacter::SwitchGun(int Slot)
 {
 	// if the current slot is already the slot , do nothing
-	if (WeaponSystem->CurrentWeaponSlot == Slot)
-	{
-		return;
-	}
+	// UPDATE cannot do this here as when picking up a weapon we switch to it
+	// if the weapon is in the current slot.
+
 	DebugFunction();
 
 	//Need to run RPC on server
@@ -1109,7 +1108,7 @@ void Afpscharacter::ClientValidateFire()
 	//If we dont have a gun equipped, return
 	if (!WeaponSystem->GetCurrentWeapon())
 	{
-		
+		UE_LOG(LogTemp, Warning, TEXT("No weapon equipped"));
 		StopFiring();
 		return;
 	}
@@ -1118,7 +1117,7 @@ void Afpscharacter::ClientValidateFire()
 	//Checking if we have ammo for firing, and that we are not in burst mode or have burst rounds to fire
 	if (WeaponSystem->GetCurrentWeapon()->MagAmmo > 0 && ((BurstRoundsToFire > 0 && GetCurrentlyEquippedWeaponData().Stats.BurstFireRate > 0.0f) || GetCurrentlyEquippedWeaponData().Stats.BurstFireRate == 0.0f))
 	{
-		
+		UE_LOG(LogTemp, Warning, TEXT("SwitchCase"));
 		//Activate firing functions based on firing type
 		switch (GetCurrentlyEquippedWeaponData().MetaData.WAWeaponHitDetectionType)
 		{
